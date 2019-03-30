@@ -1,5 +1,5 @@
 {
-  "name": "dukas-extractor",
+  "name": "forex-historical-data",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,5 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "lzma-native": "^4.0.3",
+    "lzma-purejs": "^0.9.3",
+    "node-fetch": "^2.3.0",
+    "python-struct": "^1.0.6"
+  },
+  "devDependencies": {
+    "@types/lzma-native": "^4.0.0",
+    "@types/node-fetch": "^2.1.7",
+    "ts-node": "^8.0.3"
+  }
 }
