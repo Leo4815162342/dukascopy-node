@@ -1,2558 +1,3174 @@
 const symbols = {
   AUSUSD: {
-    prefixedName: 'A.US/USD',
-    description: 'AGILENT TECHNOLOGIES INC'
+    name: 'A.US/USD',
+    description: 'AGILENT TECHNOLOGIES INC',
+    minStartDate: '2017-05-25'
   },
   AAUSUSD: {
-    prefixedName: 'AA.US/USD',
-    description: 'ALCOA INC'
+    name: 'AA.US/USD',
+    description: 'ALCOA INC',
+    minStartDate: '2018-01-30'
   },
   AABAUSUSD: {
-    prefixedName: 'AABA.US/USD',
-    description: 'ALTABA INC'
+    name: 'AABA.US/USD',
+    description: 'ALTABA INC',
+    minStartDate: '2017-11-02'
   },
   AALGBGBX: {
-    prefixedName: 'AAL.GB/GBX',
-    description: 'Anglo American PLC'
+    name: 'AAL.GB/GBX',
+    description: 'Anglo American PLC',
+    minStartDate: '2016-08-01'
   },
   AALUSUSD: {
-    prefixedName: 'AAL.US/USD',
-    description: 'AMERICAN AIRLINES GROUP INC'
+    name: 'AAL.US/USD',
+    description: 'AMERICAN AIRLINES GROUP INC',
+    minStartDate: '2017-11-02'
   },
   AAPLUSUSD: {
-    prefixedName: 'AAPL.US/USD',
-    description: 'APPLE INC'
+    name: 'AAPL.US/USD',
+    description: 'APPLE INC',
+    minStartDate: '2017-01-17'
   },
   ABBSESEK: {
-    prefixedName: 'ABB.SE/SEK',
-    description: 'ABB Ltd'
+    name: 'ABB.SE/SEK',
+    description: 'ABB Ltd',
+    minStartDate: '2016-11-14'
   },
   ABCUSUSD: {
-    prefixedName: 'ABC.US/USD',
-    description: 'AMERISOURCEBERGEN CORP'
+    name: 'ABC.US/USD',
+    description: 'AMERISOURCEBERGEN CORP',
+    minStartDate: '2018-01-30'
   },
   ABEVUSUSD: {
-    prefixedName: 'ABEV.US/USD',
-    description: 'Ambev S.A.'
+    name: 'ABEV.US/USD',
+    description: 'Ambev S.A.',
+    minStartDate: '2017-01-26'
   },
   ABFGBGBX: {
-    prefixedName: 'ABF.GB/GBX',
-    description: 'Associated British Foods PLC'
+    name: 'ABF.GB/GBX',
+    description: 'Associated British Foods PLC',
+    minStartDate: '2016-09-06'
   },
   ABIBEEUR: {
-    prefixedName: 'ABI.BE/EUR',
-    description: 'Anheuser-Busch InBev NV'
+    name: 'ABI.BE/EUR',
+    description: 'Anheuser-Busch InBev NV',
+    minStartDate: '2016-11-14'
   },
   ABTUSUSD: {
-    prefixedName: 'ABT.US/USD',
-    description: 'ABBOTT LABORATORIES'
+    name: 'ABT.US/USD',
+    description: 'ABBOTT LABORATORIES',
+    minStartDate: '2017-05-11'
   },
   ACFREUR: {
-    prefixedName: 'AC.FR/EUR',
-    description: 'Accor SA'
+    name: 'AC.FR/EUR',
+    description: 'Accor SA',
+    minStartDate: '2016-08-11'
   },
   ACAFREUR: {
-    prefixedName: 'ACA.FR/EUR',
-    description: 'Credit Agricole SA'
+    name: 'ACA.FR/EUR',
+    description: 'Credit Agricole SA',
+    minStartDate: '2016-09-30'
   },
   ACSESEUR: {
-    prefixedName: 'ACS.ES/EUR',
-    description: 'ACS Actividades de Construccion y Servicios SA'
+    name: 'ACS.ES/EUR',
+    description: 'ACS Actividades de Construccion y Servicios SA',
+    minStartDate: '2016-11-14'
   },
   ACXESEUR: {
-    prefixedName: 'ACX.ES/EUR',
-    description: 'Acerinox SA'
+    name: 'ACX.ES/EUR',
+    description: 'Acerinox SA',
+    minStartDate: '2016-11-14'
   },
   ADBEUSUSD: {
-    prefixedName: 'ADBE.US/USD',
-    description: 'ADOBE SYSTEMS INC'
+    name: 'ADBE.US/USD',
+    description: 'ADOBE SYSTEMS INC',
+    minStartDate: '2017-05-11'
   },
   ADIUSUSD: {
-    prefixedName: 'ADI.US/USD',
-    description: 'ANALOG DEVICES INC'
+    name: 'ADI.US/USD',
+    description: 'ANALOG DEVICES INC',
+    minStartDate: '2018-01-30'
   },
   ADMGBGBX: {
-    prefixedName: 'ADM.GB/GBX',
-    description: 'Admiral Group PLC'
+    name: 'ADM.GB/GBX',
+    description: 'Admiral Group PLC',
+    minStartDate: '2016-09-06'
   },
   ADPUSUSD: {
-    prefixedName: 'ADP.US/USD',
-    description: 'AUTOMATIC DATA PROCESSING'
+    name: 'ADP.US/USD',
+    description: 'AUTOMATIC DATA PROCESSING',
+    minStartDate: '2017-11-02'
   },
   ADSDEEUR: {
-    prefixedName: 'ADS.DE/EUR',
-    description: 'Adidas AG'
+    name: 'ADS.DE/EUR',
+    description: 'Adidas AG',
+    minStartDate: '2015-03-13'
   },
   ADSKUSUSD: {
-    prefixedName: 'ADSK.US/USD',
-    description: 'AUTODESK INC'
+    name: 'ADSK.US/USD',
+    description: 'AUTODESK INC',
+    minStartDate: '2018-01-30'
   },
   AENAESEUR: {
-    prefixedName: 'AENA.ES/EUR',
-    description: 'Aena SA'
+    name: 'AENA.ES/EUR',
+    description: 'Aena SA',
+    minStartDate: '2016-11-14'
   },
   AETUSUSD: {
-    prefixedName: 'AET.US/USD',
-    description: 'AETNA INC'
+    name: 'AET.US/USD',
+    description: 'AETNA INC',
+    minStartDate: '2017-05-11'
   },
   AFFREUR: {
-    prefixedName: 'AF.FR/EUR',
-    description: 'Air France-KLM'
+    name: 'AF.FR/EUR',
+    description: 'Air France-KLM',
+    minStartDate: '2016-09-27'
   },
   AGKGBGBX: {
-    prefixedName: 'AGK.GB/GBX',
-    description: 'Aggreko PLC'
+    name: 'AGK.GB/GBX',
+    description: 'Aggreko PLC',
+    minStartDate: '2016-09-06'
   },
   AGNNLEUR: {
-    prefixedName: 'AGN.NL/EUR',
-    description: 'Aegon NV'
+    name: 'AGN.NL/EUR',
+    description: 'Aegon NV',
+    minStartDate: '2016-11-14'
   },
   AGSBEEUR: {
-    prefixedName: 'AGS.BE/EUR',
-    description: 'Ageas'
+    name: 'AGS.BE/EUR',
+    description: 'Ageas',
+    minStartDate: '2016-11-14'
   },
   AHNLEUR: {
-    prefixedName: 'AH.NL/EUR',
-    description: 'Koninklijke Ahold Delhaize NV'
+    name: 'AH.NL/EUR',
+    description: 'Koninklijke Ahold Delhaize NV',
+    minStartDate: '2016-11-14'
   },
   AHTGBGBX: {
-    prefixedName: 'AHT.GB/GBX',
-    description: 'Ashtead Group PLC'
+    name: 'AHT.GB/GBX',
+    description: 'Ashtead Group PLC',
+    minStartDate: '2016-09-06'
   },
   AIFREUR: {
-    prefixedName: 'AI.FR/EUR',
-    description: 'Air Liquide SA'
+    name: 'AI.FR/EUR',
+    description: 'Air Liquide SA',
+    minStartDate: '2016-09-30'
   },
   AIGUSUSD: {
-    prefixedName: 'AIG.US/USD',
-    description: 'AMERICAN INTERNATIONAL GROUP'
+    name: 'AIG.US/USD',
+    description: 'AMERICAN INTERNATIONAL GROUP',
+    minStartDate: '2017-05-11'
   },
   AIRFREUR: {
-    prefixedName: 'AIR.FR/EUR',
-    description: 'Airbus Group SE'
+    name: 'AIR.FR/EUR',
+    description: 'Airbus Group SE',
+    minStartDate: '2016-09-30'
   },
   AKZANLEUR: {
-    prefixedName: 'AKZA.NL/EUR',
-    description: 'Akzo Nobel NV'
+    name: 'AKZA.NL/EUR',
+    description: 'Akzo Nobel NV',
+    minStartDate: '2016-11-14'
   },
   ALFASESEK: {
-    prefixedName: 'ALFA.SE/SEK',
-    description: 'Alfa Laval AB'
+    name: 'ALFA.SE/SEK',
+    description: 'Alfa Laval AB',
+    minStartDate: '2016-11-07'
   },
   ALLUSUSD: {
-    prefixedName: 'ALL.US/USD',
-    description: 'ALLSTATE CORP'
+    name: 'ALL.US/USD',
+    description: 'ALLSTATE CORP',
+    minStartDate: '2018-01-31'
   },
   ALOFREUR: {
-    prefixedName: 'ALO.FR/EUR',
-    description: 'Alstom SA'
+    name: 'ALO.FR/EUR',
+    description: 'Alstom SA',
+    minStartDate: '2016-09-27'
   },
   ALVDEEUR: {
-    prefixedName: 'ALV.DE/EUR',
-    description: 'Allianz SE'
+    name: 'ALV.DE/EUR',
+    description: 'Allianz SE',
+    minStartDate: '2015-04-09'
   },
   ALXNUSUSD: {
-    prefixedName: 'ALXN.US/USD',
-    description: 'ALEXION PHARMACEUTICALS INC'
+    name: 'ALXN.US/USD',
+    description: 'ALEXION PHARMACEUTICALS INC',
+    minStartDate: '2017-01-19'
   },
   AMATUSUSD: {
-    prefixedName: 'AMAT.US/USD',
-    description: 'APPLIED MATERIALS INC'
+    name: 'AMAT.US/USD',
+    description: 'APPLIED MATERIALS INC',
+    minStartDate: '2017-05-11'
   },
   AMDUSUSD: {
-    prefixedName: 'AMD.US/USD',
-    description: 'ADVANCED MICRO DEVICES'
+    name: 'AMD.US/USD',
+    description: 'ADVANCED MICRO DEVICES',
+    minStartDate: '2017-11-02'
   },
   AMGNUSUSD: {
-    prefixedName: 'AMGN.US/USD',
-    description: 'AMGEN INC'
+    name: 'AMGN.US/USD',
+    description: 'AMGEN INC',
+    minStartDate: '2017-01-19'
   },
   AMSESEUR: {
-    prefixedName: 'AMS.ES/EUR',
-    description: 'Amadeus IT Holding SA'
+    name: 'AMS.ES/EUR',
+    description: 'Amadeus IT Holding SA',
+    minStartDate: '2016-11-14'
   },
   AMTUSUSD: {
-    prefixedName: 'AMT.US/USD',
-    description: 'AMERICAN TOWER CORP'
+    name: 'AMT.US/USD',
+    description: 'AMERICAN TOWER CORP',
+    minStartDate: '2017-11-02'
   },
   AMZNUSUSD: {
-    prefixedName: 'AMZN.US/USD',
-    description: 'AMAZON.COM INC'
+    name: 'AMZN.US/USD',
+    description: 'AMAZON.COM INC',
+    minStartDate: '2017-01-19'
   },
   ANTMUSUSD: {
-    prefixedName: 'ANTM.US/USD',
-    description: 'ANTHEM INC'
+    name: 'ANTM.US/USD',
+    description: 'ANTHEM INC',
+    minStartDate: '2017-11-02'
   },
   ANTOGBGBX: {
-    prefixedName: 'ANTO.GB/GBX',
-    description: 'Antofagasta PLC'
+    name: 'ANTO.GB/GBX',
+    description: 'Antofagasta PLC',
+    minStartDate: '2016-09-06'
   },
   APAUSUSD: {
-    prefixedName: 'APA.US/USD',
-    description: 'APACHE CORP'
+    name: 'APA.US/USD',
+    description: 'APACHE CORP',
+    minStartDate: '2018-01-31'
   },
   APCUSUSD: {
-    prefixedName: 'APC.US/USD',
-    description: 'ANADARKO PETROLEUM CORP'
+    name: 'APC.US/USD',
+    description: 'ANADARKO PETROLEUM CORP',
+    minStartDate: '2017-11-02'
   },
   APDUSUSD: {
-    prefixedName: 'APD.US/USD',
-    description: 'AIR PRODUCTS &amp; CHEMICALS INC'
+    name: 'APD.US/USD',
+    description: 'AIR PRODUCTS &amp; CHEMICALS INC',
+    minStartDate: '2017-11-02'
   },
   ASMLNLEUR: {
-    prefixedName: 'ASML.NL/EUR',
-    description: 'ASML Holding NV'
+    name: 'ASML.NL/EUR',
+    description: 'ASML Holding NV',
+    minStartDate: '2016-11-14'
   },
   ATCOASESEK: {
-    prefixedName: 'ATCOA.SE/SEK',
-    description: 'Atlas Copco AB'
+    name: 'ATCOA.SE/SEK',
+    description: 'Atlas Copco AB',
+    minStartDate: '2016-11-14'
   },
   ATVIUSUSD: {
-    prefixedName: 'ATVI.US/USD',
-    description: 'ACTIVISION BLIZZARD INC'
+    name: 'ATVI.US/USD',
+    description: 'ACTIVISION BLIZZARD INC',
+    minStartDate: '2017-05-11'
   },
   AUDCAD: {
-    prefixedName: 'AUD/CAD',
-    description: 'Australian Dollar vs Canadian Dollar'
+    name: 'AUD/CAD',
+    description: 'Australian Dollar vs Canadian Dollar',
+    minStartDate: '2005-12-26'
   },
   AUDCHF: {
-    prefixedName: 'AUD/CHF',
-    description: 'Australian Dollar vs Swiss Franc'
+    name: 'AUD/CHF',
+    description: 'Australian Dollar vs Swiss Franc',
+    minStartDate: '2005-12-26'
   },
   AUDJPY: {
-    prefixedName: 'AUD/JPY',
-    description: 'Australian Dollar vs Japanese Yen'
+    name: 'AUD/JPY',
+    description: 'Australian Dollar vs Japanese Yen',
+    minStartDate: '2003-11-29'
   },
   AUDNZD: {
-    prefixedName: 'AUD/NZD',
-    description: 'Australian Dollar vs New Zealand Dollar'
+    name: 'AUD/NZD',
+    description: 'Australian Dollar vs New Zealand Dollar',
+    minStartDate: '2006-12-08'
   },
   AUDSGD: {
-    prefixedName: 'AUD/SGD',
-    description: 'Australian Dollar vs Singapore Dollar'
+    name: 'AUD/SGD',
+    description: 'Australian Dollar vs Singapore Dollar',
+    minStartDate: '2007-03-13'
   },
   AUDUSD: {
-    prefixedName: 'AUD/USD',
-    description: 'Australian Dollar vs US Dollar'
+    name: 'AUD/USD',
+    description: 'Australian Dollar vs US Dollar',
+    minStartDate: '2003-08-03'
   },
   AVGBGBX: {
-    prefixedName: 'AV.GB/GBX',
-    description: 'Aviva PLC'
+    name: 'AV.GB/GBX',
+    description: 'Aviva PLC',
+    minStartDate: '2016-09-06'
   },
   AVBUSUSD: {
-    prefixedName: 'AVB.US/USD',
-    description: 'AVALONBAY COMMUNITIES INC'
+    name: 'AVB.US/USD',
+    description: 'AVALONBAY COMMUNITIES INC',
+    minStartDate: '2018-01-31'
   },
   AVGOUSUSD: {
-    prefixedName: 'AVGO.US/USD',
-    description: 'Broadcom Limited'
+    name: 'AVGO.US/USD',
+    description: 'Broadcom Limited',
+    minStartDate: '2017-01-19'
   },
   AXPUSUSD: {
-    prefixedName: 'AXP.US/USD',
-    description: 'AMERICAN EXPRESS CO'
+    name: 'AXP.US/USD',
+    description: 'AMERICAN EXPRESS CO',
+    minStartDate: '2017-11-02'
   },
   AZNGBGBX: {
-    prefixedName: 'AZN.GB/GBX',
-    description: 'AstraZeneca PLC'
+    name: 'AZN.GB/GBX',
+    description: 'AstraZeneca PLC',
+    minStartDate: '2016-09-06'
   },
   AZNUSUSD: {
-    prefixedName: 'AZN.US/USD',
-    description: 'AstraZeneca PLC'
+    name: 'AZN.US/USD',
+    description: 'AstraZeneca PLC',
+    minStartDate: '2017-01-26'
   },
   AZOUSUSD: {
-    prefixedName: 'AZO.US/USD',
-    description: 'AUTOZONE INC'
+    name: 'AZO.US/USD',
+    description: 'AUTOZONE INC',
+    minStartDate: '2017-11-02'
   },
   BAGBGBX: {
-    prefixedName: 'BA.GB/GBX',
-    description: 'BAE Systems PLC'
+    name: 'BA.GB/GBX',
+    description: 'BAE Systems PLC',
+    minStartDate: '2016-09-06'
   },
   BAUSUSD: {
-    prefixedName: 'BA.US/USD',
-    description: 'Boeing Co'
+    name: 'BA.US/USD',
+    description: 'Boeing Co',
+    minStartDate: '2017-01-19'
   },
   BABGBGBX: {
-    prefixedName: 'BAB.GB/GBX',
-    description: 'Babcock International Group PLC'
+    name: 'BAB.GB/GBX',
+    description: 'Babcock International Group PLC',
+    minStartDate: '2016-09-06'
   },
   BABAUSUSD: {
-    prefixedName: 'BABA.US/USD',
-    description: 'ALIBABA GROUP HOLDING-SP ADR'
+    name: 'BABA.US/USD',
+    description: 'ALIBABA GROUP HOLDING-SP ADR',
+    minStartDate: '2017-01-19'
   },
   BACUSUSD: {
-    prefixedName: 'BAC.US/USD',
-    description: 'BANK OF AMERICA CORP'
+    name: 'BAC.US/USD',
+    description: 'BANK OF AMERICA CORP',
+    minStartDate: '2017-01-23'
   },
   BARCGBGBX: {
-    prefixedName: 'BARC.GB/GBX',
-    description: 'Barclays PLC'
+    name: 'BARC.GB/GBX',
+    description: 'Barclays PLC',
+    minStartDate: '2016-09-06'
   },
   BASDEEUR: {
-    prefixedName: 'BAS.DE/EUR',
-    description: 'BASF SE'
+    name: 'BAS.DE/EUR',
+    description: 'BASF SE',
+    minStartDate: '2015-04-22'
   },
   BATSGBGBX: {
-    prefixedName: 'BATS.GB/GBX',
-    description: 'British American Tobacco PLC'
+    name: 'BATS.GB/GBX',
+    description: 'British American Tobacco PLC',
+    minStartDate: '2016-09-06'
   },
   BAYNDEEUR: {
-    prefixedName: 'BAYN.DE/EUR',
-    description: 'Bayer AG'
+    name: 'BAYN.DE/EUR',
+    description: 'Bayer AG',
+    minStartDate: '2015-03-20'
   },
   BBDUSUSD: {
-    prefixedName: 'BBD.US/USD',
-    description: 'Banco Bradesco S.A.'
+    name: 'BBD.US/USD',
+    description: 'Banco Bradesco S.A.',
+    minStartDate: '2017-01-26'
   },
   BBTUSUSD: {
-    prefixedName: 'BBT.US/USD',
-    description: 'BB&amp;T CORP'
+    name: 'BBT.US/USD',
+    description: 'BB&amp;T CORP',
+    minStartDate: '2018-01-31'
   },
   BBVAESEUR: {
-    prefixedName: 'BBVA.ES/EUR',
-    description: 'Banco Bilbao Vizcaya Argentaria SA'
+    name: 'BBVA.ES/EUR',
+    description: 'Banco Bilbao Vizcaya Argentaria SA',
+    minStartDate: '2016-11-14'
   },
   BBYUSUSD: {
-    prefixedName: 'BBY.US/USD',
-    description: 'BEST BUY CO INC'
+    name: 'BBY.US/USD',
+    description: 'BEST BUY CO INC',
+    minStartDate: '2017-05-11'
   },
   BDXUSUSD: {
-    prefixedName: 'BDX.US/USD',
-    description: 'BECTON DICKINSON AND CO'
+    name: 'BDX.US/USD',
+    description: 'BECTON DICKINSON AND CO',
+    minStartDate: '2018-01-31'
   },
   BEIDEEUR: {
-    prefixedName: 'BEI.DE/EUR',
-    description: 'Beiersdorf AG'
+    name: 'BEI.DE/EUR',
+    description: 'Beiersdorf AG',
+    minStartDate: '2015-04-08'
   },
   BELGBEEUR: {
-    prefixedName: 'BELG.BE/EUR',
-    description: 'Proximus'
+    name: 'BELG.BE/EUR',
+    description: 'Proximus',
+    minStartDate: '2016-11-07'
   },
   BIDUUSUSD: {
-    prefixedName: 'BIDU.US/USD',
-    description: 'BAIDU INC'
+    name: 'BIDU.US/USD',
+    description: 'BAIDU INC',
+    minStartDate: '2017-11-02'
   },
   BIIBUSUSD: {
-    prefixedName: 'BIIB.US/USD',
-    description: 'BIOGEN INC'
+    name: 'BIIB.US/USD',
+    description: 'BIOGEN INC',
+    minStartDate: '2017-05-11'
   },
   BKUSUSD: {
-    prefixedName: 'BK.US/USD',
-    description: 'BANK OF NEW YORK MELLON CORP'
+    name: 'BK.US/USD',
+    description: 'BANK OF NEW YORK MELLON CORP',
+    minStartDate: '2017-05-11'
   },
   BLNDGBGBX: {
-    prefixedName: 'BLND.GB/GBX',
-    description: 'British Land Co PLC'
+    name: 'BLND.GB/GBX',
+    description: 'British Land Co PLC',
+    minStartDate: '2016-09-06'
   },
   BLTGBGBX: {
-    prefixedName: 'BLT.GB/GBX',
-    description: 'BHP Billiton PLC'
+    name: 'BLT.GB/GBX',
+    description: 'BHP Billiton PLC',
+    minStartDate: '2016-09-06'
   },
   BMWDEEUR: {
-    prefixedName: 'BMW.DE/EUR',
-    description: 'Bayerische Motoren Werke AG'
+    name: 'BMW.DE/EUR',
+    description: 'Bayerische Motoren Werke AG',
+    minStartDate: '2015-03-24'
   },
   BMYUSUSD: {
-    prefixedName: 'BMY.US/USD',
-    description: 'BRISTOL-MYERS SQUIBB CO'
+    name: 'BMY.US/USD',
+    description: 'BRISTOL-MYERS SQUIBB CO',
+    minStartDate: '2017-05-11'
   },
   BNFREUR: {
-    prefixedName: 'BN.FR/EUR',
-    description: 'Danone SA'
+    name: 'BN.FR/EUR',
+    description: 'Danone SA',
+    minStartDate: '2016-09-30'
   },
   BNPFREUR: {
-    prefixedName: 'BNP.FR/EUR',
-    description: 'BNP Paribas SA'
+    name: 'BNP.FR/EUR',
+    description: 'BNP Paribas SA',
+    minStartDate: '2016-09-30'
   },
   BNZLGBGBX: {
-    prefixedName: 'BNZL.GB/GBX',
-    description: 'Bunzl PLC'
+    name: 'BNZL.GB/GBX',
+    description: 'Bunzl PLC',
+    minStartDate: '2016-09-06'
   },
   BOSSDEEUR: {
-    prefixedName: 'BOSS.DE/EUR',
-    description: 'HUGO BOSS AG'
+    name: 'BOSS.DE/EUR',
+    description: 'HUGO BOSS AG',
+    minStartDate: '2015-04-09'
   },
   BPGBGBX: {
-    prefixedName: 'BP.GB/GBX',
-    description: 'BP PLC'
+    name: 'BP.GB/GBX',
+    description: 'BP PLC',
+    minStartDate: '2016-09-06'
   },
   BPUSUSD: {
-    prefixedName: 'BP.US/USD',
-    description: 'BP p.l.c.'
+    name: 'BP.US/USD',
+    description: 'BP p.l.c.',
+    minStartDate: '2018-01-31'
   },
   BRBYGBGBX: {
-    prefixedName: 'BRBY.GB/GBX',
-    description: 'Burberry Group PLC'
+    name: 'BRBY.GB/GBX',
+    description: 'Burberry Group PLC',
+    minStartDate: '2016-07-08'
   },
   BRKBUSUSD: {
-    prefixedName: 'BRKB.US/USD',
-    description: 'BERKSHIRE HATHAWAY INC-CL B'
+    name: 'BRKB.US/USD',
+    description: 'BERKSHIRE HATHAWAY INC-CL B',
+    minStartDate: '2017-11-06'
   },
   BSXUSUSD: {
-    prefixedName: 'BSX.US/USD',
-    description: 'BOSTON SCIENTIFIC CORP'
+    name: 'BSX.US/USD',
+    description: 'BOSTON SCIENTIFIC CORP',
+    minStartDate: '2017-05-11'
   },
   BTGBGBX: {
-    prefixedName: 'BT.GB/GBX',
-    description: 'BT Group PLC'
+    name: 'BT.GB/GBX',
+    description: 'BT Group PLC',
+    minStartDate: '2016-07-07'
   },
   BTCUSD: {
-    prefixedName: 'BTC/USD',
-    description: 'Bitcoin vs US Dollar'
+    name: 'BTC/USD',
+    description: 'Bitcoin vs US Dollar',
+    minStartDate: '2017-05-07'
   },
   BUNDTREUR: {
-    prefixedName: 'BUND.TR/EUR',
-    description: 'Euro Bund'
+    name: 'BUND.TR/EUR',
+    description: 'Euro Bund',
+    minStartDate: '2016-05-02'
   },
   CUSUSD: {
-    prefixedName: 'C.US/USD',
-    description: 'CITIGROUP INC'
+    name: 'C.US/USD',
+    description: 'CITIGROUP INC',
+    minStartDate: '2017-01-23'
   },
   CAFREUR: {
-    prefixedName: 'CA.FR/EUR',
-    description: 'Carrefour SA'
+    name: 'CA.FR/EUR',
+    description: 'Carrefour SA',
+    minStartDate: '2016-09-30'
   },
   CABKESEUR: {
-    prefixedName: 'CABK.ES/EUR',
-    description: 'CaixaBank'
+    name: 'CABK.ES/EUR',
+    description: 'CaixaBank',
+    minStartDate: '2016-11-14'
   },
   CADCHF: {
-    prefixedName: 'CAD/CHF',
-    description: 'Canadian Dollar vs Swiss Franc'
+    name: 'CAD/CHF',
+    description: 'Canadian Dollar vs Swiss Franc',
+    minStartDate: '2005-12-26'
   },
   CADHKD: {
-    prefixedName: 'CAD/HKD',
-    description: 'Canadian Dollar vs Hong Kong Dollar'
+    name: 'CAD/HKD',
+    description: 'Canadian Dollar vs Hong Kong Dollar',
+    minStartDate: '2007-03-13'
   },
   CADJPY: {
-    prefixedName: 'CAD/JPY',
-    description: 'Canadian Dollar vs Japanese Yen'
+    name: 'CAD/JPY',
+    description: 'Canadian Dollar vs Japanese Yen',
+    minStartDate: '2004-10-20'
   },
   CAGUSUSD: {
-    prefixedName: 'CAG.US/USD',
-    description: 'CONAGRA FOODS INC'
+    name: 'CAG.US/USD',
+    description: 'CONAGRA FOODS INC',
+    minStartDate: '2018-01-31'
   },
   CAHUSUSD: {
-    prefixedName: 'CAH.US/USD',
-    description: 'CARDINAL HEALTH INC'
+    name: 'CAH.US/USD',
+    description: 'CARDINAL HEALTH INC',
+    minStartDate: '2018-01-31'
   },
   CAPFREUR: {
-    prefixedName: 'CAP.FR/EUR',
-    description: 'Cap Gemini SA'
+    name: 'CAP.FR/EUR',
+    description: 'Cap Gemini SA',
+    minStartDate: '2016-09-30'
   },
   CARLBDKDKK: {
-    prefixedName: 'CARLB.DK/DKK',
-    description: 'Carlsberg A/S'
+    name: 'CARLB.DK/DKK',
+    description: 'Carlsberg A/S',
+    minStartDate: '2016-11-07'
   },
   CATUSUSD: {
-    prefixedName: 'CAT.US/USD',
-    description: 'CATERPILLAR INC'
+    name: 'CAT.US/USD',
+    description: 'CATERPILLAR INC',
+    minStartDate: '2017-05-11'
   },
   CBKDEEUR: {
-    prefixedName: 'CBK.DE/EUR',
-    description: 'Commerzbank AG'
+    name: 'CBK.DE/EUR',
+    description: 'Commerzbank AG',
+    minStartDate: '2015-03-26'
   },
   CBSUSUSD: {
-    prefixedName: 'CBS.US/USD',
-    description: 'CBS CORP-CLASS B NON VOTING'
+    name: 'CBS.US/USD',
+    description: 'CBS CORP-CLASS B NON VOTING',
+    minStartDate: '2018-01-31'
   },
   CCLGBGBX: {
-    prefixedName: 'CCL.GB/GBX',
-    description: 'Carnival PLC'
+    name: 'CCL.GB/GBX',
+    description: 'Carnival PLC',
+    minStartDate: '2016-07-06'
   },
   CELGUSUSD: {
-    prefixedName: 'CELG.US/USD',
-    description: 'CELGENE CORP'
+    name: 'CELG.US/USD',
+    description: 'CELGENE CORP',
+    minStartDate: '2017-05-11'
   },
   CFUSUSD: {
-    prefixedName: 'CF.US/USD',
-    description: 'CF INDUSTRIES HOLDINGS INC'
+    name: 'CF.US/USD',
+    description: 'CF INDUSTRIES HOLDINGS INC',
+    minStartDate: '2018-01-31'
   },
   CHFJPY: {
-    prefixedName: 'CHF/JPY',
-    description: 'Swiss Franc vs Japanese Yen'
+    name: 'CHF/JPY',
+    description: 'Swiss Franc vs Japanese Yen',
+    minStartDate: '2003-08-03'
   },
   CHFSGD: {
-    prefixedName: 'CHF/SGD',
-    description: 'Swiss Franc vs Singapore Dollar'
+    name: 'CHF/SGD',
+    description: 'Swiss Franc vs Singapore Dollar',
+    minStartDate: '2007-03-13'
   },
   CHIIDXUSD: {
-    prefixedName: 'CHI.IDX/USD',
-    description: 'China A50 Index'
+    name: 'CHI.IDX/USD',
+    description: 'China A50 Index',
+    minStartDate: '2017-07-17'
   },
   CIUSUSD: {
-    prefixedName: 'CI.US/USD',
-    description: 'CIGNA CORP'
+    name: 'CI.US/USD',
+    description: 'CIGNA CORP',
+    minStartDate: '2017-05-11'
   },
   CLUSUSD: {
-    prefixedName: 'CL.US/USD',
-    description: 'COLGATE-PALMOLIVE CO'
+    name: 'CL.US/USD',
+    description: 'COLGATE-PALMOLIVE CO',
+    minStartDate: '2017-11-02'
   },
   CMCSAUSUSD: {
-    prefixedName: 'CMCSA.US/USD',
-    description: 'COMCAST CORP-CLASS A'
+    name: 'CMCSA.US/USD',
+    description: 'COMCAST CORP-CLASS A',
+    minStartDate: '2017-01-19'
   },
   CMEUSUSD: {
-    prefixedName: 'CME.US/USD',
-    description: 'CME GROUP INC'
+    name: 'CME.US/USD',
+    description: 'CME GROUP INC',
+    minStartDate: '2017-05-11'
   },
   CMGUSUSD: {
-    prefixedName: 'CMG.US/USD',
-    description: 'CHIPOTLE MEXICAN GRILL INC'
+    name: 'CMG.US/USD',
+    description: 'CHIPOTLE MEXICAN GRILL INC',
+    minStartDate: '2017-05-11'
   },
   CMIUSUSD: {
-    prefixedName: 'CMI.US/USD',
-    description: 'CUMMINS INC'
+    name: 'CMI.US/USD',
+    description: 'CUMMINS INC',
+    minStartDate: '2018-02-01'
   },
   CNAGBGBX: {
-    prefixedName: 'CNA.GB/GBX',
-    description: 'Centrica PLC'
+    name: 'CNA.GB/GBX',
+    description: 'Centrica PLC',
+    minStartDate: '2016-07-07'
   },
   COCOACMDUSD: {
-    prefixedName: 'COCOA.CMD/USD',
-    description: 'NY Cocoa'
+    name: 'COCOA.CMD/USD',
+    description: 'NY Cocoa',
+    minStartDate: '2017-10-20'
   },
   COFFEECMDUSX: {
-    prefixedName: 'COFFEE.CMD/USX',
-    description: 'Coffee Arabica'
+    name: 'COFFEE.CMD/USX',
+    description: 'Coffee Arabica',
+    minStartDate: '2017-12-04'
   },
   COLUSUSD: {
-    prefixedName: 'COL.US/USD',
-    description: 'ROCKWELL COLLINS INC'
+    name: 'COL.US/USD',
+    description: 'ROCKWELL COLLINS INC',
+    minStartDate: '2017-11-02'
   },
   COLOBDKDKK: {
-    prefixedName: 'COLOB.DK/DKK',
-    description: 'Coloplast A/S'
+    name: 'COLOB.DK/DKK',
+    description: 'Coloplast A/S',
+    minStartDate: '2016-11-07'
   },
   CONDEEUR: {
-    prefixedName: 'CON.DE/EUR',
-    description: 'Continental AG'
+    name: 'CON.DE/EUR',
+    description: 'Continental AG',
+    minStartDate: '2015-04-08'
   },
   COPUSUSD: {
-    prefixedName: 'COP.US/USD',
-    description: 'CONOCOPHILLIPS'
+    name: 'COP.US/USD',
+    description: 'CONOCOPHILLIPS',
+    minStartDate: '2017-11-02'
   },
   COPPERCMDUSD: {
-    prefixedName: 'COPPER.CMD/USD',
-    description: 'High Grade Copper'
+    name: 'COPPER.CMD/USD',
+    description: 'High Grade Copper',
+    minStartDate: '2012-03-01'
   },
   COSTUSUSD: {
-    prefixedName: 'COST.US/USD',
-    description: 'COSTCO WHOLESALE CORP'
+    name: 'COST.US/USD',
+    description: 'COSTCO WHOLESALE CORP',
+    minStartDate: '2017-11-02'
   },
   COTTONCMDUSX: {
-    prefixedName: 'COTTON.CMD/USX',
-    description: 'Cotton'
+    name: 'COTTON.CMD/USX',
+    description: 'Cotton',
+    minStartDate: '2017-10-20'
   },
   CPGGBGBX: {
-    prefixedName: 'CPG.GB/GBX',
-    description: 'Compass Group PLC'
+    name: 'CPG.GB/GBX',
+    description: 'Compass Group PLC',
+    minStartDate: '2016-07-08'
   },
   CPIGBGBX: {
-    prefixedName: 'CPI.GB/GBX',
-    description: 'Capita PLC'
+    name: 'CPI.GB/GBX',
+    description: 'Capita PLC',
+    minStartDate: '2016-07-07'
   },
   CRDAGBGBX: {
-    prefixedName: 'CRDA.GB/GBX',
-    description: 'Croda International PLC'
+    name: 'CRDA.GB/GBX',
+    description: 'Croda International PLC',
+    minStartDate: '2016-11-01'
   },
   CRHGBGBX: {
-    prefixedName: 'CRH.GB/GBX',
-    description: 'CRH PLC'
+    name: 'CRH.GB/GBX',
+    description: 'CRH PLC',
+    minStartDate: '2016-11-08'
   },
   CRMUSUSD: {
-    prefixedName: 'CRM.US/USD',
-    description: 'SALESFORCE.COM INC'
+    name: 'CRM.US/USD',
+    description: 'SALESFORCE.COM INC',
+    minStartDate: '2017-05-11'
   },
   CSFREUR: {
-    prefixedName: 'CS.FR/EUR',
-    description: 'AXA SA'
+    name: 'CS.FR/EUR',
+    description: 'AXA SA',
+    minStartDate: '2016-09-30'
   },
   CSUSUSD: {
-    prefixedName: 'CS.US/USD',
-    description: 'Credit Suisse Group AG'
+    name: 'CS.US/USD',
+    description: 'Credit Suisse Group AG',
+    minStartDate: '2017-01-26'
   },
   CSCOUSUSD: {
-    prefixedName: 'CSCO.US/USD',
-    description: 'CISCO SYSTEMS INC'
+    name: 'CSCO.US/USD',
+    description: 'CISCO SYSTEMS INC',
+    minStartDate: '2017-01-19'
   },
   CSXUSUSD: {
-    prefixedName: 'CSX.US/USD',
-    description: 'CSX CORP'
+    name: 'CSX.US/USD',
+    description: 'CSX CORP',
+    minStartDate: '2017-11-02'
   },
   CTLUSUSD: {
-    prefixedName: 'CTL.US/USD',
-    description: 'CENTURYLINK INC'
+    name: 'CTL.US/USD',
+    description: 'CENTURYLINK INC',
+    minStartDate: '2017-11-02'
   },
   CTSHUSUSD: {
-    prefixedName: 'CTSH.US/USD',
-    description: 'COGNIZANT TECH SOLUTIONS-A'
+    name: 'CTSH.US/USD',
+    description: 'COGNIZANT TECH SOLUTIONS-A',
+    minStartDate: '2017-11-02'
   },
   CVSUSUSD: {
-    prefixedName: 'CVS.US/USD',
-    description: 'CVS HEALTH CORP'
+    name: 'CVS.US/USD',
+    description: 'CVS HEALTH CORP',
+    minStartDate: '2017-11-02'
   },
   CVXUSUSD: {
-    prefixedName: 'CVX.US/USD',
-    description: 'CHEVRON CORP'
+    name: 'CVX.US/USD',
+    description: 'CHEVRON CORP',
+    minStartDate: '2017-01-19'
   },
   DUSUSD: {
-    prefixedName: 'D.US/USD',
-    description: 'DOMINION RESOURCES INC/VA'
+    name: 'D.US/USD',
+    description: 'DOMINION RESOURCES INC/VA',
+    minStartDate: '2018-02-01'
   },
   DAIDEEUR: {
-    prefixedName: 'DAI.DE/EUR',
-    description: 'Daimler AG'
+    name: 'DAI.DE/EUR',
+    description: 'Daimler AG',
+    minStartDate: '2015-03-27'
   },
   DALUSUSD: {
-    prefixedName: 'DAL.US/USD',
-    description: 'DELTA AIR LINES INC'
+    name: 'DAL.US/USD',
+    description: 'DELTA AIR LINES INC',
+    minStartDate: '2017-11-02'
   },
   DANSKEDKDKK: {
-    prefixedName: 'DANSKE.DK/DKK',
-    description: 'Danske Bank A/S'
+    name: 'DANSKE.DK/DKK',
+    description: 'Danske Bank A/S',
+    minStartDate: '2016-11-08'
   },
   DB1DEEUR: {
-    prefixedName: 'DB1.DE/EUR',
-    description: 'Deutsche Boerse AG'
+    name: 'DB1.DE/EUR',
+    description: 'Deutsche Boerse AG',
+    minStartDate: '2015-04-14'
   },
   DBKDEEUR: {
-    prefixedName: 'DBK.DE/EUR',
-    description: 'Deutsche Bank AG'
+    name: 'DBK.DE/EUR',
+    description: 'Deutsche Bank AG',
+    minStartDate: '2015-03-25'
   },
   DEUSUSD: {
-    prefixedName: 'DE.US/USD',
-    description: 'DEERE &amp; CO'
+    name: 'DE.US/USD',
+    description: 'DEERE &amp; CO',
+    minStartDate: '2017-05-11'
   },
   DFSUSUSD: {
-    prefixedName: 'DFS.US/USD',
-    description: 'DISCOVER FINANCIAL SERVICES'
+    name: 'DFS.US/USD',
+    description: 'DISCOVER FINANCIAL SERVICES',
+    minStartDate: '2018-02-01'
   },
   DGFREUR: {
-    prefixedName: 'DG.FR/EUR',
-    description: 'Vinci SA'
+    name: 'DG.FR/EUR',
+    description: 'Vinci SA',
+    minStartDate: '2016-09-30'
   },
   DGUSUSD: {
-    prefixedName: 'DG.US/USD',
-    description: 'DOLLAR GENERAL CORP'
+    name: 'DG.US/USD',
+    description: 'DOLLAR GENERAL CORP',
+    minStartDate: '2017-05-11'
   },
   DGEGBGBX: {
-    prefixedName: 'DGE.GB/GBX',
-    description: 'Diageo PLC'
+    name: 'DGE.GB/GBX',
+    description: 'Diageo PLC',
+    minStartDate: '2016-07-06'
   },
   DHIUSUSD: {
-    prefixedName: 'DHI.US/USD',
-    description: 'DR HORTON INC'
+    name: 'DHI.US/USD',
+    description: 'DR HORTON INC',
+    minStartDate: '2018-02-01'
   },
   DHRUSUSD: {
-    prefixedName: 'DHR.US/USD',
-    description: 'DANAHER CORP'
+    name: 'DHR.US/USD',
+    description: 'DANAHER CORP',
+    minStartDate: '2017-11-02'
   },
   DIAESEUR: {
-    prefixedName: 'DIA.ES/EUR',
-    description: 'Distribuidora Internacional de Alimentacion SA'
+    name: 'DIA.ES/EUR',
+    description: 'Distribuidora Internacional de Alimentacion SA',
+    minStartDate: '2016-11-14'
   },
   DIAUSUSD: {
-    prefixedName: 'DIA.US/USD',
-    description: 'SPDR Dow Jones® Industrial Average ETF'
+    name: 'DIA.US/USD',
+    description: 'SPDR Dow Jones® Industrial Average ETF',
+    minStartDate: '2017-05-11'
   },
   DIESELCMDUSD: {
-    prefixedName: 'DIESEL.CMD/USD',
-    description: 'Gas oil'
+    name: 'DIESEL.CMD/USD',
+    description: 'Gas oil',
+    minStartDate: '2017-10-20'
   },
   DISUSUSD: {
-    prefixedName: 'DIS.US/USD',
-    description: 'WALT DISNEY CO/THE'
+    name: 'DIS.US/USD',
+    description: 'WALT DISNEY CO/THE',
+    minStartDate: '2017-01-19'
   },
   DLTRUSUSD: {
-    prefixedName: 'DLTR.US/USD',
-    description: 'DOLLAR TREE INC'
+    name: 'DLTR.US/USD',
+    description: 'DOLLAR TREE INC',
+    minStartDate: '2017-11-02'
   },
   DNBNONOK: {
-    prefixedName: 'DNB.NO/NOK',
-    description: 'DNB ASA'
+    name: 'DNB.NO/NOK',
+    description: 'DNB ASA',
+    minStartDate: '2016-11-14'
   },
   DOLLARIDXUSD: {
-    prefixedName: 'DOLLAR.IDX/USD',
-    description: 'US Dollar Index'
+    name: 'DOLLAR.IDX/USD',
+    description: 'US Dollar Index',
+    minStartDate: '2017-12-01'
   },
   DPWDEEUR: {
-    prefixedName: 'DPW.DE/EUR',
-    description: 'Deutsche Post AG'
+    name: 'DPW.DE/EUR',
+    description: 'Deutsche Post AG',
+    minStartDate: '2015-03-31'
   },
   DSMNLEUR: {
-    prefixedName: 'DSM.NL/EUR',
-    description: 'Koninklijke DSM NV'
+    name: 'DSM.NL/EUR',
+    description: 'Koninklijke DSM NV',
+    minStartDate: '2016-11-14'
   },
   DTEDEEUR: {
-    prefixedName: 'DTE.DE/EUR',
-    description: 'Deutsche Telekom AG'
+    name: 'DTE.DE/EUR',
+    description: 'Deutsche Telekom AG',
+    minStartDate: '2015-03-31'
   },
   DUKUSUSD: {
-    prefixedName: 'DUK.US/USD',
-    description: 'DUKE ENERGY CORP'
+    name: 'DUK.US/USD',
+    description: 'DUKE ENERGY CORP',
+    minStartDate: '2017-05-11'
   },
   DVAUSUSD: {
-    prefixedName: 'DVA.US/USD',
-    description: 'DAVITA HEALTHCARE PARTNERS I'
+    name: 'DVA.US/USD',
+    description: 'DAVITA HEALTHCARE PARTNERS I',
+    minStartDate: '2018-02-01'
   },
   DVNUSUSD: {
-    prefixedName: 'DVN.US/USD',
-    description: 'DEVON ENERGY CORP'
+    name: 'DVN.US/USD',
+    description: 'DEVON ENERGY CORP',
+    minStartDate: '2018-02-01'
   },
   DVYUSUSD: {
-    prefixedName: 'DVY.US/USD',
-    description: 'iShares Select Dividend ETF'
+    name: 'DVY.US/USD',
+    description: 'iShares Select Dividend ETF',
+    minStartDate: '2017-05-11'
   },
   EAUSUSD: {
-    prefixedName: 'EA.US/USD',
-    description: 'ELECTRONIC ARTS INC'
+    name: 'EA.US/USD',
+    description: 'ELECTRONIC ARTS INC',
+    minStartDate: '2017-05-11'
   },
   EBAYUSUSD: {
-    prefixedName: 'EBAY.US/USD',
-    description: 'EBAY INC'
+    name: 'EBAY.US/USD',
+    description: 'EBAY INC',
+    minStartDate: '2017-11-02'
   },
   EBSATEUR: {
-    prefixedName: 'EBS.AT/EUR',
-    description: 'Erste Group Bank AG'
+    name: 'EBS.AT/EUR',
+    description: 'Erste Group Bank AG',
+    minStartDate: '2016-11-04'
   },
   EDFFREUR: {
-    prefixedName: 'EDF.FR/EUR',
-    description: 'Electricite de France SA'
+    name: 'EDF.FR/EUR',
+    description: 'Electricite de France SA',
+    minStartDate: '2016-09-30'
   },
   EDPPTEUR: {
-    prefixedName: 'EDP.PT/EUR',
-    description: 'EDP - Energias de Portugal SA'
+    name: 'EDP.PT/EUR',
+    description: 'EDP - Energias de Portugal SA',
+    minStartDate: '2016-11-14'
   },
   EEMUSUSD: {
-    prefixedName: 'EEM.US/USD',
-    description: 'iShares MSCI Emerging Markets ETF'
+    name: 'EEM.US/USD',
+    description: 'iShares MSCI Emerging Markets ETF',
+    minStartDate: '2017-01-23'
   },
   EFAUSUSD: {
-    prefixedName: 'EFA.US/USD',
-    description: 'iShares MSCI EAFE ETF'
+    name: 'EFA.US/USD',
+    description: 'iShares MSCI EAFE ETF',
+    minStartDate: '2017-01-23'
   },
   EFXUSUSD: {
-    prefixedName: 'EFX.US/USD',
-    description: 'EQUIFAX INC'
+    name: 'EFX.US/USD',
+    description: 'EQUIFAX INC',
+    minStartDate: '2017-11-02'
   },
   EIFREUR: {
-    prefixedName: 'EI.FR/EUR',
-    description: 'Essilor International SA'
+    name: 'EI.FR/EUR',
+    description: 'Essilor International SA',
+    minStartDate: '2016-09-30'
   },
   EIXUSUSD: {
-    prefixedName: 'EIX.US/USD',
-    description: 'EDISON INTERNATIONAL'
+    name: 'EIX.US/USD',
+    description: 'EDISON INTERNATIONAL',
+    minStartDate: '2018-02-01'
   },
   ELUSUSD: {
-    prefixedName: 'EL.US/USD',
-    description: 'ESTEE LAUDER COMPANIES-CL A'
+    name: 'EL.US/USD',
+    description: 'ESTEE LAUDER COMPANIES-CL A',
+    minStartDate: '2018-02-01'
   },
   ELEESEUR: {
-    prefixedName: 'ELE.ES/EUR',
-    description: 'Endesa SA'
+    name: 'ELE.ES/EUR',
+    description: 'Endesa SA',
+    minStartDate: '2016-11-14'
   },
   ELI1VFIEUR: {
-    prefixedName: 'ELI1V.FI/EUR',
-    description: 'Elisa OYJ'
+    name: 'ELI1V.FI/EUR',
+    description: 'Elisa OYJ',
+    minStartDate: '2016-11-03'
   },
   ELUXBSESEK: {
-    prefixedName: 'ELUXB.SE/SEK',
-    description: 'Electrolux AB'
+    name: 'ELUXB.SE/SEK',
+    description: 'Electrolux AB',
+    minStartDate: '2016-11-07'
   },
   EMBUSUSD: {
-    prefixedName: 'EMB.US/USD',
-    description: 'iShares J.P. Morgan USD Emerging Markets Bond ETF'
+    name: 'EMB.US/USD',
+    description: 'iShares J.P. Morgan USD Emerging Markets Bond ETF',
+    minStartDate: '2017-05-11'
   },
   EMRUSUSD: {
-    prefixedName: 'EMR.US/USD',
-    description: 'EMERSON ELECTRIC CO'
+    name: 'EMR.US/USD',
+    description: 'EMERSON ELECTRIC CO',
+    minStartDate: '2018-02-01'
   },
   ENFREUR: {
-    prefixedName: 'EN.FR/EUR',
-    description: 'Bouygues SA'
+    name: 'EN.FR/EUR',
+    description: 'Bouygues SA',
+    minStartDate: '2016-09-30'
   },
   ENGESEUR: {
-    prefixedName: 'ENG.ES/EUR',
-    description: 'Enagas SA'
+    name: 'ENG.ES/EUR',
+    description: 'Enagas SA',
+    minStartDate: '2016-11-14'
   },
   ENGIFREUR: {
-    prefixedName: 'ENGI.FR/EUR',
-    description: 'Engie'
+    name: 'ENGI.FR/EUR',
+    description: 'Engie',
+    minStartDate: '2016-09-30'
   },
   EOANDEEUR: {
-    prefixedName: 'EOAN.DE/EUR',
-    description: 'E.ON SE'
+    name: 'EOAN.DE/EUR',
+    description: 'E.ON SE',
+    minStartDate: '2015-04-20'
   },
   EOGUSUSD: {
-    prefixedName: 'EOG.US/USD',
-    description: 'EOG RESOURCES INC'
+    name: 'EOG.US/USD',
+    description: 'EOG RESOURCES INC',
+    minStartDate: '2017-11-02'
   },
   EQTUSUSD: {
-    prefixedName: 'EQT.US/USD',
-    description: 'EQT CORP'
+    name: 'EQT.US/USD',
+    description: 'EQT CORP',
+    minStartDate: '2017-11-02'
   },
   ERICBSESEK: {
-    prefixedName: 'ERICB.SE/SEK',
-    description: 'Telefonaktiebolaget LM Ericsson'
+    name: 'ERICB.SE/SEK',
+    description: 'Telefonaktiebolaget LM Ericsson',
+    minStartDate: '2016-11-14'
   },
   ESRXUSUSD: {
-    prefixedName: 'ESRX.US/USD',
-    description: 'EXPRESS SCRIPTS HOLDING CO'
+    name: 'ESRX.US/USD',
+    description: 'EXPRESS SCRIPTS HOLDING CO',
+    minStartDate: '2017-11-02'
   },
   ETHUSD: {
-    prefixedName: 'ETH/USD',
-    description: 'Ether vs US Dollar'
+    name: 'ETH/USD',
+    description: 'Ether vs US Dollar',
+    minStartDate: '2017-12-11'
   },
   EURAUD: {
-    prefixedName: 'EUR/AUD',
-    description: 'Euro vs Australian Dollar'
+    name: 'EUR/AUD',
+    description: 'Euro vs Australian Dollar',
+    minStartDate: '2005-10-02'
   },
   EURCAD: {
-    prefixedName: 'EUR/CAD',
-    description: 'Euro vs Canadian Dollar'
+    name: 'EUR/CAD',
+    description: 'Euro vs Canadian Dollar',
+    minStartDate: '2004-10-20'
   },
   EURCHF: {
-    prefixedName: 'EUR/CHF',
-    description: 'Euro vs Swiss Franc'
+    name: 'EUR/CHF',
+    description: 'Euro vs Swiss Franc',
+    minStartDate: '2003-08-03'
   },
   EURCZK: {
-    prefixedName: 'EUR/CZK',
-    description: 'Euro vs Czech Koruna'
+    name: 'EUR/CZK',
+    description: 'Euro vs Czech Koruna',
+    minStartDate: '2016-01-03'
   },
   EURDKK: {
-    prefixedName: 'EUR/DKK',
-    description: 'Euro vs Danish Krone'
+    name: 'EUR/DKK',
+    description: 'Euro vs Danish Krone',
+    minStartDate: '2004-10-20'
   },
   EURGBP: {
-    prefixedName: 'EUR/GBP',
-    description: 'Euro vs Pound Sterling'
+    name: 'EUR/GBP',
+    description: 'Euro vs Pound Sterling',
+    minStartDate: '2003-08-03'
   },
   EURHKD: {
-    prefixedName: 'EUR/HKD',
-    description: 'Euro vs Hong Kong Dollar'
+    name: 'EUR/HKD',
+    description: 'Euro vs Hong Kong Dollar',
+    minStartDate: '2007-03-13'
   },
   EURHUF: {
-    prefixedName: 'EUR/HUF',
-    description: 'Euro vs Hungarian Forint'
+    name: 'EUR/HUF',
+    description: 'Euro vs Hungarian Forint',
+    minStartDate: '2007-03-13'
   },
   EURJPY: {
-    prefixedName: 'EUR/JPY',
-    description: 'Euro vs Japanese Yen'
+    name: 'EUR/JPY',
+    description: 'Euro vs Japanese Yen',
+    minStartDate: '2003-08-03'
   },
   EURNOK: {
-    prefixedName: 'EUR/NOK',
-    description: 'Euro vs Norwegian Krone'
+    name: 'EUR/NOK',
+    description: 'Euro vs Norwegian Krone',
+    minStartDate: '2004-10-20'
   },
   EURNZD: {
-    prefixedName: 'EUR/NZD',
-    description: 'Euro vs New Zealand Dollar'
+    name: 'EUR/NZD',
+    description: 'Euro vs New Zealand Dollar',
+    minStartDate: '2005-12-26'
   },
   EURPLN: {
-    prefixedName: 'EUR/PLN',
-    description: 'Euro vs Polish Zloty'
+    name: 'EUR/PLN',
+    description: 'Euro vs Polish Zloty',
+    minStartDate: '2007-03-13'
   },
   EURRUB: {
-    prefixedName: 'EUR/RUB',
-    description: 'Euro vs Russian Rouble'
+    name: 'EUR/RUB',
+    description: 'Euro vs Russian Rouble',
+    minStartDate: '2007-03-13'
   },
   EURSEK: {
-    prefixedName: 'EUR/SEK',
-    description: 'Euro vs Swedish Krona'
+    name: 'EUR/SEK',
+    description: 'Euro vs Swedish Krona',
+    minStartDate: '2004-10-27'
   },
   EURSGD: {
-    prefixedName: 'EUR/SGD',
-    description: 'Euro vs Singapore Dollar'
+    name: 'EUR/SGD',
+    description: 'Euro vs Singapore Dollar',
+    minStartDate: '2007-03-13'
   },
   EURTRY: {
-    prefixedName: 'EUR/TRY',
-    description: 'Euro vs Turkish Lira'
+    name: 'EUR/TRY',
+    description: 'Euro vs Turkish Lira',
+    minStartDate: '2007-03-13'
   },
   EURUSD: {
-    prefixedName: 'EUR/USD',
-    description: 'Euro vs US Dollar'
+    name: 'EUR/USD',
+    description: 'Euro vs US Dollar',
+    minStartDate: '2003-05-04'
   },
   EWHUSUSD: {
-    prefixedName: 'EWH.US/USD',
-    description: 'iShares MSCI Hong Kong ETF'
+    name: 'EWH.US/USD',
+    description: 'iShares MSCI Hong Kong ETF',
+    minStartDate: '2017-11-06'
   },
   EWJUSUSD: {
-    prefixedName: 'EWJ.US/USD',
-    description: 'iShares MSCI Japan ETF'
+    name: 'EWJ.US/USD',
+    description: 'iShares MSCI Japan ETF',
+    minStartDate: '2017-01-23'
   },
   EWWUSUSD: {
-    prefixedName: 'EWW.US/USD',
-    description: 'iShares MSCI Mexico Capped'
+    name: 'EWW.US/USD',
+    description: 'iShares MSCI Mexico Capped',
+    minStartDate: '2017-03-13'
   },
   EWZUSUSD: {
-    prefixedName: 'EWZ.US/USD',
-    description: 'iShares MSCI Brazil Capped'
+    name: 'EWZ.US/USD',
+    description: 'iShares MSCI Brazil Capped',
+    minStartDate: '2017-01-26'
   },
   EXCUSUSD: {
-    prefixedName: 'EXC.US/USD',
-    description: 'EXELON CORP'
+    name: 'EXC.US/USD',
+    description: 'EXELON CORP',
+    minStartDate: '2018-02-01'
   },
   EXPEUSUSD: {
-    prefixedName: 'EXPE.US/USD',
-    description: 'EXPEDIA INC'
+    name: 'EXPE.US/USD',
+    description: 'EXPEDIA INC',
+    minStartDate: '2017-11-02'
   },
   EXPNGBGBX: {
-    prefixedName: 'EXPN.GB/GBX',
-    description: 'Experian PLC'
+    name: 'EXPN.GB/GBX',
+    description: 'Experian PLC',
+    minStartDate: '2016-07-08'
   },
   EZJGBGBX: {
-    prefixedName: 'EZJ.GB/GBX',
-    description: 'easyJet PLC'
+    name: 'EZJ.GB/GBX',
+    description: 'easyJet PLC',
+    minStartDate: '2016-07-08'
   },
   EZUUSUSD: {
-    prefixedName: 'EZU.US/USD',
-    description: 'iShares MSCI EMU ETF'
+    name: 'EZU.US/USD',
+    description: 'iShares MSCI EMU ETF',
+    minStartDate: '2018-02-01'
   },
   BRENTCMDUSD: {
-    prefixedName: 'BRENT.CMD/USD',
-    description: 'US Brent Crude Oil'
+    name: 'BRENT.CMD/USD',
+    description: 'US Brent Crude Oil',
+    minStartDate: '2010-12-02'
   },
   FRAIDXEUR: {
-    prefixedName: 'FRA.IDX/EUR',
-    description: 'France 40 Index'
+    name: 'FRA.IDX/EUR',
+    description: 'France 40 Index',
+    minStartDate: '2011-09-18'
   },
   USA30IDXUSD: {
-    prefixedName: 'USA30.IDX/USD',
-    description: 'USA 30 Index'
+    name: 'USA30.IDX/USD',
+    description: 'USA 30 Index',
+    minStartDate: '2013-09-30'
   },
   DEUIDXEUR: {
-    prefixedName: 'DEU.IDX/EUR',
-    description: 'Germany 30 Index'
+    name: 'DEU.IDX/EUR',
+    description: 'Germany 30 Index',
+    minStartDate: '2013-09-30'
   },
   EUSIDXEUR: {
-    prefixedName: 'EUS.IDX/EUR',
-    description: 'Europe 50 Index'
+    name: 'EUS.IDX/EUR',
+    description: 'Europe 50 Index',
+    minStartDate: '2011-09-18'
   },
   GBRIDXGBP: {
-    prefixedName: 'GBR.IDX/GBP',
-    description: 'UK 100 Index'
+    name: 'GBR.IDX/GBP',
+    description: 'UK 100 Index',
+    minStartDate: '2011-09-18'
   },
   HKGIDXHKD: {
-    prefixedName: 'HKG.IDX/HKD',
-    description: 'Hong Kong 40 Index'
+    name: 'HKG.IDX/HKD',
+    description: 'Hong Kong 40 Index',
+    minStartDate: '2011-09-18'
   },
   ESPIDXEUR: {
-    prefixedName: 'ESP.IDX/EUR',
-    description: 'Spain 35 Index'
+    name: 'ESP.IDX/EUR',
+    description: 'Spain 35 Index',
+    minStartDate: '2012-01-02'
   },
   LIGHTCMDUSD: {
-    prefixedName: 'LIGHT.CMD/USD',
-    description: 'US Light Crude Oil'
+    name: 'LIGHT.CMD/USD',
+    description: 'US Light Crude Oil',
+    minStartDate: '2011-09-23'
   },
   JPNIDXJPY: {
-    prefixedName: 'JPN.IDX/JPY',
-    description: 'Japan 225'
+    name: 'JPN.IDX/JPY',
+    description: 'Japan 225',
+    minStartDate: '2011-09-18'
   },
   USATECHIDXUSD: {
-    prefixedName: 'USATECH.IDX/USD',
-    description: 'USA 100 Technical Index'
+    name: 'USATECH.IDX/USD',
+    description: 'USA 100 Technical Index',
+    minStartDate: '2011-09-18'
   },
   USA500IDXUSD: {
-    prefixedName: 'USA500.IDX/USD',
-    description: 'USA 500 Index'
+    name: 'USA500.IDX/USD',
+    description: 'USA 500 Index',
+    minStartDate: '2011-09-18'
   },
   CHEIDXCHF: {
-    prefixedName: 'CHE.IDX/CHF',
-    description: 'Switzerland 20 Index'
+    name: 'CHE.IDX/CHF',
+    description: 'Switzerland 20 Index',
+    minStartDate: '2011-09-18'
   },
   AUSIDXAUD: {
-    prefixedName: 'AUS.IDX/AUD',
-    description: 'Australia 200 Index'
+    name: 'AUS.IDX/AUD',
+    description: 'Australia 200 Index',
+    minStartDate: '2013-01-02'
   },
   FUSUSD: {
-    prefixedName: 'F.US/USD',
-    description: 'FORD MOTOR CO'
+    name: 'F.US/USD',
+    description: 'FORD MOTOR CO',
+    minStartDate: '2017-11-02'
   },
   FBUSUSD: {
-    prefixedName: 'FB.US/USD',
-    description: 'FACEBOOK INC-A'
+    name: 'FB.US/USD',
+    description: 'FACEBOOK INC-A',
+    minStartDate: '2017-01-19'
   },
   FCXUSUSD: {
-    prefixedName: 'FCX.US/USD',
-    description: 'FREEPORT-MCMORAN INC'
+    name: 'FCX.US/USD',
+    description: 'FREEPORT-MCMORAN INC',
+    minStartDate: '2017-11-02'
   },
   FDXUSUSD: {
-    prefixedName: 'FDX.US/USD',
-    description: 'FEDEX CORP'
+    name: 'FDX.US/USD',
+    description: 'FEDEX CORP',
+    minStartDate: '2017-11-02'
   },
   FEUSUSD: {
-    prefixedName: 'FE.US/USD',
-    description: 'FIRSTENERGY CORP'
+    name: 'FE.US/USD',
+    description: 'FIRSTENERGY CORP',
+    minStartDate: '2018-02-01'
   },
   FERESEUR: {
-    prefixedName: 'FER.ES/EUR',
-    description: 'Ferrovial SA'
+    name: 'FER.ES/EUR',
+    description: 'Ferrovial SA',
+    minStartDate: '2016-11-14'
   },
   FMEDEEUR: {
-    prefixedName: 'FME.DE/EUR',
-    description: 'Fresenius Medical Care AG &amp; Co KGaA'
+    name: 'FME.DE/EUR',
+    description: 'Fresenius Medical Care AG &amp; Co KGaA',
+    minStartDate: '2015-04-01'
   },
   FOXAUSUSD: {
-    prefixedName: 'FOXA.US/USD',
-    description: 'TWENTY-FIRST CENTURY FOX-A'
+    name: 'FOXA.US/USD',
+    description: 'TWENTY-FIRST CENTURY FOX-A',
+    minStartDate: '2018-01-31'
   },
   FPFREUR: {
-    prefixedName: 'FP.FR/EUR',
-    description: 'Total SA'
+    name: 'FP.FR/EUR',
+    description: 'Total SA',
+    minStartDate: '2016-09-30'
   },
   FRFREUR: {
-    prefixedName: 'FR.FR/EUR',
-    description: 'Valeo SA'
+    name: 'FR.FR/EUR',
+    description: 'Valeo SA',
+    minStartDate: '2016-09-30'
   },
   FREDEEUR: {
-    prefixedName: 'FRE.DE/EUR',
-    description: 'Fresenius SE &amp; Co KGaA'
+    name: 'FRE.DE/EUR',
+    description: 'Fresenius SE &amp; Co KGaA',
+    minStartDate: '2015-04-10'
   },
   FRESGBGBX: {
-    prefixedName: 'FRES.GB/GBX',
-    description: 'Fresnillo PLC'
+    name: 'FRES.GB/GBX',
+    description: 'Fresnillo PLC',
+    minStartDate: '2016-07-07'
   },
   FXIUSUSD: {
-    prefixedName: 'FXI.US/USD',
-    description: 'iShares China Large-Cap ETF'
+    name: 'FXI.US/USD',
+    description: 'iShares China Large-Cap ETF',
+    minStartDate: '2017-01-26'
   },
   GALPPTEUR: {
-    prefixedName: 'GALP.PT/EUR',
-    description: 'Galp Energia SGPS SA'
+    name: 'GALP.PT/EUR',
+    description: 'Galp Energia SGPS SA',
+    minStartDate: '2016-11-14'
   },
   GAMESEUR: {
-    prefixedName: 'GAM.ES/EUR',
-    description: 'Gamesa Corporacion Tecnologica SA'
+    name: 'GAM.ES/EUR',
+    description: 'Gamesa Corporacion Tecnologica SA',
+    minStartDate: '2016-11-14'
   },
   GASCMDUSD: {
-    prefixedName: 'GAS.CMD/USD',
-    description: 'Natural Gas'
+    name: 'GAS.CMD/USD',
+    description: 'Natural Gas',
+    minStartDate: '2012-08-20'
   },
   GASESEUR: {
-    prefixedName: 'GAS.ES/EUR',
-    description: 'Gas Natural SDG SA'
+    name: 'GAS.ES/EUR',
+    description: 'Gas Natural SDG SA',
+    minStartDate: '2016-11-14'
   },
   GBPAUD: {
-    prefixedName: 'GBP/AUD',
-    description: 'Pound Sterling vs Australian Dollar'
+    name: 'GBP/AUD',
+    description: 'Pound Sterling vs Australian Dollar',
+    minStartDate: '2006-01-01'
   },
   GBPCAD: {
-    prefixedName: 'GBP/CAD',
-    description: 'Pound Sterling vs Canadian Dollar'
+    name: 'GBP/CAD',
+    description: 'Pound Sterling vs Canadian Dollar',
+    minStartDate: '2006-01-01'
   },
   GBPCHF: {
-    prefixedName: 'GBP/CHF',
-    description: 'Pound Sterling vs Swiss Franc'
+    name: 'GBP/CHF',
+    description: 'Pound Sterling vs Swiss Franc',
+    minStartDate: '2003-08-03'
   },
   GBPJPY: {
-    prefixedName: 'GBP/JPY',
-    description: 'Pound Sterling vs Japanese Yen'
+    name: 'GBP/JPY',
+    description: 'Pound Sterling vs Japanese Yen',
+    minStartDate: '2003-08-03'
   },
   GBPNZD: {
-    prefixedName: 'GBP/NZD',
-    description: 'Pound Sterling vs New Zealand Dollar'
+    name: 'GBP/NZD',
+    description: 'Pound Sterling vs New Zealand Dollar',
+    minStartDate: '2006-01-01'
   },
   GBPUSD: {
-    prefixedName: 'GBP/USD',
-    description: 'Pound Sterling vs US Dollar'
+    name: 'GBP/USD',
+    description: 'Pound Sterling vs US Dollar',
+    minStartDate: '2003-05-04'
   },
   GDXUSUSD: {
-    prefixedName: 'GDX.US/USD',
-    description: 'VanEck Vectors Gold Miners ETF'
+    name: 'GDX.US/USD',
+    description: 'VanEck Vectors Gold Miners ETF',
+    minStartDate: '2017-01-23'
   },
   GDXJUSUSD: {
-    prefixedName: 'GDXJ.US/USD',
-    description: 'VanEck Vectors Junior Gold Miners ETF'
+    name: 'GDXJ.US/USD',
+    description: 'VanEck Vectors Junior Gold Miners ETF',
+    minStartDate: '2017-01-26'
   },
   GEUSUSD: {
-    prefixedName: 'GE.US/USD',
-    description: 'GENERAL ELECTRIC CO'
+    name: 'GE.US/USD',
+    description: 'GENERAL ELECTRIC CO',
+    minStartDate: '2017-01-19'
   },
   GETIBSESEK: {
-    prefixedName: 'GETIB.SE/SEK',
-    description: 'Getinge AB'
+    name: 'GETIB.SE/SEK',
+    description: 'Getinge AB',
+    minStartDate: '2016-11-07'
   },
   GFSGBGBX: {
-    prefixedName: 'GFS.GB/GBX',
-    description: 'G4S PLC'
+    name: 'GFS.GB/GBX',
+    description: 'G4S PLC',
+    minStartDate: '2016-07-07'
   },
   GILDUSUSD: {
-    prefixedName: 'GILD.US/USD',
-    description: 'GILEAD SCIENCES INC'
+    name: 'GILD.US/USD',
+    description: 'GILEAD SCIENCES INC',
+    minStartDate: '2017-01-19'
   },
   GISUSUSD: {
-    prefixedName: 'GIS.US/USD',
-    description: 'GENERAL MILLS INC'
+    name: 'GIS.US/USD',
+    description: 'GENERAL MILLS INC',
+    minStartDate: '2018-02-01'
   },
   GLDUSUSD: {
-    prefixedName: 'GLD.US/USD',
-    description: 'SPDR Gold Shares ETF'
+    name: 'GLD.US/USD',
+    description: 'SPDR Gold Shares ETF',
+    minStartDate: '2017-01-23'
   },
   GLEFREUR: {
-    prefixedName: 'GLE.FR/EUR',
-    description: 'Societe Generale SA'
+    name: 'GLE.FR/EUR',
+    description: 'Societe Generale SA',
+    minStartDate: '2016-09-30'
   },
   GLENGBGBX: {
-    prefixedName: 'GLEN.GB/GBX',
-    description: 'Glencore PLC'
+    name: 'GLEN.GB/GBX',
+    description: 'Glencore PLC',
+    minStartDate: '2016-07-07'
   },
   GLWUSUSD: {
-    prefixedName: 'GLW.US/USD',
-    description: 'CORNING INC'
+    name: 'GLW.US/USD',
+    description: 'CORNING INC',
+    minStartDate: '2017-05-11'
   },
   GMUSUSD: {
-    prefixedName: 'GM.US/USD',
-    description: 'GENERAL MOTORS CO'
+    name: 'GM.US/USD',
+    description: 'GENERAL MOTORS CO',
+    minStartDate: '2017-11-02'
   },
   GOOGUSUSD: {
-    prefixedName: 'GOOG.US/USD',
-    description: 'ALPHABET INC-CL C'
+    name: 'GOOG.US/USD',
+    description: 'ALPHABET INC-CL C',
+    minStartDate: '2017-01-19'
   },
   GOOGLUSUSD: {
-    prefixedName: 'GOOGL.US/USD',
-    description: 'ALPHABET INC-CL A'
+    name: 'GOOGL.US/USD',
+    description: 'ALPHABET INC-CL A',
+    minStartDate: '2017-01-19'
   },
   GPSUSUSD: {
-    prefixedName: 'GPS.US/USD',
-    description: 'GAP INC/THE'
+    name: 'GPS.US/USD',
+    description: 'GAP INC/THE',
+    minStartDate: '2018-02-01'
   },
   GSUSUSD: {
-    prefixedName: 'GS.US/USD',
-    description: 'GOLDMAN SACHS GROUP INC'
+    name: 'GS.US/USD',
+    description: 'GOLDMAN SACHS GROUP INC',
+    minStartDate: '2017-01-19'
   },
   GTONLEUR: {
-    prefixedName: 'GTO.NL/EUR',
-    description: 'Gemalto NV'
+    name: 'GTO.NL/EUR',
+    description: 'Gemalto NV',
+    minStartDate: '2016-11-14'
   },
   GWWUSUSD: {
-    prefixedName: 'GWW.US/USD',
-    description: 'WW GRAINGER INC'
+    name: 'GWW.US/USD',
+    description: 'WW GRAINGER INC',
+    minStartDate: '2018-02-01'
   },
   HALUSUSD: {
-    prefixedName: 'HAL.US/USD',
-    description: 'HALLIBURTON CO'
+    name: 'HAL.US/USD',
+    description: 'HALLIBURTON CO',
+    minStartDate: '2017-11-02'
   },
   HCNUSUSD: {
-    prefixedName: 'HCN.US/USD',
-    description: 'WELLTOWER INC'
+    name: 'HCN.US/USD',
+    description: 'WELLTOWER INC',
+    minStartDate: '2018-02-01'
   },
   HCPUSUSD: {
-    prefixedName: 'HCP.US/USD',
-    description: 'HCP INC'
+    name: 'HCP.US/USD',
+    description: 'HCP INC',
+    minStartDate: '2018-02-01'
   },
   HDUSUSD: {
-    prefixedName: 'HD.US/USD',
-    description: 'HOME DEPOT INC'
+    name: 'HD.US/USD',
+    description: 'HOME DEPOT INC',
+    minStartDate: '2017-01-19'
   },
   HEIDEEUR: {
-    prefixedName: 'HEI.DE/EUR',
-    description: 'HeidelbergCement AG'
+    name: 'HEI.DE/EUR',
+    description: 'HeidelbergCement AG',
+    minStartDate: '2015-04-02'
   },
   HEIANLEUR: {
-    prefixedName: 'HEIA.NL/EUR',
-    description: 'Heineken NV'
+    name: 'HEIA.NL/EUR',
+    description: 'Heineken NV',
+    minStartDate: '2016-11-14'
   },
   HEN3DEEUR: {
-    prefixedName: 'HEN3.DE/EUR',
-    description: 'Henkel AG &amp; Co KGaA'
+    name: 'HEN3.DE/EUR',
+    description: 'Henkel AG &amp; Co KGaA',
+    minStartDate: '2015-04-21'
   },
   HESUSUSD: {
-    prefixedName: 'HES.US/USD',
-    description: 'HESS CORP'
+    name: 'HES.US/USD',
+    description: 'HESS CORP',
+    minStartDate: '2017-11-02'
   },
   HKDJPY: {
-    prefixedName: 'HKD/JPY',
-    description: 'Hong Kong Dollar vs Japanese Yen'
+    name: 'HKD/JPY',
+    description: 'Hong Kong Dollar vs Japanese Yen',
+    minStartDate: '2007-03-13'
   },
   HMBSESEK: {
-    prefixedName: 'HMB.SE/SEK',
-    description: 'Hennes &amp; Mauritz AB'
+    name: 'HMB.SE/SEK',
+    description: 'Hennes &amp; Mauritz AB',
+    minStartDate: '2016-11-07'
   },
   HMSOGBGBX: {
-    prefixedName: 'HMSO.GB/GBX',
-    description: 'Hammerson PLC'
+    name: 'HMSO.GB/GBX',
+    description: 'Hammerson PLC',
+    minStartDate: '2016-07-07'
   },
   HONUSUSD: {
-    prefixedName: 'HON.US/USD',
-    description: 'HONEYWELL INTERNATIONAL INC'
+    name: 'HON.US/USD',
+    description: 'HONEYWELL INTERNATIONAL INC',
+    minStartDate: '2017-11-02'
   },
   HPQUSUSD: {
-    prefixedName: 'HPQ.US/USD',
-    description: 'HP INC'
+    name: 'HPQ.US/USD',
+    description: 'HP INC',
+    minStartDate: '2018-02-01'
   },
   HSBAGBGBX: {
-    prefixedName: 'HSBA.GB/GBX',
-    description: 'HSBC Holdings PLC'
+    name: 'HSBA.GB/GBX',
+    description: 'HSBC Holdings PLC',
+    minStartDate: '2016-07-07'
   },
   HUMUSUSD: {
-    prefixedName: 'HUM.US/USD',
-    description: 'HUMANA INC'
+    name: 'HUM.US/USD',
+    description: 'HUMANA INC',
+    minStartDate: '2017-11-02'
   },
   IAGGBGBX: {
-    prefixedName: 'IAG.GB/GBX',
-    description: 'International Consolidated Airlines Grou'
+    name: 'IAG.GB/GBX',
+    description: 'International Consolidated Airlines Grou',
+    minStartDate: '2016-11-08'
   },
   IBBUSUSD: {
-    prefixedName: 'IBB.US/USD',
-    description: 'iShares Nasdaq Biotechnology ETF'
+    name: 'IBB.US/USD',
+    description: 'iShares Nasdaq Biotechnology ETF',
+    minStartDate: '2017-05-11'
   },
   IBEESEUR: {
-    prefixedName: 'IBE.ES/EUR',
-    description: 'Iberdrola SA'
+    name: 'IBE.ES/EUR',
+    description: 'Iberdrola SA',
+    minStartDate: '2016-11-14'
   },
   IBMUSUSD: {
-    prefixedName: 'IBM.US/USD',
-    description: 'INTL BUSINESS MACHINES CORP'
+    name: 'IBM.US/USD',
+    description: 'INTL BUSINESS MACHINES CORP',
+    minStartDate: '2017-01-19'
   },
   ICEUSUSD: {
-    prefixedName: 'ICE.US/USD',
-    description: 'INTERCONTINENTAL EXCHANGE IN'
+    name: 'ICE.US/USD',
+    description: 'INTERCONTINENTAL EXCHANGE IN',
+    minStartDate: '2017-11-06'
   },
   IEFUSUSD: {
-    prefixedName: 'IEF.US/USD',
-    description: 'iShares 7-10 Year Treasury Bond ETF'
+    name: 'IEF.US/USD',
+    description: 'iShares 7-10 Year Treasury Bond ETF',
+    minStartDate: '2018-02-01'
   },
   IFXDEEUR: {
-    prefixedName: 'IFX.DE/EUR',
-    description: 'Infineon Technologies AG'
+    name: 'IFX.DE/EUR',
+    description: 'Infineon Technologies AG',
+    minStartDate: '2015-04-13'
   },
   IHGGBGBX: {
-    prefixedName: 'IHG.GB/GBX',
-    description: 'InterContinental Hotels Group PLC'
+    name: 'IHG.GB/GBX',
+    description: 'InterContinental Hotels Group PLC',
+    minStartDate: '2016-11-01'
   },
   IJHUSUSD: {
-    prefixedName: 'IJH.US/USD',
-    description: 'iShares Core S&amp;P Mid-Cap ETF'
+    name: 'IJH.US/USD',
+    description: 'iShares Core S&amp;P Mid-Cap ETF',
+    minStartDate: '2018-02-01'
   },
   IJRUSUSD: {
-    prefixedName: 'IJR.US/USD',
-    description: 'iShares Core S&amp;P Small-Cap ETF'
+    name: 'IJR.US/USD',
+    description: 'iShares Core S&amp;P Small-Cap ETF',
+    minStartDate: '2017-05-11'
   },
   ILMNUSUSD: {
-    prefixedName: 'ILMN.US/USD',
-    description: 'ILLUMINA INC'
+    name: 'ILMN.US/USD',
+    description: 'ILLUMINA INC',
+    minStartDate: '2018-02-01'
   },
   IMTGBGBX: {
-    prefixedName: 'IMT.GB/GBX',
-    description: 'Imperial Brands Plc'
+    name: 'IMT.GB/GBX',
+    description: 'Imperial Brands Plc',
+    minStartDate: '2016-07-06'
   },
   INDIDXUSD: {
-    prefixedName: 'IND.IDX/USD',
-    description: 'India 50 Index'
+    name: 'IND.IDX/USD',
+    description: 'India 50 Index',
+    minStartDate: '2017-12-01'
   },
   INGANLEUR: {
-    prefixedName: 'INGA.NL/EUR',
-    description: 'ING Groep NV'
+    name: 'INGA.NL/EUR',
+    description: 'ING Groep NV',
+    minStartDate: '2016-11-14'
   },
   INTCUSUSD: {
-    prefixedName: 'INTC.US/USD',
-    description: 'INTEL CORP'
+    name: 'INTC.US/USD',
+    description: 'INTEL CORP',
+    minStartDate: '2017-01-19'
   },
   INTUUSUSD: {
-    prefixedName: 'INTU.US/USD',
-    description: 'INTUIT INC'
+    name: 'INTU.US/USD',
+    description: 'INTUIT INC',
+    minStartDate: '2018-02-01'
   },
   INVEBSESEK: {
-    prefixedName: 'INVEB.SE/SEK',
-    description: 'Investor AB'
+    name: 'INVEB.SE/SEK',
+    description: 'Investor AB',
+    minStartDate: '2016-11-14'
   },
   IPGUSUSD: {
-    prefixedName: 'IPG.US/USD',
-    description: 'INTERPUBLIC GROUP OF COS INC'
+    name: 'IPG.US/USD',
+    description: 'INTERPUBLIC GROUP OF COS INC',
+    minStartDate: '2018-02-01'
   },
   ISATGBGBX: {
-    prefixedName: 'ISAT.GB/GBX',
-    description: 'Inmarsat PLC'
+    name: 'ISAT.GB/GBX',
+    description: 'Inmarsat PLC',
+    minStartDate: '2016-07-08'
   },
   ISRGUSUSD: {
-    prefixedName: 'ISRG.US/USD',
-    description: 'INTUITIVE SURGICAL INC'
+    name: 'ISRG.US/USD',
+    description: 'INTUITIVE SURGICAL INC',
+    minStartDate: '2018-02-01'
   },
   ITRKGBGBX: {
-    prefixedName: 'ITRK.GB/GBX',
-    description: 'Intertek Group PLC'
+    name: 'ITRK.GB/GBX',
+    description: 'Intertek Group PLC',
+    minStartDate: '2016-07-06'
   },
   ITUBUSUSD: {
-    prefixedName: 'ITUB.US/USD',
-    description: 'Itau Unibanco Holding S.A.'
+    name: 'ITUB.US/USD',
+    description: 'Itau Unibanco Holding S.A.',
+    minStartDate: '2017-01-26'
   },
   ITVGBGBX: {
-    prefixedName: 'ITV.GB/GBX',
-    description: 'ITV PLC'
+    name: 'ITV.GB/GBX',
+    description: 'ITV PLC',
+    minStartDate: '2016-07-07'
   },
   ITWUSUSD: {
-    prefixedName: 'ITW.US/USD',
-    description: 'ILLINOIS TOOL WORKS'
+    name: 'ITW.US/USD',
+    description: 'ILLINOIS TOOL WORKS',
+    minStartDate: '2017-05-11'
   },
   ITXESEUR: {
-    prefixedName: 'ITX.ES/EUR',
-    description: 'Inditex SA'
+    name: 'ITX.ES/EUR',
+    description: 'Inditex SA',
+    minStartDate: '2016-11-14'
   },
   IVEUSUSD: {
-    prefixedName: 'IVE.US/USD',
-    description: 'iShares S&amp;P 500 Value ETF'
+    name: 'IVE.US/USD',
+    description: 'iShares S&amp;P 500 Value ETF',
+    minStartDate: '2017-05-11'
   },
   IVWUSUSD: {
-    prefixedName: 'IVW.US/USD',
-    description: 'iShares S&amp;P 500 Growth ETF'
+    name: 'IVW.US/USD',
+    description: 'iShares S&amp;P 500 Growth ETF',
+    minStartDate: '2017-05-11'
   },
   IWDUSUSD: {
-    prefixedName: 'IWD.US/USD',
-    description: 'iShares Russell 1000 Value ETF'
+    name: 'IWD.US/USD',
+    description: 'iShares Russell 1000 Value ETF',
+    minStartDate: '2018-02-01'
   },
   IWFUSUSD: {
-    prefixedName: 'IWF.US/USD',
-    description: 'iShares Russell 1000 Growth ETF'
+    name: 'IWF.US/USD',
+    description: 'iShares Russell 1000 Growth ETF',
+    minStartDate: '2018-02-01'
   },
   IWMUSUSD: {
-    prefixedName: 'IWM.US/USD',
-    description: 'iShares Russell 2000 ETF'
+    name: 'IWM.US/USD',
+    description: 'iShares Russell 2000 ETF',
+    minStartDate: '2017-01-23'
   },
   IYRUSUSD: {
-    prefixedName: 'IYR.US/USD',
-    description: 'iShares U.S. Real Estate ETF'
+    name: 'IYR.US/USD',
+    description: 'iShares U.S. Real Estate ETF',
+    minStartDate: '2017-01-23'
   },
   JCIUSUSD: {
-    prefixedName: 'JCI.US/USD',
-    description: 'JOHNSON CONTROLS INC'
+    name: 'JCI.US/USD',
+    description: 'JOHNSON CONTROLS INC',
+    minStartDate: '2017-11-02'
   },
   JNJUSUSD: {
-    prefixedName: 'JNJ.US/USD',
-    description: 'JOHNSON &amp; JOHNSON'
+    name: 'JNJ.US/USD',
+    description: 'JOHNSON &amp; JOHNSON',
+    minStartDate: '2017-01-19'
   },
   JNKUSUSD: {
-    prefixedName: 'JNK.US/USD',
-    description: 'SPDR Barclays Capital High Yield Bond ETF'
+    name: 'JNK.US/USD',
+    description: 'SPDR Barclays Capital High Yield Bond ETF',
+    minStartDate: '2017-01-23'
   },
   JPMUSUSD: {
-    prefixedName: 'JPM.US/USD',
-    description: 'JPMORGAN CHASE &amp; CO'
+    name: 'JPM.US/USD',
+    description: 'JPMORGAN CHASE &amp; CO',
+    minStartDate: '2017-01-19'
   },
   JWNUSUSD: {
-    prefixedName: 'JWN.US/USD',
-    description: 'NORDSTROM INC'
+    name: 'JWN.US/USD',
+    description: 'NORDSTROM INC',
+    minStartDate: '2017-05-11'
   },
   KUSUSD: {
-    prefixedName: 'K.US/USD',
-    description: 'KELLOGG CO'
+    name: 'K.US/USD',
+    description: 'KELLOGG CO',
+    minStartDate: '2017-05-11'
   },
   KBCBEEUR: {
-    prefixedName: 'KBC.BE/EUR',
-    description: 'KBC Groep NV'
+    name: 'KBC.BE/EUR',
+    description: 'KBC Groep NV',
+    minStartDate: '2016-11-07'
   },
   KERFREUR: {
-    prefixedName: 'KER.FR/EUR',
-    description: 'Kering'
+    name: 'KER.FR/EUR',
+    description: 'Kering',
+    minStartDate: '2016-09-30'
   },
   KEYUSUSD: {
-    prefixedName: 'KEY.US/USD',
-    description: 'KEYCORP'
+    name: 'KEY.US/USD',
+    description: 'KEYCORP',
+    minStartDate: '2017-11-02'
   },
   KGFGBGBX: {
-    prefixedName: 'KGF.GB/GBX',
-    description: 'Kingfisher PLC'
+    name: 'KGF.GB/GBX',
+    description: 'Kingfisher PLC',
+    minStartDate: '2016-07-07'
   },
   KHCUSUSD: {
-    prefixedName: 'KHC.US/USD',
-    description: 'KRAFT HEINZ CO/THE'
+    name: 'KHC.US/USD',
+    description: 'KRAFT HEINZ CO/THE',
+    minStartDate: '2017-05-11'
   },
   KMBUSUSD: {
-    prefixedName: 'KMB.US/USD',
-    description: 'KIMBERLY-CLARK CORP'
+    name: 'KMB.US/USD',
+    description: 'KIMBERLY-CLARK CORP',
+    minStartDate: '2017-05-11'
   },
   KMIUSUSD: {
-    prefixedName: 'KMI.US/USD',
-    description: 'KINDER MORGAN INC'
+    name: 'KMI.US/USD',
+    description: 'KINDER MORGAN INC',
+    minStartDate: '2017-11-02'
   },
   KOUSUSD: {
-    prefixedName: 'KO.US/USD',
-    description: 'COCA-COLA CO/THE'
+    name: 'KO.US/USD',
+    description: 'COCA-COLA CO/THE',
+    minStartDate: '2017-01-19'
   },
   KPNNLEUR: {
-    prefixedName: 'KPN.NL/EUR',
-    description: 'Koninklijke KPN NV'
+    name: 'KPN.NL/EUR',
+    description: 'Koninklijke KPN NV',
+    minStartDate: '2016-11-14'
   },
   KRUSUSD: {
-    prefixedName: 'KR.US/USD',
-    description: 'KROGER CO'
+    name: 'KR.US/USD',
+    description: 'KROGER CO',
+    minStartDate: '2017-11-02'
   },
   KSSUSUSD: {
-    prefixedName: 'KSS.US/USD',
-    description: 'KOHLS CORP'
+    name: 'KSS.US/USD',
+    description: 'KOHLS CORP',
+    minStartDate: '2018-02-01'
   },
   LUSUSD: {
-    prefixedName: 'L.US/USD',
-    description: 'LOEWS CORP'
+    name: 'L.US/USD',
+    description: 'LOEWS CORP',
+    minStartDate: '2017-05-11'
   },
   LANDGBGBX: {
-    prefixedName: 'LAND.GB/GBX',
-    description: 'Land Securities Group PLC'
+    name: 'LAND.GB/GBX',
+    description: 'Land Securities Group PLC',
+    minStartDate: '2016-07-07'
   },
   LENUSUSD: {
-    prefixedName: 'LEN.US/USD',
-    description: 'LENNAR CORP-A'
+    name: 'LEN.US/USD',
+    description: 'LENNAR CORP-A',
+    minStartDate: '2017-05-11'
   },
   LGENGBGBX: {
-    prefixedName: 'LGEN.GB/GBX',
-    description: 'Legal &amp; General Group PLC'
+    name: 'LGEN.GB/GBX',
+    description: 'Legal &amp; General Group PLC',
+    minStartDate: '2016-07-07'
   },
   LHADEEUR: {
-    prefixedName: 'LHA.DE/EUR',
-    description: 'Deutsche Lufthansa AG'
+    name: 'LHA.DE/EUR',
+    description: 'Deutsche Lufthansa AG',
+    minStartDate: '2015-04-21'
   },
   LIFREUR: {
-    prefixedName: 'LI.FR/EUR',
-    description: 'Klepierre'
+    name: 'LI.FR/EUR',
+    description: 'Klepierre',
+    minStartDate: '2016-08-05'
   },
   LINDEEUR: {
-    prefixedName: 'LIN.DE/EUR',
-    description: 'Linde AG'
+    name: 'LIN.DE/EUR',
+    description: 'Linde AG',
+    minStartDate: '2015-04-21'
   },
   LLOYGBGBX: {
-    prefixedName: 'LLOY.GB/GBX',
-    description: 'Lloyds Banking Group PLC'
+    name: 'LLOY.GB/GBX',
+    description: 'Lloyds Banking Group PLC',
+    minStartDate: '2016-07-08'
   },
   LLYUSUSD: {
-    prefixedName: 'LLY.US/USD',
-    description: 'ELI LILLY &amp; CO'
+    name: 'LLY.US/USD',
+    description: 'ELI LILLY &amp; CO',
+    minStartDate: '2017-05-11'
   },
   LMTUSUSD: {
-    prefixedName: 'LMT.US/USD',
-    description: 'LOCKHEED MARTIN CORP'
+    name: 'LMT.US/USD',
+    description: 'LOCKHEED MARTIN CORP',
+    minStartDate: '2017-05-11'
   },
   LOWUSUSD: {
-    prefixedName: 'LOW.US/USD',
-    description: "LOWE'S COS INC"
+    name: 'LOW.US/USD',
+    description: "LOWE'S COS INC",
+    minStartDate: '2017-11-02'
   },
   LRFREUR: {
-    prefixedName: 'LR.FR/EUR',
-    description: 'Legrand SA'
+    name: 'LR.FR/EUR',
+    description: 'Legrand SA',
+    minStartDate: '2016-08-05'
   },
   LRCXUSUSD: {
-    prefixedName: 'LRCX.US/USD',
-    description: 'LAM RESEARCH CORP'
+    name: 'LRCX.US/USD',
+    description: 'LAM RESEARCH CORP',
+    minStartDate: '2017-11-02'
   },
   LSEGBGBX: {
-    prefixedName: 'LSE.GB/GBX',
-    description: 'London Stock Exchange Group PLC'
+    name: 'LSE.GB/GBX',
+    description: 'London Stock Exchange Group PLC',
+    minStartDate: '2016-07-06'
   },
   LUVUSUSD: {
-    prefixedName: 'LUV.US/USD',
-    description: 'SOUTHWEST AIRLINES CO'
+    name: 'LUV.US/USD',
+    description: 'SOUTHWEST AIRLINES CO',
+    minStartDate: '2017-11-02'
   },
   LVSUSUSD: {
-    prefixedName: 'LVS.US/USD',
-    description: 'Las Vegas Sands Corp.'
+    name: 'LVS.US/USD',
+    description: 'Las Vegas Sands Corp.',
+    minStartDate: '2017-01-26'
   },
   LXSDEEUR: {
-    prefixedName: 'LXS.DE/EUR',
-    description: 'Lanxess AG'
+    name: 'LXS.DE/EUR',
+    description: 'Lanxess AG',
+    minStartDate: '2015-04-21'
   },
   MUSUSD: {
-    prefixedName: 'M.US/USD',
-    description: "MACY'S INC"
+    name: 'M.US/USD',
+    description: "MACY'S INC",
+    minStartDate: '2017-11-02'
   },
   MAUSUSD: {
-    prefixedName: 'MA.US/USD',
-    description: 'MASTERCARD INC-CLASS A'
+    name: 'MA.US/USD',
+    description: 'MASTERCARD INC-CLASS A',
+    minStartDate: '2017-05-11'
   },
   MAERSKBDKDKK: {
-    prefixedName: 'MAERSKB.DK/DKK',
-    description: 'AP Moeller - Maersk A/S'
+    name: 'MAERSKB.DK/DKK',
+    description: 'AP Moeller - Maersk A/S',
+    minStartDate: '2016-11-08'
   },
   MARUSUSD: {
-    prefixedName: 'MAR.US/USD',
-    description: 'MARRIOTT INTERNATIONAL -CL A'
+    name: 'MAR.US/USD',
+    description: 'MARRIOTT INTERNATIONAL -CL A',
+    minStartDate: '2017-11-02'
   },
   MATUSUSD: {
-    prefixedName: 'MAT.US/USD',
-    description: 'MATTEL INC'
+    name: 'MAT.US/USD',
+    description: 'MATTEL INC',
+    minStartDate: '2018-02-01'
   },
   MCFREUR: {
-    prefixedName: 'MC.FR/EUR',
-    description: 'LVMH Moet Hennessy Louis Vuitton SA'
+    name: 'MC.FR/EUR',
+    description: 'LVMH Moet Hennessy Louis Vuitton SA',
+    minStartDate: '2016-08-05'
   },
   MCDUSUSD: {
-    prefixedName: 'MCD.US/USD',
-    description: "MCDONALD'S CORP"
+    name: 'MCD.US/USD',
+    description: "MCDONALD'S CORP",
+    minStartDate: '2017-11-02'
   },
   MCHPUSUSD: {
-    prefixedName: 'MCHP.US/USD',
-    description: 'MICROCHIP TECHNOLOGY INC'
+    name: 'MCHP.US/USD',
+    description: 'MICROCHIP TECHNOLOGY INC',
+    minStartDate: '2018-02-01'
   },
   MCKUSUSD: {
-    prefixedName: 'MCK.US/USD',
-    description: 'MCKESSON CORP'
+    name: 'MCK.US/USD',
+    description: 'MCKESSON CORP',
+    minStartDate: '2017-11-02'
   },
   MDLZUSUSD: {
-    prefixedName: 'MDLZ.US/USD',
-    description: 'MONDELEZ INTERNATIONAL INC-A'
+    name: 'MDLZ.US/USD',
+    description: 'MONDELEZ INTERNATIONAL INC-A',
+    minStartDate: '2017-11-02'
   },
   METUSUSD: {
-    prefixedName: 'MET.US/USD',
-    description: 'METLIFE INC'
+    name: 'MET.US/USD',
+    description: 'METLIFE INC',
+    minStartDate: '2017-11-02'
   },
   MGMUSUSD: {
-    prefixedName: 'MGM.US/USD',
-    description: 'MGM RESORTS INTERNATIONAL'
+    name: 'MGM.US/USD',
+    description: 'MGM RESORTS INTERNATIONAL',
+    minStartDate: '2017-11-02'
   },
   MHGNONOK: {
-    prefixedName: 'MHG.NO/NOK',
-    description: 'Marine Harvest ASA'
+    name: 'MHG.NO/NOK',
+    description: 'Marine Harvest ASA',
+    minStartDate: '2016-11-14'
   },
   MKSGBGBX: {
-    prefixedName: 'MKS.GB/GBX',
-    description: 'Marks &amp; Spencer Group PLC'
+    name: 'MKS.GB/GBX',
+    description: 'Marks &amp; Spencer Group PLC',
+    minStartDate: '2016-07-07'
   },
   MMMUSUSD: {
-    prefixedName: 'MMM.US/USD',
-    description: '3M CO'
+    name: 'MMM.US/USD',
+    description: '3M CO',
+    minStartDate: '2017-05-11'
   },
   MNDIGBGBX: {
-    prefixedName: 'MNDI.GB/GBX',
-    description: 'Mondi PLC'
+    name: 'MNDI.GB/GBX',
+    description: 'Mondi PLC',
+    minStartDate: '2016-07-08'
   },
   MOUSUSD: {
-    prefixedName: 'MO.US/USD',
-    description: 'ALTRIA GROUP INC'
+    name: 'MO.US/USD',
+    description: 'ALTRIA GROUP INC',
+    minStartDate: '2017-11-02'
   },
   MPCUSUSD: {
-    prefixedName: 'MPC.US/USD',
-    description: 'MARATHON PETROLEUM CORP'
+    name: 'MPC.US/USD',
+    description: 'MARATHON PETROLEUM CORP',
+    minStartDate: '2018-02-01'
   },
   MRKDEEUR: {
-    prefixedName: 'MRK.DE/EUR',
-    description: 'Merck KGaA'
+    name: 'MRK.DE/EUR',
+    description: 'Merck KGaA',
+    minStartDate: '2015-03-24'
   },
   MRKUSUSD: {
-    prefixedName: 'MRK.US/USD',
-    description: 'MERCK &amp; CO. INC.'
+    name: 'MRK.US/USD',
+    description: 'MERCK &amp; CO. INC.',
+    minStartDate: '2017-11-02'
   },
   MROUSUSD: {
-    prefixedName: 'MRO.US/USD',
-    description: 'MARATHON OIL CORP'
+    name: 'MRO.US/USD',
+    description: 'MARATHON OIL CORP',
+    minStartDate: '2018-02-01'
   },
   MRWGBGBX: {
-    prefixedName: 'MRW.GB/GBX',
-    description: 'WM Morrison Supermarkets PLC'
+    name: 'MRW.GB/GBX',
+    description: 'WM Morrison Supermarkets PLC',
+    minStartDate: '2016-07-07'
   },
   MSUSUSD: {
-    prefixedName: 'MS.US/USD',
-    description: 'MORGAN STANLEY'
+    name: 'MS.US/USD',
+    description: 'MORGAN STANLEY',
+    minStartDate: '2017-11-02'
   },
   MSFTUSUSD: {
-    prefixedName: 'MSFT.US/USD',
-    description: 'MICROSOFT CORP'
+    name: 'MSFT.US/USD',
+    description: 'MICROSOFT CORP',
+    minStartDate: '2017-01-19'
   },
   MTNLEUR: {
-    prefixedName: 'MT.NL/EUR',
-    description: 'ArcelorMittal'
+    name: 'MT.NL/EUR',
+    description: 'ArcelorMittal',
+    minStartDate: '2016-11-14'
   },
   MUUSUSD: {
-    prefixedName: 'MU.US/USD',
-    description: 'MICRON TECHNOLOGY INC'
+    name: 'MU.US/USD',
+    description: 'MICRON TECHNOLOGY INC',
+    minStartDate: '2017-11-02'
   },
   MUV2DEEUR: {
-    prefixedName: 'MUV2.DE/EUR',
-    description: 'Muenchener Rueckversicherungs AG'
+    name: 'MUV2.DE/EUR',
+    description: 'Muenchener Rueckversicherungs AG',
+    minStartDate: '2015-04-21'
   },
   NBLUSUSD: {
-    prefixedName: 'NBL.US/USD',
-    description: 'NOBLE ENERGY INC'
+    name: 'NBL.US/USD',
+    description: 'NOBLE ENERGY INC',
+    minStartDate: '2018-02-01'
   },
   NDASESEK: {
-    prefixedName: 'NDA.SE/SEK',
-    description: 'Nordea Bank AB'
+    name: 'NDA.SE/SEK',
+    description: 'Nordea Bank AB',
+    minStartDate: '2016-11-07'
   },
   NEEUSUSD: {
-    prefixedName: 'NEE.US/USD',
-    description: 'NEXTERA ENERGY INC'
+    name: 'NEE.US/USD',
+    description: 'NEXTERA ENERGY INC',
+    minStartDate: '2018-02-01'
   },
   NEMUSUSD: {
-    prefixedName: 'NEM.US/USD',
-    description: 'NEWMONT MINING CORP'
+    name: 'NEM.US/USD',
+    description: 'NEWMONT MINING CORP',
+    minStartDate: '2017-05-11'
   },
   NES1VFIEUR: {
-    prefixedName: 'NES1V.FI/EUR',
-    description: 'Neste OYJ'
+    name: 'NES1V.FI/EUR',
+    description: 'Neste OYJ',
+    minStartDate: '2016-11-03'
   },
   NFLXUSUSD: {
-    prefixedName: 'NFLX.US/USD',
-    description: 'NETFLIX INC'
+    name: 'NFLX.US/USD',
+    description: 'NETFLIX INC',
+    minStartDate: '2017-01-19'
   },
   NGGBGBX: {
-    prefixedName: 'NG.GB/GBX',
-    description: 'National Grid PLC'
+    name: 'NG.GB/GBX',
+    description: 'National Grid PLC',
+    minStartDate: '2016-07-07'
   },
   NHYNONOK: {
-    prefixedName: 'NHY.NO/NOK',
-    description: 'Norsk Hydro ASA'
+    name: 'NHY.NO/NOK',
+    description: 'Norsk Hydro ASA',
+    minStartDate: '2016-11-14'
   },
   NKEUSUSD: {
-    prefixedName: 'NKE.US/USD',
-    description: 'NIKE INC'
+    name: 'NKE.US/USD',
+    description: 'NIKE INC',
+    minStartDate: '2017-11-02'
   },
   NLDIDXEUR: {
-    prefixedName: 'NLD.IDX/EUR',
-    description: 'Netherlands 25 Index'
+    name: 'NLD.IDX/EUR',
+    description: 'Netherlands 25 Index',
+    minStartDate: '2013-02-27'
   },
   NOCUSUSD: {
-    prefixedName: 'NOC.US/USD',
-    description: 'NORTHROP GRUMMAN CORP'
+    name: 'NOC.US/USD',
+    description: 'NORTHROP GRUMMAN CORP',
+    minStartDate: '2017-05-11'
   },
   NOVOBDKDKK: {
-    prefixedName: 'NOVOB.DK/DKK',
-    description: 'Novo Nordisk A/S'
+    name: 'NOVOB.DK/DKK',
+    description: 'Novo Nordisk A/S',
+    minStartDate: '2016-11-07'
   },
   NRE1VFIEUR: {
-    prefixedName: 'NRE1V.FI/EUR',
-    description: 'Nokian Renkaat OYJ'
+    name: 'NRE1V.FI/EUR',
+    description: 'Nokian Renkaat OYJ',
+    minStartDate: '2016-11-03'
   },
   NRGUSUSD: {
-    prefixedName: 'NRG.US/USD',
-    description: 'NRG ENERGY INC'
+    name: 'NRG.US/USD',
+    description: 'NRG ENERGY INC',
+    minStartDate: '2018-02-01'
   },
   NSCUSUSD: {
-    prefixedName: 'NSC.US/USD',
-    description: 'NORFOLK SOUTHERN CORP'
+    name: 'NSC.US/USD',
+    description: 'NORFOLK SOUTHERN CORP',
+    minStartDate: '2018-02-01'
   },
   NVDAUSUSD: {
-    prefixedName: 'NVDA.US/USD',
-    description: 'NVIDIA CORP'
+    name: 'NVDA.US/USD',
+    description: 'NVIDIA CORP',
+    minStartDate: '2017-01-19'
   },
   NWLUSUSD: {
-    prefixedName: 'NWL.US/USD',
-    description: 'NEWELL BRANDS INC'
+    name: 'NWL.US/USD',
+    description: 'NEWELL BRANDS INC',
+    minStartDate: '2017-11-02'
   },
   NXTGBGBX: {
-    prefixedName: 'NXT.GB/GBX',
-    description: 'Next PLC'
+    name: 'NXT.GB/GBX',
+    description: 'Next PLC',
+    minStartDate: '2016-07-06'
   },
   NZDCAD: {
-    prefixedName: 'NZD/CAD',
-    description: 'New Zealand Dollar vs Canadian Dollar'
+    name: 'NZD/CAD',
+    description: 'New Zealand Dollar vs Canadian Dollar',
+    minStartDate: '2006-01-01'
   },
   NZDCHF: {
-    prefixedName: 'NZD/CHF',
-    description: 'New Zealand Dollar vs Swiss Franc'
+    name: 'NZD/CHF',
+    description: 'New Zealand Dollar vs Swiss Franc',
+    minStartDate: '2006-01-01'
   },
   NZDJPY: {
-    prefixedName: 'NZD/JPY',
-    description: 'New Zealand Dollar vs Japanese Yen'
+    name: 'NZD/JPY',
+    description: 'New Zealand Dollar vs Japanese Yen',
+    minStartDate: '2006-01-01'
   },
   NZDUSD: {
-    prefixedName: 'NZD/USD',
-    description: 'New Zealand Dollar vs US Dollar'
+    name: 'NZD/USD',
+    description: 'New Zealand Dollar vs US Dollar',
+    minStartDate: '2003-08-03'
   },
   NZYMBDKDKK: {
-    prefixedName: 'NZYMB.DK/DKK',
-    description: 'Novozymes A/S'
+    name: 'NZYMB.DK/DKK',
+    description: 'Novozymes A/S',
+    minStartDate: '2016-11-07'
   },
   OJUICECMDUSX: {
-    prefixedName: 'OJUICE.CMD/USX',
-    description: 'Orange Juice'
+    name: 'OJUICE.CMD/USX',
+    description: 'Orange Juice',
+    minStartDate: '2017-10-20'
   },
   OKEUSUSD: {
-    prefixedName: 'OKE.US/USD',
-    description: 'ONEOK INC'
+    name: 'OKE.US/USD',
+    description: 'ONEOK INC',
+    minStartDate: '2018-02-01'
   },
   OMCUSUSD: {
-    prefixedName: 'OMC.US/USD',
-    description: 'OMNICOM GROUP'
+    name: 'OMC.US/USD',
+    description: 'OMNICOM GROUP',
+    minStartDate: '2018-02-01'
   },
   ORFREUR: {
-    prefixedName: 'OR.FR/EUR',
-    description: "L'Oreal SA"
+    name: 'OR.FR/EUR',
+    description: "L'Oreal SA",
+    minStartDate: '2016-08-05'
   },
   ORAFREUR: {
-    prefixedName: 'ORA.FR/EUR',
-    description: 'Orange SA'
+    name: 'ORA.FR/EUR',
+    description: 'Orange SA',
+    minStartDate: '2016-08-05'
   },
   ORCLUSUSD: {
-    prefixedName: 'ORCL.US/USD',
-    description: 'ORACLE CORP'
+    name: 'ORCL.US/USD',
+    description: 'ORACLE CORP',
+    minStartDate: '2017-11-02'
   },
   ORKNONOK: {
-    prefixedName: 'ORK.NO/NOK',
-    description: 'Orkla ASA'
+    name: 'ORK.NO/NOK',
+    description: 'Orkla ASA',
+    minStartDate: '2016-11-14'
   },
   ORLYUSUSD: {
-    prefixedName: 'ORLY.US/USD',
-    description: "O'REILLY AUTOMOTIVE INC"
+    name: 'ORLY.US/USD',
+    description: "O'REILLY AUTOMOTIVE INC",
+    minStartDate: '2017-11-02'
   },
   OTE1VFIEUR: {
-    prefixedName: 'OTE1V.FI/EUR',
-    description: 'Outotec OYJ'
+    name: 'OTE1V.FI/EUR',
+    description: 'Outotec OYJ',
+    minStartDate: '2016-11-03'
   },
   OUT1VFIEUR: {
-    prefixedName: 'OUT1V.FI/EUR',
-    description: 'Outokumpu OYJ'
+    name: 'OUT1V.FI/EUR',
+    description: 'Outokumpu OYJ',
+    minStartDate: '2016-11-03'
   },
   OXYUSUSD: {
-    prefixedName: 'OXY.US/USD',
-    description: 'OCCIDENTAL PETROLEUM CORP'
+    name: 'OXY.US/USD',
+    description: 'OCCIDENTAL PETROLEUM CORP',
+    minStartDate: '2017-05-11'
   },
   PAH3DEEUR: {
-    prefixedName: 'PAH3.DE/EUR',
-    description: 'Porsche Automobil Holding SE'
+    name: 'PAH3.DE/EUR',
+    description: 'Porsche Automobil Holding SE',
+    minStartDate: '2015-04-21'
   },
   PAYXUSUSD: {
-    prefixedName: 'PAYX.US/USD',
-    description: 'PAYCHEX INC'
+    name: 'PAYX.US/USD',
+    description: 'PAYCHEX INC',
+    minStartDate: '2018-02-01'
   },
   PBRUSUSD: {
-    prefixedName: 'PBR.US/USD',
-    description: 'Petroleo Brasileiro S.A.'
+    name: 'PBR.US/USD',
+    description: 'Petroleo Brasileiro S.A.',
+    minStartDate: '2017-01-26'
   },
   PCARUSUSD: {
-    prefixedName: 'PCAR.US/USD',
-    description: 'PACCAR INC'
+    name: 'PCAR.US/USD',
+    description: 'PACCAR INC',
+    minStartDate: '2018-02-01'
   },
   PCGUSUSD: {
-    prefixedName: 'PCG.US/USD',
-    description: 'P G &amp; E CORP'
+    name: 'PCG.US/USD',
+    description: 'P G &amp; E CORP',
+    minStartDate: '2017-11-02'
   },
   PCLNUSUSD: {
-    prefixedName: 'PCLN.US/USD',
-    description: 'PRICELINE GROUP INC/THE'
+    name: 'PCLN.US/USD',
+    description: 'PRICELINE GROUP INC/THE',
+    minStartDate: '2017-01-19'
   },
   PEPUSUSD: {
-    prefixedName: 'PEP.US/USD',
-    description: 'PEPSICO INC'
+    name: 'PEP.US/USD',
+    description: 'PEPSICO INC',
+    minStartDate: '2017-11-02'
   },
   PFCGBGBX: {
-    prefixedName: 'PFC.GB/GBX',
-    description: 'Petrofac Ltd'
+    name: 'PFC.GB/GBX',
+    description: 'Petrofac Ltd',
+    minStartDate: '2016-07-08'
   },
   PFEUSUSD: {
-    prefixedName: 'PFE.US/USD',
-    description: 'PFIZER INC'
+    name: 'PFE.US/USD',
+    description: 'PFIZER INC',
+    minStartDate: '2017-01-19'
   },
   PGUSUSD: {
-    prefixedName: 'PG.US/USD',
-    description: 'PROCTER &amp; GAMBLE CO/THE'
+    name: 'PG.US/USD',
+    description: 'PROCTER &amp; GAMBLE CO/THE',
+    minStartDate: '2017-01-19'
   },
   PGRUSUSD: {
-    prefixedName: 'PGR.US/USD',
-    description: 'PROGRESSIVE CORP'
+    name: 'PGR.US/USD',
+    description: 'PROGRESSIVE CORP',
+    minStartDate: '2018-02-01'
   },
   PHUSUSD: {
-    prefixedName: 'PH.US/USD',
-    description: 'PARKER HANNIFIN CORP'
+    name: 'PH.US/USD',
+    description: 'PARKER HANNIFIN CORP',
+    minStartDate: '2018-02-01'
   },
   PHIANLEUR: {
-    prefixedName: 'PHIA.NL/EUR',
-    description: 'Koninklijke Philips NV'
+    name: 'PHIA.NL/EUR',
+    description: 'Koninklijke Philips NV',
+    minStartDate: '2016-11-14'
   },
   PLNIDXPLN: {
-    prefixedName: 'PLN.IDX/PLN',
-    description: 'Poland 20 Index'
+    name: 'PLN.IDX/PLN',
+    description: 'Poland 20 Index',
+    minStartDate: '2017-12-01'
   },
   PMUSUSD: {
-    prefixedName: 'PM.US/USD',
-    description: 'PHILIP MORRIS INTERNATIONAL'
+    name: 'PM.US/USD',
+    description: 'PHILIP MORRIS INTERNATIONAL',
+    minStartDate: '2017-11-02'
   },
   PNCUSUSD: {
-    prefixedName: 'PNC.US/USD',
-    description: 'PNC FINANCIAL SERVICES GROUP'
+    name: 'PNC.US/USD',
+    description: 'PNC FINANCIAL SERVICES GROUP',
+    minStartDate: '2017-11-02'
   },
   PNDORADKDKK: {
-    prefixedName: 'PNDORA.DK/DKK',
-    description: 'Pandora A/S'
+    name: 'PNDORA.DK/DKK',
+    description: 'Pandora A/S',
+    minStartDate: '2016-11-08'
   },
   PPGUSUSD: {
-    prefixedName: 'PPG.US/USD',
-    description: 'PPG INDUSTRIES INC'
+    name: 'PPG.US/USD',
+    description: 'PPG INDUSTRIES INC',
+    minStartDate: '2018-02-02'
   },
   PRUGBGBX: {
-    prefixedName: 'PRU.GB/GBX',
-    description: 'Prudential PLC'
+    name: 'PRU.GB/GBX',
+    description: 'Prudential PLC',
+    minStartDate: '2016-07-07'
   },
   PRUUSUSD: {
-    prefixedName: 'PRU.US/USD',
-    description: 'PRUDENTIAL FINANCIAL INC'
+    name: 'PRU.US/USD',
+    description: 'PRUDENTIAL FINANCIAL INC',
+    minStartDate: '2018-02-01'
   },
   PSAUSUSD: {
-    prefixedName: 'PSA.US/USD',
-    description: 'PUBLIC STORAGE'
+    name: 'PSA.US/USD',
+    description: 'PUBLIC STORAGE',
+    minStartDate: '2018-02-01'
   },
   PSMDEEUR: {
-    prefixedName: 'PSM.DE/EUR',
-    description: 'ProSiebenSat.1 Media AG'
+    name: 'PSM.DE/EUR',
+    description: 'ProSiebenSat.1 Media AG',
+    minStartDate: '2015-04-20'
   },
   PSNGBGBX: {
-    prefixedName: 'PSN.GB/GBX',
-    description: 'Persimmon PLC'
+    name: 'PSN.GB/GBX',
+    description: 'Persimmon PLC',
+    minStartDate: '2016-07-08'
   },
   PSONGBGBX: {
-    prefixedName: 'PSON.GB/GBX',
-    description: 'Pearson PLC'
+    name: 'PSON.GB/GBX',
+    description: 'Pearson PLC',
+    minStartDate: '2016-07-07'
   },
   PSXUSUSD: {
-    prefixedName: 'PSX.US/USD',
-    description: 'PHILLIPS 66'
+    name: 'PSX.US/USD',
+    description: 'PHILLIPS 66',
+    minStartDate: '2018-02-01'
   },
   PUBFREUR: {
-    prefixedName: 'PUB.FR/EUR',
-    description: 'Publicis Groupe SA'
+    name: 'PUB.FR/EUR',
+    description: 'Publicis Groupe SA',
+    minStartDate: '2016-08-05'
   },
   PXDUSUSD: {
-    prefixedName: 'PXD.US/USD',
-    description: 'PIONEER NATURAL RESOURCES CO'
+    name: 'PXD.US/USD',
+    description: 'PIONEER NATURAL RESOURCES CO',
+    minStartDate: '2017-11-02'
   },
   PYPLUSUSD: {
-    prefixedName: 'PYPL.US/USD',
-    description: 'PAYPAL HOLDINGS INC'
+    name: 'PYPL.US/USD',
+    description: 'PAYPAL HOLDINGS INC',
+    minStartDate: '2017-11-02'
   },
   QCOMUSUSD: {
-    prefixedName: 'QCOM.US/USD',
-    description: 'QUALCOMM INC'
+    name: 'QCOM.US/USD',
+    description: 'QUALCOMM INC',
+    minStartDate: '2017-11-02'
   },
   QQQUSUSD: {
-    prefixedName: 'QQQ.US/USD',
-    description: 'PowerShares QQQ ETF'
+    name: 'QQQ.US/USD',
+    description: 'PowerShares QQQ ETF',
+    minStartDate: '2017-01-23'
   },
   RANDNLEUR: {
-    prefixedName: 'RAND.NL/EUR',
-    description: 'Randstad Holding NV'
+    name: 'RAND.NL/EUR',
+    description: 'Randstad Holding NV',
+    minStartDate: '2016-11-14'
   },
   RBGBGBX: {
-    prefixedName: 'RB.GB/GBX',
-    description: 'Reckitt Benckiser Group PLC'
+    name: 'RB.GB/GBX',
+    description: 'Reckitt Benckiser Group PLC',
+    minStartDate: '2016-07-06'
   },
   RBIATEUR: {
-    prefixedName: 'RBI.AT/EUR',
-    description: 'Raiffeisen Bank International AG'
+    name: 'RBI.AT/EUR',
+    description: 'Raiffeisen Bank International AG',
+    minStartDate: '2016-11-02'
   },
   RBSGBGBX: {
-    prefixedName: 'RBS.GB/GBX',
-    description: 'Royal Bank of Scotland Group PLC'
+    name: 'RBS.GB/GBX',
+    description: 'Royal Bank of Scotland Group PLC',
+    minStartDate: '2016-07-08'
   },
   RDSANLEUR: {
-    prefixedName: 'RDSA.NL/EUR',
-    description: 'Royal Dutch Shell PLC'
+    name: 'RDSA.NL/EUR',
+    description: 'Royal Dutch Shell PLC',
+    minStartDate: '2016-11-14'
   },
   RDSBGBGBX: {
-    prefixedName: 'RDSB.GB/GBX',
-    description: 'Royal Dutch Shell PLC'
+    name: 'RDSB.GB/GBX',
+    description: 'Royal Dutch Shell PLC',
+    minStartDate: '2016-11-01'
   },
   REEESEUR: {
-    prefixedName: 'REE.ES/EUR',
-    description: 'Red Electrica Corp SA'
+    name: 'REE.ES/EUR',
+    description: 'Red Electrica Corp SA',
+    minStartDate: '2016-11-14'
   },
   REGNUSUSD: {
-    prefixedName: 'REGN.US/USD',
-    description: 'REGENERON PHARMACEUTICALS'
+    name: 'REGN.US/USD',
+    description: 'REGENERON PHARMACEUTICALS',
+    minStartDate: '2017-11-02'
   },
   RELGBGBX: {
-    prefixedName: 'REL.GB/GBX',
-    description: 'Reed Elsevier PLC'
+    name: 'REL.GB/GBX',
+    description: 'Reed Elsevier PLC',
+    minStartDate: '2016-07-08'
   },
   RENNLEUR: {
-    prefixedName: 'REN.NL/EUR',
-    description: 'RELX NV'
+    name: 'REN.NL/EUR',
+    description: 'RELX NV',
+    minStartDate: '2016-11-14'
   },
   REPESEUR: {
-    prefixedName: 'REP.ES/EUR',
-    description: 'Repsol SA'
+    name: 'REP.ES/EUR',
+    description: 'Repsol SA',
+    minStartDate: '2016-11-14'
   },
   RFUSUSD: {
-    prefixedName: 'RF.US/USD',
-    description: 'REGIONS FINANCIAL CORP'
+    name: 'RF.US/USD',
+    description: 'REGIONS FINANCIAL CORP',
+    minStartDate: '2018-02-01'
   },
   RHTUSUSD: {
-    prefixedName: 'RHT.US/USD',
-    description: 'RED HAT INC'
+    name: 'RHT.US/USD',
+    description: 'RED HAT INC',
+    minStartDate: '2018-02-01'
   },
   RIFREUR: {
-    prefixedName: 'RI.FR/EUR',
-    description: 'Pernod-Ricard SA'
+    name: 'RI.FR/EUR',
+    description: 'Pernod-Ricard SA',
+    minStartDate: '2016-08-05'
   },
   RIOGBGBX: {
-    prefixedName: 'RIO.GB/GBX',
-    description: 'Rio Tinto PLC'
+    name: 'RIO.GB/GBX',
+    description: 'Rio Tinto PLC',
+    minStartDate: '2016-07-06'
   },
   RMGGBGBX: {
-    prefixedName: 'RMG.GB/GBX',
-    description: 'Royal Mail PLC'
+    name: 'RMG.GB/GBX',
+    description: 'Royal Mail PLC',
+    minStartDate: '2016-07-07'
   },
   RNOFREUR: {
-    prefixedName: 'RNO.FR/EUR',
-    description: 'Renault SA'
+    name: 'RNO.FR/EUR',
+    description: 'Renault SA',
+    minStartDate: '2016-08-05'
   },
   ROSTUSUSD: {
-    prefixedName: 'ROST.US/USD',
-    description: 'ROSS STORES INC'
+    name: 'ROST.US/USD',
+    description: 'ROSS STORES INC',
+    minStartDate: '2018-02-01'
   },
   RRGBGBX: {
-    prefixedName: 'RR.GB/GBX',
-    description: 'Rolls-Royce Holdings PLC'
+    name: 'RR.GB/GBX',
+    description: 'Rolls-Royce Holdings PLC',
+    minStartDate: '2016-07-08'
   },
   RRCUSUSD: {
-    prefixedName: 'RRC.US/USD',
-    description: 'RANGE RESOURCES CORP'
+    name: 'RRC.US/USD',
+    description: 'RANGE RESOURCES CORP',
+    minStartDate: '2018-02-01'
   },
   RRSGBGBX: {
-    prefixedName: 'RRS.GB/GBX',
-    description: 'Randgold Resources Ltd'
+    name: 'RRS.GB/GBX',
+    description: 'Randgold Resources Ltd',
+    minStartDate: '2016-07-06'
   },
   RSAGBGBX: {
-    prefixedName: 'RSA.GB/GBX',
-    description: 'RSA Insurance Group PLC'
+    name: 'RSA.GB/GBX',
+    description: 'RSA Insurance Group PLC',
+    minStartDate: '2016-07-07'
   },
   RTNUSUSD: {
-    prefixedName: 'RTN.US/USD',
-    description: 'RAYTHEON COMPANY'
+    name: 'RTN.US/USD',
+    description: 'RAYTHEON COMPANY',
+    minStartDate: '2018-02-01'
   },
   RWEDEEUR: {
-    prefixedName: 'RWE.DE/EUR',
-    description: 'RWE AG'
+    name: 'RWE.DE/EUR',
+    description: 'RWE AG',
+    minStartDate: '2015-04-16'
   },
   SAFFREUR: {
-    prefixedName: 'SAF.FR/EUR',
-    description: 'Safran SA'
+    name: 'SAF.FR/EUR',
+    description: 'Safran SA',
+    minStartDate: '2016-08-05'
   },
   SANESEUR: {
-    prefixedName: 'SAN.ES/EUR',
-    description: 'Banco Santander SA'
+    name: 'SAN.ES/EUR',
+    description: 'Banco Santander SA',
+    minStartDate: '2016-11-14'
   },
   SANFREUR: {
-    prefixedName: 'SAN.FR/EUR',
-    description: 'Sanofi'
+    name: 'SAN.FR/EUR',
+    description: 'Sanofi',
+    minStartDate: '2016-08-05'
   },
   SANDSESEK: {
-    prefixedName: 'SAND.SE/SEK',
-    description: 'Sandvik AB'
+    name: 'SAND.SE/SEK',
+    description: 'Sandvik AB',
+    minStartDate: '2016-11-08'
   },
   SAPDEEUR: {
-    prefixedName: 'SAP.DE/EUR',
-    description: 'SAP AG'
+    name: 'SAP.DE/EUR',
+    description: 'SAP AG',
+    minStartDate: '2015-04-16'
   },
   SBRYGBGBX: {
-    prefixedName: 'SBRY.GB/GBX',
-    description: 'J Sainsbury PLC'
+    name: 'SBRY.GB/GBX',
+    description: 'J Sainsbury PLC',
+    minStartDate: '2016-07-07'
   },
   SBUXUSUSD: {
-    prefixedName: 'SBUX.US/USD',
-    description: 'STARBUCKS CORP'
+    name: 'SBUX.US/USD',
+    description: 'STARBUCKS CORP',
+    minStartDate: '2017-11-02'
   },
   SCABSESEK: {
-    prefixedName: 'SCAB.SE/SEK',
-    description: 'Svenska Cellulosa AB'
+    name: 'SCAB.SE/SEK',
+    description: 'Svenska Cellulosa AB',
+    minStartDate: '2016-11-07'
   },
   SCHWUSUSD: {
-    prefixedName: 'SCHW.US/USD',
-    description: 'SCHWAB (CHARLES) CORP'
+    name: 'SCHW.US/USD',
+    description: 'SCHWAB (CHARLES) CORP',
+    minStartDate: '2017-11-02'
   },
   SDFDEEUR: {
-    prefixedName: 'SDF.DE/EUR',
-    description: 'K+S AG'
+    name: 'SDF.DE/EUR',
+    description: 'K+S AG',
+    minStartDate: '2015-04-15'
   },
   SEBASESEK: {
-    prefixedName: 'SEBA.SE/SEK',
-    description: 'Skandinaviska Enskilda Banken AB'
+    name: 'SEBA.SE/SEK',
+    description: 'Skandinaviska Enskilda Banken AB',
+    minStartDate: '2016-11-14'
   },
   SECUBSESEK: {
-    prefixedName: 'SECUB.SE/SEK',
-    description: 'Securitas AB'
+    name: 'SECUB.SE/SEK',
+    description: 'Securitas AB',
+    minStartDate: '2016-11-07'
   },
   SGDIDXSGD: {
-    prefixedName: 'SGD.IDX/SGD',
-    description: 'Singapore Blue Chip Cash Index'
+    name: 'SGD.IDX/SGD',
+    description: 'Singapore Blue Chip Cash Index',
+    minStartDate: '2017-12-01'
   },
   SGDJPY: {
-    prefixedName: 'SGD/JPY',
-    description: 'Singapore Dollar vs Japanese Yen'
+    name: 'SGD/JPY',
+    description: 'Singapore Dollar vs Japanese Yen',
+    minStartDate: '2007-03-13'
   },
   SGEGBGBX: {
-    prefixedName: 'SGE.GB/GBX',
-    description: 'Sage Group PLC/The'
+    name: 'SGE.GB/GBX',
+    description: 'Sage Group PLC/The',
+    minStartDate: '2016-07-08'
   },
   SGOFREUR: {
-    prefixedName: 'SGO.FR/EUR',
-    description: 'Cie de St-Gobain'
+    name: 'SGO.FR/EUR',
+    description: 'Cie de St-Gobain',
+    minStartDate: '2016-10-31'
   },
   SHPGBGBX: {
-    prefixedName: 'SHP.GB/GBX',
-    description: 'Shire PLC'
+    name: 'SHP.GB/GBX',
+    description: 'Shire PLC',
+    minStartDate: '2016-07-06'
   },
   SHWUSUSD: {
-    prefixedName: 'SHW.US/USD',
-    description: 'SHERWIN-WILLIAMS COMPANY'
+    name: 'SHW.US/USD',
+    description: 'SHERWIN-WILLIAMS COMPANY',
+    minStartDate: '2018-02-01'
   },
   SIEDEEUR: {
-    prefixedName: 'SIE.DE/EUR',
-    description: 'Siemens AG'
+    name: 'SIE.DE/EUR',
+    description: 'Siemens AG',
+    minStartDate: '2015-04-20'
   },
   SJMUSUSD: {
-    prefixedName: 'SJM.US/USD',
-    description: 'JM SMUCKER COMPANY'
+    name: 'SJM.US/USD',
+    description: 'JM SMUCKER COMPANY',
+    minStartDate: '2018-02-01'
   },
   SKABSESEK: {
-    prefixedName: 'SKAB.SE/SEK',
-    description: 'Skanska AB'
+    name: 'SKAB.SE/SEK',
+    description: 'Skanska AB',
+    minStartDate: '2016-11-07'
   },
   SKFBSESEK: {
-    prefixedName: 'SKFB.SE/SEK',
-    description: 'SKF AB'
+    name: 'SKFB.SE/SEK',
+    description: 'SKF AB',
+    minStartDate: '2016-11-07'
   },
   SKYGBGBX: {
-    prefixedName: 'SKY.GB/GBX',
-    description: 'Sky Plc'
+    name: 'SKY.GB/GBX',
+    description: 'Sky Plc',
+    minStartDate: '2016-07-07'
   },
   SLVUSUSD: {
-    prefixedName: 'SLV.US/USD',
-    description: 'iShares Silver Trust ETF'
+    name: 'SLV.US/USD',
+    description: 'iShares Silver Trust ETF',
+    minStartDate: '2018-02-01'
   },
   SMINGBGBX: {
-    prefixedName: 'SMIN.GB/GBX',
-    description: 'Smiths Group PLC'
+    name: 'SMIN.GB/GBX',
+    description: 'Smiths Group PLC',
+    minStartDate: '2016-07-08'
   },
   SNGBGBX: {
-    prefixedName: 'SN.GB/GBX',
-    description: 'Smith &amp; Nephew PLC'
+    name: 'SN.GB/GBX',
+    description: 'Smith &amp; Nephew PLC',
+    minStartDate: '2016-07-08'
   },
   SNAPUSUSD: {
-    prefixedName: 'SNAP.US/USD',
-    description: 'SNAP Inc'
+    name: 'SNAP.US/USD',
+    description: 'SNAP Inc',
+    minStartDate: '2017-11-02'
   },
   SOUSUSD: {
-    prefixedName: 'SO.US/USD',
-    description: 'SOUTHERN CO/THE'
+    name: 'SO.US/USD',
+    description: 'SOUTHERN CO/THE',
+    minStartDate: '2017-11-02'
   },
   SOLBBEEUR: {
-    prefixedName: 'SOLB.BE/EUR',
-    description: 'Solvay SA'
+    name: 'SOLB.BE/EUR',
+    description: 'Solvay SA',
+    minStartDate: '2016-11-07'
   },
   SPGUSUSD: {
-    prefixedName: 'SPG.US/USD',
-    description: 'SIMON PROPERTY GROUP INC'
+    name: 'SPG.US/USD',
+    description: 'SIMON PROPERTY GROUP INC',
+    minStartDate: '2017-11-02'
   },
   SPYUSUSD: {
-    prefixedName: 'SPY.US/USD',
-    description: 'SPDR S&amp;P 500 ETF'
+    name: 'SPY.US/USD',
+    description: 'SPDR S&amp;P 500 ETF',
+    minStartDate: '2017-02-16'
   },
   SSEGBGBX: {
-    prefixedName: 'SSE.GB/GBX',
-    description: 'SSE PLC'
+    name: 'SSE.GB/GBX',
+    description: 'SSE PLC',
+    minStartDate: '2016-07-08'
   },
   STANGBGBX: {
-    prefixedName: 'STAN.GB/GBX',
-    description: 'Standard Chartered PLC'
+    name: 'STAN.GB/GBX',
+    description: 'Standard Chartered PLC',
+    minStartDate: '2016-07-07'
   },
   STERVFIEUR: {
-    prefixedName: 'STERV.FI/EUR',
-    description: 'Stora Enso OYJ'
+    name: 'STERV.FI/EUR',
+    description: 'Stora Enso OYJ',
+    minStartDate: '2016-11-03'
   },
   STIUSUSD: {
-    prefixedName: 'STI.US/USD',
-    description: 'SUNTRUST BANKS INC'
+    name: 'STI.US/USD',
+    description: 'SUNTRUST BANKS INC',
+    minStartDate: '2018-02-01'
   },
   STLNONOK: {
-    prefixedName: 'STL.NO/NOK',
-    description: 'Statoil ASA'
+    name: 'STL.NO/NOK',
+    description: 'Statoil ASA',
+    minStartDate: '2016-11-14'
   },
   STTUSUSD: {
-    prefixedName: 'STT.US/USD',
-    description: 'STATE STREET CORP'
+    name: 'STT.US/USD',
+    description: 'STATE STREET CORP',
+    minStartDate: '2018-02-01'
   },
   STZUSUSD: {
-    prefixedName: 'STZ.US/USD',
-    description: 'CONSTELLATION BRANDS INC-A'
+    name: 'STZ.US/USD',
+    description: 'CONSTELLATION BRANDS INC-A',
+    minStartDate: '2018-02-01'
   },
   SUFREUR: {
-    prefixedName: 'SU.FR/EUR',
-    description: 'Schneider Electric SA'
+    name: 'SU.FR/EUR',
+    description: 'Schneider Electric SA',
+    minStartDate: '2016-08-05'
   },
   SUGARCMDUSD: {
-    prefixedName: 'SUGAR.CMD/USD',
-    description: 'London Sugar No.5'
+    name: 'SUGAR.CMD/USD',
+    description: 'London Sugar No.5',
+    minStartDate: '2017-10-02'
   },
   SVTGBGBX: {
-    prefixedName: 'SVT.GB/GBX',
-    description: 'Severn Trent PLC'
+    name: 'SVT.GB/GBX',
+    description: 'Severn Trent PLC',
+    minStartDate: '2016-07-06'
   },
   SWEDASESEK: {
-    prefixedName: 'SWEDA.SE/SEK',
-    description: 'Swedbank AB'
+    name: 'SWEDA.SE/SEK',
+    description: 'Swedbank AB',
+    minStartDate: '2016-11-07'
   },
   SWKUSUSD: {
-    prefixedName: 'SWK.US/USD',
-    description: 'STANLEY BLACK &amp; DECKER INC'
+    name: 'SWK.US/USD',
+    description: 'STANLEY BLACK &amp; DECKER INC',
+    minStartDate: '2018-02-01'
   },
   SWMASESEK: {
-    prefixedName: 'SWMA.SE/SEK',
-    description: 'Swedish Match AB'
+    name: 'SWMA.SE/SEK',
+    description: 'Swedish Match AB',
+    minStartDate: '2016-11-07'
   },
   SYKUSUSD: {
-    prefixedName: 'SYK.US/USD',
-    description: 'STRYKER CORP'
+    name: 'SYK.US/USD',
+    description: 'STRYKER CORP',
+    minStartDate: '2018-02-01'
   },
   SYMCUSUSD: {
-    prefixedName: 'SYMC.US/USD',
-    description: 'SYMANTEC CORP'
+    name: 'SYMC.US/USD',
+    description: 'SYMANTEC CORP',
+    minStartDate: '2018-02-01'
   },
   SYYUSUSD: {
-    prefixedName: 'SYY.US/USD',
-    description: 'SYSCO CORP'
+    name: 'SYY.US/USD',
+    description: 'SYSCO CORP',
+    minStartDate: '2018-02-01'
   },
   TUSUSD: {
-    prefixedName: 'T.US/USD',
-    description: 'AT&amp;T INC'
+    name: 'T.US/USD',
+    description: 'AT&amp;T INC',
+    minStartDate: '2017-01-19'
   },
   TAPUSUSD: {
-    prefixedName: 'TAP.US/USD',
-    description: 'MOLSON COORS BREWING CO -B'
+    name: 'TAP.US/USD',
+    description: 'MOLSON COORS BREWING CO -B',
+    minStartDate: '2018-02-01'
   },
   TATEGBGBX: {
-    prefixedName: 'TATE.GB/GBX',
-    description: 'Tate &amp; Lyle PLC'
+    name: 'TATE.GB/GBX',
+    description: 'Tate &amp; Lyle PLC',
+    minStartDate: '2016-07-08'
   },
   TEFESEUR: {
-    prefixedName: 'TEF.ES/EUR',
-    description: 'Telefonica SA'
+    name: 'TEF.ES/EUR',
+    description: 'Telefonica SA',
+    minStartDate: '2016-11-14'
   },
   TELNONOK: {
-    prefixedName: 'TEL.NO/NOK',
-    description: 'Telenor ASA'
+    name: 'TEL.NO/NOK',
+    description: 'Telenor ASA',
+    minStartDate: '2016-11-14'
   },
   TEL2BSESEK: {
-    prefixedName: 'TEL2B.SE/SEK',
-    description: 'Tele2 AB'
+    name: 'TEL2B.SE/SEK',
+    description: 'Tele2 AB',
+    minStartDate: '2016-11-08'
   },
   TEVAUSUSD: {
-    prefixedName: 'TEVA.US/USD',
-    description: 'TEVA PHARMACEUTICAL-SP ADR'
+    name: 'TEVA.US/USD',
+    description: 'TEVA PHARMACEUTICAL-SP ADR',
+    minStartDate: '2017-11-02'
   },
   TGTUSUSD: {
-    prefixedName: 'TGT.US/USD',
-    description: 'TARGET CORP'
+    name: 'TGT.US/USD',
+    description: 'TARGET CORP',
+    minStartDate: '2017-11-02'
   },
   TIFUSUSD: {
-    prefixedName: 'TIF.US/USD',
-    description: 'TIFFANY &amp; CO'
+    name: 'TIF.US/USD',
+    description: 'TIFFANY &amp; CO',
+    minStartDate: '2018-02-01'
   },
   TJXUSUSD: {
-    prefixedName: 'TJX.US/USD',
-    description: 'TJX COMPANIES INC'
+    name: 'TJX.US/USD',
+    description: 'TJX COMPANIES INC',
+    minStartDate: '2017-11-02'
   },
   TKADEEUR: {
-    prefixedName: 'TKA.DE/EUR',
-    description: 'ThyssenKrupp AG'
+    name: 'TKA.DE/EUR',
+    description: 'ThyssenKrupp AG',
+    minStartDate: '2015-04-14'
   },
   TLS1VFIEUR: {
-    prefixedName: 'TLS1V.FI/EUR',
-    description: 'Telia Company AB'
+    name: 'TLS1V.FI/EUR',
+    description: 'Telia Company AB',
+    minStartDate: '2016-11-09'
   },
   TLSNSESEK: {
-    prefixedName: 'TLSN.SE/SEK',
-    description: 'Telia Company AB'
+    name: 'TLSN.SE/SEK',
+    description: 'Telia Company AB',
+    minStartDate: '2016-11-14'
   },
   TLTUSUSD: {
-    prefixedName: 'TLT.US/USD',
-    description: 'iShares 20+ Year Treasury Bond ETF'
+    name: 'TLT.US/USD',
+    description: 'iShares 20+ Year Treasury Bond ETF',
+    minStartDate: '2017-01-23'
   },
   TLWGBGBX: {
-    prefixedName: 'TLW.GB/GBX',
-    description: 'Tullow Oil PLC'
+    name: 'TLW.GB/GBX',
+    description: 'Tullow Oil PLC',
+    minStartDate: '2016-07-07'
   },
   TMOUSUSD: {
-    prefixedName: 'TMO.US/USD',
-    description: 'THERMO FISHER SCIENTIFIC INC'
+    name: 'TMO.US/USD',
+    description: 'THERMO FISHER SCIENTIFIC INC',
+    minStartDate: '2017-11-02'
   },
   TPKGBGBX: {
-    prefixedName: 'TPK.GB/GBX',
-    description: 'Travis Perkins PLC'
+    name: 'TPK.GB/GBX',
+    description: 'Travis Perkins PLC',
+    minStartDate: '2016-07-08'
   },
   TROWUSUSD: {
-    prefixedName: 'TROW.US/USD',
-    description: 'T ROWE PRICE GROUP INC'
+    name: 'TROW.US/USD',
+    description: 'T ROWE PRICE GROUP INC',
+    minStartDate: '2018-02-01'
   },
   TRVUSUSD: {
-    prefixedName: 'TRV.US/USD',
-    description: 'TRAVELERS COS INC/THE'
+    name: 'TRV.US/USD',
+    description: 'TRAVELERS COS INC/THE',
+    minStartDate: '2017-11-02'
   },
   TRYJPY: {
-    prefixedName: 'TRY/JPY',
-    description: 'Turkish Lira vs Japanese Yen'
+    name: 'TRY/JPY',
+    description: 'Turkish Lira vs Japanese Yen',
+    minStartDate: '2010-05-09'
   },
   TSCOGBGBX: {
-    prefixedName: 'TSCO.GB/GBX',
-    description: 'Tesco PLC'
+    name: 'TSCO.GB/GBX',
+    description: 'Tesco PLC',
+    minStartDate: '2016-07-08'
   },
   TSLAUSUSD: {
-    prefixedName: 'TSLA.US/USD',
-    description: 'TESLA MOTORS INC'
+    name: 'TSLA.US/USD',
+    description: 'TESLA MOTORS INC',
+    minStartDate: '2017-01-19'
   },
   TSMUSUSD: {
-    prefixedName: 'TSM.US/USD',
-    description: 'Taiwan Semiconductor Manufacturing Company Limited'
+    name: 'TSM.US/USD',
+    description: 'Taiwan Semiconductor Manufacturing Company Limited',
+    minStartDate: '2018-02-01'
   },
   TSNUSUSD: {
-    prefixedName: 'TSN.US/USD',
-    description: 'TYSON FOODS INC-CL A'
+    name: 'TSN.US/USD',
+    description: 'TYSON FOODS INC-CL A',
+    minStartDate: '2018-02-01'
   },
   TUI1DEEUR: {
-    prefixedName: 'TUI1.DE/EUR',
-    description: 'TUI AG'
+    name: 'TUI1.DE/EUR',
+    description: 'TUI AG',
+    minStartDate: '2015-04-15'
   },
   TWTRUSUSD: {
-    prefixedName: 'TWTR.US/USD',
-    description: 'TWITTER INC'
+    name: 'TWTR.US/USD',
+    description: 'TWITTER INC',
+    minStartDate: '2017-11-02'
   },
   TXNUSUSD: {
-    prefixedName: 'TXN.US/USD',
-    description: 'TEXAS INSTRUMENTS INC'
+    name: 'TXN.US/USD',
+    description: 'TEXAS INSTRUMENTS INC',
+    minStartDate: '2017-11-02'
   },
   UCBBEEUR: {
-    prefixedName: 'UCB.BE/EUR',
-    description: 'UCB SA'
+    name: 'UCB.BE/EUR',
+    description: 'UCB SA',
+    minStartDate: '2016-11-07'
   },
   UGFREUR: {
-    prefixedName: 'UG.FR/EUR',
-    description: 'Peugeot SA'
+    name: 'UG.FR/EUR',
+    description: 'Peugeot SA',
+    minStartDate: '2016-08-05'
   },
   UKGILTTRGBP: {
-    prefixedName: 'UKGILT.TR/GBP',
-    description: 'UK Long Gilt'
+    name: 'UKGILT.TR/GBP',
+    description: 'UK Long Gilt',
+    minStartDate: '2017-12-26'
   },
   ULTAUSUSD: {
-    prefixedName: 'ULTA.US/USD',
-    description: 'ULTA SALON COSMETICS &amp; FRAGR'
+    name: 'ULTA.US/USD',
+    description: 'ULTA SALON COSMETICS &amp; FRAGR',
+    minStartDate: '2017-11-02'
   },
   ULVRGBGBX: {
-    prefixedName: 'ULVR.GB/GBX',
-    description: 'Unilever PLC'
+    name: 'ULVR.GB/GBX',
+    description: 'Unilever PLC',
+    minStartDate: '2016-07-06'
   },
   UMIBEEUR: {
-    prefixedName: 'UMI.BE/EUR',
-    description: 'Umicore SA'
+    name: 'UMI.BE/EUR',
+    description: 'Umicore SA',
+    minStartDate: '2016-11-07'
   },
   UNANLEUR: {
-    prefixedName: 'UNA.NL/EUR',
-    description: 'Unilever NV'
+    name: 'UNA.NL/EUR',
+    description: 'Unilever NV',
+    minStartDate: '2016-11-14'
   },
   UNHUSUSD: {
-    prefixedName: 'UNH.US/USD',
-    description: 'UNITEDHEALTH GROUP INC'
+    name: 'UNH.US/USD',
+    description: 'UNITEDHEALTH GROUP INC',
+    minStartDate: '2017-11-02'
   },
   UNPUSUSD: {
-    prefixedName: 'UNP.US/USD',
-    description: 'UNION PACIFIC CORP'
+    name: 'UNP.US/USD',
+    description: 'UNION PACIFIC CORP',
+    minStartDate: '2017-11-15'
   },
   UPSUSUSD: {
-    prefixedName: 'UPS.US/USD',
-    description: 'UNITED PARCEL SERVICE-CL B'
+    name: 'UPS.US/USD',
+    description: 'UNITED PARCEL SERVICE-CL B',
+    minStartDate: '2017-11-15'
   },
   USBUSUSD: {
-    prefixedName: 'USB.US/USD',
-    description: 'US BANCORP'
+    name: 'USB.US/USD',
+    description: 'US BANCORP',
+    minStartDate: '2017-11-15'
   },
   USDCAD: {
-    prefixedName: 'USD/CAD',
-    description: 'US Dollar vs Canadian Dollar'
+    name: 'USD/CAD',
+    description: 'US Dollar vs Canadian Dollar',
+    minStartDate: '2003-08-03'
   },
   USDCHF: {
-    prefixedName: 'USD/CHF',
-    description: 'US Dollar vs Swiss Franc'
+    name: 'USD/CHF',
+    description: 'US Dollar vs Swiss Franc',
+    minStartDate: '2003-05-04'
   },
   USDCNH: {
-    prefixedName: 'USD/CNH',
-    description: 'US Dollar vs Offshore Chinese Renminbi'
+    name: 'USD/CNH',
+    description: 'US Dollar vs Offshore Chinese Renminbi',
+    minStartDate: '2012-06-27'
   },
   USDCZK: {
-    prefixedName: 'USD/CZK',
-    description: 'US Dollar vs Czech Koruna'
+    name: 'USD/CZK',
+    description: 'US Dollar vs Czech Koruna',
+    minStartDate: '2016-01-03'
   },
   USDDKK: {
-    prefixedName: 'USD/DKK',
-    description: 'US Dollar vs Danish Krone'
+    name: 'USD/DKK',
+    description: 'US Dollar vs Danish Krone',
+    minStartDate: '2003-08-04'
   },
   USDHKD: {
-    prefixedName: 'USD/HKD',
-    description: 'US Dollar vs Hong Kong Dollar'
+    name: 'USD/HKD',
+    description: 'US Dollar vs Hong Kong Dollar',
+    minStartDate: '2007-03-13'
   },
   USDHUF: {
-    prefixedName: 'USD/HUF',
-    description: 'US Dollar vs Hungarian Forint'
+    name: 'USD/HUF',
+    description: 'US Dollar vs Hungarian Forint',
+    minStartDate: '2007-03-13'
   },
   USDILS: {
-    prefixedName: 'USD/ILS',
-    description: 'US Dollar vs Israeli Shekel'
+    name: 'USD/ILS',
+    description: 'US Dollar vs Israeli Shekel',
+    minStartDate: '2016-12-15'
   },
   USDJPY: {
-    prefixedName: 'USD/JPY',
-    description: 'US Dollar vs Japanese Yen'
+    name: 'USD/JPY',
+    description: 'US Dollar vs Japanese Yen',
+    minStartDate: '2003-05-04'
   },
   USDMXN: {
-    prefixedName: 'USD/MXN',
-    description: 'US Dollar vs Mexican Peso'
+    name: 'USD/MXN',
+    description: 'US Dollar vs Mexican Peso',
+    minStartDate: '2007-03-13'
   },
   USDNOK: {
-    prefixedName: 'USD/NOK',
-    description: 'US Dollar vs Norwegian Krone'
+    name: 'USD/NOK',
+    description: 'US Dollar vs Norwegian Krone',
+    minStartDate: '2003-08-04'
   },
   USDPLN: {
-    prefixedName: 'USD/PLN',
-    description: 'US Dollar vs Polish Zloty'
+    name: 'USD/PLN',
+    description: 'US Dollar vs Polish Zloty',
+    minStartDate: '2007-03-13'
   },
   USDRON: {
-    prefixedName: 'USD/RON',
-    description: 'US Dollar vs Romanian Leu'
+    name: 'USD/RON',
+    description: 'US Dollar vs Romanian Leu',
+    minStartDate: '2016-12-18'
   },
   USDRUB: {
-    prefixedName: 'USD/RUB',
-    description: 'US Dollar vs Russian Ruble'
+    name: 'USD/RUB',
+    description: 'US Dollar vs Russian Ruble',
+    minStartDate: '2007-03-13'
   },
   USDSEK: {
-    prefixedName: 'USD/SEK',
-    description: 'US Dollar vs Swedish Krona'
+    name: 'USD/SEK',
+    description: 'US Dollar vs Swedish Krona',
+    minStartDate: '2003-08-04'
   },
   USDSGD: {
-    prefixedName: 'USD/SGD',
-    description: 'US Dollar vs Singapore Dollar'
+    name: 'USD/SGD',
+    description: 'US Dollar vs Singapore Dollar',
+    minStartDate: '2004-11-16'
   },
   USDTHB: {
-    prefixedName: 'USD/THB',
-    description: 'US Dollar vs Thai Baht'
+    name: 'USD/THB',
+    description: 'US Dollar vs Thai Baht',
+    minStartDate: '2017-02-13'
   },
   USDTRY: {
-    prefixedName: 'USD/TRY',
-    description: 'US Dollar vs Turkish Lira'
+    name: 'USD/TRY',
+    description: 'US Dollar vs Turkish Lira',
+    minStartDate: '2007-03-13'
   },
   USDZAR: {
-    prefixedName: 'USD/ZAR',
-    description: 'US Dollar vs South African Rand'
+    name: 'USD/ZAR',
+    description: 'US Dollar vs South African Rand',
+    minStartDate: '1997-10-13'
   },
   USOUSUSD: {
-    prefixedName: 'USO.US/USD',
-    description: 'United States Oil'
+    name: 'USO.US/USD',
+    description: 'United States Oil',
+    minStartDate: '2017-01-26'
   },
   UTXUSUSD: {
-    prefixedName: 'UTX.US/USD',
-    description: 'UNITED TECHNOLOGIES CORP'
+    name: 'UTX.US/USD',
+    description: 'UNITED TECHNOLOGIES CORP',
+    minStartDate: '2017-11-15'
   },
   UUGBGBX: {
-    prefixedName: 'UU.GB/GBX',
-    description: 'United Utilities Group PLC'
+    name: 'UU.GB/GBX',
+    description: 'United Utilities Group PLC',
+    minStartDate: '2016-07-08'
   },
   VUSUSD: {
-    prefixedName: 'V.US/USD',
-    description: 'VISA INC-CLASS A SHARES'
+    name: 'V.US/USD',
+    description: 'VISA INC-CLASS A SHARES',
+    minStartDate: '2017-01-19'
   },
   VALEUSUSD: {
-    prefixedName: 'VALE.US/USD',
-    description: 'Vale S.A.'
+    name: 'VALE.US/USD',
+    description: 'Vale S.A.',
+    minStartDate: '2017-01-26'
   },
   VEAUSUSD: {
-    prefixedName: 'VEA.US/USD',
-    description: 'Vanguard FTSE Developed Markets ETF'
+    name: 'VEA.US/USD',
+    description: 'Vanguard FTSE Developed Markets ETF',
+    minStartDate: '2017-11-15'
   },
   VFCUSUSD: {
-    prefixedName: 'VFC.US/USD',
-    description: 'VF CORP'
+    name: 'VFC.US/USD',
+    description: 'VF CORP',
+    minStartDate: '2018-02-01'
   },
   VGKUSUSD: {
-    prefixedName: 'VGK.US/USD',
-    description: 'Vanguard FTSE Europe ETF'
+    name: 'VGK.US/USD',
+    description: 'Vanguard FTSE Europe ETF',
+    minStartDate: '2018-02-01'
   },
   VIABUSUSD: {
-    prefixedName: 'VIAB.US/USD',
-    description: 'VIACOM INC-CLASS B'
+    name: 'VIAB.US/USD',
+    description: 'VIACOM INC-CLASS B',
+    minStartDate: '2018-02-01'
   },
   VIEFREUR: {
-    prefixedName: 'VIE.FR/EUR',
-    description: 'Veolia Environnement SA'
+    name: 'VIE.FR/EUR',
+    description: 'Veolia Environnement SA',
+    minStartDate: '2016-08-05'
   },
   VIVFREUR: {
-    prefixedName: 'VIV.FR/EUR',
-    description: 'Vivendi SA'
+    name: 'VIV.FR/EUR',
+    description: 'Vivendi SA',
+    minStartDate: '2016-08-05'
   },
   VKFREUR: {
-    prefixedName: 'VK.FR/EUR',
-    description: 'Vallourec SA'
+    name: 'VK.FR/EUR',
+    description: 'Vallourec SA',
+    minStartDate: '2016-08-05'
   },
   VLOUSUSD: {
-    prefixedName: 'VLO.US/USD',
-    description: 'VALERO ENERGY CORP'
+    name: 'VLO.US/USD',
+    description: 'VALERO ENERGY CORP',
+    minStartDate: '2017-11-15'
   },
   VMCUSUSD: {
-    prefixedName: 'VMC.US/USD',
-    description: 'VULCAN MATERIALS CO'
+    name: 'VMC.US/USD',
+    description: 'VULCAN MATERIALS CO',
+    minStartDate: '2018-02-01'
   },
   VNADEEUR: {
-    prefixedName: 'VNA.DE/EUR',
-    description: 'Vonovia SE'
+    name: 'VNA.DE/EUR',
+    description: 'Vonovia SE',
+    minStartDate: '2015-04-14'
   },
   VNQUSUSD: {
-    prefixedName: 'VNQ.US/USD',
-    description: 'Vanguard REIT ETF'
+    name: 'VNQ.US/USD',
+    description: 'Vanguard REIT ETF',
+    minStartDate: '2017-11-15'
   },
   VODGBGBX: {
-    prefixedName: 'VOD.GB/GBX',
-    description: 'Vodafone Group PLC'
+    name: 'VOD.GB/GBX',
+    description: 'Vodafone Group PLC',
+    minStartDate: '2016-07-07'
   },
   VOEATEUR: {
-    prefixedName: 'VOE.AT/EUR',
-    description: 'Voestalpine AG'
+    name: 'VOE.AT/EUR',
+    description: 'Voestalpine AG',
+    minStartDate: '2016-11-04'
   },
   VOLVBSESEK: {
-    prefixedName: 'VOLVB.SE/SEK',
-    description: 'Volvo AB'
+    name: 'VOLVB.SE/SEK',
+    description: 'Volvo AB',
+    minStartDate: '2016-11-07'
   },
   VOW3DEEUR: {
-    prefixedName: 'VOW3.DE/EUR',
-    description: 'Volkswagen AG'
+    name: 'VOW3.DE/EUR',
+    description: 'Volkswagen AG',
+    minStartDate: '2015-04-14'
   },
   VPKNLEUR: {
-    prefixedName: 'VPK.NL/EUR',
-    description: 'Koninklijke Vopak NV'
+    name: 'VPK.NL/EUR',
+    description: 'Koninklijke Vopak NV',
+    minStartDate: '2016-11-14'
   },
   VRTXUSUSD: {
-    prefixedName: 'VRTX.US/USD',
-    description: 'VERTEX PHARMACEUTICALS INC'
+    name: 'VRTX.US/USD',
+    description: 'VERTEX PHARMACEUTICALS INC',
+    minStartDate: '2017-11-15'
   },
   VWSDKDKK: {
-    prefixedName: 'VWS.DK/DKK',
-    description: 'Vestas Wind Systems A/S'
+    name: 'VWS.DK/DKK',
+    description: 'Vestas Wind Systems A/S',
+    minStartDate: '2016-11-07'
   },
   VXXUSUSD: {
-    prefixedName: 'VXX.US/USD',
-    description: 'iPath S&amp;P 500 VIX ST Futures ETN'
+    name: 'VXX.US/USD',
+    description: 'iPath S&amp;P 500 VIX ST Futures ETN',
+    minStartDate: '2017-01-26'
   },
   VZUSUSD: {
-    prefixedName: 'VZ.US/USD',
-    description: 'VERIZON COMMUNICATIONS INC'
+    name: 'VZ.US/USD',
+    description: 'VERIZON COMMUNICATIONS INC',
+    minStartDate: '2017-11-15'
   },
   WBAUSUSD: {
-    prefixedName: 'WBA.US/USD',
-    description: 'WALGREENS BOOTS ALLIANCE INC'
+    name: 'WBA.US/USD',
+    description: 'WALGREENS BOOTS ALLIANCE INC',
+    minStartDate: '2017-11-15'
   },
   WDCUSUSD: {
-    prefixedName: 'WDC.US/USD',
-    description: 'WESTERN DIGITAL CORP'
+    name: 'WDC.US/USD',
+    description: 'WESTERN DIGITAL CORP',
+    minStartDate: '2017-11-15'
   },
   WEIRGBGBX: {
-    prefixedName: 'WEIR.GB/GBX',
-    description: 'Weir Group PLC/The'
+    name: 'WEIR.GB/GBX',
+    description: 'Weir Group PLC/The',
+    minStartDate: '2016-07-08'
   },
   WFCUSUSD: {
-    prefixedName: 'WFC.US/USD',
-    description: 'WELLS FARGO &amp; CO'
+    name: 'WFC.US/USD',
+    description: 'WELLS FARGO &amp; CO',
+    minStartDate: '2017-01-23'
   },
   WHRUSUSD: {
-    prefixedName: 'WHR.US/USD',
-    description: 'WHIRLPOOL CORP'
+    name: 'WHR.US/USD',
+    description: 'WHIRLPOOL CORP',
+    minStartDate: '2018-02-01'
   },
   WKLNLEUR: {
-    prefixedName: 'WKL.NL/EUR',
-    description: 'Wolters Kluwer NV'
+    name: 'WKL.NL/EUR',
+    description: 'Wolters Kluwer NV',
+    minStartDate: '2016-11-14'
   },
   WMTUSUSD: {
-    prefixedName: 'WMT.US/USD',
-    description: 'WAL-MART STORES INC'
+    name: 'WMT.US/USD',
+    description: 'WAL-MART STORES INC',
+    minStartDate: '2017-11-15'
   },
   WOSGBGBX: {
-    prefixedName: 'WOS.GB/GBX',
-    description: 'Wolseley PLC'
+    name: 'WOS.GB/GBX',
+    description: 'Wolseley PLC',
+    minStartDate: '2016-07-06'
   },
   WPPGBGBX: {
-    prefixedName: 'WPP.GB/GBX',
-    description: 'WPP PLC'
+    name: 'WPP.GB/GBX',
+    description: 'WPP PLC',
+    minStartDate: '2016-07-08'
   },
   WTBGBGBX: {
-    prefixedName: 'WTB.GB/GBX',
-    description: 'Whitbread PLC'
+    name: 'WTB.GB/GBX',
+    description: 'Whitbread PLC',
+    minStartDate: '2016-07-06'
   },
   WYNNUSUSD: {
-    prefixedName: 'WYNN.US/USD',
-    description: 'WYNN RESORTS LTD'
+    name: 'WYNN.US/USD',
+    description: 'WYNN RESORTS LTD',
+    minStartDate: '2017-11-15'
   },
   XUSUSD: {
-    prefixedName: 'X.US/USD',
-    description: 'UNITED STATES STEEL CORP'
+    name: 'X.US/USD',
+    description: 'UNITED STATES STEEL CORP',
+    minStartDate: '2017-11-15'
   },
   XAGUSD: {
-    prefixedName: 'XAG/USD',
-    description: 'Spot silver'
+    name: 'XAG/USD',
+    description: 'Spot silver',
+    minStartDate: '1997-08-13'
   },
   XAUUSD: {
-    prefixedName: 'XAU/USD',
-    description: 'Spot gold'
+    name: 'XAU/USD',
+    description: 'Spot gold',
+    minStartDate: '1999-09-01'
   },
   XLEUSUSD: {
-    prefixedName: 'XLE.US/USD',
-    description: 'Energy Select Sector SPDR Fund'
+    name: 'XLE.US/USD',
+    description: 'Energy Select Sector SPDR Fund',
+    minStartDate: '2017-11-15'
   },
   XLFUSUSD: {
-    prefixedName: 'XLF.US/USD',
-    description: 'Financial Select Sector SPDR Fund'
+    name: 'XLF.US/USD',
+    description: 'Financial Select Sector SPDR Fund',
+    minStartDate: '2017-01-23'
   },
   XLIUSUSD: {
-    prefixedName: 'XLI.US/USD',
-    description: 'Industrial Select Sector SPDR Fund'
+    name: 'XLI.US/USD',
+    description: 'Industrial Select Sector SPDR Fund',
+    minStartDate: '2017-01-23'
   },
   XLKUSUSD: {
-    prefixedName: 'XLK.US/USD',
-    description: 'Technology Select Sector SPDR Fund'
+    name: 'XLK.US/USD',
+    description: 'Technology Select Sector SPDR Fund',
+    minStartDate: '2017-11-15'
   },
   XLNXUSUSD: {
-    prefixedName: 'XLNX.US/USD',
-    description: 'XILINX INC'
+    name: 'XLNX.US/USD',
+    description: 'XILINX INC',
+    minStartDate: '2018-02-01'
   },
   XLPUSUSD: {
-    prefixedName: 'XLP.US/USD',
-    description: 'Consumer Staples Select Sector SPDR Fund'
+    name: 'XLP.US/USD',
+    description: 'Consumer Staples Select Sector SPDR Fund',
+    minStartDate: '2017-01-23'
   },
   XLUUSUSD: {
-    prefixedName: 'XLU.US/USD',
-    description: 'Utilities Select Sector SPDR Fund'
+    name: 'XLU.US/USD',
+    description: 'Utilities Select Sector SPDR Fund',
+    minStartDate: '2017-11-15'
   },
   XLVUSUSD: {
-    prefixedName: 'XLV.US/USD',
-    description: 'Health Care Select Sector SPDR Fund'
+    name: 'XLV.US/USD',
+    description: 'Health Care Select Sector SPDR Fund',
+    minStartDate: '2017-11-15'
   },
   XLYUSUSD: {
-    prefixedName: 'XLY.US/USD',
-    description: 'Consumer Discretionary Select Sector SPDR Fund'
+    name: 'XLY.US/USD',
+    description: 'Consumer Discretionary Select Sector SPDR Fund',
+    minStartDate: '2017-11-15'
   },
   XOMUSUSD: {
-    prefixedName: 'XOM.US/USD',
-    description: 'EXXON MOBIL CORP'
+    name: 'XOM.US/USD',
+    description: 'EXXON MOBIL CORP',
+    minStartDate: '2017-01-19'
   },
   XOPUSUSD: {
-    prefixedName: 'XOP.US/USD',
-    description: 'SPDR S&amp;P Oil &amp; Gas Explor &amp; Prodtn ETF'
+    name: 'XOP.US/USD',
+    description: 'SPDR S&amp;P Oil &amp; Gas Explor &amp; Prodtn ETF',
+    minStartDate: '2017-01-26'
   },
   YUMUSUSD: {
-    prefixedName: 'YUM.US/USD',
-    description: 'YUM! BRANDS INC'
+    name: 'YUM.US/USD',
+    description: 'YUM! BRANDS INC',
+    minStartDate: '2018-02-01'
   },
   ZARJPY: {
-    prefixedName: 'ZAR/JPY',
-    description: 'South African Rand vs Japanese Yen'
+    name: 'ZAR/JPY',
+    description: 'South African Rand vs Japanese Yen',
+    minStartDate: '1999-03-03'
   },
   ZBHUSUSD: {
-    prefixedName: 'ZBH.US/USD',
-    description: 'ZIMMER BIOMET HOLDINGS INC'
+    name: 'ZBH.US/USD',
+    description: 'ZIMMER BIOMET HOLDINGS INC',
+    minStartDate: '2018-02-01'
   }
 };
 
 export { symbols };
-
-const r = [...document.querySelectorAll('[data-instrument]')]
-  .map(n =>
-    n
-      .getElementsByTagName('div')[0]
-      .innerHTML.match(/<strong>(.+)<\/strong>(.+)/i)
-  )
-  .map(([_, symbol, text]) => [symbol, text])
-  .reduce((all, [symbol, text]) => {
-    const cleanSymbol = symbol.replace(/\W/gi, '');
-
-    all[cleanSymbol] = {
-      prefixedName: symbol,
-      description: text
-    };
-
-    return all;
-  }, {});

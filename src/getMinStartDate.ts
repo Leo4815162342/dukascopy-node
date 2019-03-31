@@ -1,5 +1,4 @@
 import fetch from 'node-fetch';
-import { symbols } from './symbols';
 
 interface GetFileUrlInput {
   symbol: string;
@@ -8,23 +7,8 @@ interface GetFileUrlInput {
   day: number;
 }
 
-//2016/08/30 - min date ACAFREUR
-// https://datafeed.dukascopy.com/datafeed/ACAFREUR/2016/08/29/BID_candles_min_1.bi5
-
-// 'https://datafeed.dukascopy.com/datafeed/ACAFREUR/2019/02/20/BID_candles_min_1.bi5'
-
 const API_ROOT = 'https://datafeed.dukascopy.com/datafeed';
 const FILE_NAME = 'ASK_candles_min_1.bi5';
-
-(async () => {
-  try {
-    const minDate = await getMinStartDate('EURUSD');
-
-    console.log(minDate);
-  } catch (error) {
-    console.log(error);
-  }
-})();
 
 function pad(num: number): string {
   return num < 10 ? `0${num}` : `${num}`;
@@ -51,6 +35,7 @@ function getDateString(timestamp: number) {
 }
 
 async function getMinStartDate(symbol: string) {
+  console.log(`Fetching start date: ${symbol}`);
   let start = +new Date('1970-01-01');
   let end = +new Date().setHours(0, 0, 0, 0);
 
@@ -82,6 +67,11 @@ async function getMinStartDate(symbol: string) {
       }
     }
   }
-
+  console.log(
+    `Finished fetching start date: ${symbol} : ${getDateString(minDate)}`
+  );
+  console.log(`===============`);
   return getDateString(minDate);
 }
+
+export { getMinStartDate };
