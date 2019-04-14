@@ -58,24 +58,24 @@ function parseCandleBin(candledata, inarray) {
 
 (async () => {
   try {
-    const file = await readFile(FILE4);
+    const file = await readFile(FILE3);
 
-    // const data = lzma.decompressFile(file);
-    const data = await lzmaNative.decompress('6î_Àh&_¼ù¬ê`_À_ÀVÃ');
+    const data = lzma.decompressFile(file);
+    // const data = await lzmaNative.decompress('6î_Àh&_¼ù¬ê`_À_ÀVÃ');
 
     const format = '>5i1f'; // 1 min
     // const format = '>3i2f'; // tick
-    // const step = struct.sizeOf(format);
+    const step = struct.sizeOf(format);
 
-    // const result = [];
+    const result = [];
 
-    // for (let i = 0, n = data.length; i < n; i += step) {
-    //   const chunk = data.slice(i, i + step);
-    //   const unpacked = struct.unpack(format, chunk);
-    //   result.push(unpacked);
-    // }
+    for (let i = 0, n = data.length; i < n; i += step) {
+      const chunk = data.slice(i, i + step);
+      const unpacked = struct.unpack(format, chunk);
+      result.push(unpacked);
+    }
 
-    // console.log(result);
+    console.log(result);
   } catch (error) {
     console.log(error);
   }
