@@ -6,8 +6,8 @@ import { priceTypes } from './priceTypes';
 export interface HistoryConfig {
   symbol: keyof typeof symbols;
   dates: {
-    start: string;
-    end: string;
+    start: Date;
+    end: Date;
   };
   timeframe: keyof typeof timeframes;
   priceType?: keyof typeof priceTypes;

@@ -7,9 +7,9 @@ import { validateGmtOffset } from './validateGmtOffset';
 import { validatePriceType } from './validatePriceType';
 import { validateTimeframe } from './validateTimeframe';
 
-import commonValidatorsMap from './validateCommon';
+import commonValidators from './validateCommon';
 
-const { required, isBoolean, isString, isNumber } = commonValidatorsMap;
+const { required, isBoolean, isString, isNumber } = commonValidators;
 
 type HistoryConfigKey = keyof HistoryConfig;
 type KeyValidators = ((value: any) => ValidationStatus)[];
@@ -72,10 +72,10 @@ function validateConfig(config: HistoryConfig) {
 const testConfig = {
   symbol: 'eurusd',
   dates: {
-    start: '2019-01-22',
-    end: '2019-02-22'
+    start: new Date('2019-03-01'),
+    end: new Date('2019-03-05')
   },
-  timeframe: '',
+  timeframe: 'tick',
   priceType: 'avg',
   gmtOffset: 60,
   includeVolume: true

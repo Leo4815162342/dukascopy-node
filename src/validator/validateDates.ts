@@ -3,10 +3,6 @@ import isValid from 'date-fns/isValid';
 import { HistoryConfig } from '../types';
 import { ValidationStatus } from './types';
 
-function isStrDateValid(date: string) {
-  return isValid(parseISO(date));
-}
-
 function isEndDateAfterStartDate(start: Date, end: Date) {
   return end > start;
 }
@@ -26,29 +22,28 @@ function validateDates(dates: HistoryConfig['dates']) {
 
   const { start, end } = dates;
 
-  [start, end].forEach((strDate, i) => {
-    if (!isStrDateValid(strDate)) {
-      status.isValid = false;
-      status.validationErrors.push(
-        `${i ? 'End' : 'Start'} date ${strDate || ''} is not a valid date`
-      );
-    }
-  });
+  if (!isValid(start)) {
+    status.isValid = false;
+    status.validationErrors.push(`Start date is not a valid date`);
+  }
+
+  if (!isValid(end)) {
+    status.isValid = false;
+    status.validationErrors.push(`End date is not a valid date`);
+  }
 
   if (!status.isValid) {
     return status;
   }
 
-  const [startDate, endDate] = [start, end].map(d => new Date(d));
-
-  if (!isEndDateAfterStartDate(startDate, endDate)) {
+  if (!isEndDateAfterStartDate(start, end)) {
     status.isValid = false;
-    status.validationErrors.push(`End date ${end} should be after start date ${start}`);
+    status.validationErrors.push(`End date should be after start date`);
   }
 
-  if (!areDatesInPast(startDate, endDate)) {
+  if (!areDatesInPast(start, end)) {
     status.isValid = false;
-    status.validationErrors.push(`Start ${start} and end date ${end} should be in past`);
+    status.validationErrors.push(`Start and end date should be in past`);
   }
 
   return status;

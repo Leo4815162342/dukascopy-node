@@ -23,11 +23,11 @@ function createValidator(check: (arg: any) => boolean, errorMessage: string) {
   };
 }
 
-const commonValidatorsMap = {
+const commonValidators = {
   required: createValidator(required, 'value is missing'),
   isString: createValidator(isString, 'value has to be a string'),
   isNumber: createValidator(isNumber, 'value has to be a number'),
   isBoolean: createValidator(isBoolean, 'value has to be a boolean')
 };
 
-export default commonValidatorsMap;
+export default commonValidators;
