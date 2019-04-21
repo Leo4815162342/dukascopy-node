@@ -7,7 +7,7 @@ function validateTimeframe(timeframe: HistoryConfig['timeframe']) {
 
   if (!timeframes.hasOwnProperty(timeframe)) {
     status.isValid = false;
-    status.validationErrors.push(`Time frame "${timeframe}" is not supported`);
+    status.validationErrors.push(`Timeframe "${timeframe}" is not supported`);
   }
   return status;
 }

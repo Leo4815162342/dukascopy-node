@@ -6,7 +6,7 @@ function validateGmtOffset(gmtOffset: HistoryConfig['gmtOffset']) {
 
   if (gmtOffset < 0) {
     status.isValid = false;
-    status.validationErrors.push(`Gmt offset has to be a positive number`);
+    status.validationErrors.push(`GMT offset has to be a positive number`);
   }
 
   return status;

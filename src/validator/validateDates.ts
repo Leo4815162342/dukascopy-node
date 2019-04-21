@@ -1,4 +1,3 @@
-import parseISO from 'date-fns/parseISO';
 import isValid from 'date-fns/isValid';
 import { HistoryConfig } from '../types';
 import { ValidationStatus } from './types';
@@ -15,9 +14,14 @@ function areDatesInPast(start: Date, end: Date) {
 function validateDates(dates: HistoryConfig['dates']) {
   const status: ValidationStatus = { isValid: true, validationErrors: [] };
 
-  if (!dates.hasOwnProperty('start') || !dates.hasOwnProperty('end')) {
+  if (!dates.hasOwnProperty('start')) {
     status.isValid = false;
-    status.validationErrors.push(`Start and end are missing`);
+    status.validationErrors.push(`Start date is missing`);
+  }
+
+  if (!dates.hasOwnProperty('end')) {
+    status.isValid = false;
+    status.validationErrors.push(`End date is missing`);
   }
 
   const { start, end } = dates;

@@ -12,5 +12,5 @@ export interface HistoryConfig {
   timeframe: keyof typeof timeframes;
   priceType?: keyof typeof priceTypes;
   gmtOffset?: number;
-  includeVolume?: boolean;
+  volumes?: boolean;
 }

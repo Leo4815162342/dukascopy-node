@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": " node ./node_modules/ts-node/dist/bin.js src/validator/index.ts"
+    "test": "./node_modules/mocha/bin/mocha ./node_modules/ts-node/dist/bin.js tests/**/*.ts"
   },
   "author": "",
   "license": "ISC",
@@ -16,8 +16,12 @@
     "python-struct": "^1.0.6"
   },
   "devDependencies": {
+    "@types/chai": "^4.1.7",
     "@types/lzma-native": "^4.0.0",
+    "@types/mocha": "^5.2.6",
     "@types/node-fetch": "^2.1.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.3",
     "ts-node": "^8.0.3"
   }
 }

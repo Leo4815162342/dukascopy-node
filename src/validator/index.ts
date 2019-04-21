@@ -18,7 +18,7 @@ type ValidatorMap = { [key in keyof HistoryConfig]: KeyValidators };
 
 interface ConfigValidationStatus {
   isValid: boolean;
-  validationErrors: { [key in keyof HistoryConfig]?: string[] };
+  validationErrors: { [key in keyof HistoryConfig | 'general']?: string[] };
 }
 
 const configValidatorMap: ValidatorMap = {
@@ -27,7 +27,7 @@ const configValidatorMap: ValidatorMap = {
   timeframe: [required, isString, validateTimeframe],
   priceType: [required, isString, validatePriceType],
   gmtOffset: [required, isNumber, validateGmtOffset],
-  includeVolume: [required, isBoolean]
+  volumes: [required, isBoolean]
 };
 
 function validateKey(keyValue: any, keyValidators: KeyValidators): ValidationStatus {
@@ -49,6 +49,11 @@ function validateKey(keyValue: any, keyValidators: KeyValidators): ValidationSta
 function validateConfig(config: HistoryConfig) {
   const status: ConfigValidationStatus = { isValid: true, validationErrors: {} };
 
+  if (!config || Object.keys(config).length === 0) {
+    status.isValid = false;
+    status.validationErrors.general = ['Config is empty or not provided'];
+  }
+
   for (const key in config) {
     if (config.hasOwnProperty(key)) {
       const keyValue = config[key as HistoryConfigKey];
@@ -68,19 +73,4 @@ function validateConfig(config: HistoryConfig) {
   return status;
 }
 
-//@ts-ignore
-const testConfig = {
-  symbol: 'eurusd',
-  dates: {
-    start: new Date('2019-03-01'),
-    end: new Date('2019-03-05')
-  },
-  timeframe: 'tick',
-  priceType: 'avg',
-  gmtOffset: 60,
-  includeVolume: true
-};
-//@ts-ignore
-const status = validateConfig(testConfig);
-
-console.log(status);
+export { validateConfig };

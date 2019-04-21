@@ -4,15 +4,15 @@ function required(value: any) {
   return value !== '' && value !== undefined && value !== null;
 }
 
-function isString(value: any) {
+function isString(value: any): value is string {
   return typeof value === 'string';
 }
 
-function isNumber(value: any) {
+function isNumber(value: any): value is number {
   return typeof value === 'number';
 }
 
-function isBoolean(value: any) {
+function isBoolean(value: any): value is boolean {
   return typeof value === 'boolean';
 }
 

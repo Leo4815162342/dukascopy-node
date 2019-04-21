@@ -7,7 +7,7 @@ function validateSymbol(symbol: HistoryConfig['symbol']) {
 
   if (!symbols.hasOwnProperty(symbol)) {
     status.isValid = false;
-    status.validationErrors.push(`Symbol "${symbol}" is not supported`);
+    status.validationErrors.push(`symbol "${symbol}" is not supported`);
   }
   return status;
 }
