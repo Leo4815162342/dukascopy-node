@@ -1,9 +1,9 @@
 import { priceTypes } from '../priceTypes';
 import { HistoryConfig } from '../types';
-import { ValidationStatus } from './types';
+import { KeyValidationStatus } from './types';
 
 function validatePriceType(priceType: HistoryConfig['priceType']) {
-  const status: ValidationStatus = { isValid: true, validationErrors: [] };
+  const status: KeyValidationStatus = { isValid: true, validationErrors: [] };
 
   if (!priceTypes.hasOwnProperty(priceType)) {
     status.isValid = false;

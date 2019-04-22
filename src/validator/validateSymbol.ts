@@ -1,9 +1,9 @@
 import { symbols } from '../symbols';
 import { HistoryConfig } from '../types';
-import { ValidationStatus } from './types';
+import { KeyValidationStatus } from './types';
 
 function validateSymbol(symbol: HistoryConfig['symbol']) {
-  const status: ValidationStatus = { isValid: true, validationErrors: [] };
+  const status: KeyValidationStatus = { isValid: true, validationErrors: [] };
 
   if (!symbols.hasOwnProperty(symbol)) {
     status.isValid = false;

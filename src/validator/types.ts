@@ -1,11 +1,6 @@
 import { HistoryConfig } from './../types';
 
-export interface ValidationStatus {
+export interface KeyValidationStatus {
   isValid: boolean;
   validationErrors: string[];
-}
-
-export interface ValidationCheck {
-  check: (args: Partial<HistoryConfig>) => boolean;
-  invalidMessage: (args: Partial<HistoryConfig>) => string;
 }

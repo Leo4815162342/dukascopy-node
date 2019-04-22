@@ -1,5 +1,5 @@
 import { HistoryConfig } from './../types';
-import { ValidationStatus } from './types';
+import { KeyValidationStatus } from './types';
 
 import { validateSymbol } from './validateSymbol';
 import { validateDates } from './validateDates';
@@ -12,13 +12,13 @@ import commonValidators from './validateCommon';
 const { required, isBoolean, isString, isNumber } = commonValidators;
 
 type HistoryConfigKey = keyof HistoryConfig;
-type KeyValidators = ((value: any) => ValidationStatus)[];
+type KeyValidators = ((value: any) => KeyValidationStatus)[];
 
 type ValidatorMap = { [key in keyof HistoryConfig]: KeyValidators };
 
 interface ConfigValidationStatus {
   isValid: boolean;
-  validationErrors: { [key in keyof HistoryConfig | 'general']?: string[] };
+  validationErrors: { [key in keyof HistoryConfig]?: string[] };
 }
 
 const configValidatorMap: ValidatorMap = {
@@ -30,7 +30,7 @@ const configValidatorMap: ValidatorMap = {
   volumes: [required, isBoolean]
 };
 
-function validateKey(keyValue: any, keyValidators: KeyValidators): ValidationStatus {
+function validateKey(keyValue: any, keyValidators: KeyValidators): KeyValidationStatus {
   const validationStatus = keyValidators.reduce(
     (status, validator) => {
       const { isValid, validationErrors } = validator(keyValue);
@@ -40,7 +40,7 @@ function validateKey(keyValue: any, keyValidators: KeyValidators): ValidationSta
       }
       return status;
     },
-    { isValid: true, validationErrors: [] }
+    <KeyValidationStatus>{ isValid: true, validationErrors: [] }
   );
 
   return validationStatus;
@@ -49,12 +49,7 @@ function validateKey(keyValue: any, keyValidators: KeyValidators): ValidationSta
 function validateConfig(config: HistoryConfig) {
   const status: ConfigValidationStatus = { isValid: true, validationErrors: {} };
 
-  if (!config || Object.keys(config).length === 0) {
-    status.isValid = false;
-    status.validationErrors.general = ['Config is empty or not provided'];
-  }
-
-  for (const key in config) {
+  for (const key in configValidatorMap) {
     if (config.hasOwnProperty(key)) {
       const keyValue = config[key as HistoryConfigKey];
       const keyValidators = configValidatorMap[key as HistoryConfigKey];
@@ -67,6 +62,9 @@ function validateConfig(config: HistoryConfig) {
         status.isValid = false;
         status.validationErrors[key as HistoryConfigKey] = keyErrors;
       }
+    } else {
+      status.isValid = false;
+      status.validationErrors[key as HistoryConfigKey] = ['key does not exist in search config'];
     }
   }
 

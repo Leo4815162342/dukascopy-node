@@ -1,6 +1,6 @@
 import isValid from 'date-fns/isValid';
 import { HistoryConfig } from '../types';
-import { ValidationStatus } from './types';
+import { KeyValidationStatus } from './types';
 
 function isEndDateAfterStartDate(start: Date, end: Date) {
   return end > start;
@@ -12,7 +12,7 @@ function areDatesInPast(start: Date, end: Date) {
 }
 
 function validateDates(dates: HistoryConfig['dates']) {
-  const status: ValidationStatus = { isValid: true, validationErrors: [] };
+  const status: KeyValidationStatus = { isValid: true, validationErrors: [] };
 
   if (!dates.hasOwnProperty('start')) {
     status.isValid = false;

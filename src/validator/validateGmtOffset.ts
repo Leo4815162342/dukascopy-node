@@ -1,8 +1,8 @@
 import { HistoryConfig } from '../types';
-import { ValidationStatus } from './types';
+import { KeyValidationStatus } from './types';
 
 function validateGmtOffset(gmtOffset: HistoryConfig['gmtOffset']) {
-  const status: ValidationStatus = { isValid: true, validationErrors: [] };
+  const status: KeyValidationStatus = { isValid: true, validationErrors: [] };
 
   if (gmtOffset < 0) {
     status.isValid = false;

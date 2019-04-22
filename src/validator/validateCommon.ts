@@ -1,4 +1,4 @@
-import { ValidationStatus } from './types';
+import { KeyValidationStatus } from './types';
 
 function required(value: any) {
   return value !== '' && value !== undefined && value !== null;
@@ -17,7 +17,7 @@ function isBoolean(value: any): value is boolean {
 }
 
 function createValidator(check: (arg: any) => boolean, errorMessage: string) {
-  return function(value: any): ValidationStatus {
+  return function(value: any): KeyValidationStatus {
     const isValid = check(value);
     return { isValid, validationErrors: isValid ? [] : [errorMessage] };
   };

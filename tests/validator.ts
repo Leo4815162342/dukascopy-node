@@ -22,24 +22,9 @@ beforeEach(() => (searchConfig = { ...{}, ...searchConfigCopy }));
 describe('Config validator', () => {
   describe('General', () => {
     it('should return true with valid object', () => {
-      //@ts-ignore
       const { isValid, validationErrors } = validateConfig(searchConfig);
       expect(isValid).to.be.true;
       expect(validationErrors).to.be.empty;
-    });
-
-    it('should return false if empty object is provided', () => {
-      //@ts-ignore
-      const { isValid, validationErrors } = validateConfig({});
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({ general: ['Config is empty or not provided'] });
-    });
-
-    it('should return false if no config is provided', () => {
-      //@ts-ignore
-      const { isValid, validationErrors } = validateConfig();
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({ general: ['Config is empty or not provided'] });
     });
   });
 
@@ -66,20 +51,38 @@ describe('Config validator', () => {
     it('should return false on symbol as number', () => {
       //@ts-ignore
       searchConfig.symbol = 12345;
-      //@ts-ignore
       const { isValid, validationErrors } = validateConfig(searchConfig);
       expect(isValid).to.be.false;
       expect(validationErrors).to.eql({
         symbol: [`value has to be a string`, `symbol "12345" is not supported`]
       });
     });
+
+    it('should return false when symbol key does not exist', () => {
+      //@ts-ignore
+      delete searchConfig['symbol'];
+      const { isValid, validationErrors } = validateConfig(searchConfig);
+      expect(isValid).to.be.false;
+      expect(validationErrors).to.eql({
+        symbol: [`key does not exist in search config`]
+      });
+    });
   });
 
   describe('Dates', () => {
+    it('should return false when dates key does not exist', () => {
+      //@ts-ignore
+      delete searchConfig['dates'];
+      const { isValid, validationErrors } = validateConfig(searchConfig);
+      expect(isValid).to.be.false;
+      expect(validationErrors).to.eql({
+        dates: [`key does not exist in search config`]
+      });
+    });
+
     it('should return false on empty date object', () => {
       //@ts-ignore
       searchConfig.dates = {};
-      //@ts-ignore
       const { isValid, validationErrors } = validateConfig(searchConfig);
       expect(isValid).to.be.false;
       expect(validationErrors).to.eql({
@@ -109,7 +112,6 @@ describe('Config validator', () => {
         start: new Date('2017-04-09'),
         end: new Date('2017-04-01')
       };
-      //@ts-ignore
       const { isValid, validationErrors } = validateConfig(searchConfig);
       expect(isValid).to.be.false;
       expect(validationErrors).to.eql({
@@ -122,7 +124,6 @@ describe('Config validator', () => {
         start: new Date('2022-04-09'),
         end: new Date('2022-07-01')
       };
-      //@ts-ignore
       const { isValid, validationErrors } = validateConfig(searchConfig);
       expect(isValid).to.be.false;
       expect(validationErrors).to.eql({
@@ -132,6 +133,16 @@ describe('Config validator', () => {
   });
 
   describe('Timeframe', () => {
+    it('should return false when timeframe key does not exist', () => {
+      //@ts-ignore
+      delete searchConfig['timeframe'];
+      const { isValid, validationErrors } = validateConfig(searchConfig);
+      expect(isValid).to.be.false;
+      expect(validationErrors).to.eql({
+        timeframe: [`key does not exist in search config`]
+      });
+    });
+
     it('should return false on empty timeframe', () => {
       //@ts-ignore
       searchConfig.timeframe = '';
@@ -176,6 +187,16 @@ describe('Config validator', () => {
   });
 
   describe('GMT offset', () => {
+    it('should return false when gmtOffset key does not exist', () => {
+      //@ts-ignore
+      delete searchConfig['gmtOffset'];
+      const { isValid, validationErrors } = validateConfig(searchConfig);
+      expect(isValid).to.be.false;
+      expect(validationErrors).to.eql({
+        gmtOffset: [`key does not exist in search config`]
+      });
+    });
+
     it('should return false on empty GMT offset', () => {
       //@ts-ignore
       searchConfig.gmtOffset = '';
@@ -207,6 +228,16 @@ describe('Config validator', () => {
   });
 
   describe('Volumes', () => {
+    it('should return false when volumes key does not exist', () => {
+      //@ts-ignore
+      delete searchConfig['volumes'];
+      const { isValid, validationErrors } = validateConfig(searchConfig);
+      expect(isValid).to.be.false;
+      expect(validationErrors).to.eql({
+        volumes: [`key does not exist in search config`]
+      });
+    });
+
     it('should return false when volumes is missing', () => {
       //@ts-ignore
       searchConfig.volumes = '';
