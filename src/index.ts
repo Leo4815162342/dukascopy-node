@@ -1,6 +1,7 @@
 import { HistoryConfig } from './types';
 
 import fetch from 'node-fetch';
+import { validateConfig } from './validator';
 import { generateRequestData } from './request-generator';
 import { decompress } from './decompress';
 import { normaliseData, getNormaliser } from './normalise';
@@ -28,6 +29,12 @@ async function getDecompressedData(url: string, structFormat: '>3i2f' | '>5i1f')
 }
 
 async function getQuotes(searchConfig: HistoryConfig) {
+  const { isValid, validationErrors } = validateConfig(searchConfig);
+
+  if (!isValid) {
+    throw validationErrors;
+  }
+
   const requestData = generateRequestData(searchConfig);
 
   const quotes = await Promise.all(
