@@ -11,7 +11,7 @@ let searchConfig: HistoryConfig = {
     end: new Date('2019-03-05')
   },
   timeframe: 'tick',
-  priceType: 'avg',
+  priceType: 'bid',
   gmtOffset: 60,
   volumes: true
 };
@@ -214,15 +214,6 @@ describe('Config validator', () => {
       expect(isValid).to.be.false;
       expect(validationErrors).to.eql({
         gmtOffset: ['value has to be a number']
-      });
-    });
-
-    it('should return false on negative GMT offset', () => {
-      searchConfig.gmtOffset = -60;
-      const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
-        gmtOffset: ['GMT offset has to be a positive number']
       });
     });
   });

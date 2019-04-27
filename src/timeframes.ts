@@ -1,11 +1,11 @@
 const timeframes = {
-  tick: 1,
-  '1min': 1,
-  '30min': 1,
-  '1hour': 1,
-  '1day': 1,
-  '1week': 1,
-  '1month': 1
+  tick: 1, // 1 tick
+  m1: 1, // 1 minute
+  m30: 1, // 30 minutes
+  h1: 1, // 1 hour
+  d1: 1, // 1 day
+  w1: 1, // 1 week
+  mn1: 1 // 1 month
 };
 
 export { timeframes };

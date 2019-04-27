@@ -3,12 +3,10 @@ import { KeyValidationStatus } from './types';
 
 import { validateSymbol } from './validateSymbol';
 import { validateDates } from './validateDates';
-import { validateGmtOffset } from './validateGmtOffset';
 import { validatePriceType } from './validatePriceType';
 import { validateTimeframe } from './validateTimeframe';
 
 import commonValidators from './validateCommon';
-
 const { required, isBoolean, isString, isNumber } = commonValidators;
 
 type HistoryConfigKey = keyof HistoryConfig;
@@ -26,7 +24,7 @@ const configValidatorMap: ValidatorMap = {
   dates: [required, validateDates],
   timeframe: [required, isString, validateTimeframe],
   priceType: [required, isString, validatePriceType],
-  gmtOffset: [required, isNumber, validateGmtOffset],
+  gmtOffset: [required, isNumber],
   volumes: [required, isBoolean]
 };
 

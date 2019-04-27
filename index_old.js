@@ -6,7 +6,7 @@ const lzmaNative = require('lzma-native');
 
 const struct = require('python-struct');
 
-const FILE = '00h_ticks.bi5'; // tick
+const FILE = 'GBP_USD_tick.bi5'; // tick
 const FILE2 = 'BID_candles_min_1.bi5'; // 1 min
 const FILE3 = 'BID_candles_day_1.bi5'; //1 day
 const FILE4 = 'HistoryStart_2.bi5';
@@ -58,13 +58,12 @@ function parseCandleBin(candledata, inarray) {
 
 (async () => {
   try {
-    const file = await readFile(FILE3);
+    const file = await readFile(FILE);
 
     const data = lzma.decompressFile(file);
-    // const data = await lzmaNative.decompress('6î_Àh&_¼ù¬ê`_À_ÀVÃ');
 
-    const format = '>5i1f'; // 1 min
-    // const format = '>3i2f'; // tick
+    // const format = '>5i1f'; // 1 min, 1hr
+    const format = '>3i2f'; // tick
     const step = struct.sizeOf(format);
 
     const result = [];
