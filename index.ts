@@ -1,3 +1,3 @@
-import { test } from './src/fetcher';
+import { getQuotes } from './src/index';
 
-export { test };
+export { getQuotes };

@@ -16,35 +16,35 @@ import { symbols } from './symbols';
 // 'https://datafeed.dukascopy.com/datafeed/AALUSUSD/2019/02/BID_candles_hour_1.bi5';
 // 'https://datafeed.dukascopy.com/datafeed/AALUSUSD/2019/02/ASK_candles_hour_1.bi5';
 
-function getStructFormat(timeframe: HistoryConfig['timeframe']) {
-  return timeframe === 'tick' ? '>3i2f' : '>5i1f';
-}
-
-async function getDecompressedData(url: string, structFormat: '>3i2f' | '>5i1f') {
-  const data = await fetch(url);
-  const bufferedData = await data.buffer();
-  const decompressed = decompress(bufferedData, structFormat);
-
-  return decompressed;
-}
+const defaultConfig: Partial<HistoryConfig> = {
+  timeframe: 'm1',
+  priceType: 'bid',
+  gmtOffset: 0,
+  volumes: true
+};
 
 async function getQuotes(searchConfig: HistoryConfig) {
-  const { isValid, validationErrors } = validateConfig(searchConfig);
+  const mergedSearchConfig = { ...defaultConfig, ...searchConfig };
+
+  const { isValid, validationErrors } = validateConfig(mergedSearchConfig);
 
   if (!isValid) {
     throw validationErrors;
   }
 
-  const requestData = generateRequestData(searchConfig);
+  const requestData = generateRequestData(mergedSearchConfig);
 
   const quotes = await Promise.all(
     requestData.map(async ({ timestamp, url }) => {
       console.log('START', url);
-      const structFormat = getStructFormat(searchConfig.timeframe);
-      const decompressedData = await getDecompressedData(url, structFormat);
+      const data = await fetch(url);
+      const bufferedData = await data.buffer();
       console.log('END', url);
-      const normalizer = getNormaliser(searchConfig.timeframe, timestamp, 100000, true);
+      const decompressedData = decompress(bufferedData, mergedSearchConfig.timeframe);
+      const normalizer = getNormaliser(mergedSearchConfig.timeframe, timestamp, 100000, true);
       const normalizedData = normaliseData(decompressedData, normalizer);
+
+      // const aggregatedDate // TODO: aggregation logic
 
       return normalizedData;
     })
@@ -55,19 +55,13 @@ async function getQuotes(searchConfig: HistoryConfig) {
 
 (async () => {
   try {
-    let searchConfig: HistoryConfig = {
+    const config: HistoryConfig = {
       symbol: 'eurusd',
-      dates: {
-        start: new Date('2019-03-21'),
-        end: new Date('2019-03-22')
-      },
-      timeframe: 'm1',
-      priceType: 'bid',
-      gmtOffset: 0,
-      volumes: true
+      dates: { start: new Date('2019-03-18'), end: new Date('2019-03-22') },
+      timeframe: 'h1',
+      volumes: false
     };
-
-    const quotes = await getQuotes(searchConfig);
+    const quotes = await getQuotes(config);
 
     console.log(quotes);
   } catch (error) {

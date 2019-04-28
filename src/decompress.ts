@@ -1,10 +1,18 @@
+import { HistoryConfig } from './types';
+
 const lzma = require('lzma-purejs');
 const struct = require('python-struct');
 
-function decompress(buffer: Buffer, format: '>3i2f' | '>5i1f') {
+type StructFormat = '>3i2f' | '>5i1f';
+
+function getStructFormat(timeframe: HistoryConfig['timeframe']): StructFormat {
+  return timeframe === 'tick' ? '>3i2f' : '>5i1f';
+}
+
+function decompress(buffer: Buffer, timeframe: HistoryConfig['timeframe']) {
+  const format = getStructFormat(timeframe);
   const decompressedData = lzma.decompressFile(buffer);
 
-  //   const format = timeframe === 'tick' ? '>3i2f' : '>5i1f';
   const step = struct.sizeOf(format);
 
   const result = [];
