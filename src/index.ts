@@ -34,36 +34,42 @@ async function getQuotes(searchConfig: HistoryConfig) {
 
   const requestData = generateRequestData(mergedSearchConfig);
 
-  const quotes = await Promise.all(
-    requestData.map(async ({ timestamp, url }) => {
-      console.log('START', url);
-      const data = await fetch(url);
-      const bufferedData = await data.buffer();
-      console.log('END', url);
-      const decompressedData = decompress(bufferedData, mergedSearchConfig.timeframe);
-      const normalizer = getNormaliser(mergedSearchConfig.timeframe, timestamp, 100000, true);
-      const normalizedData = normaliseData(decompressedData, normalizer);
+  console.log(requestData);
 
-      // const aggregatedDate // TODO: aggregation logic
+  // const quotes = await Promise.all(
+  //   requestData.map(async ({ timestamp, url }) => {
+  //     console.log('START', url);
+  //     const data = await fetch(url);
+  //     const bufferedData = await data.buffer();
+  //     console.log('END', url);
+  //     const decompressedData = decompress(bufferedData, mergedSearchConfig.timeframe);
+  //     const normalizer = getNormaliser(mergedSearchConfig.timeframe, timestamp, 100000, true); // TODO: use real decimal factor
+  //     const normalizedData = normaliseData(decompressedData, normalizer);
 
-      return normalizedData;
-    })
-  );
+  //     return normalizedData;
+  //   })
+  // );
 
-  return quotes;
+  // const sorted = quotes.sort((a, b) => a[0][0] - b[0][0]);
+  // const merged = [].concat(...sorted);
+
+  // const aggregatedDate // TODO: aggregation logic
+
+  // return merged;
 }
 
 (async () => {
   try {
     const config: HistoryConfig = {
       symbol: 'eurusd',
-      dates: { start: new Date('2019-03-18'), end: new Date('2019-03-22') },
-      timeframe: 'h1',
+      dates: { start: new Date('2018-03-25'), end: new Date('2018-03-28') },
+      timeframe: 'tick',
       volumes: false
     };
     const quotes = await getQuotes(config);
-
-    console.log(quotes);
+    // console.log(quotes);
+    // console.log(quotes[0][0]);
+    // console.log(quotes[quotes.length - 1][0]);
   } catch (error) {
     console.log(error);
   }
