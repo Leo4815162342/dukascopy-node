@@ -1,10 +1,11 @@
 import { HistoryConfig } from './../types';
 import { RequestObject, EndopointToFilePeriodMap } from './types';
 
-import { addMinutes } from 'date-fns';
+import addMinutes from 'date-fns/addMinutes';
+import parseISO from 'date-fns/parseISO';
 import { getStarOfUtc } from './../utils';
 
-import getRequestObject from './get-request-object';
+import getUrl from './get-request-object';
 import getEndpointType from './get-endpoint-type';
 
 const endopointToFilePeriodMap: EndopointToFilePeriodMap = {
@@ -12,6 +13,12 @@ const endopointToFilePeriodMap: EndopointToFilePeriodMap = {
   min: 'day',
   hour: 'month'
 };
+
+function normalizedDateInput(date: string): Date {
+  const parsedDate = parseISO(date);
+
+  return addMinutes(parsedDate, -parsedDate.getTimezoneOffset());
+}
 
 function generateRequestData(searchConfig: HistoryConfig): RequestObject[] {
   const {
@@ -23,21 +30,22 @@ function generateRequestData(searchConfig: HistoryConfig): RequestObject[] {
   } = searchConfig;
 
   const endpointType = getEndpointType(timeframe);
+
+  const [normStart, normEnd] = [start, end].map(normalizedDateInput);
+
   const offsetStart = getStarOfUtc(
-    addMinutes(start, gmtOffset),
+    addMinutes(normStart, gmtOffset),
     endopointToFilePeriodMap[endpointType]
   );
-  const offsetEnd = getStarOfUtc(addMinutes(end, gmtOffset), 'hour');
-
-  process.env.TZ = 'America/Resolute';
-  // process.env.TZ = 'Australia/Sydney';
+  const offsetEnd = getStarOfUtc(addMinutes(normEnd, gmtOffset), 'hour');
 
   const requestData = [];
 
   let tempStartDate = offsetStart;
 
   while (tempStartDate < offsetEnd) {
-    const { timestamp, url } = getRequestObject(symbol, tempStartDate, endpointType, priceType);
+    const timestamp = +getStarOfUtc(tempStartDate, endopointToFilePeriodMap[endpointType]);
+    const url = getUrl(symbol, tempStartDate, endpointType, priceType);
     requestData.push({ timestamp, url });
     tempStartDate = getStarOfUtc(tempStartDate, endopointToFilePeriodMap[endpointType], 1);
   }

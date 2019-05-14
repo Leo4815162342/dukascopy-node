@@ -10,8 +10,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         symbol: 'eurusd',
         dates: {
-          start: new Date('2019-02-27'),
-          end: new Date('2019-02-28')
+          start: '2019-02-27',
+          end: '2019-02-28'
         },
         timeframe: 'tick',
         gmtOffset: 360
@@ -47,8 +47,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         symbol: 'gbpusd',
         dates: {
-          start: new Date('2018-11-07'),
-          end: new Date('2018-11-09')
+          start: '2018-11-07',
+          end: '2018-11-09'
         },
         timeframe: 'tick',
         gmtOffset: 0
@@ -84,8 +84,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         symbol: 'btcusd',
         dates: {
-          start: new Date('2017-12-31'),
-          end: new Date('2018-01-05')
+          start: '2017-12-31',
+          end: '2018-01-05'
         },
         timeframe: 'tick',
         gmtOffset: -120
@@ -116,6 +116,80 @@ describe('Request generator', () => {
         );
       });
     });
+
+    describe('AUDCAD, tick, 2016-07-01 10:00 - 2016-07-01 12:00, 0 min. UTC Offset', () => {
+      const searchConfig: HistoryConfig = {
+        symbol: 'audcad',
+        dates: {
+          start: '2016-07-01 10:00',
+          end: '2016-07-01 12:00'
+        },
+        timeframe: 'tick',
+        gmtOffset: 0
+      };
+
+      const requestData = generateRequestData(searchConfig);
+
+      it('should contain 2 items', () => {
+        expect(requestData).to.have.lengthOf(2);
+      });
+
+      it('should contain properly incremented timestamp values for each object', () => {
+        const startTs = 1467367200000;
+        requestData.forEach(({ timestamp }, i) =>
+          expect(timestamp).to.equal(startTs + i * 3600000)
+        );
+      });
+
+      it('should have correct URL for first object', () => {
+        expect(requestData[0].url).to.equal(
+          'https://datafeed.dukascopy.com/datafeed/AUDCAD/2016/06/01/10h_ticks.bi5'
+        );
+      });
+
+      it('should have correct URL for last object', () => {
+        expect(requestData[requestData.length - 1].url).to.equal(
+          'https://datafeed.dukascopy.com/datafeed/AUDCAD/2016/06/01/11h_ticks.bi5'
+        );
+      });
+    });
+
+    describe('GBPJPY, tick, 2016-12-31 20:00 - 2017-01-01 17:00, -60 min. UTC Offset', () => {
+      const searchConfig: HistoryConfig = {
+        symbol: 'gbpjpy',
+        dates: {
+          start: '2016-12-31 20:00',
+          end: '2017-01-01 17:00'
+        },
+        timeframe: 'tick',
+        gmtOffset: -60
+      };
+
+      const requestData = generateRequestData(searchConfig);
+
+      it('should contain 21 items', () => {
+        expect(requestData).to.have.lengthOf(21);
+      });
+
+      it('should contain properly incremented timestamp values for each object', () => {
+        const startTs = 1483210800000;
+        requestData.forEach(({ timestamp }, i) =>
+          expect(timestamp).to.equal(startTs + i * 3600000)
+        );
+      });
+
+      it('should have correct URL for first object', () => {
+        expect(requestData[0].url).to.equal(
+          'https://datafeed.dukascopy.com/datafeed/GBPJPY/2016/11/31/19h_ticks.bi5'
+        );
+      });
+
+      it('should have correct URL for last object', () => {
+        expect(requestData[requestData.length - 1].url).to.equal(
+          'https://datafeed.dukascopy.com/datafeed/GBPJPY/2017/00/01/15h_ticks.bi5'
+        );
+      });
+    });
   });
 
   describe('Minute data', () => {
@@ -123,8 +197,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         symbol: 'nzdcad',
         dates: {
-          start: new Date('2012-02-01'),
-          end: new Date('2012-02-29')
+          start: '2012-02-01',
+          end: '2012-02-29'
         },
         timeframe: 'm1',
         priceType: 'ask',
@@ -161,8 +235,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         symbol: 'cadchf',
         dates: {
-          start: new Date('2016-01-01'),
-          end: new Date('2018-01-01')
+          start: '2016-01-01',
+          end: '2018-01-01'
         },
         timeframe: 'm1',
         priceType: 'bid',
@@ -199,8 +273,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         symbol: 'fbususd',
         dates: {
-          start: new Date('2017-08-15'),
-          end: new Date('2018-04-15')
+          start: '2017-08-15',
+          end: '2018-04-15'
         },
         timeframe: 'm1',
         priceType: 'ask',
@@ -237,8 +311,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         symbol: 'usdchf',
         dates: {
-          start: new Date('2019-01-01'),
-          end: new Date('2019-01-02')
+          start: '2019-01-01',
+          end: '2019-01-02'
         },
         timeframe: 'm1',
         priceType: 'bid',
@@ -277,8 +351,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         symbol: 'eurcad',
         dates: {
-          start: new Date('2016-02-05'),
-          end: new Date('2016-02-20')
+          start: '2016-02-05',
+          end: '2016-02-20'
         },
         timeframe: 'h1',
         priceType: 'bid',
@@ -306,8 +380,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         symbol: 'usdcad',
         dates: {
-          start: new Date('2017-05-02'),
-          end: new Date('2017-08-31')
+          start: '2017-05-02',
+          end: '2017-08-31'
         },
         timeframe: 'h1',
         priceType: 'ask',
@@ -344,8 +418,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         symbol: 'gbpjpy',
         dates: {
-          start: new Date('2018-01-01'),
-          end: new Date('2018-12-31')
+          start: '2018-01-01',
+          end: '2018-12-31'
         },
         timeframe: 'h1',
         priceType: 'ask',

@@ -7,8 +7,8 @@ import 'mocha';
 let searchConfig: HistoryConfig = {
   symbol: 'eurusd',
   dates: {
-    start: new Date('2019-03-01'),
-    end: new Date('2019-03-05')
+    start: '2019-03-01',
+    end: '2019-03-05'
   },
   timeframe: 'tick',
   priceType: 'bid',
@@ -97,8 +97,20 @@ describe('Config validator', () => {
 
     it('should return false on invalid date', () => {
       searchConfig.dates = {
-        start: new Date('2017-03-33'),
-        end: new Date('2017-05-01')
+        start: '2017-03-33',
+        end: '2017-05-01'
+      };
+      const { isValid, validationErrors } = validateConfig(searchConfig);
+      expect(isValid).to.be.false;
+      expect(validationErrors).to.eql({
+        dates: ['Start date is not a valid date']
+      });
+    });
+
+    it('should return false on invalid date (Feb 29)', () => {
+      searchConfig.dates = {
+        start: '2017-02-29',
+        end: '2017-05-01'
       };
       const { isValid, validationErrors } = validateConfig(searchConfig);
       expect(isValid).to.be.false;
@@ -109,8 +121,8 @@ describe('Config validator', () => {
 
     it('should return false when start date is after end date', () => {
       searchConfig.dates = {
-        start: new Date('2017-04-09'),
-        end: new Date('2017-04-01')
+        start: '2017-04-09',
+        end: '2017-04-01'
       };
       const { isValid, validationErrors } = validateConfig(searchConfig);
       expect(isValid).to.be.false;
@@ -121,8 +133,8 @@ describe('Config validator', () => {
 
     it('should return false when dates are in future', () => {
       searchConfig.dates = {
-        start: new Date('2022-04-09'),
-        end: new Date('2022-07-01')
+        start: '2022-04-09',
+        end: '2022-07-01'
       };
       const { isValid, validationErrors } = validateConfig(searchConfig);
       expect(isValid).to.be.false;

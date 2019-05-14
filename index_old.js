@@ -1,14 +1,29 @@
+// process.env.TZ = 'America/Resolute';
+process.env.TZ = 'Australia/Sydney';
+const { toDate, parseISO, addMinutes, parse } = require('date-fns');
+
+const a = parseISO('2018-11-01');
+const b = parseISO('2018-11-01 00:00');
+
+console.log(a.getTimezoneOffset());
+console.log(b.getTimezoneOffset());
+
+console.log(a);
+console.log(b);
+
+console.log(addMinutes(a, -a.getTimezoneOffset()));
+console.log(addMinutes(b, -b.getTimezoneOffset()));
+
 //
 // Europe/Kiev
 // America/Resolute
 // Australia/Sydney
-process.env.TZ = 'America/Resolute';
 
-const d = new Date('2018-11-01');
+// const d = new Date('2018-11-01');
 
-console.log(d.getTimezoneOffset());
-console.log(d.toLocaleString());
-console.log(d);
+// console.log(d.getTimezoneOffset());
+// console.log(d.toLocaleString());
+// console.log(d);
 
 // const fs = require('fs');
 // const util = require('util');

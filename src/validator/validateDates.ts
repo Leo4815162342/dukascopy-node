@@ -1,4 +1,5 @@
 import isValid from 'date-fns/isValid';
+import parseISO from 'date-fns/parseISO';
 import { HistoryConfig } from '../types';
 import { KeyValidationStatus } from './types';
 
@@ -25,13 +26,14 @@ function validateDates(dates: HistoryConfig['dates']) {
   }
 
   const { start, end } = dates;
+  const [startDate, endDate] = [start, end].map(d => parseISO(d));
 
-  if (!isValid(start)) {
+  if (!isValid(startDate)) {
     status.isValid = false;
     status.validationErrors.push(`Start date is not a valid date`);
   }
 
-  if (!isValid(end)) {
+  if (!isValid(endDate)) {
     status.isValid = false;
     status.validationErrors.push(`End date is not a valid date`);
   }
@@ -40,12 +42,12 @@ function validateDates(dates: HistoryConfig['dates']) {
     return status;
   }
 
-  if (!isEndDateAfterStartDate(start, end)) {
+  if (!isEndDateAfterStartDate(startDate, endDate)) {
     status.isValid = false;
     status.validationErrors.push(`End date should be after start date`);
   }
 
-  if (!areDatesInPast(start, end)) {
+  if (!areDatesInPast(startDate, endDate)) {
     status.isValid = false;
     status.validationErrors.push(`Start and end date should be in past`);
   }

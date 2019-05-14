@@ -34,7 +34,7 @@ async function getQuotes(searchConfig: HistoryConfig) {
 
   const requestData = generateRequestData(mergedSearchConfig);
 
-  console.log(requestData);
+  // console.log(requestData);
 
   // const quotes = await Promise.all(
   //   requestData.map(async ({ timestamp, url }) => {
@@ -62,7 +62,7 @@ async function getQuotes(searchConfig: HistoryConfig) {
   try {
     const config: HistoryConfig = {
       symbol: 'eurusd',
-      dates: { start: new Date('2018-03-25'), end: new Date('2018-03-28') },
+      dates: { start: '2018-03-25 10:00', end: '2018-03-25 20:00' },
       timeframe: 'tick',
       volumes: false
     };
