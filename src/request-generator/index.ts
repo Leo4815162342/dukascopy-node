@@ -44,7 +44,7 @@ function generateRequestData(searchConfig: HistoryConfig): RequestObject[] {
   let tempStartDate = offsetStart;
 
   while (tempStartDate < offsetEnd) {
-    const timestamp = +getStarOfUtc(tempStartDate, endopointToFilePeriodMap[endpointType]);
+    const timestamp = +tempStartDate;
     const url = getUrl(symbol, tempStartDate, endpointType, priceType);
     requestData.push({ timestamp, url });
     tempStartDate = getStarOfUtc(tempStartDate, endopointToFilePeriodMap[endpointType], 1);
