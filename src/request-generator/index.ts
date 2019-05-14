@@ -5,7 +5,7 @@ import addMinutes from 'date-fns/addMinutes';
 import parseISO from 'date-fns/parseISO';
 import { getStarOfUtc } from './../utils';
 
-import getUrl from './get-request-object';
+import getUrl from './get-url';
 import getEndpointType from './get-endpoint-type';
 
 const endopointToFilePeriodMap: EndopointToFilePeriodMap = {
