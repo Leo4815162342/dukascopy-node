@@ -36,41 +36,42 @@ async function getQuotes(searchConfig: HistoryConfig) {
 
   // console.log(requestData);
 
-  // const quotes = await Promise.all(
-  //   requestData.map(async ({ timestamp, url }) => {
-  //     console.log('START', url);
-  //     const data = await fetch(url);
-  //     const bufferedData = await data.buffer();
-  //     console.log('END', url);
-  //     const decompressedData = decompress(bufferedData, mergedSearchConfig.timeframe);
-  //     const normalizer = getNormaliser(mergedSearchConfig.timeframe, timestamp, 100000, true); // TODO: use real decimal factor
-  //     const normalizedData = normaliseData(decompressedData, normalizer);
+  const quotes = await Promise.all(
+    requestData.map(async ({ timestamp, url }) => {
+      console.log('START', url);
+      const data = await fetch(url);
+      const bufferedData = await data.buffer();
+      console.log('END', url);
+      const decompressedData = decompress(bufferedData, mergedSearchConfig.timeframe);
+      const normalizer = getNormaliser(mergedSearchConfig.timeframe, timestamp, 100000, true); // TODO: use real decimal factor
+      const normalizedData = normaliseData(decompressedData, normalizer);
 
-  //     return normalizedData;
-  //   })
-  // );
+      return normalizedData;
+    })
+  );
 
-  // const sorted = quotes.sort((a, b) => a[0][0] - b[0][0]);
-  // const merged = [].concat(...sorted);
+  const sorted = quotes.filter(arr => arr.length > 0).sort((a, b) => a[0][0] - b[0][0]);
+  const merged = [].concat(...sorted);
 
-  // const aggregatedDate // TODO: aggregation logic
+  // const aggregatedDate; // TODO: aggregation logic
 
-  // return merged;
+  return merged;
 }
 
 (async () => {
   try {
     const config: HistoryConfig = {
       symbol: 'eurusd',
-      dates: { start: '2018-03-25 10:00', end: '2018-03-25 20:00' },
-      timeframe: 'tick',
-      volumes: false
+      dates: { start: '2019-03-22', end: '2019-03-23' },
+      timeframe: 'h1',
+      volumes: false,
+      gmtOffset: 0
     };
     const quotes = await getQuotes(config);
-    // console.log(quotes);
+    console.log(quotes);
     // console.log(quotes[0][0]);
     // console.log(quotes[quotes.length - 1][0]);
   } catch (error) {
-    console.log(error);
+    console.log('error', error);
   }
 })();

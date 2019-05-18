@@ -20,7 +20,7 @@ function normalizedDateInput(date: string): Date {
   return addMinutes(parsedDate, -parsedDate.getTimezoneOffset());
 }
 
-function generateRequestData(searchConfig: HistoryConfig): RequestObject[] {
+function generateRequestData(searchConfig: Partial<HistoryConfig>): RequestObject[] {
   const {
     symbol,
     dates: { start, end },

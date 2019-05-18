@@ -10,12 +10,14 @@ function getStructFormat(timeframe: HistoryConfig['timeframe']): StructFormat {
 }
 
 function decompress(buffer: Buffer, timeframe: HistoryConfig['timeframe']) {
+  if (buffer.length === 0) {
+    return [];
+  }
+  const result: number[][] = [];
   const format = getStructFormat(timeframe);
   const decompressedData = lzma.decompressFile(buffer);
 
   const step = struct.sizeOf(format);
-
-  const result = [];
 
   for (let i = 0, n = decompressedData.length; i < n; i += step) {
     const chunk = decompressedData.slice(i, i + step);

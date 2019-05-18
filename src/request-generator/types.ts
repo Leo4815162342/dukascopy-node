@@ -3,8 +3,6 @@ export type RequestObject = {
   url: string;
 };
 
-// export type FilePeriod = '';
-
 export type EndopointToFilePeriodMap = {
   tick: 'hour';
   min: 'day';
@@ -12,3 +10,5 @@ export type EndopointToFilePeriodMap = {
 };
 
 export type EndpointType = keyof EndopointToFilePeriodMap;
+
+export type FilePeriod = EndopointToFilePeriodMap[EndpointType];
