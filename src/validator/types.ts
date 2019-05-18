@@ -1,6 +1,17 @@
 import { HistoryConfig } from '../config/types';
 
-export interface KeyValidationStatus {
+export type ConfigKey = keyof HistoryConfig;
+
+export type KeyValidation = {
   isValid: boolean;
   validationErrors: string[];
-}
+};
+
+export type ConfigValidation = {
+  isValid: boolean;
+  validationErrors: { [key in ConfigKey]?: string[] };
+};
+
+export type KeyValidators = ((value: any) => KeyValidation)[];
+
+export type ValidatorMap = { [key in ConfigKey]: KeyValidators };

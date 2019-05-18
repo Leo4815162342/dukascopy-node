@@ -1,9 +1,9 @@
 import { timeframes } from '../config/timeframes';
 import { HistoryConfig } from '../config/types';
-import { KeyValidationStatus } from './types';
+import { KeyValidation } from './types';
 
 function isTimeframeValid(timeframe: HistoryConfig['timeframe']) {
-  const status: KeyValidationStatus = { isValid: true, validationErrors: [] };
+  const status: KeyValidation = { isValid: true, validationErrors: [] };
 
   if (!timeframes.hasOwnProperty(timeframe)) {
     status.isValid = false;

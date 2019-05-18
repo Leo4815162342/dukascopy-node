@@ -2,7 +2,7 @@ import isValid from 'date-fns/isValid';
 import isAfter from 'date-fns/isAfter';
 import parseISO from 'date-fns/parseISO';
 import { HistoryConfig } from '../config/types';
-import { KeyValidationStatus } from './types';
+import { KeyValidation } from './types';
 
 function isEndDateAfterStartDate(start: Date, end: Date) {
   return isAfter(end, start);
@@ -14,7 +14,7 @@ function areDatesInPast(start: Date, end: Date) {
 }
 
 function isDatesValid(dates: HistoryConfig['dates']) {
-  const status: KeyValidationStatus = { isValid: true, validationErrors: [] };
+  const status: KeyValidation = { isValid: true, validationErrors: [] };
 
   if (!dates.hasOwnProperty('start')) {
     status.isValid = false;
