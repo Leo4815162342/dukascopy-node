@@ -1,4 +1,4 @@
-import { validateConfig } from './../src/validator/index';
+import { validateConfig } from './../src/validator';
 import { HistoryConfig } from '../src/config/types';
 import { expect } from 'chai';
 

@@ -1,7 +1,7 @@
 import { symbols } from './symbols';
 
 import { timeframes } from './timeframes';
-import { priceTypes } from './priceTypes';
+import { priceTypes } from './price-types';
 
 export type HistoryConfig = {
   symbol: keyof typeof symbols;

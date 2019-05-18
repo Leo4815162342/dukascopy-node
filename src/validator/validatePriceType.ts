@@ -1,4 +1,4 @@
-import { priceTypes } from '../config/priceTypes';
+import { priceTypes } from '../config/price-types';
 import { HistoryConfig } from '../config/types';
 import { KeyValidationStatus } from './types';
 
