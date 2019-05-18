@@ -1,7 +1,7 @@
 import isValid from 'date-fns/isValid';
 import isAfter from 'date-fns/isAfter';
 import parseISO from 'date-fns/parseISO';
-import { HistoryConfig } from '../types';
+import { HistoryConfig } from '../config/types';
 import { KeyValidationStatus } from './types';
 
 function isEndDateAfterStartDate(start: Date, end: Date) {

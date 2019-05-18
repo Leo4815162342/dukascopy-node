@@ -1,4 +1,4 @@
-import { HistoryConfig } from '../types';
+import { HistoryConfig } from '../config/types';
 
 import { EndpointType } from './types';
 

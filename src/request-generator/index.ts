@@ -1,4 +1,4 @@
-import { HistoryConfig } from './../types';
+import { HistoryConfig } from '../config/types';
 import { RequestObject, EndopointToFilePeriodMap } from './types';
 
 import addMinutes from 'date-fns/addMinutes';

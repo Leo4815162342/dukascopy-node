@@ -1,5 +1,5 @@
-import { priceTypes } from '../priceTypes';
-import { HistoryConfig } from '../types';
+import { priceTypes } from '../config/priceTypes';
+import { HistoryConfig } from '../config/types';
 import { KeyValidationStatus } from './types';
 
 function validatePriceType(priceType: HistoryConfig['priceType']) {

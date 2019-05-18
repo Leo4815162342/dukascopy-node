@@ -1,5 +1,5 @@
 import { generateRequestData } from './../src/request-generator';
-import { HistoryConfig } from './../src/types';
+import { HistoryConfig } from './../src/config/types';
 import { expect } from 'chai';
 
 import 'mocha';

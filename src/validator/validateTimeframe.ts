@@ -1,5 +1,5 @@
-import { timeframes } from '../timeframes';
-import { HistoryConfig } from '../types';
+import { timeframes } from '../config/timeframes';
+import { HistoryConfig } from '../config/types';
 import { KeyValidationStatus } from './types';
 
 function validateTimeframe(timeframe: HistoryConfig['timeframe']) {
