@@ -2,7 +2,7 @@ import { priceTypes } from '../config/price-types';
 import { HistoryConfig } from '../config/types';
 import { KeyValidationStatus } from './types';
 
-function validatePriceType(priceType: HistoryConfig['priceType']) {
+function isPriceTypeValid(priceType: HistoryConfig['priceType']) {
   const status: KeyValidationStatus = { isValid: true, validationErrors: [] };
 
   if (!priceTypes.hasOwnProperty(priceType)) {
@@ -12,4 +12,4 @@ function validatePriceType(priceType: HistoryConfig['priceType']) {
   return status;
 }
 
-export { validatePriceType };
+export { isPriceTypeValid };

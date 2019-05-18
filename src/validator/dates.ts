@@ -13,7 +13,7 @@ function areDatesInPast(start: Date, end: Date) {
   return start < nowDate && end < nowDate;
 }
 
-function validateDates(dates: HistoryConfig['dates']) {
+function isDatesValid(dates: HistoryConfig['dates']) {
   const status: KeyValidationStatus = { isValid: true, validationErrors: [] };
 
   if (!dates.hasOwnProperty('start')) {
@@ -56,4 +56,4 @@ function validateDates(dates: HistoryConfig['dates']) {
   return status;
 }
 
-export { validateDates };
+export { isDatesValid };

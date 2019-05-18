@@ -2,7 +2,7 @@ import { timeframes } from '../config/timeframes';
 import { HistoryConfig } from '../config/types';
 import { KeyValidationStatus } from './types';
 
-function validateTimeframe(timeframe: HistoryConfig['timeframe']) {
+function isTimeframeValid(timeframe: HistoryConfig['timeframe']) {
   const status: KeyValidationStatus = { isValid: true, validationErrors: [] };
 
   if (!timeframes.hasOwnProperty(timeframe)) {
@@ -12,4 +12,4 @@ function validateTimeframe(timeframe: HistoryConfig['timeframe']) {
   return status;
 }
 
-export { validateTimeframe };
+export { isTimeframeValid };
