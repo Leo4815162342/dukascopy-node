@@ -1,12 +1,13 @@
-import { HistoryConfig } from './types';
+import { HistoryConfig } from './config/types';
 
 import fetch from 'node-fetch';
+import { defaultOptions } from './config';
 import { validateConfig } from './validator';
 import { generateRequestData } from './request-generator';
 import { decompress } from './decompress';
 import { normaliseData, getNormaliser } from './normalise';
 
-import { symbols } from './symbols';
+import { symbols } from './config/symbols';
 
 // 'https://datafeed.dukascopy.com/datafeed/AALUSUSD/2019/02/18/22h_ticks.bi5';
 
@@ -16,15 +17,8 @@ import { symbols } from './symbols';
 // 'https://datafeed.dukascopy.com/datafeed/AALUSUSD/2019/02/BID_candles_hour_1.bi5';
 // 'https://datafeed.dukascopy.com/datafeed/AALUSUSD/2019/02/ASK_candles_hour_1.bi5';
 
-const defaultConfig: Partial<HistoryConfig> = {
-  timeframe: 'm1',
-  priceType: 'bid',
-  gmtOffset: 0,
-  volumes: true
-};
-
 async function getQuotes(searchConfig: HistoryConfig) {
-  const mergedSearchConfig = { ...defaultConfig, ...searchConfig };
+  const mergedSearchConfig = { ...defaultOptions, ...searchConfig };
 
   const { isValid, validationErrors } = validateConfig(mergedSearchConfig);
 
