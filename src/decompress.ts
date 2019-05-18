@@ -1,4 +1,4 @@
-import { HistoryConfig } from './types';
+import { HistoryConfig } from './config/types';
 
 const lzma = require('lzma-purejs');
 const struct = require('python-struct');

@@ -5,9 +5,7 @@ import { defaultOptions } from './config';
 import { validateConfig } from './validator';
 import { generateRequestData } from './request-generator';
 import { decompress } from './decompress';
-import { normaliseData, getNormaliser } from './normalise';
-
-import { symbols } from './config/symbols';
+import { normaliseData } from './data-normaliser';
 
 // 'https://datafeed.dukascopy.com/datafeed/AALUSUSD/2019/02/18/22h_ticks.bi5';
 
@@ -26,6 +24,8 @@ async function getQuotes(searchConfig: HistoryConfig) {
     throw validationErrors;
   }
 
+  const { symbol, dates, timeframe, priceType, gmtOffset, volumes } = mergedSearchConfig;
+
   const requestData = generateRequestData(mergedSearchConfig);
 
   // console.log(requestData);
@@ -37,10 +37,10 @@ async function getQuotes(searchConfig: HistoryConfig) {
       const bufferedData = await data.buffer();
       console.log('END', url);
       const decompressedData = decompress(bufferedData, mergedSearchConfig.timeframe);
-      const normalizer = getNormaliser(mergedSearchConfig.timeframe, timestamp, 100000, true); // TODO: use real decimal factor
-      const normalizedData = normaliseData(decompressedData, normalizer);
 
-      return normalizedData;
+      const normalisedData = normaliseData(decompressedData, timeframe, timestamp, symbol, volumes);
+
+      return normalisedData;
     })
   );
 
