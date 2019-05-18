@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 import { defaultOptions } from './config';
 import { validateConfig } from './validator';
 import { generateRequestData } from './request-generator';
-import { decompress } from './decompress';
+import { decompress } from './decompressor';
 import { normaliseData } from './data-normaliser';
 
 // 'https://datafeed.dukascopy.com/datafeed/AALUSUSD/2019/02/18/22h_ticks.bi5';
@@ -62,9 +62,9 @@ async function getQuotes(searchConfig: HistoryConfig) {
   try {
     const config: HistoryConfig = {
       symbol: 'eurusd',
-      dates: { start: '2019-03-22', end: '2019-03-23' },
+      dates: { start: '2019-03-21', end: '2019-03-22' },
       timeframe: 'h1',
-      volumes: false,
+      volumes: true,
       gmtOffset: 0
     };
     const quotes = await getQuotes(config);
