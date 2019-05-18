@@ -24,7 +24,14 @@ async function getQuotes(searchConfig: HistoryConfig) {
     throw validationErrors;
   }
 
-  const { symbol, dates, timeframe, priceType, gmtOffset, volumes } = mergedSearchConfig;
+  const {
+    symbol,
+    dates: { start, end },
+    timeframe,
+    priceType,
+    gmtOffset,
+    volumes
+  } = mergedSearchConfig;
 
   const requestData = generateRequestData(mergedSearchConfig);
 
@@ -37,7 +44,6 @@ async function getQuotes(searchConfig: HistoryConfig) {
       const bufferedData = await data.buffer();
       console.log('END', url);
       const decompressedData = decompress(bufferedData, mergedSearchConfig.timeframe);
-
       const normalisedData = normaliseData(decompressedData, timeframe, timestamp, symbol, volumes);
 
       return normalisedData;

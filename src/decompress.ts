@@ -9,7 +9,7 @@ function getStructFormat(timeframe: HistoryConfig['timeframe']): StructFormat {
   return timeframe === 'tick' ? '>3i2f' : '>5i1f';
 }
 
-function decompress(buffer: Buffer, timeframe: HistoryConfig['timeframe']) {
+function decompress(buffer: Buffer, timeframe: HistoryConfig['timeframe']): [] | number[][] {
   if (buffer.length === 0) {
     return [];
   }
