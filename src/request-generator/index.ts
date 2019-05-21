@@ -1,8 +1,5 @@
 import { HistoryConfig } from '../config/types';
 import { RequestObject, EndopointToFilePeriodMap } from './types';
-
-import addMinutes from 'date-fns/addMinutes';
-import parseISO from 'date-fns/parseISO';
 import { getStarOfUtc } from './../utils';
 
 import getUrl from './get-url';
@@ -14,36 +11,20 @@ const endopointToFilePeriodMap: EndopointToFilePeriodMap = {
   hour: 'month'
 };
 
-function normalizedDateInput(date: string): Date {
-  const parsedDate = parseISO(date);
-
-  return addMinutes(parsedDate, -parsedDate.getTimezoneOffset());
-}
-
-function generateRequestData(searchConfig: Partial<HistoryConfig>): RequestObject[] {
-  const {
-    symbol,
-    dates: { start, end },
-    timeframe,
-    priceType,
-    gmtOffset
-  } = searchConfig;
-
+function generateRequestData(
+  symbol: HistoryConfig['symbol'],
+  startDate: Date,
+  endDate: Date,
+  timeframe: HistoryConfig['timeframe'],
+  priceType: HistoryConfig['priceType']
+): RequestObject[] {
   const endpointType = getEndpointType(timeframe);
-
-  const [normStart, normEnd] = [start, end].map(normalizedDateInput);
-
-  const offsetStart = getStarOfUtc(
-    addMinutes(normStart, gmtOffset),
-    endopointToFilePeriodMap[endpointType]
-  );
-  const offsetEnd = getStarOfUtc(addMinutes(normEnd, gmtOffset), 'hour');
 
   const requestData = [];
 
-  let tempStartDate = offsetStart;
+  let tempStartDate = getStarOfUtc(startDate, endopointToFilePeriodMap[endpointType]);
 
-  while (tempStartDate < offsetEnd) {
+  while (tempStartDate < endDate) {
     const timestamp = +tempStartDate;
     const url = getUrl(symbol, tempStartDate, endpointType, priceType);
     requestData.push({ timestamp, url });

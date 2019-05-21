@@ -25,9 +25,9 @@ function getUrl(
   if (endpointType === 'tick') {
     url += `${dayPad}/${hourPad}h_ticks.bi5`;
   } else if (endpointType === 'min') {
-    url += `${dayPad}/${priceType.toLocaleUpperCase()}_candles_min_1.bi5`;
+    url += `${dayPad}/${priceType.toUpperCase()}_candles_min_1.bi5`;
   } else if (endpointType === 'hour') {
-    url += `${priceType.toLocaleUpperCase()}_candles_hour_1.bi5`;
+    url += `${priceType.toUpperCase()}_candles_hour_1.bi5`;
   }
 
   return url;

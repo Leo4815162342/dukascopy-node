@@ -4,7 +4,6 @@ const timeframes = {
   m30: 1, // 30 minutes
   h1: 1, // 1 hour
   d1: 1, // 1 day
-  w1: 1, // 1 week
   mn1: 1 // 1 month
 };
 

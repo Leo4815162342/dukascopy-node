@@ -36,7 +36,7 @@ function getNormaliser(
   }
 }
 
-function normaliseData(
+function normalise(
   decompressedData: number[][],
   timeframe: HistoryConfig['timeframe'],
   startTimestamp: number,
@@ -50,4 +50,4 @@ function normaliseData(
   return normalizedData;
 }
 
-export { normaliseData };
+export { normalise };

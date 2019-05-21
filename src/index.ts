@@ -1,11 +1,13 @@
 import { HistoryConfig } from './config/types';
 
 import fetch from 'node-fetch';
+import { normalizedDateInput } from './utils';
 import { defaultOptions } from './config';
 import { validateConfig } from './validator';
 import { generateRequestData } from './request-generator';
 import { decompress } from './decompressor';
-import { normaliseData } from './data-normaliser';
+import { normalise } from './data-normaliser';
+import { aggregate } from './aggregator';
 
 // 'https://datafeed.dukascopy.com/datafeed/AALUSUSD/2019/02/18/22h_ticks.bi5';
 
@@ -33,7 +35,9 @@ async function getQuotes(searchConfig: HistoryConfig) {
     volumes
   } = mergedSearchConfig;
 
-  const requestData = generateRequestData(mergedSearchConfig);
+  const [startDate, endDate] = [start, end].map(d => normalizedDateInput(d, gmtOffset));
+
+  const requestData = generateRequestData(symbol, startDate, endDate, timeframe, priceType);
 
   // console.log(requestData);
 
@@ -43,32 +47,30 @@ async function getQuotes(searchConfig: HistoryConfig) {
       const data = await fetch(url);
       const bufferedData = await data.buffer();
       console.log('END', url);
-      const decompressedData = decompress(bufferedData, mergedSearchConfig.timeframe);
-      const normalisedData = normaliseData(decompressedData, timeframe, timestamp, symbol, volumes);
+      const decompressedData = decompress(bufferedData, timeframe);
+      const normalisedData = normalise(decompressedData, timeframe, timestamp, symbol, volumes);
 
       return normalisedData;
     })
   );
 
-  const sorted = quotes.filter(arr => arr.length > 0).sort((a, b) => a[0][0] - b[0][0]);
-  const merged = [].concat(...sorted);
+  const aggregatedData = aggregate(quotes, startDate, endDate, timeframe);
 
-  // const aggregatedDate; // TODO: aggregation logic
-
-  return merged;
+  return aggregatedData;
 }
 
 (async () => {
   try {
     const config: HistoryConfig = {
       symbol: 'eurusd',
-      dates: { start: '2019-03-21', end: '2019-03-22' },
-      timeframe: 'h1',
+      dates: { start: '2019-01-01', end: '2019-01-04' },
+      timeframe: 'd1',
       volumes: true,
       gmtOffset: 0
     };
     const quotes = await getQuotes(config);
     console.log(quotes);
+    console.log(quotes.length);
     // console.log(quotes[0][0]);
     // console.log(quotes[quotes.length - 1][0]);
   } catch (error) {

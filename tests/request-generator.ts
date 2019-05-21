@@ -1,8 +1,21 @@
-import { generateRequestData } from './../src/request-generator';
 import { HistoryConfig } from './../src/config/types';
+import { generateRequestData } from './../src/request-generator';
+import { normalizedDateInput } from './../src/utils';
 import { expect } from 'chai';
 
 import 'mocha';
+
+function getReuqestData({
+  symbol,
+  dates: { start, end },
+  timeframe,
+  gmtOffset,
+  priceType
+}: HistoryConfig) {
+  const [startDate, endDate] = [start, end].map(d => normalizedDateInput(d, gmtOffset));
+
+  return generateRequestData(symbol, startDate, endDate, timeframe, priceType);
+}
 
 describe('Request generator', () => {
   describe('Tick data', () => {
@@ -17,7 +30,7 @@ describe('Request generator', () => {
         gmtOffset: 360
       };
 
-      const requestData = generateRequestData(searchConfig);
+      const requestData = getReuqestData(searchConfig);
 
       it('should contain 24 items', () => {
         expect(requestData).to.have.lengthOf(24);
@@ -54,7 +67,11 @@ describe('Request generator', () => {
         gmtOffset: 0
       };
 
-      const requestData = generateRequestData(searchConfig);
+      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
+        normalizedDateInput(d, searchConfig.gmtOffset)
+      );
+
+      const requestData = getReuqestData(searchConfig);
 
       it('should contain 48 items', () => {
         expect(requestData).to.have.lengthOf(48);
@@ -91,7 +108,11 @@ describe('Request generator', () => {
         gmtOffset: -120
       };
 
-      const requestData = generateRequestData(searchConfig);
+      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
+        normalizedDateInput(d, searchConfig.gmtOffset)
+      );
+
+      const requestData = getReuqestData(searchConfig);
 
       it('should contain 120 items', () => {
         expect(requestData).to.have.lengthOf(120);
@@ -128,7 +149,11 @@ describe('Request generator', () => {
         gmtOffset: 0
       };
 
-      const requestData = generateRequestData(searchConfig);
+      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
+        normalizedDateInput(d, searchConfig.gmtOffset)
+      );
+
+      const requestData = getReuqestData(searchConfig);
 
       it('should contain 2 items', () => {
         expect(requestData).to.have.lengthOf(2);
@@ -165,7 +190,11 @@ describe('Request generator', () => {
         gmtOffset: -60
       };
 
-      const requestData = generateRequestData(searchConfig);
+      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
+        normalizedDateInput(d, searchConfig.gmtOffset)
+      );
+
+      const requestData = getReuqestData(searchConfig);
 
       it('should contain 21 items', () => {
         expect(requestData).to.have.lengthOf(21);
@@ -205,7 +234,11 @@ describe('Request generator', () => {
         gmtOffset: 0
       };
 
-      const requestData = generateRequestData(searchConfig);
+      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
+        normalizedDateInput(d, searchConfig.gmtOffset)
+      );
+
+      const requestData = getReuqestData(searchConfig);
 
       it('should contain 28 items', () => {
         expect(requestData).to.have.lengthOf(28);
@@ -243,7 +276,11 @@ describe('Request generator', () => {
         gmtOffset: 0
       };
 
-      const requestData = generateRequestData(searchConfig);
+      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
+        normalizedDateInput(d, searchConfig.gmtOffset)
+      );
+
+      const requestData = getReuqestData(searchConfig);
 
       it('should contain 731 items', () => {
         expect(requestData).to.have.lengthOf(731);
@@ -281,7 +318,11 @@ describe('Request generator', () => {
         gmtOffset: 360
       };
 
-      const requestData = generateRequestData(searchConfig);
+      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
+        normalizedDateInput(d, searchConfig.gmtOffset)
+      );
+
+      const requestData = getReuqestData(searchConfig);
 
       it('should contain 244 items', () => {
         expect(requestData).to.have.lengthOf(244);
@@ -319,7 +360,11 @@ describe('Request generator', () => {
         gmtOffset: -600
       };
 
-      const requestData = generateRequestData(searchConfig);
+      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
+        normalizedDateInput(d, searchConfig.gmtOffset)
+      );
+
+      const requestData = getReuqestData(searchConfig);
 
       it('should contain 2 items', () => {
         expect(requestData).to.have.lengthOf(2);
@@ -359,7 +404,11 @@ describe('Request generator', () => {
         gmtOffset: 0
       };
 
-      const requestData = generateRequestData(searchConfig);
+      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
+        normalizedDateInput(d, searchConfig.gmtOffset)
+      );
+
+      const requestData = getReuqestData(searchConfig);
 
       it('should contain 1 item', () => {
         expect(requestData).to.have.lengthOf(1);
@@ -388,7 +437,11 @@ describe('Request generator', () => {
         gmtOffset: 0
       };
 
-      const requestData = generateRequestData(searchConfig);
+      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
+        normalizedDateInput(d, searchConfig.gmtOffset)
+      );
+
+      const requestData = getReuqestData(searchConfig);
 
       it('should contain 4 items', () => {
         expect(requestData).to.have.lengthOf(4);
@@ -426,7 +479,11 @@ describe('Request generator', () => {
         gmtOffset: -420
       };
 
-      const requestData = generateRequestData(searchConfig);
+      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
+        normalizedDateInput(d, searchConfig.gmtOffset)
+      );
+
+      const requestData = getReuqestData(searchConfig);
 
       it('should contain 13 items', () => {
         expect(requestData).to.have.lengthOf(13);
