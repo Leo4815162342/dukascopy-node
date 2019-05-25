@@ -17,6 +17,17 @@ import { aggregate } from './aggregator';
 // 'https://datafeed.dukascopy.com/datafeed/AALUSUSD/2019/02/BID_candles_hour_1.bi5';
 // 'https://datafeed.dukascopy.com/datafeed/AALUSUSD/2019/02/ASK_candles_hour_1.bi5';
 
+
+async function fetchBufferedData(urls: string[]): Promise<Buffer[]> {
+
+  return await Promise.all(urls.map(async url => {
+    const data = await fetch(url);
+    const buffer = await data.buffer();
+    return buffer;
+  }))
+
+}
+
 async function getQuotes(searchConfig: HistoryConfig) {
   const mergedSearchConfig = { ...defaultOptions, ...searchConfig };
 
@@ -41,30 +52,25 @@ async function getQuotes(searchConfig: HistoryConfig) {
 
   // console.log(requestData);
 
-  const quotes = await Promise.all(
-    requestData.map(async ({ timestamp, url }) => {
-      console.log('START', url);
-      const data = await fetch(url);
-      const bufferedData = await data.buffer();
-      console.log('END', url);
-      const decompressedData = decompress(bufferedData, timeframe);
-      const normalisedData = normalise(decompressedData, timeframe, timestamp, symbol, volumes);
+  const bufferedData = await fetchBufferedData(requestData.map(({url}) => url));
+  
+  const decompressed = bufferedData.map(buffer => decompress(buffer, timeframe));
 
-      return normalisedData;
-    })
+  const normalized = decompressed.map((data, i) =>
+    normalise(data, timeframe, requestData[i].timestamp, symbol, volumes)
   );
 
-  const aggregatedData = aggregate(quotes, startDate, endDate, timeframe);
+  const aggregated = aggregate(normalized, startDate, endDate, timeframe);
 
-  return aggregatedData;
+  return aggregated;
 }
 
 (async () => {
   try {
     const config: HistoryConfig = {
       symbol: 'eurusd',
-      dates: { start: '2019-01-01', end: '2019-01-04' },
-      timeframe: 'd1',
+      dates: { start: '2019-01-04 00:12', end: '2019-01-04 00:15' },
+      timeframe: 'm1',
       volumes: true,
       gmtOffset: 0
     };
