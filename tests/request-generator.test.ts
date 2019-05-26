@@ -27,7 +27,6 @@ describe('Request generator', () => {
         timeframe: 'tick',
         gmtOffset: 360
       };
-
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 24 items', () => {
@@ -64,11 +63,6 @@ describe('Request generator', () => {
         timeframe: 'tick',
         gmtOffset: 0
       };
-
-      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
-        normalizedDateInput(d, searchConfig.gmtOffset)
-      );
-
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 48 items', () => {
@@ -105,10 +99,6 @@ describe('Request generator', () => {
         timeframe: 'tick',
         gmtOffset: -120
       };
-
-      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
-        normalizedDateInput(d, searchConfig.gmtOffset)
-      );
 
       const requestData = getReuqestData(searchConfig);
 
@@ -147,10 +137,6 @@ describe('Request generator', () => {
         gmtOffset: 0
       };
 
-      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
-        normalizedDateInput(d, searchConfig.gmtOffset)
-      );
-
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 2 items', () => {
@@ -187,10 +173,6 @@ describe('Request generator', () => {
         timeframe: 'tick',
         gmtOffset: -60
       };
-
-      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
-        normalizedDateInput(d, searchConfig.gmtOffset)
-      );
 
       const requestData = getReuqestData(searchConfig);
 
@@ -232,10 +214,6 @@ describe('Request generator', () => {
         gmtOffset: 0
       };
 
-      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
-        normalizedDateInput(d, searchConfig.gmtOffset)
-      );
-
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 28 items', () => {
@@ -273,10 +251,6 @@ describe('Request generator', () => {
         priceType: 'bid',
         gmtOffset: 0
       };
-
-      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
-        normalizedDateInput(d, searchConfig.gmtOffset)
-      );
 
       const requestData = getReuqestData(searchConfig);
 
@@ -316,10 +290,6 @@ describe('Request generator', () => {
         gmtOffset: 360
       };
 
-      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
-        normalizedDateInput(d, searchConfig.gmtOffset)
-      );
-
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 244 items', () => {
@@ -357,10 +327,6 @@ describe('Request generator', () => {
         priceType: 'bid',
         gmtOffset: -600
       };
-
-      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
-        normalizedDateInput(d, searchConfig.gmtOffset)
-      );
 
       const requestData = getReuqestData(searchConfig);
 
@@ -402,10 +368,6 @@ describe('Request generator', () => {
         gmtOffset: 0
       };
 
-      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
-        normalizedDateInput(d, searchConfig.gmtOffset)
-      );
-
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 1 item', () => {
@@ -434,10 +396,6 @@ describe('Request generator', () => {
         priceType: 'ask',
         gmtOffset: 0
       };
-
-      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
-        normalizedDateInput(d, searchConfig.gmtOffset)
-      );
 
       const requestData = getReuqestData(searchConfig);
 
@@ -476,10 +434,6 @@ describe('Request generator', () => {
         priceType: 'ask',
         gmtOffset: -420
       };
-
-      const [startDate, endDate] = [searchConfig.dates.start, searchConfig.dates.end].map(d =>
-        normalizedDateInput(d, searchConfig.gmtOffset)
-      );
 
       const requestData = getReuqestData(searchConfig);
 
