@@ -1,9 +1,6 @@
-import { HistoryConfig } from './../src/config/types';
-import { generateRequestData } from './../src/request-generator';
-import { normalizedDateInput } from './../src/utils';
-import { expect } from 'chai';
-
-import 'mocha';
+import { HistoryConfig } from '../src/config/types';
+import { generateRequestData } from '../src/request-generator';
+import { normalizedDateInput } from '../src/utils';
 
 function getReuqestData({
   symbol,
@@ -16,6 +13,7 @@ function getReuqestData({
 
   return generateRequestData(symbol, startDate, endDate, timeframe, priceType);
 }
+
 
 describe('Request generator', () => {
   describe('Tick data', () => {
@@ -33,24 +31,24 @@ describe('Request generator', () => {
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 24 items', () => {
-        expect(requestData).to.have.lengthOf(24);
+        expect(requestData).toHaveLength(24);
       });
 
       it('should contain properly incremented timestamp values for each object', () => {
         const startTs = 1551225600000 + 6 * 60 * 60 * 1000;
         requestData.forEach(({ timestamp }, i) =>
-          expect(timestamp).to.equal(startTs + i * 3600000)
+          expect(timestamp).toBe(startTs + i * 3600000)
         );
       });
 
       it('should have correct URL for first object', () => {
-        expect(requestData[0].url).to.equal(
+        expect(requestData[0].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/EURUSD/2019/01/27/06h_ticks.bi5'
         );
       });
 
       it('should have correct URL for last object', () => {
-        expect(requestData[requestData.length - 1].url).to.equal(
+        expect(requestData[requestData.length - 1].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/EURUSD/2019/01/28/05h_ticks.bi5'
         );
       });
@@ -74,24 +72,24 @@ describe('Request generator', () => {
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 48 items', () => {
-        expect(requestData).to.have.lengthOf(48);
+        expect(requestData).toHaveLength(48);
       });
 
       it('should contain properly incremented timestamp values for each object', () => {
         const startTs = 1541548800000;
         requestData.forEach(({ timestamp }, i) =>
-          expect(timestamp).to.equal(startTs + i * 3600000)
+          expect(timestamp).toBe(startTs + i * 3600000)
         );
       });
 
       it('should have correct URL for first object', () => {
-        expect(requestData[0].url).to.equal(
+        expect(requestData[0].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/GBPUSD/2018/10/07/00h_ticks.bi5'
         );
       });
 
       it('should have correct URL for last object', () => {
-        expect(requestData[requestData.length - 1].url).to.equal(
+        expect(requestData[requestData.length - 1].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/GBPUSD/2018/10/08/23h_ticks.bi5'
         );
       });
@@ -115,24 +113,24 @@ describe('Request generator', () => {
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 120 items', () => {
-        expect(requestData).to.have.lengthOf(120);
+        expect(requestData).toHaveLength(120);
       });
 
       it('should contain properly incremented timestamp values for each object', () => {
         const startTs = 1514678400000 - 2 * 3600000;
         requestData.forEach(({ timestamp }, i) =>
-          expect(timestamp).to.equal(startTs + i * 3600000)
+          expect(timestamp).toBe(startTs + i * 3600000)
         );
       });
 
       it('should have correct URL for first object', () => {
-        expect(requestData[0].url).to.equal(
+        expect(requestData[0].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/BTCUSD/2017/11/30/22h_ticks.bi5'
         );
       });
 
       it('should have correct URL for last object', () => {
-        expect(requestData[requestData.length - 1].url).to.equal(
+        expect(requestData[requestData.length - 1].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/BTCUSD/2018/00/04/21h_ticks.bi5'
         );
       });
@@ -156,24 +154,24 @@ describe('Request generator', () => {
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 2 items', () => {
-        expect(requestData).to.have.lengthOf(2);
+        expect(requestData).toHaveLength(2);
       });
 
       it('should contain properly incremented timestamp values for each object', () => {
         const startTs = 1467367200000;
         requestData.forEach(({ timestamp }, i) =>
-          expect(timestamp).to.equal(startTs + i * 3600000)
+          expect(timestamp).toBe(startTs + i * 3600000)
         );
       });
 
       it('should have correct URL for first object', () => {
-        expect(requestData[0].url).to.equal(
+        expect(requestData[0].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/AUDCAD/2016/06/01/10h_ticks.bi5'
         );
       });
 
       it('should have correct URL for last object', () => {
-        expect(requestData[requestData.length - 1].url).to.equal(
+        expect(requestData[requestData.length - 1].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/AUDCAD/2016/06/01/11h_ticks.bi5'
         );
       });
@@ -197,24 +195,24 @@ describe('Request generator', () => {
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 21 items', () => {
-        expect(requestData).to.have.lengthOf(21);
+        expect(requestData).toHaveLength(21);
       });
 
       it('should contain properly incremented timestamp values for each object', () => {
         const startTs = 1483210800000;
         requestData.forEach(({ timestamp }, i) =>
-          expect(timestamp).to.equal(startTs + i * 3600000)
+          expect(timestamp).toBe(startTs + i * 3600000)
         );
       });
 
       it('should have correct URL for first object', () => {
-        expect(requestData[0].url).to.equal(
+        expect(requestData[0].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/GBPJPY/2016/11/31/19h_ticks.bi5'
         );
       });
 
       it('should have correct URL for last object', () => {
-        expect(requestData[requestData.length - 1].url).to.equal(
+        expect(requestData[requestData.length - 1].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/GBPJPY/2017/00/01/15h_ticks.bi5'
         );
       });
@@ -241,24 +239,24 @@ describe('Request generator', () => {
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 28 items', () => {
-        expect(requestData).to.have.lengthOf(28);
+        expect(requestData).toHaveLength(28);
       });
 
       it('should contain properly incremented timestamp values for each object', () => {
         const startTs = 1328054400000;
         requestData.forEach(({ timestamp }, i) =>
-          expect(timestamp).to.equal(startTs + i * 86400000)
+          expect(timestamp).toBe(startTs + i * 86400000)
         );
       });
 
       it('should have correct URL for first object', () => {
-        expect(requestData[0].url).to.equal(
+        expect(requestData[0].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/NZDCAD/2012/01/01/ASK_candles_min_1.bi5'
         );
       });
 
       it('should have correct URL for last object', () => {
-        expect(requestData[requestData.length - 1].url).to.equal(
+        expect(requestData[requestData.length - 1].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/NZDCAD/2012/01/28/ASK_candles_min_1.bi5'
         );
       });
@@ -283,24 +281,24 @@ describe('Request generator', () => {
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 731 items', () => {
-        expect(requestData).to.have.lengthOf(731);
+        expect(requestData).toHaveLength(731);
       });
 
       it('should contain properly incremented timestamp values for each object', () => {
         const startTs = 1451606400000;
         requestData.forEach(({ timestamp }, i) =>
-          expect(timestamp).to.equal(startTs + i * 86400000)
+          expect(timestamp).toBe(startTs + i * 86400000)
         );
       });
 
       it('should have correct URL for first object', () => {
-        expect(requestData[0].url).to.equal(
+        expect(requestData[0].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/CADCHF/2016/00/01/BID_candles_min_1.bi5'
         );
       });
 
       it('should have correct URL for last object', () => {
-        expect(requestData[requestData.length - 1].url).to.equal(
+        expect(requestData[requestData.length - 1].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/CADCHF/2017/11/31/BID_candles_min_1.bi5'
         );
       });
@@ -325,24 +323,24 @@ describe('Request generator', () => {
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 244 items', () => {
-        expect(requestData).to.have.lengthOf(244);
+        expect(requestData).toHaveLength(244);
       });
 
       it('should contain properly incremented timestamp values for each object', () => {
         const startTs = 1502755200000;
         requestData.forEach(({ timestamp }, i) =>
-          expect(timestamp).to.equal(startTs + i * 86400000)
+          expect(timestamp).toBe(startTs + i * 86400000)
         );
       });
 
       it('should have correct URL for first object', () => {
-        expect(requestData[0].url).to.equal(
+        expect(requestData[0].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/FBUSUSD/2017/07/15/ASK_candles_min_1.bi5'
         );
       });
 
       it('should have correct URL for last object', () => {
-        expect(requestData[requestData.length - 1].url).to.equal(
+        expect(requestData[requestData.length - 1].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/FBUSUSD/2018/03/15/ASK_candles_min_1.bi5'
         );
       });
@@ -367,24 +365,24 @@ describe('Request generator', () => {
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 2 items', () => {
-        expect(requestData).to.have.lengthOf(2);
+        expect(requestData).toHaveLength(2);
       });
 
       it('should contain properly incremented timestamp values for each object', () => {
         const startTs = 1546214400000;
         requestData.forEach(({ timestamp }, i) =>
-          expect(timestamp).to.equal(startTs + i * 86400000)
+          expect(timestamp).toBe(startTs + i * 86400000)
         );
       });
 
       it('should have correct URL for first object', () => {
-        expect(requestData[0].url).to.equal(
+        expect(requestData[0].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/USDCHF/2018/11/31/BID_candles_min_1.bi5'
         );
       });
 
       it('should have correct URL for last object', () => {
-        expect(requestData[requestData.length - 1].url).to.equal(
+        expect(requestData[requestData.length - 1].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/USDCHF/2019/00/01/BID_candles_min_1.bi5'
         );
       });
@@ -411,15 +409,15 @@ describe('Request generator', () => {
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 1 item', () => {
-        expect(requestData).to.have.lengthOf(1);
+        expect(requestData).toHaveLength(1);
       });
 
       it('should contain correct timestamp', () => {
-        expect(requestData[0].timestamp).to.equal(1454284800000);
+        expect(requestData[0].timestamp).toBe(1454284800000);
       });
 
       it('should have correct URL', () => {
-        expect(requestData[0].url).to.equal(
+        expect(requestData[0].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/EURCAD/2016/01/BID_candles_hour_1.bi5'
         );
       });
@@ -444,24 +442,24 @@ describe('Request generator', () => {
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 4 items', () => {
-        expect(requestData).to.have.lengthOf(4);
+        expect(requestData).toHaveLength(4);
       });
 
       it('should contain properly incremented timestamp values for each object', () => {
-        expect(requestData[0].timestamp).to.equal(1493596800000);
-        expect(requestData[1].timestamp).to.equal(1496275200000);
-        expect(requestData[2].timestamp).to.equal(1498867200000);
-        expect(requestData[3].timestamp).to.equal(1501545600000);
+        expect(requestData[0].timestamp).toBe(1493596800000);
+        expect(requestData[1].timestamp).toBe(1496275200000);
+        expect(requestData[2].timestamp).toBe(1498867200000);
+        expect(requestData[3].timestamp).toBe(1501545600000);
       });
 
       it('should have correct URL for first object', () => {
-        expect(requestData[0].url).to.equal(
+        expect(requestData[0].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/USDCAD/2017/04/ASK_candles_hour_1.bi5'
         );
       });
 
       it('should have correct URL for last object', () => {
-        expect(requestData[requestData.length - 1].url).to.equal(
+        expect(requestData[requestData.length - 1].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/USDCAD/2017/07/ASK_candles_hour_1.bi5'
         );
       });
@@ -486,33 +484,33 @@ describe('Request generator', () => {
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 13 items', () => {
-        expect(requestData).to.have.lengthOf(13);
+        expect(requestData).toHaveLength(13);
       });
 
       it('should contain properly incremented timestamp values for each object', () => {
-        expect(requestData[0].timestamp).to.equal(1512086400000);
-        expect(requestData[1].timestamp).to.equal(1514764800000);
-        expect(requestData[2].timestamp).to.equal(1517443200000);
-        expect(requestData[3].timestamp).to.equal(1519862400000);
-        expect(requestData[4].timestamp).to.equal(1522540800000);
-        expect(requestData[5].timestamp).to.equal(1525132800000);
-        expect(requestData[6].timestamp).to.equal(1527811200000);
-        expect(requestData[7].timestamp).to.equal(1530403200000);
-        expect(requestData[8].timestamp).to.equal(1533081600000);
-        expect(requestData[9].timestamp).to.equal(1535760000000);
-        expect(requestData[10].timestamp).to.equal(1538352000000);
-        expect(requestData[11].timestamp).to.equal(1541030400000);
-        expect(requestData[12].timestamp).to.equal(1543622400000);
+        expect(requestData[0].timestamp).toBe(1512086400000);
+        expect(requestData[1].timestamp).toBe(1514764800000);
+        expect(requestData[2].timestamp).toBe(1517443200000);
+        expect(requestData[3].timestamp).toBe(1519862400000);
+        expect(requestData[4].timestamp).toBe(1522540800000);
+        expect(requestData[5].timestamp).toBe(1525132800000);
+        expect(requestData[6].timestamp).toBe(1527811200000);
+        expect(requestData[7].timestamp).toBe(1530403200000);
+        expect(requestData[8].timestamp).toBe(1533081600000);
+        expect(requestData[9].timestamp).toBe(1535760000000);
+        expect(requestData[10].timestamp).toBe(1538352000000);
+        expect(requestData[11].timestamp).toBe(1541030400000);
+        expect(requestData[12].timestamp).toBe(1543622400000);
       });
 
       it('should have correct URL for first object', () => {
-        expect(requestData[0].url).to.equal(
+        expect(requestData[0].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/GBPJPY/2017/11/ASK_candles_hour_1.bi5'
         );
       });
 
       it('should have correct URL for last object', () => {
-        expect(requestData[requestData.length - 1].url).to.equal(
+        expect(requestData[requestData.length - 1].url).toBe(
           'https://datafeed.dukascopy.com/datafeed/GBPJPY/2018/11/ASK_candles_hour_1.bi5'
         );
       });

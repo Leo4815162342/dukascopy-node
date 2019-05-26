@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { promisify } from 'util';
 
-import { symbols } from './symbols';
+import { symbols } from '../config/symbols';
 import { getMinStartDate } from './getMinStartDate';
 
 const writeFile = promisify(fs.readFile);

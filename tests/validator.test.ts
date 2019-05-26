@@ -1,8 +1,5 @@
 import { validateConfig } from './../src/validator';
 import { HistoryConfig } from '../src/config/types';
-import { expect } from 'chai';
-
-import 'mocha';
 
 let searchConfig: HistoryConfig = {
   symbol: 'eurusd',
@@ -21,10 +18,10 @@ beforeEach(() => (searchConfig = { ...{}, ...searchConfigCopy }));
 
 describe('Config validator', () => {
   describe('General', () => {
-    it('should return true with valid object', () => {
+    it('should return true with valid object and empty errors object', () => {
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.true;
-      expect(validationErrors).to.be.empty;
+      expect(isValid).toBe(true);
+      expect(validationErrors).toEqual({});
     });
   });
 
@@ -33,8 +30,8 @@ describe('Config validator', () => {
       //@ts-ignore
       searchConfig.symbol = 'eurusdxxx';
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         symbol: [`symbol "${searchConfig.symbol}" is not supported`]
       });
     });
@@ -42,8 +39,8 @@ describe('Config validator', () => {
       //@ts-ignore
       searchConfig.symbol = '';
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         symbol: [`value is missing`, `symbol "" is not supported`]
       });
     });
@@ -52,8 +49,8 @@ describe('Config validator', () => {
       //@ts-ignore
       searchConfig.symbol = 12345;
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         symbol: [`value has to be a string`, `symbol "12345" is not supported`]
       });
     });
@@ -62,8 +59,8 @@ describe('Config validator', () => {
       //@ts-ignore
       delete searchConfig['symbol'];
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         symbol: [`key does not exist in search config`]
       });
     });
@@ -74,8 +71,8 @@ describe('Config validator', () => {
       //@ts-ignore
       delete searchConfig['dates'];
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         dates: [`key does not exist in search config`]
       });
     });
@@ -84,8 +81,8 @@ describe('Config validator', () => {
       //@ts-ignore
       searchConfig.dates = {};
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         dates: [
           'Start date is missing',
           'End date is missing',
@@ -101,8 +98,8 @@ describe('Config validator', () => {
         end: '2017-05-01'
       };
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         dates: ['Start date is not a valid date']
       });
     });
@@ -113,8 +110,8 @@ describe('Config validator', () => {
         end: '2017-05-01'
       };
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         dates: ['Start date is not a valid date']
       });
     });
@@ -125,8 +122,8 @@ describe('Config validator', () => {
         end: '2017-04-01'
       };
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         dates: ['End date should be after start date']
       });
     });
@@ -137,8 +134,8 @@ describe('Config validator', () => {
         end: '2022-07-01'
       };
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         dates: ['Start and end date should be in past']
       });
     });
@@ -149,8 +146,8 @@ describe('Config validator', () => {
       //@ts-ignore
       delete searchConfig['timeframe'];
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         timeframe: [`key does not exist in search config`]
       });
     });
@@ -159,8 +156,8 @@ describe('Config validator', () => {
       //@ts-ignore
       searchConfig.timeframe = '';
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         timeframe: ['value is missing', 'Timeframe "" is not supported']
       });
     });
@@ -169,8 +166,8 @@ describe('Config validator', () => {
       //@ts-ignore
       searchConfig.timeframe = 'abcde';
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         timeframe: ['Timeframe "abcde" is not supported']
       });
     });
@@ -181,8 +178,8 @@ describe('Config validator', () => {
       //@ts-ignore
       searchConfig.priceType = '';
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         priceType: ['value is missing', 'Price type "" is not supported']
       });
     });
@@ -191,8 +188,8 @@ describe('Config validator', () => {
       //@ts-ignore
       searchConfig.priceType = 'abcde';
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         priceType: ['Price type "abcde" is not supported']
       });
     });
@@ -203,8 +200,8 @@ describe('Config validator', () => {
       //@ts-ignore
       delete searchConfig['gmtOffset'];
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         gmtOffset: [`key does not exist in search config`]
       });
     });
@@ -213,8 +210,8 @@ describe('Config validator', () => {
       //@ts-ignore
       searchConfig.gmtOffset = '';
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         gmtOffset: ['value is missing', 'value has to be a number']
       });
     });
@@ -223,8 +220,8 @@ describe('Config validator', () => {
       //@ts-ignore
       searchConfig.gmtOffset = 'abcde';
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         gmtOffset: ['value has to be a number']
       });
     });
@@ -235,8 +232,8 @@ describe('Config validator', () => {
       //@ts-ignore
       delete searchConfig['volumes'];
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         volumes: [`key does not exist in search config`]
       });
     });
@@ -245,8 +242,8 @@ describe('Config validator', () => {
       //@ts-ignore
       searchConfig.volumes = '';
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         volumes: ['value is missing', 'value has to be a boolean']
       });
     });
@@ -255,8 +252,8 @@ describe('Config validator', () => {
       //@ts-ignore
       searchConfig.volumes = 'abcde';
       const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).to.be.false;
-      expect(validationErrors).to.eql({
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
         volumes: ['value has to be a boolean']
       });
     });

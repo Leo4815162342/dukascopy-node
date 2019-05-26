@@ -33,12 +33,13 @@ console.log(addMinutes(b, -b.getTimezoneOffset()));
 
 // const struct = require('python-struct');
 
-// const FILE = 'GBP_USD_tick.bi5'; // tick
-// const FILE2 = 'BID_candles_min_1.bi5'; // 1 min
-// const FILE3 = 'BID_candles_day_1.bi5'; //1 day
-// const FILE4 = 'HistoryStart_2.bi5';
-// const FILE5 = 'BTC.bi5';
-// const FILE6 = 'USDHKD.bi5';
+const FILE = 'GBP_USD_tick.bi5'; // tick
+const FILE2 = 'BID_candles_min_1.bi5'; // 1 min
+const FILE3 = 'BID_candles_day_1.bi5'; //1 day
+const FILE4 = 'HistoryStart_2.bi5';
+const FILE5 = 'BTC.bi5';
+const FILE6 = 'USDHKD.bi5';
+// https://datafeed.dukascopy.com/datafeed/EURUSD/2018/02/23/21h_ticks.bi5
 
 // function parseCandleBin(candledata, inarray) {
 //   let acandledata = '';
@@ -83,26 +84,26 @@ console.log(addMinutes(b, -b.getTimezoneOffset()));
 //   return acandledata;
 // }
 
-// (async () => {
-//   try {
-//     const file = await readFile(FILE);
+(async () => {
+  try {
+    const file = await readFile(FILE);
 
-//     const data = lzma.decompressFile(file);
+    const data = lzma.decompressFile(file);
 
-//     // const format = '>5i1f'; // 1 min, 1hr
-//     const format = '>3i2f'; // tick
-//     const step = struct.sizeOf(format);
+    // const format = '>5i1f'; // 1 min, 1hr
+    const format = '>3i2f'; // tick
+    const step = struct.sizeOf(format);
 
-//     const result = [];
+    const result = [];
 
-//     for (let i = 0, n = data.length; i < n; i += step) {
-//       const chunk = data.slice(i, i + step);
-//       const unpacked = struct.unpack(format, chunk);
-//       result.push(unpacked);
-//     }
+    for (let i = 0, n = data.length; i < n; i += step) {
+      const chunk = data.slice(i, i + step);
+      const unpacked = struct.unpack(format, chunk);
+      result.push(unpacked);
+    }
 
-//     console.log(result);
-//   } catch (error) {
-//     console.log(error);
-//   }
-// })();
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+})();
