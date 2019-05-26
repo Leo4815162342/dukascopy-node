@@ -29,9 +29,8 @@ async function fetchBufferedData(urls: string[]): Promise<Buffer[]> {
 }
 
 async function getQuotes(searchConfig: HistoryConfig) {
-  const mergedSearchConfig = { ...defaultOptions, ...searchConfig };
 
-  const { isValid, validationErrors } = validateConfig(mergedSearchConfig);
+  const { isValid, validationErrors } = validateConfig({ ...defaultOptions, ...searchConfig });
 
   if (!isValid) {
     throw validationErrors;
