@@ -10,14 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "date-fns": "^2.0.0-alpha.27",
-    "lzma-native": "^4.0.3",
     "lzma-purejs": "^0.9.3",
     "node-fetch": "^2.3.0",
     "python-struct": "^1.0.6"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
-    "@types/lzma-native": "^4.0.0",
     "@types/mocha": "^5.2.6",
     "@types/node-fetch": "^2.1.7",
     "chai": "^4.2.0",
