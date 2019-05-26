@@ -2,7 +2,7 @@ import { HistoryConfig } from '../config/types';
 import { RequestObject, EndopointToFilePeriodMap, EndpointType } from './types';
 import { getStarOfUtc } from './../utils';
 
-import getUrl from './get-url';
+import { getUrl } from './url';
 
 const endopointToFilePeriodMap: EndopointToFilePeriodMap = {
   tick: 'hour',

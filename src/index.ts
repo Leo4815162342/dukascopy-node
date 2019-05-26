@@ -1,8 +1,8 @@
 import { HistoryConfig } from './config/types';
 
-import fetch from 'node-fetch';
 import { normalizedDateInput } from './utils';
-import { defaultOptions } from './config';
+import { defaultConfig } from './config';
+import { fetchBufferedData } from './buffer-fetcher';
 import { validateConfig } from './validator';
 import { generateRequestData } from './request-generator';
 import { decompress } from './decompressor';
@@ -17,21 +17,10 @@ import { aggregate } from './aggregator';
 // 'https://datafeed.dukascopy.com/datafeed/AALUSUSD/2019/02/BID_candles_hour_1.bi5';
 // 'https://datafeed.dukascopy.com/datafeed/AALUSUSD/2019/02/ASK_candles_hour_1.bi5';
 
+async function getHistoricRates(config: HistoryConfig): Promise<number[][]> {
+  const mergedConfig = { ...defaultConfig, ...config };
 
-async function fetchBufferedData(urls: string[]): Promise<Buffer[]> {
-
-  return await Promise.all(urls.map(async url => {
-    const data = await fetch(url);
-    const buffer = await data.buffer();
-    return buffer;
-  }))
-
-}
-
-async function getHistoricRates(searchConfig: HistoryConfig) {
-  const mergedSearchConfig = { ...defaultOptions, ...searchConfig };
-
-  const { isValid, validationErrors } = validateConfig(mergedSearchConfig);
+  const { isValid, validationErrors } = validateConfig(mergedConfig);
 
   if (!isValid) {
     throw validationErrors;
@@ -44,16 +33,14 @@ async function getHistoricRates(searchConfig: HistoryConfig) {
     priceType,
     gmtOffset,
     volumes
-  } = mergedSearchConfig;
+  } = mergedConfig;
 
   const [startDate, endDate] = [start, end].map(d => normalizedDateInput(d, gmtOffset));
 
   const requestData = generateRequestData(symbol, startDate, endDate, timeframe, priceType);
 
-  // console.log(requestData);
+  const bufferedData = await fetchBufferedData(requestData.map(({ url }) => url));
 
-  const bufferedData = await fetchBufferedData(requestData.map(({url}) => url));
-  
   const decompressed = bufferedData.map(buffer => decompress(buffer, timeframe));
 
   const normalized = decompressed.map((data, i) =>
@@ -65,21 +52,23 @@ async function getHistoricRates(searchConfig: HistoryConfig) {
   return aggregated;
 }
 
-(async () => {
-  try {
-    const config: HistoryConfig = {
-      symbol: 'eurusd',
-      dates: { start: '2019-01-04 00:12', end: '2019-01-04 00:15' },
-      timeframe: 'm1',
-      volumes: true,
-      gmtOffset: 0
-    };
-    const quotes = await getHistoricRates(config);
-    console.log(quotes);
-    console.log(quotes.length);
-    // console.log(quotes[0][0]);
-    // console.log(quotes[quotes.length - 1][0]);
-  } catch (error) {
-    console.log('error', error);
-  }
-})();
+export { getHistoricRates };
+
+// (async () => {
+//   try {
+//     const config: HistoryConfig = {
+//       symbol: 'eurusd',
+//       dates: { start: '2019-02-04 00:12', end: '2019-02-04 00:15' },
+//       timeframe: 'm1',
+//       volumes: true,
+//       gmtOffset: 0
+//     };
+//     const quotes = await getHistoricRates(config);
+//     console.log(quotes);
+//     console.log(quotes.length);
+//     // console.log(quotes[0][0]);
+//     // console.log(quotes[quotes.length - 1][0]);
+//   } catch (error) {
+//     console.log('error', error);
+//   }
+// })();

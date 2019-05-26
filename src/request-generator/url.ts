@@ -3,7 +3,7 @@ import { HistoryConfig } from '../config/types';
 import { EndpointType } from './types';
 import { pad } from '../utils';
 
-const API_ROOT = 'https://datafeed.dukascopy.com/datafeed';
+const URL_ROOT = 'https://datafeed.dukascopy.com/datafeed';
 
 function getUrl(
   symbol: HistoryConfig['symbol'],
@@ -20,7 +20,7 @@ function getUrl(
 
   const [yearPad, monthPad, dayPad, hourPad] = [year, month, day, hour].map(pad);
 
-  let url = `${API_ROOT}/${symbol.toUpperCase()}/${yearPad}/${monthPad}/`;
+  let url = `${URL_ROOT}/${symbol.toUpperCase()}/${yearPad}/${monthPad}/`;
 
   if (endpointType === 'tick') {
     url += `${dayPad}/${hourPad}h_ticks.bi5`;
@@ -33,4 +33,4 @@ function getUrl(
   return url;
 }
 
-export default getUrl;
+export { URL_ROOT, getUrl };

@@ -14,7 +14,6 @@ function getReuqestData({
   return generateRequestData(symbol, startDate, endDate, timeframe, priceType);
 }
 
-
 describe('Request generator', () => {
   describe('Tick data', () => {
     describe('EURUSD, tick, 2019-02-27 - 2019-02-28, 360 min. UTC Offset', () => {
@@ -27,6 +26,7 @@ describe('Request generator', () => {
         timeframe: 'tick',
         gmtOffset: 360
       };
+
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 24 items', () => {
@@ -35,9 +35,7 @@ describe('Request generator', () => {
 
       it('should contain properly incremented timestamp values for each object', () => {
         const startTs = 1551225600000 + 6 * 60 * 60 * 1000;
-        requestData.forEach(({ timestamp }, i) =>
-          expect(timestamp).toBe(startTs + i * 3600000)
-        );
+        requestData.forEach(({ timestamp }, i) => expect(timestamp).toBe(startTs + i * 3600000));
       });
 
       it('should have correct URL for first object', () => {
@@ -63,6 +61,7 @@ describe('Request generator', () => {
         timeframe: 'tick',
         gmtOffset: 0
       };
+
       const requestData = getReuqestData(searchConfig);
 
       it('should contain 48 items', () => {
@@ -71,9 +70,7 @@ describe('Request generator', () => {
 
       it('should contain properly incremented timestamp values for each object', () => {
         const startTs = 1541548800000;
-        requestData.forEach(({ timestamp }, i) =>
-          expect(timestamp).toBe(startTs + i * 3600000)
-        );
+        requestData.forEach(({ timestamp }, i) => expect(timestamp).toBe(startTs + i * 3600000));
       });
 
       it('should have correct URL for first object', () => {
@@ -108,9 +105,7 @@ describe('Request generator', () => {
 
       it('should contain properly incremented timestamp values for each object', () => {
         const startTs = 1514678400000 - 2 * 3600000;
-        requestData.forEach(({ timestamp }, i) =>
-          expect(timestamp).toBe(startTs + i * 3600000)
-        );
+        requestData.forEach(({ timestamp }, i) => expect(timestamp).toBe(startTs + i * 3600000));
       });
 
       it('should have correct URL for first object', () => {
@@ -145,9 +140,7 @@ describe('Request generator', () => {
 
       it('should contain properly incremented timestamp values for each object', () => {
         const startTs = 1467367200000;
-        requestData.forEach(({ timestamp }, i) =>
-          expect(timestamp).toBe(startTs + i * 3600000)
-        );
+        requestData.forEach(({ timestamp }, i) => expect(timestamp).toBe(startTs + i * 3600000));
       });
 
       it('should have correct URL for first object', () => {
@@ -182,9 +175,7 @@ describe('Request generator', () => {
 
       it('should contain properly incremented timestamp values for each object', () => {
         const startTs = 1483210800000;
-        requestData.forEach(({ timestamp }, i) =>
-          expect(timestamp).toBe(startTs + i * 3600000)
-        );
+        requestData.forEach(({ timestamp }, i) => expect(timestamp).toBe(startTs + i * 3600000));
       });
 
       it('should have correct URL for first object', () => {
@@ -222,9 +213,7 @@ describe('Request generator', () => {
 
       it('should contain properly incremented timestamp values for each object', () => {
         const startTs = 1328054400000;
-        requestData.forEach(({ timestamp }, i) =>
-          expect(timestamp).toBe(startTs + i * 86400000)
-        );
+        requestData.forEach(({ timestamp }, i) => expect(timestamp).toBe(startTs + i * 86400000));
       });
 
       it('should have correct URL for first object', () => {
@@ -260,9 +249,7 @@ describe('Request generator', () => {
 
       it('should contain properly incremented timestamp values for each object', () => {
         const startTs = 1451606400000;
-        requestData.forEach(({ timestamp }, i) =>
-          expect(timestamp).toBe(startTs + i * 86400000)
-        );
+        requestData.forEach(({ timestamp }, i) => expect(timestamp).toBe(startTs + i * 86400000));
       });
 
       it('should have correct URL for first object', () => {
@@ -298,9 +285,7 @@ describe('Request generator', () => {
 
       it('should contain properly incremented timestamp values for each object', () => {
         const startTs = 1502755200000;
-        requestData.forEach(({ timestamp }, i) =>
-          expect(timestamp).toBe(startTs + i * 86400000)
-        );
+        requestData.forEach(({ timestamp }, i) => expect(timestamp).toBe(startTs + i * 86400000));
       });
 
       it('should have correct URL for first object', () => {
@@ -336,9 +321,7 @@ describe('Request generator', () => {
 
       it('should contain properly incremented timestamp values for each object', () => {
         const startTs = 1546214400000;
-        requestData.forEach(({ timestamp }, i) =>
-          expect(timestamp).toBe(startTs + i * 86400000)
-        );
+        requestData.forEach(({ timestamp }, i) => expect(timestamp).toBe(startTs + i * 86400000));
       });
 
       it('should have correct URL for first object', () => {
