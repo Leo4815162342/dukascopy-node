@@ -28,9 +28,10 @@ async function fetchBufferedData(urls: string[]): Promise<Buffer[]> {
 
 }
 
-async function getQuotes(searchConfig: HistoryConfig) {
+async function getHistoricRates(searchConfig: HistoryConfig) {
+  const mergedSearchConfig = { ...defaultOptions, ...searchConfig };
 
-  const { isValid, validationErrors } = validateConfig({ ...defaultOptions, ...searchConfig });
+  const { isValid, validationErrors } = validateConfig(mergedSearchConfig);
 
   if (!isValid) {
     throw validationErrors;
@@ -73,7 +74,7 @@ async function getQuotes(searchConfig: HistoryConfig) {
       volumes: true,
       gmtOffset: 0
     };
-    const quotes = await getQuotes(config);
+    const quotes = await getHistoricRates(config);
     console.log(quotes);
     console.log(quotes.length);
     // console.log(quotes[0][0]);
