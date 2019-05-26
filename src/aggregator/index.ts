@@ -3,11 +3,11 @@ import { HistoryConfig } from './../config/types';
 import { splitArrayInChunks } from './../utils';
 
 function getOHLC(input: number[][]) {
-  // ignoring 0 volumes
+  // ignoring flat-volumed (0 volume) entries
   input = input.filter(data => data[5] !== 0);
 
   if (input.length === 0) {
-    return input;
+    return [];
   }
 
   let ts = input[0][0];
