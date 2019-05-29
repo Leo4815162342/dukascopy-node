@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "commonjs",
     "esModuleInterop": true,
-    "target": "es6",
+    "target": "es2017",
     "noImplicitAny": true,
     "moduleResolution": "node",
     "sourceMap": false,
@@ -14,6 +14,6 @@
     }
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules"],
-  "files": ["index.ts"]
+  "exclude": ["node_modules", "src/**/*.test.ts"],
+  "files": ["src/index.ts"]
 }

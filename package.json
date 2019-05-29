@@ -2,11 +2,12 @@
   "name": "dukascopy-node",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": " ./node_modules/jest/bin/jest.js tests"
+    "test": "./node_modules/jest/bin/jest.js tests",
+    "build": "./node_modules/typescript/bin/tsc -p tsconfig.json"
   },
-  "author": "",
+  "author": "leonid.pyrlia",
   "license": "ISC",
   "dependencies": {
     "date-fns": "^2.0.0-alpha.27",
