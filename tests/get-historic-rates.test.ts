@@ -1,15 +1,17 @@
 import fs from 'fs';
+import { promisify } from 'util';
 import { HistoryConfig } from '../src/config/types';
 import { getHistoricRates } from './../src';
 import { URL_ROOT } from '../src/request-generator/url';
 
-function mockedFetchBufferedData(urls: string[]) {
+async function mockedFetchBufferedData(urls: string[]) {
   const mockedUrls = urls.map(url => url.replace(URL_ROOT, './tests/test-data'));
 
-  const bufferedData = mockedUrls.map(url => {
-    const buffer = fs.readFileSync(url);
-    return buffer;
-  });
+  const bufferedData = await Promise.all(
+    mockedUrls.map(async url => {
+      return promisify(fs.readFile)(url);
+    })
+  );
 
   return bufferedData;
 }
