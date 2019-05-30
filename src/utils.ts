@@ -5,8 +5,8 @@ function pad(num: number): string {
   return num < 10 ? `0${num}` : `${num}`;
 }
 
-function roundNum(value: number | string, decimal: number): number {
-  return Number(Number(value).toFixed(decimal));
+function roundNum(value: number, decimal: number): number {
+  return Number(value.toFixed(decimal));
 }
 
 function getStarOfUtc(date: Date, period: 'hour' | 'day' | 'month', offset: number = 0): Date {

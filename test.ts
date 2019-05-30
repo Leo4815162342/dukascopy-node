@@ -5,8 +5,8 @@ import { getHistoricRates } from './src';
   try {
     const config: HistoryConfig = {
       symbol: 'eurusd',
-      dates: { start: '2019-02-04 00:00', end: '2019-02-04 00:01' },
-      timeframe: 'tick',
+      dates: { start: '2019-02-05 13:30', end: '2019-02-05 19:30' },
+      timeframe: 'm30',
       volumes: true,
       gmtOffset: 0
     };
