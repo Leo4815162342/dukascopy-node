@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "scripts": {
     "test": "./node_modules/jest/bin/jest.js tests",
     "build": "./node_modules/typescript/bin/tsc -p tsconfig.json"
