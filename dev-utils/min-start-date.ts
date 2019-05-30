@@ -1,5 +1,8 @@
 import fetch from 'node-fetch';
 
+import { pad } from '../src/utils';
+import { URL_ROOT } from '../src/request-generator/url';
+
 interface GetFileUrlInput {
   symbol: string;
   year: number;
@@ -7,25 +10,16 @@ interface GetFileUrlInput {
   day: number;
 }
 
-const API_ROOT = 'https://datafeed.dukascopy.com/datafeed';
 const FILE_NAME = 'ASK_candles_min_1.bi5';
 
-function pad(num: number): string {
-  return num < 10 ? `0${num}` : `${num}`;
-}
-
 function getFileUrl({ symbol, year, month, day }: GetFileUrlInput): string {
-  return `${API_ROOT}/${symbol}/${year}/${pad(month)}/${pad(day)}/${FILE_NAME}`;
+  return `${URL_ROOT}/${symbol}/${year}/${pad(month)}/${pad(day)}/${FILE_NAME}`;
 }
 
 function getDate(timestamp: number) {
   const date = new Date(timestamp);
 
-  const [year, month, day] = [
-    date.getUTCFullYear(),
-    date.getUTCMonth() + 1,
-    date.getUTCDate()
-  ];
+  const [year, month, day] = [date.getUTCFullYear(), date.getUTCMonth() + 1, date.getUTCDate()];
   return [year, pad(month), pad(day)];
 }
 
@@ -67,9 +61,7 @@ async function getMinStartDate(symbol: string) {
       }
     }
   }
-  console.log(
-    `Finished fetching start date: ${symbol} : ${getDateString(minDate)}`
-  );
+  console.log(`Finished fetching start date: ${symbol} : ${getDateString(minDate)}`);
   console.log(`===============`);
   return getDateString(minDate);
 }

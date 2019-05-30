@@ -1,8 +1,8 @@
 import fs from 'fs';
 import { promisify } from 'util';
 
-import { symbols } from '../config/symbols';
-import { getMinStartDate } from './getMinStartDate';
+import { symbols } from '../src/config/symbols';
+import { getMinStartDate } from './min-start-date';
 
 const writeFile = promisify(fs.readFile);
 
@@ -16,7 +16,7 @@ const writeFile = promisify(fs.readFile);
       await wait(5000);
     }
 
-    await writeFile('symbolsWithStarDates.json', JSON.stringify(data, null, 2));
+    await writeFile('symbolsWithStartDates.json', JSON.stringify(data, null, 2));
     console.log('DONE');
   } catch (error) {
     console.log(error);
