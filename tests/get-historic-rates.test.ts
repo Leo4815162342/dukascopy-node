@@ -1,22 +1,7 @@
-import fs from 'fs';
-import { promisify } from 'util';
 import { HistoryConfig } from '../src/config/types';
 import { getHistoricRates } from './../src';
-import { URL_ROOT } from '../src/request-generator/url';
 
-async function mockedFetchBufferedData(urls: string[]) {
-  const mockedUrls = urls.map(url => url.replace(URL_ROOT, './tests/test-data'));
-
-  const bufferedData = await Promise.all(
-    mockedUrls.map(async url => {
-      return promisify(fs.readFile)(url);
-    })
-  );
-
-  return bufferedData;
-}
-
-jest.mock('./../src/buffer-fetcher', () => ({ fetchBufferedData: mockedFetchBufferedData }));
+jest.mock('./../src/buffer-fetcher');
 
 describe('should work', () => {
   it('should work as well', async () => {
