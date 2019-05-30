@@ -1,5 +1,5 @@
 import { validateConfig } from './../src/validator';
-import { HistoryConfig } from '../src/config/types';
+import { HistoryConfig } from './../src/config/types';
 
 let searchConfig: HistoryConfig = {
   symbol: 'eurusd',

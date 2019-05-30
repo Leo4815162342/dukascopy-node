@@ -1,5 +1,6 @@
 import { HistoryConfig } from './../config/types';
 import { symbols } from './../config/symbols';
+import { roundNum } from './../utils';
 
 function getNormaliser(
   timeframe: HistoryConfig['timeframe'],
@@ -17,7 +18,7 @@ function getNormaliser(
         ms + startMs,
         ask / decimalFactor,
         bid / decimalFactor,
-        ...(volumes ? [askVolume, bidVolume] : [])
+        ...(volumes ? [askVolume, bidVolume].map(a => roundNum(a, 2)) : [])
       ];
     };
   } else {
@@ -30,7 +31,7 @@ function getNormaliser(
         high / decimalFactor,
         low / decimalFactor,
         close / decimalFactor,
-        ...(volumes ? [volume] : [])
+        ...(volumes ? [roundNum(volume, 2)] : [])
       ];
     };
   }

@@ -10,5 +10,3 @@ export type EndopointToFilePeriodMap = {
 };
 
 export type EndpointType = keyof EndopointToFilePeriodMap;
-
-export type FilePeriod = EndopointToFilePeriodMap[EndpointType];

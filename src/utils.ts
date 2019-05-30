@@ -5,6 +5,10 @@ function pad(num: number): string {
   return num < 10 ? `0${num}` : `${num}`;
 }
 
+function roundNum(value: number | string, decimal: number): number {
+  return Number(Number(value).toFixed(decimal));
+}
+
 function getStarOfUtc(date: Date, period: 'hour' | 'day' | 'month', offset: number = 0): Date {
   const [year, month, day, hours] = [
     date.getUTCFullYear(),
@@ -47,4 +51,4 @@ function splitArrayInChunks<T>(array: T[], chunkSize: number): T[][] {
   return result;
 }
 
-export { pad, getStarOfUtc, normalizedDateInput, splitArrayInChunks };
+export { pad, roundNum, getStarOfUtc, normalizedDateInput, splitArrayInChunks };

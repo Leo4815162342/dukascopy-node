@@ -33,7 +33,13 @@ function getOHLC(input: number[][]) {
     }
   }
 
-  return [ts, open, high, low, close, volume];
+  const ohlc = [ts, open, high, low, close];
+
+  if (volume !== undefined) {
+    ohlc.push(volume);
+  }
+
+  return ohlc;
 }
 
 function transformToTimefrmes(input: number[][][], timeframe: HistoryConfig['timeframe']) {
