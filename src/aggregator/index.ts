@@ -36,7 +36,7 @@ function getOHLC(input: number[][]) {
   const ohlc = [ts, open, high, low, close];
 
   if (volume !== undefined) {
-    ohlc.push(roundNum(volume, 2));
+    ohlc.push(roundNum(volume));
   }
 
   return ohlc;

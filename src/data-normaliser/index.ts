@@ -18,7 +18,7 @@ function getNormaliser(
         ms + startMs,
         ask / decimalFactor,
         bid / decimalFactor,
-        ...(volumes ? [askVolume, bidVolume].map(a => roundNum(a, 2)) : [])
+        ...(volumes ? [askVolume, bidVolume].map(a => roundNum(a)) : [])
       ];
     };
   } else {
@@ -31,7 +31,7 @@ function getNormaliser(
         high / decimalFactor,
         low / decimalFactor,
         close / decimalFactor,
-        ...(volumes ? [roundNum(volume, 2)] : [])
+        ...(volumes ? [roundNum(volume)] : [])
       ];
     };
   }

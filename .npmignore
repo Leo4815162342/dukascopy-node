@@ -3,7 +3,5 @@
 **/__mocks__/**
 **/__tests__/**
 tests
-
 node_modules
-
 src/**/*

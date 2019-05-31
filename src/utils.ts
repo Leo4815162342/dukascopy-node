@@ -5,7 +5,7 @@ function pad(num: number): string {
   return num < 10 ? `0${num}` : `${num}`;
 }
 
-function roundNum(value: number, decimal: number): number {
+function roundNum(value: number, decimal = 2): number {
   return Number(value.toFixed(decimal));
 }
 
