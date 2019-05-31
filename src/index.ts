@@ -3,7 +3,7 @@ import { HistoryConfig } from './config/types';
 import { normalizedDateInput } from './utils';
 import { defaultConfig } from './config';
 import { fetchBufferedData } from './buffer-fetcher';
-import { validateConfig } from './validator';
+import { validateConfig } from './config-validator';
 import { generateRequestData } from './request-generator';
 import { decompress } from './decompressor';
 import { normalise } from './data-normaliser';
