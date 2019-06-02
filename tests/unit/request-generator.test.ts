@@ -1,6 +1,6 @@
-import { HistoryConfig } from './../src/config/types';
-import { generateRequestData } from './../src/request-generator';
-import { normalizedDateInput } from './../src/utils';
+import { HistoryConfig } from '../../src/config/types';
+import { generateRequestData } from '../../src/request-generator';
+import { normalizedDateInput } from '../../src/utils';
 
 function getReuqestData({
   symbol,
