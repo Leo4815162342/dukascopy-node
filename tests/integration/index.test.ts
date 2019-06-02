@@ -98,5 +98,5 @@ function getConfigDescription(config: HistoryConfig): string {
     gmtOffset
   } = config;
 
-  return `${symbol}, ${timeframe}, ${start}, ${end}`;
+  return `${symbol}, ${timeframe}, ${start}, ${end}, offset: ${gmtOffset}`;
 }

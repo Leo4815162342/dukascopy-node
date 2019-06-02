@@ -2,9 +2,11 @@ import { HistoryConfig } from './../config/types';
 
 import { splitArrayInChunks, roundNum } from './../utils';
 
-function getOHLC(input: number[][]) {
-  // ignoring flat-volumed (0 volume) entries
-  input = input.filter(data => data[5] !== 0);
+function getOHLC(input: number[][], filterFlats = true) {
+  if (filterFlats) {
+    // ignoring flat-volumed (0 volume) entries
+    input = input.filter(data => data[5] !== 0);
+  }
 
   if (input.length === 0) {
     return [];
@@ -48,11 +50,11 @@ function transformToTimefrmes(input: number[][][], timeframe: HistoryConfig['tim
   }
 
   if (timeframe === 'm30') {
-    return input.map(t => splitArrayInChunks(t, 30).map(getOHLC));
+    return input.map(t => splitArrayInChunks(t, 30).map(chunk => getOHLC(chunk)));
   }
 
   if (timeframe === 'd1') {
-    return input.map(t => splitArrayInChunks(t, 24).map(getOHLC));
+    return input.map(t => splitArrayInChunks(t, 24).map(chunk => getOHLC(chunk)));
   }
 
   if (timeframe === 'mn1') {
