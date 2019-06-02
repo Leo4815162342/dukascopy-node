@@ -4,14 +4,14 @@ import { normalizedDateInput } from '../../src/utils';
 
 function getReuqestData({
   instrument,
-  dates: { start, end },
+  dates: { from, to },
   timeframe,
   utcOffset,
   priceType
 }: HistoryConfig) {
-  const [startDate, endDate] = [start, end].map(d => normalizedDateInput(d, utcOffset));
+  const [fromDate, toDate] = [from, to].map(d => normalizedDateInput(d, utcOffset));
 
-  return generateRequestData(instrument, startDate, endDate, timeframe, priceType);
+  return generateRequestData(instrument, fromDate, toDate, timeframe, priceType);
 }
 
 describe('Request generator', () => {
@@ -20,8 +20,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         instrument: 'eurusd',
         dates: {
-          start: '2019-02-27',
-          end: '2019-02-28'
+          from: '2019-02-27',
+          to: '2019-02-28'
         },
         timeframe: 'tick',
         utcOffset: 360
@@ -55,8 +55,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         instrument: 'gbpusd',
         dates: {
-          start: '2018-11-07',
-          end: '2018-11-09'
+          from: '2018-11-07',
+          to: '2018-11-09'
         },
         timeframe: 'tick',
         utcOffset: 0
@@ -90,8 +90,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         instrument: 'btcusd',
         dates: {
-          start: '2017-12-31',
-          end: '2018-01-05'
+          from: '2017-12-31',
+          to: '2018-01-05'
         },
         timeframe: 'tick',
         utcOffset: -120
@@ -125,8 +125,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         instrument: 'audcad',
         dates: {
-          start: '2016-07-01 10:00',
-          end: '2016-07-01 12:00'
+          from: '2016-07-01 10:00',
+          to: '2016-07-01 12:00'
         },
         timeframe: 'tick',
         utcOffset: 0
@@ -160,8 +160,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         instrument: 'gbpjpy',
         dates: {
-          start: '2016-12-31 20:00',
-          end: '2017-01-01 17:00'
+          from: '2016-12-31 20:00',
+          to: '2017-01-01 17:00'
         },
         timeframe: 'tick',
         utcOffset: -60
@@ -197,8 +197,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         instrument: 'nzdcad',
         dates: {
-          start: '2012-02-01',
-          end: '2012-02-29'
+          from: '2012-02-01',
+          to: '2012-02-29'
         },
         timeframe: 'm1',
         priceType: 'ask',
@@ -233,8 +233,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         instrument: 'cadchf',
         dates: {
-          start: '2016-01-01',
-          end: '2018-01-01'
+          from: '2016-01-01',
+          to: '2018-01-01'
         },
         timeframe: 'm1',
         priceType: 'bid',
@@ -269,8 +269,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         instrument: 'fbususd',
         dates: {
-          start: '2017-08-15',
-          end: '2018-04-15'
+          from: '2017-08-15',
+          to: '2018-04-15'
         },
         timeframe: 'm1',
         priceType: 'ask',
@@ -305,8 +305,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         instrument: 'usdchf',
         dates: {
-          start: '2019-01-01',
-          end: '2019-01-02'
+          from: '2019-01-01',
+          to: '2019-01-02'
         },
         timeframe: 'm1',
         priceType: 'bid',
@@ -343,8 +343,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         instrument: 'eurcad',
         dates: {
-          start: '2016-02-05',
-          end: '2016-02-20'
+          from: '2016-02-05',
+          to: '2016-02-20'
         },
         timeframe: 'h1',
         priceType: 'bid',
@@ -372,8 +372,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         instrument: 'usdcad',
         dates: {
-          start: '2017-05-02',
-          end: '2017-08-31'
+          from: '2017-05-02',
+          to: '2017-08-31'
         },
         timeframe: 'h1',
         priceType: 'ask',
@@ -410,8 +410,8 @@ describe('Request generator', () => {
       const searchConfig: HistoryConfig = {
         instrument: 'gbpjpy',
         dates: {
-          start: '2018-01-01',
-          end: '2018-12-31'
+          from: '2018-01-01',
+          to: '2018-12-31'
         },
         timeframe: 'h1',
         priceType: 'ask',

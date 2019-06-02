@@ -20,14 +20,14 @@ async function getHistoricRates(config: HistoryConfig): Promise<number[][]> {
 
   const {
     instrument,
-    dates: { start, end },
+    dates: { from, to },
     timeframe,
     priceType,
     utcOffset,
     volumes
   } = mergedConfig;
 
-  const [startDate, endDate] = [start, end].map(d => normalizedDateInput(d, utcOffset));
+  const [startDate, endDate] = [from, to].map(d => normalizedDateInput(d, utcOffset));
 
   const requestData = generateRequestData(instrument, startDate, endDate, timeframe, priceType);
 

@@ -1,6 +1,6 @@
 const config = {
   instrument: 'eurusd',
-  dates: { start: '2019-02-05 01:00', end: '2019-02-05 02:00' },
+  dates: { from: '2019-02-05 01:00', to: '2019-02-05 02:00' },
   timeframe: 'm1',
   volumes: true,
   utcOffset: 0

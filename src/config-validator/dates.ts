@@ -4,53 +4,53 @@ import parseISO from 'date-fns/parseISO';
 import { HistoryConfig } from '../config/types';
 import { KeyValidation } from './types';
 
-function isEndDateAfterStartDate(start: Date, end: Date) {
-  return isAfter(end, start);
+function isToDateAfterfromDate(from: Date, to: Date) {
+  return isAfter(to, from);
 }
 
-function areDatesInPast(start: Date, end: Date) {
+function areDatesInPast(from: Date, to: Date) {
   const nowDate = new Date();
-  return start < nowDate && end < nowDate;
+  return from < nowDate && to < nowDate;
 }
 
 function isDatesValid(dates: HistoryConfig['dates']) {
   const status: KeyValidation = { isValid: true, validationErrors: [] };
 
-  if (!dates.hasOwnProperty('start')) {
+  if (!dates.hasOwnProperty('from')) {
     status.isValid = false;
-    status.validationErrors.push(`Start date is missing`);
+    status.validationErrors.push(`From date is missing`);
   }
 
-  if (!dates.hasOwnProperty('end')) {
+  if (!dates.hasOwnProperty('to')) {
     status.isValid = false;
-    status.validationErrors.push(`End date is missing`);
+    status.validationErrors.push(`To date is missing`);
   }
 
-  const { start, end } = dates;
-  const [startDate, endDate] = [start, end].map(d => parseISO(d));
+  const { from, to } = dates;
+  const [fromDate, toDate] = [from, to].map(d => parseISO(d));
 
-  if (!isValid(startDate)) {
+  if (!isValid(fromDate)) {
     status.isValid = false;
-    status.validationErrors.push(`Start date is not a valid date`);
+    status.validationErrors.push(`From date is not a valid date`);
   }
 
-  if (!isValid(endDate)) {
+  if (!isValid(toDate)) {
     status.isValid = false;
-    status.validationErrors.push(`End date is not a valid date`);
+    status.validationErrors.push(`To date is not a valid date`);
   }
 
   if (!status.isValid) {
     return status;
   }
 
-  if (!isEndDateAfterStartDate(startDate, endDate)) {
+  if (!isToDateAfterfromDate(fromDate, toDate)) {
     status.isValid = false;
-    status.validationErrors.push(`End date should be after start date`);
+    status.validationErrors.push(`To date should be after from date`);
   }
 
-  if (!areDatesInPast(startDate, endDate)) {
+  if (!areDatesInPast(fromDate, toDate)) {
     status.isValid = false;
-    status.validationErrors.push(`Start and end date should be in past`);
+    status.validationErrors.push(`From and To date should be in past`);
   }
 
   return status;

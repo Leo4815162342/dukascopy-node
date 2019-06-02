@@ -4,8 +4,8 @@ import { HistoryConfig } from '../../src/config/types';
 let searchConfig: HistoryConfig = {
   instrument: 'eurusd',
   dates: {
-    start: '2019-03-01',
-    end: '2019-03-05'
+    from: '2019-03-01',
+    to: '2019-03-05'
   },
   timeframe: 'tick',
   priceType: 'bid',
@@ -84,59 +84,59 @@ describe('Config validator', () => {
       expect(isValid).toBe(false);
       expect(validationErrors).toEqual({
         dates: [
-          'Start date is missing',
-          'End date is missing',
-          'Start date is not a valid date',
-          'End date is not a valid date'
+          'From date is missing',
+          'To date is missing',
+          'From date is not a valid date',
+          'To date is not a valid date'
         ]
       });
     });
 
     it('should return false on invalid date', () => {
       searchConfig.dates = {
-        start: '2017-03-33',
-        end: '2017-05-01'
+        from: '2017-03-33',
+        to: '2017-05-01'
       };
       const { isValid, validationErrors } = validateConfig(searchConfig);
       expect(isValid).toBe(false);
       expect(validationErrors).toEqual({
-        dates: ['Start date is not a valid date']
+        dates: ['From date is not a valid date']
       });
     });
 
     it('should return false on invalid date (Feb 29)', () => {
       searchConfig.dates = {
-        start: '2017-02-29',
-        end: '2017-05-01'
+        from: '2017-02-29',
+        to: '2017-05-01'
       };
       const { isValid, validationErrors } = validateConfig(searchConfig);
       expect(isValid).toBe(false);
       expect(validationErrors).toEqual({
-        dates: ['Start date is not a valid date']
+        dates: ['From date is not a valid date']
       });
     });
 
     it('should return false when start date is after end date', () => {
       searchConfig.dates = {
-        start: '2017-04-09',
-        end: '2017-04-01'
+        from: '2017-04-09',
+        to: '2017-04-01'
       };
       const { isValid, validationErrors } = validateConfig(searchConfig);
       expect(isValid).toBe(false);
       expect(validationErrors).toEqual({
-        dates: ['End date should be after start date']
+        dates: ['To date should be after from date']
       });
     });
 
     it('should return false when dates are in future', () => {
       searchConfig.dates = {
-        start: '2022-04-09',
-        end: '2022-07-01'
+        from: '2022-04-09',
+        to: '2022-07-01'
       };
       const { isValid, validationErrors } = validateConfig(searchConfig);
       expect(isValid).toBe(false);
       expect(validationErrors).toEqual({
-        dates: ['Start and end date should be in past']
+        dates: ['From and To date should be in past']
       });
     });
   });
