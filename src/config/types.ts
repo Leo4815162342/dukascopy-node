@@ -11,6 +11,6 @@ export type HistoryConfig = {
   };
   timeframe?: keyof typeof timeframes;
   priceType?: keyof typeof priceTypes;
-  gmtOffset?: number;
+  utcOffset?: number;
   volumes?: boolean;
 };

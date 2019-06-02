@@ -14,7 +14,7 @@ const configValidatorMap: ValidatorMap = {
   dates: [required, isDatesValid],
   timeframe: [required, isString, isTimeframeValid],
   priceType: [required, isString, isPriceTypeValid],
-  gmtOffset: [required, isNumber],
+  utcOffset: [required, isNumber],
   volumes: [required, isBoolean]
 };
 

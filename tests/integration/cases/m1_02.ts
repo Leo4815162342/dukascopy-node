@@ -3,7 +3,7 @@ const config = {
   dates: { start: '2019-02-05 01:00', end: '2019-02-05 02:00' },
   timeframe: 'm1',
   volumes: true,
-  gmtOffset: 0
+  utcOffset: 0
 };
 
 const expectedOutput = [

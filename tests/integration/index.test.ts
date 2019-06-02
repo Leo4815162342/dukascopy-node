@@ -95,8 +95,8 @@ function getConfigDescription(config: HistoryConfig): string {
     dates: { start, end },
     timeframe,
     volumes,
-    gmtOffset
+    utcOffset
   } = config;
 
-  return `${instrument}, ${timeframe}, ${start}, ${end}, offset: ${gmtOffset}`;
+  return `${instrument}, ${timeframe}, ${start}, ${end}, offset: ${utcOffset}`;
 }

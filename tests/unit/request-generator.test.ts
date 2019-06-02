@@ -6,10 +6,10 @@ function getReuqestData({
   instrument,
   dates: { start, end },
   timeframe,
-  gmtOffset,
+  utcOffset,
   priceType
 }: HistoryConfig) {
-  const [startDate, endDate] = [start, end].map(d => normalizedDateInput(d, gmtOffset));
+  const [startDate, endDate] = [start, end].map(d => normalizedDateInput(d, utcOffset));
 
   return generateRequestData(instrument, startDate, endDate, timeframe, priceType);
 }
@@ -24,7 +24,7 @@ describe('Request generator', () => {
           end: '2019-02-28'
         },
         timeframe: 'tick',
-        gmtOffset: 360
+        utcOffset: 360
       };
 
       const requestData = getReuqestData(searchConfig);
@@ -59,7 +59,7 @@ describe('Request generator', () => {
           end: '2018-11-09'
         },
         timeframe: 'tick',
-        gmtOffset: 0
+        utcOffset: 0
       };
 
       const requestData = getReuqestData(searchConfig);
@@ -94,7 +94,7 @@ describe('Request generator', () => {
           end: '2018-01-05'
         },
         timeframe: 'tick',
-        gmtOffset: -120
+        utcOffset: -120
       };
 
       const requestData = getReuqestData(searchConfig);
@@ -129,7 +129,7 @@ describe('Request generator', () => {
           end: '2016-07-01 12:00'
         },
         timeframe: 'tick',
-        gmtOffset: 0
+        utcOffset: 0
       };
 
       const requestData = getReuqestData(searchConfig);
@@ -164,7 +164,7 @@ describe('Request generator', () => {
           end: '2017-01-01 17:00'
         },
         timeframe: 'tick',
-        gmtOffset: -60
+        utcOffset: -60
       };
 
       const requestData = getReuqestData(searchConfig);
@@ -202,7 +202,7 @@ describe('Request generator', () => {
         },
         timeframe: 'm1',
         priceType: 'ask',
-        gmtOffset: 0
+        utcOffset: 0
       };
 
       const requestData = getReuqestData(searchConfig);
@@ -238,7 +238,7 @@ describe('Request generator', () => {
         },
         timeframe: 'm1',
         priceType: 'bid',
-        gmtOffset: 0
+        utcOffset: 0
       };
 
       const requestData = getReuqestData(searchConfig);
@@ -274,7 +274,7 @@ describe('Request generator', () => {
         },
         timeframe: 'm1',
         priceType: 'ask',
-        gmtOffset: 360
+        utcOffset: 360
       };
 
       const requestData = getReuqestData(searchConfig);
@@ -310,7 +310,7 @@ describe('Request generator', () => {
         },
         timeframe: 'm1',
         priceType: 'bid',
-        gmtOffset: -600
+        utcOffset: -600
       };
 
       const requestData = getReuqestData(searchConfig);
@@ -348,7 +348,7 @@ describe('Request generator', () => {
         },
         timeframe: 'h1',
         priceType: 'bid',
-        gmtOffset: 0
+        utcOffset: 0
       };
 
       const requestData = getReuqestData(searchConfig);
@@ -377,7 +377,7 @@ describe('Request generator', () => {
         },
         timeframe: 'h1',
         priceType: 'ask',
-        gmtOffset: 0
+        utcOffset: 0
       };
 
       const requestData = getReuqestData(searchConfig);
@@ -415,7 +415,7 @@ describe('Request generator', () => {
         },
         timeframe: 'h1',
         priceType: 'ask',
-        gmtOffset: -420
+        utcOffset: -420
       };
 
       const requestData = getReuqestData(searchConfig);

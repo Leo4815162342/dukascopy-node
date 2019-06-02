@@ -9,7 +9,7 @@ let searchConfig: HistoryConfig = {
   },
   timeframe: 'tick',
   priceType: 'bid',
-  gmtOffset: 60,
+  utcOffset: 60,
   volumes: true
 };
 
@@ -195,34 +195,34 @@ describe('Config validator', () => {
     });
   });
 
-  describe('GMT offset', () => {
-    it('should return false when gmtOffset key does not exist', () => {
+  describe('UTC offset', () => {
+    it('should return false when utcOffset key does not exist', () => {
       //@ts-ignore
-      delete searchConfig['gmtOffset'];
+      delete searchConfig['utcOffset'];
       const { isValid, validationErrors } = validateConfig(searchConfig);
       expect(isValid).toBe(false);
       expect(validationErrors).toEqual({
-        gmtOffset: [`key does not exist in search config`]
+        utcOffset: [`key does not exist in search config`]
       });
     });
 
-    it('should return false on empty GMT offset', () => {
+    it('should return false on empty UTC offset', () => {
       //@ts-ignore
-      searchConfig.gmtOffset = '';
+      searchConfig.utcOffset = '';
       const { isValid, validationErrors } = validateConfig(searchConfig);
       expect(isValid).toBe(false);
       expect(validationErrors).toEqual({
-        gmtOffset: ['value is missing', 'value has to be a number']
+        utcOffset: ['value is missing', 'value has to be a number']
       });
     });
 
-    it('should return false when GMT offset is not a number', () => {
+    it('should return false when UTC offset is not a number', () => {
       //@ts-ignore
-      searchConfig.gmtOffset = 'abcde';
+      searchConfig.utcOffset = 'abcde';
       const { isValid, validationErrors } = validateConfig(searchConfig);
       expect(isValid).toBe(false);
       expect(validationErrors).toEqual({
-        gmtOffset: ['value has to be a number']
+        utcOffset: ['value has to be a number']
       });
     });
   });
