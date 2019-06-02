@@ -19,7 +19,7 @@ async function getHistoricRates(config: HistoryConfig): Promise<number[][]> {
   }
 
   const {
-    symbol,
+    instrument,
     dates: { start, end },
     timeframe,
     priceType,
@@ -29,14 +29,14 @@ async function getHistoricRates(config: HistoryConfig): Promise<number[][]> {
 
   const [startDate, endDate] = [start, end].map(d => normalizedDateInput(d, gmtOffset));
 
-  const requestData = generateRequestData(symbol, startDate, endDate, timeframe, priceType);
+  const requestData = generateRequestData(instrument, startDate, endDate, timeframe, priceType);
 
   const bufferedData = await fetchBufferedData(requestData.map(({ url }) => url));
 
   const decompressed = bufferedData.map(buffer => decompress(buffer, timeframe));
 
   const normalized = decompressed.map((data, i) =>
-    normalise(data, timeframe, requestData[i].timestamp, symbol, volumes)
+    normalise(data, timeframe, requestData[i].timestamp, instrument, volumes)
   );
 
   const aggregated = aggregate(normalized, startDate, endDate, timeframe);

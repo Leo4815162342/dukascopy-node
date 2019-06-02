@@ -1,10 +1,10 @@
-import { symbols } from './symbols';
+import { instruments } from './instruments';
 
 import { timeframes } from './timeframes';
 import { priceTypes } from './price-types';
 
 export type HistoryConfig = {
-  symbol: keyof typeof symbols;
+  instrument: keyof typeof instruments;
   dates: {
     start: string;
     end: string;

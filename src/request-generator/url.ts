@@ -6,7 +6,7 @@ import { pad } from '../utils';
 const URL_ROOT = 'https://datafeed.dukascopy.com/datafeed';
 
 function getUrl(
-  symbol: HistoryConfig['symbol'],
+  symbol: HistoryConfig['instrument'],
   date: Date,
   endpointType: EndpointType,
   priceType: HistoryConfig['priceType']

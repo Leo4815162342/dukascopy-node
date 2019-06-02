@@ -2,7 +2,7 @@ import { validateConfig } from '../../src/config-validator';
 import { HistoryConfig } from '../../src/config/types';
 
 let searchConfig: HistoryConfig = {
-  symbol: 'eurusd',
+  instrument: 'eurusd',
   dates: {
     start: '2019-03-01',
     end: '2019-03-05'
@@ -25,43 +25,43 @@ describe('Config validator', () => {
     });
   });
 
-  describe('Symbol', () => {
-    it('should return false on unsupported symbol', () => {
+  describe('Instrument', () => {
+    it('should return false on unsupported instrument', () => {
       //@ts-ignore
-      searchConfig.symbol = 'eurusdxxx';
+      searchConfig.instrument = 'eurusdxxx';
       const { isValid, validationErrors } = validateConfig(searchConfig);
       expect(isValid).toBe(false);
       expect(validationErrors).toEqual({
-        symbol: [`symbol "${searchConfig.symbol}" is not supported`]
+        instrument: [`instrument "${searchConfig.instrument}" is not supported`]
       });
     });
-    it('should return false on empty symbol', () => {
+    it('should return false on empty instrument', () => {
       //@ts-ignore
-      searchConfig.symbol = '';
+      searchConfig.instrument = '';
       const { isValid, validationErrors } = validateConfig(searchConfig);
       expect(isValid).toBe(false);
       expect(validationErrors).toEqual({
-        symbol: [`value is missing`, `symbol "" is not supported`]
-      });
-    });
-
-    it('should return false on symbol as number', () => {
-      //@ts-ignore
-      searchConfig.symbol = 12345;
-      const { isValid, validationErrors } = validateConfig(searchConfig);
-      expect(isValid).toBe(false);
-      expect(validationErrors).toEqual({
-        symbol: [`value has to be a string`, `symbol "12345" is not supported`]
+        instrument: [`value is missing`, `instrument "" is not supported`]
       });
     });
 
-    it('should return false when symbol key does not exist', () => {
+    it('should return false on instrument as number', () => {
       //@ts-ignore
-      delete searchConfig['symbol'];
+      searchConfig.instrument = 12345;
       const { isValid, validationErrors } = validateConfig(searchConfig);
       expect(isValid).toBe(false);
       expect(validationErrors).toEqual({
-        symbol: [`key does not exist in search config`]
+        instrument: [`value has to be a string`, `instrument "12345" is not supported`]
+      });
+    });
+
+    it('should return false when instrument key does not exist', () => {
+      //@ts-ignore
+      delete searchConfig['instrument'];
+      const { isValid, validationErrors } = validateConfig(searchConfig);
+      expect(isValid).toBe(false);
+      expect(validationErrors).toEqual({
+        instrument: [`key does not exist in search config`]
       });
     });
   });

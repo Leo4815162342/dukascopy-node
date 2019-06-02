@@ -3,7 +3,7 @@ import { generateRequestData } from '../../src/request-generator';
 import { normalizedDateInput } from '../../src/utils';
 
 function getReuqestData({
-  symbol,
+  instrument,
   dates: { start, end },
   timeframe,
   gmtOffset,
@@ -11,14 +11,14 @@ function getReuqestData({
 }: HistoryConfig) {
   const [startDate, endDate] = [start, end].map(d => normalizedDateInput(d, gmtOffset));
 
-  return generateRequestData(symbol, startDate, endDate, timeframe, priceType);
+  return generateRequestData(instrument, startDate, endDate, timeframe, priceType);
 }
 
 describe('Request generator', () => {
   describe('Tick data', () => {
     describe('EURUSD, tick, 2019-02-27 - 2019-02-28, 360 min. UTC Offset', () => {
       const searchConfig: HistoryConfig = {
-        symbol: 'eurusd',
+        instrument: 'eurusd',
         dates: {
           start: '2019-02-27',
           end: '2019-02-28'
@@ -53,7 +53,7 @@ describe('Request generator', () => {
 
     describe('GBPUSD, tick, 2018-11-07 - 2018-11-09, 0 min. UTC Offset', () => {
       const searchConfig: HistoryConfig = {
-        symbol: 'gbpusd',
+        instrument: 'gbpusd',
         dates: {
           start: '2018-11-07',
           end: '2018-11-09'
@@ -88,7 +88,7 @@ describe('Request generator', () => {
 
     describe('BTCUSD, tick, 2017-12-31 - 2018-01-05, -120 min. UTC Offset', () => {
       const searchConfig: HistoryConfig = {
-        symbol: 'btcusd',
+        instrument: 'btcusd',
         dates: {
           start: '2017-12-31',
           end: '2018-01-05'
@@ -123,7 +123,7 @@ describe('Request generator', () => {
 
     describe('AUDCAD, tick, 2016-07-01 10:00 - 2016-07-01 12:00, 0 min. UTC Offset', () => {
       const searchConfig: HistoryConfig = {
-        symbol: 'audcad',
+        instrument: 'audcad',
         dates: {
           start: '2016-07-01 10:00',
           end: '2016-07-01 12:00'
@@ -158,7 +158,7 @@ describe('Request generator', () => {
 
     describe('GBPJPY, tick, 2016-12-31 20:00 - 2017-01-01 17:00, -60 min. UTC Offset', () => {
       const searchConfig: HistoryConfig = {
-        symbol: 'gbpjpy',
+        instrument: 'gbpjpy',
         dates: {
           start: '2016-12-31 20:00',
           end: '2017-01-01 17:00'
@@ -195,7 +195,7 @@ describe('Request generator', () => {
   describe('Minute data', () => {
     describe('NZDCAD, m1, ask, 2012-02-01 - 2012-02-29, 0 min. UTC Offset', () => {
       const searchConfig: HistoryConfig = {
-        symbol: 'nzdcad',
+        instrument: 'nzdcad',
         dates: {
           start: '2012-02-01',
           end: '2012-02-29'
@@ -231,7 +231,7 @@ describe('Request generator', () => {
 
     describe('CADCHF, m1, bid, 2016-01-01 - 2018-01-01, 0 min. UTC Offset', () => {
       const searchConfig: HistoryConfig = {
-        symbol: 'cadchf',
+        instrument: 'cadchf',
         dates: {
           start: '2016-01-01',
           end: '2018-01-01'
@@ -267,7 +267,7 @@ describe('Request generator', () => {
 
     describe('FBUSUSD, m1, ask, 2017-08-15 - 2018-04-15, 360 min. UTC Offset', () => {
       const searchConfig: HistoryConfig = {
-        symbol: 'fbususd',
+        instrument: 'fbususd',
         dates: {
           start: '2017-08-15',
           end: '2018-04-15'
@@ -303,7 +303,7 @@ describe('Request generator', () => {
 
     describe('USDCHF, m1, bid, 2019-01-01 - 2019-01-02, -600 min. UTC Offset', () => {
       const searchConfig: HistoryConfig = {
-        symbol: 'usdchf',
+        instrument: 'usdchf',
         dates: {
           start: '2019-01-01',
           end: '2019-01-02'
@@ -341,7 +341,7 @@ describe('Request generator', () => {
   describe('Hour data', () => {
     describe('EURCAD, h1, bid, 2016-02-05 - 2016-02-20, 0 min. UTC Offset', () => {
       const searchConfig: HistoryConfig = {
-        symbol: 'eurcad',
+        instrument: 'eurcad',
         dates: {
           start: '2016-02-05',
           end: '2016-02-20'
@@ -370,7 +370,7 @@ describe('Request generator', () => {
 
     describe('USDCAD, h1, ask, 2017-05-02 - 2017-08-31, 0 min. UTC Offset', () => {
       const searchConfig: HistoryConfig = {
-        symbol: 'usdcad',
+        instrument: 'usdcad',
         dates: {
           start: '2017-05-02',
           end: '2017-08-31'
@@ -408,7 +408,7 @@ describe('Request generator', () => {
 
     describe('GBPJPY, h1, ask, 2018-01-01 - 2018-12-31, -420 min. UTC Offset', () => {
       const searchConfig: HistoryConfig = {
-        symbol: 'gbpjpy',
+        instrument: 'gbpjpy',
         dates: {
           start: '2018-01-01',
           end: '2018-12-31'

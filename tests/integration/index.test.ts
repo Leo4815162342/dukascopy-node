@@ -91,12 +91,12 @@ function getTestCases(folder: string): TestCase[] {
 
 function getConfigDescription(config: HistoryConfig): string {
   const {
-    symbol,
+    instrument,
     dates: { start, end },
     timeframe,
     volumes,
     gmtOffset
   } = config;
 
-  return `${symbol}, ${timeframe}, ${start}, ${end}, offset: ${gmtOffset}`;
+  return `${instrument}, ${timeframe}, ${start}, ${end}, offset: ${gmtOffset}`;
 }

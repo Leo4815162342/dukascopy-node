@@ -1,5 +1,5 @@
 const config = {
-  symbol: 'eurusd',
+  instrument: 'eurusd',
   dates: { start: '2019-02-04', end: '2019-02-05' },
   timeframe: 'm30',
   volumes: true,

@@ -1,7 +1,7 @@
 import { HistoryConfig } from '../config/types';
 import { KeyValidation, ConfigValidation, ConfigKey, KeyValidators, ValidatorMap } from './types';
 
-import { isSymbolValid } from './symbol';
+import { isInstrumentValid } from './instrument';
 import { isDatesValid } from './dates';
 import { isPriceTypeValid } from './price-type';
 import { isTimeframeValid } from './timeframe';
@@ -10,7 +10,7 @@ import commonValidators from './common';
 const { required, isBoolean, isString, isNumber } = commonValidators;
 
 const configValidatorMap: ValidatorMap = {
-  symbol: [required, isString, isSymbolValid],
+  instrument: [required, isString, isInstrumentValid],
   dates: [required, isDatesValid],
   timeframe: [required, isString, isTimeframeValid],
   priceType: [required, isString, isPriceTypeValid],

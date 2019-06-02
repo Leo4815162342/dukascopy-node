@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { promisify } from 'util';
 
-import { symbols } from '../src/config/symbols';
+import { instruments } from '../src/config/instruments';
 import { getMinStartDate } from './min-start-date';
 
 const writeFile = promisify(fs.readFile);
@@ -10,7 +10,7 @@ const writeFile = promisify(fs.readFile);
   try {
     const data: string[][] = [];
 
-    for (const symbol of Object.keys(symbols)) {
+    for (const symbol of Object.keys(instruments)) {
       const minstarDate = await getMinStartDate(symbol);
       data.push([symbol, minstarDate]);
       await wait(5000);

@@ -21,7 +21,7 @@ function getEndpointType(timeframe: HistoryConfig['timeframe']): EndpointType {
 }
 
 function generateRequestData(
-  symbol: HistoryConfig['symbol'],
+  instrument: HistoryConfig['instrument'],
   startDate: Date,
   endDate: Date,
   timeframe: HistoryConfig['timeframe'],
@@ -35,7 +35,7 @@ function generateRequestData(
 
   while (tempStartDate < endDate) {
     const timestamp = +tempStartDate;
-    const url = getUrl(symbol, tempStartDate, endpointType, priceType);
+    const url = getUrl(instrument, tempStartDate, endpointType, priceType);
     requestData.push({ timestamp, url });
     tempStartDate = getStarOfUtc(tempStartDate, endopointToFilePeriodMap[endpointType], 1);
   }

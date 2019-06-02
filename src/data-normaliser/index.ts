@@ -1,14 +1,14 @@
 import { HistoryConfig } from './../config/types';
-import { symbols } from './../config/symbols';
+import { instruments } from '../config/instruments';
 import { roundNum } from './../utils';
 
 function getNormaliser(
   timeframe: HistoryConfig['timeframe'],
   startMs: number,
-  symbol: HistoryConfig['symbol'],
+  instrument: HistoryConfig['instrument'],
   volumes: HistoryConfig['volumes']
 ): (values: number[]) => number[] {
-  const { decimalFactor } = symbols[symbol];
+  const { decimalFactor } = instruments[instrument];
 
   if (timeframe === 'tick') {
     return function(values: number[]) {
@@ -41,10 +41,10 @@ function normalise(
   decompressedData: number[][],
   timeframe: HistoryConfig['timeframe'],
   startTimestamp: number,
-  symbol: HistoryConfig['symbol'],
+  instrument: HistoryConfig['instrument'],
   volumes: boolean
 ) {
-  const normaliserFn = getNormaliser(timeframe, startTimestamp, symbol, volumes);
+  const normaliserFn = getNormaliser(timeframe, startTimestamp, instrument, volumes);
 
   const normalizedData = decompressedData.map(normaliserFn);
 
