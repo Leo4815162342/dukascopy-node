@@ -4,7 +4,7 @@ import { pad } from '../src/utils';
 import { URL_ROOT } from '../src/request-generator/url';
 
 interface GetFileUrlInput {
-  symbol: string;
+  instrument: string;
   year: number;
   month: number;
   day: number;
@@ -12,8 +12,8 @@ interface GetFileUrlInput {
 
 const FILE_NAME = 'ASK_candles_min_1.bi5';
 
-function getFileUrl({ symbol, year, month, day }: GetFileUrlInput): string {
-  return `${URL_ROOT}/${symbol}/${year}/${pad(month)}/${pad(day)}/${FILE_NAME}`;
+function getFileUrl({ instrument, year, month, day }: GetFileUrlInput): string {
+  return `${URL_ROOT}/${instrument}/${year}/${pad(month)}/${pad(day)}/${FILE_NAME}`;
 }
 
 function getDate(timestamp: number) {
@@ -28,8 +28,8 @@ function getDateString(timestamp: number) {
   return `${year}-${month}-${day}`;
 }
 
-async function getMinStartDate(symbol: string) {
-  console.log(`Fetching start date: ${symbol}`);
+async function getMinStartDate(instrument: string) {
+  console.log(`Fetching start date: ${instrument}`);
   let start = +new Date('1970-01-01');
   let end = +new Date().setHours(0, 0, 0, 0);
 
@@ -40,7 +40,7 @@ async function getMinStartDate(symbol: string) {
     middleDate.setHours(0, 0, 0, 0);
 
     let url = getFileUrl({
-      symbol,
+      instrument,
       year: middleDate.getUTCFullYear(),
       month: middleDate.getUTCMonth(),
       day: middleDate.getUTCDate()
@@ -61,7 +61,7 @@ async function getMinStartDate(symbol: string) {
       }
     }
   }
-  console.log(`Finished fetching start date: ${symbol} : ${getDateString(minDate)}`);
+  console.log(`Finished fetching start date: ${instrument} : ${getDateString(minDate)}`);
   console.log(`===============`);
   return getDateString(minDate);
 }

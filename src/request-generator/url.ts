@@ -6,7 +6,7 @@ import { pad } from '../utils';
 const URL_ROOT = 'https://datafeed.dukascopy.com/datafeed';
 
 function getUrl(
-  symbol: HistoryConfig['instrument'],
+  instrument: HistoryConfig['instrument'],
   date: Date,
   endpointType: EndpointType,
   priceType: HistoryConfig['priceType']
@@ -20,7 +20,7 @@ function getUrl(
 
   const [yearPad, monthPad, dayPad, hourPad] = [year, month, day, hour].map(pad);
 
-  let url = `${URL_ROOT}/${symbol.toUpperCase()}/${yearPad}/${monthPad}/`;
+  let url = `${URL_ROOT}/${instrument.toUpperCase()}/${yearPad}/${monthPad}/`;
 
   if (endpointType === 'tick') {
     url += `${dayPad}/${hourPad}h_ticks.bi5`;

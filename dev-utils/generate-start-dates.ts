@@ -10,13 +10,13 @@ const writeFile = promisify(fs.readFile);
   try {
     const data: string[][] = [];
 
-    for (const symbol of Object.keys(instruments)) {
-      const minstarDate = await getMinStartDate(symbol);
-      data.push([symbol, minstarDate]);
+    for (const instrument of Object.keys(instruments)) {
+      const minstarDate = await getMinStartDate(instrument);
+      data.push([instrument, minstarDate]);
       await wait(5000);
     }
 
-    await writeFile('symbolsWithStartDates.json', JSON.stringify(data, null, 2));
+    await writeFile('instrumentsWithStartDates.json', JSON.stringify(data, null, 2));
     console.log('DONE');
   } catch (error) {
     console.log(error);
