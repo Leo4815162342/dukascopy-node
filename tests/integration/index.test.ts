@@ -1,8 +1,8 @@
 // Available test data per timeframe:
 
-// EURUSD bid (tick): 2019-02-04 - 2019-02-06
-// EURUSD bid (m1, m30): 2019-02-04 - 2019-02-06
-// EURUSD bid (h1, d1, mn1): 2019-01-01, 2019-03-01
+// tick: EURUSD, bid, 2019-02-04 - 2019-02-06
+// m1, m30: EURUSD, bid, 2019-02-04 - 2019-02-06
+// h1, d1, mn1: EURUSD, bid, 2019-01-01, 2019-03-01
 
 import { HistoryConfig } from '../../src/config/types';
 
