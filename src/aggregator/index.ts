@@ -3,6 +3,8 @@ import { HistoryConfig } from './../config/types';
 import { splitArrayInChunks, roundNum } from './../utils';
 
 function getOHLC(input: number[][], filterFlats = true) {
+  const startMs = input[0][0];
+
   if (filterFlats) {
     // ignoring flat-volumed (0 volume) entries
     input = input.filter(data => data[5] !== 0);
@@ -12,7 +14,6 @@ function getOHLC(input: number[][], filterFlats = true) {
     return [];
   }
 
-  let ts = input[0][0];
   let open = input[0][1];
   let high = input[0][2];
   let low = input[0][3];
@@ -35,7 +36,7 @@ function getOHLC(input: number[][], filterFlats = true) {
     }
   }
 
-  const ohlc = [ts, open, high, low, close];
+  const ohlc = [startMs, open, high, low, close];
 
   if (volume !== undefined) {
     ohlc.push(roundNum(volume));

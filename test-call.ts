@@ -5,10 +5,10 @@ import { getHistoricRates } from './src';
   try {
     const config: HistoryConfig = {
       instrument: 'eurusd',
-      dates: { from: '2019-01-15', to: '2019-01-22' },
+      dates: { from: '2019-02-01', to: '2019-03-01' },
       timeframe: 'd1',
       volumes: true,
-      utcOffset: -1440
+      utcOffset: 0
     };
     console.log('fetching');
     console.log(JSON.stringify(config));

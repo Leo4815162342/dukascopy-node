@@ -39,6 +39,7 @@ function generateRequestData(
     requestData.push({ timestamp, url });
     tempStartDate = getStarOfUtc(tempStartDate, endopointToFilePeriodMap[endpointType], 1);
   }
+
   return requestData;
 }
 
