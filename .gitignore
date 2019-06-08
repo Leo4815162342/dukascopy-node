@@ -42,3 +42,4 @@ typings/
 # dotenv environment variables file
 .env
 .env.test
+.DS_Store
