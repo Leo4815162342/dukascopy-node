@@ -1,3 +1,5 @@
+import { splitArrayInChunks, wait } from '../utils';
+
 import fetch from 'node-fetch';
 
 async function fetchBufferedData(urls: string[]): Promise<Buffer[]> {
@@ -10,4 +12,22 @@ async function fetchBufferedData(urls: string[]): Promise<Buffer[]> {
   );
 }
 
-export { fetchBufferedData };
+async function batchedFetch(
+  urls: string[],
+  batchSize = 10,
+  batchPauseMs = 1000
+): Promise<Buffer[]> {
+  const buffers: Buffer[][] = [];
+
+  const batches = splitArrayInChunks(urls, batchSize);
+
+  for (let i = 0, n = batches.length; i < n; i++) {
+    const bufferData = await fetchBufferedData(batches[i]);
+    buffers.push(bufferData);
+    await wait(batchPauseMs);
+  }
+
+  return [].concat(...buffers);
+}
+
+export { batchedFetch };

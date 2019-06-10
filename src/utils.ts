@@ -51,4 +51,12 @@ function splitArrayInChunks<T>(array: T[], chunkSize: number): T[][] {
   return result;
 }
 
-export { pad, roundNum, getStarOfUtc, normalizedDateInput, splitArrayInChunks };
+function wait(ms: number) {
+  return new Promise(res => {
+    setTimeout(function() {
+      res();
+    }, ms);
+  });
+}
+
+export { pad, roundNum, getStarOfUtc, normalizedDateInput, splitArrayInChunks, wait };

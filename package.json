@@ -13,13 +13,14 @@
   "license": "ISC",
   "dependencies": {
     "date-fns": "^2.0.0-alpha.27",
-    "lzma-purejs": "^0.9.3",
+    "lzma-native": "^4.0.5",
     "node-fetch": "^2.3.0",
     "python-struct": "^1.0.6"
   },
   "devDependencies": {
     "@types/jest": "^24.0.13",
     "@types/node-fetch": "^2.1.7",
+    "@types/lzma-native": "^4.0.0",
     "jest": "^24.8.0",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.0.3",
