@@ -6,7 +6,7 @@
   "typings": "lib/index.d.ts",
   "scripts": {
     "test": "./node_modules/jest/bin/jest.js tests",
-    "test:call": "./node_modules/ts-node/dist/bin.js test-call.ts",
+    "test:call": "./node_modules/ts-node/dist/bin.js dev-utils/test-call.ts",
     "build": "./node_modules/typescript/bin/tsc -p tsconfig.json"
   },
   "author": "leonid.pyrlia",

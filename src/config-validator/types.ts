@@ -12,6 +12,6 @@ export type ConfigValidation = {
   validationErrors: { [key in ConfigKey]?: string[] };
 };
 
-export type KeyValidators = ((value: any) => KeyValidation)[];
+export type KeyValidators = ((...args: any) => KeyValidation)[];
 
 export type ValidatorMap = { [key in ConfigKey]: KeyValidators };
