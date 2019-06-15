@@ -6,14 +6,14 @@
 
 import { HistoryConfig } from '../../src/config/types';
 
+import { getTestCases, getConfigDescription } from '../utils';
+
 import * as lib from '../../src';
 import * as configValidator from '../../src/config-validator';
 import * as requestGenerator from '../../src/request-generator';
 import * as decompressor from '../../src/decompressor';
 import * as normaliser from '../../src/data-normaliser';
 import * as aggregator from '../../src/aggregator';
-
-import { readdirSync } from 'fs';
 
 jest.mock('../../src/buffer-fetcher');
 
@@ -24,15 +24,15 @@ const decompressFn = jest.spyOn(decompressor, 'decompress');
 const normaliseFn = jest.spyOn(normaliser, 'normalise');
 const aggregateFn = jest.spyOn(aggregator, 'aggregate');
 
-describe('main', () => {
-  const testCases = getTestCases('tests/integration/cases');
-  testCases.forEach(generateTest);
-});
-
 type TestCase = {
   config: HistoryConfig;
   expectedOutput: number[][];
 };
+
+describe('main', () => {
+  const testCases = getTestCases<TestCase>('tests/integration/cases');
+  testCases.forEach(generateTest);
+});
 
 function generateTest({ config, expectedOutput }: TestCase) {
   let quotes: TestCase['expectedOutput'];
@@ -73,30 +73,4 @@ function generateTest({ config, expectedOutput }: TestCase) {
       });
     });
   });
-}
-
-function getTestCases(folder: string): TestCase[] {
-  const projectPath = process.cwd();
-
-  const paths = readdirSync(folder);
-
-  const modulePaths = paths.map(
-    casePath => `${projectPath}/${folder}/${casePath.replace('.ts', '')}`
-  );
-
-  const cases: TestCase[] = modulePaths.map(require);
-
-  return cases;
-}
-
-function getConfigDescription(config: HistoryConfig): string {
-  const {
-    instrument,
-    dates: { from, to },
-    timeframe,
-    volumes,
-    utcOffset
-  } = config;
-
-  return `${instrument}, ${timeframe}, ${from}, ${to}, offset: ${utcOffset}`;
 }
