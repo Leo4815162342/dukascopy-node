@@ -24,7 +24,10 @@ async function batchedFetch(
   for (let i = 0, n = batches.length; i < n; i++) {
     const bufferData = await fetchBufferedData(batches[i]);
     buffers.push(bufferData);
-    await wait(batchPauseMs);
+
+    if (n > 1) {
+      await wait(batchPauseMs);
+    }
   }
 
   return [].concat(...buffers);

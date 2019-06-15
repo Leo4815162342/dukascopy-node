@@ -7,7 +7,7 @@ import { getHistoricRates } from '../src';
       instrument: 'ethusd',
       dates: {
         from: '2018-01-01',
-        to: '2019-03-01'
+        to: '2018-12-01'
       },
       timeframe: 'mn1',
       priceType: 'ask',
@@ -19,7 +19,7 @@ import { getHistoricRates } from '../src';
     const quotes = await getHistoricRates(config);
     const d2 = +new Date();
     console.log('fetching success');
-    // console.log(JSON.stringify(quotes));
+    console.log(JSON.stringify(quotes));
     console.log(`size: ${quotes.length}`);
     console.log(`time ms: ${d2 - d1}`);
   } catch (error) {
