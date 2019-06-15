@@ -19,4 +19,6 @@ const expectedOutput = {
 
 const testName = 'Should return false when type of instrument is not a string';
 
+const testGroup = 'Instrument';
+
 export { testName, config, expectedOutput };

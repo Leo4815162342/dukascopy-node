@@ -3,12 +3,13 @@ import { ConfigValidation } from '../../../src/config-validator/types';
 
 import { validateConfig } from '../../../src/config-validator';
 
-import { getTestCases, getConfigDescription } from '../../utils';
+import { getTestCases } from '../../utils';
 
 type TestCase = {
   config: HistoryConfig;
   expectedOutput: ConfigValidation;
   testName: string;
+  testGroup: string;
 };
 
 describe('Config validator', () => {
@@ -16,8 +17,8 @@ describe('Config validator', () => {
   testCases.forEach(generateTestSuite);
 });
 
-function generateTestSuite({ config, expectedOutput, testName }: TestCase) {
-  describe(getConfigDescription(config), () => {
+function generateTestSuite({ config, expectedOutput, testName, testGroup }: TestCase) {
+  describe(testGroup, () => {
     const { isValid, validationErrors } = validateConfig(config);
 
     it(testName, () => {

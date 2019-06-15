@@ -16,4 +16,6 @@ const expectedOutput = {
 
 const testName = 'Should return false when missing instrument';
 
-export { testName, config, expectedOutput };
+const testGroup = 'Instrument';
+
+export { testName, testGroup, config, expectedOutput };

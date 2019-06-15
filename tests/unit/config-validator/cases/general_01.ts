@@ -14,4 +14,6 @@ const expectedOutput = { isValid: true, validationErrors: {} };
 
 const testName = 'Should return true with valid object and empty errors object';
 
-export { testName, config, expectedOutput };
+const testGroup = 'General';
+
+export { testName, testGroup, config, expectedOutput };
