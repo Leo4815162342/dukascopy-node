@@ -25,7 +25,7 @@ async function batchedFetch(
     const bufferData = await fetchBufferedData(batches[i]);
     buffers.push(bufferData);
 
-    if (n > 1) {
+    if (i !== n - 1) {
       await wait(batchPauseMs);
     }
   }
