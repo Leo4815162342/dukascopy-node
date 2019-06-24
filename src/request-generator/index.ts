@@ -1,6 +1,6 @@
 import { HistoryConfig } from '../config/types';
 import { RequestObject, EndopointToFilePeriodMap, EndpointType } from './types';
-import { getStarOfUtc } from './../utils';
+import { getStarOfUtc } from './../utils/date';
 
 import { getUrl } from './url';
 

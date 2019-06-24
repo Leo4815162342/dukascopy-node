@@ -5,18 +5,17 @@ const config = {
     to: '2019-03-05'
   },
   timeframe: 'm1',
-  priceType: 0,
-  utcOffset: 60,
-  volumes: true
+  priceType: 'bid',
+  utcOffset: 0
 };
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: ["The 'priceType' field must be a string!"]
+  validationErrors: ["The 'volumes' field is required!"]
 };
 
-const testName = 'Should return false when type of priceType is not a string';
+const testName = 'aaa';
 
-const testGroup = 'Price type';
+const testGroup = 'Volumes';
 
 export { testName, testGroup, config, expectedOutput };

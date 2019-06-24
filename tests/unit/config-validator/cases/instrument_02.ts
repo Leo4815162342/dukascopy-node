@@ -1,5 +1,4 @@
 const config = {
-  instrument: '',
   dates: {
     from: '2019-03-01',
     to: '2019-03-05'
@@ -12,10 +11,10 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: { instrument: ['value is missing', 'instrument "" is not supported'] }
+  validationErrors: ["The 'instrument' field is required!"]
 };
 
-const testName = 'Should return false on empty instrument';
+const testName = 'Should return false when missing instrument';
 
 const testGroup = 'Instrument';
 

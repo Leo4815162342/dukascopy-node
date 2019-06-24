@@ -9,14 +9,7 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: {
-    dates: [
-      'From date is missing',
-      'To date is missing',
-      'From date is not a valid date',
-      'To date is not a valid date'
-    ]
-  }
+  validationErrors: ["The 'dates.from' field is required!", "The 'dates.to' field is required!"]
 };
 
 const testName = 'Should return false on empty date object';

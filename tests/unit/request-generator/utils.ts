@@ -1,15 +1,17 @@
 import { HistoryConfig } from '../../../src/config/types';
 import { generateRequestData } from '../../../src/request-generator';
-import { normalizedDateInput } from '../../../src/utils';
+import { normalizeDates } from '../../../src/utils/date';
 
-function getReuqestData({
-  instrument,
-  dates: { from, to },
-  timeframe,
-  utcOffset,
-  priceType
-}: HistoryConfig) {
-  const [fromDate, toDate] = [from, to].map(d => normalizedDateInput(d, utcOffset));
+function getReuqestData(config: HistoryConfig) {
+  const {
+    instrument,
+    dates: { from, to },
+    timeframe,
+    priceType,
+    utcOffset
+  } = config;
+
+  const [fromDate, toDate] = normalizeDates(instrument, from, to, timeframe, utcOffset);
 
   return generateRequestData(instrument, fromDate, toDate, timeframe, priceType);
 }

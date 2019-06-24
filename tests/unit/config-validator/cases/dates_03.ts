@@ -12,9 +12,7 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: {
-    dates: ['To date is not a valid date']
-  }
+  validationErrors: ["The 'dates.to' field must be a valid date string! Actual: 2019-02-29"]
 };
 
 const testName = 'Should return false on invalid To date';

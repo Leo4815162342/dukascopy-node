@@ -1,6 +1,6 @@
 import { HistoryConfig } from './../config/types';
 
-import { splitArrayInChunks, roundNum } from './../utils';
+import { splitArrayInChunks, roundNum } from './../utils/general';
 
 function getOHLC(input: number[][], filterFlats = true) {
   const startMs = input[0][0];

@@ -14,3 +14,8 @@ export type HistoryConfig = {
   utcOffset?: number;
   volumes?: boolean;
 };
+
+export type ValidationStatus = {
+  isValid: boolean;
+  validationErrors: string[];
+};

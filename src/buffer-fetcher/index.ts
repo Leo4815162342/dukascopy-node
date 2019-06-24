@@ -1,4 +1,4 @@
-import { splitArrayInChunks, wait } from '../utils';
+import { splitArrayInChunks, wait } from '../utils/general';
 
 import fetch from 'node-fetch';
 
@@ -25,7 +25,7 @@ async function batchedFetch(
     const bufferData = await fetchBufferedData(batches[i]);
     buffers.push(bufferData);
 
-    if (i !== n - 1) {
+    if (n > 1) {
       await wait(batchPauseMs);
     }
   }

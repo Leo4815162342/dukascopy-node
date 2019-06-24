@@ -1,6 +1,6 @@
 import { HistoryConfig } from './../config/types';
 import { instruments } from '../config/instruments';
-import { roundNum } from './../utils';
+import { roundNum } from './../utils/general';
 
 function getNormaliser(
   timeframe: HistoryConfig['timeframe'],

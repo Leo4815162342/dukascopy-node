@@ -1,6 +1,6 @@
 import { HistoryConfig } from './config/types';
 
-import { normalizedDateInput } from './utils';
+import { normalizeDates } from './utils/date';
 import { defaultConfig } from './config';
 import { batchedFetch } from './buffer-fetcher';
 import { validateConfig } from './config-validator';
@@ -23,11 +23,11 @@ async function getHistoricRates(config: HistoryConfig): Promise<number[][]> {
     dates: { from, to },
     timeframe,
     priceType,
-    utcOffset,
-    volumes
+    volumes,
+    utcOffset
   } = mergedConfig;
 
-  const [startDate, endDate] = [from, to].map(d => normalizedDateInput(d, utcOffset));
+  const [startDate, endDate] = normalizeDates(instrument, from, to, timeframe, utcOffset);
 
   const requestData = generateRequestData(instrument, startDate, endDate, timeframe, priceType);
 

@@ -1,5 +1,5 @@
 import { HistoryConfig } from '../../../src/config/types';
-import { ConfigValidation } from '../../../src/config-validator/types';
+import { ValidationStatus } from '../../../src/config-validator/types';
 
 import { validateConfig } from '../../../src/config-validator';
 
@@ -7,7 +7,7 @@ import { getTestCases } from '../../utils';
 
 type TestCase = {
   config: HistoryConfig;
-  expectedOutput: ConfigValidation;
+  expectedOutput: ValidationStatus;
   testName: string;
   testGroup: string;
 };
@@ -18,7 +18,7 @@ describe('Config validator', () => {
 });
 
 function generateTestSuite({ config, expectedOutput, testName, testGroup }: TestCase) {
-  describe(testGroup, () => {
+  describe.only(testGroup, () => {
     const { isValid, validationErrors } = validateConfig(config);
 
     it(testName, () => {

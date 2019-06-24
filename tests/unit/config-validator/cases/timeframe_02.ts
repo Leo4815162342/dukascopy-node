@@ -4,7 +4,7 @@ const config = {
     from: '2019-03-01',
     to: '2019-03-05'
   },
-  timeframe: '',
+  timeframe: 'xxxyyyzzz',
   priceType: 'bid',
   utcOffset: 60,
   volumes: true
@@ -12,10 +12,10 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: { timeframe: ['value is missing', 'Timeframe "" is not supported'] }
+  validationErrors: ["The 'timeframe' field does not match any of the allowed values!"]
 };
 
-const testName = 'Should return false on empty timeframe';
+const testName = 'Should return false on unsupported timeframe';
 
 const testGroup = 'Timeframe';
 

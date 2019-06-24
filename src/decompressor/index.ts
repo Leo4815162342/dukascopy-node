@@ -22,6 +22,8 @@ async function decompress(
 
   const step = struct.sizeOf(format);
 
+  // TODO: do not throw when url is not available
+
   for (let i = 0, n = decompressedBuffer.length; i < n; i += step) {
     const chunk = decompressedBuffer.slice(i, i + step);
     const unpacked = struct.unpack(format, chunk);

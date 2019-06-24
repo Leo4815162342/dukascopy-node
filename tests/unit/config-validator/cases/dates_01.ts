@@ -8,9 +8,7 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: {
-    dates: [`key does not exist in search config`]
-  }
+  validationErrors: ["The 'dates' field is required!"]
 };
 
 const testName = 'Should return false when dates key does not exist';

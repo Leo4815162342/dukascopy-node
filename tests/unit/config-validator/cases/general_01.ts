@@ -10,7 +10,10 @@ const config = {
   volumes: true
 };
 
-const expectedOutput = { isValid: true, validationErrors: {} };
+const expectedOutput: {
+  isValid: boolean;
+  validationErrors: string[];
+} = { isValid: true, validationErrors: [] };
 
 const testName = 'Should return true with valid object and empty errors object';
 

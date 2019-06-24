@@ -11,7 +11,7 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: { timeframe: [`key does not exist in search config`] }
+  validationErrors: ["The 'timeframe' field is required!"]
 };
 
 const testName = 'Should return false when timeframe key does not exist';

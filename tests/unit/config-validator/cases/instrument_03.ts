@@ -1,4 +1,5 @@
 const config = {
+  instrument: 12345,
   dates: {
     from: '2019-03-01',
     to: '2019-03-05'
@@ -11,10 +12,10 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: { instrument: ['key does not exist in search config'] }
+  validationErrors: ["The 'instrument' field must be a string!"]
 };
 
-const testName = 'Should return false when missing instrument';
+const testName = 'Should return false when type of instrument is not a string';
 
 const testGroup = 'Instrument';
 

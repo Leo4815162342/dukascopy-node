@@ -1,5 +1,5 @@
 const config = {
-  instrument: 'abcdxxx',
+  instrument: '',
   dates: {
     from: '2019-03-01',
     to: '2019-03-05'
@@ -12,7 +12,7 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: { instrument: ['instrument "abcdxxx" is not supported'] }
+  validationErrors: ["The 'instrument' field does not match any of the allowed values!"]
 };
 
 const testName = 'Should return false on unsupported instrument';

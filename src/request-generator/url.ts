@@ -1,7 +1,7 @@
 import { HistoryConfig } from '../config/types';
 
 import { EndpointType } from './types';
-import { pad } from '../utils';
+import { pad } from '../utils/general';
 
 const URL_ROOT = 'https://datafeed.dukascopy.com/datafeed';
 

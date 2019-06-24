@@ -6,17 +6,17 @@ const config = {
   },
   timeframe: 'm1',
   priceType: 'bid',
-  utcOffset: 'xxx',
-  volumes: true
+  utcOffset: 0,
+  volumes: 'xxx'
 };
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: { utcOffset: ['value has to be a number'] }
+  validationErrors: ["The 'volumes' field must be a boolean!"]
 };
 
-const testName = 'Should return false when type of priutcOffsetceType is not a number';
+const testName = 'aaa';
 
-const testGroup = 'UTC Offset';
+const testGroup = 'Volumes';
 
 export { testName, testGroup, config, expectedOutput };

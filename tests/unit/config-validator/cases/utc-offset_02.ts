@@ -6,16 +6,16 @@ const config = {
   },
   timeframe: 'm1',
   priceType: 'bid',
-  utcOffset: '',
+  utcOffset: 'xxx',
   volumes: true
 };
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: { utcOffset: ['value is missing', 'value has to be a number'] }
+  validationErrors: ["The 'utcOffset' field must be a number!"]
 };
 
-const testName = 'Should return false on empty utcOffset';
+const testName = 'Should return false when type of utcOffset is not a number';
 
 const testGroup = 'UTC Offset';
 

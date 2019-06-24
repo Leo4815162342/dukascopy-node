@@ -9,20 +9,14 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: {
-    instrument: ['value is missing', 'instrument "" is not supported'],
-    dates: [
-      'value is missing',
-      'From date is missing',
-      'To date is missing',
-      'From date is not a valid date',
-      'To date is not a valid date'
-    ],
-    timeframe: ['value is missing', 'Timeframe "" is not supported'],
-    priceType: ['value is missing', 'Price type "" is not supported'],
-    utcOffset: ['value is missing', 'value has to be a number'],
-    volumes: ['value is missing', 'value has to be a boolean']
-  }
+  validationErrors: [
+    "The 'instrument' field does not match any of the allowed values!",
+    "The 'dates' must be an Object!",
+    "The 'timeframe' field does not match any of the allowed values!",
+    "The 'priceType' field does not match any of the allowed values!",
+    "The 'utcOffset' field must be a number!",
+    "The 'volumes' field must be a boolean!"
+  ]
 };
 
 const testName = 'Should return false when all keys are empty';

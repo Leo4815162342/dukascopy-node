@@ -1,62 +1,38 @@
 import { HistoryConfig } from '../config/types';
-import { KeyValidation, ConfigValidation, ConfigKey, KeyValidators, ValidatorMap } from './types';
+import { ValidationStatus } from './types';
 
-import { isInstrumentValid } from './instrument';
-import { isDatesValid } from './dates';
-import { isPriceTypeValid } from './price-type';
-import { isTimeframeValid } from './timeframe';
+import { schema } from './schema';
+import Validator from 'fastest-validator';
 
-import commonValidators from './common';
-const { required, isBoolean, isString, isNumber } = commonValidators;
+import isValid from 'date-fns/isValid';
+import parseISO from 'date-fns/parseISO';
 
-const configValidatorMap: ValidatorMap = {
-  instrument: [required, isString, isInstrumentValid],
-  dates: [required, isDatesValid],
-  timeframe: [required, isString, isTimeframeValid],
-  priceType: [required, isString, isPriceTypeValid],
-  utcOffset: [required, isNumber],
-  volumes: [required, isBoolean]
-};
+const validator = new Validator({
+  messages: {
+    invalidDateString: "The '{field}' field must be a valid date string! Actual: {actual}"
+  }
+});
 
-function validateKey(keyValue: any, keyValidators: KeyValidators): KeyValidation {
-  const validationStatus = keyValidators.reduce(
-    (status, validator) => {
-      const { isValid, validationErrors } = validator(keyValue);
-      if (!isValid) {
-        status.isValid = false;
-        status.validationErrors = [...status.validationErrors, ...validationErrors];
-      }
-      return status;
-    },
-    <KeyValidation>{ isValid: true, validationErrors: [] }
-  );
-
-  return validationStatus;
-}
-
-function validateConfig(config: HistoryConfig) {
-  const status: ConfigValidation = { isValid: true, validationErrors: {} };
-
-  for (const key in configValidatorMap) {
-    if (config.hasOwnProperty(key)) {
-      const keyValue = config[key as ConfigKey];
-      const keyValidators = configValidatorMap[key as ConfigKey];
-      const { isValid: keyIsValid, validationErrors: keyErrors } = validateKey(
-        keyValue,
-        keyValidators
-      );
-
-      if (!keyIsValid) {
-        status.isValid = false;
-        status.validationErrors[key as ConfigKey] = keyErrors;
-      }
-    } else {
-      status.isValid = false;
-      status.validationErrors[key as ConfigKey] = ['key does not exist in search config'];
-    }
+validator.add('dateString', (value: any) => {
+  if (!isValid(parseISO(value))) {
+    return validator.makeError('invalidDateString', null, value);
   }
 
-  return status;
+  return true;
+});
+
+const check = validator.compile(schema);
+
+function validateConfig(config: HistoryConfig): ValidationStatus {
+  const validationResult = check(config);
+
+  const isValid = validationResult === true;
+
+  return {
+    isValid,
+    validationErrors:
+      !isValid && Array.isArray(validationResult) ? validationResult.map(item => item.message) : []
+  };
 }
 
 export { validateConfig };

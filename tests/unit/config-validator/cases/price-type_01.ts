@@ -11,7 +11,7 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: { priceType: [`key does not exist in search config`] }
+  validationErrors: ["The 'priceType' field is required!"]
 };
 
 const testName = 'Should return false when priceType key does not exist';

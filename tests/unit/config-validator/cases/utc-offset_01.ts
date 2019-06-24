@@ -11,7 +11,7 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: { utcOffset: [`key does not exist in search config`] }
+  validationErrors: ["The 'utcOffset' field is required!"]
 };
 
 const testName = 'Should return false when utcOffset key does not exist';

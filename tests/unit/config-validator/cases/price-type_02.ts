@@ -5,17 +5,17 @@ const config = {
     to: '2019-03-05'
   },
   timeframe: 'm1',
-  priceType: '',
+  priceType: 'aaabbbccc',
   utcOffset: 60,
   volumes: true
 };
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: { priceType: ['value is missing', 'Price type "" is not supported'] }
+  validationErrors: ["The 'priceType' field does not match any of the allowed values!"]
 };
 
-const testName = 'Should return false on empty priceType';
+const testName = 'Should return false on unsupported priceType';
 
 const testGroup = 'Price type';
 
