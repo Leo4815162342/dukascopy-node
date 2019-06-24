@@ -1,7 +1,7 @@
 import { HistoryConfig } from './config/types';
 
 import { normalizeDates } from './utils/date';
-import { defaultConfig } from './config';
+import { defaultConfig } from './config/default-config';
 import { batchedFetch } from './buffer-fetcher';
 import { validateConfig } from './config-validator';
 import { generateRequestData } from './request-generator';
