@@ -34,8 +34,27 @@ const historicData =
 
 <h2>Options</h2>
 
+**`instrument`**
 
+`dates`
 
+`timeframe`
+
+| parameter        | value           | Cool  |
+| ------------- |:-------------:| -----:|
+| instrument      | right-aligned | $1600 |
+| dates      | centered      |   $12 |
+| timeframe | are neat      |    $1 |
+| priceType | are neat      |    $1 |
+| volumes | are neat      |    $1 |
+| utcOffset | are neat      |    $1 |
+
+| parameter | type    | description                                      |
+| --------- | ------- | ------------------------------------------------ |
+| `instrument`| string | id of an instrument (see full list below)|
+| `dates`  | Object | date range |
+| `timeframe` | string  | a parsed package.json                            |
+| `travis`  | boolean | whether to output a travis badge along with docs |
 
 
 <h2>Supported instruments</h2>
