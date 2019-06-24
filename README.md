@@ -8,7 +8,7 @@
   <a href="https://github.com/facebook/jest"><img src="https://img.shields.io/badge/tested_with-jest-99424f.svg" alt="Coverage Status"></a>
 </p>
 
-A node.js client for fetching and aggregation of historical stock/commodities/forex OHLC exchange rates for 500+ instruments from https://www.dukascopy.com/
+A node.js client for fetching and aggregation of historical OHLC exchange rates for 500+ instruments (stocks/commodities/forex) from https://www.dukascopy.com/
 
 <h2>Installation</h2>
 <h4>NPM:</h4>
