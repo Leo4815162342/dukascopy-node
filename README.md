@@ -4,6 +4,7 @@
 
 <p align="center">
   <a href="https://travis-ci.org/icebob/fastest-validator.svg?branch=master"><img src="https://travis-ci.org/icebob/fastest-validator.svg?branch=master" alt="Build Status"></a>
+  <a href="https://coveralls.io/r/sindresorhus/pageres?branch=master"><img src="https://coveralls.io/repos/sindresorhus/pageres/badge.svg?branch=master" alt="Build Status"></a>
   <a href="https://github.com/facebook/jest"><img src="https://img.shields.io/badge/tested_with-jest-99424f.svg" alt="Coverage Status"></a>
 </p>
 
