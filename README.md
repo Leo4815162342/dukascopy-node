@@ -18,7 +18,7 @@ npm install dukascopy-node --save
 <h4>yarn:</h4>
 
 ```bash
-yarn add dukascopy-node --save  
+yarn add dukascopy-node  
 
 ```
 
