@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 
-import { pad } from '../src/utils';
+import { pad } from '../src/utils/general';
 import { URL_ROOT } from '../src/request-generator/url';
 
 interface GetFileUrlInput {
