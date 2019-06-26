@@ -54,6 +54,8 @@ import { getHistoricRates } from 'dukascopy-node';
 
 ```
 
+
+
 <h2>Options</h2>
 
 #### **`instrument`**
@@ -61,7 +63,7 @@ import { getHistoricRates } from 'dukascopy-node';
 * Type: `String`
 * Description: an id of the trading instrument
 * Required: true
-* Supported values: see **Supported instruments** section 
+* Supported values: [see list](#instruments) 
 
 #### **`dates`**
 
@@ -111,7 +113,7 @@ import { getHistoricRates } from 'dukascopy-node';
 * Required: false
 * Default: `true`
 
-<h2>Supported instruments</h2>
+<h2 id="instruments">Supported instruments</h2>
 
 |Instrument id|Instrument name|Description|Available start date|
 |-|-|-|-|
