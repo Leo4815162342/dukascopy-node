@@ -95,30 +95,14 @@ getHistoricRates({
 
 
 ```javascript
-(async () => {
-  try {
-
-    const data = await getHistoricRates({
-      instrument: 'eurusd',
-      dates: {
-        from: '2008-08-08 00:00',
-        to: '2008-08-08 01:00'
-      },
-      timeframe: 'tick',
-    });
-
-    // data
-    // timestamp, ask, bid, askVolume, bidVolume
-    [
+    
+    [ 
+      // timestamp, askPrice, bidPirce, askVolume, bidVolume
       [1218153600033, 1.53137, 1.53117, 9.3, 9.6]
       [1218153600306, 1.53133, 1.53113, 12.1, 2.4]
       [1218153600445, 1.53127, 1.53112, 6, 8.4]
       ...
     ]
-
-
-  }
-})();
 
 ```
 
