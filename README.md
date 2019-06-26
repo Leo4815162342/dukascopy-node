@@ -27,6 +27,8 @@ yarn add dukascopy-node
 
 <h2>Usage</h2>
 
+<h3>Async/await:</h3>
+
 ```javascript
 import { getHistoricRates } from 'dukascopy-node';
 
@@ -54,7 +56,28 @@ import { getHistoricRates } from 'dukascopy-node';
 
 ```
 
+<h3>.then()</h3>
 
+```javascript
+getHistoricRates({
+  instrument: 'btcusd',
+  dates: {
+    from: '2018-03-01',
+    to: '2018-04-01'
+  },
+  timeframe: 'd1',
+  priceType: 'bid',
+  utcOffset: 0,
+  volumes: true
+})
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    error;
+  });
+
+```
 
 <h2>Options</h2>
 
