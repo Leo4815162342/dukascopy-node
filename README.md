@@ -27,7 +27,7 @@ yarn add dukascopy-node
 
 <h2>Usage</h2>
 
-<h3>import/require</h3>
+<h3>import/require:</h3>
 
 ```javascript
 // ES6 Import
@@ -38,7 +38,7 @@ const { getHistoricRates } = require('dukascopy-node');
 
 ```
 
-<h3>Calling with `async/await`:</h3>
+<h3>calling with `async/await`:</h3>
 
 ```javascript
 import { getHistoricRates } from 'dukascopy-node';
@@ -67,7 +67,7 @@ import { getHistoricRates } from 'dukascopy-node';
 
 ```
 
-<h3>Calling with `.then()`:</h3>
+<h3>calling with `.then()`:</h3>
 
 ```javascript
 getHistoricRates({
