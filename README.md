@@ -36,19 +36,38 @@ const historicData =
 
 <h2>Options</h2>
 
-**`instrument`**
+#### **`instrument`**
 
-`dates`
+* Type: `String`
+* Description: an id of the requested instrument
+* Required: true
+* Supported values: see **Supported instruments** section 
 
-`timeframe`
+#### **`dates`**
 
+* Type: `Object`
+* Description: an object with requested date range
+* Required: true
 
-| parameter | type    | description                                      |
-| - | - | - |
-| `instrument`| string | id of an instrument (see full list below)|
-| `dates`  | Object | date range |
-| `timeframe` | string  | a parsed package.json                            |
-| `travis`  | boolean | whether to output a travis badge along with docs |
+#### **`dates.from`**
+
+* Type: `String`
+* Description: UTC-based date string representing start of the time range 
+* Required: true
+
+#### **`dates.from`**
+
+* Type: `String`
+* Description: UTC-based date string representing end of time range
+* Required: true
+
+#### **`timeframe`**
+
+* Type: `String`
+* Description: desired time aggregation
+* Required: false
+* Default: `m1`
+* Supported values: `tick`, `m1`, `m30`, `h1`, `d1`, `mn1` 
 
 <h2>Supported instruments</h2>
 
