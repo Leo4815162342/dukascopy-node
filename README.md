@@ -38,7 +38,7 @@ const { getHistoricRates } = require('dukascopy-node');
 
 ```
 
-<h4>calling with `async/await`:</h4>
+#### calling with `async/await`:
 
 ```javascript
 (async () => {
@@ -65,7 +65,7 @@ const { getHistoricRates } = require('dukascopy-node');
 
 ```
 
-<h4>calling with `.then()`:</h4>
+#### calling with `.then()`:
 
 ```javascript
 getHistoricRates({
