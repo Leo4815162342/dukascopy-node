@@ -10,24 +10,24 @@
 
 A node.js client for fetching and aggregation of historical OHLC exchange rates for 500+ instruments (stocks/commodities/currencies/cfd/crypto) from https://www.dukascopy.com/
 
-<h2>Installation</h2>
-<h4>NPM:</h4>
+## Installation
+#### NPM:
 
 ```bash
 npm install dukascopy-node --save  
 
 ```
 
-<h4>yarn:</h4>
+#### yarn:
 
 ```bash
 yarn add dukascopy-node  
 
 ```
 
-<h2>Usage</h2>
+## Usage
 
-<h4>import/require:</h4>
+#### import/require:
 
 ```javascript
 // ES6 Import
