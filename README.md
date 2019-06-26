@@ -39,14 +39,14 @@ const historicData =
 #### **`instrument`**
 
 * Type: `String`
-* Description: an id of the requested instrument
+* Description: an id of the trading instrument
 * Required: true
 * Supported values: see **Supported instruments** section 
 
 #### **`dates`**
 
 * Type: `Object`
-* Description: an object with requested date range
+* Description: an object with date range
 * Required: true
 
 #### **`dates.from`**
@@ -55,7 +55,7 @@ const historicData =
 * Description: UTC-based date string representing start of the time range 
 * Required: true
 
-#### **`dates.from`**
+#### **`dates.to`**
 
 * Type: `String`
 * Description: UTC-based date string representing end of time range
@@ -64,10 +64,32 @@ const historicData =
 #### **`timeframe`**
 
 * Type: `String`
-* Description: desired time aggregation
+* Description: timeframe aggregation of OHLC (open, high, low, close) data
 * Required: false
 * Default: `m1`
-* Supported values: `tick`, `m1`, `m30`, `h1`, `d1`, `mn1` 
+* Supported values: `tick`, `m1`, `m30`, `h1`, `d1`, `mn1`
+
+#### **`priceType`**
+
+* Type: `String`
+* Description: type of price
+* Required: false
+* Default: `bid`
+* Supported values: `bid`, `ask`
+
+#### **`utcOffset`**
+
+* Type: `Number`
+* Description: UTC offset of the requst in minutes
+* Required: false
+* Default: `0`
+
+#### **`volumes`**
+
+* Type: `Boolean`
+* Description: a flag indicating whether the output should contain volume data
+* Required: false
+* Default: `true`
 
 <h2>Supported instruments</h2>
 
