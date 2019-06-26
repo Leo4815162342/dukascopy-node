@@ -147,7 +147,7 @@ getHistoricRates({
 * Description: timeframe aggregation of OHLC (open, high, low, close) data
 * Required: false
 * Default: `m1`
-* Supported values: `tick`, `m1`, `m30`, `h1`, `d1`, `mn1`
+* Supported values: `tick` (every tick), `m1` (1 minute), `m30` (30 minutes), `h1` (1 hour), `d1` (1 day), `mn1` (1 month)
 
 #### **`priceType`**
 
