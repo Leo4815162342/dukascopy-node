@@ -74,7 +74,7 @@ getHistoricRates({
     console.log(data);
   })
   .catch(error => {
-    error;
+    console.log('fetching error', error);
   });
 
 ```
