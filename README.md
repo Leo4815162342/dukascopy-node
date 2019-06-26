@@ -88,7 +88,7 @@ getHistoricRates({
 
 ```
 
-<h2>Options</h2>
+<h2>Config parameters:</h2>
 
 #### **`instrument`**
 
