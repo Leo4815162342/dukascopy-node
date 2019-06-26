@@ -30,7 +30,27 @@ yarn add dukascopy-node
 ```javascript
 import { getHistoricRates } from 'dukascopy-node';
 
-const historicData = 
+(async () => {
+  try {
+
+    const data = await getHistoricRates({
+      instrument: 'btcusd',
+      dates: {
+        from: '2018-03-01',
+        to: '2018-04-01'
+      },
+      timeframe: 'd1',
+      priceType: 'bid',
+      utcOffset: 0,
+      volumes: true
+    });
+
+    console.log(data);
+
+  } catch (error) {
+    console.log('fetching error', error);
+  }
+})();
 
 ```
 
