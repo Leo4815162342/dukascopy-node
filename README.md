@@ -90,12 +90,21 @@ getHistoricRates({
 
 <h2>Output</h2>
 
-#### timeframe: `tick`
-
-
+#### timeframe: `m1` | `m30` | `h1`| `d1` | `mn1` 
 
 ```javascript
-    
+    [
+      // timestamp,   open,    high,    low,     close,   volume
+      [1218153600000, 1.53117, 1.53128, 1.52343, 1.52458, 28078.0156]
+      [1218157200000, 1.52428, 1.52497, 1.51920, 1.52292, 24342.3906]
+      [1218160800000, 1.52289, 1.52449, 1.52029, 1.52325, 24014.8496]
+      ...
+    ]
+```
+
+#### timeframe: `tick`
+
+```javascript
     [ 
       // timestamp, askPrice, bidPirce, askVolume, bidVolume
       [1218153600033, 1.53137, 1.53117, 9.3, 9.6]
@@ -103,10 +112,7 @@ getHistoricRates({
       [1218153600445, 1.53127, 1.53112, 6, 8.4]
       ...
     ]
-
 ```
-
-#### timeframe: `m1` | `m30` | `h1`| `d1` | `mn1` 
 
 <h2>Config parameters:</h2>
 
