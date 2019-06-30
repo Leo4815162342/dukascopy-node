@@ -29,47 +29,67 @@ type TestCase = {
   expectedOutput: number[][];
 };
 
-describe('main', () => {
+describe('getHistoricRates', () => {
   const testCases = getTestCases<TestCase>('tests/integration/cases');
-  testCases.forEach(({ content }) => generateTest(content));
+  testCases.forEach(({ content, path }) => {
+    if (path.indexOf('fail_') >= 0) {
+      generateFailTestCase(content);
+    } else {
+      generateSuccessTestCase(content);
+    }
+  });
 });
 
-function generateTest({ config, expectedOutput }: TestCase) {
+function generateFailTestCase({ config, expectedOutput }: TestCase) {
+  describe('fail', () => {
+    it('Should throw validation errors on invalid config', async () => {
+      expect.assertions(1);
+      try {
+        await lib.getHistoricRates(config);
+      } catch (error) {
+        expect(error.validationErrors).toEqual(expectedOutput);
+      }
+    });
+  });
+}
+
+function generateSuccessTestCase({ config, expectedOutput }: TestCase) {
   let quotes: TestCase['expectedOutput'];
   let requestObjCount = 0;
+  describe('success', () => {
+    describe(config.timeframe, () => {
+      describe(getConfigDescription(config), () => {
+        beforeAll(() => jest.clearAllMocks());
 
-  describe(config.timeframe, () => {
-    describe(getConfigDescription(config), () => {
-      beforeAll(() => jest.clearAllMocks());
+        it('should call "getHistoricRates" function once', async () => {
+          quotes = await lib.getHistoricRates(config);
+          expect(getHistoricRatesFn).toHaveBeenCalledTimes(1);
+        });
 
-      it('should call "getHistoricRates" function once', async () => {
-        quotes = await lib.getHistoricRates(config);
-        expect(getHistoricRatesFn).toHaveBeenCalledTimes(1);
-      });
+        it('should call "validateConfig" function once', () => {
+          expect(validateConfigFn).toHaveBeenCalledTimes(1);
+        });
 
-      it('should call "validateConfig" function once', () => {
-        expect(validateConfigFn).toHaveBeenCalledTimes(1);
-      });
+        it('should call "generateRequestData" function once', () => {
+          expect(generateRequestDataFn).toHaveBeenCalledTimes(1);
+          requestObjCount = generateRequestDataFn.mock.results[0].value.length;
+        });
 
-      it('should call "generateRequestData" function once', () => {
-        expect(generateRequestDataFn).toHaveBeenCalledTimes(1);
-        requestObjCount = generateRequestDataFn.mock.results[0].value.length;
-      });
+        it(`should call "decompress" function proper number of times`, () => {
+          expect(decompressFn).toHaveBeenCalledTimes(requestObjCount);
+        });
 
-      it(`should call "decompress" function proper number of times`, () => {
-        expect(decompressFn).toHaveBeenCalledTimes(requestObjCount);
-      });
+        it(`should call "normalise" function proper number of times`, () => {
+          expect(normaliseFn).toHaveBeenCalledTimes(requestObjCount);
+        });
 
-      it(`should call "normalise" function proper number of times`, () => {
-        expect(normaliseFn).toHaveBeenCalledTimes(requestObjCount);
-      });
+        it(`should call "aggregate" function once`, () => {
+          expect(aggregateFn).toHaveBeenCalledTimes(1);
+        });
 
-      it(`should call "aggregate" function once`, () => {
-        expect(aggregateFn).toHaveBeenCalledTimes(1);
-      });
-
-      it('should generate correct output', () => {
-        expect(quotes).toEqual(expectedOutput);
+        it('should generate correct output', () => {
+          expect(quotes).toEqual(expectedOutput);
+        });
       });
     });
   });
