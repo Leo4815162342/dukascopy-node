@@ -59,7 +59,7 @@ const { getHistoricRates } = require('dukascopy-node');
     console.log(data);
 
   } catch (error) {
-    console.log('fetching error', error);
+    console.log('error', error);
   }
 })();
 
@@ -83,7 +83,7 @@ getHistoricRates({
     console.log(data);
   })
   .catch(error => {
-    console.log('fetching error', error);
+    console.log('error', error);
   });
 
 ```

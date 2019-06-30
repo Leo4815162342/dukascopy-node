@@ -47,6 +47,6 @@ import { getHistoricRates } from '../src';
     console.log(`size: ${quotes.length}`);
     console.log(`time ms: ${d2 - d1}`);
   } catch (error) {
-    console.log('fetching error', error);
+    console.log('error', error);
   }
 })();
