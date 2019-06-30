@@ -15,7 +15,7 @@ async function getHistoricRates(config: HistoryConfig): Promise<number[][]> {
   const { isValid, validationErrors } = validateConfig(mergedConfig);
 
   if (!isValid) {
-    throw validationErrors;
+    throw { validationErrors };
   }
 
   const {
