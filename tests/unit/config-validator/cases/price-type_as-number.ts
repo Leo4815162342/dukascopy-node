@@ -15,8 +15,4 @@ const expectedOutput = {
   validationErrors: ["The 'priceType' field must be a string!"]
 };
 
-const testName = 'Should return false when type of priceType is not a string';
-
-const testGroup = 'Price type';
-
-export { testName, testGroup, config, expectedOutput };
+export { config, expectedOutput };

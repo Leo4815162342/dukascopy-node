@@ -11,8 +11,4 @@ const expectedOutput = {
   validationErrors: ["The 'dates' field is required!"]
 };
 
-const testName = 'Should return false when dates key does not exist';
-
-const testGroup = 'Dates';
-
-export { testName, testGroup, config, expectedOutput };
+export { config, expectedOutput };

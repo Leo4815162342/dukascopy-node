@@ -14,8 +14,4 @@ const expectedOutput = {
   validationErrors: ["The 'utcOffset' field is required!"]
 };
 
-const testName = 'Should return false when utcOffset key does not exist';
-
-const testGroup = 'UTC Offset';
-
-export { testName, testGroup, config, expectedOutput };
+export { config, expectedOutput };

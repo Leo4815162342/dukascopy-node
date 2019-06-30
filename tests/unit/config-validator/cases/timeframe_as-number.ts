@@ -15,8 +15,4 @@ const expectedOutput = {
   validationErrors: ["The 'timeframe' field must be a string!"]
 };
 
-const testName = 'Should return false when type of timeframe is not a string';
-
-const testGroup = 'Timeframe';
-
-export { testName, testGroup, config, expectedOutput };
+export { config, expectedOutput };

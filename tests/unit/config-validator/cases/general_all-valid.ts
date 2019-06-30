@@ -15,8 +15,4 @@ const expectedOutput: {
   validationErrors: string[];
 } = { isValid: true, validationErrors: [] };
 
-const testName = 'Should return true with valid object and empty errors object';
-
-const testGroup = 'General';
-
-export { testName, testGroup, config, expectedOutput };
+export { config, expectedOutput };

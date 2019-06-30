@@ -15,8 +15,4 @@ const expectedOutput = {
   validationErrors: ["The 'utcOffset' field must be a number!"]
 };
 
-const testName = 'Should return false when type of utcOffset is not a number';
-
-const testGroup = 'UTC Offset';
-
-export { testName, testGroup, config, expectedOutput };
+export { config, expectedOutput };

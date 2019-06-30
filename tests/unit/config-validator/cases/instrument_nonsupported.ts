@@ -1,5 +1,5 @@
 const config = {
-  instrument: '',
+  instrument: 'abcdxxx',
   dates: {
     from: '2019-03-01',
     to: '2019-03-05'
@@ -15,8 +15,4 @@ const expectedOutput = {
   validationErrors: ["The 'instrument' field does not match any of the allowed values!"]
 };
 
-const testName = 'Should return false on unsupported instrument';
-
-const testGroup = 'Instrument';
-
-export { testName, testGroup, config, expectedOutput };
+export { config, expectedOutput };

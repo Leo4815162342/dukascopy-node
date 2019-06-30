@@ -15,8 +15,4 @@ const expectedOutput = {
   validationErrors: ["The 'timeframe' field does not match any of the allowed values!"]
 };
 
-const testName = 'Should return false on unsupported timeframe';
-
-const testGroup = 'Timeframe';
-
-export { testName, testGroup, config, expectedOutput };
+export { config, expectedOutput };

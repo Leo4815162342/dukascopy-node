@@ -31,7 +31,7 @@ type TestCase = {
 
 describe('main', () => {
   const testCases = getTestCases<TestCase>('tests/integration/cases');
-  testCases.forEach(generateTest);
+  testCases.forEach(({ content }) => generateTest(content));
 });
 
 function generateTest({ config, expectedOutput }: TestCase) {

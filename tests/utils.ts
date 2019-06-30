@@ -1,7 +1,7 @@
 import { HistoryConfig } from '../src/config/types';
 import { readdirSync } from 'fs';
 
-function getTestCases<T>(folder: string): T[] {
+function getTestCases<T>(folder: string) {
   const projectPath = process.cwd();
 
   const paths = readdirSync(folder);
@@ -10,7 +10,7 @@ function getTestCases<T>(folder: string): T[] {
     casePath => `${projectPath}/${folder}/${casePath.replace('.ts', '')}`
   );
 
-  const cases: T[] = modulePaths.map(require);
+  const cases = modulePaths.map(path => ({ path, content: <T>require(path) }));
 
   return cases;
 }

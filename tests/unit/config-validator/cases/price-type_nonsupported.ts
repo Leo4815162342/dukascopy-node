@@ -15,8 +15,4 @@ const expectedOutput = {
   validationErrors: ["The 'priceType' field does not match any of the allowed values!"]
 };
 
-const testName = 'Should return false on unsupported priceType';
-
-const testGroup = 'Price type';
-
-export { testName, testGroup, config, expectedOutput };
+export { config, expectedOutput };

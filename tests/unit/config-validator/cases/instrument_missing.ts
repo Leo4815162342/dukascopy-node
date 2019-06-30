@@ -14,8 +14,4 @@ const expectedOutput = {
   validationErrors: ["The 'instrument' field is required!"]
 };
 
-const testName = 'Should return false when missing instrument';
-
-const testGroup = 'Instrument';
-
-export { testName, testGroup, config, expectedOutput };
+export { config, expectedOutput };

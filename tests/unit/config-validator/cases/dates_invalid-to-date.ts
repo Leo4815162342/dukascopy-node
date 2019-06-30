@@ -15,8 +15,4 @@ const expectedOutput = {
   validationErrors: ["The 'dates.to' field must be a valid date string! Actual: 2019-02-29"]
 };
 
-const testName = 'Should return false on invalid To date';
-
-const testGroup = 'Dates';
-
-export { testName, testGroup, config, expectedOutput };
+export { config, expectedOutput };

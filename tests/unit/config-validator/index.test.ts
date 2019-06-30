@@ -8,20 +8,21 @@ import { getTestCases } from '../../utils';
 type TestCase = {
   config: HistoryConfig;
   expectedOutput: ValidationStatus;
-  testName: string;
-  testGroup: string;
 };
 
 describe('Config validator', () => {
   const testCases = getTestCases<TestCase>('tests/unit/config-validator/cases');
-  testCases.forEach(generateTestSuite);
+  testCases.forEach(({ path, content }) => generateTestSuite(content, path));
 });
 
-function generateTestSuite({ config, expectedOutput, testName, testGroup }: TestCase) {
-  describe.only(testGroup, () => {
+function generateTestSuite({ config, expectedOutput }: TestCase, path: string) {
+  const [filePath] = path.split('/').reverse();
+  const [testGroup] = filePath.split('_');
+
+  describe(testGroup, () => {
     const { isValid, validationErrors } = validateConfig(config);
 
-    it(testName, () => {
+    it(`${filePath}: validation shoud return ${expectedOutput.isValid}`, () => {
       expect(isValid).toBe(expectedOutput.isValid);
       expect(validationErrors).toEqual(expectedOutput.validationErrors);
     });

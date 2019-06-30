@@ -11,7 +11,7 @@ type TestCase = {
 
 describe('Request generator', () => {
   const testCases = getTestCases<TestCase>('tests/unit/request-generator/cases');
-  testCases.forEach(generateTestSuite);
+  testCases.forEach(({ content }) => generateTestSuite(content));
 });
 
 function generateTestSuite({ config, expectedOutput }: TestCase) {

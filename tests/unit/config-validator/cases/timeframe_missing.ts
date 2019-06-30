@@ -14,8 +14,4 @@ const expectedOutput = {
   validationErrors: ["The 'timeframe' field is required!"]
 };
 
-const testName = 'Should return false when timeframe key does not exist';
-
-const testGroup = 'Timeframe';
-
-export { testName, testGroup, config, expectedOutput };
+export { config, expectedOutput };

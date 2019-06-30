@@ -19,8 +19,4 @@ const expectedOutput = {
   ]
 };
 
-const testName = 'Should return false when all keys are empty';
-
-const testGroup = 'General';
-
-export { testName, testGroup, config, expectedOutput };
+export { config, expectedOutput };

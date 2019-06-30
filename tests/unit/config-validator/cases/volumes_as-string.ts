@@ -15,8 +15,4 @@ const expectedOutput = {
   validationErrors: ["The 'volumes' field must be a boolean!"]
 };
 
-const testName = 'aaa';
-
-const testGroup = 'Volumes';
-
-export { testName, testGroup, config, expectedOutput };
+export { config, expectedOutput };
