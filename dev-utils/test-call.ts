@@ -30,8 +30,8 @@ import { getHistoricRates } from '../src';
     const config: HistoryConfig = {
       instrument: 'nzdcad',
       dates: {
-        from: '2000-01-01',
-        to: '2020-01-01'
+        from: '2019-02-01',
+        to: '2019-02-10'
       },
       timeframe: 'd1',
       priceType: 'ask',
@@ -48,5 +48,9 @@ import { getHistoricRates } from '../src';
     console.log(`time ms: ${d2 - d1}`);
   } catch (error) {
     console.log('error', error);
+
+    if (error.validationErrors) {
+      console.log(error.validationErrors);
+    }
   }
 })();

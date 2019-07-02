@@ -47,7 +47,7 @@ function generateFailTestCase({ config, expectedOutput }: TestCase) {
       try {
         await lib.getHistoricRates(config);
       } catch (error) {
-        expect(error.validationErrors).toEqual(expectedOutput);
+        expect(error).toEqual({ validationErrors: expectedOutput });
       }
     });
   });
