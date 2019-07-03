@@ -20,7 +20,7 @@ function generateTestSuite({ bufferFile, expectedOutput }: TestCase, path: strin
 
   it(`Correctly decompresses data for "${fileName}" file`, async () => {
     const buffer = await promisify(fs.readFile)(bufferFile);
-    const deocmpressed = await decompress(buffer, <HistoryConfig['timeframe']>timeframe);
+    const deocmpressed = await decompress(buffer, <HistoryConfig['timeframe']>fileName);
 
     expect(deocmpressed).toEqual(expectedOutput);
   });
