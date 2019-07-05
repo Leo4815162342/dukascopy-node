@@ -9,16 +9,20 @@ function getStructFormat(timeframe: HistoryConfig['timeframe']): StructFormat {
   return timeframe === 'tick' ? '>3i2f' : '>5i1f';
 }
 
-async function decompress(
-  compressedBuffer: Buffer,
-  timeframe: HistoryConfig['timeframe']
-): Promise<number[][]> {
-  if (compressedBuffer.length === 0) {
+type DecompressInput = {
+  buffer: Buffer;
+  timeframe: HistoryConfig['timeframe'];
+};
+
+async function decompress(input: DecompressInput): Promise<number[][]> {
+  const { buffer, timeframe } = input;
+
+  if (buffer.length === 0) {
     return [];
   }
   const result: number[][] = [];
   const format = getStructFormat(timeframe);
-  const decompressedBuffer: Buffer = (await lzmaNative.decompress(compressedBuffer)) as any;
+  const decompressedBuffer: Buffer = (await lzmaNative.decompress(buffer)) as any;
 
   const step = struct.sizeOf(format);
 

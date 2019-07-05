@@ -1,13 +1,16 @@
-import { HistoryConfig } from '../../../src/config/types';
-
-import fs from 'fs';
-import { promisify } from 'util';
 import { getTestCases } from '../../utils';
 import { decompress } from '../../../src/decompressor';
 
+type Unpromisify<T> = T extends Promise<infer U> ? U : T;
+
+type Input = Parameters<typeof decompress>[0];
+type PromiseOutput = ReturnType<typeof decompress>;
+
+type Output = Unpromisify<PromiseOutput>;
+
 type TestCase = {
-  bufferFile: 'string';
-  expectedOutput: number[][];
+  input: Input;
+  expectedOutput: Output;
 };
 
 describe('Decompressor', () => {
@@ -15,12 +18,11 @@ describe('Decompressor', () => {
   testCases.forEach(({ path, content }) => generateTestSuite(content, path));
 });
 
-function generateTestSuite({ bufferFile, expectedOutput }: TestCase, path: string) {
+function generateTestSuite({ input, expectedOutput }: TestCase, path: string) {
   const [fileName] = path.split('/').reverse();
 
   it(`Correctly decompresses data for "${fileName}" file`, async () => {
-    const buffer = await promisify(fs.readFile)(bufferFile);
-    const deocmpressed = await decompress(buffer, <HistoryConfig['timeframe']>fileName);
+    const deocmpressed = await decompress(input);
 
     expect(deocmpressed).toEqual(expectedOutput);
   });

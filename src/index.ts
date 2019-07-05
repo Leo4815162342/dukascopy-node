@@ -33,7 +33,9 @@ async function getHistoricRates(config: HistoryConfig): Promise<number[][]> {
 
   const bufferedData = await batchedFetch(requestData.map(({ url }) => url), 10);
 
-  const decompressed = await Promise.all(bufferedData.map(buffer => decompress(buffer, timeframe)));
+  const decompressed = await Promise.all(
+    bufferedData.map(buffer => decompress({ buffer, timeframe }))
+  );
 
   const normalized = decompressed.map((data, i) =>
     normalise({ data, timeframe, startTs: requestData[i].timestamp, instrument, volumes })

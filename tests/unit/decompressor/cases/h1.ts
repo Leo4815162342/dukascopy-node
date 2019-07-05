@@ -1,4 +1,9 @@
-const bufferFile = 'tests/__test-data__/EURUSD/2019/01/BID_candles_hour_1.bi5';
+import fs from 'fs';
+
+const input = {
+  buffer: fs.readFileSync('tests/__test-data__/EURUSD/2019/01/BID_candles_hour_1.bi5'),
+  timeframe: 'h1'
+};
 
 const expectedOutput = [
   [0, 114482, 114481, 114462, 114499, 6718.490234375],
@@ -675,4 +680,4 @@ const expectedOutput = [
   [2415600, 113707, 113730, 113694, 113743, 3562.9599609375]
 ];
 
-export { bufferFile, expectedOutput };
+export { input, expectedOutput };
