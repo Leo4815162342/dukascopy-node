@@ -4,9 +4,8 @@ import { decompress } from '../../../src/decompressor';
 type Unpromisify<T> = T extends Promise<infer U> ? U : T;
 
 type Input = Parameters<typeof decompress>[0];
-type PromiseOutput = ReturnType<typeof decompress>;
 
-type Output = Unpromisify<PromiseOutput>;
+type Output = Unpromisify<ReturnType<typeof decompress>>;
 
 type TestCase = {
   input: Input;
