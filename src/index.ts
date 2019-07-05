@@ -36,7 +36,7 @@ async function getHistoricRates(config: HistoryConfig): Promise<number[][]> {
   const decompressed = await Promise.all(bufferedData.map(buffer => decompress(buffer, timeframe)));
 
   const normalized = decompressed.map((data, i) =>
-    normalise(data, timeframe, requestData[i].timestamp, instrument, volumes)
+    normalise({ data, timeframe, startTs: requestData[i].timestamp, instrument, volumes })
   );
 
   const aggregated = aggregate(normalized, startDate, endDate, timeframe);

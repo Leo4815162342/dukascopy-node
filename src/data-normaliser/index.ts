@@ -1,15 +1,34 @@
 import { HistoryConfig } from './../config/types';
+
 import { instruments } from '../config/instruments';
 import { roundNum } from './../utils/general';
+
+type NormaliseInput = {
+  data: number[][];
+  timeframe: HistoryConfig['timeframe'];
+  startTs: number;
+  instrument: HistoryConfig['instrument'];
+  volumes: boolean;
+};
+
+function normalise(input: NormaliseInput): number[][] {
+  const { data, timeframe, startTs, instrument, volumes } = input;
+
+  const { decimalFactor } = instruments[instrument];
+
+  const normaliserFn = getNormaliser(timeframe, startTs, decimalFactor, volumes);
+
+  const normalizedData = data.map(normaliserFn);
+
+  return normalizedData;
+}
 
 function getNormaliser(
   timeframe: HistoryConfig['timeframe'],
   startMs: number,
-  instrument: HistoryConfig['instrument'],
+  decimalFactor: number,
   volumes: HistoryConfig['volumes']
 ): (values: number[]) => number[] {
-  const { decimalFactor } = instruments[instrument];
-
   if (timeframe === 'tick') {
     return function(values: number[]) {
       const [ms, ask, bid, askVolume, bidVolume] = values;
@@ -35,20 +54,6 @@ function getNormaliser(
       ];
     };
   }
-}
-
-function normalise(
-  decompressedData: number[][],
-  timeframe: HistoryConfig['timeframe'],
-  startTimestamp: number,
-  instrument: HistoryConfig['instrument'],
-  volumes: boolean
-) {
-  const normaliserFn = getNormaliser(timeframe, startTimestamp, instrument, volumes);
-
-  const normalizedData = decompressedData.map(normaliserFn);
-
-  return normalizedData;
 }
 
 export { normalise };

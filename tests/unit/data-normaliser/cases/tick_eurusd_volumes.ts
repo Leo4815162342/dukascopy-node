@@ -1,14 +1,14 @@
-const input = [
-  [
+const input = {
+  data: [
     [0, 100000, 200000, 300000, 400000, 1111],
     [100, 110000, 220000, 330000, 440000, 1111],
     [200, 111000, 222000, 333000, 444000, 1111]
   ],
-  'm1',
-  1,
-  'eurusd',
-  true
-];
+  timeframe: 'm1',
+  startTs: 1,
+  instrument: 'eurusd',
+  volumes: true
+};
 
 const expectedOutput = [
   [1, 1, 4, 3, 2, 1111],
