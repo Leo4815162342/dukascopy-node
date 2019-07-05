@@ -1,5 +1,4 @@
 import { HistoryConfig } from '../config/types';
-import { ValidationStatus } from './types';
 
 import { schema } from './schema';
 import Validator from 'fastest-validator';
@@ -22,6 +21,11 @@ validator.add('dateString', (value: any) => {
 });
 
 const check = validator.compile(schema);
+
+type ValidationStatus = {
+  isValid: boolean;
+  validationErrors: string[];
+};
 
 function validateConfig(config: HistoryConfig): ValidationStatus {
   const validationResult = check(config);

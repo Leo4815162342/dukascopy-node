@@ -1,5 +1,4 @@
 import { HistoryConfig } from '../../../src/config/types';
-import { ValidationStatus } from '../../../src/config-validator/types';
 
 import { validateConfig } from '../../../src/config-validator';
 
@@ -7,7 +6,7 @@ import { getTestCases } from '../../utils';
 
 type TestCase = {
   config: HistoryConfig;
-  expectedOutput: ValidationStatus;
+  expectedOutput: ReturnType<typeof validateConfig>;
 };
 
 describe('Config validator', () => {
