@@ -45,7 +45,7 @@ function getOHLC(input: number[][], filterFlats = true) {
   return ohlc;
 }
 
-function transformToTimefrmes(input: number[][][], timeframe: HistoryConfig['timeframe']) {
+function transformToTimeframes(input: number[][][], timeframe: HistoryConfig['timeframe']) {
   if (timeframe === 'tick' || timeframe === 'm1' || timeframe === 'h1') {
     return input;
   }
@@ -63,17 +63,19 @@ function transformToTimefrmes(input: number[][][], timeframe: HistoryConfig['tim
   }
 }
 
-function aggregate(
-  parsedData: number[][][],
-  startDate: Date,
-  endDate: Date,
-  timeframe: HistoryConfig['timeframe']
-) {
+type AggregateInput = {
+  data: number[][][];
+  startDate: Date;
+  endDate: Date;
+  timeframe: HistoryConfig['timeframe'];
+};
+
+function aggregate({ data, startDate, endDate, timeframe }: AggregateInput): number[][] {
   const [startMs, endMs] = [startDate, endDate].map(d => +d);
 
-  const sorted = parsedData.filter(arr => arr.length > 0).sort((a, b) => a[0][0] - b[0][0]);
+  const sorted = data.filter(arr => arr.length > 0).sort((a, b) => a[0][0] - b[0][0]);
 
-  const transformed = transformToTimefrmes(sorted, timeframe);
+  const transformed = transformToTimeframes(sorted, timeframe);
 
   const merged = <number[][]>[].concat(...transformed);
 
