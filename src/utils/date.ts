@@ -5,15 +5,8 @@ import parseISO from 'date-fns/parseISO';
 
 import { instruments } from '../config/instruments';
 
-type EndpointFilePeriod = 'hour' | 'day' | 'month';
-
-function getStarOfUtc(date: Date, period: EndpointFilePeriod, offset: number = 0): Date {
-  const [year, month, day, hours] = [
-    date.getUTCFullYear(),
-    date.getUTCMonth(),
-    date.getUTCDate(),
-    date.getUTCHours()
-  ];
+function getStarOfUtc(date: Date, period: Range, offset: number = 0): Date {
+  const [year, month, day, hours] = getYMDH(date);
 
   let startOfUtc: Date;
 
@@ -23,19 +16,35 @@ function getStarOfUtc(date: Date, period: EndpointFilePeriod, offset: number = 0
     startOfUtc = new Date(Date.UTC(year, month, day + offset));
   } else if (period === 'month') {
     startOfUtc = new Date(Date.UTC(year, month + offset));
+  } else if (period === 'year') {
+    startOfUtc = new Date(Date.UTC(year + offset, 0));
   }
 
   return startOfUtc;
 }
 
-function getEndopointToFilePeriod(timeframe: HistoryConfig['timeframe']): EndpointFilePeriod {
-  if (timeframe === 'tick') {
-    return 'hour';
-  } else if (timeframe === 'm1' || timeframe === 'm30') {
-    return 'day';
-  } else {
-    return 'month';
-  }
+type Range = 'hour' | 'day' | 'month' | 'year';
+
+type TimeframeToRange = {
+  tick: 'hour';
+  m1: 'day';
+  m30: 'day';
+  h1: 'month';
+  d1: 'year';
+  mn1: 'year';
+};
+
+const timeframeToRangeLookup: TimeframeToRange = {
+  tick: 'hour',
+  m1: 'day',
+  m30: 'day',
+  h1: 'month',
+  d1: 'year',
+  mn1: 'year'
+};
+
+function getDateRange(timeframe: HistoryConfig['timeframe']): Range {
+  return timeframeToRangeLookup[timeframe];
 }
 
 function normalizeDates(
@@ -52,7 +61,7 @@ function normalizeDates(
   const maxToDate = new Date();
 
   // TODO: use min max
-  // TODO: maxToDate = getStarOfUtc(toLimit, getEndopointToFilePeriod(timeframe), -1);
+  // TODO: maxToDate = getStarOfUtc(toLimit, getDateRange(timeframe), -1);
 
   let adjustedFromDate = adjustDate(parsedFromDate, minFromDate, maxToDate, timeframe, utcOffset);
   let adjustedToDate = adjustDate(parsedToDate, minFromDate, maxToDate, timeframe, utcOffset);
@@ -72,10 +81,39 @@ function adjustDate(
   if (date < toLimit) {
     adjustedDate = date < fromLimit ? fromLimit : date;
   } else {
-    adjustedDate = getStarOfUtc(toLimit, getEndopointToFilePeriod(timeframe), -1);
+    adjustedDate = getStarOfUtc(toLimit, getDateRange(timeframe), -1);
   }
 
-  return addMinutes(adjustedDate, offset + -adjustedDate.getTimezoneOffset());
+  return addMinutes(adjustedDate, offset + 0);
 }
 
-export { getStarOfUtc, normalizeDates };
+function getUTCDateFromString(date: string): false | Date {
+  const match = date.match(/(\d{4})-(\d{2})-(\d{2}).?(\d{2})?:?(\d{2})?/);
+
+  if (!match) {
+    return false;
+  }
+
+  const [_, year, month, day, hour, minute] = match;
+
+  const utcIsoString = `${year}-${month}-${day}T${hour || '00'}:${minute || '00'}:00.000Z`;
+
+  const parsedDate = new Date(utcIsoString);
+
+  const isValid = !isNaN(+parsedDate) && parsedDate.toISOString() === utcIsoString;
+
+  return isValid ? parsedDate : false;
+}
+
+function getYMDH(date: Date) {
+  const [year, month, day, hours] = [
+    date.getUTCFullYear(),
+    date.getUTCMonth(),
+    date.getUTCDate(),
+    date.getUTCHours()
+  ];
+
+  return [year, month, day, hours];
+}
+
+export { getStarOfUtc, normalizeDates, getDateRange, getUTCDateFromString, getYMDH };
