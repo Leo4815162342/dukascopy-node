@@ -5,7 +5,7 @@ type InstrumentData = {
     description: string;
     minStartDate: string;
     decimalFactor: number;
-    minYeStartDateDaily: number;
+    minStartDateDaily: string;
   }
 };
 
