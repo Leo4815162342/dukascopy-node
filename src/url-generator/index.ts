@@ -7,12 +7,22 @@ import { HistoryConfig } from '../config/types';
 import { getStarOfUtc } from '../utils/date';
 
 import { pad } from '../utils/general';
-import { getDateRange } from '../utils/date';
+import { getDateRange, getYMDH } from '../utils/date';
 
 const URL_ROOT = 'https://datafeed.dukascopy.com/datafeed';
 
 type Range = ReturnType<typeof getDateRange>;
-type LowerRange = 'hour' | 'day' | 'month';
+
+type RangeInferMap = { [key in HistoryConfig['timeframe']]: Range[] };
+
+const rangeInferMap: RangeInferMap = {
+  mn1: ['year', 'month', 'day'],
+  d1: ['year', 'month', 'day'],
+  h1: ['month', 'day', 'hour'],
+  m30: ['day', 'hour'],
+  m1: ['day', 'hour'],
+  tick: ['hour']
+};
 
 function getUrl(
   instrument: HistoryConfig['instrument'],
@@ -20,14 +30,7 @@ function getUrl(
   range: Range,
   priceType: HistoryConfig['priceType']
 ): string {
-  const [year, month, day, hour] = [
-    date.getUTCFullYear(),
-    date.getUTCMonth(),
-    date.getUTCDate(),
-    date.getUTCHours()
-  ];
-
-  const [yearPad, monthPad, dayPad, hourPad] = [year, month, day, hour].map(pad);
+  const [yearPad, monthPad, dayPad, hourPad] = getYMDH(date).map(pad);
 
   let url = `${URL_ROOT}/${instrument.toUpperCase()}/${yearPad}/`;
 
@@ -44,22 +47,10 @@ function getUrl(
   return url;
 }
 
-function isCurrent(date: Date, type: Range) {
-  const now = new Date();
+function getIsCurrentObj(date: Date) {
+  const [year, month, day, hours] = getYMDH(date);
 
-  const [year, month, day, hours] = [
-    date.getUTCFullYear(),
-    date.getUTCMonth(),
-    date.getUTCDate(),
-    date.getUTCHours()
-  ];
-
-  const [currentYear, currentMonth, currentDay, currentHours] = [
-    now.getUTCFullYear(),
-    now.getUTCMonth(),
-    now.getUTCDate(),
-    now.getUTCHours()
-  ];
+  const [currentYear, currentMonth, currentDay, currentHours] = getYMDH(new Date());
 
   const isCurrentYear = year === currentYear;
   const isCurrentMonth = isCurrentYear && month === currentMonth;
@@ -73,8 +64,10 @@ function isCurrent(date: Date, type: Range) {
     hour: isCurrentHour
   };
 
-  return obj[type];
+  return obj;
 }
+
+type LowerRange = 'hour' | 'day' | 'month';
 
 function getLowerRange(range: Range): LowerRange {
   if (range === 'year') {
@@ -86,50 +79,58 @@ function getLowerRange(range: Range): LowerRange {
   }
 }
 
-function shouldUnwrap(rangeType: Range, date: Date) {
+function getAvailableRange(timeframe: HistoryConfig['timeframe'], date: Date) {
+  const isCurrent = getIsCurrentObj(date);
+
+  return rangeInferMap[timeframe].find(range => !isCurrent[range]);
+}
+
+function hasLowerRangeData(rangeType: Range, date: Date) {
+  const { year, month, day } = getIsCurrentObj(date);
+
   return (
-    (rangeType === 'year' && isCurrent(date, 'year')) ||
-    (rangeType === 'month' && isCurrent(date, 'month')) ||
-    (rangeType === 'day' && isCurrent(date, 'day'))
+    (rangeType === 'year' && year) ||
+    (rangeType === 'month' && month) ||
+    (rangeType === 'day' && day)
   );
 }
 
-function constructUrls(rangetype: Range, startDate: Date, endDate: Date) {
-  let dates: Date[] = [];
+function getConstructor(
+  instrument: HistoryConfig['instrument'],
+  priceType: HistoryConfig['priceType'],
+  endDate: Date
+) {
+  return function construct(rangetype: Range, startDate: Date) {
+    let dates: Date[] = [];
 
-  let tempStartDate = getStarOfUtc(startDate, rangetype);
+    let tempStartDate = getStarOfUtc(startDate, rangetype);
 
-  while (tempStartDate < endDate) {
-    dates.push(tempStartDate);
-    tempStartDate = getStarOfUtc(tempStartDate, rangetype, 1);
-  }
-  const result: string[] = dates.reduce((all, date, i, arr) => {
-    const isLastItem = i === arr.length - 1;
-
-    if (isLastItem && shouldUnwrap(rangetype, date)) {
-      const unwrappedRange = constructUrls(getLowerRange(rangetype), date, endDate);
-      all.push(...unwrappedRange);
-    } else {
-      all.push(getUrl('eurusd', date, rangetype, 'bid'));
+    while (tempStartDate < endDate) {
+      dates.push(tempStartDate);
+      tempStartDate = getStarOfUtc(tempStartDate, rangetype, 1);
     }
 
-    return all;
-  }, []);
+    const result: string[] = dates.reduce((all, date, i, arr) => {
+      const isLastItem = i === arr.length - 1;
 
-  return result;
+      if (isLastItem && hasLowerRangeData(rangetype, date)) {
+        const lowerRangeData = construct(getLowerRange(rangetype), date);
+        all.push(...lowerRangeData);
+      } else {
+        const url = getUrl(instrument, date, rangetype, priceType);
+        all.push(url);
+      }
+
+      return all;
+    }, []);
+
+    return result;
+  };
 }
 
-// generateUrls(
-//   'd1',
-//   new Date('2018-04-04T00:00:00.000Z'),
-//   new Date('2019-07-06T00:00:00.000Z'),
-//   'year'
-// );
-
-function getUrls(timeframe: HistoryConfig['timeframe'], startDate: Date, endDate: Date) {
-  const rangeType = getDateRange(timeframe);
-
+function shiftEndDate(endDate: Date, timeframe: HistoryConfig['timeframe']) {
   const nowDate = new Date();
+
   const adjustedEndDate = endDate < nowDate ? endDate : nowDate;
   let shiftedEndDate = adjustedEndDate;
 
@@ -141,31 +142,43 @@ function getUrls(timeframe: HistoryConfig['timeframe'], startDate: Date, endDate
     shiftedEndDate = getStarOfUtc(shiftedEndDate, 'month');
   }
 
-  const urls = constructUrls(rangeType, startDate, shiftedEndDate);
+  return shiftedEndDate;
+}
+
+type generateUrlsInput = {
+  instrument: HistoryConfig['instrument'];
+  timeframe: HistoryConfig['timeframe'];
+  startDate: Date;
+  endDate: Date;
+  priceType: HistoryConfig['priceType'];
+};
+
+function generateUrls({
+  instrument,
+  timeframe,
+  priceType,
+  startDate,
+  endDate
+}: generateUrlsInput): string[] {
+  const rangeType = getAvailableRange(timeframe, startDate);
+
+  const shiftedEndDate = shiftEndDate(endDate, timeframe);
+
+  const constructUrls = getConstructor(instrument, priceType, shiftedEndDate);
+
+  const urls = constructUrls(rangeType, startDate);
 
   return urls;
 }
 
-// const res = constructUrls(
-//   new Date('2018-01-01T00:00:00.000Z'),
-//   new Date('2019-07-09T00:00:00.000Z'),
-//   'month'
-// );
+// const res = generateUrls({
+//   instrument: 'eurcad',
+//   timeframe: 'm1',
+//   startDate: new Date('2019-07-01T12:00:00.000Z'),
+//   endDate: new Date('2019-08-01T00:00:00.000Z'),
+//   priceType: 'ask'
+// });
 
-const res = getUrls(
-  'tick',
-  new Date('2019-07-08T00:00:00.000Z'),
-  new Date('2019-07-09T01:12:23.123Z')
-);
+// console.log(res);
 
-console.log(res);
-
-// d1, mn1
-// eurusd, 2018 - 01 - 01, 2019 - 07 - 05;
-// year - 2018;
-// month - 01;
-// month - 02;
-// month - 03;
-// month - 04;
-// month - 05;
-// month - 06;
+export { generateUrls };
