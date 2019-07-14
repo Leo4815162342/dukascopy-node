@@ -50,10 +50,7 @@ const { getHistoricRates } = require('dukascopy-node');
         from: '2018-03-01',
         to: '2018-04-01'
       },
-      timeframe: 'd1',
-      priceType: 'bid',
-      utcOffset: 0,
-      volumes: true
+      timeframe: 'd1'
     });
 
     console.log(data);
@@ -74,10 +71,7 @@ getHistoricRates({
     from: '2018-03-01',
     to: '2018-04-01'
   },
-  timeframe: 'd1',
-  priceType: 'bid',
-  utcOffset: 0,
-  volumes: true
+  timeframe: 'd1'
 })
   .then(data => {
     console.log(data);
