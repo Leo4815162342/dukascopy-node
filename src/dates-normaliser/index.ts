@@ -54,14 +54,4 @@ function applyDateLimits(date: Date, min: Date, max: Date): Date {
   return adjustedDate;
 }
 
-const res = normaliseDates({
-  instrument: 'eurusd',
-  startDate: '2019-01-01',
-  endDate: '2019-01-13',
-  timeframe: 'd1',
-  utcOffset: -60
-});
-
-console.log(res);
-
-// export { normaliseDates };
+export { normaliseDates };
