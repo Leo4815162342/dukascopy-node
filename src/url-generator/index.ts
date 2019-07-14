@@ -4,30 +4,18 @@
 // .../2019/01/01/01h_candles_ticks_1.bi5:  tick data per hour
 
 import { HistoryConfig } from '../config/types';
-import { getStarOfUtc } from '../utils/date';
+import { TimeRange } from '../utils/range';
 
+import { getLowerRange, isCurrentRange, getClosestAvailableRange } from '../utils/range';
+import { getStarOfUtc, getYMDH } from '../utils/date';
 import { pad } from '../utils/general';
-import { getDateRange, getYMDH } from '../utils/date';
 
 const URL_ROOT = 'https://datafeed.dukascopy.com/datafeed';
-
-type Range = ReturnType<typeof getDateRange>;
-
-type RangeInferMap = { [key in HistoryConfig['timeframe']]: Range[] };
-
-const rangeInferMap: RangeInferMap = {
-  mn1: ['year', 'month', 'day'],
-  d1: ['year', 'month', 'day'],
-  h1: ['month', 'day', 'hour'],
-  m30: ['day', 'hour'],
-  m1: ['day', 'hour'],
-  tick: ['hour']
-};
 
 function getUrl(
   instrument: HistoryConfig['instrument'],
   date: Date,
-  range: Range,
+  range: TimeRange,
   priceType: HistoryConfig['priceType']
 ): string {
   const [yearPad, monthPad, dayPad, hourPad] = getYMDH(date).map(pad);
@@ -47,60 +35,12 @@ function getUrl(
   return url;
 }
 
-function getIsCurrentObj(date: Date) {
-  const [year, month, day, hours] = getYMDH(date);
-
-  const [currentYear, currentMonth, currentDay, currentHours] = getYMDH(new Date());
-
-  const isCurrentYear = year === currentYear;
-  const isCurrentMonth = isCurrentYear && month === currentMonth;
-  const isCurrentDay = isCurrentMonth && day === currentDay;
-  const isCurrentHour = isCurrentDay && hours === currentHours;
-
-  const obj = {
-    year: isCurrentYear,
-    month: isCurrentMonth,
-    day: isCurrentDay,
-    hour: isCurrentHour
-  };
-
-  return obj;
-}
-
-type LowerRange = 'hour' | 'day' | 'month';
-
-function getLowerRange(range: Range): LowerRange {
-  if (range === 'year') {
-    return 'month';
-  } else if (range === 'month') {
-    return 'day';
-  } else if (range === 'day') {
-    return 'hour';
-  }
-}
-
-function getAvailableRange(timeframe: HistoryConfig['timeframe'], date: Date) {
-  const isCurrent = getIsCurrentObj(date);
-
-  return rangeInferMap[timeframe].find(range => !isCurrent[range]);
-}
-
-function hasLowerRangeData(rangeType: Range, date: Date) {
-  const { year, month, day } = getIsCurrentObj(date);
-
-  return (
-    (rangeType === 'year' && year) ||
-    (rangeType === 'month' && month) ||
-    (rangeType === 'day' && day)
-  );
-}
-
 function getConstructor(
   instrument: HistoryConfig['instrument'],
   priceType: HistoryConfig['priceType'],
   endDate: Date
 ) {
-  return function construct(rangetype: Range, startDate: Date) {
+  return function construct(rangetype: TimeRange, startDate: Date) {
     let dates: Date[] = [];
 
     let tempStartDate = getStarOfUtc(startDate, rangetype);
@@ -113,7 +53,7 @@ function getConstructor(
     const result: string[] = dates.reduce((all, date, i, arr) => {
       const isLastItem = i === arr.length - 1;
 
-      if (isLastItem && hasLowerRangeData(rangetype, date)) {
+      if (isLastItem && isCurrentRange(rangetype, date)) {
         const lowerRangeData = construct(getLowerRange(rangetype), date);
         all.push(...lowerRangeData);
       } else {
@@ -160,7 +100,7 @@ function generateUrls({
   startDate,
   endDate
 }: generateUrlsInput): string[] {
-  const rangeType = getAvailableRange(timeframe, startDate);
+  const rangeType = getClosestAvailableRange(timeframe, startDate);
 
   const shiftedEndDate = shiftEndDate(endDate, timeframe);
 
@@ -170,15 +110,5 @@ function generateUrls({
 
   return urls;
 }
-
-// const res = generateUrls({
-//   instrument: 'eurcad',
-//   timeframe: 'm1',
-//   startDate: new Date('2019-07-01T12:00:00.000Z'),
-//   endDate: new Date('2019-08-01T00:00:00.000Z'),
-//   priceType: 'ask'
-// });
-
-// console.log(res);
 
 export { generateUrls };
