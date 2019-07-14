@@ -111,4 +111,4 @@ function generateUrls({
   return urls;
 }
 
-export { generateUrls };
+export { URL_ROOT, generateUrls };
