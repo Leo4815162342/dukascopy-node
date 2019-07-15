@@ -29,6 +29,7 @@
     "typescript": "^3.4.5"
   },
   "jest": {
+    "automock": false,
     "setupFiles": [
       "jest-date-mock"
     ]
