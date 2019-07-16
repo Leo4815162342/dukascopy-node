@@ -6,6 +6,8 @@ import Validator from 'fastest-validator';
 import isValid from 'date-fns/isValid';
 import parseISO from 'date-fns/parseISO';
 
+import { getUTCDateFromString } from '../utils/date';
+
 const validator = new Validator({
   messages: {
     invalidDateString: "The '{field}' field must be a valid date string! Actual: {actual}"
@@ -13,7 +15,7 @@ const validator = new Validator({
 });
 
 validator.add('dateString', (value: any) => {
-  if (!isValid(parseISO(value))) {
+  if (!getUTCDateFromString(value)) {
     return validator.makeError('invalidDateString', null, value);
   }
 
