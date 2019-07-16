@@ -12,7 +12,6 @@
   "author": "leonid.pyrlia",
   "license": "ISC",
   "dependencies": {
-    "date-fns": "^2.0.0-alpha.27",
     "fastest-validator": "^0.6.17",
     "lzma-native": "^4.0.5",
     "node-fetch": "^2.3.0",

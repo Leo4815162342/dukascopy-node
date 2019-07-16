@@ -3,9 +3,6 @@ import { HistoryConfig } from '../config/types';
 import { schema } from './schema';
 import Validator from 'fastest-validator';
 
-import isValid from 'date-fns/isValid';
-import parseISO from 'date-fns/parseISO';
-
 import { getUTCDateFromString } from '../utils/date';
 
 const validator = new Validator({
