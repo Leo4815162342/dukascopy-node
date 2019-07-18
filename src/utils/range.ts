@@ -39,4 +39,21 @@ function isCurrentRange(rangeType: TimeRange, date: Date) {
   );
 }
 
-export { getLowerRange, getClosestAvailableRange, isCurrentRange };
+type TimeframeFromUrl = {
+  [key: string]: HistoryConfig['timeframe'];
+};
+
+const timeFromUrl: TimeframeFromUrl = {
+  day_1: 'd1',
+  hour_1: 'h1',
+  min_1: 'm1',
+  ticks: 'tick'
+};
+
+function getTimeframeFromUrl(url: string): HistoryConfig['timeframe'] {
+  const [, match] = url.match(/_(day_1|hour_1|min_1|ticks).bi5$/);
+
+  return timeFromUrl[match];
+}
+
+export { getLowerRange, getClosestAvailableRange, isCurrentRange, getTimeframeFromUrl };
