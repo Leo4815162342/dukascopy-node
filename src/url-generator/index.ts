@@ -1,7 +1,7 @@
 // .../2019/BID_candles_day_1.bi5:          daily data per year
 // .../2019/01/BID_candles_hour_1.bi5:      hourly data per month
 // .../2019/01/01/BID_candles_min_1.bi5:    minute data per day
-// .../2019/01/01/01h_candles_ticks_1.bi5:  tick data per hour
+// .../2019/01/01/01h_ticks_1.bi5:  tick data per hour
 
 import { HistoryConfig } from '../config/types';
 import { TimeRange } from '../utils/range';
