@@ -2,12 +2,12 @@ import { splitArrayInChunks, wait } from '../utils/general';
 
 import fetch from 'node-fetch';
 
-export type FetchedObject = {
+export type BufferObject = {
   url: string;
   buffer: Buffer;
 };
 
-async function fetchBufferedData(urls: string[]): Promise<FetchedObject[]> {
+async function fetchBufferedData(urls: string[]): Promise<BufferObject[]> {
   return await Promise.all(
     urls.map(async url => {
       const data = await fetch(url);
@@ -21,8 +21,8 @@ async function batchedFetch(
   urls: string[],
   batchSize = 10,
   batchPauseMs = 1000
-): Promise<FetchedObject[]> {
-  const fetchedObjects: FetchedObject[][] = [];
+): Promise<BufferObject[]> {
+  const fetchedObjects: BufferObject[][] = [];
 
   const batches = splitArrayInChunks(urls, batchSize);
 
