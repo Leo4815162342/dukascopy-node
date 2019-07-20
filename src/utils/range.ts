@@ -50,6 +50,29 @@ const timeFromUrl: TimeframeFromUrl = {
   ticks: 'tick'
 };
 
+type TimeframeFromUrl2 = {
+  [key: string]: { timeframe: HistoryConfig['timeframe']; range: TimeRange };
+};
+
+const timeFromUrl2: TimeframeFromUrl2 = {
+  day_1: {
+    range: 'year',
+    timeframe: 'd1'
+  },
+  hour_1: {
+    range: 'month',
+    timeframe: 'h1'
+  },
+  min_1: {
+    range: 'day',
+    timeframe: 'm1'
+  },
+  ticks: {
+    range: 'hour',
+    timeframe: 'tick'
+  }
+};
+
 function getTimeframeFromUrl(url: string): HistoryConfig['timeframe'] {
   const [, match] = url.match(/_(day_1|hour_1|min_1|ticks).bi5$/);
 

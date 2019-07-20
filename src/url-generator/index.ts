@@ -85,7 +85,7 @@ function shiftEndDate(endDate: Date, timeframe: HistoryConfig['timeframe']) {
   return shiftedEndDate;
 }
 
-type generateUrlsInput = {
+type GenerateUrlsInput = {
   instrument: HistoryConfig['instrument'];
   timeframe: HistoryConfig['timeframe'];
   startDate: Date;
@@ -99,7 +99,7 @@ function generateUrls({
   priceType,
   startDate,
   endDate
-}: generateUrlsInput): string[] {
+}: GenerateUrlsInput): string[] {
   const rangeType = getClosestAvailableRange(timeframe, startDate);
 
   const shiftedEndDate = shiftEndDate(endDate, timeframe);
