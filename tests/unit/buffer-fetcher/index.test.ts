@@ -1,17 +1,7 @@
-import fs from 'fs';
-import { promisify } from 'util';
 import * as bufferFetcher from '../../../src/buffer-fetcher';
 import fetch from 'node-fetch';
 
-jest.mock('node-fetch', () => {
-  const mockFn = jest.fn();
-  return mockFn.mockImplementation(() => {
-    const path = mockFn.mock.calls[mockFn.mock.calls.length - 1][0] as string;
-    return Promise.resolve({
-      buffer: () => promisify(fs.readFile)(path)
-    });
-  });
-});
+jest.mock('node-fetch', require('../../__mocks__/fetch').default);
 
 const urls = [
   './tests/__test-data__/EURUSD/2019/01/04/BID_candles_min_1.bi5',
