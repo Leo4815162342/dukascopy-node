@@ -7,7 +7,7 @@ import { HistoryConfig } from '../config/types';
 import { TimeRange } from '../utils/range';
 
 import { getLowerRange, isCurrentRange, getClosestAvailableRange } from '../utils/range';
-import { getStarOfUtc, getYMDH } from '../utils/date';
+import { getStartOfUtc, getYMDH } from '../utils/date';
 import { pad } from '../utils/general';
 
 const URL_ROOT = 'https://datafeed.dukascopy.com/datafeed';
@@ -43,11 +43,12 @@ function getConstructor(
   return function construct(rangetype: TimeRange, startDate: Date) {
     let dates: Date[] = [];
 
-    let tempStartDate = getStarOfUtc(startDate, rangetype);
+    let tempStartDate = getStartOfUtc(startDate, rangetype);
 
     while (tempStartDate < endDate) {
       dates.push(tempStartDate);
-      tempStartDate = getStarOfUtc(tempStartDate, rangetype, 1);
+
+      tempStartDate = getStartOfUtc(tempStartDate, rangetype, 1);
     }
 
     const result: string[] = dates.reduce((all, date, i, arr) => {
@@ -68,21 +69,27 @@ function getConstructor(
   };
 }
 
-function shiftEndDate(endDate: Date, timeframe: HistoryConfig['timeframe']) {
+function getDateLimit(startDate: Date, endDate: Date, timeframe: HistoryConfig['timeframe']) {
   const nowDate = new Date();
 
   const adjustedEndDate = endDate < nowDate ? endDate : nowDate;
-  let shiftedEndDate = adjustedEndDate;
+  let dateLimit = adjustedEndDate;
 
-  if (timeframe === 'tick' || timeframe === 'm1' || timeframe === 'm30' || timeframe === 'h1') {
-    shiftedEndDate = getStarOfUtc(shiftedEndDate, 'hour');
+  if (timeframe === 'tick' || timeframe === 'm1' || timeframe === 'm30') {
+    if (+endDate - +startDate <= 3600000) {
+      dateLimit = getStartOfUtc(dateLimit, 'hour', 1);
+    } else {
+      dateLimit = getStartOfUtc(dateLimit, 'hour');
+    }
+  } else if (timeframe === 'h1') {
+    dateLimit = getStartOfUtc(dateLimit, 'hour');
   } else if (timeframe === 'd1') {
-    shiftedEndDate = getStarOfUtc(shiftedEndDate, 'day');
+    dateLimit = getStartOfUtc(dateLimit, 'day');
   } else if (timeframe === 'mn1') {
-    shiftedEndDate = getStarOfUtc(shiftedEndDate, 'month');
+    dateLimit = getStartOfUtc(dateLimit, 'month');
   }
 
-  return shiftedEndDate;
+  return dateLimit;
 }
 
 type GenerateUrlsInput = {
@@ -102,9 +109,9 @@ function generateUrls({
 }: GenerateUrlsInput): string[] {
   const rangeType = getClosestAvailableRange(timeframe, startDate);
 
-  const shiftedEndDate = shiftEndDate(endDate, timeframe);
+  const dateLimit = getDateLimit(startDate, endDate, timeframe);
 
-  const constructUrls = getConstructor(instrument, priceType, shiftedEndDate);
+  const constructUrls = getConstructor(instrument, priceType, dateLimit);
 
   const urls = constructUrls(rangeType, startDate);
 
