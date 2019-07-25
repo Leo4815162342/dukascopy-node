@@ -36,7 +36,7 @@ async function getHistoricRates(config: HistoryConfig) {
   });
 
   const urls = generateUrls({ instrument, timeframe, priceType, startDate, endDate });
-  console.log(urls);
+
   const bufferredData = await batchedFetch(urls);
 
   const processedData = await processData(instrument, timeframe, bufferredData, priceType);
