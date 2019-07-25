@@ -7,6 +7,14 @@ function roundNum(value: number, decimal = 4): number {
 }
 
 function splitArrayInChunks<T>(array: T[], chunkSize: number): T[][] {
+  // TODO: check if we really need this case
+
+  // chunkSize >= array.length ?????
+
+  if (chunkSize === 1) {
+    return [array];
+  }
+
   let result = [];
 
   for (let i = 0, n = array.length; i < n; i++) {

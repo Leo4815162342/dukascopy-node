@@ -1,15 +1,15 @@
 import { HistoryConfig } from './config/types';
 
-import { normalizeDates } from './utils/date';
 import { defaultConfig } from './config/default-config';
-import { batchedFetch } from './buffer-fetcher';
 import { validateConfig } from './config-validator';
-import { generateRequestData } from './request-generator';
-import { decompress } from './decompressor';
-import { normalise } from './data-normaliser';
-import { aggregate } from './aggregator';
+import { normaliseDates } from './dates-normaliser';
+import { generateUrls } from './url-generator';
 
-async function getHistoricRates(config: HistoryConfig): Promise<number[][]> {
+import { batchedFetch } from './buffer-fetcher';
+
+import { processData } from './processor';
+
+async function getHistoricRates(config: HistoryConfig) {
   const mergedConfig = { ...defaultConfig, ...config };
 
   const { isValid, validationErrors } = validateConfig(mergedConfig);
@@ -27,21 +27,23 @@ async function getHistoricRates(config: HistoryConfig): Promise<number[][]> {
     utcOffset
   } = mergedConfig;
 
-  // const [startDate, endDate] = normalizeDates(instrument, from, to, timeframe, utcOffset);
+  const [startDate, endDate] = normaliseDates({
+    instrument,
+    startDate: from,
+    endDate: to,
+    timeframe,
+    utcOffset
+  });
 
-  // const requestData = generateRequestData(instrument, startDate, endDate, timeframe, priceType);
+  const urls = generateUrls({ instrument, timeframe, priceType, startDate, endDate });
 
-  // const buffers = await batchedFetch(requestData.map(({ url }) => url), 10);
+  console.log(urls);
 
-  // const decompressed = await Promise.all(buffers.map(buffer => decompress({ buffer, timeframe })));
+  const bufferredData = await batchedFetch(urls);
 
-  // const normalized = decompressed.map((data, i) =>
-  //   normalise({ data, timeframe, startTs: requestData[i].timestamp, instrument, volumes })
-  // );
+  const processedData = await processData(instrument, timeframe, bufferredData, priceType);
 
-  // const aggregated = aggregate({ data: normalized, startDate, endDate, timeframe });
-
-  // return aggregated;
+  return processedData;
 }
 
 export { getHistoricRates };

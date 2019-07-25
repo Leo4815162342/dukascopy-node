@@ -4,12 +4,12 @@ import { getHistoricRates } from '../src';
 (async () => {
   try {
     const config: HistoryConfig = {
-      instrument: 'lightcmdusd',
+      instrument: 'eurusd',
       dates: {
-        from: '2019-01-01',
-        to: '2019-06-01'
+        from: '2019-07-24',
+        to: '2019-07-25'
       },
-      timeframe: 'tick',
+      timeframe: 'd1',
       priceType: 'bid',
       utcOffset: 0,
       volumes: true
@@ -20,7 +20,7 @@ import { getHistoricRates } from '../src';
     const quotes = await getHistoricRates(config);
     const d2 = +new Date();
     console.log('fetching success');
-    // console.log(JSON.stringify(quotes));
+    console.log(JSON.stringify(quotes));
     console.log(`size: ${quotes.length}`);
     console.log(`time ms: ${d2 - d1}`);
   } catch (error) {
