@@ -29,7 +29,7 @@ function getYMDH(date: Date) {
   return [year, month, day, hours];
 }
 
-function getStarOfUtc(date: Date, period: TimeRange, offset: number = 0): Date {
+function getStartOfUtc(date: Date, period: TimeRange, offset: number = 0): Date {
   const [year, month, day, hours] = getYMDH(date);
 
   let startOfUtc: Date;
@@ -77,4 +77,4 @@ function getDateFromUrl(url: string): Date {
   return utcDate;
 }
 
-export { getUTCDateFromString, getYMDH, getStarOfUtc, getIsCurrentObj, getDateFromUrl };
+export { getUTCDateFromString, getYMDH, getStartOfUtc, getIsCurrentObj, getDateFromUrl };
