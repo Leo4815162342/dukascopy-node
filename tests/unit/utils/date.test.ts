@@ -1,4 +1,4 @@
-import { getDateFromUrl } from '../../../src/utils/date';
+import { getDateFromUrl, getUTCDateFromString } from '../../../src/utils/date';
 
 const TEST_NAMESPACE = 'Date utils';
 
@@ -43,6 +43,34 @@ describe(TEST_NAMESPACE, () => {
       it(`Generates proper date from URL: ${url}`, () => {
         const date = getDateFromUrl(url);
         expect(date.toISOString()).toEqual(isoString);
+      });
+    });
+  });
+});
+
+const dateStrings = [
+  { string: '2019-01-01', output: '2019-01-01T00:00:00.000Z' },
+  { string: '2019-01-01 12:34', output: '2019-01-01T12:34:00.000Z' },
+  { string: '2019-01-01T12:21', output: '2019-01-01T12:21:00.000Z' },
+  { string: '2019-01-01T12:00:00', output: '2019-01-01T12:00:00.000Z' },
+  { string: '2019-01-01T12:00:00.000Z', output: '2019-01-01T12:00:00.000Z' },
+  { string: '2019-01-01T12:34:56.789Z', output: '2019-01-01T12:34:00.000Z' },
+  { string: '2019-02-29T12:34:56.789Z', output: false },
+  { string: '2019-01-0', output: false },
+  { string: 'abcde', output: false }
+];
+
+describe(TEST_NAMESPACE, () => {
+  describe(getUTCDateFromString.name, () => {
+    dateStrings.forEach(({ string, output }) => {
+      it(`Generates proper output for string: ${string}`, () => {
+        const parsedDate = getUTCDateFromString(string);
+
+        if (parsedDate) {
+          expect(parsedDate.toISOString()).toEqual(output);
+        } else {
+          expect(parsedDate).toEqual(false);
+        }
       });
     });
   });
