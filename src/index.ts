@@ -39,7 +39,13 @@ async function getHistoricRates(config: HistoryConfig) {
 
   const bufferredData = await batchedFetch(urls);
 
-  const processedData = await processData(instrument, timeframe, bufferredData, priceType);
+  const processedData = await processData({
+    instrument,
+    requestedTimeframe: timeframe,
+    bufferObjects: bufferredData,
+    priceType,
+    volumes
+  });
 
   const [startDateMs, endDateMs] = [+startDate, +endDate];
 

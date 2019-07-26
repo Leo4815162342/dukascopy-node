@@ -67,15 +67,16 @@ function tickOHLC(input: number[][], priceType: HistoryConfig['priceType']) {
 
   const openPrice = priceType === 'ask' ? input[0][1] : input[0][2];
   const closePrice = priceType === 'ask' ? input[input.length - 1][1] : input[input.length - 1][2];
+  const initialVolume = priceType === 'ask' ? input[0][3] : input[0][4];
 
   const startTs = date.setUTCMinutes(minuteValue, 0, 0);
   let open = openPrice;
   let high = openPrice;
   let low = openPrice;
   let close = closePrice;
-  let volume = 0;
+  let volume = initialVolume;
 
-  for (let i = 0, n = input.length; i < n; i++) {
+  for (let i = 1, n = input.length; i < n; i++) {
     const [, askPrice, bidPirce, askVolume, bidVolume] = input[i];
 
     const targetPrice = priceType === 'ask' ? askPrice : bidPirce;
@@ -89,10 +90,18 @@ function tickOHLC(input: number[][], priceType: HistoryConfig['priceType']) {
       low = targetPrice;
     }
 
-    volume += targetVolume;
+    if (targetVolume !== undefined) {
+      volume += targetVolume;
+    }
   }
 
-  return [startTs, open, high, low, close, volume];
+  const ohlc = [startTs, open, high, low, close];
+
+  if (volume !== undefined) {
+    ohlc.push(roundNum(volume));
+  }
+
+  return ohlc;
 }
 
 function getMinuteOHLCfromTicks(input: number[][], priceType: HistoryConfig['priceType']) {

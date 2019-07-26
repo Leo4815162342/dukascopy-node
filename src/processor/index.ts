@@ -7,12 +7,21 @@ import { decompress } from '../decompressor';
 import { normalise } from '../data-normaliser';
 import { aggregate } from './aggregator';
 
-async function processData(
-  instrument: HistoryConfig['instrument'],
-  requestedTimeframe: HistoryConfig['timeframe'],
-  bufferObjects: BufferObject[],
-  priceType: HistoryConfig['priceType']
-) {
+type ProcessDataInput = {
+  instrument: HistoryConfig['instrument'];
+  requestedTimeframe: HistoryConfig['timeframe'];
+  bufferObjects: BufferObject[];
+  priceType: HistoryConfig['priceType'];
+  volumes: HistoryConfig['volumes'];
+};
+
+async function processData({
+  instrument,
+  requestedTimeframe,
+  bufferObjects,
+  priceType,
+  volumes
+}: ProcessDataInput) {
   const result = await Promise.all(
     bufferObjects.map(async ({ url, buffer }) => {
       const startDate = getDateFromUrl(url);
@@ -24,7 +33,7 @@ async function processData(
         timeframe: urlTimeframe,
         startTs: +startDate,
         instrument,
-        volumes: true
+        volumes
       });
 
       const aggregatedData = aggregate(normalisedData, requestedTimeframe, urlTimeframe, priceType);
