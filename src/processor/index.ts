@@ -5,7 +5,7 @@ import { getDateFromUrl } from '../utils/date';
 import { getTimeframeFromUrl } from '../utils/range';
 import { decompress } from '../decompressor';
 import { normalise } from '../data-normaliser';
-import { aggregate } from './aggregator';
+import { aggregate } from '../aggregator';
 
 type ProcessDataInput = {
   instrument: HistoryConfig['instrument'];

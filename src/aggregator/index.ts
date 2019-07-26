@@ -1,87 +1,63 @@
 import { HistoryConfig } from './../config/types';
 
-import { splitArrayInChunks, roundNum } from './../utils/general';
+import { getOHLC, getMinuteOHLCfromTicks, getMonthlyOHLCfromDays } from './ohlc';
+import { splitArrayInChunks } from '../utils/general';
 
-function getOHLC(input: number[][], filterFlats = true) {
-  const startMs = input[0][0];
-
-  if (filterFlats) {
-    // ignoring flat-volumed (0 volume) entries
-    input = input.filter(data => data[5] !== 0);
-  }
-
-  if (input.length === 0) {
-    return [];
-  }
-
-  let open = input[0][1];
-  let high = input[0][2];
-  let low = input[0][3];
-  let close = input[input.length - 1][4];
-  let volume = input[0][5];
-
-  for (let i = 1, n = input.length; i < n; i++) {
-    const [, , h, l, , v] = input[i];
-
-    if (h > high) {
-      high = h;
-    }
-
-    if (l < low) {
-      low = l;
-    }
-
-    if (v !== undefined) {
-      volume += v;
-    }
-  }
-
-  const ohlc = [startMs, open, high, low, close];
-
-  if (volume !== undefined) {
-    ohlc.push(roundNum(volume));
-  }
-
-  return ohlc;
-}
-
-function transformToTimeframes(input: number[][][], timeframe: HistoryConfig['timeframe']) {
-  if (timeframe === 'tick' || timeframe === 'm1' || timeframe === 'h1') {
+function aggregate(
+  input: number[][],
+  requestedTimeframe: HistoryConfig['timeframe'],
+  fileTimeframe: HistoryConfig['timeframe'],
+  priceType: HistoryConfig['priceType']
+): number[][] {
+  if (requestedTimeframe === fileTimeframe) {
     return input;
+  } else {
+    if (fileTimeframe === 'tick') {
+      const minuteOHLC = getMinuteOHLCfromTicks(input, priceType);
+
+      if (requestedTimeframe === 'm1') {
+        return minuteOHLC;
+      }
+
+      if (requestedTimeframe === 'm30') {
+        return splitArrayInChunks(input, 30).map(data => getOHLC(data));
+      }
+
+      if (requestedTimeframe === 'h1') {
+        return [getOHLC(minuteOHLC)];
+      }
+    }
+
+    if (fileTimeframe === 'm1') {
+      if (requestedTimeframe === 'm30') {
+        return splitArrayInChunks(input, 30).map(data => getOHLC(data));
+      }
+
+      if (requestedTimeframe === 'h1') {
+        return splitArrayInChunks(input, 60).map(data => getOHLC(data));
+      }
+
+      if (requestedTimeframe === 'd1') {
+        return [getOHLC(input)];
+      }
+    }
+
+    if (fileTimeframe === 'h1') {
+      if (requestedTimeframe === 'd1') {
+        return splitArrayInChunks(input, 24).map(data => getOHLC(data));
+      }
+      if (requestedTimeframe === 'mn1') {
+        return [getOHLC(input)];
+      }
+    }
+
+    if (fileTimeframe === 'd1') {
+      if (requestedTimeframe === 'mn1') {
+        const monthlyOHLC = getMonthlyOHLCfromDays(input);
+        return monthlyOHLC;
+      }
+    }
   }
-
-  if (timeframe === 'm30') {
-    return input.map(t => splitArrayInChunks(t, 30).map(chunk => getOHLC(chunk)));
-  }
-
-  if (timeframe === 'd1') {
-    return input.map(t => splitArrayInChunks(t, 24).map(chunk => getOHLC(chunk)));
-  }
-
-  if (timeframe === 'mn1') {
-    return input.map(t => [getOHLC(t)]);
-  }
-}
-
-type AggregateInput = {
-  data: number[][][];
-  startDate: Date;
-  endDate: Date;
-  timeframe: HistoryConfig['timeframe'];
-};
-
-function aggregate({ data, startDate, endDate, timeframe }: AggregateInput): number[][] {
-  const [startMs, endMs] = [startDate, endDate].map(d => +d);
-
-  const sorted = data.filter(arr => arr.length > 0).sort((a, b) => a[0][0] - b[0][0]);
-
-  const transformed = transformToTimeframes(sorted, timeframe);
-
-  const merged = <number[][]>[].concat(...transformed);
-
-  const filtered = merged.filter(([timestamp]) => timestamp >= startMs && timestamp < endMs);
-
-  return filtered;
 }
 
 export { aggregate };
