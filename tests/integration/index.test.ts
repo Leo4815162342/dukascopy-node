@@ -19,7 +19,7 @@ const validateConfigFn = jest.spyOn(configValidator, 'validateConfig');
 const processDataFn = jest.spyOn(processor, 'processData');
 
 type TestCase = {
-  config: Parameters<typeof lib.getHistoricRates>[0];
+  config: lib.HistoryConfig;
   expectedOutput: PromiseType<ReturnType<typeof lib.getHistoricRates>>;
 };
 

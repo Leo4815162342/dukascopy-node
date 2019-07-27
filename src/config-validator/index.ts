@@ -1,4 +1,4 @@
-import { HistoryConfig } from '../config/types';
+import { HistoryConfig } from '../index';
 
 import { schema } from './schema';
 import Validator from 'fastest-validator';

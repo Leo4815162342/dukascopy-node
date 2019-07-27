@@ -1,4 +1,4 @@
-import { HistoryConfig } from '../config/types';
+import { HistoryConfig } from '../index';
 
 import { getIsCurrentObj } from '../utils/date';
 

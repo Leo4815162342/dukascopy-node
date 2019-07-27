@@ -3,7 +3,7 @@
 // .../2019/01/01/BID_candles_min_1.bi5:    minute data per day
 // .../2019/01/01/01h_ticks_1.bi5:  tick data per hour
 
-import { HistoryConfig } from '../config/types';
+import { HistoryConfig } from '../index';
 import { TimeRange } from '../utils/range';
 
 import { getLowerRange, isCurrentRange, getClosestAvailableRange } from '../utils/range';

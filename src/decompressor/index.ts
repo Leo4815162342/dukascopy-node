@@ -1,4 +1,4 @@
-import { HistoryConfig } from './../config/types';
+import { HistoryConfig } from './../index';
 
 import lzmaNative from 'lzma-native';
 const struct = require('python-struct');

@@ -1,4 +1,4 @@
-import { HistoryConfig } from './../config/types';
+import { HistoryConfig } from './../index';
 import { BufferObject } from '../buffer-fetcher';
 
 import { getDateFromUrl } from '../utils/date';

@@ -1,4 +1,4 @@
-import { HistoryConfig } from '../src/config/types';
+import { HistoryConfig } from '../src/index';
 import { getHistoricRates } from '../src';
 
 (async () => {

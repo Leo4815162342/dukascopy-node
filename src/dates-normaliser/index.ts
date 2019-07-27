@@ -1,4 +1,4 @@
-import { HistoryConfig } from '../config/types';
+import { HistoryConfig } from '../index';
 import { instruments } from '../config/instruments';
 
 import { getUTCDateFromString } from '../utils/date';

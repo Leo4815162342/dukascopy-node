@@ -1,4 +1,4 @@
-import { HistoryConfig } from './../config/types';
+import { HistoryConfig } from './../index';
 import { roundNum } from './../utils/general';
 
 function getOHLC(input: number[][], filterFlats = true) {

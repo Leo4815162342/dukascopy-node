@@ -1,4 +1,4 @@
-import { HistoryConfig } from './../config/types';
+import { HistoryConfig } from './../index';
 
 import { getOHLC, getMinuteOHLCfromTicks, getMonthlyOHLCfromDays } from './ohlc';
 import { splitArrayInChunks } from '../utils/general';
