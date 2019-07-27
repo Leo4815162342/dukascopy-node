@@ -4,9 +4,7 @@ import { defaultConfig } from './config/default-config';
 import { validateConfig } from './config-validator';
 import { normaliseDates } from './dates-normaliser';
 import { generateUrls } from './url-generator';
-
 import { batchedFetch } from './buffer-fetcher';
-
 import { processData } from './processor';
 
 async function getHistoricRates(config: HistoryConfig) {

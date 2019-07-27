@@ -36,7 +36,12 @@ async function processData({
         volumes
       });
 
-      const aggregatedData = aggregate(normalisedData, requestedTimeframe, urlTimeframe, priceType);
+      const aggregatedData = aggregate({
+        data: normalisedData,
+        fromTimeframe: urlTimeframe,
+        toTimeframe: requestedTimeframe,
+        priceType
+      });
 
       return aggregatedData;
     })

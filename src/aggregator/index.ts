@@ -3,57 +3,59 @@ import { HistoryConfig } from './../config/types';
 import { getOHLC, getMinuteOHLCfromTicks, getMonthlyOHLCfromDays } from './ohlc';
 import { splitArrayInChunks } from '../utils/general';
 
-function aggregate(
-  input: number[][],
-  requestedTimeframe: HistoryConfig['timeframe'],
-  fileTimeframe: HistoryConfig['timeframe'],
-  priceType: HistoryConfig['priceType']
-): number[][] {
-  if (requestedTimeframe === fileTimeframe) {
-    return input;
-  } else {
-    if (fileTimeframe === 'tick') {
-      const minuteOHLC = getMinuteOHLCfromTicks(input, priceType);
+type AggregateInput = {
+  data: number[][];
+  fromTimeframe: HistoryConfig['timeframe'];
+  toTimeframe: HistoryConfig['timeframe'];
+  priceType?: HistoryConfig['priceType'];
+};
 
-      if (requestedTimeframe === 'm1') {
+function aggregate({ data, fromTimeframe, toTimeframe, priceType }: AggregateInput): number[][] {
+  if (fromTimeframe === toTimeframe) {
+    return data;
+  } else {
+    if (fromTimeframe === 'tick') {
+      const minuteOHLC = getMinuteOHLCfromTicks(data, priceType);
+
+      if (toTimeframe === 'm1') {
         return minuteOHLC;
       }
 
-      if (requestedTimeframe === 'm30') {
-        return splitArrayInChunks(input, 30).map(data => getOHLC(data));
+      if (toTimeframe === 'm30') {
+        return splitArrayInChunks(minuteOHLC, 30).map(data => getOHLC(data));
       }
 
-      if (requestedTimeframe === 'h1') {
+      if (toTimeframe === 'h1') {
         return [getOHLC(minuteOHLC)];
       }
     }
 
-    if (fileTimeframe === 'm1') {
-      if (requestedTimeframe === 'm30') {
-        return splitArrayInChunks(input, 30).map(data => getOHLC(data));
+    if (fromTimeframe === 'm1') {
+      if (toTimeframe === 'm30') {
+        return splitArrayInChunks(data, 30).map(data => getOHLC(data));
       }
 
-      if (requestedTimeframe === 'h1') {
-        return splitArrayInChunks(input, 60).map(data => getOHLC(data));
+      if (toTimeframe === 'h1') {
+        return splitArrayInChunks(data, 60).map(data => getOHLC(data));
       }
 
-      if (requestedTimeframe === 'd1') {
-        return [getOHLC(input)];
+      if (toTimeframe === 'd1') {
+        return [getOHLC(data)];
       }
     }
 
-    if (fileTimeframe === 'h1') {
-      if (requestedTimeframe === 'd1') {
-        return splitArrayInChunks(input, 24).map(data => getOHLC(data));
+    if (fromTimeframe === 'h1') {
+      if (toTimeframe === 'd1') {
+        return splitArrayInChunks(data, 24).map(data => getOHLC(data));
       }
-      if (requestedTimeframe === 'mn1') {
-        return [getOHLC(input)];
+      if (toTimeframe === 'mn1') {
+        return [getOHLC(data)];
       }
     }
 
-    if (fileTimeframe === 'd1') {
-      if (requestedTimeframe === 'mn1') {
-        const monthlyOHLC = getMonthlyOHLCfromDays(input);
+    if (fromTimeframe === 'd1') {
+      if (toTimeframe === 'mn1') {
+        const monthlyOHLC = getMonthlyOHLCfromDays(data);
         return monthlyOHLC;
       }
     }
