@@ -48,7 +48,7 @@ async function getHistoricRates(config: HistoryConfig) {
   const [startDateMs, endDateMs] = [+startDate, +endDate];
 
   const filteredData = processedData.filter(
-    ([timestamp]) => timestamp >= startDateMs && timestamp < endDateMs
+    ([timestamp]) => timestamp && timestamp >= startDateMs && timestamp < endDateMs
   );
 
   return filteredData;

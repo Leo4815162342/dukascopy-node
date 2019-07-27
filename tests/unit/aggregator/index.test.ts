@@ -1,11 +1,10 @@
 import { getTestCases } from '../../utils';
 import { aggregate } from '../../../src/aggregator';
 
-// /Users/Leo4815162342/Desktop/dukas-extractor/tests/__test-data__/EURUSD/2019/01/04/00h_ticks.bi5
-
-// /Users/Leo4815162342/Desktop/dukas-extractor/tests/__test-data__/EURUSD/2019/01/04/BID_candles_min_1.bi5
-// /Users/Leo4815162342/Desktop/dukas-extractor/tests/__test-data__/EURUSD/2019/01/BID_candles_hour_1.bi5
-// /Users/Leo4815162342/Desktop/dukas-extractor/tests/__test-data__/EURUSD/2018/BID_candles_day_1.bi5
+// tests/__test-data__/EURUSD/2019/01/04/00h_ticks.bi5
+// tests/__test-data__/EURUSD/2019/01/04/BID_candles_min_1.bi5
+// tests/__test-data__/EURUSD/2019/01/BID_candles_hour_1.bi5
+// tests/__test-data__/EURUSD/2018/BID_candles_day_1.bi5
 
 type TestCase = {
   input: Parameters<typeof aggregate>[0];
