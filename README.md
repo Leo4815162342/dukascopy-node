@@ -110,8 +110,9 @@ getHistoricRates({
 
 - Type: `String`
 - Description: an id of the trading instrument
-- Required: true
 - Supported values: [see list](#instruments)
+- Required: true
+
 
 #### **`dates`**
 
