@@ -211,7 +211,7 @@ getHistoricRates({
 
 <h2 id="instruments">Supported instruments</h2>
 
-| Instrument id   | Instrument name | Description                                        | Start date (`tick`, `m1`, `h1`) | Start date (`d1`, `mn1`) |
+| Instrument id   | Instrument name | Description                                        | Start date (tick, m1, h1) | Start date (d1, mn1) |
 | --------------- | --------------- | -------------------------------------------------- | ------------------------------- | ------------------------ |
 | `aususd`        | A.US/USD        | AGILENT TECHNOLOGIES INC                           | 2017-05-25                      | 2017-01-01               |
 | `aaususd`       | AA.US/USD       | ALCOA INC                                          | 2018-01-30                      | 2018-01-01               |
