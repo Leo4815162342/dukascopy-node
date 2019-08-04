@@ -164,14 +164,15 @@ getHistoricRates({
 
 - Type: `String`
 - Description: type of price (offer side)
+- Supported values: `bid`, `ask`
 - Required: false
 - Default: `bid`
-- Supported values: `bid`, `ask`
+
 
 #### **`utcOffset`**
 
 - Type: `Number`
-- Description: UTC offset of the requst in minutes
+- Description: UTC offset in minutes
 - Required: false
 - Default: `0`
 
