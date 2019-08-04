@@ -146,7 +146,7 @@ getHistoricRates({
 #### **`priceType`**
 
 * Type: `String`
-* Description: type of price
+* Description: type of price (offer side)
 * Required: false
 * Default: `bid`
 * Supported values: `bid`, `ask`
