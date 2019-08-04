@@ -126,13 +126,13 @@ getHistoricRates({
 #### **`dates.from`**
 
 * Type: `String`
-* Description: UTC-based date string representing start of the time range. Format: `yyyy-MM-dd HH:mm` or UTC ISO string `1970-01-01T00:00:00.000Z`
+* Description: UTC-based date string representing start of the time range. Accepted formats: `yyyy-MM-dd`, `yyyy-MM-dd HH:mm` or UTC ISO string `1970-01-01T00:00:00.000Z`
 * Required: true
 
 #### **`dates.to`**
 
 * Type: `String`
-* Description: UTC-based date string representing end of time range. Format: `yyyy-MM-dd HH:mm` or UTC ISO string `1970-01-01T00:00:00.000Z`
+* Description: UTC-based date string representing end of time range. Accepted formats: `yyyy-MM-dd`, `yyyy-MM-dd HH:mm` or UTC ISO string `1970-01-01T00:00:00.000Z`
 * Required: true
 
 #### **`timeframe`**
