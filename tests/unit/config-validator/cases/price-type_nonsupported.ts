@@ -8,7 +8,7 @@ const config = {
   priceType: 'aaabbbccc',
   utcOffset: 60,
   volumes: true,
-  filterFlats: true
+  ignoreFlats: true
 };
 
 const expectedOutput = {

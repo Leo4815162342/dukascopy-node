@@ -4,7 +4,7 @@ const config = {
   priceType: 'bid',
   utcOffset: 60,
   volumes: true,
-  filterFlats: true
+  ignoreFlats: true
 };
 
 const expectedOutput = {

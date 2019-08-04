@@ -4,7 +4,7 @@ const config = {
   timeframe: 'd1',
   volumes: true,
   utcOffset: 0,
-  filterFlats: true
+  ignoreFlats: true
 };
 
 const expectedOutput = [

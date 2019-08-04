@@ -5,7 +5,7 @@ const config = {
   priceType: '',
   utcOffset: '',
   volumes: '',
-  filterFlats: ''
+  ignoreFlats: ''
 };
 
 const expectedOutput = {
@@ -17,7 +17,7 @@ const expectedOutput = {
     "The 'priceType' field does not match any of the allowed values!",
     "The 'utcOffset' field must be a number!",
     "The 'volumes' field must be a boolean!",
-    "The 'filterFlats' field must be a boolean!"
+    "The 'ignoreFlats' field must be a boolean!"
   ]
 };
 

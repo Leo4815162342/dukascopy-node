@@ -7,7 +7,7 @@ const config = {
   timeframe: 'm1',
   utcOffset: 60,
   volumes: true,
-  filterFlats: true
+  ignoreFlats: true
 };
 
 const expectedOutput = {

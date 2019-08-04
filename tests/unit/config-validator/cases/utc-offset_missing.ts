@@ -7,7 +7,7 @@ const config = {
   timeframe: 'm1',
   priceType: 'bid',
   volumes: true,
-  filterFlats: true
+  ignoreFlats: true
 };
 
 const expectedOutput = {

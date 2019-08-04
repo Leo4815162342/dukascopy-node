@@ -20,7 +20,7 @@ export type HistoryConfig = {
   priceType?: keyof typeof priceTypes;
   utcOffset?: number;
   volumes?: boolean;
-  filterFlats?: boolean;
+  ignoreFlats?: boolean;
 };
 
 const defaultConfig: Required<Pick<HistoryConfig, OptionalKeys<HistoryConfig>>> = {
@@ -28,7 +28,7 @@ const defaultConfig: Required<Pick<HistoryConfig, OptionalKeys<HistoryConfig>>> 
   priceType: 'bid',
   utcOffset: 0,
   volumes: true,
-  filterFlats: true
+  ignoreFlats: true
 };
 
 async function getHistoricRates(config: HistoryConfig) {
@@ -47,7 +47,7 @@ async function getHistoricRates(config: HistoryConfig) {
     priceType,
     volumes,
     utcOffset,
-    filterFlats
+    ignoreFlats
   } = mergedConfig;
 
   const [startDate, endDate] = normaliseDates({
@@ -68,7 +68,7 @@ async function getHistoricRates(config: HistoryConfig) {
     bufferObjects: bufferredData,
     priceType,
     volumes,
-    filterFlats
+    ignoreFlats
   });
 
   const [startDateMs, endDateMs] = [+startDate, +endDate];

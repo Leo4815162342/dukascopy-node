@@ -9,7 +9,7 @@ import { getHistoricRates } from '../src';
       timeframe: 'tick',
       volumes: false,
       utcOffset: 0,
-      filterFlats: false,
+      ignoreFlats: false,
       priceType: 'bid'
     };
     console.log('fetching started');

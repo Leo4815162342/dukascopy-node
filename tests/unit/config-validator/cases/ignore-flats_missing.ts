@@ -7,13 +7,12 @@ const config = {
   timeframe: 'm1',
   priceType: 'bid',
   utcOffset: 0,
-  volumes: true,
-  filterFlats: 'true'
+  volumes: true
 };
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: ["The 'filterFlats' field must be a boolean!"]
+  validationErrors: ["The 'ignoreFlats' field is required!"]
 };
 
 export { config, expectedOutput };

@@ -4,7 +4,7 @@ const config = {
   timeframe: 'h1',
   volumes: true,
   utcOffset: 0,
-  filterFlats: false,
+  ignoreFlats: false,
   priceType: 'bid'
 };
 
