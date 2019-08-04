@@ -157,7 +157,7 @@ getHistoricRates({
   - `mn1` (1 month)
 
 - Required: false
-- Default: `m1`
+- Default: `d1`
 
 #### **`priceType`**
 
