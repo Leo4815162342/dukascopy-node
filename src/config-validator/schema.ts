@@ -15,7 +15,8 @@ const schema = {
   timeframe: { type: 'string', enum: Object.keys(timeframes), required: true },
   priceType: { type: 'string', enum: Object.keys(priceTypes), required: true },
   utcOffset: { type: 'number', integer: true, required: true },
-  volumes: { type: 'boolean', required: true }
+  volumes: { type: 'boolean', required: true },
+  filterFlats: { type: 'boolean', required: true }
 };
 
 export { schema };

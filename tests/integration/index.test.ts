@@ -26,15 +26,16 @@ type TestCase = {
 describe('getHistoricRates', () => {
   const testCases = getTestCases<TestCase>('tests/integration/cases');
   testCases.forEach(({ content, path }) => {
+    const [fileName] = path.split('/').reverse();
     if (path.indexOf('fail_') >= 0) {
-      generateFailTestCase(content);
+      generateFailTestCase(content, fileName);
     } else {
-      generateSuccessTestCase(content);
+      generateSuccessTestCase(content, fileName);
     }
   });
 });
 
-function generateFailTestCase({ config, expectedOutput }: TestCase) {
+function generateFailTestCase({ config, expectedOutput }: TestCase, fileName?: string) {
   describe('fail', () => {
     it('Should throw validation errors on invalid config', async () => {
       expect.assertions(1);
@@ -47,29 +48,27 @@ function generateFailTestCase({ config, expectedOutput }: TestCase) {
   });
 }
 
-function generateSuccessTestCase({ config, expectedOutput }: TestCase) {
+function generateSuccessTestCase({ config, expectedOutput }: TestCase, fileName?: string) {
   let quotes: TestCase['expectedOutput'];
   describe('success', () => {
-    describe(config.timeframe, () => {
-      describe(getConfigDescription(config), () => {
-        beforeAll(() => jest.clearAllMocks());
+    describe(`${fileName}: ${getConfigDescription(config)}`, () => {
+      beforeAll(() => jest.clearAllMocks());
 
-        it('should call "getHistoricRates" function once', async () => {
-          quotes = await lib.getHistoricRates(config);
-          expect(getHistoricRatesFn).toHaveBeenCalledTimes(1);
-        });
+      it('should call "getHistoricRates" function once', async () => {
+        quotes = await lib.getHistoricRates(config);
+        expect(getHistoricRatesFn).toHaveBeenCalledTimes(1);
+      });
 
-        it('should call "validateConfig" function once', () => {
-          expect(validateConfigFn).toHaveBeenCalledTimes(1);
-        });
+      it('should call "validateConfig" function once', () => {
+        expect(validateConfigFn).toHaveBeenCalledTimes(1);
+      });
 
-        it('should call "processData" function once', () => {
-          expect(processDataFn).toHaveBeenCalledTimes(1);
-        });
+      it('should call "processData" function once', () => {
+        expect(processDataFn).toHaveBeenCalledTimes(1);
+      });
 
-        it('should generate correct output', () => {
-          expect(quotes).toEqual(expectedOutput);
-        });
+      it('should generate correct output', () => {
+        expect(quotes).toEqual(expectedOutput);
       });
     });
   });

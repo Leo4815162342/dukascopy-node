@@ -4,7 +4,8 @@ const config = {
   timeframe: '',
   priceType: '',
   utcOffset: '',
-  volumes: ''
+  volumes: '',
+  filterFlats: ''
 };
 
 const expectedOutput = {
@@ -15,7 +16,8 @@ const expectedOutput = {
     "The 'timeframe' field does not match any of the allowed values!",
     "The 'priceType' field does not match any of the allowed values!",
     "The 'utcOffset' field must be a number!",
-    "The 'volumes' field must be a boolean!"
+    "The 'volumes' field must be a boolean!",
+    "The 'filterFlats' field must be a boolean!"
   ]
 };
 

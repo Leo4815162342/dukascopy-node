@@ -4,15 +4,15 @@ const config = {
     from: '2019-03-01',
     to: '2019-03-05'
   },
+  timeframe: 'm1',
   priceType: 'bid',
-  utcOffset: 60,
-  volumes: true,
-  filterFlats: true
+  utcOffset: 0,
+  volumes: true
 };
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: ["The 'timeframe' field is required!"]
+  validationErrors: ["The 'filterFlats' field is required!"]
 };
 
 export { config, expectedOutput };

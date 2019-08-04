@@ -1,4 +1,4 @@
-import { Optional } from 'utility-types';
+import { OptionalKeys } from 'utility-types';
 
 import { instruments } from './config/instruments';
 import { timeframes } from './config/timeframes';
@@ -16,21 +16,23 @@ export type HistoryConfig = {
     from: string;
     to: string;
   };
-  timeframe: keyof typeof timeframes;
-  priceType: keyof typeof priceTypes;
-  utcOffset: number;
-  volumes: boolean;
+  timeframe?: keyof typeof timeframes;
+  priceType?: keyof typeof priceTypes;
+  utcOffset?: number;
+  volumes?: boolean;
+  filterFlats?: boolean;
 };
 
-const defaultKeys: Pick<HistoryConfig, 'timeframe' | 'priceType' | 'utcOffset' | 'volumes'> = {
+const defaultConfig: Required<Pick<HistoryConfig, OptionalKeys<HistoryConfig>>> = {
   timeframe: 'm1',
   priceType: 'bid',
   utcOffset: 0,
-  volumes: true
+  volumes: true,
+  filterFlats: true
 };
 
-async function getHistoricRates(config: Optional<HistoryConfig, keyof typeof defaultKeys>) {
-  const mergedConfig = { ...defaultKeys, ...config };
+async function getHistoricRates(config: HistoryConfig) {
+  const mergedConfig = { ...defaultConfig, ...config };
 
   const { isValid, validationErrors } = validateConfig(mergedConfig);
 
@@ -44,7 +46,8 @@ async function getHistoricRates(config: Optional<HistoryConfig, keyof typeof def
     timeframe,
     priceType,
     volumes,
-    utcOffset
+    utcOffset,
+    filterFlats
   } = mergedConfig;
 
   const [startDate, endDate] = normaliseDates({
@@ -64,7 +67,8 @@ async function getHistoricRates(config: Optional<HistoryConfig, keyof typeof def
     requestedTimeframe: timeframe,
     bufferObjects: bufferredData,
     priceType,
-    volumes
+    volumes,
+    filterFlats
   });
 
   const [startDateMs, endDateMs] = [+startDate, +endDate];

@@ -21,10 +21,11 @@ function getConfigDescription(config: HistoryConfig): string {
     dates: { from, to },
     timeframe,
     volumes,
-    utcOffset
+    utcOffset,
+    filterFlats
   } = config;
 
-  return `${instrument}, ${timeframe}, ${from}, ${to}, offset: ${utcOffset}`;
+  return `${instrument}, ${timeframe}, ${from}, ${to}, offset: ${utcOffset}, filterFlats: ${!!filterFlats}`;
 }
 
 export { getTestCases, getConfigDescription };

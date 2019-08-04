@@ -7,7 +7,8 @@ const config = {
   timeframe: 'm1',
   priceType: 'bid',
   utcOffset: 0,
-  volumes: 'xxx'
+  volumes: 'xxx',
+  filterFlats: true
 };
 
 const expectedOutput = {

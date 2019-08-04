@@ -7,7 +7,8 @@ const config = {
   timeframe: 'tick',
   priceType: 'bid',
   utcOffset: 60,
-  volumes: true
+  volumes: true,
+  filterFlats: true
 };
 
 const expectedOutput: {

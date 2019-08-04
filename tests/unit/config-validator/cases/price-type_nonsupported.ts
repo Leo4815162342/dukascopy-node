@@ -7,7 +7,8 @@ const config = {
   timeframe: 'm1',
   priceType: 'aaabbbccc',
   utcOffset: 60,
-  volumes: true
+  volumes: true,
+  filterFlats: true
 };
 
 const expectedOutput = {

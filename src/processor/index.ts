@@ -13,6 +13,7 @@ type ProcessDataInput = {
   bufferObjects: BufferObject[];
   priceType: HistoryConfig['priceType'];
   volumes: HistoryConfig['volumes'];
+  filterFlats: HistoryConfig['filterFlats'];
 };
 
 async function processData({
@@ -20,7 +21,8 @@ async function processData({
   requestedTimeframe,
   bufferObjects,
   priceType,
-  volumes
+  volumes,
+  filterFlats
 }: ProcessDataInput) {
   const result = await Promise.all(
     bufferObjects.map(async ({ url, buffer }) => {
@@ -40,7 +42,8 @@ async function processData({
         data: normalisedData,
         fromTimeframe: urlTimeframe,
         toTimeframe: requestedTimeframe,
-        priceType
+        priceType,
+        filterFlats
       });
 
       return aggregatedData;

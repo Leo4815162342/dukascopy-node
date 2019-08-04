@@ -3,7 +3,8 @@ const config = {
   dates: { from: '2019-02-01', to: '2019-03-01' },
   timeframe: 'd1',
   volumes: true,
-  utcOffset: 0
+  utcOffset: 0,
+  filterFlats: true
 };
 
 const expectedOutput = [
