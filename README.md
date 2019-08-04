@@ -120,7 +120,7 @@ getHistoricRates({
 #### **`dates`**
 
 * Type: `Object`
-* Description: an object with date range
+* Description: an object with a date range
 * Required: true
 
 #### **`dates.from`**
@@ -172,9 +172,9 @@ getHistoricRates({
 * Required: false
 * Default: `true`
 
-<h2>Example of a full config object</h2>
-
 ```javascript
+
+// Example of a full config object
 
 {
   instrument: 'btcusd',
