@@ -165,6 +165,13 @@ getHistoricRates({
 * Required: false
 * Default: `true`
 
+#### **`filterFlats`**
+
+* Type: `Boolean`
+* Description: a flag indicating whether the output should contain timeframe entries with 0 (flat) volume. Those mainly come from non-trading days, such as weekends or bank holidays.
+* Required: false
+* Default: `true`
+
 <h2 id="instruments">Supported instruments</h2>
 
 |Instrument id|Instrument name|Description|Available start date|
