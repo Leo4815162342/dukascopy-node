@@ -24,7 +24,7 @@ export type HistoryConfig = {
 };
 
 const defaultConfig: Required<Pick<HistoryConfig, OptionalKeys<HistoryConfig>>> = {
-  timeframe: 'm1',
+  timeframe: 'd1',
   priceType: 'bid',
   utcOffset: 0,
   volumes: true,
