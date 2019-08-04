@@ -137,7 +137,7 @@ getHistoricRates({
 #### **`dates.to`**
 
 * Type: `String`
-* Description: UTC-based date string representing end of time range
+* Description: UTC-based date string representing end of time range (not inclusive)
 * Accepted formats:
 
   * `yyyy-MM-dd`
