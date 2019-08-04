@@ -11,16 +11,6 @@ type AggregateInput = {
   filterFlats: HistoryConfig['filterFlats'];
 };
 
-// function getSplitData({
-//   data,
-//   fromTimeframe,
-//   toTimeframe,
-//   priceType,
-//   filterFlats
-// }: AggregateInput) {
-
-// }
-
 function aggregate({
   data,
   fromTimeframe,
