@@ -172,6 +172,25 @@ getHistoricRates({
 * Required: false
 * Default: `true`
 
+<h2>Example of a full config object</h2>
+
+```javascript
+
+{
+  instrument: 'btcusd',
+  dates: {
+    from: '2018-01-01', // or 2018-01-01T00:00:00.000Z
+    to: '2019-01-01', // or 2019-01-01T00:00:00.000Z
+  },
+  timeframe: 'd1',
+  priceType: 'ask',
+  utcOffset: 0,
+  volumes: true,
+  ignoreFlats: true
+}
+
+```
+
 <h2 id="instruments">Supported instruments</h2>
 
 |Instrument id|Instrument name|Description|Available start date|
