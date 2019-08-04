@@ -4,12 +4,12 @@ import { getHistoricRates } from '../src';
 (async () => {
   try {
     const config: HistoryConfig = {
-      instrument: 'nldidxeur',
-      dates: { from: '2019-02-14', to: '2019-02-15' },
-      timeframe: 'tick',
-      volumes: false,
+      instrument: 'cadhkd',
+      dates: { from: '2019-02-14', to: '2019-03-01' },
+      timeframe: 'd1',
+      volumes: true,
       utcOffset: 0,
-      ignoreFlats: false,
+      ignoreFlats: true,
       priceType: 'bid'
     };
     console.log('fetching started');

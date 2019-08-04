@@ -749,7 +749,7 @@ const instruments: InstrumentData = {
     name: 'CAD/HKD',
     description: 'Canadian Dollar vs Hong Kong Dollar',
     minStartDate: '2007-03-13',
-    decimalFactor: 1,
+    decimalFactor: 100000,
     minStartDateDaily: '1997-01-01'
   },
   cadjpy: {
@@ -1603,98 +1603,98 @@ const instruments: InstrumentData = {
     name: 'BRENT.CMD/USD',
     description: 'US Brent Crude Oil',
     minStartDate: '2010-12-02',
-    decimalFactor: 2,
+    decimalFactor: 1000,
     minStartDateDaily: '2006-01-01'
   },
   fraidxeur: {
     name: 'FRA.IDX/EUR',
     description: 'France 40 Index',
     minStartDate: '2011-09-18',
-    decimalFactor: 4,
+    decimalFactor: 1000,
     minStartDateDaily: '1987-01-01'
   },
   usa30idxusd: {
     name: 'USA30.IDX/USD',
     description: 'USA 30 Index',
     minStartDate: '2013-09-30',
-    decimalFactor: 5,
+    decimalFactor: 1000,
     minStartDateDaily: '2013-01-01'
   },
   deuidxeur: {
     name: 'DEU.IDX/EUR',
     description: 'Germany 30 Index',
     minStartDate: '2013-09-30',
-    decimalFactor: 5,
+    decimalFactor: 1000,
     minStartDateDaily: '2013-01-01'
   },
   eusidxeur: {
     name: 'EUS.IDX/EUR',
     description: 'Europe 50 Index',
     minStartDate: '2011-09-18',
-    decimalFactor: 4,
+    decimalFactor: 1000,
     minStartDateDaily: '1998-01-01'
   },
   gbridxgbp: {
     name: 'GBR.IDX/GBP',
     description: 'UK 100 Index',
     minStartDate: '2011-09-18',
-    decimalFactor: 4,
+    decimalFactor: 1000,
     minStartDateDaily: '1988-01-01'
   },
   hkgidxhkd: {
     name: 'HKG.IDX/HKD',
     description: 'Hong Kong 40 Index',
     minStartDate: '2011-09-18',
-    decimalFactor: 5,
+    decimalFactor: 1000,
     minStartDateDaily: '1990-01-01'
   },
   espidxeur: {
     name: 'ESP.IDX/EUR',
     description: 'Spain 35 Index',
     minStartDate: '2012-01-02',
-    decimalFactor: 4,
+    decimalFactor: 1000,
     minStartDateDaily: '1992-01-01'
   },
   lightcmdusd: {
     name: 'LIGHT.CMD/USD',
     description: 'US Light Crude Oil',
     minStartDate: '2011-09-23',
-    decimalFactor: 2,
+    decimalFactor: 1000,
     minStartDateDaily: '1983-01-01'
   },
   jpnidxjpy: {
     name: 'JPN.IDX/JPY',
     description: 'Japan 225',
     minStartDate: '2011-09-18',
-    decimalFactor: 5,
+    decimalFactor: 1000,
     minStartDateDaily: '1986-01-01'
   },
   usatechidxusd: {
     name: 'USATECH.IDX/USD',
     description: 'USA 100 Technical Index',
     minStartDate: '2011-09-18',
-    decimalFactor: 4,
+    decimalFactor: 1000,
     minStartDateDaily: '1990-01-01'
   },
   usa500idxusd: {
     name: 'USA500.IDX/USD',
     description: 'USA 500 Index',
     minStartDate: '2011-09-18',
-    decimalFactor: 4,
+    decimalFactor: 1000,
     minStartDateDaily: '1980-01-01'
   },
   cheidxchf: {
     name: 'CHE.IDX/CHF',
     description: 'Switzerland 20 Index',
     minStartDate: '2011-09-18',
-    decimalFactor: 4,
+    decimalFactor: 1000,
     minStartDateDaily: '1992-01-01'
   },
   ausidxaud: {
     name: 'AUS.IDX/AUD',
     description: 'Australia 200 Index',
     minStartDate: '2013-01-02',
-    decimalFactor: 4,
+    decimalFactor: 1000,
     minStartDateDaily: '1982-01-01'
   },
   fususd: {
