@@ -1,6 +1,6 @@
 import { HistoryConfig } from './../index';
 
-import lzmaNative from 'lzma-native';
+var lzmajs = require('lzma-purejs');
 const struct = require('python-struct');
 
 type StructFormat = '>3i2f' | '>5i1f';
@@ -14,7 +14,7 @@ type DecompressInput = {
   timeframe: HistoryConfig['timeframe'];
 };
 
-async function decompress(input: DecompressInput): Promise<number[][]> {
+function decompress(input: DecompressInput): number[][] {
   const { buffer, timeframe } = input;
 
   if (buffer.length === 0) {
@@ -22,11 +22,9 @@ async function decompress(input: DecompressInput): Promise<number[][]> {
   }
   const result: number[][] = [];
   const format = getStructFormat(timeframe);
-  const decompressedBuffer: Buffer = (await lzmaNative.decompress(buffer)) as any;
+  const decompressedBuffer = lzmajs.decompressFile(buffer) as Buffer;
 
   const step = struct.sizeOf(format);
-
-  // TODO: do not throw when url is not available
 
   for (let i = 0, n = decompressedBuffer.length; i < n; i += step) {
     const chunk = decompressedBuffer.slice(i, i + step);

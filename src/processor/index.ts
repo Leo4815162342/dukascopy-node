@@ -16,7 +16,7 @@ type ProcessDataInput = {
   ignoreFlats: HistoryConfig['ignoreFlats'];
 };
 
-async function processData({
+function processData({
   instrument,
   requestedTimeframe,
   bufferObjects,
@@ -24,31 +24,29 @@ async function processData({
   volumes,
   ignoreFlats
 }: ProcessDataInput) {
-  const result = await Promise.all(
-    bufferObjects.map(async ({ url, buffer }) => {
-      const startDate = getDateFromUrl(url);
-      const urlTimeframe = getTimeframeFromUrl(url);
+  const result = bufferObjects.map(({ url, buffer }) => {
+    const startDate = getDateFromUrl(url);
+    const urlTimeframe = getTimeframeFromUrl(url);
 
-      const decompressedData = await decompress({ buffer, timeframe: urlTimeframe });
-      const normalisedData = normalise({
-        data: decompressedData,
-        timeframe: urlTimeframe,
-        startTs: +startDate,
-        instrument,
-        volumes
-      });
+    const decompressedData = decompress({ buffer, timeframe: urlTimeframe });
+    const normalisedData = normalise({
+      data: decompressedData,
+      timeframe: urlTimeframe,
+      startTs: +startDate,
+      instrument,
+      volumes
+    });
 
-      const aggregatedData = aggregate({
-        data: normalisedData,
-        fromTimeframe: urlTimeframe,
-        toTimeframe: requestedTimeframe,
-        priceType,
-        ignoreFlats
-      });
+    const aggregatedData = aggregate({
+      data: normalisedData,
+      fromTimeframe: urlTimeframe,
+      toTimeframe: requestedTimeframe,
+      priceType,
+      ignoreFlats
+    });
 
-      return aggregatedData;
-    })
-  );
+    return aggregatedData;
+  });
 
   return <number[][]>[].concat(...result);
 }

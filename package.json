@@ -13,13 +13,12 @@
   "license": "ISC",
   "dependencies": {
     "fastest-validator": "^0.6.17",
-    "lzma-native": "^4.0.5",
+    "lzma-purejs": "^0.9.3",
     "node-fetch": "^2.3.0",
     "python-struct": "^1.0.6"
   },
   "devDependencies": {
     "@types/jest": "^24.0.13",
-    "@types/lzma-native": "^4.0.0",
     "@types/node-fetch": "^2.1.7",
     "jest": "^24.8.0",
     "jest-date-mock": "^1.0.7",
