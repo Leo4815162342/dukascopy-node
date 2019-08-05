@@ -46,8 +46,8 @@ const { getHistoricRates } = require('dukascopy-node');
     const data = await getHistoricRates({
       instrument: 'btcusd',
       dates: {
-        from: '2018-03-01',
-        to: '2018-04-01'
+        from: '2018-01-01',
+        to: '2019-01-01'
       },
       timeframe: 'd1'
     });
@@ -65,8 +65,8 @@ const { getHistoricRates } = require('dukascopy-node');
 getHistoricRates({
   instrument: 'btcusd',
   dates: {
-    from: '2018-03-01',
-    to: '2018-04-01'
+    from: '2018-01-01',
+    to: '2019-01-01'
   },
   timeframe: 'd1'
 })
