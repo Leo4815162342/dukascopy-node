@@ -15,6 +15,18 @@
     "type": "git",
     "url": "https://github.com/Leo4815162342/dukascopy-node.git"
   },
+  "keywords": [
+    "dukascopy",
+    "stock-data",
+    "forex-data",
+    "historical-data",
+    "ohlc",
+    "tick-data",
+    "exchange-rates",
+    "commodities",
+    "cfd",
+    "crypto"
+  ],
   "dependencies": {
     "fastest-validator": "^0.6.17",
     "lzma-purejs": "^0.9.3",
