@@ -11,6 +11,10 @@
   },
   "author": "leonid.pyrlia",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Leo4815162342/dukascopy-node.git"
+  },
   "dependencies": {
     "fastest-validator": "^0.6.17",
     "lzma-purejs": "^0.9.3",
