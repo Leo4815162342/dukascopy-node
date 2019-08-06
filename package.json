@@ -7,7 +7,8 @@
   "scripts": {
     "test": "./node_modules/jest/bin/jest.js tests --coverage",
     "test:call": "./node_modules/ts-node/dist/bin.js dev-utils/test-call.ts",
-    "build": "./node_modules/typescript/bin/tsc -p tsconfig.json"
+    "cleanup-lib": "find ./lib -mindepth 2 -name '*.d.ts' -delete",
+    "build": "./node_modules/typescript/bin/tsc -p tsconfig.json && npm run cleanup-lib"
   },
   "author": "leonid.pyrlia",
   "license": "ISC",
