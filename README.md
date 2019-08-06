@@ -1,6 +1,6 @@
 <p align="center"><img width="150" src="https://github.com/Leo4815162342/dukascopy-node/blob/master/logo.png?raw=true" alt="dukascopy-node"></p>
 
-<h1 align="center">dukascopy-node</h1>
+<h1 align="center"> dukascopy-node </h1>
 
 <p align="center">
   <a href="https://api.travis-ci.org/Leo4815162342/dukascopy-node.svg?branch=master"><img src="https://api.travis-ci.org/Leo4815162342/dukascopy-node.svg?branch=master" alt="Build Status"></a>
