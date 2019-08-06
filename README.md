@@ -1,4 +1,4 @@
-<h2 align="center">dukascopy-node</h2>
+<h1>dukascopy-node</h1>
 
 <p align="center"><img width="150" src="https://github.com/Leo4815162342/dukascopy-node/blob/master/logo.png?raw=true" alt="dukascopy-node"></p>
 
