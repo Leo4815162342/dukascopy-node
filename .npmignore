@@ -5,3 +5,5 @@
 tests
 node_modules
 src/**/*
+dev_utils
+coverage
