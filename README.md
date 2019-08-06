@@ -3,7 +3,7 @@
 <h1 align="center">dukascopy-node</h1>
 
 <p align="center">
-  <a href="https://travis-ci.org/icebob/fastest-validator.svg?branch=master"><img src="https://travis-ci.org/icebob/fastest-validator.svg?branch=master" alt="Build Status"></a>
+  <a href="https://api.travis-ci.org/Leo4815162342/dukascopy-node.svg?branch=master"><img src="https://travis-ci.org/icebob/fastest-validator.svg?branch=master" alt="Build Status"></a>
   <a href="https://github.com/facebook/jest"><img src="https://img.shields.io/badge/tested_with-jest-99424f.svg" alt="dukascopy-node tested with jest"></a>
 </p>
 
