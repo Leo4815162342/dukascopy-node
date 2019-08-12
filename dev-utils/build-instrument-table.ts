@@ -67,31 +67,3 @@ const groups = Object.entries(instruments).reduce((all, [id, instrument]) => {
     console.log(err);
   }
 })();
-
-// (async () => {
-//   try {
-//     const headers = [
-//       'Instrument id',
-//       'Instrument name',
-//       'Description',
-//       'Start date (tick, m1, h1)',
-//       'Start date (d1, mn1)'
-//     ];
-
-//     const header = headers.map((h, i) => `${!i ? '|' : ''}${h}|`).join('');
-//     const divider = headers.map((_, i) => `${!i ? '|' : ''}-|`).join('');
-
-//     const body = Object.entries(instruments)
-//       .map(([id, { name, description, minStartDate, minStartDateDaily }]) => {
-//         return `|\`${id}\`|${name}|${description}|${minStartDate}|${minStartDateDaily}`;
-//       })
-//       .join('\n');
-
-//     const output = [header, divider, body].join('\n');
-
-//     await promisify(fs.writeFile)('./INSTRUMENTS.md', output);
-//     console.log('Created file');
-//   } catch (err) {
-//     console.log(err);
-//   }
-// })();
