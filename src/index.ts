@@ -62,7 +62,7 @@ async function getHistoricRates(config: HistoryConfig) {
 
   const bufferredData = await batchedFetch(urls);
 
-  const processedData = await processData({
+  const processedData = processData({
     instrument,
     requestedTimeframe: timeframe,
     bufferObjects: bufferredData,
