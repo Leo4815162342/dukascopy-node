@@ -9,7 +9,7 @@ export type Instrument = {
 
 // prettier-ignore
 type InstrumentData = {
-  [key in "aususd"|"aaususd"|"aabaususd"|"aalgbgbx"|"aalususd"|"aaplususd"|"abbsesek"|"abcususd"|"abevususd"|"abfgbgbx"|"abibeeur"|"abtususd"|"acfreur"|"acafreur"|"acseseur"|"acxeseur"|"adbeususd"|"adiususd"|"admgbgbx"|"adpususd"|"adsdeeur"|"adskususd"|"aenaeseur"|"aetususd"|"affreur"|"agkgbgbx"|"agnnleur"|"agsbeeur"|"ahnleur"|"ahtgbgbx"|"aifreur"|"aigususd"|"airfreur"|"akzanleur"|"alfasesek"|"allususd"|"alofreur"|"alvdeeur"|"alxnususd"|"amatususd"|"amdususd"|"amgnususd"|"amseseur"|"amtususd"|"amznususd"|"antmususd"|"antogbgbx"|"apaususd"|"apcususd"|"apdususd"|"asmlnleur"|"atcoasesek"|"atviususd"|"audcad"|"audchf"|"audjpy"|"audnzd"|"audsgd"|"audusd"|"avgbgbx"|"avbususd"|"avgoususd"|"axpususd"|"azngbgbx"|"aznususd"|"azoususd"|"bagbgbx"|"baususd"|"babgbgbx"|"babaususd"|"bacususd"|"barcgbgbx"|"basdeeur"|"batsgbgbx"|"bayndeeur"|"bbdususd"|"bbtususd"|"bbvaeseur"|"bbyususd"|"bdxususd"|"beideeur"|"belgbeeur"|"biduususd"|"biibususd"|"bkususd"|"blndgbgbx"|"bltgbgbx"|"bmwdeeur"|"bmyususd"|"bnfreur"|"bnpfreur"|"bnzlgbgbx"|"bossdeeur"|"bpgbgbx"|"bpususd"|"brbygbgbx"|"brkbususd"|"bsxususd"|"btgbgbx"|"btcusd"|"bundtreur"|"cususd"|"cafreur"|"cabkeseur"|"cadchf"|"cadhkd"|"cadjpy"|"cagususd"|"cahususd"|"capfreur"|"carlbdkdkk"|"catususd"|"cbkdeeur"|"cbsususd"|"cclgbgbx"|"celgususd"|"cfususd"|"chfjpy"|"chfsgd"|"chiidxusd"|"ciususd"|"clususd"|"cmcsaususd"|"cmeususd"|"cmgususd"|"cmiususd"|"cnagbgbx"|"cocoacmdusd"|"coffeecmdusx"|"colususd"|"colobdkdkk"|"condeeur"|"copususd"|"coppercmdusd"|"costususd"|"cottoncmdusx"|"cpggbgbx"|"cpigbgbx"|"crdagbgbx"|"crhgbgbx"|"crmususd"|"csfreur"|"csususd"|"cscoususd"|"csxususd"|"ctlususd"|"ctshususd"|"cvsususd"|"cvxususd"|"dususd"|"daideeur"|"dalususd"|"danskedkdkk"|"db1deeur"|"dbkdeeur"|"deususd"|"dfsususd"|"dgfreur"|"dgususd"|"dgegbgbx"|"dhiususd"|"dhrususd"|"diaeseur"|"diaususd"|"dieselcmdusd"|"disususd"|"dltrususd"|"dnbnonok"|"dollaridxusd"|"dpwdeeur"|"dsmnleur"|"dtedeeur"|"dukususd"|"dvaususd"|"dvnususd"|"dvyususd"|"eaususd"|"ebayususd"|"ebsateur"|"edffreur"|"edppteur"|"eemususd"|"efaususd"|"efxususd"|"eifreur"|"eixususd"|"elususd"|"eleeseur"|"eli1vfieur"|"eluxbsesek"|"embususd"|"emrususd"|"enfreur"|"engeseur"|"engifreur"|"eoandeeur"|"eogususd"|"eqtususd"|"ericbsesek"|"esrxususd"|"ethusd"|"euraud"|"eurcad"|"eurchf"|"eurczk"|"eurdkk"|"eurgbp"|"eurhkd"|"eurhuf"|"eurjpy"|"eurnok"|"eurnzd"|"eurpln"|"eurrub"|"eursek"|"eursgd"|"eurtry"|"eurusd"|"ewhususd"|"ewjususd"|"ewwususd"|"ewzususd"|"excususd"|"expeususd"|"expngbgbx"|"ezjgbgbx"|"ezuususd"|"brentcmdusd"|"fraidxeur"|"usa30idxusd"|"deuidxeur"|"eusidxeur"|"gbridxgbp"|"hkgidxhkd"|"espidxeur"|"lightcmdusd"|"jpnidxjpy"|"usatechidxusd"|"usa500idxusd"|"cheidxchf"|"ausidxaud"|"fususd"|"fbususd"|"fcxususd"|"fdxususd"|"feususd"|"fereseur"|"fmedeeur"|"foxaususd"|"fpfreur"|"frfreur"|"fredeeur"|"fresgbgbx"|"fxiususd"|"galppteur"|"gameseur"|"gascmdusd"|"gaseseur"|"gbpaud"|"gbpcad"|"gbpchf"|"gbpjpy"|"gbpnzd"|"gbpusd"|"gdxususd"|"gdxjususd"|"geususd"|"getibsesek"|"gfsgbgbx"|"gildususd"|"gisususd"|"gldususd"|"glefreur"|"glengbgbx"|"glwususd"|"gmususd"|"googususd"|"googlususd"|"gpsususd"|"gsususd"|"gtonleur"|"gwwususd"|"halususd"|"hcnususd"|"hcpususd"|"hdususd"|"heideeur"|"heianleur"|"hen3deeur"|"hesususd"|"hkdjpy"|"hmbsesek"|"hmsogbgbx"|"honususd"|"hpqususd"|"hsbagbgbx"|"humususd"|"iaggbgbx"|"ibbususd"|"ibeeseur"|"ibmususd"|"iceususd"|"iefususd"|"ifxdeeur"|"ihggbgbx"|"ijhususd"|"ijrususd"|"ilmnususd"|"imtgbgbx"|"indidxusd"|"inganleur"|"intcususd"|"intuususd"|"invebsesek"|"ipgususd"|"isatgbgbx"|"isrgususd"|"itrkgbgbx"|"itubususd"|"itvgbgbx"|"itwususd"|"itxeseur"|"iveususd"|"ivwususd"|"iwdususd"|"iwfususd"|"iwmususd"|"iyrususd"|"jciususd"|"jnjususd"|"jnkususd"|"jpmususd"|"jwnususd"|"kususd"|"kbcbeeur"|"kerfreur"|"keyususd"|"kgfgbgbx"|"khcususd"|"kmbususd"|"kmiususd"|"koususd"|"kpnnleur"|"krususd"|"kssususd"|"lususd"|"landgbgbx"|"lenususd"|"lgengbgbx"|"lhadeeur"|"lifreur"|"lindeeur"|"lloygbgbx"|"llyususd"|"lmtususd"|"lowususd"|"lrfreur"|"lrcxususd"|"lsegbgbx"|"luvususd"|"lvsususd"|"lxsdeeur"|"mususd"|"maususd"|"maerskbdkdkk"|"marususd"|"matususd"|"mcfreur"|"mcdususd"|"mchpususd"|"mckususd"|"mdlzususd"|"metususd"|"mgmususd"|"mhgnonok"|"mksgbgbx"|"mmmususd"|"mndigbgbx"|"moususd"|"mpcususd"|"mrkdeeur"|"mrkususd"|"mroususd"|"mrwgbgbx"|"msususd"|"msftususd"|"mtnleur"|"muususd"|"muv2deeur"|"nblususd"|"ndasesek"|"neeususd"|"nemususd"|"nes1vfieur"|"nflxususd"|"nggbgbx"|"nhynonok"|"nkeususd"|"nldidxeur"|"nocususd"|"novobdkdkk"|"nre1vfieur"|"nrgususd"|"nscususd"|"nvdaususd"|"nwlususd"|"nxtgbgbx"|"nzdcad"|"nzdchf"|"nzdjpy"|"nzdusd"|"nzymbdkdkk"|"ojuicecmdusx"|"okeususd"|"omcususd"|"orfreur"|"orafreur"|"orclususd"|"orknonok"|"orlyususd"|"ote1vfieur"|"out1vfieur"|"oxyususd"|"pah3deeur"|"payxususd"|"pbrususd"|"pcarususd"|"pcgususd"|"pclnususd"|"pepususd"|"pfcgbgbx"|"pfeususd"|"pgususd"|"pgrususd"|"phususd"|"phianleur"|"plnidxpln"|"pmususd"|"pncususd"|"pndoradkdkk"|"ppgususd"|"prugbgbx"|"pruususd"|"psaususd"|"psmdeeur"|"psngbgbx"|"psongbgbx"|"psxususd"|"pubfreur"|"pxdususd"|"pyplususd"|"qcomususd"|"qqqususd"|"randnleur"|"rbgbgbx"|"rbiateur"|"rbsgbgbx"|"rdsanleur"|"rdsbgbgbx"|"reeeseur"|"regnususd"|"relgbgbx"|"rennleur"|"repeseur"|"rfususd"|"rhtususd"|"rifreur"|"riogbgbx"|"rmggbgbx"|"rnofreur"|"rostususd"|"rrgbgbx"|"rrcususd"|"rrsgbgbx"|"rsagbgbx"|"rtnususd"|"rwedeeur"|"saffreur"|"saneseur"|"sanfreur"|"sandsesek"|"sapdeeur"|"sbrygbgbx"|"sbuxususd"|"scabsesek"|"schwususd"|"sdfdeeur"|"sebasesek"|"secubsesek"|"sgdidxsgd"|"sgdjpy"|"sgegbgbx"|"sgofreur"|"shpgbgbx"|"shwususd"|"siedeeur"|"sjmususd"|"skabsesek"|"skfbsesek"|"skygbgbx"|"slvususd"|"smingbgbx"|"sngbgbx"|"snapususd"|"soususd"|"solbbeeur"|"spgususd"|"spyususd"|"ssegbgbx"|"stangbgbx"|"stervfieur"|"stiususd"|"stlnonok"|"sttususd"|"stzususd"|"sufreur"|"sugarcmdusd"|"svtgbgbx"|"swedasesek"|"swkususd"|"swmasesek"|"sykususd"|"symcususd"|"syyususd"|"tususd"|"tapususd"|"tategbgbx"|"tefeseur"|"telnonok"|"tel2bsesek"|"tevaususd"|"tgtususd"|"tifususd"|"tjxususd"|"tkadeeur"|"tls1vfieur"|"tlsnsesek"|"tltususd"|"tlwgbgbx"|"tmoususd"|"tpkgbgbx"|"trowususd"|"trvususd"|"tryjpy"|"tscogbgbx"|"tslaususd"|"tsmususd"|"tsnususd"|"tui1deeur"|"twtrususd"|"txnususd"|"ucbbeeur"|"ugfreur"|"ukgilttrgbp"|"ultaususd"|"ulvrgbgbx"|"umibeeur"|"unanleur"|"unhususd"|"unpususd"|"upsususd"|"usbususd"|"usdcad"|"usdchf"|"usdcnh"|"usdczk"|"usddkk"|"usdhkd"|"usdhuf"|"usdils"|"usdjpy"|"usdmxn"|"usdnok"|"usdpln"|"usdron"|"usdrub"|"usdsek"|"usdsgd"|"usdthb"|"usdtry"|"usdzar"|"usoususd"|"utxususd"|"uugbgbx"|"vususd"|"valeususd"|"veaususd"|"vfcususd"|"vgkususd"|"viabususd"|"viefreur"|"vivfreur"|"vkfreur"|"vloususd"|"vmcususd"|"vnadeeur"|"vnqususd"|"vodgbgbx"|"voeateur"|"volvbsesek"|"vow3deeur"|"vpknleur"|"vrtxususd"|"vwsdkdkk"|"vxxususd"|"vzususd"|"wbaususd"|"wdcususd"|"weirgbgbx"|"wfcususd"|"whrususd"|"wklnleur"|"wmtususd"|"wosgbgbx"|"wppgbgbx"|"wtbgbgbx"|"wynnususd"|"xususd"|"xagusd"|"xauusd"|"xleususd"|"xlfususd"|"xliususd"|"xlkususd"|"xlnxususd"|"xlpususd"|"xluususd"|"xlvususd"|"xlyususd"|"xomususd"|"xopususd"|"yumususd"|"zarjpy"|"zbhususd"]: 
+  [key in "aususd"|"aaususd"|"aabaususd"|"aalgbgbx"|"aalususd"|"aaplususd"|"abbsesek"|"abcususd"|"abevususd"|"abfgbgbx"|"abibeeur"|"abtususd"|"acfreur"|"acafreur"|"acseseur"|"acxeseur"|"adbeususd"|"adiususd"|"admgbgbx"|"adpususd"|"adsdeeur"|"adskususd"|"aenaeseur"|"aetususd"|"affreur"|"agkgbgbx"|"agnnleur"|"agsbeeur"|"ahnleur"|"ahtgbgbx"|"aifreur"|"aigususd"|"airfreur"|"akzanleur"|"alfasesek"|"allususd"|"alofreur"|"alvdeeur"|"alxnususd"|"amatususd"|"amdususd"|"amgnususd"|"amseseur"|"amtususd"|"amznususd"|"antmususd"|"antogbgbx"|"apaususd"|"apcususd"|"apdususd"|"asmlnleur"|"atcoasesek"|"atviususd"|"audcad"|"audchf"|"audjpy"|"audnzd"|"audsgd"|"audusd"|"avgbgbx"|"avbususd"|"avgoususd"|"axpususd"|"azngbgbx"|"aznususd"|"azoususd"|"bagbgbx"|"baususd"|"babgbgbx"|"babaususd"|"bacususd"|"barcgbgbx"|"basdeeur"|"batsgbgbx"|"bayndeeur"|"bbdususd"|"bbtususd"|"bbvaeseur"|"bbyususd"|"bdxususd"|"beideeur"|"belgbeeur"|"biduususd"|"biibususd"|"bkususd"|"blndgbgbx"|"bltgbgbx"|"bmwdeeur"|"bmyususd"|"bnfreur"|"bnpfreur"|"bnzlgbgbx"|"bossdeeur"|"bpgbgbx"|"bpususd"|"brbygbgbx"|"brkbususd"|"bsxususd"|"btgbgbx"|"btcusd"|"bundtreur"|"cususd"|"cafreur"|"cabkeseur"|"cadchf"|"cadhkd"|"cadjpy"|"cagususd"|"cahususd"|"capfreur"|"carlbdkdkk"|"catususd"|"cbkdeeur"|"cbsususd"|"cclgbgbx"|"celgususd"|"cfususd"|"chfjpy"|"chfsgd"|"chiidxusd"|"ciususd"|"clususd"|"cmcsaususd"|"cmeususd"|"cmgususd"|"cmiususd"|"cnagbgbx"|"cocoacmdusd"|"coffeecmdusx"|"colususd"|"colobdkdkk"|"condeeur"|"copususd"|"coppercmdusd"|"costususd"|"cottoncmdusx"|"cpggbgbx"|"cpigbgbx"|"crdagbgbx"|"crhgbgbx"|"crmususd"|"csfreur"|"csususd"|"cscoususd"|"csxususd"|"ctlususd"|"ctshususd"|"cvsususd"|"cvxususd"|"dususd"|"daideeur"|"dalususd"|"danskedkdkk"|"db1deeur"|"dbkdeeur"|"deususd"|"dfsususd"|"dgfreur"|"dgususd"|"dgegbgbx"|"dhiususd"|"dhrususd"|"diaeseur"|"diaususd"|"dieselcmdusd"|"disususd"|"dltrususd"|"dnbnonok"|"dollaridxusd"|"dpwdeeur"|"dsmnleur"|"dtedeeur"|"dukususd"|"dvaususd"|"dvnususd"|"dvyususd"|"eaususd"|"ebayususd"|"ebsateur"|"edffreur"|"edppteur"|"eemususd"|"efaususd"|"efxususd"|"eifreur"|"eixususd"|"elususd"|"eleeseur"|"eli1vfieur"|"eluxbsesek"|"embususd"|"emrususd"|"enfreur"|"engeseur"|"engifreur"|"eoandeeur"|"eogususd"|"eqtususd"|"ericbsesek"|"esrxususd"|"ethusd"|"euraud"|"eurcad"|"eurchf"|"eurczk"|"eurdkk"|"eurgbp"|"eurhkd"|"eurhuf"|"eurjpy"|"eurnok"|"eurnzd"|"eurpln"|"eurrub"|"eursek"|"eursgd"|"eurtry"|"eurusd"|"ewhususd"|"ewjususd"|"ewwususd"|"ewzususd"|"excususd"|"expeususd"|"expngbgbx"|"ezjgbgbx"|"ezuususd"|"brentcmdusd"|"fraidxeur"|"usa30idxusd"|"deuidxeur"|"eusidxeur"|"gbridxgbp"|"hkgidxhkd"|"espidxeur"|"lightcmdusd"|"jpnidxjpy"|"usatechidxusd"|"usa500idxusd"|"cheidxchf"|"ausidxaud"|"fususd"|"fbususd"|"fcxususd"|"fdxususd"|"feususd"|"fereseur"|"fmedeeur"|"foxaususd"|"fpfreur"|"frfreur"|"fredeeur"|"fresgbgbx"|"fxiususd"|"galppteur"|"gameseur"|"gascmdusd"|"gaseseur"|"gbpaud"|"gbpcad"|"gbpchf"|"gbpjpy"|"gbpnzd"|"gbpusd"|"gdxususd"|"gdxjususd"|"geususd"|"getibsesek"|"gfsgbgbx"|"gildususd"|"gisususd"|"gldususd"|"glefreur"|"glengbgbx"|"glwususd"|"gmususd"|"googususd"|"googlususd"|"gpsususd"|"gsususd"|"gtonleur"|"gwwususd"|"halususd"|"hcnususd"|"hcpususd"|"hdususd"|"heideeur"|"heianleur"|"hen3deeur"|"hesususd"|"hkdjpy"|"hmbsesek"|"hmsogbgbx"|"honususd"|"hpqususd"|"hsbagbgbx"|"humususd"|"iaggbgbx"|"ibbususd"|"ibeeseur"|"ibmususd"|"iceususd"|"iefususd"|"ifxdeeur"|"ihggbgbx"|"ijhususd"|"ijrususd"|"ilmnususd"|"imtgbgbx"|"indidxusd"|"inganleur"|"intcususd"|"intuususd"|"invebsesek"|"ipgususd"|"isatgbgbx"|"isrgususd"|"itrkgbgbx"|"itubususd"|"itvgbgbx"|"itwususd"|"itxeseur"|"iveususd"|"ivwususd"|"iwdususd"|"iwfususd"|"iwmususd"|"iyrususd"|"jciususd"|"jnjususd"|"jnkususd"|"jpmususd"|"jwnususd"|"kususd"|"kbcbeeur"|"kerfreur"|"keyususd"|"kgfgbgbx"|"khcususd"|"kmbususd"|"kmiususd"|"koususd"|"kpnnleur"|"krususd"|"kssususd"|"lususd"|"landgbgbx"|"lenususd"|"lgengbgbx"|"lhadeeur"|"lifreur"|"lindeeur"|"lloygbgbx"|"llyususd"|"lmtususd"|"lowususd"|"lrfreur"|"lrcxususd"|"lsegbgbx"|"luvususd"|"lvsususd"|"lxsdeeur"|"mususd"|"maususd"|"maerskbdkdkk"|"marususd"|"matususd"|"mcfreur"|"mcdususd"|"mchpususd"|"mckususd"|"mdlzususd"|"metususd"|"mgmususd"|"mhgnonok"|"mksgbgbx"|"mmmususd"|"mndigbgbx"|"moususd"|"mpcususd"|"mrkdeeur"|"mrkususd"|"mroususd"|"mrwgbgbx"|"msususd"|"msftususd"|"mtnleur"|"muususd"|"muv2deeur"|"nblususd"|"ndasesek"|"neeususd"|"nemususd"|"nes1vfieur"|"nflxususd"|"nggbgbx"|"nhynonok"|"nkeususd"|"nldidxeur"|"nocususd"|"novobdkdkk"|"nre1vfieur"|"nrgususd"|"nscususd"|"nvdaususd"|"nwlususd"|"nxtgbgbx"|"nzdcad"|"nzdchf"|"nzdjpy"|"nzdusd"|"nzymbdkdkk"|"ojuicecmdusx"|"okeususd"|"omcususd"|"orfreur"|"orafreur"|"orclususd"|"orknonok"|"orlyususd"|"ote1vfieur"|"out1vfieur"|"oxyususd"|"pah3deeur"|"payxususd"|"pbrususd"|"pcarususd"|"pcgususd"|"pclnususd"|"pepususd"|"pfcgbgbx"|"pfeususd"|"pgususd"|"pgrususd"|"phususd"|"phianleur"|"plnidxpln"|"pmususd"|"pncususd"|"pndoradkdkk"|"ppgususd"|"prugbgbx"|"pruususd"|"psaususd"|"psmdeeur"|"psngbgbx"|"psongbgbx"|"psxususd"|"pubfreur"|"pxdususd"|"pyplususd"|"qcomususd"|"qqqususd"|"randnleur"|"rbgbgbx"|"rbiateur"|"rbsgbgbx"|"rdsanleur"|"rdsbgbgbx"|"reeeseur"|"regnususd"|"relgbgbx"|"rennleur"|"repeseur"|"rfususd"|"rhtususd"|"rifreur"|"riogbgbx"|"rmggbgbx"|"rnofreur"|"rostususd"|"rrgbgbx"|"rrcususd"|"rrsgbgbx"|"rsagbgbx"|"rtnususd"|"rwedeeur"|"saffreur"|"saneseur"|"sanfreur"|"sandsesek"|"sapdeeur"|"sbrygbgbx"|"sbuxususd"|"scabsesek"|"schwususd"|"sdfdeeur"|"sebasesek"|"secubsesek"|"sgdidxsgd"|"sgdjpy"|"sgegbgbx"|"sgofreur"|"shpgbgbx"|"shwususd"|"siedeeur"|"sjmususd"|"skabsesek"|"skfbsesek"|"skygbgbx"|"slvususd"|"smingbgbx"|"sngbgbx"|"snapususd"|"soususd"|"solbbeeur"|"spgususd"|"spyususd"|"ssegbgbx"|"stangbgbx"|"stervfieur"|"stiususd"|"stlnonok"|"sttususd"|"stzususd"|"sufreur"|"sugarcmdusd"|"svtgbgbx"|"swedasesek"|"swkususd"|"swmasesek"|"sykususd"|"symcususd"|"syyususd"|"tususd"|"tapususd"|"tategbgbx"|"tefeseur"|"telnonok"|"tel2bsesek"|"tevaususd"|"tgtususd"|"tifususd"|"tjxususd"|"tkadeeur"|"tls1vfieur"|"tlsnsesek"|"tltususd"|"tlwgbgbx"|"tmoususd"|"tpkgbgbx"|"trowususd"|"trvususd"|"tryjpy"|"tscogbgbx"|"tslaususd"|"tsmususd"|"tsnususd"|"tui1deeur"|"twtrususd"|"txnususd"|"ucbbeeur"|"ugfreur"|"ukgilttrgbp"|"ultaususd"|"ulvrgbgbx"|"umibeeur"|"unanleur"|"unhususd"|"unpususd"|"upsususd"|"usbususd"|"usdcad"|"usdchf"|"usdcnh"|"usdczk"|"usddkk"|"usdhkd"|"usdhuf"|"usdils"|"usdjpy"|"usdmxn"|"usdnok"|"usdpln"|"usdron"|"usdrub"|"usdsek"|"usdsgd"|"usdthb"|"usdtry"|"usdzar"|"usoususd"|"utxususd"|"uugbgbx"|"vususd"|"valeususd"|"veaususd"|"vfcususd"|"vgkususd"|"viabususd"|"viefreur"|"vivfreur"|"vkfreur"|"vloususd"|"vmcususd"|"vnadeeur"|"vnqususd"|"vodgbgbx"|"voeateur"|"volvbsesek"|"vow3deeur"|"vpknleur"|"vrtxususd"|"vwsdkdkk"|"vxxususd"|"vzususd"|"wbaususd"|"wdcususd"|"weirgbgbx"|"wfcususd"|"whrususd"|"wklnleur"|"wmtususd"|"wosgbgbx"|"wppgbgbx"|"wtbgbgbx"|"wynnususd"|"xususd"|"xagusd"|"xauusd"|"xleususd"|"xlfususd"|"xliususd"|"xlkususd"|"xlnxususd"|"xlpususd"|"xluususd"|"xlvususd"|"xlyususd"|"xomususd"|"xopususd"|"yumususd"|"zarjpy"|"zbhususd"|"abbnchchf"|"adenchchf"|"baerchchf"|"clnchchf"|"csgnchchf"|"givnchchf"|"kninchchf"|"lhnchchf"|"lonnchchf"|"nesnchchf"|"novnchchf"|"rogchchf"|"scmnchchf"|"sgsnchchf"|"slhnchchf"|"soonchchf"|"soybeancmdusx"|"srenchchf"|"ubsgchchf"|"uhrchchf"|"ussc2000idxusd"|"ustbondtrusd"|"zurnchchf"]: 
     Instrument
 };
 
@@ -4020,7 +4020,7 @@ const instruments: InstrumentData = {
     minStartDate: '2018-02-01',
     decimalFactor: 1000,
     minStartDateDaily: '2018-01-01',
-    group: 'ETF_CFD_US'
+    group: 'US'
   },
   smingbgbx: {
     name: 'SMIN.GB/GBX',
@@ -5085,33 +5085,191 @@ const instruments: InstrumentData = {
     decimalFactor: 1000,
     minStartDateDaily: '2018-01-01',
     group: 'US'
+  },
+  abbnchchf: {
+    name: 'ABBN.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'ABB Ltd',
+    minStartDate: '2015-06-16',
+    minStartDateDaily: '2011-01-01'
+  },
+  adenchchf: {
+    name: 'ADEN.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'Adecco SA',
+    minStartDate: '2015-06-16',
+    minStartDateDaily: '2011-01-01'
+  },
+  baerchchf: {
+    name: 'BAER.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'Julius Baer Group Ltd',
+    minStartDate: '2015-06-16',
+    minStartDateDaily: '2011-01-01'
+  },
+  clnchchf: {
+    name: 'CLN.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'Clariant AG',
+    minStartDate: '2015-06-16',
+    minStartDateDaily: '2011-01-01'
+  },
+  csgnchchf: {
+    name: 'CSGN.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'Credit Suisse Group AG',
+    minStartDate: '2015-06-16',
+    minStartDateDaily: '2011-01-01'
+  },
+  givnchchf: {
+    name: 'GIVN.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'Givaudan SA',
+    minStartDate: '2015-06-16',
+    minStartDateDaily: '2011-01-01'
+  },
+  kninchchf: {
+    name: 'KNIN.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'Kuehne + Nagel International AG',
+    minStartDate: '2015-06-17',
+    minStartDateDaily: '2011-01-01'
+  },
+  lhnchchf: {
+    name: 'LHN.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'Lafarge Holcim Ltd',
+    minStartDate: '2015-06-17',
+    minStartDateDaily: '2015-01-01'
+  },
+  lonnchchf: {
+    name: 'LONN.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'Lonza Group AG',
+    minStartDate: '2015-06-16',
+    minStartDateDaily: '2011-01-01'
+  },
+  nesnchchf: {
+    name: 'NESN.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'Nestle SA',
+    minStartDate: '2015-06-16',
+    minStartDateDaily: '2011-01-01'
+  },
+  novnchchf: {
+    name: 'NOVN.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'Novartis AG',
+    minStartDate: '2015-06-16',
+    minStartDateDaily: '2011-01-01'
+  },
+  rogchchf: {
+    name: 'ROG.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'Roche Holding AG',
+    minStartDate: '2015-07-03',
+    minStartDateDaily: '2011-01-01'
+  },
+  scmnchchf: {
+    name: 'SCMN.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'Swisscom AG',
+    minStartDate: '2015-07-03',
+    minStartDateDaily: '2011-01-01'
+  },
+  sgsnchchf: {
+    name: 'SGSN.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'SGS SA',
+    minStartDate: '2015-08-06',
+    minStartDateDaily: '2011-01-01'
+  },
+  slhnchchf: {
+    name: 'SLHN.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'Swiss Life Holding AG',
+    minStartDate: '2015-08-06',
+    minStartDateDaily: '2011-01-01'
+  },
+  soonchchf: {
+    name: 'SOON.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'Sonova Holding AG',
+    minStartDate: '2015-08-07',
+    minStartDateDaily: '2011-01-01'
+  },
+  soybeancmdusx: {
+    name: 'SOYBEAN.CMD/USX',
+    group: 'CMD_AGRICULTURAL',
+    decimalFactor: 1000,
+    description: 'Soybean',
+    minStartDate: '2017-12-01',
+    minStartDateDaily: '2017-01-01'
+  },
+  srenchchf: {
+    name: 'SREN.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'Swiss Re AG',
+    minStartDate: '2015-08-06',
+    minStartDateDaily: '2011-01-01'
+  },
+  ubsgchchf: {
+    name: 'UBSG.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'UBS Group AG',
+    minStartDate: '2015-06-15',
+    minStartDateDaily: '2014-01-01'
+  },
+  uhrchchf: {
+    name: 'UHR.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'Swatch Group AG/The',
+    minStartDate: '2015-08-07',
+    minStartDateDaily: '2011-01-01'
+  },
+  ussc2000idxusd: {
+    name: 'USSC2000.IDX/USD',
+    group: 'IDX_AMERICA',
+    decimalFactor: 1000,
+    description: 'US Small Cap 2000',
+    minStartDate: '2018-08-08',
+    minStartDateDaily: '2018-01-01'
+  },
+  ustbondtrusd: {
+    name: 'USTBOND.TR/USD',
+    group: 'BND_CFD',
+    decimalFactor: 1000,
+    description: 'US T-Bond',
+    minStartDate: '2018-01-04',
+    minStartDateDaily: '2017-01-01'
+  },
+  zurnchchf: {
+    name: 'ZURN.CH/CHF',
+    group: 'Switzerland',
+    decimalFactor: 1000,
+    description: 'Zurich Insurance Group AG',
+    minStartDate: '2015-08-07',
+    minStartDateDaily: '2011-01-01'
   }
 };
-
-// TO ADD:
-
-// ABBN.CH/CHF Switzerland
-// ADEN.CH/CHF Switzerland
-// BAER.CH/CHF Switzerland
-// CLN.CH/CHF Switzerland
-// CSGN.CH/CHF Switzerland
-// GIVN.CH/CHF Switzerland
-// KNIN.CH/CHF Switzerland
-// LHN.CH/CHF Switzerland
-// LONN.CH/CHF Switzerland
-// NESN.CH/CHF Switzerland
-// NOVN.CH/CHF Switzerland
-// ROG.CH/CHF Switzerland
-// SCMN.CH/CHF Switzerland
-// SGSN.CH/CHF Switzerland
-// SLHN.CH/CHF Switzerland
-// SOON.CH/CHF Switzerland
-// SOYBEAN.CMD/USX CMD_AGRICULTURAL
-// SREN.CH/CHF Switzerland
-// UBSG.CH/CHF Switzerland
-// UHR.CH/CHF Switzerland
-// USSC2000.IDX/USD IDX_AMERICA
-// USTBOND.TR/USD BND_CFD
-// ZURN.CH/CHF Switzerland
 
 export { instruments };

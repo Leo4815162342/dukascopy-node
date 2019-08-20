@@ -285,6 +285,7 @@ getHistoricRates({
 |`gascmdusd`|GAS.CMD/USD|Natural Gas|2012-08-20|2012-01-01|
 |`ojuicecmdusx`|OJUICE.CMD/USX|Orange Juice|2017-10-20|2017-01-01|
 |`sugarcmdusd`|SUGAR.CMD/USD|London Sugar No.5|2017-10-02|2017-01-01|
+|`soybeancmdusx`|SOYBEAN.CMD/USX|Soybean|2017-12-01|2017-01-01|
 ### Indicies (CFD)
 |Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
@@ -306,11 +307,13 @@ getHistoricRates({
 |`nldidxeur`|NLD.IDX/EUR|Netherlands 25 Index|2013-02-27|1999-01-01|
 |`plnidxpln`|PLN.IDX/PLN|Poland 20 Index|2017-12-01|2017-01-01|
 |`sgdidxsgd`|SGD.IDX/SGD|Singapore Blue Chip Cash Index|2017-12-01|2017-01-01|
+|`ussc2000idxusd`|USSC2000.IDX/USD|US Small Cap 2000|2018-08-08|2018-01-01|
 ### Bonds (CFD)
 |Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`bundtreur`|BUND.TR/EUR|Euro Bund|2016-05-02|2016-01-01|
 |`ukgilttrgbp`|UKGILT.TR/GBP|UK Long Gilt|2017-12-26|2017-01-01|
+|`ustbondtrusd`|USTBOND.TR/USD|US T-Bond|2018-01-04|2017-01-01|
 ### Austria 🇦🇹
 |Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
@@ -503,6 +506,29 @@ getHistoricRates({
 |`tel2bsesek`|TEL2B.SE/SEK|Tele2 AB|2016-11-08|2011-01-01|
 |`tlsnsesek`|TLSN.SE/SEK|Telia Company AB|2016-11-14|2016-01-01|
 |`volvbsesek`|VOLVB.SE/SEK|Volvo AB|2016-11-07|2011-01-01|
+### Switzerland 🇨🇭
+|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|-|-|-|-|-|
+|`abbnchchf`|ABBN.CH/CHF|ABB Ltd|2015-06-16|2011-01-01|
+|`adenchchf`|ADEN.CH/CHF|Adecco SA|2015-06-16|2011-01-01|
+|`baerchchf`|BAER.CH/CHF|Julius Baer Group Ltd|2015-06-16|2011-01-01|
+|`clnchchf`|CLN.CH/CHF|Clariant AG|2015-06-16|2011-01-01|
+|`csgnchchf`|CSGN.CH/CHF|Credit Suisse Group AG|2015-06-16|2011-01-01|
+|`givnchchf`|GIVN.CH/CHF|Givaudan SA|2015-06-16|2011-01-01|
+|`kninchchf`|KNIN.CH/CHF|Kuehne + Nagel International AG|2015-06-17|2011-01-01|
+|`lhnchchf`|LHN.CH/CHF|Lafarge Holcim Ltd|2015-06-17|2015-01-01|
+|`lonnchchf`|LONN.CH/CHF|Lonza Group AG|2015-06-16|2011-01-01|
+|`nesnchchf`|NESN.CH/CHF|Nestle SA|2015-06-16|2011-01-01|
+|`novnchchf`|NOVN.CH/CHF|Novartis AG|2015-06-16|2011-01-01|
+|`rogchchf`|ROG.CH/CHF|Roche Holding AG|2015-07-03|2011-01-01|
+|`scmnchchf`|SCMN.CH/CHF|Swisscom AG|2015-07-03|2011-01-01|
+|`sgsnchchf`|SGSN.CH/CHF|SGS SA|2015-08-06|2011-01-01|
+|`slhnchchf`|SLHN.CH/CHF|Swiss Life Holding AG|2015-08-06|2011-01-01|
+|`soonchchf`|SOON.CH/CHF|Sonova Holding AG|2015-08-07|2011-01-01|
+|`srenchchf`|SREN.CH/CHF|Swiss Re AG|2015-08-06|2011-01-01|
+|`ubsgchchf`|UBSG.CH/CHF|UBS Group AG|2015-06-15|2014-01-01|
+|`uhrchchf`|UHR.CH/CHF|Swatch Group AG/The|2015-08-07|2011-01-01|
+|`zurnchchf`|ZURN.CH/CHF|Zurich Insurance Group AG|2015-08-07|2011-01-01|
 ### United Kingdom 🇬🇧
 |Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
@@ -797,6 +823,7 @@ getHistoricRates({
 |`schwususd`|SCHW.US/USD|SCHWAB (CHARLES) CORP|2017-11-02|2017-01-01|
 |`shwususd`|SHW.US/USD|SHERWIN-WILLIAMS COMPANY|2018-02-01|2018-01-01|
 |`sjmususd`|SJM.US/USD|JM SMUCKER COMPANY|2018-02-01|2018-01-01|
+|`slvususd`|SLV.US/USD|iShares Silver Trust ETF|2018-02-01|2018-01-01|
 |`snapususd`|SNAP.US/USD|SNAP Inc|2017-11-02|2017-01-01|
 |`soususd`|SO.US/USD|SOUTHERN CO/THE|2017-11-02|2017-01-01|
 |`spgususd`|SPG.US/USD|SIMON PROPERTY GROUP INC|2017-11-02|2017-01-01|
@@ -875,7 +902,6 @@ getHistoricRates({
 |`iyrususd`|IYR.US/USD|iShares U.S. Real Estate ETF|2017-01-23|2017-01-01|
 |`jnkususd`|JNK.US/USD|SPDR Barclays Capital High Yield Bond ETF|2017-01-23|2017-01-01|
 |`qqqususd`|QQQ.US/USD|PowerShares QQQ ETF|2017-01-23|2017-01-01|
-|`slvususd`|SLV.US/USD|iShares Silver Trust ETF|2018-02-01|2018-01-01|
 |`spyususd`|SPY.US/USD|SPDR S&amp;P 500 ETF|2017-02-16|2017-01-01|
 |`tltususd`|TLT.US/USD|iShares 20+ Year Treasury Bond ETF|2017-01-23|2017-01-01|
 |`usoususd`|USO.US/USD|United States Oil|2017-01-26|2017-01-01|

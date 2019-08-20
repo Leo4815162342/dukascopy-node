@@ -19,7 +19,7 @@ const groupMap = [
   { group: 'Portugal 🇵🇹', subs: ['Portugal'] },
   { group: 'Spain 🇪🇸', subs: ['Spain'] },
   { group: 'Sweden 🇸🇪', subs: ['Sweden'] },
-  // { group: 'Switzerland 🇨🇭', subs: ['Switzerland'] },
+  { group: 'Switzerland 🇨🇭', subs: ['Switzerland'] },
   { group: 'United Kingdom 🇬🇧', subs: ['UK'] },
   { group: 'United States 🇺🇸', subs: ['US'] },
   { group: 'ETF (CFD)', subs: ['ETF_CFD_US'] },

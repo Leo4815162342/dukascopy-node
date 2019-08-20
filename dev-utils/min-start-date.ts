@@ -28,6 +28,8 @@ function getDateString(timestamp: number) {
   return `${year}-${month}-${day}`;
 }
 
+// https://datafeed.dukascopy.com/datafeed/ABCUSUSD/2018/BID_candles_day_1.bi5
+
 async function getMinStartDate(instrument: string) {
   console.log(`Fetching start date: ${instrument}`);
   let start = +new Date('1970-01-01');
@@ -66,4 +68,38 @@ async function getMinStartDate(instrument: string) {
   return getDateString(minDate);
 }
 
-export { getMinStartDate };
+async function getMinYear(instrment: string) {
+  let start = 1970;
+  let end = new Date().getFullYear();
+
+  let minYear: number;
+
+  console.log('Start min year search', instrment);
+
+  while (!minYear) {
+    const midYear = start + Math.floor((end - start) / 2);
+
+    const url = `https://datafeed.dukascopy.com/datafeed/${instrment}/${midYear}/BID_candles_day_1.bi5`;
+
+    const data = await fetch(url);
+    const rawResponse = await data.text();
+
+    const hasHistoryData = rawResponse.indexOf('404 Not Found') === -1;
+
+    if (end - start === 1) {
+      minYear = hasHistoryData ? start : end;
+    } else {
+      if (hasHistoryData) {
+        end = midYear;
+      } else {
+        start = midYear;
+      }
+    }
+  }
+
+  console.log('Finished min year search', instrment, minYear);
+
+  return minYear;
+}
+
+export { getMinStartDate, getMinYear };
