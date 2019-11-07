@@ -7,7 +7,7 @@ import { priceTypes } from './config/price-types';
 import { validateConfig } from './config-validator';
 import { normaliseDates } from './dates-normaliser';
 import { generateUrls } from './url-generator';
-import { batchedFetch } from './buffer-fetcher';
+import { BuffetFetcher } from './buffer-fetcher';
 import { processData } from './processor';
 
 export type HistoryConfig = {
@@ -60,7 +60,9 @@ async function getHistoricRates(config: HistoryConfig) {
 
   const urls = generateUrls({ instrument, timeframe, priceType, startDate, endDate });
 
-  const bufferredData = await batchedFetch(urls);
+  const bufferFetcher = new BuffetFetcher();
+
+  const bufferredData = await bufferFetcher.fetch(urls);
 
   const processedData = processData({
     instrument,

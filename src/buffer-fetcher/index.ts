@@ -7,35 +7,54 @@ export type BufferObject = {
   buffer: Buffer;
 };
 
-async function fetchBufferedData(urls: string[]): Promise<BufferObject[]> {
-  return await Promise.all(
-    urls.map(async url => {
-      const data = await fetch(url);
-      const buffer = await data.buffer();
-      return { url, buffer };
-    })
-  );
+interface BufferFetcherInput {
+  batchSize?: number;
+  batchPauseMs?: number; // TODO: use exponential backoff
+  notifyOnItemFetchFn?: (...args: any[]) => any;
 }
 
-async function batchedFetch(
-  urls: string[],
-  batchSize = 10,
-  batchPauseMs = 1000
-): Promise<BufferObject[]> {
-  const fetchedObjects: BufferObject[][] = [];
+class BuffetFetcher {
+  batchSize: BufferFetcherInput['batchSize'];
+  batchPauseMs: BufferFetcherInput['batchPauseMs'];
+  notifyOnItemFetchFn: BufferFetcherInput['notifyOnItemFetchFn'];
 
-  const batches = splitArrayInChunks(urls, batchSize);
-
-  for (let i = 0, n = batches.length; i < n; i++) {
-    const data = await fetchBufferedData(batches[i]);
-    fetchedObjects.push(data);
-
-    if (n > 1) {
-      await wait(batchPauseMs);
-    }
+  constructor({
+    batchSize = 10,
+    batchPauseMs = 1000,
+    notifyOnItemFetchFn
+  }: BufferFetcherInput = {}) {
+    this.batchSize = batchSize;
+    this.batchPauseMs = batchPauseMs;
+    this.notifyOnItemFetchFn = notifyOnItemFetchFn;
   }
 
-  return [].concat(...fetchedObjects);
+  private async fetchBufferedData(urls: string[]): Promise<BufferObject[]> {
+    return await Promise.all(
+      urls.map(async url => {
+        const data = await fetch(url);
+        const buffer = await data.buffer();
+        this.notifyOnItemFetchFn && this.notifyOnItemFetchFn(url);
+        return { url, buffer };
+      })
+    );
+  }
+
+  public async fetch(urls: string[]): Promise<BufferObject[]> {
+    const fetchedObjects: BufferObject[][] = [];
+
+    const batches = splitArrayInChunks(urls, this.batchSize);
+
+    for (let i = 0, n = batches.length; i < n; i++) {
+      const data = await this.fetchBufferedData(batches[i]);
+      fetchedObjects.push(data);
+
+      if (n > 1) {
+        await wait(this.batchPauseMs);
+      }
+    }
+
+    return [].concat(...fetchedObjects);
+  }
 }
 
-export { batchedFetch };
+export { BuffetFetcher };
