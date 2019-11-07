@@ -1,4 +1,4 @@
-import * as bufferFetcher from '../../../src/buffer-fetcher';
+import { BuffetFetcher } from '../../../src/buffer-fetcher';
 import fetch from 'node-fetch';
 
 jest.mock('node-fetch', require('../../__mocks__/fetch').default);
@@ -9,11 +9,13 @@ const urls = [
 ];
 
 describe('Buffer fetcher', () => {
+  const bf = new BuffetFetcher();
+
   let data: any;
 
   it('Calls buffer fetcher function once', async () => {
-    const spy = jest.spyOn(bufferFetcher, 'batchedFetch');
-    data = await bufferFetcher.batchedFetch(urls);
+    const spy = jest.spyOn(bf, 'fetch');
+    data = await bf.fetch(urls);
     expect(spy).toHaveBeenCalledTimes(1);
   });
 
