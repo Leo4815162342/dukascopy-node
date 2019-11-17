@@ -13,6 +13,5 @@
       "*": ["node_modules/*"]
     }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "src/**/*.test.ts", "dev-utils", "src/**/__mocks__/*"]
+  "exclude": ["node_modules", "src/**/*.test.ts", "/dev-utils", "src/**/__mocks__/*"]
 }
