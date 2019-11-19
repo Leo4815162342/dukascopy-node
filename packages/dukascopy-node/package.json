@@ -3,12 +3,13 @@
   "version": "1.0.12",
   "description": "Node.js library for fetching and aggregation of historical OHLC price data for 500+ instruments",
   "main": "lib/index.js",
+  "module": "lib/index.es.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "yarn jest --coverage",
-    "test:call": "./node_modules/ts-node/dist/bin.js dev-utils/test-call.ts",
+    "test:call": "yarn ts-node dev-utils/test-call.ts",
     "cleanup-lib": "find ./lib -mindepth 2 -name '*.d.ts' -delete",
-    "build": "yarn tsc -p tsconfig.json && npm run cleanup-lib"
+    "build": "rollup -c"
   },
   "author": "leonid.pyrlia",
   "license": "ISC",
@@ -39,6 +40,8 @@
     "@types/node-fetch": "^2.1.7",
     "jest": "^24.9.0",
     "jest-date-mock": "^1.0.7",
+    "rollup": "^1.27.2",
+    "rollup-plugin-typescript2": "^0.25.2",
     "ts-jest": "^24.1.0",
     "ts-node": "^8.0.3",
     "typescript": "^3.7.2",
