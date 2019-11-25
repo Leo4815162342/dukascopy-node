@@ -1,5 +1,6 @@
-declare const priceTypes: {
-    bid: number;
-    ask: number;
+import { PriceType } from '../types';
+declare type PriceTypes = {
+    [key in PriceType]: number;
 };
+declare const priceTypes: PriceTypes;
 export { priceTypes };

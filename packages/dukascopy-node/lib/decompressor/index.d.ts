@@ -1,8 +1,8 @@
 /// <reference types="node" />
-import { HistoryConfig } from './../index';
+import { Timeframe } from './../types';
 declare type DecompressInput = {
     buffer: Buffer;
-    timeframe: HistoryConfig['timeframe'];
+    timeframe: Timeframe;
 };
 declare function decompress(input: DecompressInput): number[][];
 export { decompress };

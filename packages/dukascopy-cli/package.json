@@ -1,11 +1,15 @@
 {
-  "name": "@dukascopy/cli",
+  "name": "dukascopy-cli",
   "version": "1.0.0",
   "main": "lib/index.js",
   "module": "lib/index.es.js",
   "types": "lib/index.d.ts",
   "license": "MIT",
   "dependencies": {
-    "@dukascopy/node": "^1.0.12"
+    "dukascopy-node": "^1.0.12"
+  },
+  "devDependencies": {
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2"
   }
 }

@@ -1,4 +1,4 @@
-import { HistoryConfig } from '../index';
+import { HistoryConfig } from '../types';
 
 import { schema } from './schema';
 import Validator from 'fastest-validator';
@@ -21,7 +21,7 @@ validator.add('dateString', (value: any) => {
 
 const check = validator.compile(schema);
 
-type ValidationStatus = {
+export type ValidationStatus = {
   isValid: boolean;
   validationErrors: string[];
 };

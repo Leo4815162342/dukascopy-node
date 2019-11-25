@@ -34,7 +34,7 @@ function getYMDH(date: Date) {
 function getStartOfUtc(date: Date, period: TimeRange, offset: number = 0): Date {
   const [year, month, day, hours] = getYMDH(date);
 
-  let startOfUtc: Date;
+  let startOfUtc = new Date();
 
   if (period === 'hour') {
     startOfUtc = new Date(Date.UTC(year, month, day, hours + offset));
@@ -70,9 +70,9 @@ function getIsCurrentObj(date: Date) {
 }
 
 function getDateFromUrl(url: string): Date {
-  const [, year, month, day, hour] = url
-    .match(/(\d{4})\/(\d{2})?\/?(\d{2})?\/?(\d{2})?/)
-    .map(n => Number(n) || 0);
+  const [, year, month, day, hour] = (
+    url.match(/(\d{4})\/(\d{2})?\/?(\d{2})?\/?(\d{2})?/) || []
+  ).map(n => Number(n) || 0);
 
   const utcDate = new Date(Date.UTC(year, month, day || 1, hour));
 

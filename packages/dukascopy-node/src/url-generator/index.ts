@@ -3,7 +3,7 @@
 // .../2019/01/01/BID_candles_min_1.bi5:    minute data per day
 // .../2019/01/01/01h_ticks_1.bi5:  tick data per hour
 
-import { HistoryConfig } from '../index';
+import { Instrument, PriceType, Timeframe } from '../types';
 import { TimeRange } from '../utils/range';
 
 import { getLowerRange, isCurrentRange, getClosestAvailableRange } from '../utils/range';
@@ -13,10 +13,10 @@ import { pad } from '../utils/general';
 const URL_ROOT = 'https://datafeed.dukascopy.com/datafeed';
 
 function getUrl(
-  instrument: HistoryConfig['instrument'],
+  instrument: Instrument,
   date: Date,
   range: TimeRange,
-  priceType: HistoryConfig['priceType']
+  priceType: PriceType
 ): string {
   const [yearPad, monthPad, dayPad, hourPad] = getYMDH(date).map(pad);
 
@@ -35,11 +35,7 @@ function getUrl(
   return url;
 }
 
-function getConstructor(
-  instrument: HistoryConfig['instrument'],
-  priceType: HistoryConfig['priceType'],
-  endDate: Date
-) {
+function getConstructor(instrument: Instrument, priceType: PriceType, endDate: Date) {
   return function construct(rangetype: TimeRange, startDate: Date) {
     let dates: Date[] = [];
 
@@ -51,7 +47,7 @@ function getConstructor(
       tempStartDate = getStartOfUtc(tempStartDate, rangetype, 1);
     }
 
-    const result: string[] = dates.reduce((all, date, i, arr) => {
+    const result = dates.reduce((all: string[], date, i, arr) => {
       const isLastItem = i === arr.length - 1;
 
       if (isLastItem && isCurrentRange(rangetype, date)) {
@@ -69,7 +65,7 @@ function getConstructor(
   };
 }
 
-function getDateLimit(startDate: Date, endDate: Date, timeframe: HistoryConfig['timeframe']) {
+function getDateLimit(startDate: Date, endDate: Date, timeframe: Timeframe) {
   const nowDate = new Date();
 
   const adjustedEndDate = endDate < nowDate ? endDate : nowDate;
@@ -93,11 +89,11 @@ function getDateLimit(startDate: Date, endDate: Date, timeframe: HistoryConfig['
 }
 
 type GenerateUrlsInput = {
-  instrument: HistoryConfig['instrument'];
-  timeframe: HistoryConfig['timeframe'];
+  instrument: Instrument;
+  timeframe: Timeframe;
   startDate: Date;
   endDate: Date;
-  priceType: HistoryConfig['priceType'];
+  priceType: PriceType;
 };
 
 function generateUrls({

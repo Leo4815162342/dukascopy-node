@@ -986,16 +986,6 @@ domexception@^1.0.1:
   dependencies:
     webidl-conversions "^4.0.2"
 
-dukascopy-node@^1.0.12:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/dukascopy-node/-/dukascopy-node-1.0.12.tgz#79d1da5c3c33e7aa7c105cf100b09257af989c25"
-  integrity sha512-qxJKiTmaJdHlUn4Ku3iY6JP9lBmkt6n0/U5IHvD8ZqmXtgN2/4IWRPFgtYEwjvRVufrr4ZZCaYBJK6Oq5j0zPA==
-  dependencies:
-    fastest-validator "^0.6.17"
-    lzma-purejs "^0.9.3"
-    node-fetch "^2.3.0"
-    python-struct "^1.0.6"
-
 ecc-jsbn@~0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.2.tgz#3a83a904e54353287874c564b7549386849a98c9"
@@ -3523,7 +3513,7 @@ ts-jest@^24.1.0:
     semver "^5.5"
     yargs-parser "10.x"
 
-ts-node@^8.0.3:
+ts-node@^8.5.2:
   version "8.5.2"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.5.2.tgz#434f6c893bafe501a30b32ac94ee36809ba2adce"
   integrity sha512-W1DK/a6BGoV/D4x/SXXm6TSQx6q3blECUzd5TN+j56YEMX3yPVMpHsICLedUw3DvGF3aTQ8hfdR9AKMaHjIi+A==

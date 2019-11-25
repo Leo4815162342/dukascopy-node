@@ -28,14 +28,14 @@ describe('getHistoricRates', () => {
   testCases.forEach(({ content, path }) => {
     const [fileName] = path.split('/').reverse();
     if (path.indexOf('fail_') >= 0) {
-      generateFailTestCase(content, fileName);
+      generateFailTestCase(content);
     } else {
       generateSuccessTestCase(content, fileName);
     }
   });
 });
 
-function generateFailTestCase({ config, expectedOutput }: TestCase, fileName?: string) {
+function generateFailTestCase({ config, expectedOutput }: TestCase) {
   describe('fail', () => {
     it('Should throw validation errors on invalid config', async () => {
       expect.assertions(1);

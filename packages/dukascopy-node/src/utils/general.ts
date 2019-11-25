@@ -16,7 +16,7 @@ function splitArrayInChunks<T>(array: T[], chunkSize: number): T[][] {
   for (let i = 0, n = array.length; i < n; i++) {
     const chunkIndex = Math.floor(i / chunkSize);
     if (!result[chunkIndex]) {
-      result[chunkIndex] = [];
+      result[chunkIndex] = [] as T[];
     }
 
     result[chunkIndex].push(array[i]);

@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { promisify } from 'util';
 
-import { instruments, Instrument } from '../src/config/instruments';
+import { instruments } from '../src/config/instruments';
 
 const groupMap = [
   { group: 'Forex', subs: ['FX_CROSSES', 'FX_MAJORS', 'FX_METALS'] },
@@ -26,13 +26,16 @@ const groupMap = [
   { group: 'Crypto', subs: ['VCCY'] }
 ];
 
-const groups = Object.entries(instruments).reduce((all, [id, instrument]) => {
-  const idx = groupMap.findIndex(({ subs }) => subs.includes(instrument.group));
+const groups = Object.entries(instruments).reduce(
+  (all, [id, instrument]) => {
+    const idx = groupMap.findIndex(({ subs }) => subs.includes(instrument.group));
 
-  all[idx].list.push({ ...instrument, id });
+    all[idx].list.push({ ...instrument, id });
 
-  return all;
-}, groupMap.map(({ group }) => ({ group, list: [] })));
+    return all;
+  },
+  groupMap.map(({ group }) => ({ group, list: [] }))
+);
 
 (async () => {
   try {

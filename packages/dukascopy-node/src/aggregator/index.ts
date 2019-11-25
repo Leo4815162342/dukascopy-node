@@ -1,17 +1,17 @@
-import { HistoryConfig } from './../index';
+import { Timeframe, PriceType } from './../types';
 
 import { getOHLC, getMinuteOHLCfromTicks, getMonthlyOHLCfromDays } from './ohlc';
 import { splitArrayInChunks } from '../utils/general';
 
-type AggregateInput = {
+export type AggregateInput = {
   data: number[][];
-  fromTimeframe: HistoryConfig['timeframe'];
-  toTimeframe: HistoryConfig['timeframe'];
-  priceType?: HistoryConfig['priceType'];
-  ignoreFlats: HistoryConfig['ignoreFlats'];
+  fromTimeframe: Timeframe;
+  toTimeframe: Timeframe;
+  priceType: PriceType;
+  ignoreFlats: boolean;
 };
 
-function aggregate({
+export function aggregate({
   data,
   fromTimeframe,
   toTimeframe,
@@ -74,6 +74,6 @@ function aggregate({
       }
     }
   }
-}
 
-export { aggregate };
+  return [];
+}

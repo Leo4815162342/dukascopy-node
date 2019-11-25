@@ -1,5 +1,5 @@
-import { HistoryConfig } from '../index';
-declare type ValidationStatus = {
+import { HistoryConfig } from '../types';
+export declare type ValidationStatus = {
     isValid: boolean;
     validationErrors: string[];
 };
