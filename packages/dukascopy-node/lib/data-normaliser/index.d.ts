@@ -1,9 +1,9 @@
-import { HistoryConfig } from './../index';
-declare type NormaliseInput = {
+import { Timeframe, Instrument } from './../types';
+export declare type NormaliseInput = {
     data: number[][];
-    timeframe: HistoryConfig['timeframe'];
+    timeframe: Timeframe;
     startTs: number;
-    instrument: HistoryConfig['instrument'];
+    instrument: Instrument;
     volumes: boolean;
 };
 declare function normalise(input: NormaliseInput): number[][];

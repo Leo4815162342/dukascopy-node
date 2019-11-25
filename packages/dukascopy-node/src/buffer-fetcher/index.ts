@@ -7,16 +7,18 @@ export type BufferObject = {
   buffer: Buffer;
 };
 
-interface BufferFetcherInput {
+export type NotifyFn = (...args: any[]) => any;
+
+export interface BufferFetcherInput {
   batchSize?: number;
   batchPauseMs?: number; // TODO: use exponential backoff
-  notifyOnItemFetchFn?: (...args: any[]) => any;
+  notifyOnItemFetchFn?: NotifyFn;
 }
 
 class BuffetFetcher {
-  batchSize: BufferFetcherInput['batchSize'];
-  batchPauseMs: BufferFetcherInput['batchPauseMs'];
-  notifyOnItemFetchFn: BufferFetcherInput['notifyOnItemFetchFn'];
+  batchSize: number;
+  batchPauseMs: number;
+  notifyOnItemFetchFn: NotifyFn;
 
   constructor({
     batchSize = 10,
@@ -25,7 +27,7 @@ class BuffetFetcher {
   }: BufferFetcherInput = {}) {
     this.batchSize = batchSize;
     this.batchPauseMs = batchPauseMs;
-    this.notifyOnItemFetchFn = notifyOnItemFetchFn;
+    this.notifyOnItemFetchFn = notifyOnItemFetchFn || (() => {});
   }
 
   private async fetchBufferedData(urls: string[]): Promise<BufferObject[]> {
@@ -53,7 +55,7 @@ class BuffetFetcher {
       }
     }
 
-    return [].concat(...fetchedObjects);
+    return ([] as BufferObject[]).concat(...fetchedObjects);
   }
 }
 

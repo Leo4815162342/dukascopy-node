@@ -1,17 +1,17 @@
-import { HistoryConfig } from './../index';
+import { Timeframe } from './../types';
 
 var lzmajs = require('lzma-purejs');
 const struct = require('python-struct');
 
 type StructFormat = '>3i2f' | '>5i1f';
 
-function getStructFormat(timeframe: HistoryConfig['timeframe']): StructFormat {
+function getStructFormat(timeframe: Timeframe): StructFormat {
   return timeframe === 'tick' ? '>3i2f' : '>5i1f';
 }
 
 type DecompressInput = {
   buffer: Buffer;
-  timeframe: HistoryConfig['timeframe'];
+  timeframe: Timeframe;
 };
 
 function decompress(input: DecompressInput): number[][] {

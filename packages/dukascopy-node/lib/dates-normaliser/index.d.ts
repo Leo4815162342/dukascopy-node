@@ -1,10 +1,10 @@
-import { HistoryConfig } from '../index';
-declare type NormaliseDatesInput = {
-    instrument: HistoryConfig['instrument'];
-    startDate: HistoryConfig['dates']['from'];
-    endDate: HistoryConfig['dates']['to'];
-    timeframe: HistoryConfig['timeframe'];
-    utcOffset: HistoryConfig['utcOffset'];
+import { Instrument, Timeframe } from '../types';
+export declare type NormaliseDatesInput = {
+    instrument: Instrument;
+    startDate: string;
+    endDate: string;
+    timeframe: Timeframe;
+    utcOffset: number;
 };
 declare function normaliseDates({ instrument, startDate, endDate, timeframe, utcOffset }: NormaliseDatesInput): [Date, Date];
 export { normaliseDates };

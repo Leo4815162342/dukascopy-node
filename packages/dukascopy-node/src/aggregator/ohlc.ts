@@ -1,4 +1,4 @@
-import { HistoryConfig } from './../index';
+import { PriceType } from './../types';
 import { roundNum } from './../utils/general';
 
 function getOHLC(input: number[][], filterFlats = true) {
@@ -59,7 +59,7 @@ function breakdownByInterval(input: number[][], interval: 'minute' | 'month') {
 
   return dataByInterval;
 }
-function tickOHLC(input: number[][], priceType: HistoryConfig['priceType']) {
+function tickOHLC(input: number[][], priceType: PriceType) {
   // timestamp, askPrice, bidPirce, askVolume, bidVolume
 
   const date = new Date(input[0][0]);
@@ -104,7 +104,7 @@ function tickOHLC(input: number[][], priceType: HistoryConfig['priceType']) {
   return ohlc;
 }
 
-function getMinuteOHLCfromTicks(input: number[][], priceType: HistoryConfig['priceType']) {
+function getMinuteOHLCfromTicks(input: number[][], priceType: PriceType) {
   const breakdown = breakdownByInterval(input, 'minute');
   const ohlc = breakdown.map(data => tickOHLC(data, priceType));
 

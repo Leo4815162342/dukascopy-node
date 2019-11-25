@@ -5272,7 +5272,7 @@ const timeframes = {
     m30: 1,
     h1: 1,
     d1: 1,
-    mn1: 1 // 1 month
+    mn1: 1
 };
 
 const priceTypes = {
@@ -5319,7 +5319,7 @@ function getYMDH(date) {
 }
 function getStartOfUtc(date, period, offset = 0) {
     const [year, month, day, hours] = getYMDH(date);
-    let startOfUtc;
+    let startOfUtc = new Date();
     if (period === 'hour') {
         startOfUtc = new Date(Date.UTC(year, month, day, hours + offset));
     }
@@ -5350,9 +5350,7 @@ function getIsCurrentObj(date) {
     return obj;
 }
 function getDateFromUrl(url) {
-    const [, year, month, day, hour] = url
-        .match(/(\d{4})\/(\d{2})?\/?(\d{2})?\/?(\d{2})?/)
-        .map(n => Number(n) || 0);
+    const [, year, month, day, hour] = (url.match(/(\d{4})\/(\d{2})?\/?(\d{2})?\/?(\d{2})?/) || []).map(n => Number(n) || 0);
     const utcDate = new Date(Date.UTC(year, month, day || 1, hour));
     return utcDate;
 }
@@ -5436,7 +5434,7 @@ const timeFromUrl = {
     ticks: 'tick'
 };
 function getTimeframeFromUrl(url) {
-    const [, match] = url.match(/_(day_1|hour_1|min_1|ticks).bi5$/);
+    const [, match] = url.match(/_(day_1|hour_1|min_1|ticks).bi5$/) || [];
     return timeFromUrl[match];
 }
 
@@ -5468,7 +5466,6 @@ function wait(ms) {
     });
 }
 
-// .../2019/BID_candles_day_1.bi5:          daily data per year
 const URL_ROOT = 'https://datafeed.dukascopy.com/datafeed';
 function getUrl(instrument, date, range, priceType) {
     const [yearPad, monthPad, dayPad, hourPad] = getYMDH(date).map(pad);
@@ -5545,7 +5542,7 @@ class BuffetFetcher {
     constructor({ batchSize = 10, batchPauseMs = 1000, notifyOnItemFetchFn } = {}) {
         this.batchSize = batchSize;
         this.batchPauseMs = batchPauseMs;
-        this.notifyOnItemFetchFn = notifyOnItemFetchFn;
+        this.notifyOnItemFetchFn = notifyOnItemFetchFn || (() => { });
     }
     async fetchBufferedData(urls) {
         return await Promise.all(urls.map(async (url) => {
@@ -5628,7 +5625,6 @@ function getNormaliser(timeframe, startMs, decimalFactor, volumes) {
 function getOHLC(input, filterFlats = true) {
     const startMs = input[0][0];
     if (filterFlats) {
-        // ignoring flat-volumed (0 volume) entries
         input = input.filter(data => data[5] !== 0);
     }
     if (input.length === 0) {
@@ -5671,7 +5667,6 @@ function breakdownByInterval(input, interval) {
     return dataByInterval;
 }
 function tickOHLC(input, priceType) {
-    // timestamp, askPrice, bidPirce, askVolume, bidVolume
     const date = new Date(input[0][0]);
     const minuteValue = date.getUTCMinutes();
     const openPrice = priceType === 'ask' ? input[0][1] : input[0][2];
@@ -5761,6 +5756,7 @@ function aggregate({ data, fromTimeframe, toTimeframe, priceType, ignoreFlats })
             }
         }
     }
+    return [];
 }
 
 function processData({ instrument, requestedTimeframe, bufferObjects, priceType, volumes, ignoreFlats }) {
@@ -5794,12 +5790,6 @@ const defaultConfig = {
     volumes: true,
     ignoreFlats: true
 };
-// TODO: rewrite as a class
-// custom fetch method
-// fetchoptions
-// subscriptions?
-// requestThrottling/debouncing
-// exponential backoff
 async function getHistoricRates(config) {
     const mergedConfig = Object.assign(Object.assign({}, defaultConfig), config);
     const { isValid, validationErrors } = validateConfig(mergedConfig);

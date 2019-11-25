@@ -1,4 +1,4 @@
-import { HistoryConfig } from './../index';
+import { Instrument, Timeframe, PriceType } from './../index';
 import { BufferObject } from '../buffer-fetcher';
 
 import { getDateFromUrl } from '../utils/date';
@@ -8,12 +8,12 @@ import { normalise } from '../data-normaliser';
 import { aggregate } from '../aggregator';
 
 type ProcessDataInput = {
-  instrument: HistoryConfig['instrument'];
-  requestedTimeframe: HistoryConfig['timeframe'];
+  instrument: Instrument;
+  requestedTimeframe: Timeframe;
   bufferObjects: BufferObject[];
-  priceType: HistoryConfig['priceType'];
-  volumes: HistoryConfig['volumes'];
-  ignoreFlats: HistoryConfig['ignoreFlats'];
+  priceType: PriceType;
+  volumes: boolean;
+  ignoreFlats: boolean;
 };
 
 function processData({
@@ -48,7 +48,7 @@ function processData({
     return aggregatedData;
   });
 
-  return <number[][]>[].concat(...result);
+  return ([] as number[][]).concat(...result);
 }
 
 export { processData };

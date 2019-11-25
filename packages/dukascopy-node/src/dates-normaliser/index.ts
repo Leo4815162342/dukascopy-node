@@ -1,14 +1,14 @@
-import { HistoryConfig } from '../index';
+import { Instrument, Timeframe } from '../types';
 import { instruments } from '../config/instruments';
 
 import { getUTCDateFromString } from '../utils/date';
 
-type NormaliseDatesInput = {
-  instrument: HistoryConfig['instrument'];
-  startDate: HistoryConfig['dates']['from'];
-  endDate: HistoryConfig['dates']['to'];
-  timeframe: HistoryConfig['timeframe'];
-  utcOffset: HistoryConfig['utcOffset'];
+export type NormaliseDatesInput = {
+  instrument: Instrument;
+  startDate: string;
+  endDate: string;
+  timeframe: Timeframe;
+  utcOffset: number;
 };
 
 function normaliseDates({

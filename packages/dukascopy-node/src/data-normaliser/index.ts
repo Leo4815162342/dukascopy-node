@@ -1,13 +1,13 @@
-import { HistoryConfig } from './../index';
+import { Timeframe, Instrument } from './../types';
 
 import { instruments } from '../config/instruments';
 import { roundNum } from './../utils/general';
 
-type NormaliseInput = {
+export type NormaliseInput = {
   data: number[][];
-  timeframe: HistoryConfig['timeframe'];
+  timeframe: Timeframe;
   startTs: number;
-  instrument: HistoryConfig['instrument'];
+  instrument: Instrument;
   volumes: boolean;
 };
 
@@ -24,10 +24,10 @@ function normalise(input: NormaliseInput): number[][] {
 }
 
 function getNormaliser(
-  timeframe: HistoryConfig['timeframe'],
+  timeframe: Timeframe,
   startMs: number,
   decimalFactor: number,
-  volumes: HistoryConfig['volumes']
+  volumes: boolean
 ): (values: number[]) => number[] {
   if (timeframe === 'tick') {
     return function(values: number[]) {

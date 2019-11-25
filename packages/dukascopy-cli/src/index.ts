@@ -1,1 +1,3 @@
-import { getHistoricRates, HistoryConfig } from '@dukascopy/node';
+import { getHistoricRates } from 'dukascopy-node';
+
+console.log(getHistoricRates);

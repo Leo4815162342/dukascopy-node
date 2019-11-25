@@ -3,15 +3,16 @@ export declare type BufferObject = {
     url: string;
     buffer: Buffer;
 };
-interface BufferFetcherInput {
+export declare type NotifyFn = (...args: any[]) => any;
+export interface BufferFetcherInput {
     batchSize?: number;
     batchPauseMs?: number;
-    notifyOnItemFetchFn?: (...args: any[]) => any;
+    notifyOnItemFetchFn?: NotifyFn;
 }
 declare class BuffetFetcher {
-    batchSize: BufferFetcherInput['batchSize'];
-    batchPauseMs: BufferFetcherInput['batchPauseMs'];
-    notifyOnItemFetchFn: BufferFetcherInput['notifyOnItemFetchFn'];
+    batchSize: number;
+    batchPauseMs: number;
+    notifyOnItemFetchFn: NotifyFn;
     constructor({ batchSize, batchPauseMs, notifyOnItemFetchFn }?: BufferFetcherInput);
     private fetchBufferedData;
     fetch(urls: string[]): Promise<BufferObject[]>;

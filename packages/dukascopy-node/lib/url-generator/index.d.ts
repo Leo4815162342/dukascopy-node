@@ -1,11 +1,11 @@
-import { HistoryConfig } from '../index';
+import { Instrument, PriceType, Timeframe } from '../types';
 declare const URL_ROOT = "https://datafeed.dukascopy.com/datafeed";
 declare type GenerateUrlsInput = {
-    instrument: HistoryConfig['instrument'];
-    timeframe: HistoryConfig['timeframe'];
+    instrument: Instrument;
+    timeframe: Timeframe;
     startDate: Date;
     endDate: Date;
-    priceType: HistoryConfig['priceType'];
+    priceType: PriceType;
 };
 declare function generateUrls({ instrument, timeframe, priceType, startDate, endDate }: GenerateUrlsInput): string[];
 export { URL_ROOT, generateUrls };

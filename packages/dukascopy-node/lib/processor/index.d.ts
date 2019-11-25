@@ -1,12 +1,12 @@
-import { HistoryConfig } from './../index';
+import { Instrument, Timeframe, PriceType } from './../index';
 import { BufferObject } from '../buffer-fetcher';
 declare type ProcessDataInput = {
-    instrument: HistoryConfig['instrument'];
-    requestedTimeframe: HistoryConfig['timeframe'];
+    instrument: Instrument;
+    requestedTimeframe: Timeframe;
     bufferObjects: BufferObject[];
-    priceType: HistoryConfig['priceType'];
-    volumes: HistoryConfig['volumes'];
-    ignoreFlats: HistoryConfig['ignoreFlats'];
+    priceType: PriceType;
+    volumes: boolean;
+    ignoreFlats: boolean;
 };
 declare function processData({ instrument, requestedTimeframe, bufferObjects, priceType, volumes, ignoreFlats }: ProcessDataInput): number[][];
 export { processData };
