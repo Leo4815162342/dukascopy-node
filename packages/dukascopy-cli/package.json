@@ -5,7 +5,8 @@
   "module": "lib/index.es.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "rollup -c"
+    "cleanup-lib": "rm -rf ./lib/*/",
+    "build": "rollup -c && yarn cleanup-lib"
   },
   "license": "MIT",
   "dependencies": {
