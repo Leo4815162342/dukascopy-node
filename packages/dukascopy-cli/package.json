@@ -4,11 +4,17 @@
   "main": "lib/index.js",
   "module": "lib/index.es.js",
   "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "rollup -c"
+  },
   "license": "MIT",
   "dependencies": {
     "dukascopy-node": "^1.0.12"
   },
   "devDependencies": {
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.25.2",
     "ts-node": "^8.5.2",
     "typescript": "^3.7.2"
   }
