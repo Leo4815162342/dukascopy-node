@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { promisify } from 'util';
 
-import { instruments } from '../src/config/instruments';
+import { instruments, InstrumentMetaData } from '../src/config/instruments';
 
 const groupMap = [
   { group: 'Forex', subs: ['FX_CROSSES', 'FX_MAJORS', 'FX_METALS'] },
@@ -34,7 +34,7 @@ const groups = Object.entries(instruments).reduce(
 
     return all;
   },
-  groupMap.map(({ group }) => ({ group, list: [] }))
+  groupMap.map(({ group }) => ({ group, list: [] as Array<InstrumentMetaData & { id: string }> }))
 );
 
 (async () => {
