@@ -1,17 +1,13 @@
 {
   "compilerOptions": {
-    "module": "ES2015",
-    "esModuleInterop": true,
-    "target": "es2017",
-    "noImplicitAny": true,
-    "moduleResolution": "node",
-    "sourceMap": false,
-    "outDir": "lib",
-    "baseUrl": ".",
     "declaration": true,
-    "paths": {
-      "*": ["node_modules/*"]
-    }
-  },
-  "exclude": ["node_modules", "src/**/*.test.ts", "/dev-utils", "src/**/__mocks__/*"]
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2017",
+    "esModuleInterop": true
+  }
 }
