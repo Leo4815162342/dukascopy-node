@@ -1,0 +1,48 @@
+{
+  "name": "dukascopy-core",
+  "version": "1.0.12",
+  "description": "Core functions of Dukascopy package",
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "yarn jest --coverage",
+    "build": "rollup -c"
+  },
+  "author": "leonid.pyrlia",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Leo4815162342/dukascopy.git"
+  },
+  "keywords": [
+    "dukascopy",
+    "dukascopy-core"
+  ],
+  "dependencies": {
+    "fastest-validator": "^0.6.17",
+    "lzma-purejs": "^0.9.3",
+    "node-fetch": "^2.3.0",
+    "python-struct": "^1.0.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/node-fetch": "^2.1.7",
+    "jest": "^24.9.0",
+    "jest-date-mock": "^1.0.7",
+    "rollup": "^1.27.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.25.2",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2",
+    "utility-types": "^3.7.0"
+  },
+  "jest": {
+    "automock": false,
+    "setupFiles": [
+      "jest-date-mock"
+    ]
+  }
+}
