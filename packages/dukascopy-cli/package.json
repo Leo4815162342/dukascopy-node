@@ -10,6 +10,8 @@
   },
   "license": "MIT",
   "dependencies": {
+    "chalk": "^3.0.0",
+    "cli-progress": "^3.4.0",
     "dukascopy-node": "^1.0.12"
   },
   "devDependencies": {
