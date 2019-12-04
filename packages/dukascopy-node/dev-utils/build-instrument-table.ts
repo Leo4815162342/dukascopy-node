@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { promisify } from 'util';
 
-import { instruments, InstrumentMetaData } from '../src/config/instruments';
+import { instruments, InstrumentMetaData } from 'dukascopy-core';
 
 const groupMap = [
   { group: 'Forex', subs: ['FX_CROSSES', 'FX_MAJORS', 'FX_METALS'] },

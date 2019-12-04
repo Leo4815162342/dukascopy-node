@@ -1,12 +1,14 @@
-import { OptionalKeys } from 'utility-types';
-import { validateConfig } from './config-validator';
-import { normaliseDates } from './dates-normaliser';
-import { generateUrls } from './url-generator';
-import { BuffetFetcher } from './buffer-fetcher';
-import { processData } from './processor';
-import { HistoryConfig } from './types';
+import {
+  validateConfig,
+  normaliseDates,
+  generateUrls,
+  BuffetFetcher,
+  processData,
+  HistoryConfig,
+  DefaultHistoryConfig
+} from 'dukascopy-core';
 
-const defaultConfig: Required<Pick<HistoryConfig, OptionalKeys<HistoryConfig>>> = {
+const defaultConfig: DefaultHistoryConfig = {
   timeframe: 'd1',
   priceType: 'bid',
   utcOffset: 0,
@@ -19,6 +21,7 @@ const defaultConfig: Required<Pick<HistoryConfig, OptionalKeys<HistoryConfig>>> 
 // subscriptions?
 // requestThrottling/debouncing
 // exponential backoff
+// progress reporting
 async function getHistoricRates(config: HistoryConfig) {
   const mergedConfig = { ...defaultConfig, ...config };
 
