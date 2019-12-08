@@ -2,7 +2,7 @@ import { TimeRange } from './range';
 
 function getUTCDateFromString(date: string): false | Date {
   const match = date.match(
-    /^(\d{4})-(\d{2})-(\d{2})(?:T| )?(\d{2})?:?(\d{2})?:?(?:\d{2})?:?(?:.\d{3}Z)?$/
+    /^(\d{4})(?:-|\.)(\d{2})(?:-|\.)(\d{2})(?:T| )?(\d{2})?:?(\d{2})?:?(?:\d{2})?:?(?:.\d{3}Z)?$/
   );
 
   if (!match) {
