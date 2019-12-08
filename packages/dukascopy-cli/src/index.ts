@@ -3,7 +3,7 @@ import {
   validateConfig,
   normaliseDates,
   generateUrls,
-  BuffetFetcher
+  BufferFetcher
 } from 'dukascopy-core';
 import commandLineArgs from 'command-line-args';
 import { Bar } from 'cli-progress';
@@ -90,7 +90,7 @@ const { isValid, validationErrors } = validateConfig(searchConfig);
 
     progressBar.start(urls.length, val);
 
-    const bufferFetcher = new BuffetFetcher({
+    const bufferFetcher = new BufferFetcher({
       notifyOnItemFetchFn: () => {
         val += 1;
         progressBar.update(val);
