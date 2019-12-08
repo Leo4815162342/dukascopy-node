@@ -79,8 +79,8 @@ const { isValid, validationErrors } = validateConfig(searchConfig);
 
     let val = 0;
 
-    const bar1 = new Bar({
-      format: '|' + chalk.blue('{bar}') + '| {percentage}% || {value}/{total} Files',
+    const progressBar = new Bar({
+      format: '|' + chalk.green('{bar}') + '| {percentage}% || {value}/{total} Files',
       barCompleteChar: '\u2588',
       barIncompleteChar: '\u2591',
       hideCursor: true,
@@ -88,18 +88,18 @@ const { isValid, validationErrors } = validateConfig(searchConfig);
       barsize: 30
     });
 
-    bar1.start(urls.length, val);
+    progressBar.start(urls.length, val);
 
     const bufferFetcher = new BuffetFetcher({
       notifyOnItemFetchFn: () => {
         val += 1;
-        bar1.update(val);
+        progressBar.update(val);
       }
     });
 
     const bufferredData = await bufferFetcher.fetch(urls);
 
-    bar1.stop();
+    progressBar.stop();
     log(chalk.gray('--------------------------------------------------------'));
     log(chalk.greenBright('√ File saved:', chalk.bold(fileName)));
   } else {
