@@ -7,27 +7,33 @@ export type BufferObject = {
   buffer: Buffer;
 };
 
-export type NotifyFn = (...args: any[]) => any;
+export type NotifyFn = (downloadedUrl: string) => any;
 
 export interface BufferFetcherInput {
   batchSize?: number;
-  batchPauseMs?: number; // TODO: use exponential backoff
+  pauseBetweenBatchesMs?: number; // TODO: use exponential backoff
+  useCache?: boolean;
   notifyOnItemFetchFn?: NotifyFn;
 }
 
-class BuffetFetcher {
+// TODO: implement binary cache with cache manifest
+
+export class BufferFetcher {
   batchSize: number;
-  batchPauseMs: number;
-  notifyOnItemFetchFn: NotifyFn;
+  pauseBetweenBatchesMs: number;
+  useCache: boolean;
+  notifyOnItemFetchFn: NotifyFn | undefined;
 
   constructor({
     batchSize = 10,
-    batchPauseMs = 1000,
+    pauseBetweenBatchesMs = 1000,
+    useCache = false,
     notifyOnItemFetchFn
   }: BufferFetcherInput = {}) {
     this.batchSize = batchSize;
-    this.batchPauseMs = batchPauseMs;
-    this.notifyOnItemFetchFn = notifyOnItemFetchFn || (() => {});
+    this.pauseBetweenBatchesMs = pauseBetweenBatchesMs;
+    this.useCache = useCache;
+    this.notifyOnItemFetchFn = notifyOnItemFetchFn;
   }
 
   private async fetchBufferedData(urls: string[]): Promise<BufferObject[]> {
@@ -51,12 +57,10 @@ class BuffetFetcher {
       fetchedObjects.push(data);
 
       if (n > 1) {
-        await wait(this.batchPauseMs);
+        await wait(this.pauseBetweenBatchesMs);
       }
     }
 
     return ([] as BufferObject[]).concat(...fetchedObjects);
   }
 }
-
-export { BuffetFetcher };

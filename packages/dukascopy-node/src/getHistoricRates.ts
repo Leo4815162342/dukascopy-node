@@ -2,7 +2,7 @@ import {
   validateConfig,
   normaliseDates,
   generateUrls,
-  BuffetFetcher,
+  BufferFetcher,
   processData,
   HistoryConfig,
   DefaultHistoryConfig
@@ -51,7 +51,7 @@ async function getHistoricRates(config: HistoryConfig) {
 
   const urls = generateUrls({ instrument, timeframe, priceType, startDate, endDate });
 
-  const bufferFetcher = new BuffetFetcher();
+  const bufferFetcher = new BufferFetcher();
 
   const bufferredData = await bufferFetcher.fetch(urls);
 

@@ -1,8 +1,8 @@
 import fs from 'fs';
 import { promisify } from 'util';
-import { BuffetFetcher, URL_ROOT } from '../../../src';
+import { BufferFetcher, URL_ROOT } from '../../../src';
 
-BuffetFetcher.prototype.fetch = async (urls: string[]) => {
+BufferFetcher.prototype.fetch = async (urls: string[]) => {
   const buffers = await Promise.all(
     urls.map(url => promisify(fs.readFile)(url.replace(URL_ROOT, './../../dummy-data')))
   );
@@ -19,7 +19,7 @@ const urls = [
 ];
 
 describe('Buffer fetcher', () => {
-  const bf = new BuffetFetcher();
+  const bf = new BufferFetcher();
 
   let data: any;
 

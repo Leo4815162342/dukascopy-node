@@ -14,9 +14,9 @@ import { getTestCases, getConfigDescription } from './utils';
 const getHistoricRatesFn = jest.spyOn(lib, 'getHistoricRates');
 const validateConfigFn = jest.spyOn(core, 'validateConfig');
 const processDataFn = jest.spyOn(core, 'processData');
-const { BuffetFetcher } = core;
+const { BufferFetcher } = core;
 
-BuffetFetcher.prototype.fetch = async (urls: string[]) => {
+BufferFetcher.prototype.fetch = async (urls: string[]) => {
   const buffers = await Promise.all(
     urls.map(url => promisify(fs.readFile)(url.replace(core.URL_ROOT, './../../dummy-data')))
   );
