@@ -1,9 +1,10 @@
-import { ValidationSchema } from 'fastest-validator';
+import Validator, { ValidationSchema, ValidationError } from 'fastest-validator';
 import { instruments } from '../config/instruments';
 import { timeframes } from '../config/timeframes';
 import { priceTypes } from '../config/price-types';
+import { getUTCDateFromString } from '../utils/date';
 
-const schema: ValidationSchema = {
+export const schema: ValidationSchema = {
   instrument: { type: 'string', enum: Object.keys(instruments), required: true },
   dates: {
     type: 'object',
@@ -20,4 +21,18 @@ const schema: ValidationSchema = {
   ignoreFlats: { type: 'boolean', required: true }
 };
 
-export { schema };
+const validator = new Validator({
+  messages: {
+    invalidDateString: "The '{field}' field must be a valid date string! Actual: {actual}"
+  }
+});
+
+validator.add('dateString', (value: any) => {
+  if (!getUTCDateFromString(value)) {
+    return validator.makeError('invalidDateString', null, value);
+  }
+
+  return true;
+});
+
+export const check: (object: object) => true | ValidationError[] = validator.compile(schema);
