@@ -7,6 +7,7 @@
 import { PromiseType } from 'utility-types';
 
 import { getTestCases, getConfigDescription } from '../utils';
+import { advanceTo, clear } from 'jest-date-mock';
 
 import * as lib from '../../src';
 import * as configValidator from '../../src/config-validator';
@@ -18,12 +19,22 @@ const getHistoricRatesFn = jest.spyOn(lib, 'getHistoricRates');
 const validateConfigFn = jest.spyOn(configValidator, 'validateConfig');
 const processDataFn = jest.spyOn(processor, 'processData');
 
+const customDateNow = '2019-07-12T21:05:00.000Z'; // mocking new Date()
+
 type TestCase = {
   config: lib.HistoryConfig;
   expectedOutput: PromiseType<ReturnType<typeof lib.getHistoricRates>>;
 };
 
 describe('getHistoricRates', () => {
+  beforeEach(() => {
+    advanceTo(new Date(customDateNow));
+  });
+
+  afterEach(() => {
+    clear();
+  });
+
   const testCases = getTestCases<TestCase>('tests/integration/cases');
   testCases.forEach(({ content, path }) => {
     const [fileName] = path.split('/').reverse();
