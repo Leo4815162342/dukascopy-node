@@ -1,13 +1,14 @@
-import { HistoryConfig } from '../types';
-import { check } from './schema';
+import { validator, schema, defaultSchemaValidationFn } from './schema';
+import { HistoryConfig } from '../config/types';
+import { ValidationStatus, ValidationFn } from './types';
 
-export type ValidationStatus = {
-  isValid: boolean;
-  validationErrors: string[];
-};
+export { validator, schema };
 
-export function validateConfig(config: HistoryConfig): ValidationStatus {
-  const validationResult = check(config);
+export function validateConfig(
+  config: HistoryConfig,
+  validationFn: ValidationFn = defaultSchemaValidationFn
+): ValidationStatus {
+  const validationResult = validationFn(config);
 
   const isValid = validationResult === true;
 

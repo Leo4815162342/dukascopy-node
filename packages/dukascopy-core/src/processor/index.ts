@@ -1,20 +1,9 @@
-import { Instrument, Timeframe, PriceType } from './../index';
-import { BufferObject } from '../buffer-fetcher';
-
 import { getDateFromUrl } from '../utils/date';
 import { getTimeframeFromUrl } from '../utils/range';
 import { decompress } from '../decompressor';
 import { normalise } from '../data-normaliser';
 import { aggregate } from '../aggregator';
-
-type ProcessDataInput = {
-  instrument: Instrument;
-  requestedTimeframe: Timeframe;
-  bufferObjects: BufferObject[];
-  priceType: PriceType;
-  volumes: boolean;
-  ignoreFlats: boolean;
-};
+import { ProcessDataInput } from './types';
 
 function processData({
   instrument,

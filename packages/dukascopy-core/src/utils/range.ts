@@ -1,4 +1,4 @@
-import { Timeframe } from '../types';
+import { Timeframe } from '../config/types';
 
 import { getIsCurrentObj } from '../utils/date';
 

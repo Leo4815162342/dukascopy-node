@@ -341,6 +341,13 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
   integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
 
+"@types/fs-extra@^8.0.1":
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-8.0.1.tgz#a2378d6e7e8afea1564e44aafa2e207dadf77686"
+  integrity sha512-J00cVDALmi/hJOYsunyT52Hva5TnJeKP5yd1r+mH/ZU0mbYZflR0Z5kw5kITtKTRYMhm1JMClOFYdHnQszEvqw==
+  dependencies:
+    "@types/node" "*"
+
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.1.tgz#42995b446db9a48a11a07ec083499a860e9138ff"
@@ -1346,7 +1353,7 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
-fs-extra@8.1.0:
+fs-extra@8.1.0, fs-extra@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
   integrity sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==
@@ -1885,10 +1892,10 @@ jest-config@^24.9.0:
     pretty-format "^24.9.0"
     realpath-native "^1.1.0"
 
-jest-date-mock@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/jest-date-mock/-/jest-date-mock-1.0.7.tgz#b1e5071beb314cbfcfb0a21d8560a2122519f5c3"
-  integrity sha512-ZgbYlURRhVpf52Jho4tlyUgpJJ+nYvhxIWhIIEdarmsSuTxFZlC9DmKCyQXsuEljfxK+7HsqdBX/L6rxwWraYw==
+jest-date-mock@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/jest-date-mock/-/jest-date-mock-1.0.8.tgz#13468c0352c5a3614c6b356dbc6b88eb37d9e0b3"
+  integrity sha512-0Lyp+z9xvuNmLbK+5N6FOhSiBeux05Lp5bbveFBmYo40Aggl2wwxFoIrZ+rOWC8nDNcLeBoDd2miQdEDSf3iQw==
 
 jest-diff@^24.3.0, jest-diff@^24.9.0:
   version "24.9.0"

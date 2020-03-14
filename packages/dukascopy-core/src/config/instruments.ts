@@ -1,4 +1,4 @@
-import { InstrumentData } from '../types';
+import { InstrumentData } from './types';
 
 export const instruments: InstrumentData = {
   aususd: {

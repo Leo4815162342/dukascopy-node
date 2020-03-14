@@ -7,7 +7,8 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "yarn jest --coverage",
-    "build": "rollup -c"
+    "type-check": "yarn tsc src/index.ts --noEmit",
+    "build": "yarn rollup -c"
   },
   "author": "leonid.pyrlia",
   "license": "ISC",
@@ -26,18 +27,8 @@
     "python-struct": "^1.0.6"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.23",
     "@types/node-fetch": "^2.1.7",
-    "jest": "^24.9.0",
-    "jest-date-mock": "^1.0.7",
-    "rollup": "^1.27.2",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-typescript2": "^0.25.2",
-    "ts-jest": "^24.1.0",
-    "ts-node": "^8.5.2",
-    "typescript": "^3.7.2",
-    "utility-types": "^3.7.0"
+    "jest-date-mock": "^1.0.8"
   },
   "jest": {
     "automock": false,

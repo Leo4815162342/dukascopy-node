@@ -1,4 +1,4 @@
-import { HistoryConfig } from '../src/types';
+import { HistoryConfig } from '../src';
 import { readdirSync } from 'fs';
 
 function getTestCases<T>(folder: string) {

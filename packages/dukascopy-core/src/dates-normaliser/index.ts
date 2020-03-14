@@ -1,15 +1,6 @@
-import { Instrument, Timeframe } from '../types';
 import { instruments } from '../config/instruments';
-
 import { getUTCDateFromString } from '../utils/date';
-
-export type NormaliseDatesInput = {
-  instrument: Instrument;
-  startDate: string;
-  endDate: string;
-  timeframe: Timeframe;
-  utcOffset: number;
-};
+import { NormaliseDatesInput } from './types';
 
 function normaliseDates({
   instrument,

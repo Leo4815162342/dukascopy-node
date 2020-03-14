@@ -1,18 +1,12 @@
-import { Timeframe } from './../types';
+import { Timeframe } from '../config/types';
+import { StructFormat, DecompressInput } from './types';
 
 var lzmajs = require('lzma-purejs');
 const struct = require('python-struct');
 
-type StructFormat = '>3i2f' | '>5i1f';
-
 function getStructFormat(timeframe: Timeframe): StructFormat {
   return timeframe === 'tick' ? '>3i2f' : '>5i1f';
 }
-
-type DecompressInput = {
-  buffer: Buffer;
-  timeframe: Timeframe;
-};
 
 function decompress(input: DecompressInput): number[][] {
   const { buffer, timeframe } = input;
