@@ -8,9 +8,10 @@ import fs from 'fs';
 import { promisify } from 'util';
 import * as core from 'dukascopy-core';
 import * as lib from '../src';
+import { advanceTo, clear } from 'jest-date-mock';
+
 import { PromiseType } from 'utility-types';
 import { getTestCases, getConfigDescription } from './utils';
-
 const getHistoricRatesFn = jest.spyOn(lib, 'getHistoricRates');
 const validateConfigFn = jest.spyOn(core, 'validateConfig');
 const processDataFn = jest.spyOn(core, 'processData');
@@ -32,7 +33,17 @@ type TestCase = {
   expectedOutput: PromiseType<ReturnType<typeof lib.getHistoricRates>>;
 };
 
+const customDateNow = '2019-07-12T21:05:00.000Z'; // mocking new Date()
+
 describe('getHistoricRates', () => {
+  beforeEach(() => {
+    advanceTo(new Date(customDateNow));
+  });
+
+  afterEach(() => {
+    clear();
+  });
+
   const testCases = getTestCases<TestCase>('./tests/cases');
   testCases.forEach(({ content, path }) => {
     const [fileName] = path.split('/').reverse();

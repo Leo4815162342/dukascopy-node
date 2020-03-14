@@ -9,7 +9,8 @@
     "test": "yarn jest",
     "test:call": "yarn ts-node dev-utils/test-call.ts",
     "cleanup-lib": "rm -rf ./lib/*/",
-    "build": "rollup -c && yarn cleanup-lib"
+    "type-check": "yarn tsc src/index.ts --noEmit",
+    "build": "yarn rollup -c && yarn cleanup-lib"
   },
   "author": "leonid.pyrlia",
   "license": "ISC",
@@ -33,7 +34,7 @@
     "dukascopy-core": "^1.0.12"
   },
   "devDependencies": {
-    "utility-types": "^3.7.0"
+    "jest-date-mock": "^1.0.8"
   },
   "jest": {
     "automock": false,
