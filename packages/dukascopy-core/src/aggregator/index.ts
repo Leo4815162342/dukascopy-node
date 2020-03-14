@@ -1,15 +1,6 @@
-import { Timeframe, PriceType } from './../types';
-
 import { getOHLC, getMinuteOHLCfromTicks, getMonthlyOHLCfromDays } from './ohlc';
 import { splitArrayInChunks } from '../utils/general';
-
-export type AggregateInput = {
-  data: number[][];
-  fromTimeframe: Timeframe;
-  toTimeframe: Timeframe;
-  priceType: PriceType;
-  ignoreFlats: boolean;
-};
+import { AggregateInput } from './types';
 
 export function aggregate({
   data,

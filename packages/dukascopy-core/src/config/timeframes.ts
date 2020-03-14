@@ -1,4 +1,4 @@
-import { Timeframes } from '../types';
+import { Timeframes } from './types';
 
 export const timeframes: Timeframes = {
   tick: 1, // 1 tick

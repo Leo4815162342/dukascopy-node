@@ -13,15 +13,12 @@
     "chalk": "^3.0.0",
     "cli-progress": "^3.4.0",
     "command-line-args": "^5.1.1",
-    "dukascopy-core": "^1.0.12"
+    "dukascopy-core": "^1.0.12",
+    "fs-extra": "^8.1.0"
   },
   "devDependencies": {
     "@types/cli-progress": "^1.8.1",
     "@types/command-line-args": "^5.0.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-typescript2": "^0.25.2",
-    "ts-node": "^8.5.2",
-    "typescript": "^3.7.2"
+    "@types/fs-extra": "^8.0.1"
   }
 }

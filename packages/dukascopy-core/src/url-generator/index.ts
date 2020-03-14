@@ -3,14 +3,14 @@
 // .../2019/01/01/BID_candles_min_1.bi5:    minute data per day
 // .../2019/01/01/01h_ticks_1.bi5:  tick data per hour
 
-import { Instrument, PriceType, Timeframe } from '../types';
-import { TimeRange } from '../utils/range';
-
 import { getLowerRange, isCurrentRange, getClosestAvailableRange } from '../utils/range';
 import { getStartOfUtc, getYMDH } from '../utils/date';
 import { pad } from '../utils/general';
+import { Instrument, PriceType, Timeframe } from '../config/types';
+import { GenerateUrlsInput } from './types';
+import { TimeRange } from '../utils/range';
 
-const URL_ROOT = 'https://datafeed.dukascopy.com/datafeed';
+export const URL_ROOT = 'https://datafeed.dukascopy.com/datafeed';
 
 function getUrl(
   instrument: Instrument,
@@ -88,15 +88,7 @@ function getDateLimit(startDate: Date, endDate: Date, timeframe: Timeframe) {
   return dateLimit;
 }
 
-type GenerateUrlsInput = {
-  instrument: Instrument;
-  timeframe: Timeframe;
-  startDate: Date;
-  endDate: Date;
-  priceType: PriceType;
-};
-
-function generateUrls({
+export function generateUrls({
   instrument,
   timeframe,
   priceType,
@@ -113,5 +105,3 @@ function generateUrls({
 
   return urls;
 }
-
-export { URL_ROOT, generateUrls };

@@ -1,27 +1,7 @@
-import { Timeframe, Instrument } from './../types';
-
 import { instruments } from '../config/instruments';
 import { roundNum } from './../utils/general';
-
-export type NormaliseInput = {
-  data: number[][];
-  timeframe: Timeframe;
-  startTs: number;
-  instrument: Instrument;
-  volumes: boolean;
-};
-
-function normalise(input: NormaliseInput): number[][] {
-  const { data, timeframe, startTs, instrument, volumes } = input;
-
-  const { decimalFactor } = instruments[instrument];
-
-  const normaliserFn = getNormaliser(timeframe, startTs, decimalFactor, volumes);
-
-  const normalizedData = data.map(normaliserFn);
-
-  return normalizedData;
-}
+import { Timeframe } from '../config/types';
+import { NormaliseInput } from './types';
 
 function getNormaliser(
   timeframe: Timeframe,
@@ -56,4 +36,14 @@ function getNormaliser(
   }
 }
 
-export { normalise };
+export function normalise(input: NormaliseInput): number[][] {
+  const { data, timeframe, startTs, instrument, volumes } = input;
+
+  const { decimalFactor } = instruments[instrument];
+
+  const normaliserFn = getNormaliser(timeframe, startTs, decimalFactor, volumes);
+
+  const normalizedData = data.map(normaliserFn);
+
+  return normalizedData;
+}

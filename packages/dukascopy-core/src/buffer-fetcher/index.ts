@@ -1,22 +1,6 @@
 import { splitArrayInChunks, wait } from '../utils/general';
-
 import fetch from 'node-fetch';
-
-export type BufferObject = {
-  url: string;
-  buffer: Buffer;
-};
-
-export type NotifyFn = (downloadedUrl: string) => any;
-
-export interface BufferFetcherInput {
-  batchSize?: number;
-  pauseBetweenBatchesMs?: number; // TODO: use exponential backoff
-  useCache?: boolean;
-  notifyOnItemFetchFn?: NotifyFn;
-}
-
-// TODO: implement binary cache with cache manifest
+import { NotifyFn, BufferFetcherInput, BufferObject } from './types';
 
 export class BufferFetcher {
   batchSize: number;

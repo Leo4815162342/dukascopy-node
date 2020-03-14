@@ -1,4 +1,4 @@
-import { PriceType } from './../types';
+import { PriceType } from '../config/types';
 import { roundNum } from './../utils/general';
 
 function getOHLC(input: number[][], filterFlats = true) {
