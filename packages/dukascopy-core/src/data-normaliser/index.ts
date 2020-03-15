@@ -10,7 +10,7 @@ function getNormaliser(
   volumes: boolean
 ): (values: number[]) => number[] {
   if (timeframe === 'tick') {
-    return function(values: number[]) {
+    return function(values: number[]): number[] {
       const [ms, ask, bid, askVolume, bidVolume] = values;
 
       return [
@@ -21,7 +21,7 @@ function getNormaliser(
       ];
     };
   } else {
-    return function(values: number[]) {
+    return function(values: number[]): number[] {
       const [sec, open, close, low, high, volume] = values;
 
       return [

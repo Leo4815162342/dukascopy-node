@@ -10,6 +10,7 @@
     "test:call": "yarn ts-node dev-utils/test-call.ts",
     "cleanup-lib": "rm -rf ./lib/*/",
     "type-check": "yarn tsc src/index.ts --noEmit",
+    "lint": "yarn eslint 'src/**/*.{js,ts}'",
     "build": "yarn rollup -c && yarn cleanup-lib"
   },
   "author": "leonid.pyrlia",

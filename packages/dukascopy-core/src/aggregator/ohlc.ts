@@ -1,7 +1,7 @@
 import { PriceType } from '../config/types';
 import { roundNum } from './../utils/general';
 
-function getOHLC(input: number[][], filterFlats = true) {
+function getOHLC(input: number[][], filterFlats = true): number[] {
   const startMs = input[0][0];
 
   if (filterFlats) {
@@ -44,8 +44,8 @@ function getOHLC(input: number[][], filterFlats = true) {
   return ohlc;
 }
 
-function breakdownByInterval(input: number[][], interval: 'minute' | 'month') {
-  let dataByInterval: number[][][] = [];
+function breakdownByInterval(input: number[][], interval: 'minute' | 'month'): number[][][] {
+  const dataByInterval: number[][][] = [];
 
   for (let i = 0, n = input.length; i < n; i++) {
     const data = input[i];
@@ -59,7 +59,7 @@ function breakdownByInterval(input: number[][], interval: 'minute' | 'month') {
 
   return dataByInterval;
 }
-function tickOHLC(input: number[][], priceType: PriceType) {
+function tickOHLC(input: number[][], priceType: PriceType): number[] {
   // timestamp, askPrice, bidPirce, askVolume, bidVolume
 
   const date = new Date(input[0][0]);
@@ -70,10 +70,10 @@ function tickOHLC(input: number[][], priceType: PriceType) {
   const initialVolume = priceType === 'ask' ? input[0][3] : input[0][4];
 
   const startTs = date.setUTCMinutes(minuteValue, 0, 0);
-  let open = openPrice;
+  const open = openPrice;
   let high = openPrice;
   let low = openPrice;
-  let close = closePrice;
+  const close = closePrice;
   let volume = initialVolume;
 
   for (let i = 1, n = input.length; i < n; i++) {
@@ -104,14 +104,14 @@ function tickOHLC(input: number[][], priceType: PriceType) {
   return ohlc;
 }
 
-function getMinuteOHLCfromTicks(input: number[][], priceType: PriceType) {
+function getMinuteOHLCfromTicks(input: number[][], priceType: PriceType): number[][] {
   const breakdown = breakdownByInterval(input, 'minute');
   const ohlc = breakdown.map(data => tickOHLC(data, priceType));
 
   return ohlc;
 }
 
-function getMonthlyOHLCfromDays(input: number[][]) {
+function getMonthlyOHLCfromDays(input: number[][]): number[][] {
   const breakdown = breakdownByInterval(input, 'month');
   const ohlc = breakdown.map(data => getOHLC(data));
 

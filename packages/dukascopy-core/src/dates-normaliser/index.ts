@@ -2,7 +2,19 @@ import { instruments } from '../config/instruments';
 import { getUTCDateFromString } from '../utils/date';
 import { NormaliseDatesInput } from './types';
 
-function normaliseDates({
+function applyDateLimits(date: Date, min: Date, max: Date): Date {
+  let adjustedDate: Date;
+
+  if (date < max) {
+    adjustedDate = date < min ? min : date;
+  } else {
+    adjustedDate = max;
+  }
+
+  return adjustedDate;
+}
+
+export function normaliseDates({
   instrument,
   startDate,
   endDate,
@@ -32,17 +44,3 @@ function normaliseDates({
 
   return [adjustedFromDate, adjustedToDate];
 }
-
-function applyDateLimits(date: Date, min: Date, max: Date): Date {
-  let adjustedDate: Date;
-
-  if (date < max) {
-    adjustedDate = date < min ? min : date;
-  } else {
-    adjustedDate = max;
-  }
-
-  return adjustedDate;
-}
-
-export { normaliseDates };

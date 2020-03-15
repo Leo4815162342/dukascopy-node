@@ -20,7 +20,7 @@ function getUTCDateFromString(date: string): false | Date {
   return isValid ? parsedDate : false;
 }
 
-function getYMDH(date: Date) {
+function getYMDH(date: Date): number[] {
   const [year, month, day, hours] = [
     date.getUTCFullYear(),
     date.getUTCMonth(),
@@ -31,7 +31,7 @@ function getYMDH(date: Date) {
   return [year, month, day, hours];
 }
 
-function getStartOfUtc(date: Date, period: TimeRange, offset: number = 0): Date {
+function getStartOfUtc(date: Date, period: TimeRange, offset = 0): Date {
   const [year, month, day, hours] = getYMDH(date);
 
   let startOfUtc = new Date();
@@ -49,7 +49,14 @@ function getStartOfUtc(date: Date, period: TimeRange, offset: number = 0): Date 
   return startOfUtc;
 }
 
-function getIsCurrentObj(date: Date) {
+function getIsCurrentObj(
+  date: Date
+): {
+  year: boolean;
+  month: boolean;
+  day: boolean;
+  hour: boolean;
+} {
   const [year, month, day, hours] = getYMDH(date);
 
   const [currentYear, currentMonth, currentDay, currentHours] = getYMDH(new Date());
