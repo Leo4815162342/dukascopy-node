@@ -36,7 +36,7 @@ function getUrl(
 }
 
 function getConstructor(instrument: Instrument, priceType: PriceType, endDate: Date) {
-  return function construct(rangetype: TimeRange, startDate: Date) {
+  return function construct(rangetype: TimeRange, startDate: Date): string[] {
     let dates: Date[] = [];
 
     let tempStartDate = getStartOfUtc(startDate, rangetype);
@@ -65,7 +65,7 @@ function getConstructor(instrument: Instrument, priceType: PriceType, endDate: D
   };
 }
 
-function getDateLimit(startDate: Date, endDate: Date, timeframe: Timeframe) {
+function getDateLimit(startDate: Date, endDate: Date, timeframe: Timeframe): Date {
   const nowDate = new Date();
 
   const adjustedEndDate = endDate < nowDate ? endDate : nowDate;

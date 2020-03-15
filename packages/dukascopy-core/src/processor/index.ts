@@ -12,7 +12,7 @@ function processData({
   priceType,
   volumes,
   ignoreFlats
-}: ProcessDataInput) {
+}: ProcessDataInput): number[][] {
   const result = bufferObjects.map(({ url, buffer }) => {
     const startDate = getDateFromUrl(url);
     const urlTimeframe = getTimeframeFromUrl(url);

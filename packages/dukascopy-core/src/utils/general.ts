@@ -25,7 +25,7 @@ function splitArrayInChunks<T>(array: T[], chunkSize: number): T[][] {
   return result;
 }
 
-function wait(ms: number) {
+function wait(ms: number): Promise<any> {
   return new Promise(res => {
     setTimeout(function() {
       res();

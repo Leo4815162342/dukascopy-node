@@ -17,7 +17,7 @@ const rangeInferMap: RangeInferMap = {
   tick: ['hour']
 };
 
-function getLowerRange(range: TimeRange) {
+function getLowerRange(range: TimeRange): TimeRange {
   const lookupIndex = ranges.indexOf(range);
 
   return ranges[lookupIndex + 1];
@@ -29,7 +29,7 @@ function getClosestAvailableRange(timeframe: Timeframe, date: Date): TimeRange {
   return rangeInferMap[timeframe].find(range => !isCurrent[range]) as TimeRange;
 }
 
-function isCurrentRange(rangeType: TimeRange, date: Date) {
+function isCurrentRange(rangeType: TimeRange, date: Date): boolean {
   const { year, month, day } = getIsCurrentObj(date);
 
   return (

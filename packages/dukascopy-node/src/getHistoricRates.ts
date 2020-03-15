@@ -22,7 +22,7 @@ const defaultConfig: DefaultHistoryConfig = {
 // requestThrottling/debouncing
 // exponential backoff
 // progress reporting
-async function getHistoricRates(config: HistoryConfig) {
+async function getHistoricRates(config: HistoryConfig): Promise<number[][]> {
   const mergedConfig = { ...defaultConfig, ...config };
 
   const { isValid, validationErrors } = validateConfig(mergedConfig);

@@ -6,6 +6,8 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "cleanup-lib": "rm -rf ./lib/*/",
+    "type-check": "yarn tsc src/index.ts --noEmit",
+    "lint": "yarn eslint 'src/**/*.{js,ts}'",
     "build": "rollup -c && yarn cleanup-lib"
   },
   "license": "MIT",

@@ -1,13 +1,14 @@
 {
   "name": "dukascopy-core",
   "version": "1.0.12",
-  "description": "Core functions of Dukascopy package",
+  "description": "Core functions and primities for Dukascopy packages",
   "main": "lib/index.js",
   "module": "lib/index.es.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "yarn jest --coverage",
     "type-check": "yarn tsc src/index.ts --noEmit",
+    "lint": "yarn eslint 'src/**/*.{js,ts}'",
     "build": "yarn rollup -c"
   },
   "author": "leonid.pyrlia",
@@ -18,7 +19,8 @@
   },
   "keywords": [
     "dukascopy",
-    "dukascopy-core"
+    "dukascopy-core",
+    "bi5 conversion"
   ],
   "dependencies": {
     "fastest-validator": "^0.6.17",

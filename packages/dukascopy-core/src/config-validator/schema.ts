@@ -1,4 +1,4 @@
-import Validator, { ValidationSchema, ValidationError } from 'fastest-validator';
+import Validator, { ValidationSchema } from 'fastest-validator';
 import { instruments } from '../config/instruments';
 import { timeframes } from '../config/timeframes';
 import { priceTypes } from '../config/price-types';
