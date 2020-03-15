@@ -4,7 +4,8 @@ import { progressBar } from './progress';
 import { outputFile } from 'fs-extra';
 import { cliConfig, isValid, validationErrors } from './config';
 import { printHeader, printErrors, printSucess } from './printer';
-import * as chalk from 'chalk';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const chalk = require('chalk');
 import { formatData } from './formatter';
 
 const {

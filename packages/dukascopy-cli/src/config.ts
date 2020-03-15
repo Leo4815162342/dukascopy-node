@@ -1,4 +1,5 @@
-import * as commandLineArgs from 'command-line-args';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const commandLineArgs = require('command-line-args');
 import { CliConfig } from './types';
 import { validateConfig, schema as defaultSchema, validator } from 'dukascopy-core';
 
