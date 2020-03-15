@@ -37,5 +37,16 @@
     "setupFiles": [
       "jest-date-mock"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn type-check && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "yarn eslint --fix",
+      "git add"
+    ]
   }
 }
