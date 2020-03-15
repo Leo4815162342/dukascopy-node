@@ -1,5 +1,5 @@
 import { CliConfig } from './types';
-import chalk from 'chalk';
+import * as chalk from 'chalk';
 
 const log = console.log;
 
@@ -9,9 +9,9 @@ export function printHeader(searchConfig: CliConfig): void {
     dates: { from: fromDate, to: toDate },
     timeframe,
     priceType,
-    utcOffset,
+    // utcOffset,
     volumes,
-    ignoreFlats,
+    // ignoreFlats,
     outputFormat
   } = searchConfig;
 

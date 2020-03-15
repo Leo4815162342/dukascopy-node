@@ -11,7 +11,8 @@
     "cleanup-lib": "rm -rf ./lib/*/",
     "type-check": "yarn tsc src/index.ts --noEmit",
     "lint": "yarn eslint 'src/**/*.{js,ts}'",
-    "build": "yarn rollup -c && yarn cleanup-lib"
+    "build": "yarn rollup -c && yarn cleanup-lib",
+    "pre-commit": "yarn type-check && yarn lint"
   },
   "author": "leonid.pyrlia",
   "license": "ISC",

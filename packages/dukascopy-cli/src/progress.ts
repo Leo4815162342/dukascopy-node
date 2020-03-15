@@ -1,5 +1,5 @@
 import { Bar } from 'cli-progress';
-import chalk from 'chalk';
+import * as chalk from 'chalk';
 
 export const progressBar = new Bar({
   format: '|' + chalk.green('{bar}') + '| {percentage}% || {value}/{total} Files',

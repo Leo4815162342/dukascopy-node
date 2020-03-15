@@ -8,7 +8,8 @@
     "cleanup-lib": "rm -rf ./lib/*/",
     "type-check": "yarn tsc src/index.ts --noEmit",
     "lint": "yarn eslint 'src/**/*.{js,ts}'",
-    "build": "rollup -c && yarn cleanup-lib"
+    "build": "rollup -c && yarn cleanup-lib",
+    "pre-commit": "yarn type-check && yarn lint"
   },
   "license": "MIT",
   "dependencies": {

@@ -1,10 +1,10 @@
 import { resolve } from 'path';
 import { normaliseDates, generateUrls, BufferFetcher, processData } from 'dukascopy-core';
 import { progressBar } from './progress';
-import { writeJSON, outputFile } from 'fs-extra';
+import { outputFile } from 'fs-extra';
 import { cliConfig, isValid, validationErrors } from './config';
 import { printHeader, printErrors, printSucess } from './printer';
-import chalk from 'chalk';
+import * as chalk from 'chalk';
 import { formatData } from './formatter';
 
 const {
@@ -25,6 +25,7 @@ const fileName = `${instrument}-${timeframe}${
 const folderPath = resolve(process.cwd(), dir);
 const filePath = resolve(folderPath, fileName);
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 (async () => {
   console.log(folderPath);
   console.log(filePath);
@@ -48,7 +49,7 @@ const filePath = resolve(folderPath, fileName);
 
       const bufferFetcher = new BufferFetcher({
         batchSize: 10,
-        notifyOnItemFetchFn: () => {
+        notifyOnItemFetchFn: (): void => {
           val += 1;
           progressBar.update(val);
         }

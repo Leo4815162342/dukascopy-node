@@ -4,6 +4,9 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "lint": "yarn workspaces run pre-commit"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.23",
     "@typescript-eslint/eslint-plugin": "^2.23.0",
@@ -23,5 +26,16 @@
     "utility-types": "^3.7.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "yarn eslint --fix",
+      "git add"
+    ]
   }
 }

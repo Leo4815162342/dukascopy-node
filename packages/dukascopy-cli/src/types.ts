@@ -6,4 +6,3 @@ export interface CliConfig extends Required<HistoryConfig> {
   outputFormat: OutputFormat;
   dir: string;
 }
-

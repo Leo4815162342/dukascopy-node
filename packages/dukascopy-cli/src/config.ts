@@ -1,4 +1,4 @@
-import commandLineArgs from 'command-line-args';
+import * as commandLineArgs from 'command-line-args';
 import { CliConfig } from './types';
 import { validateConfig, schema as defaultSchema, validator } from 'dukascopy-core';
 

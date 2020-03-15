@@ -9,7 +9,8 @@
     "test": "yarn jest --coverage",
     "type-check": "yarn tsc src/index.ts --noEmit",
     "lint": "yarn eslint 'src/**/*.{js,ts}'",
-    "build": "yarn rollup -c"
+    "build": "yarn rollup -c",
+    "pre-commit": "yarn type-check && yarn lint"
   },
   "author": "leonid.pyrlia",
   "license": "ISC",
@@ -36,17 +37,6 @@
     "automock": false,
     "setupFiles": [
       "jest-date-mock"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn type-check && lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts}": [
-      "yarn eslint --fix",
-      "git add"
     ]
   }
 }
