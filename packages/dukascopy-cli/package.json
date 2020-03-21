@@ -9,7 +9,8 @@
     "type-check": "yarn tsc src/index.ts --noEmit",
     "lint": "yarn eslint 'src/**/*.{js,ts}'",
     "build": "rollup -c && yarn cleanup-lib",
-    "pre-commit": "yarn type-check && yarn lint"
+    "pre-commit": "yarn type-check && yarn lint",
+    "test": "echo 'tests for CLI go here'"
   },
   "license": "MIT",
   "dependencies": {

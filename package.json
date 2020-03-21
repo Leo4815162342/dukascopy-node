@@ -5,7 +5,8 @@
     "packages/*"
   ],
   "scripts": {
-    "lint": "yarn workspaces run pre-commit"
+    "lint": "yarn workspaces run pre-commit",
+    "test": "yarn workspaces run test"
   },
   "devDependencies": {
     "@types/jest": "^24.0.23",
