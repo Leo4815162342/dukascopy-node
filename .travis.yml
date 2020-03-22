@@ -3,4 +3,4 @@ node_js:
   - 'stable'
 
 before_install:
-  - yarn && yarn run workspaces build
+  - yarn && yarn workspaces run build
