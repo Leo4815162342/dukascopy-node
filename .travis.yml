@@ -2,5 +2,5 @@ language: node_js
 node_js:
   - 'stable'
 
-install:
-  - yarn
+before_install:
+  - yarn && yarn workspaces build
