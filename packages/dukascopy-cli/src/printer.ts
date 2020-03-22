@@ -1,38 +1,55 @@
 import { CliConfig } from './types';
-import * as chalk from 'chalk';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const chalk = require('chalk');
 
 const log = console.log;
 
-export function printHeader(searchConfig: CliConfig): void {
+export function printSpacer(): void {
+  log();
+}
+
+export function printDivider(): void {
+  log(chalk.gray('----------------------------------------------------'));
+}
+
+export function printHeader(
+  searchConfig: CliConfig,
+  adjustedStartDate: Date,
+  adjustedEndDate: Date
+): void {
   const {
     instrument,
-    dates: { from: fromDate, to: toDate },
     timeframe,
     priceType,
-    // utcOffset,
+    utcOffset,
     volumes,
-    // ignoreFlats,
+    ignoreFlats,
     outputFormat
   } = searchConfig;
 
-  log(chalk.gray('--------------------------------------------------------'));
-  log(chalk.whiteBright('Downloading historical price data'));
-  log(chalk.gray('--------------------------------------------------------'));
-  log('Instrument: ', chalk.bold(chalk.yellow(instrument)));
-  log('Timeframe:  ', chalk.bold(chalk.yellow(timeframe)));
-  log('Period:     ', chalk.bold(chalk.yellow(`${fromDate} - ${toDate}`)));
-  log('Price type: ', chalk.bold(chalk.yellow(priceType)));
-  log('Volumes:    ', chalk.bold(chalk.yellow(volumes)));
-  log('Format:     ', chalk.bold(chalk.yellow(outputFormat)));
-  log(chalk.gray('--------------------------------------------------------'));
+  printDivider();
+  log(chalk.whiteBright('Downloadinging historical price data for:'));
+  printDivider();
+  log('Instrument:    ', chalk.bold(chalk.yellow(instrument)));
+  log('Timeframe:     ', chalk.bold(chalk.yellow(timeframe)));
+  log('From date:     ', chalk.bold(chalk.yellow(adjustedStartDate.toISOString())));
+  log('To date:       ', chalk.bold(chalk.yellow(adjustedEndDate.toISOString())));
+  log('Price type:    ', chalk.bold(chalk.yellow(priceType)));
+  log('Volumes:       ', chalk.bold(chalk.yellow(volumes)));
+  log('UTC Offset:    ', chalk.bold(chalk.yellow(utcOffset)));
+  log('Include flats: ', chalk.bold(chalk.yellow(!ignoreFlats)));
+  log('Format:        ', chalk.bold(chalk.yellow(outputFormat)));
+  printDivider();
 }
 
 export function printErrors(header: string, errorMessage: string | string[]): void {
   log(chalk.redBright(header));
-  ([] as string[]).concat(errorMessage).forEach(error => log(chalk.red(` * ${error}`)));
+  ([] as string[]).concat(errorMessage).forEach(error => log(chalk.red(` > ${error}`)));
+  printSpacer();
 }
 
 export function printSucess(text: string): void {
-  log(chalk.gray('--------------------------------------------------------'));
+  printDivider();
   log(chalk.greenBright(text));
+  printSpacer();
 }

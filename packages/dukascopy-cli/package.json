@@ -16,13 +16,12 @@
   "dependencies": {
     "chalk": "^3.0.0",
     "cli-progress": "^3.4.0",
-    "command-line-args": "^5.1.1",
+    "commander": "^5.0.0",
     "dukascopy-core": "^1.0.12",
     "fs-extra": "^8.1.0"
   },
   "devDependencies": {
     "@types/cli-progress": "^1.8.1",
-    "@types/command-line-args": "^5.0.0",
     "@types/fs-extra": "^8.0.1"
   }
 }

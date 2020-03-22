@@ -32,8 +32,6 @@ const filePath = resolve(folderPath, fileName);
   console.log(filePath);
   try {
     if (isValid) {
-      printHeader(cliConfig);
-
       const [startDate, endDate] = normaliseDates({
         instrument,
         startDate: fromDate,
@@ -41,6 +39,8 @@ const filePath = resolve(folderPath, fileName);
         timeframe,
         utcOffset
       });
+
+      printHeader(cliConfig, startDate, endDate);
 
       const urls = generateUrls({ instrument, timeframe, priceType, startDate, endDate });
 
@@ -72,9 +72,10 @@ const filePath = resolve(folderPath, fileName);
       const filteredData = processedData.filter(
         ([timestamp]) => timestamp && timestamp >= startDateMs && timestamp < endDateMs
       );
+      const formatted = formatData(filteredData, cliConfig);
+
       progressBar.stop();
 
-      const formatted = formatData(filteredData, cliConfig);
       await outputFile(filePath, JSON.stringify(formatted, null, 2));
 
       printSucess(`√ File saved: ${chalk.bold(fileName)}`);

@@ -1,44 +1,47 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const commandLineArgs = require('command-line-args');
+import { program } from 'commander';
+import { validateConfig, schema, validator } from 'dukascopy-core';
 import { CliConfig } from './types';
-import { validateConfig, schema as defaultSchema, validator } from 'dukascopy-core';
 
-const cliValidationSchema = {
-  ...defaultSchema,
-  ...{
-    outputFormat: { type: 'string', enum: ['json', 'csv'], required: true },
-    dir: { type: 'string', required: true }
-  }
-} as typeof defaultSchema;
+program
+  .option('-d, --debug', 'output extra debugging')
+  .requiredOption('-i, --instrument <value>', 'Trading instrument')
+  .requiredOption('-dr, --date-range <value>', 'Date range', (v: string): string[] => v.split(' '))
+  .requiredOption('-t, --timeframe <value>', 'Timeframe aggregation')
+  .option('-p, --price-type <value>', 'Price type: (bid, ask)', 'bid')
+  .option('-utc, --utc-offset <value>', 'UTC offset in minutes', Number, 0)
+  .option('-v, --volumes', 'Include volumes', true)
+  .option('-fl, --flats', 'Ignore flats', true)
+  .option('-f, --format <value>', 'Output format (csv, json)', 'json')
+  .option('-dir, --directory <value>', 'Download directory', './download');
 
-const optionDefinitions = [
-  { name: 'instrument', alias: 'i', type: String },
-  { name: 'dates', alias: 'd', type: String, multiple: true },
-  { name: 'timeframe', alias: 't', type: String },
-  { name: 'priceType', alias: 'p', type: String },
-  { name: 'utcOffset', alias: 'u', type: Number },
-  { name: 'volumes', alias: 'v', type: Boolean },
-  { name: 'ignoreFlats', alias: 'f', type: Boolean },
-  { name: 'outputFormat', alias: 'o', type: String },
-  { name: 'dir', type: String }
-];
+program.parse(process.argv);
 
-const options = commandLineArgs(optionDefinitions);
+const options = program.opts();
+
+if (program.debug) console.log(options);
 
 export const cliConfig: CliConfig = {
   instrument: options.instrument,
   dates: {
-    from: options.dates[0],
-    to: options.dates[1]
+    from: options.dateRange[0],
+    to: options.dateRange[1]
   },
-  timeframe: options.timeframe || 'd1',
-  priceType: options.priceType || 'bid',
-  utcOffset: options.utcOffset || 0,
-  volumes: options.volumes === undefined ? true : false,
-  ignoreFlats: options.ignoreFlats === undefined ? true : false,
-  outputFormat: options.outputFormat || 'json',
-  dir: options.dir || 'download'
+  timeframe: options.timeframe,
+  priceType: options.priceType,
+  utcOffset: options.utcOffset,
+  volumes: options.volumes,
+  ignoreFlats: !options.flats,
+  outputFormat: options.format,
+  dir: options.directory
 };
+
+const cliValidationSchema = {
+  ...schema,
+  ...{
+    outputFormat: { type: 'string', enum: ['json', 'csv'], required: true },
+    dir: { type: 'string', required: true }
+  }
+} as typeof schema;
 
 const cliCheck = validator.compile(cliValidationSchema);
 
