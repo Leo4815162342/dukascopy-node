@@ -3,7 +3,8 @@ import { validateConfig, schema, validator } from 'dukascopy-core';
 import { CliConfig } from './types';
 
 program
-  .option('-d, --debug', 'output extra debugging')
+  .option('-d, --debug', 'Output extra debugging')
+  .option('-s, --silent', 'Prints out the search config', false)
   .requiredOption('-i, --instrument <value>', 'Trading instrument')
   .requiredOption('-dr, --date-range <value>', 'Date range', (v: string): string[] => v.split(' '))
   .requiredOption('-t, --timeframe <value>', 'Timeframe aggregation')
@@ -32,14 +33,16 @@ export const cliConfig: CliConfig = {
   volumes: options.volumes,
   ignoreFlats: !options.flats,
   outputFormat: options.format,
-  dir: options.directory
+  dir: options.directory,
+  silent: options.silent
 };
 
 const cliValidationSchema = {
   ...schema,
   ...{
     outputFormat: { type: 'string', enum: ['json', 'csv'], required: true },
-    dir: { type: 'string', required: true }
+    dir: { type: 'string', required: true },
+    silent: { type: 'boolean', required: true }
   }
 } as typeof schema;
 

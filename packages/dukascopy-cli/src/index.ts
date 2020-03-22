@@ -3,7 +3,7 @@ import { normaliseDates, generateUrls, BufferFetcher, processData } from 'dukasc
 import { progressBar } from './progress';
 import { outputFile } from 'fs-extra';
 import { cliConfig, isValid, validationErrors } from './config';
-import { printHeader, printErrors, printSucess } from './printer';
+import { printHeader, printErrors, printSucess, printDivider } from './printer';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const chalk = require('chalk');
 import { formatData } from './formatter';
@@ -17,7 +17,8 @@ const {
   volumes,
   ignoreFlats,
   outputFormat,
-  dir
+  dir,
+  silent
 } = cliConfig;
 
 const fileName = `${instrument}-${timeframe}${
@@ -40,7 +41,7 @@ const filePath = resolve(folderPath, fileName);
         utcOffset
       });
 
-      printHeader(cliConfig, startDate, endDate);
+      silent ? printDivider() : printHeader(cliConfig, startDate, endDate);
 
       const urls = generateUrls({ instrument, timeframe, priceType, startDate, endDate });
 
