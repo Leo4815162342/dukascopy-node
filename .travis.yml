@@ -9,3 +9,8 @@ before_install:
 script:
   - yarn workspaces run type-check
   - yarn workspaces run test
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
