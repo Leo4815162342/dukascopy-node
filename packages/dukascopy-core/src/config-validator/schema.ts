@@ -28,9 +28,9 @@ export const schema: ValidationSchema = {
     optional: true,
     default: priceTypes.bid
   },
-  utcOffset: { type: 'number', integer: true, required: true },
-  volumes: { type: 'boolean', required: true },
-  ignoreFlats: { type: 'boolean', required: true },
+  utcOffset: { type: 'number', integer: true, optional: true, default: 0 },
+  volumes: { type: 'boolean', optional: true, default: true },
+  ignoreFlats: { type: 'boolean', optional: true, default: true },
   format: {
     type: 'string',
     enum: Object.keys(formatType),
