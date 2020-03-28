@@ -1,6 +1,6 @@
 import { JsonItem, JsonItemTick } from './types';
 import { ProcessDataOutput } from '../processor/types';
-import { Output, Timeframe } from '../config/types';
+import { Format, Timeframe } from '../config/types';
 
 const headers = ['timestamp', 'open', 'high', 'low', 'close', 'volume'];
 const tickHeaders = ['timestamp', 'askPrice', 'bidPirce', 'askVolume', 'bidVolume'];
@@ -8,55 +8,55 @@ const tickHeaders = ['timestamp', 'askPrice', 'bidPirce', 'askVolume', 'bidVolum
 export function formatOutput({
   processedData,
   timeframe,
-  output
+  format
 }: {
   processedData: ProcessDataOutput;
   timeframe: 'tick';
-  output: 'json';
+  format: 'json';
 }): JsonItemTick[];
 
 export function formatOutput({
   processedData,
   timeframe,
-  output
+  format
 }: {
   processedData: ProcessDataOutput;
   timeframe: Timeframe;
-  output: 'json';
+  format: 'json';
 }): JsonItem[];
 
 export function formatOutput({
   processedData,
   timeframe,
-  output
+  format
 }: {
   processedData: ProcessDataOutput;
   timeframe: Timeframe;
-  output: 'array';
+  format: 'array';
 }): ProcessDataOutput;
 
 export function formatOutput({
   processedData,
   timeframe,
-  output
+  format
 }: {
   processedData: ProcessDataOutput;
   timeframe: Timeframe;
-  output: 'csv';
+  format: 'csv';
 }): string;
 
 export function formatOutput({
   processedData,
-  output,
+  format,
   timeframe
 }: {
   processedData: ProcessDataOutput;
   timeframe: Timeframe;
-  output: Output;
+  format: Format;
 }): JsonItem[] | JsonItemTick[] | ProcessDataOutput | string {
   const bodyHeaders = timeframe === 'tick' ? tickHeaders : headers;
 
-  if (output === 'json') {
+  if (format === 'json') {
     const data = processedData.map(arr => {
       return arr.reduce((all, item, i) => {
         const name = bodyHeaders[i];
@@ -67,7 +67,7 @@ export function formatOutput({
     return data;
   }
 
-  if (output === 'csv') {
+  if (format === 'csv') {
     const csvHeaders = bodyHeaders.filter((_, i) => processedData[0][i] !== undefined);
     const csv = [csvHeaders, ...processedData].map(arr => arr.join(',')).join('\n');
     return csv;
