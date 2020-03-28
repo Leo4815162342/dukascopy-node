@@ -2,7 +2,7 @@ import Validator, { ValidationSchema } from 'fastest-validator';
 import { instruments } from '../config/instruments';
 import { timeframes } from '../config/timeframes';
 import { priceTypes } from '../config/price-types';
-import { outputTypes } from '../config/output';
+import { formatType } from '../config/format';
 import { getUTCDateFromString } from '../utils/date';
 import { ValidationFn } from './types';
 
@@ -21,11 +21,11 @@ export const schema: ValidationSchema = {
   utcOffset: { type: 'number', integer: true, required: true },
   volumes: { type: 'boolean', required: true },
   ignoreFlats: { type: 'boolean', required: true },
-  output: {
+  format: {
     type: 'string',
-    enum: Object.keys(outputTypes),
+    enum: Object.keys(formatType),
     optional: true,
-    default: outputTypes.array
+    default: formatType.array
   }
 };
 

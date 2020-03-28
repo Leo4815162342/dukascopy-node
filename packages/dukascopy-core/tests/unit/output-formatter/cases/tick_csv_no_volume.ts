@@ -5,7 +5,7 @@ const input = {
     [3000000000000, 3.00001, 3.00002]
   ],
   timeframe: 'tick',
-  output: 'csv'
+  format: 'csv'
 };
 
 const expectedOutput = `timestamp,askPrice,bidPirce

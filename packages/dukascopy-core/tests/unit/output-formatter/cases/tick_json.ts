@@ -5,7 +5,7 @@ const input = {
     [3000000000000, 3.00001, 3.00002, 3333, 7777]
   ],
   timeframe: 'tick',
-  output: 'json'
+  format: 'json'
 };
 
 const expectedOutput = [

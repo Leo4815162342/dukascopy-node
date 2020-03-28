@@ -5,7 +5,7 @@ const input = {
     [3000000000000, 3.00001, 3.00002, 3.00003, 3.00004]
   ],
   timeframe: 'm1',
-  output: 'json'
+  format: 'json'
 };
 
 const expectedOutput = [
