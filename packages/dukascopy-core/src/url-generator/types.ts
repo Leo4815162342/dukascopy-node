@@ -1,5 +1,6 @@
-import { Instrument, PriceType } from '../config/types';
+import { Instrument } from '../config/types';
 import { Timeframe } from '../config/timeframes';
+import { PriceType } from '../config/price-types';
 
 export interface GenerateUrlsInput {
   instrument: Instrument;

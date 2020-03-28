@@ -6,4 +6,7 @@ export { BufferFetcher } from './buffer-fetcher';
 export { processData } from './processor';
 
 export * from './config/types';
+export * from './config/timeframes';
+export * from './config/format';
+export * from './config/price-types';
 export * from './config';

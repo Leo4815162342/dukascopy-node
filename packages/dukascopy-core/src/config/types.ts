@@ -670,12 +670,6 @@ export type Instrument =
   | 'ustbondtrusd'
   | 'zurnchchf';
 
-export type PriceType = 'bid' | 'ask';
-
-export type PriceTypes = {
-  [key in PriceType]: string;
-};
-
 export type Format = 'array' | 'json' | 'csv';
 
 export type FormatTypes = {

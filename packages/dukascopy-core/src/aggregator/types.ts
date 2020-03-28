@@ -1,5 +1,5 @@
-import { PriceType } from '../config/types';
 import { Timeframe } from '../config/timeframes';
+import { PriceType } from '../config/price-types';
 
 export type AggregateInput = {
   data: number[][];

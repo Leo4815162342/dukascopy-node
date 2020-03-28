@@ -16,7 +16,12 @@ export const schema: ValidationSchema = {
       to: [{ type: 'dateString', required: true }]
     }
   },
-  timeframe: { type: 'string', enum: Object.keys(timeframes), required: true },
+  timeframe: {
+    type: 'string',
+    enum: Object.keys(timeframes),
+    optional: true,
+    default: timeframes.d1
+  },
   priceType: {
     type: 'string',
     enum: Object.keys(priceTypes),
