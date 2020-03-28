@@ -669,9 +669,3 @@ export type Instrument =
   | 'ussc2000idxusd'
   | 'ustbondtrusd'
   | 'zurnchchf';
-
-export type Format = 'array' | 'json' | 'csv';
-
-export type FormatTypes = {
-  [key in Format]: string;
-};
