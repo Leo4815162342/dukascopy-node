@@ -1,5 +1,5 @@
-import { Instrument } from '../config/types';
 import { Timeframe } from '../config/timeframes';
+import { Instrument } from '../config/instruments';
 
 export interface NormaliseInput {
   data: number[][];

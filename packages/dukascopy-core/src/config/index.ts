@@ -1,7 +1,7 @@
-import { Instrument } from './types';
 import { PriceType } from './price-types';
 import { Timeframe } from './timeframes';
 import { Format } from './format';
+import { Instrument } from './instruments';
 import { OptionalKeys } from 'utility-types';
 
 export interface Config {
