@@ -17,7 +17,12 @@ export const schema: ValidationSchema = {
     }
   },
   timeframe: { type: 'string', enum: Object.keys(timeframes), required: true },
-  priceType: { type: 'string', enum: Object.keys(priceTypes), required: true },
+  priceType: {
+    type: 'string',
+    enum: Object.keys(priceTypes),
+    optional: true,
+    default: priceTypes.bid
+  },
   utcOffset: { type: 'number', integer: true, required: true },
   volumes: { type: 'boolean', required: true },
   ignoreFlats: { type: 'boolean', required: true },

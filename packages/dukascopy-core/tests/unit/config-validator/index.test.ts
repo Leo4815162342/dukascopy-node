@@ -9,12 +9,7 @@ type TestCase = {
   expectedOutput: ReturnType<typeof validateConfig>;
 };
 
-describe('Config validator', () => {
-  const testCases = getTestCases<TestCase>('tests/unit/config-validator/cases');
-  testCases.forEach(({ path, content }) => generateTestSuite(content, path));
-});
-
-function generateTestSuite({ config, expectedOutput }: TestCase, path: string) {
+function generateTestSuite({ config, expectedOutput }: TestCase, path: string): void {
   const [filePath] = path.split('/').reverse();
   const [testGroup] = filePath.split('_');
 
@@ -27,3 +22,8 @@ function generateTestSuite({ config, expectedOutput }: TestCase, path: string) {
     });
   });
 }
+
+describe('Config validator', () => {
+  const testCases = getTestCases<TestCase>('tests/unit/config-validator/cases');
+  testCases.forEach(({ path, content }) => generateTestSuite(content, path));
+});
