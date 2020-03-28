@@ -34,7 +34,7 @@ export const cliConfig: CliConfig = {
   ignoreFlats: !options.flats,
   dir: options.directory,
   silent: options.silent,
-  output: options.output
+  format: options.format
 };
 
 const cliValidationSchema = {

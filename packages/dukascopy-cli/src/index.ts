@@ -6,7 +6,6 @@ import { cliConfig, isValid, validationErrors } from './config';
 import { printHeader, printErrors, printSucess, printDivider } from './printer';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const chalk = require('chalk');
-import { formatData } from './formatter';
 
 const {
   instrument,
@@ -16,14 +15,14 @@ const {
   utcOffset,
   volumes,
   ignoreFlats,
-  output,
+  format,
   dir,
   silent
 } = cliConfig;
 
 const fileName = `${instrument}-${timeframe}${
   timeframe === 'tick' ? '' : '-' + priceType
-}-${fromDate}-${toDate}.${output}`;
+}-${fromDate}-${toDate}.${format}`;
 const folderPath = resolve(process.cwd(), dir);
 const filePath = resolve(folderPath, fileName);
 
@@ -73,11 +72,12 @@ const filePath = resolve(folderPath, fileName);
       const filteredData = processedData.filter(
         ([timestamp]) => timestamp && timestamp >= startDateMs && timestamp < endDateMs
       );
-      const formatted = formatData(filteredData, cliConfig);
+      // TODO: update formatted
+      // const formatted = formatData(filteredData, cliConfig);
 
       progressBar.stop();
 
-      await outputFile(filePath, JSON.stringify(formatted, null, 2));
+      await outputFile(filePath, JSON.stringify(filteredData, null, 2));
 
       printSucess(`√ File saved: ${chalk.bold(fileName)}`);
     } else {

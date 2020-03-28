@@ -14,7 +14,7 @@ const defaultConfig: DefaultHistoryConfig = {
   utcOffset: 0,
   volumes: true,
   ignoreFlats: true,
-  output: 'array'
+  format: 'array'
 };
 // TODO: rewrite as a class
 // custom fetch method
