@@ -1,6 +1,7 @@
 import { JsonItem, JsonItemTick } from './types';
 import { ProcessDataOutput } from '../processor/types';
-import { Format, Timeframe } from '../config/types';
+import { Format } from '../config/types';
+import { Timeframe } from '../config/timeframes';
 
 const headers = ['timestamp', 'open', 'high', 'low', 'close', 'volume'];
 const tickHeaders = ['timestamp', 'askPrice', 'bidPirce', 'askVolume', 'bidVolume'];

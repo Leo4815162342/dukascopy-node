@@ -1,7 +1,7 @@
 import { instruments } from '../config/instruments';
 import { roundNum } from './../utils/general';
-import { Timeframe } from '../config/types';
 import { NormaliseInput } from './types';
+import { Timeframe } from '../config/timeframes';
 
 function getNormaliser(
   timeframe: Timeframe,

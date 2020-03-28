@@ -1,5 +1,5 @@
-import { Timeframe } from '../config/types';
 import { StructFormat, DecompressInput } from './types';
+import { Timeframe } from '../config/timeframes';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const lzmajs = require('lzma-purejs');

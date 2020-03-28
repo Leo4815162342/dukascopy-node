@@ -6,9 +6,10 @@
 import { getLowerRange, isCurrentRange, getClosestAvailableRange } from '../utils/range';
 import { getStartOfUtc, getYMDH } from '../utils/date';
 import { pad } from '../utils/general';
-import { Instrument, PriceType, Timeframe } from '../config/types';
+import { Instrument, PriceType } from '../config/types';
 import { GenerateUrlsInput } from './types';
 import { TimeRange } from '../utils/range';
+import { Timeframe } from '../config/timeframes';
 
 export const URL_ROOT = 'https://datafeed.dukascopy.com/datafeed';
 

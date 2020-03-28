@@ -670,12 +670,6 @@ export type Instrument =
   | 'ustbondtrusd'
   | 'zurnchchf';
 
-export type Timeframe = 'tick' | 'm1' | 'm30' | 'h1' | 'd1' | 'mn1';
-
-export type Timeframes = {
-  [key in Timeframe]: number;
-};
-
 export type PriceType = 'bid' | 'ask';
 
 export type PriceTypes = {

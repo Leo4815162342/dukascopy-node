@@ -1,6 +1,7 @@
-import { Instrument, Timeframe, Format } from './types';
+import { Instrument, Format } from './types';
 import { PriceType } from './price-types';
 import { OptionalKeys } from 'utility-types';
+import { Timeframe } from './timeframes';
 
 export interface Config {
   instrument: Instrument;
@@ -16,5 +17,4 @@ export interface Config {
   format?: Format;
 }
 
-// export type DefaultHistoryConfig = Required<Pick<HistoryConfig, OptionalKeys<HistoryConfig>>>;
 export type DefaultConfig = Required<Pick<Config, OptionalKeys<Config>>>;

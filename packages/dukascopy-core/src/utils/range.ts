@@ -1,6 +1,5 @@
-import { Timeframe } from '../config/types';
-
 import { getIsCurrentObj } from '../utils/date';
+import { Timeframe } from '../config/timeframes';
 
 export type TimeRange = 'hour' | 'day' | 'month' | 'year';
 

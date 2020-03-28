@@ -1,5 +1,6 @@
-import { Instrument, Timeframe, PriceType } from './../index';
+import { Instrument, PriceType } from './../index';
 import { BufferObject } from '../buffer-fetcher/types';
+import { Timeframe } from '../config/timeframes';
 
 export interface ProcessDataInput {
   instrument: Instrument;

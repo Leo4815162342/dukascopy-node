@@ -29,31 +29,11 @@ BufferFetcher.prototype.fetch = async (urls: string[]) => {
 };
 
 type TestCase = {
-  config: core.HistoryConfig;
+  config: core.Config;
   expectedOutput: PromiseType<ReturnType<typeof lib.getHistoricRates>>;
 };
 
 const customDateNow = '2019-07-12T21:05:00.000Z'; // mocking new Date()
-
-describe('getHistoricRates', () => {
-  beforeEach(() => {
-    advanceTo(new Date(customDateNow));
-  });
-
-  afterEach(() => {
-    clear();
-  });
-
-  const testCases = getTestCases<TestCase>('./tests/cases');
-  testCases.forEach(({ content, path }) => {
-    const [fileName] = path.split('/').reverse();
-    if (path.indexOf('fail_') >= 0) {
-      generateFailTestCase(content);
-    } else {
-      generateSuccessTestCase(content, fileName);
-    }
-  });
-});
 
 function generateFailTestCase({ config, expectedOutput }: TestCase) {
   describe('fail', () => {
@@ -68,7 +48,7 @@ function generateFailTestCase({ config, expectedOutput }: TestCase) {
   });
 }
 
-function generateSuccessTestCase({ config, expectedOutput }: TestCase, fileName?: string) {
+function generateSuccessTestCase({ config, expectedOutput }: TestCase, fileName?: string): void {
   let quotes: TestCase['expectedOutput'];
   describe('success', () => {
     describe(`${fileName}: ${getConfigDescription(config)}`, () => {
@@ -93,3 +73,23 @@ function generateSuccessTestCase({ config, expectedOutput }: TestCase, fileName?
     });
   });
 }
+
+describe('getHistoricRates', () => {
+  beforeEach(() => {
+    advanceTo(new Date(customDateNow));
+  });
+
+  afterEach(() => {
+    clear();
+  });
+
+  const testCases = getTestCases<TestCase>('./tests/cases');
+  testCases.forEach(({ content, path }) => {
+    const [fileName] = path.split('/').reverse();
+    if (path.indexOf('fail_') >= 0) {
+      generateFailTestCase(content);
+    } else {
+      generateSuccessTestCase(content, fileName);
+    }
+  });
+});

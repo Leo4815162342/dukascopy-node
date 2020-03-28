@@ -1,4 +1,4 @@
-import { Timeframe } from '../config/types';
+import { Timeframe } from '../config/timeframes';
 
 export type StructFormat = '>3i2f' | '>5i1f';
 
