@@ -3,7 +3,7 @@ import { getTimeframeFromUrl } from '../utils/range';
 import { decompress } from '../decompressor';
 import { normalise } from '../data-normaliser';
 import { aggregate } from '../aggregator';
-import { ProcessDataInput } from './types';
+import { ProcessDataInput, ProcessDataOutput } from './types';
 
 function processData({
   instrument,
@@ -12,7 +12,7 @@ function processData({
   priceType,
   volumes,
   ignoreFlats
-}: ProcessDataInput): number[][] {
+}: ProcessDataInput): ProcessDataOutput {
   const result = bufferObjects.map(({ url, buffer }) => {
     const startDate = getDateFromUrl(url);
     const urlTimeframe = getTimeframeFromUrl(url);
@@ -37,7 +37,7 @@ function processData({
     return aggregatedData;
   });
 
-  return ([] as number[][]).concat(...result);
+  return ([] as ProcessDataOutput).concat(...result);
 }
 
 export { processData };

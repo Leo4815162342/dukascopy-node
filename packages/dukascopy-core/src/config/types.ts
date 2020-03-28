@@ -684,6 +684,12 @@ export type PriceTypes = {
   [key in PriceType]: number;
 };
 
+export type Output = 'array' | 'json' | 'csv';
+
+export type OutputTypes = {
+  [key in Output]: string;
+};
+
 export interface HistoryConfig {
   instrument: Instrument;
   dates: {
@@ -695,6 +701,7 @@ export interface HistoryConfig {
   utcOffset?: number;
   volumes?: boolean;
   ignoreFlats?: boolean;
+  output?: Output;
 }
 
 export type DefaultHistoryConfig = Required<Pick<HistoryConfig, OptionalKeys<HistoryConfig>>>;

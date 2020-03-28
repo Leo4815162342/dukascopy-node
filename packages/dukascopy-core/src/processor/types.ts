@@ -9,3 +9,5 @@ export interface ProcessDataInput {
   volumes: boolean;
   ignoreFlats: boolean;
 }
+
+export type ProcessDataOutput = number[][];

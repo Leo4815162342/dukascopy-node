@@ -2,6 +2,7 @@ import Validator, { ValidationSchema } from 'fastest-validator';
 import { instruments } from '../config/instruments';
 import { timeframes } from '../config/timeframes';
 import { priceTypes } from '../config/price-types';
+import { outputTypes } from '../config/output';
 import { getUTCDateFromString } from '../utils/date';
 import { ValidationFn } from './types';
 
@@ -19,7 +20,13 @@ export const schema: ValidationSchema = {
   priceType: { type: 'string', enum: Object.keys(priceTypes), required: true },
   utcOffset: { type: 'number', integer: true, required: true },
   volumes: { type: 'boolean', required: true },
-  ignoreFlats: { type: 'boolean', required: true }
+  ignoreFlats: { type: 'boolean', required: true },
+  output: {
+    type: 'string',
+    enum: Object.keys(outputTypes),
+    optional: true,
+    default: outputTypes.array
+  }
 };
 
 const INVALID_DATE_KEY = 'invalidDateString';
