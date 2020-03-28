@@ -20,7 +20,7 @@ export interface JsonItemTick {
 const headers = ['timestamp', 'open', 'high', 'low', 'close', 'volume'];
 const tickHeaders = ['timestamp', 'askPrice', 'bidPirce', 'askVolume', 'bidVolume'];
 
-export function formatData(processedData: number[][], { outputFormat, timeframe }: CliConfig): any {
+export function formatData(processedData: number[][], { output, timeframe }: CliConfig): any {
   // let output!: string | JsonItem[] | JsonItemTick[];
 
   // if (!volumes) {
@@ -34,7 +34,7 @@ export function formatData(processedData: number[][], { outputFormat, timeframe 
 
   const bodyHeaders = timeframe === 'tick' ? tickHeaders : headers;
 
-  if (outputFormat === 'json') {
+  if (output === 'json') {
     const data = processedData.map(arr => {
       return arr.reduce((all, item, i) => {
         const name = bodyHeaders[i];
@@ -43,7 +43,7 @@ export function formatData(processedData: number[][], { outputFormat, timeframe 
       }, {} as any);
     });
     return data;
-  } else if (outputFormat === 'csv') {
+  } else if (output === 'csv') {
     // const headersStr = processedData[0].map((_,i) => )
   }
 

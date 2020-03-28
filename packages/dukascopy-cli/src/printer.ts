@@ -24,7 +24,7 @@ export function printHeader(
     utcOffset,
     volumes,
     ignoreFlats,
-    outputFormat
+    output
   } = searchConfig;
 
   printDivider();
@@ -38,7 +38,7 @@ export function printHeader(
   log('Volumes:       ', chalk.bold(chalk.yellow(volumes)));
   log('UTC Offset:    ', chalk.bold(chalk.yellow(utcOffset)));
   log('Include flats: ', chalk.bold(chalk.yellow(!ignoreFlats)));
-  log('Format:        ', chalk.bold(chalk.yellow(outputFormat)));
+  log('Format:        ', chalk.bold(chalk.yellow(output)));
   printDivider();
 }
 

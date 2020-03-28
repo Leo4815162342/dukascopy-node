@@ -32,15 +32,14 @@ export const cliConfig: CliConfig = {
   utcOffset: options.utcOffset,
   volumes: options.volumes,
   ignoreFlats: !options.flats,
-  outputFormat: options.format,
   dir: options.directory,
-  silent: options.silent
+  silent: options.silent,
+  output: options.output
 };
 
 const cliValidationSchema = {
   ...schema,
   ...{
-    outputFormat: { type: 'string', enum: ['json', 'csv'], required: true },
     dir: { type: 'string', required: true },
     silent: { type: 'boolean', required: true }
   }

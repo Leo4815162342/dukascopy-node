@@ -16,14 +16,14 @@ const {
   utcOffset,
   volumes,
   ignoreFlats,
-  outputFormat,
+  output,
   dir,
   silent
 } = cliConfig;
 
 const fileName = `${instrument}-${timeframe}${
   timeframe === 'tick' ? '' : '-' + priceType
-}-${fromDate}-${toDate}.${outputFormat}`;
+}-${fromDate}-${toDate}.${output}`;
 const folderPath = resolve(process.cwd(), dir);
 const filePath = resolve(folderPath, fileName);
 

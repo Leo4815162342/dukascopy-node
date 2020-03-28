@@ -13,7 +13,8 @@ const defaultConfig: DefaultHistoryConfig = {
   priceType: 'bid',
   utcOffset: 0,
   volumes: true,
-  ignoreFlats: true
+  ignoreFlats: true,
+  output: 'array'
 };
 // TODO: rewrite as a class
 // custom fetch method
