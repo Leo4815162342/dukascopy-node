@@ -6,3 +6,4 @@ export { BufferFetcher } from './buffer-fetcher';
 export { processData } from './processor';
 
 export * from './config/types';
+export * from './config';

@@ -1,4 +1,4 @@
-import { HistoryConfig } from '../src';
+import { Config } from '../src/config';
 import { readdirSync } from 'fs';
 
 function getTestCases<T>(folder: string) {
@@ -15,7 +15,7 @@ function getTestCases<T>(folder: string) {
   return cases;
 }
 
-function getConfigDescription(config: HistoryConfig): string {
+function getConfigDescription(config: Config): string {
   const {
     instrument,
     dates: { from, to },

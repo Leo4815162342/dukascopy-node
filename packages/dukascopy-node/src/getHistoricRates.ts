@@ -4,11 +4,11 @@ import {
   generateUrls,
   BufferFetcher,
   processData,
-  HistoryConfig,
-  DefaultHistoryConfig
+  Config,
+  DefaultConfig
 } from 'dukascopy-core';
 
-const defaultConfig: DefaultHistoryConfig = {
+const defaultConfig: DefaultConfig = {
   timeframe: 'd1',
   priceType: 'bid',
   utcOffset: 0,
@@ -23,7 +23,7 @@ const defaultConfig: DefaultHistoryConfig = {
 // requestThrottling/debouncing
 // exponential backoff
 // progress reporting
-async function getHistoricRates(config: HistoryConfig): Promise<number[][]> {
+async function getHistoricRates(config: Config): Promise<number[][]> {
   const mergedConfig = { ...defaultConfig, ...config };
 
   const { isValid, validationErrors } = validateConfig(mergedConfig);

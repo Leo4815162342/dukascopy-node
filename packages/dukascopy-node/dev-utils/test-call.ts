@@ -1,9 +1,9 @@
-import { HistoryConfig } from 'dukascopy-core';
+import { Config } from 'dukascopy-core';
 import { getHistoricRates } from '../src';
 
 (async () => {
   try {
-    const config: HistoryConfig = {
+    const config: Config = {
       instrument: 'eurusd',
       dates: { from: '2020-02-04', to: '2020-02-05' },
       timeframe: 'm1',

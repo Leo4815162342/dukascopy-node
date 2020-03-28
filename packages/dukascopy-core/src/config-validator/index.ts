@@ -1,11 +1,11 @@
 import { validator, schema, defaultSchemaValidationFn } from './schema';
-import { HistoryConfig } from '../config/types';
+import { Config } from '../config';
 import { ValidationStatus, ValidationFn } from './types';
 
 export { validator, schema };
 
 export function validateConfig(
-  config: HistoryConfig,
+  config: Config,
   validationFn: ValidationFn = defaultSchemaValidationFn
 ): ValidationStatus {
   const validationResult = validationFn(config);

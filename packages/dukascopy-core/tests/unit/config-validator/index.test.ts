@@ -1,11 +1,11 @@
-import { HistoryConfig } from '../../../src/index';
+import { Config } from '../../../src/config';
 
 import { validateConfig } from '../../../src/config-validator';
 
 import { getTestCases } from '../../utils';
 
 type TestCase = {
-  config: HistoryConfig;
+  config: Config;
   expectedOutput: ReturnType<typeof validateConfig>;
 };
 

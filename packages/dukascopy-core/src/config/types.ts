@@ -1,5 +1,3 @@
-import { OptionalKeys } from 'utility-types';
-
 export interface InstrumentMetaData {
   name: string;
   description: string;
@@ -689,19 +687,3 @@ export type Format = 'array' | 'json' | 'csv';
 export type FormatTypes = {
   [key in Format]: string;
 };
-
-export interface HistoryConfig {
-  instrument: Instrument;
-  dates: {
-    from: string;
-    to: string;
-  };
-  timeframe?: Timeframe;
-  priceType?: PriceType;
-  utcOffset?: number;
-  volumes?: boolean;
-  ignoreFlats?: boolean;
-  format?: Format;
-}
-
-export type DefaultHistoryConfig = Required<Pick<HistoryConfig, OptionalKeys<HistoryConfig>>>;
