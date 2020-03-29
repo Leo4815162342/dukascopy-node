@@ -27,12 +27,12 @@ const enumKeys = Object.keys(instruments).map(inst => {
 
 const enumString = [
   '/* eslint-disable prettier/prettier */',
-  'export enum INSTRUMENT {',
+  'export enum InstrumentId {',
   ...enumKeys,
   '}'
 ].join('\n');
 
-const path = './src/config/instrument-enum.ts';
+const path = './src/config/instrument-id-enum.ts';
 
 saveFile(path, enumString).then(() => {
   console.log('instrument ENUM saved!', path);

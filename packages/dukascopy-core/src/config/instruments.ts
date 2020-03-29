@@ -1,6 +1,6 @@
-import { INSTRUMENT } from './instrument-enum';
+import { InstrumentId } from './instrument-id-enum';
 
-export type Instrument = keyof typeof INSTRUMENT;
+export type Instrument = keyof typeof InstrumentId;
 
 export interface InstrumentMetaData {
   name: string;

@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-export enum INSTRUMENT {
+export enum InstrumentId {
 
     /**
      * 
