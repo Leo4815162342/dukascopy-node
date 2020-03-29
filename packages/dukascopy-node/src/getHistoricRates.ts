@@ -5,16 +5,19 @@ import {
   BufferFetcher,
   processData,
   Config,
-  DefaultConfig
+  DefaultConfig,
+  Price,
+  Timeframe,
+  Format
 } from 'dukascopy-core';
 
 const defaultConfig: DefaultConfig = {
-  timeframe: 'd1',
-  priceType: 'bid',
+  timeframe: Timeframe.d1,
+  priceType: Price.bid,
   utcOffset: 0,
   volumes: true,
   ignoreFlats: true,
-  format: 'array'
+  format: Format.array
 };
 // TODO: rewrite as a class
 // custom fetch method

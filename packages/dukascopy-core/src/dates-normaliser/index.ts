@@ -1,4 +1,5 @@
-import { instruments } from '../config/instruments';
+import { instrumentMetaData } from '../config/instruments-metadata';
+import { Timeframe } from '../config/timeframes';
 import { getUTCDateFromString } from '../utils/date';
 import { NormaliseDatesInput } from './types';
 
@@ -25,9 +26,10 @@ export function normaliseDates({
     .map(d => getUTCDateFromString(d) || new Date())
     .sort((a, b) => +a - +b);
 
-  const { minStartDate, minStartDateDaily } = instruments[instrument];
+  const { minStartDate, minStartDateDaily } = instrumentMetaData[instrument];
 
-  const minIsoDate = timeframe === 'd1' || timeframe === 'mn1' ? minStartDateDaily : minStartDate;
+  const minIsoDate =
+    timeframe === Timeframe.d1 || timeframe === Timeframe.mn1 ? minStartDateDaily : minStartDate;
 
   const minFromIsoDate = `${minIsoDate}:00:00:00.000Z`;
 

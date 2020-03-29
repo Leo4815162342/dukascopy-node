@@ -1,14 +1,29 @@
-export type Timeframe = 'tick' | 'm1' | 'm30' | 'h1' | 'd1' | 'mn1';
+export enum Timeframe {
+  /**
+   *
+   * Every single price change. No aggregation of OHLC price data
+   */
+  tick = 'tick',
+  /**
+   *  minutely `(1 minute)` aggregation of OHLC price data
+   */
+  m1 = 'm1',
+  /**
+   *  half-hour `(30 minutes)` aggregation of OHLC price data
+   */
+  m30 = 'm30',
+  /**
+   *  hourly `(1 hour)` aggregation of OHLC price data
+   */
+  h1 = 'h1',
+  /**
+   *  daily `(1 day)` aggregation of OHLC price data
+   */
+  d1 = 'd1',
+  /**
+   *  monthly `(1 month)` aggregation of OHLC price data
+   */
+  mn1 = 'mn1'
+}
 
-export type Timeframes = {
-  [key in Timeframe]: string;
-};
-
-export const timeframes: Timeframes = {
-  tick: 'tick', // 1 tick
-  m1: 'm1', // 1 minute
-  m30: 'm30', // 30 minutes
-  h1: 'h1', // 1 hour
-  d1: 'd1', // 1 day
-  mn1: 'mn1' // 1 month
-};
+export type TimeframeType = keyof typeof Timeframe;

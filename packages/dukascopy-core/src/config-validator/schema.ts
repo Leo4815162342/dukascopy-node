@@ -1,13 +1,13 @@
 import Validator, { ValidationSchema } from 'fastest-validator';
-import { instruments } from '../config/instruments';
-import { timeframes } from '../config/timeframes';
-import { priceTypes } from '../config/price-types';
-import { formatType } from '../config/format';
+import { Instrument } from '../config/instruments';
+import { Timeframe } from '../config/timeframes';
+import { Price } from '../config/price-types';
+import { Format } from '../config/format';
 import { getUTCDateFromString } from '../utils/date';
 import { ValidationFn } from './types';
 
 export const schema: ValidationSchema = {
-  instrument: { type: 'string', enum: Object.keys(instruments), required: true },
+  instrument: { type: 'string', enum: Object.keys(Instrument), required: true },
   dates: {
     type: 'object',
     required: true,
@@ -18,24 +18,24 @@ export const schema: ValidationSchema = {
   },
   timeframe: {
     type: 'string',
-    enum: Object.keys(timeframes),
+    enum: Object.keys(Timeframe),
     optional: true,
-    default: timeframes.d1
+    default: Timeframe.d1
   },
   priceType: {
     type: 'string',
-    enum: Object.keys(priceTypes),
+    enum: Object.keys(Price),
     optional: true,
-    default: priceTypes.bid
+    default: Price.bid
   },
   utcOffset: { type: 'number', integer: true, optional: true, default: 0 },
   volumes: { type: 'boolean', optional: true, default: true },
   ignoreFlats: { type: 'boolean', optional: true, default: true },
   format: {
     type: 'string',
-    enum: Object.keys(formatType),
+    enum: Object.keys(Format),
     optional: true,
-    default: formatType.array
+    default: Format.array
   }
 };
 

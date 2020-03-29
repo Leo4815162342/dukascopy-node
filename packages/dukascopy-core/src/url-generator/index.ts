@@ -8,14 +8,14 @@ import { getStartOfUtc, getYMDH } from '../utils/date';
 import { pad } from '../utils/general';
 import { GenerateUrlsInput } from './types';
 import { TimeRange } from '../utils/range';
-import { Timeframe } from '../config/timeframes';
+import { TimeframeType, Timeframe } from '../config/timeframes';
 import { PriceType } from '../config/price-types';
-import { Instrument } from '../config/instruments';
+import { InstrumentType } from '../config/instruments';
 
 export const URL_ROOT = 'https://datafeed.dukascopy.com/datafeed';
 
 function getUrl(
-  instrument: Instrument,
+  instrument: InstrumentType,
   date: Date,
   range: TimeRange,
   priceType: PriceType
@@ -37,7 +37,7 @@ function getUrl(
   return url;
 }
 
-function getConstructor(instrument: Instrument, priceType: PriceType, endDate: Date) {
+function getConstructor(instrument: InstrumentType, priceType: PriceType, endDate: Date) {
   return function construct(rangetype: TimeRange, startDate: Date): string[] {
     let dates: Date[] = [];
 
@@ -67,23 +67,23 @@ function getConstructor(instrument: Instrument, priceType: PriceType, endDate: D
   };
 }
 
-function getDateLimit(startDate: Date, endDate: Date, timeframe: Timeframe): Date {
+function getDateLimit(startDate: Date, endDate: Date, timeframe: TimeframeType): Date {
   const nowDate = new Date();
 
   const adjustedEndDate = endDate < nowDate ? endDate : nowDate;
   let dateLimit = adjustedEndDate;
 
-  if (timeframe === 'tick' || timeframe === 'm1' || timeframe === 'm30') {
+  if (timeframe === Timeframe.tick || timeframe === Timeframe.m1 || timeframe === Timeframe.m30) {
     if (+endDate - +startDate <= 3600000) {
       dateLimit = getStartOfUtc(dateLimit, 'hour', 1);
     } else {
       dateLimit = getStartOfUtc(dateLimit, 'hour');
     }
-  } else if (timeframe === 'h1') {
+  } else if (timeframe === Timeframe.h1) {
     dateLimit = getStartOfUtc(dateLimit, 'hour');
-  } else if (timeframe === 'd1') {
+  } else if (timeframe === Timeframe.d1) {
     dateLimit = getStartOfUtc(dateLimit, 'day');
-  } else if (timeframe === 'mn1') {
+  } else if (timeframe === Timeframe.mn1) {
     dateLimit = getStartOfUtc(dateLimit, 'month');
   }
 

@@ -1,10 +1,10 @@
-import { Timeframe } from '../config/timeframes';
-import { Instrument } from '../config/instruments';
+import { TimeframeType } from '../config/timeframes';
+import { InstrumentType } from '../config/instruments';
 
 export interface NormaliseDatesInput {
-  instrument: Instrument;
+  instrument: InstrumentType;
   startDate: string;
   endDate: string;
-  timeframe: Timeframe;
+  timeframe: TimeframeType;
   utcOffset: number;
 }

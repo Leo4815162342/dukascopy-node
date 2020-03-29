@@ -1,7 +1,7 @@
 import { JsonItem, JsonItemTick } from './types';
 import { ProcessDataOutput } from '../processor/types';
-import { Timeframe } from '../config/timeframes';
-import { Format } from '../config/format';
+import { TimeframeType, Timeframe } from '../config/timeframes';
+import { FormatType, Format } from '../config/format';
 
 const headers = ['timestamp', 'open', 'high', 'low', 'close', 'volume'];
 const tickHeaders = ['timestamp', 'askPrice', 'bidPirce', 'askVolume', 'bidVolume'];
@@ -12,8 +12,8 @@ export function formatOutput({
   format
 }: {
   processedData: ProcessDataOutput;
-  timeframe: 'tick';
-  format: 'json';
+  timeframe: Timeframe.tick;
+  format: Format.json;
 }): JsonItemTick[];
 
 export function formatOutput({
@@ -22,8 +22,8 @@ export function formatOutput({
   format
 }: {
   processedData: ProcessDataOutput;
-  timeframe: Timeframe;
-  format: 'json';
+  timeframe: TimeframeType;
+  format: Format.json;
 }): JsonItem[];
 
 export function formatOutput({
@@ -32,8 +32,8 @@ export function formatOutput({
   format
 }: {
   processedData: ProcessDataOutput;
-  timeframe: Timeframe;
-  format: 'array';
+  timeframe: TimeframeType;
+  format: Format.array;
 }): ProcessDataOutput;
 
 export function formatOutput({
@@ -42,8 +42,8 @@ export function formatOutput({
   format
 }: {
   processedData: ProcessDataOutput;
-  timeframe: Timeframe;
-  format: 'csv';
+  timeframe: TimeframeType;
+  format: Format.csv;
 }): string;
 
 export function formatOutput({
@@ -52,12 +52,12 @@ export function formatOutput({
   timeframe
 }: {
   processedData: ProcessDataOutput;
-  timeframe: Timeframe;
-  format: Format;
+  timeframe: TimeframeType;
+  format: FormatType;
 }): JsonItem[] | JsonItemTick[] | ProcessDataOutput | string {
-  const bodyHeaders = timeframe === 'tick' ? tickHeaders : headers;
+  const bodyHeaders = timeframe === Timeframe.tick ? tickHeaders : headers;
 
-  if (format === 'json') {
+  if (format === Format.json) {
     const data = processedData.map(arr => {
       return arr.reduce((all, item, i) => {
         const name = bodyHeaders[i];
@@ -68,7 +68,7 @@ export function formatOutput({
     return data;
   }
 
-  if (format === 'csv') {
+  if (format === Format.csv) {
     const csvHeaders = bodyHeaders.filter((_, i) => processedData[0][i] !== undefined);
     const csv = [csvHeaders, ...processedData].map(arr => arr.join(',')).join('\n');
     return csv;

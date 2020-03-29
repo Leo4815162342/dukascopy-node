@@ -1,13 +1,13 @@
 import { StructFormat, DecompressInput } from './types';
-import { Timeframe } from '../config/timeframes';
+import { TimeframeType, Timeframe } from '../config/timeframes';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const lzmajs = require('lzma-purejs');
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const struct = require('python-struct');
 
-function getStructFormat(timeframe: Timeframe): StructFormat {
-  return timeframe === 'tick' ? '>3i2f' : '>5i1f';
+function getStructFormat(timeframe: TimeframeType): StructFormat {
+  return timeframe === Timeframe.tick ? '>3i2f' : '>5i1f';
 }
 
 function decompress(input: DecompressInput): number[][] {

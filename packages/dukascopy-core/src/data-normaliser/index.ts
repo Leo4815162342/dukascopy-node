@@ -1,15 +1,15 @@
-import { instruments } from '../config/instruments';
+import { instrumentMetaData } from '../config/instruments-metadata';
 import { roundNum } from './../utils/general';
 import { NormaliseInput } from './types';
-import { Timeframe } from '../config/timeframes';
+import { TimeframeType, Timeframe } from '../config/timeframes';
 
 function getNormaliser(
-  timeframe: Timeframe,
+  timeframe: TimeframeType,
   startMs: number,
   decimalFactor: number,
   volumes: boolean
 ): (values: number[]) => number[] {
-  if (timeframe === 'tick') {
+  if (timeframe === Timeframe.tick) {
     return function(values: number[]): number[] {
       const [ms, ask, bid, askVolume, bidVolume] = values;
 
@@ -39,7 +39,7 @@ function getNormaliser(
 export function normalise(input: NormaliseInput): number[][] {
   const { data, timeframe, startTs, instrument, volumes } = input;
 
-  const { decimalFactor } = instruments[instrument];
+  const { decimalFactor } = instrumentMetaData[instrument];
 
   const normaliserFn = getNormaliser(timeframe, startTs, decimalFactor, volumes);
 

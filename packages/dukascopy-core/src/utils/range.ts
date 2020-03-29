@@ -1,11 +1,11 @@
 import { getIsCurrentObj } from '../utils/date';
-import { Timeframe } from '../config/timeframes';
+import { TimeframeType, Timeframe } from '../config/timeframes';
 
 export type TimeRange = 'hour' | 'day' | 'month' | 'year';
 
 const ranges: TimeRange[] = ['year', 'month', 'day', 'hour'];
 
-type RangeInferMap = { [key in Timeframe]: TimeRange[] };
+type RangeInferMap = { [key in TimeframeType]: TimeRange[] };
 
 const rangeInferMap: RangeInferMap = {
   mn1: ['year', 'month', 'day'],
@@ -22,7 +22,7 @@ function getLowerRange(range: TimeRange): TimeRange {
   return ranges[lookupIndex + 1];
 }
 
-function getClosestAvailableRange(timeframe: Timeframe, date: Date): TimeRange {
+function getClosestAvailableRange(timeframe: TimeframeType, date: Date): TimeRange {
   const isCurrent = getIsCurrentObj(date);
 
   return rangeInferMap[timeframe].find(range => !isCurrent[range]) as TimeRange;
@@ -39,17 +39,17 @@ function isCurrentRange(rangeType: TimeRange, date: Date): boolean {
 }
 
 type TimeframeFromUrl = {
-  [key: string]: Timeframe;
+  [key: string]: TimeframeType;
 };
 
 const timeFromUrl: TimeframeFromUrl = {
-  day_1: 'd1',
-  hour_1: 'h1',
-  min_1: 'm1',
-  ticks: 'tick'
+  day_1: Timeframe.d1,
+  hour_1: Timeframe.h1,
+  min_1: Timeframe.m1,
+  ticks: Timeframe.tick
 };
 
-function getTimeframeFromUrl(url: string): Timeframe {
+function getTimeframeFromUrl(url: string): TimeframeType {
   const [, match] = url.match(/_(day_1|hour_1|min_1|ticks).bi5$/) || [];
 
   return timeFromUrl[match];

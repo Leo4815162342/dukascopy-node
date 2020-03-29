@@ -1,10 +1,10 @@
 import fs from 'fs';
 import { promisify } from 'util';
-import { instruments, Instrument } from '../src/config/instruments';
+import { instrumentMetaData } from '../src/config/instruments-metadata';
 const saveFile = promisify(fs.writeFile);
 
-const enumKeys = Object.keys(instruments).map(inst => {
-  const { name, description, minStartDate, minStartDateDaily } = instruments[inst as Instrument];
+const enumKeys = Object.keys(instrumentMetaData).map(inst => {
+  const { name, description, minStartDate, minStartDateDaily } = instrumentMetaData[inst];
 
   const line = `
     /**
@@ -16,6 +16,7 @@ const enumKeys = Object.keys(instruments).map(inst => {
      * --- | ---
      * \`tick\` | **${minStartDate}**
      * \`m1\` | **${minStartDate}**
+     * \`m30\` | **${minStartDate}**
      * \`h1\` | **${minStartDate}**
      * \`d1\` | **${minStartDateDaily}**
      * \`mn1\` | **${minStartDateDaily}**
@@ -25,15 +26,16 @@ const enumKeys = Object.keys(instruments).map(inst => {
   return line;
 });
 
-const enumString = [
+const strings = [
   '/* eslint-disable prettier/prettier */',
-  'export enum InstrumentId {',
+  'export enum Instrument {',
   ...enumKeys,
-  '}'
+  '}',
+  'export type InstrumentType = keyof typeof Instrument;'
 ].join('\n');
 
-const path = './src/config/instrument-id-enum.ts';
+const path = './src/config/instruments.ts';
 
-saveFile(path, enumString).then(() => {
-  console.log('instrument ENUM saved!', path);
+saveFile(path, strings).then(() => {
+  console.log('instruments config generated!', path);
 });

@@ -1,16 +1,16 @@
 import { PriceType } from './price-types';
-import { Timeframe } from './timeframes';
+import { TimeframeType } from './timeframes';
 import { Format } from './format';
-import { Instrument } from './instruments';
+import { InstrumentType } from './instruments';
 import { OptionalKeys } from 'utility-types';
 
 export interface Config {
-  instrument: Instrument;
+  instrument: InstrumentType;
   dates: {
     from: string;
     to: string;
   };
-  timeframe?: Timeframe;
+  timeframe?: TimeframeType;
   priceType?: PriceType;
   utcOffset?: number;
   volumes?: boolean;

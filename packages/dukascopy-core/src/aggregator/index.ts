@@ -1,6 +1,7 @@
 import { getOHLC, getMinuteOHLCfromTicks, getMonthlyOHLCfromDays } from './ohlc';
 import { splitArrayInChunks } from '../utils/general';
 import { AggregateInput } from './types';
+import { Timeframe } from '../config/timeframes';
 
 export function aggregate({
   data,
@@ -10,8 +11,8 @@ export function aggregate({
   ignoreFlats
 }: AggregateInput): number[][] {
   if (
-    (fromTimeframe === 'tick' && toTimeframe === 'tick') ||
-    (fromTimeframe === 'm1' && toTimeframe === 'm1')
+    (fromTimeframe === Timeframe.tick && toTimeframe === Timeframe.tick) ||
+    (fromTimeframe === Timeframe.m1 && toTimeframe === Timeframe.m1)
   ) {
     return data;
   }
@@ -19,47 +20,47 @@ export function aggregate({
   if (fromTimeframe === toTimeframe) {
     return splitArrayInChunks(data, 1).map(d => getOHLC(d, ignoreFlats));
   } else {
-    if (fromTimeframe === 'tick') {
+    if (fromTimeframe === Timeframe.tick) {
       const minuteOHLC = getMinuteOHLCfromTicks(data, priceType);
 
-      if (toTimeframe === 'm1') {
+      if (toTimeframe === Timeframe.m1) {
         return minuteOHLC;
       }
 
-      if (toTimeframe === 'm30') {
+      if (toTimeframe === Timeframe.m30) {
         return splitArrayInChunks(minuteOHLC, 30).map(d => getOHLC(d, ignoreFlats));
       }
 
-      if (toTimeframe === 'h1') {
+      if (toTimeframe === Timeframe.h1) {
         return [minuteOHLC].map(d => getOHLC(d, ignoreFlats));
       }
     }
 
-    if (fromTimeframe === 'm1') {
-      if (toTimeframe === 'm30') {
+    if (fromTimeframe === Timeframe.m1) {
+      if (toTimeframe === Timeframe.m30) {
         return splitArrayInChunks(data, 30).map(d => getOHLC(d, ignoreFlats));
       }
 
-      if (toTimeframe === 'h1') {
+      if (toTimeframe === Timeframe.h1) {
         return splitArrayInChunks(data, 60).map(d => getOHLC(d, ignoreFlats));
       }
 
-      if (toTimeframe === 'd1') {
+      if (toTimeframe === Timeframe.d1) {
         return [data].map(d => getOHLC(d, ignoreFlats));
       }
     }
 
-    if (fromTimeframe === 'h1') {
-      if (toTimeframe === 'd1') {
+    if (fromTimeframe === Timeframe.h1) {
+      if (toTimeframe === Timeframe.d1) {
         return splitArrayInChunks(data, 24).map(d => getOHLC(d, ignoreFlats));
       }
-      if (toTimeframe === 'mn1') {
+      if (toTimeframe === Timeframe.mn1) {
         return [data].map(d => getOHLC(d, ignoreFlats));
       }
     }
 
-    if (fromTimeframe === 'd1') {
-      if (toTimeframe === 'mn1') {
+    if (fromTimeframe === Timeframe.d1) {
+      if (toTimeframe === Timeframe.mn1) {
         const monthlyOHLC = getMonthlyOHLCfromDays(data);
         return monthlyOHLC;
       }
