@@ -1,6 +1,6 @@
 import { PriceType } from './price-types';
 import { TimeframeType } from './timeframes';
-import { Format } from './format';
+import { FormatType } from './format';
 import { InstrumentType } from './instruments';
 import { OptionalKeys } from 'utility-types';
 
@@ -15,7 +15,7 @@ export interface Config {
   utcOffset?: number;
   volumes?: boolean;
   ignoreFlats?: boolean;
-  format?: Format;
+  format?: FormatType;
 }
 
 export type DefaultConfig = Required<Pick<Config, OptionalKeys<Config>>>;
