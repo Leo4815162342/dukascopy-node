@@ -9,7 +9,8 @@
     "test": "yarn jest --coverage",
     "type-check": "yarn tsc src/index.ts --noEmit",
     "lint": "yarn eslint 'src/**/*.{js,ts}'",
-    "build": "yarn rollup -c",
+    "build": "yarn build-instrument-enum && yarn rollup -c",
+    "build-instrument-enum": "yarn ts-node dev-utils/generate-instrument-enum.ts",
     "pre-commit": "yarn type-check && yarn lint"
   },
   "author": "leonid.pyrlia",

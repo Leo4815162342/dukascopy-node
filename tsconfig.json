@@ -4,7 +4,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "noUnusedParameters": true,
-    "removeComments": true,
+    "removeComments": false,
     "sourceMap": true,
     "strict": true,
     "target": "es2017",
