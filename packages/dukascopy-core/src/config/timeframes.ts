@@ -1,6 +1,5 @@
 export enum Timeframe {
   /**
-   *
    * Every single price change. No aggregation of OHLC price data
    */
   tick = 'tick',
