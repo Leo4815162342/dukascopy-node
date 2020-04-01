@@ -1,4 +1,4 @@
-import { JsonItem, JsonItemTick } from './types';
+import { JsonItem, JsonItemTick, ArrayTickItem, ArrayItem, Output } from './types';
 import { ProcessDataOutput } from '../processor/types';
 import { TimeframeType, Timeframe } from '../config/timeframes';
 import { FormatType, Format } from '../config/format';
@@ -12,9 +12,9 @@ export function formatOutput({
   format
 }: {
   processedData: ProcessDataOutput;
-  timeframe: Timeframe.tick;
-  format: Format.json;
-}): JsonItemTick[];
+  timeframe: 'tick';
+  format: 'array';
+}): ArrayTickItem[];
 
 export function formatOutput({
   processedData,
@@ -22,8 +22,19 @@ export function formatOutput({
   format
 }: {
   processedData: ProcessDataOutput;
-  timeframe: TimeframeType;
-  format: Format.json;
+  timeframe: 'tick';
+  format: 'json';
+}): JsonItemTick[];
+
+// Rest timeframe overloads
+export function formatOutput({
+  processedData,
+  timeframe,
+  format
+}: {
+  processedData: ProcessDataOutput;
+  timeframe: Exclude<TimeframeType, 'tick'>;
+  format: 'json';
 }): JsonItem[];
 
 export function formatOutput({
@@ -32,9 +43,9 @@ export function formatOutput({
   format
 }: {
   processedData: ProcessDataOutput;
-  timeframe: TimeframeType;
-  format: Format.array;
-}): ProcessDataOutput;
+  timeframe: Exclude<TimeframeType, 'tick'>;
+  format: 'array';
+}): ArrayItem[];
 
 export function formatOutput({
   processedData,
@@ -43,8 +54,18 @@ export function formatOutput({
 }: {
   processedData: ProcessDataOutput;
   timeframe: TimeframeType;
-  format: Format.csv;
+  format: 'csv';
 }): string;
+
+export function formatOutput({
+  processedData,
+  timeframe,
+  format
+}: {
+  processedData: ProcessDataOutput;
+  timeframe: TimeframeType;
+  format: FormatType;
+}): Output;
 
 export function formatOutput({
   processedData,
@@ -54,7 +75,7 @@ export function formatOutput({
   processedData: ProcessDataOutput;
   timeframe: TimeframeType;
   format: FormatType;
-}): JsonItem[] | JsonItemTick[] | ProcessDataOutput | string {
+}): Output {
   const bodyHeaders = timeframe === Timeframe.tick ? tickHeaders : headers;
 
   if (format === Format.json) {
@@ -74,5 +95,5 @@ export function formatOutput({
     return csv;
   }
 
-  return processedData;
+  return (processedData as any) as ArrayTickItem[] | ArrayItem[];
 }

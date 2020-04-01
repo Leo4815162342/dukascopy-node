@@ -4,11 +4,13 @@ import {
   generateUrls,
   BufferFetcher,
   processData,
+  formatOutput,
   Config,
   DefaultConfig,
   Price,
   Timeframe,
-  Format
+  Format,
+  Output
 } from 'dukascopy-core';
 
 const defaultConfig: DefaultConfig = {
@@ -19,14 +21,8 @@ const defaultConfig: DefaultConfig = {
   ignoreFlats: true,
   format: Format.array
 };
-// TODO: rewrite as a class
-// custom fetch method
-// fetchoptions
-// subscriptions?
-// requestThrottling/debouncing
-// exponential backoff
-// progress reporting
-async function getHistoricRates(config: Config): Promise<number[][]> {
+
+async function getHistoricRates(config: Config): Promise<Output> {
   const mergedConfig = { ...defaultConfig, ...config };
 
   const { isValid, validationErrors } = validateConfig(mergedConfig);
@@ -42,7 +38,8 @@ async function getHistoricRates(config: Config): Promise<number[][]> {
     priceType,
     volumes,
     utcOffset,
-    ignoreFlats
+    ignoreFlats,
+    format
   } = mergedConfig;
 
   const [startDate, endDate] = normaliseDates({
@@ -74,7 +71,9 @@ async function getHistoricRates(config: Config): Promise<number[][]> {
     ([timestamp]) => timestamp && timestamp >= startDateMs && timestamp < endDateMs
   );
 
-  return filteredData;
+  const formattedData = formatOutput({ processedData: filteredData, format, timeframe });
+
+  return formattedData;
 }
 
 export { getHistoricRates };
