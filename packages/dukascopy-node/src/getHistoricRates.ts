@@ -10,7 +10,14 @@ import {
   Price,
   Timeframe,
   Format,
-  Output
+  Output,
+  TimeframeType,
+  PriceType,
+  InstrumentType,
+  ArrayTickItem,
+  JsonItemTick,
+  JsonItem,
+  ArrayItem
 } from 'dukascopy-core';
 
 const defaultConfig: DefaultConfig = {
@@ -22,7 +29,79 @@ const defaultConfig: DefaultConfig = {
   format: Format.array
 };
 
-async function getHistoricRates(config: Config): Promise<Output> {
+export async function getHistoricRates(config: {
+  instrument: InstrumentType;
+  dates: {
+    from: string;
+    to: string;
+  };
+  timeframe?: 'tick';
+  priceType?: PriceType;
+  utcOffset?: number;
+  volumes?: boolean;
+  ignoreFlats?: boolean;
+  format?: 'array';
+}): Promise<ArrayTickItem[]>;
+
+export async function getHistoricRates(config: {
+  instrument: InstrumentType;
+  dates: {
+    from: string;
+    to: string;
+  };
+  timeframe?: 'tick';
+  priceType?: PriceType;
+  utcOffset?: number;
+  volumes?: boolean;
+  ignoreFlats?: boolean;
+  format?: 'json';
+}): Promise<JsonItemTick[]>;
+
+export async function getHistoricRates(config: {
+  instrument: InstrumentType;
+  dates: {
+    from: string;
+    to: string;
+  };
+  timeframe?: Exclude<TimeframeType, 'tick'>;
+  priceType?: PriceType;
+  utcOffset?: number;
+  volumes?: boolean;
+  ignoreFlats?: boolean;
+  format?: 'json';
+}): Promise<JsonItem[]>;
+
+export async function getHistoricRates(config: {
+  instrument: InstrumentType;
+  dates: {
+    from: string;
+    to: string;
+  };
+  timeframe?: Exclude<TimeframeType, 'tick'>;
+  priceType?: PriceType;
+  utcOffset?: number;
+  volumes?: boolean;
+  ignoreFlats?: boolean;
+  format?: 'array';
+}): Promise<ArrayItem[]>;
+
+export async function getHistoricRates(config: {
+  instrument: InstrumentType;
+  dates: {
+    from: string;
+    to: string;
+  };
+  timeframe?: TimeframeType;
+  priceType?: PriceType;
+  utcOffset?: number;
+  volumes?: boolean;
+  ignoreFlats?: boolean;
+  format?: 'csv';
+}): Promise<string>;
+
+export async function getHistoricRates(config: Config): Promise<Output>;
+
+export async function getHistoricRates(config: Config): Promise<Output> {
   const mergedConfig = { ...defaultConfig, ...config };
 
   const { isValid, validationErrors } = validateConfig(mergedConfig);
@@ -75,5 +154,3 @@ async function getHistoricRates(config: Config): Promise<Output> {
 
   return formattedData;
 }
-
-export { getHistoricRates };
