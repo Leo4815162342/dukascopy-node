@@ -78,15 +78,14 @@ const filePath = resolve(folderPath, fileName);
       const filteredData = processedData.filter(
         ([timestamp]) => timestamp && timestamp >= startDateMs && timestamp < endDateMs
       );
-      // TODO: update formatted
-      // const formatted = formatData(filteredData, cliConfig);
 
-      progressBar.stop();
       const formatted = formatOutput({ processedData: filteredData, timeframe, format });
 
       const savePayload = format === 'csv' ? formatted : JSON.stringify(formatted, null, 2);
 
       await outputFile(filePath, savePayload);
+
+      progressBar.stop();
 
       printSucess(`√ File saved: ${chalk.bold(fileName)}`);
     } else {
