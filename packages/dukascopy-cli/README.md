@@ -21,3 +21,22 @@ npm install dukascopy-cli --save
 ```bash
 yarn add dukascopy-cli
 ```
+
+## Options
+
+```bash
+Options:
+  -d, --debug                 Output extra debugging
+  -s, --silent                Prints out the search config (default: false)
+  -i, --instrument <value>    Trading instrument
+  -from, --date-from <value>  From date
+  -to, --date-to <value>      To date
+  -t, --timeframe <value>     Timeframe aggregation (default: "d1")
+  -p, --price-type <value>    Price type: (bid, ask) (default: "bid")
+  -utc, --utc-offset <value>  UTC offset in minutes (default: 0)
+  -v, --volumes               Include volumes (default: false)
+  -fl, --flats                Include flats (0 volumes) (default: false)
+  -f, --format <value>        Output format (csv, json, array) (default: "json")
+  -dir, --directory <value>   Download directory (default: "./download")
+  -h, --help                  display help for command
+```
