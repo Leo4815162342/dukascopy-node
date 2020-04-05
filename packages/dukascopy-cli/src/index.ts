@@ -36,8 +36,6 @@ const filePath = resolve(folderPath, fileName);
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 (async () => {
-  console.log(folderPath);
-  console.log(filePath);
   try {
     if (isValid) {
       const [startDate, endDate] = normaliseDates({
