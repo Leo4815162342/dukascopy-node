@@ -13,11 +13,11 @@
 #### NPM:
 
 ```bash
-npm install dukascopy-cli --save -g
+npm install dukascopy-cli --save
 ```
 
 #### yarn:
 
 ```bash
-yarn add dukascopy-cli -g
+yarn add dukascopy-cli
 ```
