@@ -12,21 +12,21 @@ const expectedOutput = [
   {
     timestamp: 1000000000000,
     askPrice: 1.00001,
-    bidPirce: 1.00002,
+    bidPrice: 1.00002,
     askVolume: 1111,
     bidVolume: 9999
   },
   {
     timestamp: 2000000000000,
     askPrice: 2.00001,
-    bidPirce: 2.00002,
+    bidPrice: 2.00002,
     askVolume: 2222,
     bidVolume: 8888
   },
   {
     timestamp: 3000000000000,
     askPrice: 3.00001,
-    bidPirce: 3.00002,
+    bidPrice: 3.00002,
     askVolume: 3333,
     bidVolume: 7777
   }

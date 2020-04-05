@@ -60,7 +60,7 @@ function breakdownByInterval(input: number[][], interval: 'minute' | 'month'): n
   return dataByInterval;
 }
 function tickOHLC(input: number[][], priceType: PriceType): number[] {
-  // timestamp, askPrice, bidPirce, askVolume, bidVolume
+  // timestamp, askPrice, bidPrice, askVolume, bidVolume
 
   const date = new Date(input[0][0]);
   const minuteValue = date.getUTCMinutes();
@@ -77,9 +77,9 @@ function tickOHLC(input: number[][], priceType: PriceType): number[] {
   let volume = initialVolume;
 
   for (let i = 1, n = input.length; i < n; i++) {
-    const [, askPrice, bidPirce, askVolume, bidVolume] = input[i];
+    const [, askPrice, bidPrice, askVolume, bidVolume] = input[i];
 
-    const targetPrice = priceType === 'ask' ? askPrice : bidPirce;
+    const targetPrice = priceType === 'ask' ? askPrice : bidPrice;
     const targetVolume = priceType === 'ask' ? askVolume : bidVolume;
 
     if (targetPrice > high) {

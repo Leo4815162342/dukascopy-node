@@ -4,10 +4,10 @@ type BidPrice = number;
 type Volume = number;
 type AskVolume = number;
 type BidVolume = number;
-type OpenPirce = number;
-type HighPirce = number;
-type LowPirce = number;
-type ClosePirce = number;
+type OpenPrice = number;
+type HighPrice = number;
+type LowPrice = number;
+type ClosePrice = number;
 
 export interface JsonItem {
   /**
@@ -17,19 +17,19 @@ export interface JsonItem {
   /**
    * Open price of the timeframe (candle)
    */
-  open: OpenPirce;
+  open: OpenPrice;
   /**
    * Highest price of the timeframe (candle)
    */
-  high: HighPirce;
+  high: HighPrice;
   /**
    * Lowest price of the timeframe (candle)
    */
-  low: LowPirce;
+  low: LowPrice;
   /**
    * Close price of the timeframe (candle)
    */
-  close: ClosePirce;
+  close: ClosePrice;
   /**
    * Traded volume within the timeframe (candle)
    */
@@ -48,7 +48,7 @@ export interface JsonItemTick {
   /**
    * Bid price of the tick
    */
-  bidPirce: BidPrice;
+  bidPrice: BidPrice;
   /**
    * Ask volume of the tick
    */
@@ -59,7 +59,7 @@ export interface JsonItemTick {
   bidVolume?: BidVolume;
 }
 
-export type ArrayItem = [Timestamp, OpenPirce, HighPirce, LowPirce, ClosePirce, Volume?];
+export type ArrayItem = [Timestamp, OpenPrice, HighPrice, LowPrice, ClosePrice, Volume?];
 
 export type ArrayTickItem = [Timestamp, AskPrice, BidPrice, AskVolume?, BidVolume?];
 

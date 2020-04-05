@@ -4,7 +4,7 @@ import { TimeframeType, Timeframe } from '../config/timeframes';
 import { FormatType, Format } from '../config/format';
 
 const headers = ['timestamp', 'open', 'high', 'low', 'close', 'volume'];
-const tickHeaders = ['timestamp', 'askPrice', 'bidPirce', 'askVolume', 'bidVolume'];
+const tickHeaders = ['timestamp', 'askPrice', 'bidPrice', 'askVolume', 'bidVolume'];
 
 export function formatOutput({
   processedData,

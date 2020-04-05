@@ -39,7 +39,7 @@ export enum Format {
    * {
    *  timestamp: 1000000000000,
    *  askPrice: 1.00001,
-   *  bidPirce: 1.00002,
+   *  bidPrice: 1.00002,
    *  askVolume: 1111,
    *  bidVolume: 9999
    * }
@@ -62,7 +62,7 @@ export enum Format {
    * `tick`:
    * ```
    * `
-   * timestamp,askPrice,bidPirce,askVolume,bidVolume
+   * timestamp,askPrice,bidPrice,askVolume,bidVolume
    * 10000000,1.01,1.02,1111,9999
    * 20000000,2.01,2.02,2222,8888
    * 30000000,3.01,3.02,3333,7777
