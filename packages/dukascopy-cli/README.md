@@ -56,4 +56,4 @@ yarn dukascopy-cli -i eurusd -from 2006-01-01 -to 2020-01-01 -t d1 -f json
 
 ## Screenshots
 
-<p align="center"><img src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-cli/dukascopy-cli-output.png?raw=true" alt="dukascopy-cli output"></p>
+<p><img width="550" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-cli/dukascopy-cli-output.png?raw=true" alt="dukascopy-cli output"></p>
