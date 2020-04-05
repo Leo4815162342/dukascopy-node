@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const typescript = require('rollup-plugin-typescript2');
 const commonjs = require('rollup-plugin-commonjs');
 const nodeResolve = require('rollup-plugin-node-resolve');
+const { preserveShebangs } = require('rollup-plugin-preserve-shebangs');
 const pkg = require('./package.json');
 module.exports = {
   input: 'src/index.ts',
@@ -8,10 +10,6 @@ module.exports = {
     {
       file: pkg.main,
       format: 'cjs'
-    },
-    {
-      file: pkg.module,
-      format: 'es'
     }
   ],
   external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
@@ -22,6 +20,7 @@ module.exports = {
       tsconfig: './tsconfig.json',
       tsconfigOverride: { compilerOptions: { module: 'es2015' } },
       typescript: require('typescript')
-    })
+    }),
+    preserveShebangs()
   ]
 };

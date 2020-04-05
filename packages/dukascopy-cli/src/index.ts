@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { resolve } from 'path';
 import {
   normaliseDates,

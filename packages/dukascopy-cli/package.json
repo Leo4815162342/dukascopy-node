@@ -1,9 +1,12 @@
 {
   "name": "dukascopy-cli",
   "version": "1.0.0",
-  "main": "lib/index.js",
-  "module": "lib/index.es.js",
-  "types": "lib/index.d.ts",
+  "main": "bin/index.js",
+  "module": "bin/index.es.js",
+  "types": "bin/index.d.ts",
+  "bin": {
+    "dukascopy-cli": "./bin/index.js"
+  },
   "scripts": {
     "cleanup-lib": "rm -rf ./lib/*/",
     "type-check": "yarn tsc src/index.ts --noEmit",
@@ -12,6 +15,11 @@
     "pre-commit": "yarn type-check && yarn lint",
     "test": "echo 'tests for CLI go here'"
   },
+  "keywords": [
+    "cli",
+    "dukascopy-cli",
+    "command line interface market data"
+  ],
   "license": "MIT",
   "dependencies": {
     "chalk": "^3.0.0",
@@ -22,6 +30,7 @@
   },
   "devDependencies": {
     "@types/cli-progress": "^1.8.1",
-    "@types/fs-extra": "^8.0.1"
+    "@types/fs-extra": "^8.0.1",
+    "rollup-plugin-preserve-shebangs": "^0.2.0"
   }
 }
