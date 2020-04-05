@@ -28,7 +28,7 @@ export function printHeader(
   } = searchConfig;
 
   printDivider();
-  log(chalk.whiteBright('Downloadinging historical price data for:'));
+  log(chalk.whiteBright('Downloading historical price data for:'));
   printDivider();
   log('Instrument:    ', chalk.bold(chalk.yellow(instrument)));
   log('Timeframe:     ', chalk.bold(chalk.yellow(timeframe)));

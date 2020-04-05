@@ -2,16 +2,13 @@
   "name": "dukascopy-cli",
   "version": "1.0.0",
   "main": "bin/index.js",
-  "module": "bin/index.es.js",
-  "types": "bin/index.d.ts",
   "bin": {
     "dukascopy-cli": "./bin/index.js"
   },
   "scripts": {
-    "cleanup-lib": "rm -rf ./lib/*/",
     "type-check": "yarn tsc src/index.ts --noEmit",
     "lint": "yarn eslint 'src/**/*.{js,ts}'",
-    "build": "rollup -c && yarn cleanup-lib",
+    "build": "rollup -c",
     "pre-commit": "yarn type-check && yarn lint",
     "test": "echo 'tests for CLI go here'"
   },

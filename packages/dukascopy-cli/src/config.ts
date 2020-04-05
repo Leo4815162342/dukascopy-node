@@ -6,9 +6,13 @@ program
   .option('-d, --debug', 'Output extra debugging')
   .option('-s, --silent', 'Prints out the search config', false)
   .requiredOption('-i, --instrument <value>', 'Trading instrument')
-  .requiredOption('-from, --date-from <value>', 'From date')
-  .requiredOption('-to, --date-to <value>', 'To date')
-  .option('-t, --timeframe <value>', 'Timeframe aggregation', Timeframe.d1)
+  .requiredOption('-from, --date-from <value>', 'From date (yyyy-mm-dd)')
+  .requiredOption('-to, --date-to <value>', 'To date (yyyy-mm-dd)')
+  .option(
+    '-t, --timeframe <value>',
+    'Timeframe aggregation (tick, m1, m30, h1, d1, mn1)',
+    Timeframe.d1
+  )
   .option('-p, --price-type <value>', 'Price type: (bid, ask)', Price.bid)
   .option('-utc, --utc-offset <value>', 'UTC offset in minutes', Number, 0)
   .option('-v, --volumes', 'Include volumes', false)

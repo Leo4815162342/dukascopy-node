@@ -13,25 +13,38 @@
 #### NPM:
 
 ```bash
-npm install dukascopy-cli --save
+npm install dukascopy-cli --save-dev
 ```
 
 #### yarn:
 
 ```bash
-yarn add dukascopy-cli
+yarn add dukascopy-cli --dev
+```
+
+## Usage
+
+#### As global dependency
+
+```bash
+dukascopy-cli -i eurusd -from 2006-01-01 -to 2020-01-01 -t d1 -f json
+```
+
+#### As dev dependency
+
+```bash
+yarn dukascopy-cli -i eurusd -from 2006-01-01 -to 2020-01-01 -t d1 -f json
 ```
 
 ## Options
 
 ```bash
-Options:
   -d, --debug                 Output extra debugging
   -s, --silent                Prints out the search config (default: false)
   -i, --instrument <value>    Trading instrument
-  -from, --date-from <value>  From date
-  -to, --date-to <value>      To date
-  -t, --timeframe <value>     Timeframe aggregation (default: "d1")
+  -from, --date-from <value>  From date (yyyy-mm-dd)
+  -to, --date-to <value>      To date (yyyy-mm-dd)
+  -t, --timeframe <value>     Timeframe aggregation (tick, m1, m30, h1, d1, mn1) (default: "d1")
   -p, --price-type <value>    Price type: (bid, ask) (default: "bid")
   -utc, --utc-offset <value>  UTC offset in minutes (default: 0)
   -v, --volumes               Include volumes (default: false)
@@ -40,3 +53,7 @@ Options:
   -dir, --directory <value>   Download directory (default: "./download")
   -h, --help                  display help for command
 ```
+
+## Screenshots
+
+<p align="center"><img width="150" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-cli/dukascopy-cli-output.png?raw=true" alt="dukascopy-cli output"></p>
