@@ -40,7 +40,7 @@ yarn dukascopy-cli -i eurusd -from 2006-01-01 -to 2020-01-01 -t d1 -f json
 
 ```bash
   -d, --debug                 Output extra debugging
-  -s, --silent                Prints out the search config (default: false)
+  -s, --silent                Hides the search config in the CLI output (default: false)
   -i, --instrument <value>    Trading instrument
   -from, --date-from <value>  From date (yyyy-mm-dd)
   -to, --date-to <value>      To date (yyyy-mm-dd)

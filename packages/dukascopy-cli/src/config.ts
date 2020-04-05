@@ -4,7 +4,7 @@ import { CliConfig } from './types';
 
 program
   .option('-d, --debug', 'Output extra debugging')
-  .option('-s, --silent', 'Prints out the search config', false)
+  .option('-s, --silent', 'Hides the search config in the CLI output', false)
   .requiredOption('-i, --instrument <value>', 'Trading instrument')
   .requiredOption('-from, --date-from <value>', 'From date (yyyy-mm-dd)')
   .requiredOption('-to, --date-to <value>', 'To date (yyyy-mm-dd)')
