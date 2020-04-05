@@ -1,5 +1,11 @@
 import { resolve } from 'path';
-import { normaliseDates, generateUrls, BufferFetcher, processData } from 'dukascopy-core';
+import {
+  normaliseDates,
+  generateUrls,
+  BufferFetcher,
+  processData,
+  formatOutput
+} from 'dukascopy-core';
 import { progressBar } from './progress';
 import { outputFile } from 'fs-extra';
 import { cliConfig, isValid, validationErrors } from './config';
@@ -76,8 +82,11 @@ const filePath = resolve(folderPath, fileName);
       // const formatted = formatData(filteredData, cliConfig);
 
       progressBar.stop();
+      const formatted = formatOutput({ processedData: filteredData, timeframe, format });
 
-      await outputFile(filePath, JSON.stringify(filteredData, null, 2));
+      const savePayload = format === 'csv' ? formatted : JSON.stringify(formatted, null, 2);
+
+      await outputFile(filePath, savePayload);
 
       printSucess(`√ File saved: ${chalk.bold(fileName)}`);
     } else {

@@ -1,5 +1,5 @@
 import { program } from 'commander';
-import { validateConfig, schema, validator } from 'dukascopy-core';
+import { validateConfig, schema, validator, Format, Timeframe, Price } from 'dukascopy-core';
 import { CliConfig } from './types';
 
 program
@@ -7,12 +7,12 @@ program
   .option('-s, --silent', 'Prints out the search config', false)
   .requiredOption('-i, --instrument <value>', 'Trading instrument')
   .requiredOption('-dr, --date-range <value>', 'Date range', (v: string): string[] => v.split(' '))
-  .requiredOption('-t, --timeframe <value>', 'Timeframe aggregation')
-  .option('-p, --price-type <value>', 'Price type: (bid, ask)', 'bid')
+  .requiredOption('-t, --timeframe <value>', 'Timeframe aggregation', Timeframe.d1)
+  .option('-p, --price-type <value>', 'Price type: (bid, ask)', Price.bid)
   .option('-utc, --utc-offset <value>', 'UTC offset in minutes', Number, 0)
   .option('-v, --volumes', 'Include volumes', true)
-  .option('-fl, --flats', 'Ignore flats', true)
-  .option('-f, --format <value>', 'Output format (csv, json)', 'json')
+  .option('-fl, --flats', 'Include flats (0 volumes)', true)
+  .option('-f, --format <value>', 'Output format (csv, json, array)', Format.json)
   .option('-dir, --directory <value>', 'Download directory', './download');
 
 program.parse(process.argv);
