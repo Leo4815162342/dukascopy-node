@@ -7,7 +7,7 @@ program
   .option('-s, --silent', 'Prints out the search config', false)
   .requiredOption('-i, --instrument <value>', 'Trading instrument')
   .requiredOption('-dr, --date-range <value>', 'Date range', (v: string): string[] => v.split(' '))
-  .requiredOption('-t, --timeframe <value>', 'Timeframe aggregation', Timeframe.d1)
+  .option('-t, --timeframe <value>', 'Timeframe aggregation', Timeframe.d1)
   .option('-p, --price-type <value>', 'Price type: (bid, ask)', Price.bid)
   .option('-utc, --utc-offset <value>', 'UTC offset in minutes', Number, 0)
   .option('-v, --volumes', 'Include volumes', true)
