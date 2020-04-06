@@ -48,7 +48,8 @@ const { getHistoricRates } = require('dukascopy-node');
         from: '2018-01-01',
         to: '2019-01-01'
       },
-      timeframe: 'd1'
+      timeframe: 'd1',
+      format: 'json'
     });
 
     console.log(data);
@@ -69,7 +70,8 @@ getHistoricRates({
     from: '2018-01-01',
     to: '2019-01-01'
   },
-  timeframe: 'd1'
+  timeframe: 'd1',
+  format: 'json'
 })
   .then(data => {
     console.log(data);
@@ -79,9 +81,28 @@ getHistoricRates({
   });
 ```
 
+***
+
 <h2>Output</h2>
 
-#### timeframe: `m1` | `m30` | `h1`| `d1` | `mn1`
+## timeframe: `m1` | `m30` | `h1`| `d1` | `mn1`
+
+### format: `json`
+
+```json
+    [
+      {
+        "timestamp": 1218153600000,
+        "open": 1.53117,
+        "high": 1.53128,
+        "low": 1.52343,
+        "close": 1.52458,
+        "volume": 28078.0156
+      }
+    ]
+```
+
+### format: `array`
 
 ```javascript
     [
@@ -89,11 +110,38 @@ getHistoricRates({
       [1218153600000, 1.53117, 1.53128, 1.52343, 1.52458, 28078.0156],
       [1218157200000, 1.52428, 1.52497, 1.51920, 1.52292, 24342.3906],
       [1218160800000, 1.52289, 1.52449, 1.52029, 1.52325, 24014.8496],
-      ...
     ]
 ```
 
-#### timeframe: `tick`
+
+### format: `csv`
+
+```csv
+timestamp,open,high,low,close,volume
+1218153600000,1.53117,1.53128,1.52343,1.52458,28078.0156
+1218157200000,1.52428,1.52497,1.51920,1.52292,24342.3906
+1218160800000,1.52289,1.52449,1.52029,1.52325,24014.8496
+```
+
+***
+
+## timeframe: `tick`
+
+### format: `json`
+
+```json
+    [
+      {
+        "timestamp": 1218153600033,
+        "askPrice": 1.53137,
+        "bidPrice": 1.53117,
+        "askVolume": 9.3,
+        "bidVolume": 9.6,
+      }
+    ]
+```
+
+### format: `array`
 
 ```javascript
     [
@@ -101,9 +149,19 @@ getHistoricRates({
       [1218153600033, 1.53137, 1.53117, 9.3, 9.6],
       [1218153600306, 1.53133, 1.53113, 12.1, 2.4],
       [1218153600445, 1.53127, 1.53112, 6, 8.4],
-      ...
     ]
 ```
+
+### format: `csv`
+
+```csv
+timestamp,askPrice,bidPrice,askVolume,bidVolume
+1218153600033,1.53137,1.53117,9.3,9.6
+1218153600306,1.53133,1.53113,12.1,2.4
+1218153600445,1.53127,1.53112,6,8.4
+```
+
+***
 
 <h2>Config parameters:</h2>
 
@@ -168,6 +226,14 @@ getHistoricRates({
 - Required: false
 - Default: `bid`
 
+#### **`format`**
+
+- Type: `String`
+- Description: format of the output
+- Supported values: `json`, `array`, `csv`
+- Required: false
+- Default: `array`
+
 #### **`utcOffset`**
 
 - Type: `Number`
@@ -189,10 +255,11 @@ getHistoricRates({
 - Required: false
 - Default: `true`
 
+***
+
+#### Example of a full config object
+
 ```javascript
-
-// Example of a full config object
-
 {
   instrument: 'btcusd',
   dates: {
@@ -201,12 +268,14 @@ getHistoricRates({
   },
   timeframe: 'd1',
   priceType: 'ask',
+  format: 'json',
   utcOffset: 0,
   volumes: true,
   ignoreFlats: true
 }
-
 ```
+
+***
 
 <h2 id="instruments">Supported instruments</h2>
 
