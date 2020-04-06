@@ -8,7 +8,6 @@ const enumKeys = Object.keys(instrumentMetaData).map(inst => {
 
   const line = `
     /**
-     * 
      * ### ${description}
      * *${name}*
      * 
@@ -20,7 +19,6 @@ const enumKeys = Object.keys(instrumentMetaData).map(inst => {
      * \`h1\` | **${minStartDate}**
      * \`d1\` | **${minStartDateDaily}**
      * \`mn1\` | **${minStartDateDaily}**
-     * 
      */
     ${inst}='${inst}',`;
   return line;
