@@ -7,7 +7,7 @@
   <a href="https://github.com/facebook/jest"><img src="https://img.shields.io/badge/tested_with-jest-99424f.svg" alt="dukascopy-node tested with jest"></a>
 </p>
 
-> A set of libraries and tools for downloading histortical market data (OHLC) dukascopy.com
+> A set of libraries and tools for downloading histortical market data (OHLC) from dukascopy.com
 
 ## Includes following tools
 
