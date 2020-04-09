@@ -1,6 +1,6 @@
-<h1>dukascopy-tools</h1>
+<h1>Dukascopy tools</h1>
 
-> A set of libraries and tools for downloading histortical market data (OHLC) from dukascopy.com
+A set of libraries and tools for downloading histortical market data (OHLC) from dukascopy.com
 
 
 
