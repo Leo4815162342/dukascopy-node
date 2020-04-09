@@ -4,12 +4,7 @@
 
 `dukascopy-node` | `dukascopy-cli` | `dukascopy-core`
 :---: | :---: | :---:
-<img align="center" width="90" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-node/dukascopy-node.png?raw=true" alt="dukascopy-node"> | <img align="center" width="90" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-node/dukascopy-node.png?raw=true" alt="dukascopy-node"> | <img align="center" width="90" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-node/dukascopy-node.png?raw=true" alt="dukascopy-node">
-
-<p align="center">
-  <a href="https://api.travis-ci.org/Leo4815162342/dukascopy-node.svg?branch=master"><img src="https://api.travis-ci.org/Leo4815162342/dukascopy-node.svg?branch=master" alt="Build Status"></a>
-  <a href="https://github.com/facebook/jest"><img src="https://img.shields.io/badge/tested_with-jest-99424f.svg" alt="dukascopy-node tested with jest"></a>
-</p>
+<img align="center" width="120" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-node/dukascopy-node.png?raw=true" alt="dukascopy-node"> | <img align="center" width="120" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-node/dukascopy-node.png?raw=true" alt="dukascopy-node"> | <img align="center" width="120" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-node/dukascopy-node.png?raw=true" alt="dukascopy-node">
 
 
 ***
