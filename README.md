@@ -2,7 +2,9 @@
 
 > A set of libraries and tools for downloading histortical market data (OHLC) from dukascopy.com
 
-`dukascopy-node` | `dukascopy-cli` | `dukascopy-core`
+
+
+[`dukascopy-node`](https://github.com/Leo4815162342/dukascopy-node) | [`dukascopy-cli`](https://github.com/Leo4815162342/dukascopy-node) | [`dukascopy-core`](https://github.com/Leo4815162342/dukascopy-node)
 :---: | :---: | :---:
 <img align="center" width="120" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-node/dukascopy-node.png?raw=true" alt="dukascopy-node"> | <img align="center" width="120" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-cli/dukascopy-cli.png?raw=true" alt="dukascopy-node"> | <img align="center" width="120" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-core/dukascopy-core.png?raw=true" alt="dukascopy-node">
 
