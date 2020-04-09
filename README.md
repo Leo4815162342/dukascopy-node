@@ -11,7 +11,7 @@
 
 ## Includes following tools
 
-### `dukascopy-node`: nodejs module 
+### `dukascopy-node`: nodejs module <img width="24" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-node/dukascopy-node.png?raw=true" alt="dukascopy-node">
 ### `dukascopy-cli`: command line interface
 ### `dukascopy-core`: core pieces and functions
 
