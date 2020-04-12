@@ -1,10 +1,13 @@
 {
   "name": "dukascopy-node",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Node.js library for downloading historical market data",
   "main": "lib/index.js",
   "module": "lib/index.es.js",
   "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "test": "yarn jest",
     "test:call": "yarn ts-node dev-utils/test-call.ts",
@@ -33,7 +36,7 @@
     "crypto"
   ],
   "dependencies": {
-    "dukascopy-core": "^1.1.3"
+    "dukascopy-core": "^1.1.4"
   },
   "devDependencies": {
     "jest-date-mock": "^1.0.8"
