@@ -15,7 +15,7 @@
     "pre-commit": "yarn type-check && yarn lint"
   },
   "author": "leonid.pyrlia",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/Leo4815162342/dukascopy.git"
