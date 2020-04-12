@@ -15,7 +15,8 @@
   "keywords": [
     "cli",
     "dukascopy-cli",
-    "command line interface market data"
+    "command line interface market data",
+    "download historic market data CLI"
   ],
   "license": "MIT",
   "dependencies": {
