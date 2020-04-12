@@ -1,6 +1,6 @@
 {
   "name": "dukascopy-core",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Core functions and primities for Dukascopy packages",
   "main": "lib/index.js",
   "module": "lib/index.es.js",
