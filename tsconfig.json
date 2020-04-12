@@ -1,18 +1,14 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "target": "es2017",
-    "noImplicitAny": true,
-    "moduleResolution": "node",
-    "sourceMap": false,
-    "outDir": "lib",
-    "baseUrl": ".",
     "declaration": true,
-    "paths": {
-      "*": ["node_modules/*"]
-    }
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noUnusedParameters": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2017",
+    "esModuleInterop": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "src/**/*.test.ts", "dev-utils", "src/**/__mocks__/*"]
+  "exclude": ["./node_modules/*"]
 }

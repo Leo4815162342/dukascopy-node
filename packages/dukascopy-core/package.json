@@ -1,0 +1,45 @@
+{
+  "name": "dukascopy-core",
+  "version": "1.1.1",
+  "description": "Core functions and primities for Dukascopy packages",
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "yarn jest --coverage",
+    "type-check": "yarn tsc src/index.ts --noEmit",
+    "lint": "yarn eslint 'src/**/*.{js,ts}'",
+    "build": "yarn build-instruments && yarn rollup -c",
+    "build-instruments": "yarn ts-node dev-utils/generate-instruments.ts",
+    "pre-commit": "yarn type-check && yarn lint"
+  },
+  "author": "leonid.pyrlia",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Leo4815162342/dukascopy.git"
+  },
+  "keywords": [
+    "dukascopy",
+    "dukascopy-core",
+    "bi5 conversion",
+    "dukascopy url generation",
+    "bi5 decryption"
+  ],
+  "dependencies": {
+    "fastest-validator": "^0.6.17",
+    "lzma-purejs": "^0.9.3",
+    "node-fetch": "^2.3.0",
+    "python-struct": "^1.0.6"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.1.7",
+    "jest-date-mock": "^1.0.8"
+  },
+  "jest": {
+    "automock": false,
+    "setupFiles": [
+      "jest-date-mock"
+    ]
+  }
+}

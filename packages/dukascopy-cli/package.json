@@ -1,0 +1,39 @@
+{
+  "name": "dukascopy-cli",
+  "version": "1.0.0",
+  "main": "bin/index.js",
+  "bin": {
+    "dukascopy-cli": "./bin/index.js"
+  },
+  "scripts": {
+    "type-check": "yarn tsc src/index.ts --noEmit",
+    "lint": "yarn eslint 'src/**/*.{js,ts}'",
+    "build": "rollup -c",
+    "pre-commit": "yarn type-check && yarn lint",
+    "test": "echo 'tests for CLI go here'"
+  },
+  "keywords": [
+    "cli",
+    "dukascopy-cli",
+    "command line interface market data",
+    "download historic market data CLI"
+  ],
+  "license": "MIT",
+  "author": "leonid.pyrlia",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Leo4815162342/dukascopy.git"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "cli-progress": "^3.4.0",
+    "commander": "^5.0.0",
+    "dukascopy-core": "^1.0.12",
+    "fs-extra": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^1.8.1",
+    "@types/fs-extra": "^8.0.1",
+    "rollup-plugin-preserve-shebangs": "^0.2.0"
+  }
+}

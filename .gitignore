@@ -1,5 +1,7 @@
-/lib
-.vscode/*
+lib/
+bin/
+download
+.cache/
 ### Node ###
 # Logs
 logs

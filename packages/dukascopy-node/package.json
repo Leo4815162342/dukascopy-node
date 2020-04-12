@@ -1,0 +1,47 @@
+{
+  "name": "dukascopy-node",
+  "version": "1.1.1",
+  "description": "Node.js library for fetching and aggregation of historical OHLC price data for 500+ instruments",
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "yarn jest",
+    "test:call": "yarn ts-node dev-utils/test-call.ts",
+    "cleanup-lib": "rm -rf ./lib/*/",
+    "type-check": "yarn tsc src/index.ts --noEmit",
+    "lint": "yarn eslint 'src/**/*.{js,ts}'",
+    "build": "yarn rollup -c && yarn cleanup-lib",
+    "pre-commit": "yarn type-check && yarn lint"
+  },
+  "author": "leonid.pyrlia",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Leo4815162342/dukascopy.git"
+  },
+  "keywords": [
+    "dukascopy",
+    "stock-data",
+    "forex-data",
+    "historical-data",
+    "ohlc",
+    "tick-data",
+    "exchange-rates",
+    "commodities",
+    "cfd",
+    "crypto"
+  ],
+  "dependencies": {
+    "dukascopy-core": "^1.0.12"
+  },
+  "devDependencies": {
+    "jest-date-mock": "^1.0.8"
+  },
+  "jest": {
+    "automock": false,
+    "setupFiles": [
+      "jest-date-mock"
+    ]
+  }
+}

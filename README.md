@@ -1,210 +1,17 @@
-<h1>dukascopy-node</h1>
+<h1>Dukascopy tools</h1>
 
-<p align="center"><img width="150" src="https://github.com/Leo4815162342/dukascopy-node/blob/master/logo.png?raw=true" alt="dukascopy-node"></p>
+A set of libraries and tools for downloading histortical market data (OHLC) from dukascopy.com
 
-<p align="center">
-  <a href="https://api.travis-ci.org/Leo4815162342/dukascopy-node.svg?branch=master"><img src="https://api.travis-ci.org/Leo4815162342/dukascopy-node.svg?branch=master" alt="Build Status"></a>
-  <a href="https://github.com/facebook/jest"><img src="https://img.shields.io/badge/tested_with-jest-99424f.svg" alt="dukascopy-node tested with jest"></a>
-</p>
 
-> A node.js library for fetching and aggregation of historical OHLC (open, high, low, close) price data for 500+ instruments (stocks/commodities/currencies/cfd/crypto) from publicly available sources on https://www.dukascopy.com/
 
-## Installation
+[`dukascopy-node`](https://github.com/Leo4815162342/dukascopy-node) | [`dukascopy-cli`](https://github.com/Leo4815162342/dukascopy-node) | [`dukascopy-core`](https://github.com/Leo4815162342/dukascopy-node)
+:---: | :---: | :---:
+[<img align="center" width="120" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-node/dukascopy-node.png?raw=true" alt="dukascopy-node">](https://github.com/Leo4815162342/dukascopy-node) | [<img align="center" width="120" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-cli/dukascopy-cli.png?raw=true" alt="dukascopy-node">](https://github.com/Leo4815162342/dukascopy-node) | [<img align="center" width="120" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-core/dukascopy-core.png?raw=true" alt="dukascopy-node">](https://github.com/Leo4815162342/dukascopy-node)
 
-#### NPM:
 
-```bash
-npm install dukascopy-node --save
-```
+***
 
-#### yarn:
-
-```bash
-yarn add dukascopy-node
-```
-
-## Usage
-
-#### import/require:
-
-```javascript
-// ES6 Import
-import { getHistoricRates } from 'dukascopy-node';
-
-// CommonJS
-const { getHistoricRates } = require('dukascopy-node');
-```
-
-#### calling with `async/await`:
-
-```javascript
-(async () => {
-  try {
-    const data = await getHistoricRates({
-      instrument: 'btcusd',
-      dates: {
-        from: '2018-01-01',
-        to: '2019-01-01'
-      },
-      timeframe: 'd1'
-    });
-
-    console.log(data);
-  } catch (error) {
-    console.log('error', error);
-  }
-})();
-```
-
-#### calling with `.then()`:
-
-```javascript
-getHistoricRates({
-  instrument: 'btcusd',
-  dates: {
-    from: '2018-01-01',
-    to: '2019-01-01'
-  },
-  timeframe: 'd1'
-})
-  .then(data => {
-    console.log(data);
-  })
-  .catch(error => {
-    console.log('error', error);
-  });
-```
-
-<h2>Output</h2>
-
-#### timeframe: `m1` | `m30` | `h1`| `d1` | `mn1`
-
-```javascript
-    [
-      // timestamp,   open,    high,    low,     close,   volume
-      [1218153600000, 1.53117, 1.53128, 1.52343, 1.52458, 28078.0156],
-      [1218157200000, 1.52428, 1.52497, 1.51920, 1.52292, 24342.3906],
-      [1218160800000, 1.52289, 1.52449, 1.52029, 1.52325, 24014.8496],
-      ...
-    ]
-```
-
-#### timeframe: `tick`
-
-```javascript
-    [
-      // timestamp, askPrice, bidPirce, askVolume, bidVolume
-      [1218153600033, 1.53137, 1.53117, 9.3, 9.6],
-      [1218153600306, 1.53133, 1.53113, 12.1, 2.4],
-      [1218153600445, 1.53127, 1.53112, 6, 8.4],
-      ...
-    ]
-```
-
-<h2>Config parameters:</h2>
-
-#### **`instrument`**
-
-- Type: `String`
-- Description: an id of the trading instrument
-- Supported values: [see list](#instruments)
-- Required: true
-
-#### **`dates`**
-
-- Type: `Object`
-- Description: an object with a date range
-- Required: true
-
-#### **`dates.from`**
-
-- Type: `String`
-- Description: UTC-based date string representing start of the time range
-- Accepted formats:
-
-  - `yyyy-MM-dd`
-  - `yyyy-MM-dd HH:mm`
-  - ISO string `1970-01-01T00:00:00.000Z`
-
-- Required: true
-
-#### **`dates.to`**
-
-- Type: `String`
-- Description: UTC-based date string representing end of time range (not inclusive)
-- Accepted formats:
-
-  - `yyyy-MM-dd`
-  - `yyyy-MM-dd HH:mm`
-  - ISO string `1970-01-01T00:00:00.000Z`
-
-- Required: true
-
-#### **`timeframe`**
-
-- Type: `String`
-- Description: timeframe aggregation of OHLC (open, high, low, close) data
-- Supported values:
-
-  - `tick` (every single tick/price change)
-  - `m1` (1 minute)
-  - `m30` (30 minutes)
-  - `h1` (1 hour)
-  - `d1` (1 day)
-  - `mn1` (1 month)
-
-- Required: false
-- Default: `d1`
-
-#### **`priceType`**
-
-- Type: `String`
-- Description: type of price (offer side)
-- Supported values: `bid`, `ask`
-- Required: false
-- Default: `bid`
-
-#### **`utcOffset`**
-
-- Type: `Number`
-- Description: UTC offset in minutes
-- Required: false
-- Default: `0`
-
-#### **`volumes`**
-
-- Type: `Boolean`
-- Description: a flag indicating whether the output should contain volume data
-- Required: false
-- Default: `true`
-
-#### **`ignoreFlats`**
-
-- Type: `Boolean`
-- Description: a flag indicating whether the output should contain timeframe entries with 0 (flat) volume. Those mainly come from non-trading days, such as weekends or bank holidays.
-- Required: false
-- Default: `true`
-
-```javascript
-
-// Example of a full config object
-
-{
-  instrument: 'btcusd',
-  dates: {
-    from: '2018-01-01', // or 2018-01-01T00:00:00.000Z
-    to: '2019-01-01', // or 2019-01-01T00:00:00.000Z
-  },
-  timeframe: 'd1',
-  priceType: 'ask',
-  utcOffset: 0,
-  volumes: true,
-  ignoreFlats: true
-}
-
-```
-
-<h2 id="instruments">Supported instruments</h2>
+<h2 id="instruments">List of all supported instruments</h2>
 
 ### Forex
 |Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
@@ -923,3 +730,4 @@ getHistoricRates({
 |-|-|-|-|-|
 |`btcusd`|BTC/USD|Bitcoin vs US Dollar|2017-05-07|2017-01-01|
 |`ethusd`|ETH/USD|Ether vs US Dollar|2017-12-11|2017-01-01|
+
