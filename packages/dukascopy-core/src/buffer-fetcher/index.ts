@@ -38,13 +38,20 @@ export class BufferFetcher {
 
     for (let i = 0, n = batches.length; i < n; i++) {
       const data = await this.fetchBufferedData(batches[i]);
+      // console.log(data.length);
+      data.forEach(({ url, buffer }) => {
+        console.log(url, buffer.length);
+      });
       fetchedObjects.push(data);
 
       if (n > 1) {
         await wait(this.pauseBetweenBatchesMs);
       }
     }
+    const bufferObjects = ([] as BufferObject[])
+      .concat(...fetchedObjects)
+      .filter(({ buffer }) => buffer.length > 0);
 
-    return ([] as BufferObject[]).concat(...fetchedObjects);
+    return bufferObjects;
   }
 }
