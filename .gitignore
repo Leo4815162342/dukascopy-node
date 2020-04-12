@@ -1,6 +1,6 @@
 lib/
 bin/
-download/
+download
 .cache/
 ### Node ###
 # Logs

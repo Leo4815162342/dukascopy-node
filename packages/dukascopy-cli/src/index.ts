@@ -6,7 +6,8 @@ import {
   generateUrls,
   BufferFetcher,
   processData,
-  formatOutput
+  formatOutput,
+  Format
 } from 'dukascopy-core';
 import { progressBar } from './progress';
 import { outputFile } from 'fs-extra';
@@ -30,7 +31,7 @@ const {
 
 const fileName = `${instrument}-${timeframe}${
   timeframe === 'tick' ? '' : '-' + priceType
-}-${fromDate}-${toDate}.${format}`;
+}-${fromDate}-${toDate}.${format === Format.csv ? Format.csv : Format.json}`;
 const folderPath = resolve(process.cwd(), dir);
 const filePath = resolve(folderPath, fileName);
 
