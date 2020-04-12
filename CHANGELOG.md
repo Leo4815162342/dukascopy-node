@@ -1,3 +1,9 @@
+## [1.1.1] - 2020-04-12
+
+### Fixed
+
+- Empty buffer objects being used for data aggregation
+
 ## [1.1.0] - 2020-04-04
 
 ### Added
