@@ -1,5 +1,6 @@
 {
   "name": "dukascopy-cli",
+  "description": "Command line interface for downloading historical market data in json, csv formats",
   "version": "1.0.0",
   "main": "bin/index.js",
   "bin": {

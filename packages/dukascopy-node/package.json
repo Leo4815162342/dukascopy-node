@@ -1,7 +1,7 @@
 {
   "name": "dukascopy-node",
   "version": "1.1.1",
-  "description": "Node.js library for fetching and aggregation of historical OHLC price data for 500+ instruments",
+  "description": "Node.js library for downloading historical market data",
   "main": "lib/index.js",
   "module": "lib/index.es.js",
   "types": "lib/index.d.ts",
