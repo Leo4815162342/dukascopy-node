@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Leo4815162342/dukascopy.git"
+    "url": "https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-core"
   },
   "keywords": [
     "dukascopy",

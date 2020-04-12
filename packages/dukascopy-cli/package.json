@@ -22,7 +22,7 @@
   "author": "leonid.pyrlia",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Leo4815162342/dukascopy.git"
+    "url": "https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-cli"
   },
   "dependencies": {
     "chalk": "^3.0.0",
