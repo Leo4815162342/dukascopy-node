@@ -4,9 +4,9 @@ A set of libraries and tools for downloading histortical market data (OHLC) from
 
 
 
-[`dukascopy-node`](https://github.com/Leo4815162342/dukascopy-node) | [`dukascopy-cli`](https://github.com/Leo4815162342/dukascopy-node) | [`dukascopy-core`](https://github.com/Leo4815162342/dukascopy-node)
+[`dukascopy-node`](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node) | [`dukascopy-cli`](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-cli) | [`dukascopy-core`](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-core)
 :---: | :---: | :---:
-[<img align="center" width="120" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-node/dukascopy-node.png?raw=true" alt="dukascopy-node">](https://github.com/Leo4815162342/dukascopy-node) | [<img align="center" width="120" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-cli/dukascopy-cli.png?raw=true" alt="dukascopy-node">](https://github.com/Leo4815162342/dukascopy-node) | [<img align="center" width="120" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-core/dukascopy-core.png?raw=true" alt="dukascopy-node">](https://github.com/Leo4815162342/dukascopy-node)
+[<img align="center" width="120" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-node/dukascopy-node.png?raw=true" alt="dukascopy-node">](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node) | [<img align="center" width="120" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-cli/dukascopy-cli.png?raw=true" alt="dukascopy-cli">](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-cli) | [<img align="center" width="120" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-core/dukascopy-core.png?raw=true" alt="dukascopy-core">](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-core)
 
 
 ***
