@@ -1,7 +1,7 @@
 export { getHistoricRates } from './getHistoricRates';
+export { DefaultConfig } from './config';
 export {
   Config,
-  DefaultConfig,
   Instrument,
   Price,
   Timeframe,

@@ -25,6 +25,8 @@ const {
   volumes,
   ignoreFlats,
   format,
+  batchSize,
+  pauseBetweenBatchesMs,
   dir,
   silent
 } = cliConfig;
@@ -56,7 +58,8 @@ const filePath = resolve(folderPath, fileName);
       progressBar.start(urls.length, val);
 
       const bufferFetcher = new BufferFetcher({
-        batchSize: 10,
+        batchSize,
+        pauseBetweenBatchesMs,
         notifyOnItemFetchFn: (): void => {
           val += 1;
           progressBar.update(val);

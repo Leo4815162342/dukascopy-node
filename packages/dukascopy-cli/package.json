@@ -14,7 +14,8 @@
     "lint": "yarn eslint 'src/**/*.{js,ts}'",
     "build": "rollup -c",
     "pre-commit": "yarn type-check && yarn lint",
-    "test": "echo 'tests for CLI go here'"
+    "test": "echo 'tests for CLI go here'",
+    "test:call": "yarn ts-node src/index.ts -i eurusd -from 2012-01-01 -to 2020-01-01 -t h1 -bp 5000 -bs 20"
   },
   "keywords": [
     "cli",

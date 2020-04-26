@@ -1,7 +1,6 @@
-import { Config } from '../src/config';
 import { readdirSync } from 'fs';
 
-function getTestCases<T>(folder: string) {
+export function getTestCases<T>(folder: string) {
   const projectPath = process.cwd();
 
   const paths = readdirSync(folder);
@@ -10,22 +9,7 @@ function getTestCases<T>(folder: string) {
     casePath => `${projectPath}/${folder}/${casePath.replace('.ts', '')}`
   );
 
-  const cases = modulePaths.map(path => ({ path, content: <T>require(path) }));
+  const cases = modulePaths.map(path => ({ path, content: require(path) as T }));
 
   return cases;
 }
-
-function getConfigDescription(config: Config): string {
-  const {
-    instrument,
-    dates: { from, to },
-    timeframe,
-    volumes,
-    utcOffset,
-    ignoreFlats
-  } = config;
-
-  return `${instrument}, ${timeframe}, ${from}, ${to}, offset: ${utcOffset}, ignoreFlats: ${!!ignoreFlats}`;
-}
-
-export { getTestCases, getConfigDescription };
