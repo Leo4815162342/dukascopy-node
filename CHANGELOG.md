@@ -1,3 +1,10 @@
+## [1.2.0] - 2020-04-26
+
+### Added
+
+- support to control batch size via `batchSize` param
+- support to control pause between downloading of batches via `pauseBetweenBatchesMs` param
+
 ## [1.1.1] - 2020-04-12
 
 ### Fixed
