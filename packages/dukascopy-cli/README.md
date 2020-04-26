@@ -52,6 +52,8 @@ yarn dukascopy-cli -i eurusd -from 2006-01-01 -to 2020-01-01 -t d1 -f json
   -fl, --flats                Include flats (0 volumes) (default: false)
   -f, --format <value>        Output format (csv, json, array) (default: "json")
   -dir, --directory <value>   Download directory (default: "./download")
+  -bs, --batch-size <value>   Batch size of downloaded artifacts (default: 10)
+  -bp, --batch-pause <value>  Pause between batches in ms (default: 1000)
   -h, --help                  display help for command
 ```
 

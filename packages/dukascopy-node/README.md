@@ -255,9 +255,24 @@ timestamp,askPrice,bidPrice,askVolume,bidVolume
 - Required: false
 - Default: `true`
 
+#### **`batchSize`**
+
+- Type: `Number`
+- Description: number of requests per batch. We don't want to send bunch of requests at the same time, we want to split them in groups (batches) and fetch them one by one with pause in between (see `pauseBetweenBatchesMs`). Main purpose - not to fall under rate limiting restrictions.
+- Required: false
+- Default: `10`
+
+#### **`pauseBetweenBatchesMs`**
+
+- Type: `Number`
+- Description: pause between downloading batches (in milliseconds)
+- Required: false
+- Default: `1000`
+
 ***
 
 #### Example of a full config object
+
 
 ```javascript
 {
@@ -271,7 +286,9 @@ timestamp,askPrice,bidPrice,askVolume,bidVolume
   format: 'json',
   utcOffset: 0,
   volumes: true,
-  ignoreFlats: true
+  ignoreFlats: true,
+  batchSize: 10,
+  pauseBetweenBatchesMs: 1000
 }
 ```
 
