@@ -1,7 +1,7 @@
 {
   "name": "dukascopy-cli",
   "description": "Command line interface for downloading historical market data in json, csv formats",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "main": "bin/index.js",
   "files": [
     "bin"
@@ -14,7 +14,8 @@
     "lint": "yarn eslint 'src/**/*.{js,ts}'",
     "build": "rollup -c",
     "pre-commit": "yarn type-check && yarn lint",
-    "test": "echo 'tests for CLI go here'"
+    "test": "echo 'tests for CLI go here'",
+    "test:call": "yarn ts-node src/index.ts -i eurusd -from 2012-01-01 -to 2020-01-01 -t h1 -bp 5000 -bs 20"
   },
   "keywords": [
     "cli",
@@ -32,7 +33,7 @@
     "chalk": "^3.0.0",
     "cli-progress": "^3.4.0",
     "commander": "^5.0.0",
-    "dukascopy-core": "^1.1.4",
+    "dukascopy-core": "^1.2.0",
     "fs-extra": "^8.1.0"
   },
   "devDependencies": {

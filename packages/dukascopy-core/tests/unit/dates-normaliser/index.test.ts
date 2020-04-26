@@ -10,6 +10,16 @@ type TestCase = {
   expectedOutput: ReturnType<typeof normaliseDates>;
 };
 
+function generateTestSuite({ input, expectedOutput }: TestCase, path: string) {
+  const [fileName] = path.split('/').reverse();
+
+  it(`Correctly normalises dates for file "${fileName}"`, () => {
+    const normalisedDates = normaliseDates(input);
+
+    expect(normalisedDates).toEqual(expectedOutput);
+  });
+}
+
 describe(`Dates normaliser (mocked current time: ${customDateNow})`, () => {
   beforeEach(() => {
     advanceTo(new Date(customDateNow));
@@ -23,13 +33,3 @@ describe(`Dates normaliser (mocked current time: ${customDateNow})`, () => {
 
   testCases.forEach(({ path, content }) => generateTestSuite(content, path));
 });
-
-function generateTestSuite({ input, expectedOutput }: TestCase, path: string) {
-  const [fileName] = path.split('/').reverse();
-
-  it(`Correctly normalises dates for file "${fileName}"`, () => {
-    const normalisedDates = normaliseDates(input);
-
-    expect(normalisedDates).toEqual(expectedOutput);
-  });
-}

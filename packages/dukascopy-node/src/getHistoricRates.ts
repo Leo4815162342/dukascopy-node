@@ -6,99 +6,27 @@ import {
   processData,
   formatOutput,
   Config,
-  DefaultConfig,
-  Price,
-  Timeframe,
-  Format,
   Output,
-  TimeframeType,
-  PriceType,
-  InstrumentType,
   ArrayTickItem,
   JsonItemTick,
   JsonItem,
   ArrayItem
 } from 'dukascopy-core';
 
-const defaultConfig: DefaultConfig = {
-  timeframe: Timeframe.d1,
-  priceType: Price.bid,
-  utcOffset: 0,
-  volumes: true,
-  ignoreFlats: true,
-  format: Format.array
-};
+import {
+  defaultConfig,
+  ConfigArrayTickItem,
+  ConfigArrayItem,
+  ConfigJsonTickItem,
+  ConfigJsonItem,
+  ConfigCsvItem
+} from './config';
 
-export async function getHistoricRates(config: {
-  instrument: InstrumentType;
-  dates: {
-    from: string;
-    to: string;
-  };
-  timeframe?: 'tick';
-  priceType?: PriceType;
-  utcOffset?: number;
-  volumes?: boolean;
-  ignoreFlats?: boolean;
-  format?: 'array';
-}): Promise<ArrayTickItem[]>;
-
-export async function getHistoricRates(config: {
-  instrument: InstrumentType;
-  dates: {
-    from: string;
-    to: string;
-  };
-  timeframe?: 'tick';
-  priceType?: PriceType;
-  utcOffset?: number;
-  volumes?: boolean;
-  ignoreFlats?: boolean;
-  format?: 'json';
-}): Promise<JsonItemTick[]>;
-
-export async function getHistoricRates(config: {
-  instrument: InstrumentType;
-  dates: {
-    from: string;
-    to: string;
-  };
-  timeframe?: Exclude<TimeframeType, 'tick'>;
-  priceType?: PriceType;
-  utcOffset?: number;
-  volumes?: boolean;
-  ignoreFlats?: boolean;
-  format?: 'json';
-}): Promise<JsonItem[]>;
-
-export async function getHistoricRates(config: {
-  instrument: InstrumentType;
-  dates: {
-    from: string;
-    to: string;
-  };
-  timeframe?: Exclude<TimeframeType, 'tick'>;
-  priceType?: PriceType;
-  utcOffset?: number;
-  volumes?: boolean;
-  ignoreFlats?: boolean;
-  format?: 'array';
-}): Promise<ArrayItem[]>;
-
-export async function getHistoricRates(config: {
-  instrument: InstrumentType;
-  dates: {
-    from: string;
-    to: string;
-  };
-  timeframe?: TimeframeType;
-  priceType?: PriceType;
-  utcOffset?: number;
-  volumes?: boolean;
-  ignoreFlats?: boolean;
-  format?: 'csv';
-}): Promise<string>;
-
+export async function getHistoricRates(config: ConfigArrayItem): Promise<ArrayItem[]>;
+export async function getHistoricRates(config: ConfigArrayTickItem): Promise<ArrayTickItem[]>;
+export async function getHistoricRates(config: ConfigJsonItem): Promise<JsonItem[]>;
+export async function getHistoricRates(config: ConfigJsonTickItem): Promise<JsonItemTick[]>;
+export async function getHistoricRates(config: ConfigCsvItem): Promise<string>;
 export async function getHistoricRates(config: Config): Promise<Output>;
 
 export async function getHistoricRates(config: Config): Promise<Output> {
@@ -118,7 +46,9 @@ export async function getHistoricRates(config: Config): Promise<Output> {
     volumes,
     utcOffset,
     ignoreFlats,
-    format
+    format,
+    batchSize,
+    pauseBetweenBatchesMs
   } = mergedConfig;
 
   const [startDate, endDate] = normaliseDates({
@@ -131,7 +61,7 @@ export async function getHistoricRates(config: Config): Promise<Output> {
 
   const urls = generateUrls({ instrument, timeframe, priceType, startDate, endDate });
 
-  const bufferFetcher = new BufferFetcher();
+  const bufferFetcher = new BufferFetcher({ batchSize, pauseBetweenBatchesMs });
 
   const bufferredData = await bufferFetcher.fetch(urls);
 

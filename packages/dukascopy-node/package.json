@@ -1,6 +1,6 @@
 {
   "name": "dukascopy-node",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "Node.js library for downloading historical market data",
   "main": "lib/index.js",
   "module": "lib/index.es.js",
@@ -36,7 +36,7 @@
     "crypto"
   ],
   "dependencies": {
-    "dukascopy-core": "^1.1.4"
+    "dukascopy-core": "^1.2.0"
   },
   "devDependencies": {
     "jest-date-mock": "^1.0.8"

@@ -2,7 +2,6 @@ import { PriceType } from './price-types';
 import { TimeframeType } from './timeframes';
 import { FormatType } from './format';
 import { InstrumentType } from './instruments';
-import { OptionalKeys } from 'utility-types';
 
 export interface Config {
   instrument: InstrumentType;
@@ -16,6 +15,6 @@ export interface Config {
   volumes?: boolean;
   ignoreFlats?: boolean;
   format?: FormatType;
+  batchSize?: number;
+  pauseBetweenBatchesMs?: number;
 }
-
-export type DefaultConfig = Required<Pick<Config, OptionalKeys<Config>>>;

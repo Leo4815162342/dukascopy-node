@@ -6,7 +6,7 @@ export class BufferFetcher {
   batchSize: number;
   pauseBetweenBatchesMs: number;
   useCache: boolean;
-  notifyOnItemFetchFn: NotifyFn | undefined;
+  notifyOnItemFetchFn?: NotifyFn;
 
   constructor({
     batchSize = 10,
