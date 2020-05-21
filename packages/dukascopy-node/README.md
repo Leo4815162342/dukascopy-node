@@ -37,6 +37,7 @@ const { getHistoricRates } = require('dukascopy-node');
 
 #### calling with `async/await`:
 
+
 ```javascript
 const { getHistoricRates } = require('dukascopy-node');
 
@@ -58,8 +59,10 @@ const { getHistoricRates } = require('dukascopy-node');
   }
 })();
 ```
+**[Try it live](https://npm.runkit.com/dukascopy-node)**
 
 #### calling with `.then()`:
+
 
 ```javascript
 const { getHistoricRates } = require('dukascopy-node');
@@ -80,6 +83,7 @@ getHistoricRates({
     console.log('error', error);
   });
 ```
+**[Try it live](https://npm.runkit.com/dukascopy-node)**
 
 ***
 
