@@ -14,7 +14,7 @@ A set of libraries and tools for downloading histortical market data (OHLC) from
 <h2 id="instruments">List of all supported instruments</h2>
 
 ### Forex
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`audcad`|AUD/CAD|Australian Dollar vs Canadian Dollar|2005-12-26|1992-01-01|
 |`audchf`|AUD/CHF|Australian Dollar vs Swiss Franc|2005-12-26|1991-01-01|
@@ -80,7 +80,7 @@ A set of libraries and tools for downloading histortical market data (OHLC) from
 |`xauusd`|XAU/USD|Spot gold|1999-09-01|1997-01-01|
 |`zarjpy`|ZAR/JPY|South African Rand vs Japanese Yen|1999-03-03|1997-01-01|
 ### Commodities
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`cocoacmdusd`|COCOA.CMD/USD|NY Cocoa|2017-10-20|2017-01-01|
 |`coffeecmdusx`|COFFEE.CMD/USX|Coffee Arabica|2017-12-04|2017-01-01|
@@ -94,7 +94,7 @@ A set of libraries and tools for downloading histortical market data (OHLC) from
 |`sugarcmdusd`|SUGAR.CMD/USD|London Sugar No.5|2017-10-02|2017-01-01|
 |`soybeancmdusx`|SOYBEAN.CMD/USX|Soybean|2017-12-01|2017-01-01|
 ### Indicies (CFD)
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`chiidxusd`|CHI.IDX/USD|China A50 Index|2017-07-17|2017-01-01|
 |`dollaridxusd`|DOLLAR.IDX/USD|US Dollar Index|2017-12-01|2017-01-01|
@@ -116,19 +116,19 @@ A set of libraries and tools for downloading histortical market data (OHLC) from
 |`sgdidxsgd`|SGD.IDX/SGD|Singapore Blue Chip Cash Index|2017-12-01|2017-01-01|
 |`ussc2000idxusd`|USSC2000.IDX/USD|US Small Cap 2000|2018-08-08|2018-01-01|
 ### Bonds (CFD)
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`bundtreur`|BUND.TR/EUR|Euro Bund|2016-05-02|2016-01-01|
 |`ukgilttrgbp`|UKGILT.TR/GBP|UK Long Gilt|2017-12-26|2017-01-01|
 |`ustbondtrusd`|USTBOND.TR/USD|US T-Bond|2018-01-04|2017-01-01|
 ### Austria 🇦🇹
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`ebsateur`|EBS.AT/EUR|Erste Group Bank AG|2016-11-04|2011-01-01|
 |`rbiateur`|RBI.AT/EUR|Raiffeisen Bank International AG|2016-11-02|2011-01-01|
 |`voeateur`|VOE.AT/EUR|Voestalpine AG|2016-11-04|2011-01-01|
 ### Belgium 🇧🇪
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`abibeeur`|ABI.BE/EUR|Anheuser-Busch InBev NV|2016-11-14|2011-01-01|
 |`agsbeeur`|AGS.BE/EUR|Ageas|2016-11-14|2011-01-01|
@@ -138,7 +138,7 @@ A set of libraries and tools for downloading histortical market data (OHLC) from
 |`ucbbeeur`|UCB.BE/EUR|UCB SA|2016-11-07|2011-01-01|
 |`umibeeur`|UMI.BE/EUR|Umicore SA|2016-11-07|2011-01-01|
 ### Denmark 🇩🇰
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`carlbdkdkk`|CARLB.DK/DKK|Carlsberg A/S|2016-11-07|2011-01-01|
 |`colobdkdkk`|COLOB.DK/DKK|Coloplast A/S|2016-11-07|2011-01-01|
@@ -149,7 +149,7 @@ A set of libraries and tools for downloading histortical market data (OHLC) from
 |`pndoradkdkk`|PNDORA.DK/DKK|Pandora A/S|2016-11-08|2011-01-01|
 |`vwsdkdkk`|VWS.DK/DKK|Vestas Wind Systems A/S|2016-11-07|2011-01-01|
 ### Finland 🇫🇮
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`eli1vfieur`|ELI1V.FI/EUR|Elisa OYJ|2016-11-03|2011-01-01|
 |`nes1vfieur`|NES1V.FI/EUR|Neste OYJ|2016-11-03|2011-01-01|
@@ -159,7 +159,7 @@ A set of libraries and tools for downloading histortical market data (OHLC) from
 |`stervfieur`|STERV.FI/EUR|Stora Enso OYJ|2016-11-03|2011-01-01|
 |`tls1vfieur`|TLS1V.FI/EUR|Telia Company AB|2016-11-09|2016-01-01|
 ### France 🇫🇷
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`acfreur`|AC.FR/EUR|Accor SA|2016-08-11|2011-01-01|
 |`acafreur`|ACA.FR/EUR|Credit Agricole SA|2016-09-30|2011-01-01|
@@ -198,7 +198,7 @@ A set of libraries and tools for downloading histortical market data (OHLC) from
 |`vivfreur`|VIV.FR/EUR|Vivendi SA|2016-08-05|2011-01-01|
 |`vkfreur`|VK.FR/EUR|Vallourec SA|2016-08-05|2011-01-01|
 ### Germany 🇩🇪
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`adsdeeur`|ADS.DE/EUR|Adidas AG|2015-03-13|2011-01-01|
 |`alvdeeur`|ALV.DE/EUR|Allianz SE|2015-04-09|2011-01-01|
@@ -236,7 +236,7 @@ A set of libraries and tools for downloading histortical market data (OHLC) from
 |`vnadeeur`|VNA.DE/EUR|Vonovia SE|2015-04-14|2015-01-01|
 |`vow3deeur`|VOW3.DE/EUR|Volkswagen AG|2015-04-14|2011-01-01|
 ### Netherlands 🇳🇱
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`agnnleur`|AGN.NL/EUR|Aegon NV|2016-11-14|2011-01-01|
 |`ahnleur`|AH.NL/EUR|Koninklijke Ahold Delhaize NV|2016-11-14|2011-01-01|
@@ -256,7 +256,7 @@ A set of libraries and tools for downloading histortical market data (OHLC) from
 |`vpknleur`|VPK.NL/EUR|Koninklijke Vopak NV|2016-11-14|2011-01-01|
 |`wklnleur`|WKL.NL/EUR|Wolters Kluwer NV|2016-11-14|2011-01-01|
 ### Norway 🇳🇴
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`dnbnonok`|DNB.NO/NOK|DNB ASA|2016-11-14|2011-01-01|
 |`mhgnonok`|MHG.NO/NOK|Marine Harvest ASA|2016-11-14|2011-01-01|
@@ -265,12 +265,12 @@ A set of libraries and tools for downloading histortical market data (OHLC) from
 |`stlnonok`|STL.NO/NOK|Statoil ASA|2016-11-14|2011-01-01|
 |`telnonok`|TEL.NO/NOK|Telenor ASA|2016-11-14|2011-01-01|
 ### Portugal 🇵🇹
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`edppteur`|EDP.PT/EUR|EDP - Energias de Portugal SA|2016-11-14|2011-01-01|
 |`galppteur`|GALP.PT/EUR|Galp Energia SGPS SA|2016-11-14|2011-01-01|
 ### Spain 🇪🇸
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`acseseur`|ACS.ES/EUR|ACS Actividades de Construccion y Servicios SA|2016-11-14|2011-01-01|
 |`acxeseur`|ACX.ES/EUR|Acerinox SA|2016-11-14|2011-01-01|
@@ -291,7 +291,7 @@ A set of libraries and tools for downloading histortical market data (OHLC) from
 |`saneseur`|SAN.ES/EUR|Banco Santander SA|2016-11-14|2011-01-01|
 |`tefeseur`|TEF.ES/EUR|Telefonica SA|2016-11-14|2011-01-01|
 ### Sweden 🇸🇪
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`abbsesek`|ABB.SE/SEK|ABB Ltd|2016-11-14|2011-01-01|
 |`alfasesek`|ALFA.SE/SEK|Alfa Laval AB|2016-11-07|2011-01-01|
@@ -314,7 +314,7 @@ A set of libraries and tools for downloading histortical market data (OHLC) from
 |`tlsnsesek`|TLSN.SE/SEK|Telia Company AB|2016-11-14|2016-01-01|
 |`volvbsesek`|VOLVB.SE/SEK|Volvo AB|2016-11-07|2011-01-01|
 ### Switzerland 🇨🇭
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`abbnchchf`|ABBN.CH/CHF|ABB Ltd|2015-06-16|2011-01-01|
 |`adenchchf`|ADEN.CH/CHF|Adecco SA|2015-06-16|2011-01-01|
@@ -337,7 +337,7 @@ A set of libraries and tools for downloading histortical market data (OHLC) from
 |`uhrchchf`|UHR.CH/CHF|Swatch Group AG/The|2015-08-07|2011-01-01|
 |`zurnchchf`|ZURN.CH/CHF|Zurich Insurance Group AG|2015-08-07|2011-01-01|
 ### United Kingdom 🇬🇧
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`aalgbgbx`|AAL.GB/GBX|Anglo American PLC|2016-08-01|2011-01-01|
 |`abfgbgbx`|ABF.GB/GBX|Associated British Foods PLC|2016-09-06|2011-01-01|
@@ -421,7 +421,7 @@ A set of libraries and tools for downloading histortical market data (OHLC) from
 |`wppgbgbx`|WPP.GB/GBX|WPP PLC|2016-07-08|2011-01-01|
 |`wtbgbgbx`|WTB.GB/GBX|Whitbread PLC|2016-07-06|2011-01-01|
 ### United States 🇺🇸
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`aususd`|A.US/USD|AGILENT TECHNOLOGIES INC|2017-05-25|2017-01-01|
 |`aaususd`|AA.US/USD|ALCOA INC|2018-01-30|2018-01-01|
@@ -681,7 +681,7 @@ A set of libraries and tools for downloading histortical market data (OHLC) from
 |`yumususd`|YUM.US/USD|YUM! BRANDS INC|2018-02-01|2018-01-01|
 |`zbhususd`|ZBH.US/USD|ZIMMER BIOMET HOLDINGS INC|2018-02-01|2018-01-01|
 ### ETF (CFD)
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`diaususd`|DIA.US/USD|SPDR Dow Jones® Industrial Average ETF|2017-05-11|2017-01-01|
 |`dvyususd`|DVY.US/USD|iShares Select Dividend ETF|2017-05-11|2017-01-01|
@@ -726,7 +726,7 @@ A set of libraries and tools for downloading histortical market data (OHLC) from
 |`xlyususd`|XLY.US/USD|Consumer Discretionary Select Sector SPDR Fund|2017-11-15|2017-01-01|
 |`xopususd`|XOP.US/USD|SPDR S&amp;P Oil &amp; Gas Explor &amp; Prodtn ETF|2017-01-26|2017-01-01|
 ### Crypto
-|Instrument id|Instrument name|Description|Start date (tick, m1, h1)|Start date (d1, mn1)|
+|Instrument id|Instrument name|Description|Start date (tick, m1, m15, m30, h1)|Start date (d1, mn1)|
 |-|-|-|-|-|
 |`btcusd`|BTC/USD|Bitcoin vs US Dollar|2017-05-07|2017-01-01|
 |`ethusd`|ETH/USD|Ether vs US Dollar|2017-12-11|2017-01-01|

@@ -5,10 +5,11 @@ import { getHistoricRates } from '../src';
   try {
     const config: Config = {
       instrument: 'eurusd',
-      dates: { from: '2020-02-04', to: '2020-02-05' },
-      timeframe: 'm1',
+      dates: { from: '2020-02-04', to: '2020-02-04 00:45' },
+      priceType: 'ask',
+      timeframe: 'm15',
       volumes: true,
-      utcOffset: 0
+      utcOffset: 60
     };
     console.log('fetching started');
     console.log(JSON.stringify(config));

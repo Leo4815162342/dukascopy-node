@@ -10,7 +10,7 @@ program
   .requiredOption('-to, --date-to <value>', 'To date (yyyy-mm-dd)')
   .option(
     '-t, --timeframe <value>',
-    'Timeframe aggregation (tick, m1, m30, h1, d1, mn1)',
+    'Timeframe aggregation (tick, m1, m15, m30, h1, d1, mn1)',
     Timeframe.d1
   )
   .option('-p, --price-type <value>', 'Price type: (bid, ask)', Price.bid)
