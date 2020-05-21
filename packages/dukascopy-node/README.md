@@ -59,7 +59,7 @@ const { getHistoricRates } = require('dukascopy-node');
   }
 })();
 ```
-**[Try it live](https://npm.runkit.com/dukascopy-node)**
+**[Try this snippet live](https://runkit.com/embed/of4ho2xv8rvv)**
 
 #### calling with `.then()`:
 
