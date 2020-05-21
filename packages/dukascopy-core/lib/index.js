@@ -9219,6 +9219,10 @@ var fetch = _interopDefault(require('node-fetch'));
      */
     Timeframe["m1"] = "m1";
     /**
+     *  15-minute `(15 minutes)` aggregation of OHLC price data
+     */
+    Timeframe["m15"] = "m15";
+    /**
      *  half-hour `(30 minutes)` aggregation of OHLC price data
      */
     Timeframe["m30"] = "m30";
@@ -14727,6 +14731,7 @@ const rangeInferMap = {
     d1: ['year', 'month', 'day'],
     h1: ['month', 'day', 'hour'],
     m30: ['day', 'hour'],
+    m15: ['day', 'hour'],
     m1: ['day', 'hour'],
     tick: ['hour']
 };
@@ -14829,7 +14834,10 @@ function getDateLimit(startDate, endDate, timeframe) {
     const nowDate = new Date();
     const adjustedEndDate = endDate < nowDate ? endDate : nowDate;
     let dateLimit = adjustedEndDate;
-    if (timeframe === exports.Timeframe.tick || timeframe === exports.Timeframe.m1 || timeframe === exports.Timeframe.m30) {
+    if (timeframe === exports.Timeframe.tick ||
+        timeframe === exports.Timeframe.m1 ||
+        timeframe === exports.Timeframe.m15 ||
+        timeframe === exports.Timeframe.m30) {
         if (+endDate - +startDate <= 3600000) {
             dateLimit = getStartOfUtc(dateLimit, 'hour', 1);
         }
@@ -15049,6 +15057,9 @@ function aggregate({ data, fromTimeframe, toTimeframe, priceType, ignoreFlats })
             if (toTimeframe === exports.Timeframe.m1) {
                 return minuteOHLC;
             }
+            if (toTimeframe === exports.Timeframe.m15) {
+                return splitArrayInChunks(minuteOHLC, 15).map(d => getOHLC(d, ignoreFlats));
+            }
             if (toTimeframe === exports.Timeframe.m30) {
                 return splitArrayInChunks(minuteOHLC, 30).map(d => getOHLC(d, ignoreFlats));
             }
@@ -15057,6 +15068,9 @@ function aggregate({ data, fromTimeframe, toTimeframe, priceType, ignoreFlats })
             }
         }
         if (fromTimeframe === exports.Timeframe.m1) {
+            if (toTimeframe === exports.Timeframe.m15) {
+                return splitArrayInChunks(data, 15).map(d => getOHLC(d, ignoreFlats));
+            }
             if (toTimeframe === exports.Timeframe.m30) {
                 return splitArrayInChunks(data, 30).map(d => getOHLC(d, ignoreFlats));
             }

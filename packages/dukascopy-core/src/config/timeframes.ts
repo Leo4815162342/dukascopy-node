@@ -8,6 +8,10 @@ export enum Timeframe {
    */
   m1 = 'm1',
   /**
+   *  15-minute `(15 minutes)` aggregation of OHLC price data
+   */
+  m15 = 'm15',
+  /**
    *  half-hour `(30 minutes)` aggregation of OHLC price data
    */
   m30 = 'm30',

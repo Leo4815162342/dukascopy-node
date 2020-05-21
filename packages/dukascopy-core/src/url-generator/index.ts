@@ -73,7 +73,12 @@ function getDateLimit(startDate: Date, endDate: Date, timeframe: TimeframeType):
   const adjustedEndDate = endDate < nowDate ? endDate : nowDate;
   let dateLimit = adjustedEndDate;
 
-  if (timeframe === Timeframe.tick || timeframe === Timeframe.m1 || timeframe === Timeframe.m30) {
+  if (
+    timeframe === Timeframe.tick ||
+    timeframe === Timeframe.m1 ||
+    timeframe === Timeframe.m15 ||
+    timeframe === Timeframe.m30
+  ) {
     if (+endDate - +startDate <= 3600000) {
       dateLimit = getStartOfUtc(dateLimit, 'hour', 1);
     } else {
