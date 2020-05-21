@@ -12,6 +12,7 @@ const rangeInferMap: RangeInferMap = {
   d1: ['year', 'month', 'day'],
   h1: ['month', 'day', 'hour'],
   m30: ['day', 'hour'],
+  m15: ['day', 'hour'],
   m1: ['day', 'hour'],
   tick: ['hour']
 };
