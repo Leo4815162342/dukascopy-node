@@ -25,6 +25,8 @@ yarn add dukascopy-node
 
 ## Usage
 
+**[Try it live](https://runkit.com/embed/of4ho2xv8rvv)**
+
 #### import/require:
 
 ```javascript
@@ -81,8 +83,6 @@ getHistoricRates({
     console.log('error', error);
   });
 ```
-
-**[Try it live](https://runkit.com/embed/of4ho2xv8rvv)**
 
 ***
 
