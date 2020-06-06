@@ -1,3 +1,9 @@
+## [1.3.1] - 2020-06-06
+
+### Fixed
+
+- Respect `ignoreFlag` within `m1` to `m1` aggregation
+
 ## [1.3.0] - 2020-05-21
 
 ### Added
