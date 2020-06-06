@@ -15042,7 +15042,6 @@ function getMonthlyOHLCfromDays(input) {
 }
 
 function aggregate({ data, fromTimeframe, toTimeframe, priceType, ignoreFlats }) {
-    console.log(fromTimeframe, toTimeframe);
     if (fromTimeframe === Timeframe.tick && toTimeframe === Timeframe.tick) {
         return data;
     }
