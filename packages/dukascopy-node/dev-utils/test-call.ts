@@ -5,11 +5,12 @@ import { getHistoricRates } from '../src';
   try {
     const config: Config = {
       instrument: 'eurusd',
-      dates: { from: '2020-02-04', to: '2020-02-04 00:45' },
-      priceType: 'ask',
-      timeframe: 'm15',
+      dates: { from: '2020-05-01', to: '2020-05-02' },
+      priceType: 'bid',
+      timeframe: 'm1',
       volumes: true,
-      utcOffset: 60
+      utcOffset: 0,
+      ignoreFlats: false
     };
     console.log('fetching started');
     console.log(JSON.stringify(config));
@@ -17,8 +18,8 @@ import { getHistoricRates } from '../src';
     const quotes = await getHistoricRates(config);
     const d2 = +new Date();
     console.log('fetching success');
-    console.log(`size: ${quotes.length}`);
     console.log(JSON.stringify(quotes));
+    console.log(`size: ${quotes.length}`);
     console.log(`time ms: ${d2 - d1}`);
   } catch (error) {
     console.log('error', error);

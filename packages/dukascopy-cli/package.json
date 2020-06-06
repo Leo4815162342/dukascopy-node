@@ -15,7 +15,7 @@
     "build": "rollup -c",
     "pre-commit": "yarn type-check && yarn lint",
     "test": "echo 'tests for CLI go here'",
-    "test:call": "yarn ts-node src/index.ts -i eurusd -from 2012-01-01 -to 2020-01-01 -t h1 -bp 5000 -bs 20"
+    "test:call": "yarn ts-node src/index.ts -i eurusd -from 2020-05-01 -to 2020-05-02 -t m1 -f csv -v"
   },
   "keywords": [
     "cli",

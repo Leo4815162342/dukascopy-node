@@ -15042,8 +15042,13 @@ function getMonthlyOHLCfromDays(input) {
 }
 
 function aggregate({ data, fromTimeframe, toTimeframe, priceType, ignoreFlats }) {
-    if ((fromTimeframe === Timeframe.tick && toTimeframe === Timeframe.tick) ||
-        (fromTimeframe === Timeframe.m1 && toTimeframe === Timeframe.m1)) {
+    if (fromTimeframe === Timeframe.tick && toTimeframe === Timeframe.tick) {
+        return data;
+    }
+    if (fromTimeframe === Timeframe.m1 && toTimeframe === Timeframe.m1) {
+        if (ignoreFlats) {
+            return data.filter(item => item[5] !== 0);
+        }
         return data;
     }
     if (fromTimeframe === toTimeframe) {

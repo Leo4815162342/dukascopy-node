@@ -10,10 +10,14 @@ export function aggregate({
   priceType,
   ignoreFlats
 }: AggregateInput): number[][] {
-  if (
-    (fromTimeframe === Timeframe.tick && toTimeframe === Timeframe.tick) ||
-    (fromTimeframe === Timeframe.m1 && toTimeframe === Timeframe.m1)
-  ) {
+  if (fromTimeframe === Timeframe.tick && toTimeframe === Timeframe.tick) {
+    return data;
+  }
+
+  if (fromTimeframe === Timeframe.m1 && toTimeframe === Timeframe.m1) {
+    if (ignoreFlats) {
+      return data.filter(item => item[5] !== 0);
+    }
     return data;
   }
 
