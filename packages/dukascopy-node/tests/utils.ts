@@ -1,5 +1,5 @@
-import { Config } from 'dukascopy-core';
 import { readdirSync } from 'fs';
+import { Config } from '../src/config';
 
 function getTestCases<T>(folder: string) {
   const projectPath = process.cwd();
@@ -10,7 +10,7 @@ function getTestCases<T>(folder: string) {
     casePath => `${projectPath}/${folder}/${casePath.replace('.ts', '')}`
   );
 
-  const cases = modulePaths.map(path => ({ path, content: <T>require(path) }));
+  const cases = modulePaths.map(path => ({ path, content: require(path) as T }));
 
   return cases;
 }
@@ -20,7 +20,6 @@ function getConfigDescription(config: Config): string {
     instrument,
     dates: { from, to },
     timeframe,
-    volumes,
     utcOffset,
     ignoreFlats
   } = config;

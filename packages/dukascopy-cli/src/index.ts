@@ -1,18 +1,19 @@
 #!/usr/bin/env node
 
 import { resolve } from 'path';
-import {
-  normaliseDates,
-  generateUrls,
-  BufferFetcher,
-  processData,
-  formatOutput,
-  Format
-} from 'dukascopy-core';
+
 import { progressBar } from './progress';
 import { outputFile } from 'fs-extra';
 import { cliConfig, isValid, validationErrors } from './config';
 import { printHeader, printErrors, printSucess, printDivider } from './printer';
+import {
+  Format,
+  normaliseDates,
+  generateUrls,
+  BufferFetcher,
+  processData,
+  formatOutput
+} from 'dukascopy-node';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const chalk = require('chalk');
 

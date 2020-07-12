@@ -1288,11 +1288,12 @@
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/node-fetch@^2.1.7":
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/@types/node-fetch/-/node-fetch-2.5.3.tgz#b84127facd93642b1fb6439bc630ba0612e3ec50"
-  integrity sha512-X3TNlzZ7SuSwZsMkb5fV7GrPbVKvHc2iwHmslb8bIxRKWg2iqkfm3F/Wd79RhDpOXR7wCtKAwc5Y2JE6n/ibyw==
+  version "2.5.7"
+  resolved "https://registry.yarnpkg.com/@types/node-fetch/-/node-fetch-2.5.7.tgz#20a2afffa882ab04d44ca786449a276f9f6bbf3c"
+  integrity sha512-o2WVNf5UhWRkxlf6eq+jMZDu7kjgpgJfl4xVNlvryc95O/6F2ld8ztKX+qu+Rjyet93WAWm5LjeX9H5FGkODvw==
   dependencies:
     "@types/node" "*"
+    form-data "^3.0.0"
 
 "@types/node@*":
   version "12.12.8"
@@ -2141,7 +2142,7 @@ columnify@^1.5.4:
     strip-ansi "^3.0.0"
     wcwidth "^1.0.0"
 
-combined-stream@^1.0.6, combined-stream@~1.0.6:
+combined-stream@^1.0.6, combined-stream@^1.0.8, combined-stream@~1.0.6:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/combined-stream/-/combined-stream-1.0.8.tgz#c3d45a8b34fd730631a110a8a2520682b31d5a7f"
   integrity sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==
@@ -3036,10 +3037,10 @@ fast-levenshtein@~2.0.6:
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
-fastest-validator@^0.6.17:
-  version "0.6.19"
-  resolved "https://registry.yarnpkg.com/fastest-validator/-/fastest-validator-0.6.19.tgz#5522cf29a13090df71862c7df4b29d1f49165a91"
-  integrity sha512-U+hjn/Au+sgGfrwb26t26hywrItCdkpQ7VEJPY7Ey0FU2mnH/L4xhcs0R9Bd+y57aUKlasC3W4J6t8fOyXji6Q==
+fastest-validator@0.6.17:
+  version "0.6.17"
+  resolved "https://registry.yarnpkg.com/fastest-validator/-/fastest-validator-0.6.17.tgz#15a8eef2c7c5a3268e4689dfd4a4b6553f0ff8b1"
+  integrity sha512-XkdrjNbXwFJSn8s8dceofnA2ZHppfXtbTHP2dO2jXHZfm2GWP55VQBx/0UKWxfFfdWqmJv4ppBzuf342h5bahw==
 
 fb-watchman@^2.0.0:
   version "2.0.0"
@@ -3176,6 +3177,15 @@ forever-agent@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
   integrity sha1-+8cfDEGt6zf5bFd60e1C2P2sypE=
+
+form-data@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/form-data/-/form-data-3.0.0.tgz#31b7e39c85f1355b7139ee0c647cf0de7f83c682"
+  integrity sha512-CKMFDglpbMi6PyN+brwB9Q/GOw0eAnsrEZDgcsH5Krhz5Od/haKHAX0NmQfha2zPPz0JpWzA7GJHGSnvCRLWsg==
+  dependencies:
+    asynckit "^0.4.0"
+    combined-stream "^1.0.8"
+    mime-types "^2.1.12"
 
 form-data@~2.3.2:
   version "2.3.3"
@@ -6042,9 +6052,9 @@ punycode@^2.1.0, punycode@^2.1.1:
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
 python-struct@^1.0.6:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/python-struct/-/python-struct-1.1.2.tgz#70da23f887587c77430153ec6249fabde8909ab4"
-  integrity sha512-LJOsUEBLcfV5813MY6ilE1vsz0Yoan+ttdYi+vkgu89nJICmFlMnjQd4Qjzs3dGPKIsC2D1w6CQM1yFsL9mXtA==
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/python-struct/-/python-struct-1.1.3.tgz#f0ff1845ec520408e94dd8492bfd770aad26cae3"
+  integrity sha512-UsI/mNvk25jRpGKYI38Nfbv84z48oiIWwG67DLVvjRhy8B/0aIK+5Ju5WOHgw/o9rnEmbAS00v4rgKFQeC332Q==
   dependencies:
     long "^4.0.0"
 

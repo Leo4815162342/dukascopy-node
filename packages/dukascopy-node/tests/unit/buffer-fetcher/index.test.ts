@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { promisify } from 'util';
-import { BufferFetcher, URL_ROOT } from '../../../src';
+import { BufferFetcher } from '../../../src/buffer-fetcher';
+import { URL_ROOT } from '../../../src/url-generator';
 
 BufferFetcher.prototype.fetch = async (urls: string[]) => {
   const buffers = await Promise.all(

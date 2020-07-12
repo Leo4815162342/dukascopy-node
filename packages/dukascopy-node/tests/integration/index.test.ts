@@ -6,20 +6,23 @@
 
 import fs from 'fs';
 import { promisify } from 'util';
-import * as core from 'dukascopy-core';
-import * as lib from '../src';
+import * as lib from '../../src';
+import * as configValidator from '../../src/config-validator';
+import * as dataProcessor from '../../src/processor';
+import { URL_ROOT } from '../../src/url-generator';
+import { BufferFetcher } from '../../src/buffer-fetcher';
+import { getTestCases, getConfigDescription } from '../utils';
+import { Config } from '../../src/config';
+import { PromiseType } from 'utility-types';
 import { advanceTo, clear } from 'jest-date-mock';
 
-import { PromiseType } from 'utility-types';
-import { getTestCases, getConfigDescription } from './utils';
 const getHistoricRatesFn = jest.spyOn(lib, 'getHistoricRates');
-const validateConfigFn = jest.spyOn(core, 'validateConfig');
-const processDataFn = jest.spyOn(core, 'processData');
-const { BufferFetcher } = core;
+const validateConfigFn = jest.spyOn(configValidator, 'validateConfig');
+const processDataFn = jest.spyOn(dataProcessor, 'processData');
 
 BufferFetcher.prototype.fetch = async (urls: string[]) => {
   const buffers = await Promise.all(
-    urls.map(url => promisify(fs.readFile)(url.replace(core.URL_ROOT, './../../dummy-data')))
+    urls.map(url => promisify(fs.readFile)(url.replace(URL_ROOT, './../../dummy-data')))
   );
 
   return urls.map((_, i) => ({
@@ -29,7 +32,7 @@ BufferFetcher.prototype.fetch = async (urls: string[]) => {
 };
 
 type TestCase = {
-  config: core.Config;
+  config: Config;
   expectedOutput: PromiseType<ReturnType<typeof lib.getHistoricRates>>;
 };
 
@@ -83,7 +86,7 @@ describe('getHistoricRates', () => {
     clear();
   });
 
-  const testCases = getTestCases<TestCase>('./tests/cases');
+  const testCases = getTestCases<TestCase>('./tests/integration/cases');
   testCases.forEach(({ content, path }) => {
     const [fileName] = path.split('/').reverse();
     if (path.indexOf('fail_') >= 0) {
