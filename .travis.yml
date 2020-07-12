@@ -4,7 +4,7 @@ node_js:
 
 before_install:
   - yarn
-  - yarn workspace dukascopy-core run build
+  - yarn workspace dukascopy-node run build
 
 script:
   - yarn workspaces run type-check

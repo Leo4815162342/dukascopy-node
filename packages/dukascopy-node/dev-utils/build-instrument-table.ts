@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { promisify } from 'util';
 
-import { instruments, InstrumentMetaData } from 'dukascopy-core';
+import { instrumentMetaData, InstrumentData } from '../src/config/instruments-metadata';
 
 const groupMap = [
   { group: 'Forex', subs: ['FX_CROSSES', 'FX_MAJORS', 'FX_METALS'] },
@@ -26,7 +26,7 @@ const groupMap = [
   { group: 'Crypto', subs: ['VCCY'] }
 ];
 
-const groups = Object.entries(instruments).reduce(
+const groups = Object.entries(instrumentMetaData).reduce(
   (all, [id, instrument]) => {
     const idx = groupMap.findIndex(({ subs }) => subs.includes(instrument.group));
 
@@ -34,7 +34,7 @@ const groups = Object.entries(instruments).reduce(
 
     return all;
   },
-  groupMap.map(({ group }) => ({ group, list: [] as Array<InstrumentMetaData & { id: string }> }))
+  groupMap.map(({ group }) => ({ group, list: [] as Array<InstrumentData & { id: string }> }))
 );
 
 (async () => {
