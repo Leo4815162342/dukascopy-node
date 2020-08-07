@@ -1,6 +1,6 @@
 <h1>Dukascopy tools</h1>
 
-A set of libraries and tools for downloading histortical market data (OHLC) from dukascopy.com
+A set of libraries and tools for downloading histortical market data (OHLC) with resolution ranging from `tick` to `daily` timeframes
 
 
 
