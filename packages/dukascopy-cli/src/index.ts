@@ -4,16 +4,12 @@ import { resolve } from 'path';
 
 import { progressBar } from './progress';
 import { outputFile } from 'fs-extra';
-import { cliConfig, isValid, validationErrors } from './config';
-import { printHeader, printErrors, printSucess, printDivider } from './printer';
-import {
-  Format,
-  normaliseDates,
-  generateUrls,
-  BufferFetcher,
-  processData,
-  formatOutput
-} from 'dukascopy-node';
+import { cliConfig, CliConfig } from './config';
+import { printHeader, printSucess, printDivider, printErrors } from './printer';
+import { Format, DukascopyBase, validator, schema, Output } from 'dukascopy-node';
+
+import { cliConfigDefault } from './config';
+
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const chalk = require('chalk');
 
@@ -22,12 +18,7 @@ const {
   dates: { from: fromDate, to: toDate },
   timeframe,
   priceType,
-  utcOffset,
-  volumes,
-  ignoreFlats,
   format,
-  batchSize,
-  pauseBetweenBatchesMs,
   dir,
   silent
 } = cliConfig;
@@ -38,65 +29,52 @@ const fileName = `${instrument}-${timeframe}${
 const folderPath = resolve(process.cwd(), dir);
 const filePath = resolve(folderPath, fileName);
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-(async () => {
-  try {
-    if (isValid) {
-      const [startDate, endDate] = normaliseDates({
-        instrument,
-        startDate: fromDate,
-        endDate: toDate,
-        timeframe,
-        utcOffset
-      });
+const cliCheck = validator.compile({
+  ...schema,
+  ...{
+    dir: { type: 'string', required: true },
+    silent: { type: 'boolean', required: true }
+  }
+} as typeof schema);
 
-      silent ? printDivider() : printHeader(cliConfig, startDate, endDate);
+class DukascopyCli extends DukascopyBase<CliConfig> {
+  private val: number;
 
-      const urls = generateUrls({ instrument, timeframe, priceType, startDate, endDate });
+  defaultConfig = cliConfigDefault;
+  validationFn = cliCheck;
 
-      let val = 0;
+  constructor() {
+    super();
+    this.val = 0;
+  }
+  onFetchStart(urls: string[]) {
+    silent ? printDivider() : printHeader(cliConfig);
+    progressBar.start(urls.length, this.val);
+  }
 
-      progressBar.start(urls.length, val);
+  onItemFetch() {
+    this.val += 1;
+    progressBar.update(this.val);
+  }
 
-      const bufferFetcher = new BufferFetcher({
-        batchSize,
-        pauseBetweenBatchesMs,
-        notifyOnItemFetchFn: (): void => {
-          val += 1;
-          progressBar.update(val);
-        }
-      });
+  async onFetchSuccess(data: Output) {
+    const savePayload = format === 'csv' ? data : JSON.stringify(data, null, 2);
 
-      const bufferredData = await bufferFetcher.fetch(urls);
+    await outputFile(filePath, savePayload);
 
-      const processedData = processData({
-        instrument,
-        requestedTimeframe: timeframe,
-        bufferObjects: bufferredData,
-        priceType,
-        volumes,
-        ignoreFlats
-      });
+    progressBar.stop();
+    printSucess(`√ File saved: ${chalk.bold(fileName)}`);
+  }
 
-      const [startDateMs, endDateMs] = [+startDate, +endDate];
-
-      const filteredData = processedData.filter(
-        ([timestamp]) => timestamp && timestamp >= startDateMs && timestamp < endDateMs
-      );
-
-      const formatted = formatOutput({ processedData: filteredData, timeframe, format });
-
-      const savePayload = format === 'csv' ? formatted : JSON.stringify(formatted, null, 2);
-
-      await outputFile(filePath, savePayload);
-
-      progressBar.stop();
-
-      printSucess(`√ File saved: ${chalk.bold(fileName)}`);
-    } else {
-      printErrors('Search config invalid:', validationErrors);
-    }
-  } catch (err) {
+  onFetchFail(err: Error) {
     printErrors('Something went wrong:', err.message || JSON.stringify(err));
   }
-})();
+
+  onInvalidConfig(validationErrors: string[]) {
+    printErrors('Search config invalid:', validationErrors);
+  }
+}
+
+const { getHistoricRates } = new DukascopyCli();
+
+getHistoricRates(cliConfig);

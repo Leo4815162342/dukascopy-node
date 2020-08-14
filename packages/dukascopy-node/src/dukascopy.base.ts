@@ -16,19 +16,25 @@ import {
   Config
 } from './config';
 import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
+import { BufferObject } from './buffer-fetcher/types';
 
-export class DukascopyBase<T extends DefaultConfig> {
-  constructor(private defaultConfig: T, private validationFn: ValidationFn) {
+export abstract class DukascopyBase<ExtraConfig = {}> {
+  constructor() {
     this.getHistoricRates = this.getHistoricRates.bind(this);
   }
 
-  public async getHistoricRates(config: ConfigArrayItem): Promise<ArrayItem[]>;
-  public async getHistoricRates(config: ConfigArrayTickItem): Promise<ArrayTickItem[]>;
-  public async getHistoricRates(config: ConfigJsonItem): Promise<JsonItem[]>;
-  public async getHistoricRates(config: ConfigJsonTickItem): Promise<JsonItemTick[]>;
-  public async getHistoricRates(config: ConfigCsvItem): Promise<string>;
-  public async getHistoricRates(config: Config): Promise<Output>;
-  public async getHistoricRates(config: Config): Promise<Output> {
+  abstract defaultConfig: DefaultConfig;
+  abstract validationFn: ValidationFn;
+
+  public async getHistoricRates(config: ExtraConfig & ConfigArrayItem): Promise<ArrayItem[]>;
+  public async getHistoricRates(
+    config: ExtraConfig & ConfigArrayTickItem
+  ): Promise<ArrayTickItem[]>;
+  public async getHistoricRates(config: ExtraConfig & ConfigJsonItem): Promise<JsonItem[]>;
+  public async getHistoricRates(config: ExtraConfig & ConfigJsonTickItem): Promise<JsonItemTick[]>;
+  public async getHistoricRates(config: ExtraConfig & ConfigCsvItem): Promise<string>;
+  public async getHistoricRates(config: ExtraConfig & Config): Promise<Output>;
+  public async getHistoricRates(config: ExtraConfig & Config): Promise<Output> {
     const fullConfig = { ...this.defaultConfig, ...config };
 
     const { isValid, validationErrors } = validateConfig(fullConfig, this.validationFn);
@@ -66,9 +72,15 @@ export class DukascopyBase<T extends DefaultConfig> {
       notifyOnItemFetchFn: this.onItemFetch
     });
 
-    this.onFetchStart && this.onFetchStart(fullConfig);
+    this.onFetchStart && this.onFetchStart(urls);
 
-    const bufferredData = await bufferFetcher.fetch(urls);
+    let bufferredData = [] as BufferObject[];
+
+    try {
+      bufferredData = await bufferFetcher.fetch(urls);
+    } catch (err) {
+      this.onFetchFail && this.onFetchFail(err);
+    }
 
     const processedData = processData({
       instrument,
@@ -87,18 +99,17 @@ export class DukascopyBase<T extends DefaultConfig> {
 
     const formattedData = formatOutput({ processedData: filteredData, format, timeframe });
 
-    this.onFetchSuccess && this.onFetchSuccess();
+    this.onFetchSuccess && this.onFetchSuccess(formattedData);
 
     return formattedData;
   }
 
-  public onFetchStart?(config: T & Config): void;
+  public onFetchStart?(urls: string[]): void;
 
   public onItemFetch?(url: string): void;
 
-  public onFetchSuccess?(): void;
+  public onFetchSuccess?(output: Output): void;
+  public onFetchFail?(error: Error): void;
 
-  public onInvalidConfig?(validationErrors: string[]): void {
-    throw { validationErrors };
-  }
+  public onInvalidConfig?(validationErrors: string[]): void;
 }

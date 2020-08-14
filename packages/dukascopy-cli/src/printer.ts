@@ -1,4 +1,4 @@
-import { CliConfig } from './types';
+import { CliConfigFull } from './config';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const chalk = require('chalk');
 
@@ -12,11 +12,7 @@ export function printDivider(): void {
   log(chalk.gray('----------------------------------------------------'));
 }
 
-export function printHeader(
-  searchConfig: CliConfig,
-  adjustedStartDate: Date,
-  adjustedEndDate: Date
-): void {
+export function printHeader(searchConfig: CliConfigFull): void {
   const {
     instrument,
     timeframe,
@@ -24,7 +20,8 @@ export function printHeader(
     utcOffset,
     volumes,
     ignoreFlats,
-    format
+    format,
+    dates: { from, to }
   } = searchConfig;
 
   printDivider();
@@ -32,8 +29,8 @@ export function printHeader(
   printDivider();
   log('Instrument:    ', chalk.bold(chalk.yellow(instrument)));
   log('Timeframe:     ', chalk.bold(chalk.yellow(timeframe)));
-  log('From date:     ', chalk.bold(chalk.yellow(adjustedStartDate.toISOString())));
-  log('To date:       ', chalk.bold(chalk.yellow(adjustedEndDate.toISOString())));
+  log('From date:     ', chalk.bold(chalk.yellow(from)));
+  log('To date:       ', chalk.bold(chalk.yellow(to)));
   log('Price type:    ', chalk.bold(chalk.yellow(priceType)));
   log('Volumes:       ', chalk.bold(chalk.yellow(volumes)));
   log('UTC Offset:    ', chalk.bold(chalk.yellow(utcOffset)));
