@@ -1,18 +1,19 @@
 #!/usr/bin/env node
 
 import { resolve } from 'path';
+import { progressBar } from './progress';
+import { outputFile } from 'fs-extra';
+import { cliConfig, isValid, validationErrors } from './config';
 import {
+  Format,
   normaliseDates,
   generateUrls,
   BufferFetcher,
   processData,
-  formatOutput,
-  Format
-} from 'dukascopy-core';
-import { progressBar } from './progress';
-import { outputFile } from 'fs-extra';
-import { cliConfig, isValid, validationErrors } from './config';
-import { printHeader, printErrors, printSucess, printDivider } from './printer';
+  formatOutput
+} from 'dukascopy-node';
+import { printDivider, printHeader, printSuccess, printErrors } from './printer';
+
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const chalk = require('chalk');
 
@@ -91,7 +92,7 @@ const filePath = resolve(folderPath, fileName);
 
       progressBar.stop();
 
-      printSucess(`√ File saved: ${chalk.bold(fileName)}`);
+      printSuccess(`√ File saved: ${chalk.bold(fileName)}`);
     } else {
       printErrors('Search config invalid:', validationErrors);
     }

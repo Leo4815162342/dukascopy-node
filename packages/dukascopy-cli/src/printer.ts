@@ -48,7 +48,7 @@ export function printErrors(header: string, errorMessage: string | string[]): vo
   printSpacer();
 }
 
-export function printSucess(text: string): void {
+export function printSuccess(text: string): void {
   printDivider();
   log(chalk.greenBright(text));
   printSpacer();

@@ -1,5 +1,5 @@
 import { program } from 'commander';
-import { validateConfig, schema, validator, Format, Timeframe, Price } from 'dukascopy-core';
+import { Timeframe, Price, Format, schema, validator, validateConfig } from 'dukascopy-node';
 import { CliConfig } from './types';
 
 program

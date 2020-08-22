@@ -1,5 +1,4 @@
-import { Config } from 'dukascopy-core';
-import { getHistoricRates } from '../src';
+import { getHistoricRates, Config } from '../src';
 
 (async () => {
   try {

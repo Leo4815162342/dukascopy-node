@@ -1,26 +1,20 @@
 import {
-  validateConfig,
-  normaliseDates,
-  generateUrls,
-  BufferFetcher,
-  processData,
-  formatOutput,
-  Config,
-  Output,
-  ArrayTickItem,
-  JsonItemTick,
-  JsonItem,
-  ArrayItem
-} from 'dukascopy-core';
-
-import {
-  defaultConfig,
-  ConfigArrayTickItem,
   ConfigArrayItem,
-  ConfigJsonTickItem,
+  ConfigArrayTickItem,
   ConfigJsonItem,
-  ConfigCsvItem
+  ConfigJsonTickItem,
+  ConfigCsvItem,
+  Config,
+  defaultConfig
 } from './config';
+
+import { validateConfig } from './config-validator';
+import { normaliseDates } from './dates-normaliser';
+import { generateUrls } from './url-generator';
+import { BufferFetcher } from './buffer-fetcher';
+import { processData } from './processor';
+import { formatOutput } from './output-formatter';
+import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
 
 export async function getHistoricRates(config: ConfigArrayItem): Promise<ArrayItem[]>;
 export async function getHistoricRates(config: ConfigArrayTickItem): Promise<ArrayTickItem[]>;
