@@ -1,4 +1,4 @@
-import { CliConfigFull } from './config';
+import { CliConfig } from './types';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const chalk = require('chalk');
 
@@ -12,7 +12,11 @@ export function printDivider(): void {
   log(chalk.gray('----------------------------------------------------'));
 }
 
-export function printHeader(searchConfig: CliConfigFull): void {
+export function printHeader(
+  searchConfig: CliConfig,
+  adjustedStartDate: Date,
+  adjustedEndDate: Date
+): void {
   const {
     instrument,
     timeframe,
@@ -20,8 +24,7 @@ export function printHeader(searchConfig: CliConfigFull): void {
     utcOffset,
     volumes,
     ignoreFlats,
-    format,
-    dates: { from, to }
+    format
   } = searchConfig;
 
   printDivider();
@@ -29,8 +32,8 @@ export function printHeader(searchConfig: CliConfigFull): void {
   printDivider();
   log('Instrument:    ', chalk.bold(chalk.yellow(instrument)));
   log('Timeframe:     ', chalk.bold(chalk.yellow(timeframe)));
-  log('From date:     ', chalk.bold(chalk.yellow(from)));
-  log('To date:       ', chalk.bold(chalk.yellow(to)));
+  log('From date:     ', chalk.bold(chalk.yellow(adjustedStartDate.toISOString())));
+  log('To date:       ', chalk.bold(chalk.yellow(adjustedEndDate.toISOString())));
   log('Price type:    ', chalk.bold(chalk.yellow(priceType)));
   log('Volumes:       ', chalk.bold(chalk.yellow(volumes)));
   log('UTC Offset:    ', chalk.bold(chalk.yellow(utcOffset)));
@@ -45,7 +48,7 @@ export function printErrors(header: string, errorMessage: string | string[]): vo
   printSpacer();
 }
 
-export function printSucess(text: string): void {
+export function printSuccess(text: string): void {
   printDivider();
   log(chalk.greenBright(text));
   printSpacer();

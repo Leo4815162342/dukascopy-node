@@ -1,7 +1,3 @@
-import { DukascopyBase } from './dukascopy.base';
-import { defaultConfig } from './config';
-import { defaultSchemaValidationFn } from './config-validator/schema';
-
 export { validator, validateConfig, schema } from './config-validator';
 export { normaliseDates } from './dates-normaliser';
 export { generateUrls, URL_ROOT } from './url-generator';
@@ -17,18 +13,4 @@ export { Price, PriceType } from './config/price-types';
 
 export { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
 
-export { DukascopyBase } from './dukascopy.base';
-
-export class DukascopyNode extends DukascopyBase {
-  defaultConfig = defaultConfig;
-
-  validationFn = defaultSchemaValidationFn;
-
-  onInvalidConfig(validationErrors: string[]): void {
-    throw { validationErrors };
-  }
-}
-
-const { getHistoricRates } = new DukascopyNode();
-
-export { getHistoricRates };
+export { getHistoricRates } from './getHistoricRates';

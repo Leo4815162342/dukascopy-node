@@ -1,45 +1,26 @@
-import { defaultConfig, DefaultConfig, Config } from 'dukascopy-node';
 import { program } from 'commander';
-
-export type CliConfig = { silent: boolean; dir: string };
-
-export type CliConfigFull = Required<Config> & CliConfig;
-
-export type CliConfigDefault = DefaultConfig & CliConfig;
-export const cliConfigDefault: CliConfigDefault = {
-  ...defaultConfig,
-  ...{ silent: false, dir: './download' }
-};
+import { Timeframe, Price, Format, schema, validator, validateConfig } from 'dukascopy-node';
+import { CliConfig } from './types';
 
 program
   .option('-d, --debug', 'Output extra debugging')
-  .option('-s, --silent', 'Hides the search config in the CLI output', cliConfigDefault.silent)
+  .option('-s, --silent', 'Hides the search config in the CLI output', false)
   .requiredOption('-i, --instrument <value>', 'Trading instrument')
   .requiredOption('-from, --date-from <value>', 'From date (yyyy-mm-dd)')
   .requiredOption('-to, --date-to <value>', 'To date (yyyy-mm-dd)')
   .option(
     '-t, --timeframe <value>',
     'Timeframe aggregation (tick, m1, m15, m30, h1, d1, mn1)',
-    cliConfigDefault.timeframe
+    Timeframe.d1
   )
-  .option('-p, --price-type <value>', 'Price type: (bid, ask)', cliConfigDefault.priceType)
-  .option('-utc, --utc-offset <value>', 'UTC offset in minutes', Number, cliConfigDefault.utcOffset)
-  .option('-v, --volumes', 'Include volumes', cliConfigDefault.volumes)
-  .option('-fl, --flats', 'Include flats (0 volumes)', !cliConfigDefault.ignoreFlats)
-  .option('-f, --format <value>', 'Output format (csv, json, array)', cliConfigDefault.format)
-  .option('-dir, --directory <value>', 'Download directory', cliConfigDefault.dir)
-  .option(
-    '-bs, --batch-size <value>',
-    'Batch size of downloaded artifacts',
-    Number,
-    cliConfigDefault.batchSize
-  )
-  .option(
-    '-bp, --batch-pause <value>',
-    'Pause between batches in ms',
-    Number,
-    cliConfigDefault.pauseBetweenBatchesMs
-  );
+  .option('-p, --price-type <value>', 'Price type: (bid, ask)', Price.bid)
+  .option('-utc, --utc-offset <value>', 'UTC offset in minutes', Number, 0)
+  .option('-v, --volumes', 'Include volumes', false)
+  .option('-fl, --flats', 'Include flats (0 volumes)', false)
+  .option('-f, --format <value>', 'Output format (csv, json, array)', Format.json)
+  .option('-dir, --directory <value>', 'Download directory', './download')
+  .option('-bs, --batch-size <value>', 'Batch size of downloaded artifacts', Number, 10)
+  .option('-bp, --batch-pause <value>', 'Pause between batches in ms', Number, 1000);
 
 program.parse(process.argv);
 
@@ -47,7 +28,7 @@ const options = program.opts();
 
 if (program.debug) console.log(options);
 
-export const cliConfig: CliConfigFull = {
+export const cliConfig: CliConfig = {
   instrument: options.instrument,
   dates: {
     from: options.dateFrom,
@@ -64,3 +45,15 @@ export const cliConfig: CliConfigFull = {
   batchSize: options.batchSize,
   pauseBetweenBatchesMs: options.batchPause
 };
+
+const cliValidationSchema = {
+  ...schema,
+  ...{
+    dir: { type: 'string', required: true },
+    silent: { type: 'boolean', required: true }
+  }
+} as typeof schema;
+
+const cliCheck = validator.compile(cliValidationSchema);
+
+export const { isValid, validationErrors } = validateConfig(cliConfig, cliCheck);
