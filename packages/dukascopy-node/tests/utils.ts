@@ -1,7 +1,12 @@
 import { readdirSync } from 'fs';
 import { Config } from '../src/config';
 
-function getTestCases<T>(folder: string) {
+function getTestCases<T>(
+  folder: string
+): {
+  path: string;
+  content: T;
+}[] {
   const projectPath = process.cwd();
 
   const paths = readdirSync(folder);

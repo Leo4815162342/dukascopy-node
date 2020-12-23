@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { promisify } from 'util';
 import { BufferFetcher } from '../../../src/buffer-fetcher';
+import { BufferObject } from '../../../src/buffer-fetcher/types';
 import { URL_ROOT } from '../../../src/url-generator';
 
 BufferFetcher.prototype.fetch = async (urls: string[]) => {
@@ -22,7 +23,7 @@ const urls = [
 describe('Buffer fetcher', () => {
   const bf = new BufferFetcher();
 
-  let data: any;
+  let data: BufferObject[];
 
   it('Calls buffer fetcher function once', async () => {
     const spy = jest.spyOn(bf, 'fetch');

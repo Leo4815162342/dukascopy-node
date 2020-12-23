@@ -4,7 +4,6 @@
 // m1, m30: EURUSD, bid, 2019-02-04 - 2019-02-06
 // h1, d1, mn1: EURUSD, bid, 2019-01-01, 2019-03-01
 
-
 import fs from 'fs';
 import { promisify } from 'util';
 import { getHistoricRates } from '../../src';

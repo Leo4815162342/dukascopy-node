@@ -11,11 +11,13 @@
   "scripts": {
     "test": "yarn jest",
     "test:call": "yarn ts-node dev-utils/test-call.ts",
-    "type-check": "yarn tsc src/index.ts --noEmit",
-    "lint": "yarn eslint 'src/**/*.{js,ts}'",
     "build": "yarn rollup -c",
-    "pre-commit": "yarn type-check && yarn lint",
-    "build-instruments": "yarn ts-node dev-utils/generate-instruments.ts"
+    "build-instruments": "yarn ts-node dev-utils/generate-instruments.ts",
+    "precommit": "lint-staged",
+    "prepush": "yarn type-check",
+    "type-check": "tsc --pretty --noEmit",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext ts --ext tsx --ext js"
   },
   "author": "leonid.pyrlia",
   "license": "MIT",
@@ -43,7 +45,14 @@
   },
   "devDependencies": {
     "@types/node-fetch": "^2.1.7",
-    "jest-date-mock": "^1.0.8"
+    "jest-date-mock": "^1.0.8",
+    "lint-staged": "^10.5.3"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,js,json}": [
+      "yarn lint",
+      "yarn format"
+    ]
   },
   "jest": {
     "automock": false,

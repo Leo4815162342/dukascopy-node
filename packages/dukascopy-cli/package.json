@@ -10,12 +10,14 @@
     "dukascopy-cli": "./bin/index.js"
   },
   "scripts": {
-    "type-check": "yarn tsc src/index.ts --noEmit",
-    "lint": "yarn eslint 'src/**/*.{js,ts}'",
     "build": "rollup -c",
-    "pre-commit": "yarn type-check && yarn lint",
     "test": "echo 'tests for CLI go here'",
-    "test:call": "yarn ts-node src/index.ts -i eurusd -from 2019-02-01 -to 2020-02-09 -t d1 -f csv -v -fl"
+    "test:call": "yarn ts-node src/index.ts -i eurusd -from 2019-02-01 -to 2020-02-09 -t d1 -f csv -v -fl",
+    "precommit": "lint-staged",
+    "prepush": "yarn type-check",
+    "type-check": "tsc --pretty --noEmit",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext ts --ext tsx --ext js"
   },
   "keywords": [
     "cli",
@@ -39,6 +41,13 @@
   "devDependencies": {
     "@types/cli-progress": "^1.8.1",
     "@types/fs-extra": "^8.0.1",
+    "lint-staged": "^10.5.3",
     "rollup-plugin-preserve-shebangs": "^0.2.0"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,js,json}": [
+      "yarn lint",
+      "yarn format"
+    ]
   }
 }

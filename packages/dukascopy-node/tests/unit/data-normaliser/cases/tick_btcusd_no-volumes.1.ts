@@ -10,6 +10,10 @@ const input = {
   volumes: false
 };
 
-const expectedOutput = [[1, 10000, 20000], [101, 11000, 22000], [201, 11100, 22200]];
+const expectedOutput = [
+  [1, 10000, 20000],
+  [101, 11000, 22000],
+  [201, 11100, 22200]
+];
 
 export { input, expectedOutput };

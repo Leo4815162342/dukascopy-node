@@ -2,6 +2,7 @@ const typescript = require('@rollup/plugin-typescript');
 const commonjs = require('@rollup/plugin-commonjs');
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const pkg = require('./package.json');
+
 module.exports = {
   input: 'src/index.ts',
   output: [

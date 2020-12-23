@@ -5,5 +5,5 @@ module.exports = {
   testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|js)$',
   moduleFileExtensions: ['ts', 'js'],
   testPathIgnorePatterns: ['<rootDir>[/\\\\](node_modules|bin|lib|build)[/\\\\]'],
-  transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|ts)$'],
+  transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|ts)$']
 };

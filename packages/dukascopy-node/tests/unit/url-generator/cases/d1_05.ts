@@ -6,6 +6,6 @@ const input = {
   priceType: 'bid'
 };
 
-const expectedOutput: any[] = [];
+const expectedOutput: unknown[] = [];
 
 export { input, expectedOutput };

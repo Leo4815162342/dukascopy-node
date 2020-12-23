@@ -5,6 +5,6 @@ const input = {
   timeframe: 'm1'
 };
 
-const expectedOutput: any[] = [];
+const expectedOutput: unknown[] = [];
 
 export { input, expectedOutput };

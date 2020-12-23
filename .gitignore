@@ -1,6 +1,7 @@
 lib
 bin
 download
+.vscode
 .cache/
 ### Node ###
 # Logs

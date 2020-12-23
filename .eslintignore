@@ -1,4 +1,10 @@
-node_modules
+**/node_modules/*
+**/lib/*
+**/bin/*
+**/coverage/*
+**/build/*
+
 lib
-build
 bin
+coverage
+node_modules

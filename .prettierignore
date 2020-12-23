@@ -1,1 +1,11 @@
 README.md
+coverage
+lib
+bin
+build
+
+**/node_modules/*
+**/lib/*
+**/bin/*
+**/coverage/*
+**/build/*

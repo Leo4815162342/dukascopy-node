@@ -2,8 +2,6 @@ import { splitArrayInChunks, wait } from '../utils/general';
 import fetch from 'node-fetch';
 import { NotifyFn, BufferFetcherInput, BufferObject } from './types';
 
-const a = 12;
-
 export class BufferFetcher {
   batchSize: number;
   pauseBetweenBatchesMs: number;
