@@ -1,0 +1,16 @@
+name: cd/cd
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn
+      - run: yarn workspace dukascopy-node run build
+      - run: yarn workspaces run type-check
+      - run: yarn workspaces run test
