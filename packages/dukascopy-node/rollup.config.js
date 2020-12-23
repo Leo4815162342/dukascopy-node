@@ -1,17 +1,19 @@
-const typescript = require('rollup-plugin-typescript2');
-const commonjs = require('rollup-plugin-commonjs');
-const nodeResolve = require('rollup-plugin-node-resolve');
+const typescript = require('@rollup/plugin-typescript');
+const commonjs = require('@rollup/plugin-commonjs');
+const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const pkg = require('./package.json');
 module.exports = {
   input: 'src/index.ts',
   output: [
     {
       file: pkg.main,
-      format: 'cjs'
+      format: 'cjs',
+      sourcemap: true
     },
     {
       file: pkg.module,
-      format: 'es'
+      format: 'es',
+      sourcemap: true
     }
   ],
   external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
@@ -20,7 +22,6 @@ module.exports = {
     commonjs(),
     typescript({
       tsconfig: './tsconfig.json',
-      tsconfigOverride: { compilerOptions: { module: 'es2015' } },
       typescript: require('typescript')
     })
   ]
