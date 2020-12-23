@@ -26,8 +26,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "lerna run --concurrency 1 --stream prepush --since HEAD --exclude-dependents",
-      "pre-commit": "lerna run --concurrency 1 --stream precommit --since HEAD --exclude-dependents"
+      "pre-commit": "lerna run --concurrency 1 --stream precommit --since master --exclude-dependents",
+      "pre-push": "lerna run --concurrency 1 --stream prepush --since master --exclude-dependents"
     }
   }
 }
