@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { getHistoricRates, Config } from '../src';
 
 (async () => {

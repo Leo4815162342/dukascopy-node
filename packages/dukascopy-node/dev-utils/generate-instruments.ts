@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import fs from 'fs';
 import { promisify } from 'util';
 import { instrumentMetaData } from '../src/config/instruments-metadata';

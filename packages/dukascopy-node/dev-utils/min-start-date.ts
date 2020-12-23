@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import fetch from 'node-fetch';
 
 import { pad } from '../src/utils/general';
@@ -30,7 +31,7 @@ function getDateString(timestamp: number) {
 
 // https://datafeed.dukascopy.com/datafeed/ABCUSUSD/2018/BID_candles_day_1.bi5
 
-async function getMinStartDate(instrument: string) {
+async function getMinStartDate(instrument: string): Promise<string> {
   console.log(`Fetching start date: ${instrument}`);
   let start = +new Date('1970-01-01');
   let end = +new Date().setHours(0, 0, 0, 0);
@@ -68,11 +69,11 @@ async function getMinStartDate(instrument: string) {
   return getDateString(minDate);
 }
 
-async function getMinYear(instrment: string) {
+async function getMinYear(instrment: string): Promise<number> {
   let start = 1970;
   let end = new Date().getFullYear();
 
-  let minYear: number;
+  let minYear = 0;
 
   console.log('Start min year search', instrment);
 
