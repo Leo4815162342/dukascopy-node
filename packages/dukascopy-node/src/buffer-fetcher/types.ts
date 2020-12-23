@@ -3,7 +3,7 @@ export interface BufferObject {
   buffer: Buffer;
 }
 
-export type NotifyFn = (downloadedUrl: string) => any;
+export type NotifyFn = (downloadedUrl: string) => void;
 
 export interface BufferFetcherInput {
   batchSize?: number;

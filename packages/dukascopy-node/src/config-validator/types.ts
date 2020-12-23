@@ -5,4 +5,5 @@ export interface ValidationStatus {
   validationErrors: string[];
 }
 
+// eslint-disable-next-line @typescript-eslint/ban-types
 export type ValidationFn = (object: object) => true | ValidationError[];

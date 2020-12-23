@@ -26,6 +26,7 @@ program.parse(process.argv);
 
 const options = program.opts();
 
+// eslint-disable-next-line no-console
 if (program.debug) console.log(options);
 
 export const cliConfig: CliConfig = {

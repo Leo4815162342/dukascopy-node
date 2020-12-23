@@ -47,7 +47,7 @@ const validator = new Validator({
   }
 });
 
-validator.add('dateString', (value: any) => {
+validator.add('dateString', (value: string) => {
   if (!getUTCDateFromString(value)) {
     return validator.makeError(INVALID_DATE_KEY, null, value);
   }
