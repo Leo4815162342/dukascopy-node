@@ -9,15 +9,15 @@
     "lib"
   ],
   "scripts": {
-    "test": "yarn jest",
-    "test:call": "yarn ts-node dev-utils/test-call.ts",
     "build": "yarn rollup -c",
-    "build-instruments": "yarn ts-node dev-utils/generate-instruments.ts",
-    "precommit": "lint-staged",
-    "prepush": "yarn type-check",
+    "test": "yarn jest",
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
-    "lint": "eslint . --ext ts --ext tsx --ext js"
+    "lint": "eslint . --ext ts --ext tsx --ext js",
+    "precommit": "lint-staged",
+    "prepush": "yarn type-check",
+    "build-instruments": "yarn ts-node dev-utils/generate-instruments.ts",
+    "test:call": "yarn ts-node dev-utils/test-call.ts"
   },
   "author": "leonid.pyrlia",
   "license": "MIT",

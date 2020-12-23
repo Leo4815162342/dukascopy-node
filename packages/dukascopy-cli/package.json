@@ -12,12 +12,12 @@
   "scripts": {
     "build": "rollup -c",
     "test": "echo 'tests for CLI go here'",
-    "test:call": "yarn ts-node src/index.ts -i eurusd -from 2019-02-01 -to 2020-02-09 -t d1 -f csv -v -fl",
-    "precommit": "lint-staged",
-    "prepush": "yarn type-check",
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
-    "lint": "eslint . --ext ts --ext tsx --ext js"
+    "lint": "eslint . --ext ts --ext tsx --ext js",
+    "precommit": "lint-staged",
+    "prepush": "yarn type-check",
+    "test:call": "yarn ts-node src/index.ts -i eurusd -from 2019-02-01 -to 2020-02-09 -t d1 -f csv -v -fl"
   },
   "keywords": [
     "cli",
