@@ -9,3 +9,6 @@ build
 **/bin/*
 **/coverage/*
 **/build/*
+
+*.html
+*.md
