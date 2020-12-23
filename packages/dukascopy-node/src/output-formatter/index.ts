@@ -84,6 +84,8 @@ export function formatOutput({
         const name = bodyHeaders[i];
         all[name] = item;
         return all;
+        // TODO: fix typing here
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
       }, {} as any);
     });
     return data;
@@ -95,5 +97,5 @@ export function formatOutput({
     return csv;
   }
 
-  return (processedData as any) as ArrayTickItem[] | ArrayItem[];
+  return (processedData as unknown) as ArrayTickItem[] | ArrayItem[];
 }
