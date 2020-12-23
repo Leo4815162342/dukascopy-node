@@ -13,8 +13,8 @@
     "build": "rollup -c",
     "test": "echo 'tests for CLI go here'",
     "type-check": "tsc --pretty --noEmit",
-    "format": "prettier --write .",
-    "lint": "eslint . --ext ts --ext tsx --ext js",
+    "format": "prettier --config ../../.prettierrc --ignore-path ../../.prettierignore --write .",
+    "lint": "eslint -c ../../.eslintrc.json --ignore-path ../../.eslintignore . --ext ts --ext tsx --ext js",
     "precommit": "lint-staged",
     "prepush": "yarn type-check",
     "test:call": "yarn ts-node src/index.ts -i eurusd -from 2019-02-01 -to 2020-02-09 -t d1 -f csv -v -fl"
