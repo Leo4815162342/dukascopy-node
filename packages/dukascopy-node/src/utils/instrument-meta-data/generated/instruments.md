@@ -1,16 +1,47 @@
-### Bonds (CFD) 
+* [Bonds (CFD) ](#bnd_cfd)
+* [Crypto (CFD) ](#vccy)
+* [Agricultural ](#cmd_agricultural)
+* [Energy ](#cmd_energy)
+* [Metals ](#cmd_metals)
+* [US ](#etf_cfd_us)
+* [Crosses ](#fx_crosses)
+* [Majors ](#fx_majors)
+* [Metals ](#fx_metals)
+* [America ](#idx_america)
+* [Asia / Pacific ](#idx_asia)
+* [Europe ](#idx_europe)
+* [Austria 🇦🇹](#austria)
+* [Belgium 🇧🇪](#belgium)
+* [Denmark 🇩🇰](#denmark)
+* [Finland 🇫🇮](#finland)
+* [France 🇫🇷](#france)
+* [Germany 🇩🇪](#germany)
+* [Hong Kong 🇭🇰](#hong kong)
+* [Japan 🇯🇵](#japan)
+* [Netherlands 🇳🇱](#netherlands)
+* [Norway 🇳🇴](#norway)
+* [Portugal 🇵🇹](#portugal)
+* [Spain 🇪🇸](#spain)
+* [Sweden 🇸🇪](#sweden)
+* [Switzerland 🇨🇭](#switzerland)
+* [UK 🇬🇧](#uk)
+* [US 🇺🇸](#us)
+<h3 id="bnd_cfd">Bonds (CFD) </h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`BUNDTREUR`|BUND.TR/EUR|Euro Bund|May 2, 2016, 6 AM|May 2, 2016|May 1, 2016|Jan 1, 2016|
 |`UKGILTTRGBP`|UKGILT.TR/GBP|UK Long Gilt|Dec 26, 2017, 5 AM|Dec 26, 2017|Dec 1, 2017|Jan 1, 2017|
 |`USTBONDTRUSD`|USTBOND.TR/USD|US T-Bond|Jan 1, 2000, 12 AM|Jan 4, 2018|Dec 1, 2017|Jan 1, 2017|
-### Crypto (CFD) 
+<h3 id="vccy">Crypto (CFD) </h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`BTCUSD`|BTC/USD|Bitcoin vs US Dollar|May 7, 2017, 11 PM|May 7, 2017|May 1, 2017|Jan 1, 2017|
 |`ETHUSD`|ETH/USD|Ether vs US Dollar|Dec 11, 2017, 11 PM|Dec 11, 2017|Dec 1, 2017|Jan 1, 2017|
 |`LTCUSD`|LTC/USD|Litecoin vs US Dollar|Sep 3, 2018, 12 AM|Sep 3, 2018|Sep 1, 2018|Jan 1, 2018|
-### Agricultural 
+<h3 id="cmd_agricultural">Agricultural </h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`COCOACMDUSD`|COCOA.CMD/USD|NY Cocoa|Oct 20, 2017, 12 AM|Oct 20, 2017|Oct 1, 2017|Jan 1, 2017|
@@ -19,18 +50,21 @@
 |`OJUICECMDUSX`|OJUICE.CMD/USX|Orange Juice|Oct 20, 2017, 12 PM|Oct 20, 2017|Oct 1, 2017|Jan 1, 2017|
 |`SOYBEANCMDUSX`|SOYBEAN.CMD/USX|Soybean|Dec 1, 2017, 12 AM|Dec 1, 2017|Dec 1, 2017|Jan 1, 2017|
 |`SUGARCMDUSD`|SUGAR.CMD/USD|London Sugar No.5|Oct 2, 2017, 12 AM|Oct 2, 2017|Oct 1, 2017|Jan 1, 2017|
-### Energy 
+<h3 id="cmd_energy">Energy </h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`DIESELCMDUSD`|DIESEL.CMD/USD|Gas oil|Oct 20, 2017, 8 AM|Oct 20, 2017|Oct 1, 2017|Jan 1, 2017|
 |`BRENTCMDUSD`|BRENT.CMD/USD|US Brent Crude Oil|Dec 2, 2010, 1 AM|Dec 2, 2010|Dec 1, 2010|Jan 1, 2006|
 |`LIGHTCMDUSD`|LIGHT.CMD/USD|US Light Crude Oil|Jan 1, 2013, 5 AM|Sep 23, 2011|Sep 1, 2011|Jan 1, 1983|
 |`GASCMDUSD`|GAS.CMD/USD|Natural Gas|Sep 2, 2012, 10 PM|Aug 20, 2012|Aug 1, 2012|Jan 1, 2012|
-### Metals 
+<h3 id="cmd_metals">Metals </h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`COPPERCMDUSD`|COPPER.CMD/USD|High Grade Copper|Mar 1, 2012, 12 AM|Mar 1, 2012|Mar 1, 2012|Jan 1, 2012|
-### US 
+<h3 id="etf_cfd_us">US </h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`DIAUSUSD`|DIA.US/USD|SPDR Dow Jones® Industrial Average ETF|May 11, 2017, 1 PM|May 11, 2017|May 1, 2017|Jan 1, 2017|
@@ -76,7 +110,8 @@
 |`XLVUSUSD`|XLV.US/USD|Health Care Select Sector SPDR Fund|Nov 15, 2017, 4 PM|Nov 15, 2017|Nov 1, 2017|Jan 1, 2017|
 |`XLYUSUSD`|XLY.US/USD|Consumer Discretionary Select Sector SPDR Fund|Nov 15, 2017, 4 PM|Nov 15, 2017|Nov 1, 2017|Jan 1, 2017|
 |`XOPUSUSD`|XOP.US/USD|SPDR S&P Oil & Gas Explor & Prodtn ETF|Jan 26, 2017, 2 PM|Jan 26, 2017|Jan 1, 2017|Jan 1, 2017|
-### Crosses 
+<h3 id="fx_crosses">Crosses </h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`AUDCAD`|AUD/CAD|Australian Dollar vs Canadian Dollar|Jan 3, 2006, 12 AM|Dec 26, 2005|Jan 1, 2006|Jan 1, 1992|
@@ -133,7 +168,8 @@
 |`USDTRY`|USD/TRY|US Dollar vs Turkish Lira|Mar 13, 2007, 7 AM|Mar 13, 2007|Mar 1, 2007|Jan 1, 1998|
 |`USDZAR`|USD/ZAR|US Dollar vs South African Rand|Oct 13, 1997, 6 PM|Oct 13, 1997|Oct 1, 1997|Jan 1, 1990|
 |`ZARJPY`|ZAR/JPY|South African Rand vs Japanese Yen|Jun 4, 2007, 12 AM|Mar 3, 1999|Mar 1, 1999|Jan 1, 1997|
-### Majors 
+<h3 id="fx_majors">Majors </h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`AUDUSD`|AUD/USD|Australian Dollar vs US Dollar|Aug 3, 2003, 5 PM|Aug 3, 2003|Aug 1, 2003|Jan 1, 1986|
@@ -143,12 +179,14 @@
 |`USDCAD`|USD/CAD|US Dollar vs Canadian Dollar|Aug 3, 2003, 5 PM|Aug 3, 2003|Aug 1, 2003|Jan 1, 1986|
 |`USDCHF`|USD/CHF|US Dollar vs Swiss Franc|May 4, 2003, 8 PM|May 4, 2003|May 1, 2003|Jan 1, 1986|
 |`USDJPY`|USD/JPY|US Dollar vs Japanese Yen|May 4, 2003, 5 PM|May 4, 2003|May 1, 2003|Jan 1, 1986|
-### Metals 
+<h3 id="fx_metals">Metals </h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`XAGUSD`|XAG/USD|Spot silver|Aug 13, 1997, 2 PM|Aug 13, 1997|Aug 1, 1997|Jan 1, 1997|
 |`XAUUSD`|XAU/USD|Spot gold|May 5, 2003, 12 AM|Sep 1, 1999|Sep 1, 1999|Jan 1, 1997|
-### America 
+<h3 id="idx_america">America </h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`DOLLARIDXUSD`|DOLLAR.IDX/USD|US Dollar Index|Dec 1, 2017, 12 AM|Dec 1, 2017|Dec 1, 2017|Jan 1, 2017|
@@ -156,7 +194,8 @@
 |`USATECHIDXUSD`|USATECH.IDX/USD|USA 100 Technical Index|Sep 18, 2011, 9 PM|Sep 18, 2011|Sep 1, 2011|Jan 1, 1990|
 |`USA500IDXUSD`|USA500.IDX/USD|USA 500 Index|Sep 18, 2011, 9 PM|Sep 18, 2011|Sep 1, 2011|Jan 1, 1980|
 |`USSC2000IDXUSD`|USSC2000.IDX/USD|US Small Cap 2000|Jan 1, 2000, 12 AM|Aug 8, 2018|Aug 1, 2018|Jan 1, 2018|
-### Asia / Pacific 
+<h3 id="idx_asia">Asia / Pacific </h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`CHIIDXUSD`|CHI.IDX/USD|China A50 Index|Jul 17, 2017, 7 PM|Jul 17, 2017|Jul 1, 2017|Jan 1, 2017|
@@ -165,7 +204,8 @@
 |`AUSIDXAUD`|AUS.IDX/AUD|Australia 200 Index|Jan 2, 2013, 6 AM|Jan 2, 2013|Jan 1, 2013|Jan 1, 1982|
 |`INDIDXUSD`|IND.IDX/USD|India 50 Index|Dec 1, 2017, 2 AM|Dec 1, 2017|Dec 1, 2017|Jan 1, 2017|
 |`SGDIDXSGD`|SGD.IDX/SGD|Singapore Blue Chip Cash Index|Dec 1, 2017, 12 AM|Dec 1, 2017|Dec 1, 2017|Jan 1, 2017|
-### Europe 
+<h3 id="idx_europe">Europe </h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`FRAIDXEUR`|FRA.IDX/EUR|France 40 Index|Sep 18, 2011, 9 PM|Sep 18, 2011|Sep 1, 2011|Jan 1, 1987|
@@ -176,13 +216,15 @@
 |`CHEIDXCHF`|CHE.IDX/CHF|Switzerland 20 Index|Sep 18, 2011, 9 PM|Sep 18, 2011|Sep 1, 2011|Jan 1, 1992|
 |`NLDIDXEUR`|NLD.IDX/EUR|Netherlands 25 Index|Feb 25, 2013, 9 AM|Feb 27, 2013|Feb 1, 2013|Jan 1, 1999|
 |`PLNIDXPLN`|PLN.IDX/PLN|Poland 20 Index|Dec 1, 2017, 7 AM|Dec 1, 2017|Dec 1, 2017|Jan 1, 2017|
-### Austria 🇦🇹
+<h3 id="austria">Austria 🇦🇹</h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`EBSATEUR`|EBS.AT/EUR|Erste Group Bank AG|Nov 4, 2016, 3 PM|Nov 4, 2016|Jan 1, 2011|Jan 1, 2011|
 |`RBIATEUR`|RBI.AT/EUR|Raiffeisen Bank International AG|Nov 2, 2016, 8 AM|Nov 2, 2016|Jan 1, 2011|Jan 1, 2011|
 |`VOEATEUR`|VOE.AT/EUR|Voestalpine AG|Nov 4, 2016, 3 PM|Nov 4, 2016|Jan 1, 2011|Jan 1, 2011|
-### Belgium 🇧🇪
+<h3 id="belgium">Belgium 🇧🇪</h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`ABIBEEUR`|ABI.BE/EUR|Anheuser-Busch InBev NV|Nov 14, 2016, 4 PM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
@@ -192,7 +234,8 @@
 |`SOLBBEEUR`|SOLB.BE/EUR|Solvay SA|Nov 7, 2016, 8 AM|Nov 7, 2016|Jan 1, 2011|Jan 1, 2011|
 |`UCBBEEUR`|UCB.BE/EUR|UCB SA|Nov 7, 2016, 8 AM|Nov 7, 2016|Jan 1, 2011|Jan 1, 2011|
 |`UMIBEEUR`|UMI.BE/EUR|Umicore SA|Nov 7, 2016, 8 AM|Nov 7, 2016|Jan 1, 2011|Jan 1, 2011|
-### Denmark 🇩🇰
+<h3 id="denmark">Denmark 🇩🇰</h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`CARLBDKDKK`|CARLB.DK/DKK|Carlsberg A/S|Nov 7, 2016, 3 PM|Nov 7, 2016|Jan 1, 2011|Jan 1, 2011|
@@ -203,7 +246,8 @@
 |`NZYMBDKDKK`|NZYMB.DK/DKK|Novozymes A/S|Nov 7, 2016, 3 PM|Nov 7, 2016|Jan 1, 2011|Jan 1, 2011|
 |`PNDORADKDKK`|PNDORA.DK/DKK|Pandora A/S|Nov 8, 2016, 2 PM|Nov 8, 2016|Jan 1, 2011|Jan 1, 2011|
 |`VWSDKDKK`|VWS.DK/DKK|Vestas Wind Systems A/S|Nov 7, 2016, 3 PM|Nov 7, 2016|Jan 1, 2011|Jan 1, 2011|
-### Finland 🇫🇮
+<h3 id="finland">Finland 🇫🇮</h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`ELI1VFIEUR`|ELI1V.FI/EUR|Elisa OYJ|Nov 3, 2016, 8 AM|Nov 3, 2016|Jan 1, 2011|Jan 1, 2011|
@@ -213,7 +257,8 @@
 |`OUT1VFIEUR`|OUT1V.FI/EUR|Outokumpu OYJ|Nov 3, 2016, 8 AM|Nov 3, 2016|Jan 1, 2011|Jan 1, 2011|
 |`STERVFIEUR`|STERV.FI/EUR|Stora Enso OYJ|Nov 3, 2016, 8 AM|Nov 3, 2016|Jan 1, 2011|Jan 1, 2011|
 |`TLS1VFIEUR`|TLS1V.FI/EUR|Telia Company AB|Nov 9, 2016, 9 AM|Nov 9, 2016|Apr 1, 2016|Jan 1, 2016|
-### France 🇫🇷
+<h3 id="france">France 🇫🇷</h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`ACFREUR`|AC.FR/EUR|Accor SA|Aug 11, 2016, 8 AM|Aug 11, 2016|Jan 1, 2011|Jan 1, 2011|
@@ -251,7 +296,8 @@
 |`VIEFREUR`|VIE.FR/EUR|Veolia Environnement SA|Aug 5, 2016, 2 PM|Aug 5, 2016|Jan 1, 2011|Jan 1, 2011|
 |`VIVFREUR`|VIV.FR/EUR|Vivendi SA|Aug 5, 2016, 2 PM|Aug 5, 2016|Jan 1, 2011|Jan 1, 2011|
 |`VKFREUR`|VK.FR/EUR|Vallourec SA|Aug 5, 2016, 2 PM|Aug 5, 2016|Jan 1, 2011|Jan 1, 2011|
-### Germany 🇩🇪
+<h3 id="germany">Germany 🇩🇪</h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`ADSDEEUR`|ADS.DE/EUR|Adidas AG|Mar 13, 2015, 8 AM|Mar 13, 2015|Jan 1, 2011|Jan 1, 2011|
@@ -289,7 +335,8 @@
 |`TUI1DEEUR`|TUI1.DE/EUR|TUI AG|Apr 15, 2015, 7 AM|Apr 15, 2015|Jan 1, 2011|Jan 1, 2011|
 |`VNADEEUR`|VNA.DE/EUR|Vonovia SE|Apr 14, 2015, 7 AM|Apr 14, 2015|Apr 1, 2015|Jan 1, 2015|
 |`VOW3DEEUR`|VOW3.DE/EUR|Volkswagen AG|Apr 14, 2015, 7 AM|Apr 14, 2015|Jan 1, 2011|Jan 1, 2011|
-### Hong Kong 🇭🇰
+<h3 id="hong kong">Hong Kong 🇭🇰</h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`0005HKHKD`|0005.HK/HKD|HSBC Holdings|Jan 2, 2018, 1 AM|Jan 2, 2018|Jan 1, 2018|Jan 1, 2018|
@@ -318,7 +365,8 @@
 |`3333HKHKD`|3333.HK/HKD|China Evergrande Group|Jan 2, 2018, 1 AM|Jan 2, 2018|Jan 1, 2018|Jan 1, 2018|
 |`3968HKHKD`|3968.HK/HKD|China Merchants Bank|Jan 2, 2018, 1 AM|Jan 2, 2018|Jan 1, 2018|Jan 1, 2018|
 |`3988HKHKD`|3988.HK/HKD|Bank of China|Jan 2, 2018, 1 AM|Jan 2, 2018|Jan 1, 2018|Jan 1, 2018|
-### Japan 🇯🇵
+<h3 id="japan">Japan 🇯🇵</h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`2502JPJPY`|2502.JP/JPY|Asahi Group Holdings|Mar 22, 2018, 11 PM|Mar 22, 2018|Mar 1, 2018|Jan 1, 2018|
@@ -377,7 +425,8 @@
 |`9501JPJPY`|9501.JP/JPY|Tokyo Electric Power Company|Jul 3, 2018, 12 AM|Jul 3, 2018|Jul 1, 2018|Jan 1, 2018|
 |`9983JPJPY`|9983.JP/JPY|Fast Retailing|Jul 3, 2018, 12 AM|Jul 3, 2018|Jul 1, 2018|Jan 1, 2018|
 |`9984JPJPY`|9984.JP/JPY|Softbank Group Corp|Aug 14, 2018, 12 AM|Sep 26, 2018|Sep 1, 2018|Jan 1, 2018|
-### Netherlands 🇳🇱
+<h3 id="netherlands">Netherlands 🇳🇱</h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`AGNNLEUR`|AGN.NL/EUR|Aegon NV|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
@@ -396,7 +445,8 @@
 |`UNANLEUR`|UNA.NL/EUR|Unilever NV|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
 |`VPKNLEUR`|VPK.NL/EUR|Koninklijke Vopak NV|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
 |`WKLNLEUR`|WKL.NL/EUR|Wolters Kluwer NV|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
-### Norway 🇳🇴
+<h3 id="norway">Norway 🇳🇴</h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`DNBNONOK`|DNB.NO/NOK|DNB ASA|Nov 14, 2016, 11 AM|Nov 14, 2016|Nov 1, 2011|Jan 1, 2011|
@@ -405,12 +455,14 @@
 |`ORKNONOK`|ORK.NO/NOK|Orkla ASA|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
 |`STLNONOK`|STL.NO/NOK|Statoil ASA|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
 |`TELNONOK`|TEL.NO/NOK|Telenor ASA|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
-### Portugal 🇵🇹
+<h3 id="portugal">Portugal 🇵🇹</h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`EDPPTEUR`|EDP.PT/EUR|EDP - Energias de Portugal SA|Nov 14, 2016, 3 PM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
 |`GALPPTEUR`|GALP.PT/EUR|Galp Energia SGPS SA|Nov 14, 2016, 3 PM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
-### Spain 🇪🇸
+<h3 id="spain">Spain 🇪🇸</h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`ACSESEUR`|ACS.ES/EUR|ACS Actividades de Construccion y Servicios SA|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
@@ -431,7 +483,8 @@
 |`REPESEUR`|REP.ES/EUR|Repsol SA|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
 |`SANESEUR`|SAN.ES/EUR|Banco Santander SA|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
 |`TEFESEUR`|TEF.ES/EUR|Telefonica SA|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
-### Sweden 🇸🇪
+<h3 id="sweden">Sweden 🇸🇪</h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`ABBSESEK`|ABB.SE/SEK|ABB Ltd|Nov 14, 2016, 1 PM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
@@ -454,7 +507,8 @@
 |`TEL2BSESEK`|TEL2B.SE/SEK|Tele2 AB|Nov 7, 2016, 8 AM|Nov 8, 2016|Jan 1, 2011|Jan 1, 2011|
 |`TLSNSESEK`|TLSN.SE/SEK|Telia Company AB|Nov 14, 2016, 4 PM|Nov 14, 2016|Apr 1, 2016|Jan 1, 2016|
 |`VOLVBSESEK`|VOLVB.SE/SEK|Volvo AB|Nov 7, 2016, 8 AM|Nov 7, 2016|Jan 1, 2011|Jan 1, 2011|
-### Switzerland 🇨🇭
+<h3 id="switzerland">Switzerland 🇨🇭</h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`ABBNCHCHF`|ABBN.CH/CHF|ABB Ltd|Jun 16, 2015, 7 AM|Jun 16, 2015|Jan 1, 2011|Jan 1, 2011|
@@ -477,7 +531,8 @@
 |`UBSGCHCHF`|UBSG.CH/CHF|UBS Group AG|Jun 15, 2015, 7 AM|Jun 15, 2015|Nov 1, 2014|Jan 1, 2014|
 |`UHRCHCHF`|UHR.CH/CHF|Swatch Group AG/The|Aug 7, 2015, 3 AM|Aug 7, 2015|Jan 1, 2011|Jan 1, 2011|
 |`ZURNCHCHF`|ZURN.CH/CHF|Zurich Insurance Group AG|Aug 7, 2015, 7 AM|Aug 7, 2015|Jan 1, 2011|Jan 1, 2011|
-### UK 🇬🇧
+<h3 id="uk">UK 🇬🇧</h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`AALGBGBX`|AAL.GB/GBX|Anglo American PLC|Aug 25, 2015, 6 AM|Aug 1, 2016|Jan 1, 2011|Jan 1, 2011|
@@ -560,7 +615,8 @@
 |`WOSGBGBX`|WOS.GB/GBX|Wolseley PLC|Jul 6, 2016, 7 AM|Jul 6, 2016|Jan 1, 2011|Jan 1, 2011|
 |`WPPGBGBX`|WPP.GB/GBX|WPP PLC|Jul 8, 2016, 12 PM|Jul 8, 2016|Jan 1, 2011|Jan 1, 2011|
 |`WTBGBGBX`|WTB.GB/GBX|Whitbread PLC|Jul 6, 2016, 7 AM|Jul 6, 2016|Jan 1, 2011|Jan 1, 2011|
-### US 🇺🇸
+<h3 id="us">US 🇺🇸</h3>
+
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`AUSUSD`|A.US/USD|AGILENT TECHNOLOGIES INC|May 25, 2017, 2 PM|May 25, 2017|May 1, 2017|Jan 1, 2017|

@@ -34,6 +34,10 @@ const flagMap: Record<string, string> = {
 
 (async () => {
   try {
+    const contents = instrumentGroups
+      .map(({ name, id }) => `* [${name} ${flagMap[id] || ''}](#${id.toLowerCase()})`)
+      .join('\n');
+
     const headers = [
       'Instrument id',
       'Name',
@@ -47,9 +51,9 @@ const flagMap: Record<string, string> = {
     const header = headers.map((h, i) => `${!i ? '|' : ''}${h}|`).join('');
     const divider = headers.map((_, i) => `${!i ? '|' : ''}-|`).join('');
 
-    const output = instrumentGroups
+    const instrumentTable = instrumentGroups
       .map(({ id, name, instruments }) => {
-        const groupTitle = `### ${name} ${flagMap[id] || ''}`;
+        const groupTitle = `<h3 id="${id.toLowerCase()}">${name} ${flagMap[id] || ''}</h3>\n`;
 
         const listBody = instruments
           .map(instrumentId => {
@@ -82,7 +86,7 @@ const flagMap: Record<string, string> = {
       })
       .join('\n');
 
-    await saveFile(filePath, output);
+    await saveFile(filePath, [contents, instrumentTable].join('\n'));
     console.log('Created file');
   } catch (err) {
     console.log(err);
