@@ -40,8 +40,8 @@ const flagMap: Record<string, string> = {
   switzerland: '🇨🇭',
   japan: '🇯🇵',
   'hong-kong': '🇭🇰',
-  us: '🇬🇧',
-  uk: '🇺🇸'
+  uk: '🇬🇧',
+  us: '🇺🇸'
 };
 
 (async () => {
