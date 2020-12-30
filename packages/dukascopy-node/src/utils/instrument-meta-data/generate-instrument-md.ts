@@ -35,7 +35,10 @@ const flagMap: Record<string, string> = {
 (async () => {
   try {
     const contents = instrumentGroups
-      .map(({ name, id }) => `* [${name} ${flagMap[id] || ''}](#${id})`)
+      .map(
+        ({ name, id, instruments }) =>
+          `* [${name}${flagMap[id] ? ' ' + flagMap[id] : ''} (${instruments.length})](#${id})`
+      )
       .join('\n');
 
     const headers = [
