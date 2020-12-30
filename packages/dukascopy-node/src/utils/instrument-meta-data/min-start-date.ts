@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import fetch from 'node-fetch';
-import { pad } from '../../src/utils/general';
+import { pad } from '../general';
 
 export interface StartDates {
   startHourForTicks: string;
