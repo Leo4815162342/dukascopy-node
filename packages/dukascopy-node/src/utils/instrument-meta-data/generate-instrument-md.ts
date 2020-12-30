@@ -14,6 +14,18 @@ const saveFile = promisify(fs.writeFile);
 const filePath = path.resolve(__dirname, 'generated', 'instruments.md');
 
 const flagMap: Record<string, string> = {
+  bnd_cfd: '📊',
+  vccy: '₿',
+  cmd_agricultural: '☕',
+  cmd_energy: '⚡',
+  cmd_metals: '⚙️',
+  etf_cfd_us: '📈',
+  fx_crosses: '💱',
+  fx_majors: '💶',
+  fx_metals: '🥇',
+  idx_america: '🌎',
+  idx_asia: '🌏',
+  idx_europe: '🌍',
   austria: '🇦🇹',
   belgium: '🇧🇪',
   denmark: '🇩🇰',
@@ -34,7 +46,7 @@ const flagMap: Record<string, string> = {
 
 (async () => {
   try {
-    const contentListHeader = '### Instruments\n';
+    const contentListHeader = '## Instruments\n';
     const contentList = instrumentGroups
       .map(
         ({ name, id, instruments }) =>

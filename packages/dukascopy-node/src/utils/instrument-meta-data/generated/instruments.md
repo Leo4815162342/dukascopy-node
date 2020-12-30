@@ -1,17 +1,17 @@
-### Instruments
+## Instruments
 
-* [Bonds (CFD) (3)](#bnd_cfd)
-* [Crypto (CFD) (3)](#vccy)
-* [Agricultural (6)](#cmd_agricultural)
-* [Energy (4)](#cmd_energy)
-* [Metals (1)](#cmd_metals)
-* [US (43)](#etf_cfd_us)
-* [Crosses (54)](#fx_crosses)
-* [Majors (7)](#fx_majors)
-* [Metals (2)](#fx_metals)
-* [America (5)](#idx_america)
-* [Asia / Pacific (6)](#idx_asia)
-* [Europe (8)](#idx_europe)
+* [Bonds (CFD) 📊 (3)](#bnd_cfd)
+* [Crypto (CFD) ₿ (3)](#vccy)
+* [Agricultural ☕ (6)](#cmd_agricultural)
+* [Energy ⚡ (4)](#cmd_energy)
+* [Metals ⚙️ (1)](#cmd_metals)
+* [US 📈 (43)](#etf_cfd_us)
+* [Crosses 💱 (54)](#fx_crosses)
+* [Majors 💶 (7)](#fx_majors)
+* [Metals 🥇 (2)](#fx_metals)
+* [America 🌎 (5)](#idx_america)
+* [Asia / Pacific 🌏 (6)](#idx_asia)
+* [Europe 🌍 (8)](#idx_europe)
 * [Austria 🇦🇹 (3)](#austria)
 * [Belgium 🇧🇪 (7)](#belgium)
 * [Denmark 🇩🇰 (8)](#denmark)
@@ -29,21 +29,21 @@
 * [UK 🇺🇸 (80)](#uk)
 * [US 🇬🇧 (247)](#us)
 <hr>
-<h3 id="bnd_cfd">Bonds (CFD) </h3>
+<h3 id="bnd_cfd">Bonds (CFD) 📊</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`BUNDTREUR`|BUND.TR/EUR|Euro Bund|May 2, 2016, 6 AM|May 2, 2016|May 1, 2016|Jan 1, 2016|
 |`UKGILTTRGBP`|UKGILT.TR/GBP|UK Long Gilt|Dec 26, 2017, 5 AM|Dec 26, 2017|Dec 1, 2017|Jan 1, 2017|
 |`USTBONDTRUSD`|USTBOND.TR/USD|US T-Bond|Jan 1, 2000, 12 AM|Jan 4, 2018|Dec 1, 2017|Jan 1, 2017|
-<h3 id="vccy">Crypto (CFD) </h3>
+<h3 id="vccy">Crypto (CFD) ₿</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`BTCUSD`|BTC/USD|Bitcoin vs US Dollar|May 7, 2017, 11 PM|May 7, 2017|May 1, 2017|Jan 1, 2017|
 |`ETHUSD`|ETH/USD|Ether vs US Dollar|Dec 11, 2017, 11 PM|Dec 11, 2017|Dec 1, 2017|Jan 1, 2017|
 |`LTCUSD`|LTC/USD|Litecoin vs US Dollar|Sep 3, 2018, 12 AM|Sep 3, 2018|Sep 1, 2018|Jan 1, 2018|
-<h3 id="cmd_agricultural">Agricultural </h3>
+<h3 id="cmd_agricultural">Agricultural ☕</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -53,7 +53,7 @@
 |`OJUICECMDUSX`|OJUICE.CMD/USX|Orange Juice|Oct 20, 2017, 12 PM|Oct 20, 2017|Oct 1, 2017|Jan 1, 2017|
 |`SOYBEANCMDUSX`|SOYBEAN.CMD/USX|Soybean|Dec 1, 2017, 12 AM|Dec 1, 2017|Dec 1, 2017|Jan 1, 2017|
 |`SUGARCMDUSD`|SUGAR.CMD/USD|London Sugar No.5|Oct 2, 2017, 12 AM|Oct 2, 2017|Oct 1, 2017|Jan 1, 2017|
-<h3 id="cmd_energy">Energy </h3>
+<h3 id="cmd_energy">Energy ⚡</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -61,12 +61,12 @@
 |`BRENTCMDUSD`|BRENT.CMD/USD|US Brent Crude Oil|Dec 2, 2010, 1 AM|Dec 2, 2010|Dec 1, 2010|Jan 1, 2006|
 |`LIGHTCMDUSD`|LIGHT.CMD/USD|US Light Crude Oil|Jan 1, 2013, 5 AM|Sep 23, 2011|Sep 1, 2011|Jan 1, 1983|
 |`GASCMDUSD`|GAS.CMD/USD|Natural Gas|Sep 2, 2012, 10 PM|Aug 20, 2012|Aug 1, 2012|Jan 1, 2012|
-<h3 id="cmd_metals">Metals </h3>
+<h3 id="cmd_metals">Metals ⚙️</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`COPPERCMDUSD`|COPPER.CMD/USD|High Grade Copper|Mar 1, 2012, 12 AM|Mar 1, 2012|Mar 1, 2012|Jan 1, 2012|
-<h3 id="etf_cfd_us">US </h3>
+<h3 id="etf_cfd_us">US 📈</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -113,7 +113,7 @@
 |`XLVUSUSD`|XLV.US/USD|Health Care Select Sector SPDR Fund|Nov 15, 2017, 4 PM|Nov 15, 2017|Nov 1, 2017|Jan 1, 2017|
 |`XLYUSUSD`|XLY.US/USD|Consumer Discretionary Select Sector SPDR Fund|Nov 15, 2017, 4 PM|Nov 15, 2017|Nov 1, 2017|Jan 1, 2017|
 |`XOPUSUSD`|XOP.US/USD|SPDR S&P Oil & Gas Explor & Prodtn ETF|Jan 26, 2017, 2 PM|Jan 26, 2017|Jan 1, 2017|Jan 1, 2017|
-<h3 id="fx_crosses">Crosses </h3>
+<h3 id="fx_crosses">Crosses 💱</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -171,7 +171,7 @@
 |`USDTRY`|USD/TRY|US Dollar vs Turkish Lira|Mar 13, 2007, 7 AM|Mar 13, 2007|Mar 1, 2007|Jan 1, 1998|
 |`USDZAR`|USD/ZAR|US Dollar vs South African Rand|Oct 13, 1997, 6 PM|Oct 13, 1997|Oct 1, 1997|Jan 1, 1990|
 |`ZARJPY`|ZAR/JPY|South African Rand vs Japanese Yen|Jun 4, 2007, 12 AM|Mar 3, 1999|Mar 1, 1999|Jan 1, 1997|
-<h3 id="fx_majors">Majors </h3>
+<h3 id="fx_majors">Majors 💶</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -182,13 +182,13 @@
 |`USDCAD`|USD/CAD|US Dollar vs Canadian Dollar|Aug 3, 2003, 5 PM|Aug 3, 2003|Aug 1, 2003|Jan 1, 1986|
 |`USDCHF`|USD/CHF|US Dollar vs Swiss Franc|May 4, 2003, 8 PM|May 4, 2003|May 1, 2003|Jan 1, 1986|
 |`USDJPY`|USD/JPY|US Dollar vs Japanese Yen|May 4, 2003, 5 PM|May 4, 2003|May 1, 2003|Jan 1, 1986|
-<h3 id="fx_metals">Metals </h3>
+<h3 id="fx_metals">Metals 🥇</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`XAGUSD`|XAG/USD|Spot silver|Aug 13, 1997, 2 PM|Aug 13, 1997|Aug 1, 1997|Jan 1, 1997|
 |`XAUUSD`|XAU/USD|Spot gold|May 5, 2003, 12 AM|Sep 1, 1999|Sep 1, 1999|Jan 1, 1997|
-<h3 id="idx_america">America </h3>
+<h3 id="idx_america">America 🌎</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -197,7 +197,7 @@
 |`USATECHIDXUSD`|USATECH.IDX/USD|USA 100 Technical Index|Sep 18, 2011, 9 PM|Sep 18, 2011|Sep 1, 2011|Jan 1, 1990|
 |`USA500IDXUSD`|USA500.IDX/USD|USA 500 Index|Sep 18, 2011, 9 PM|Sep 18, 2011|Sep 1, 2011|Jan 1, 1980|
 |`USSC2000IDXUSD`|USSC2000.IDX/USD|US Small Cap 2000|Jan 1, 2000, 12 AM|Aug 8, 2018|Aug 1, 2018|Jan 1, 2018|
-<h3 id="idx_asia">Asia / Pacific </h3>
+<h3 id="idx_asia">Asia / Pacific 🌏</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -207,7 +207,7 @@
 |`AUSIDXAUD`|AUS.IDX/AUD|Australia 200 Index|Jan 2, 2013, 6 AM|Jan 2, 2013|Jan 1, 2013|Jan 1, 1982|
 |`INDIDXUSD`|IND.IDX/USD|India 50 Index|Dec 1, 2017, 2 AM|Dec 1, 2017|Dec 1, 2017|Jan 1, 2017|
 |`SGDIDXSGD`|SGD.IDX/SGD|Singapore Blue Chip Cash Index|Dec 1, 2017, 12 AM|Dec 1, 2017|Dec 1, 2017|Jan 1, 2017|
-<h3 id="idx_europe">Europe </h3>
+<h3 id="idx_europe">Europe 🌍</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
