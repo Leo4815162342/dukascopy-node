@@ -26,8 +26,8 @@
 * [Spain 🇪🇸 (18)](#spain)
 * [Sweden 🇸🇪 (20)](#sweden)
 * [Switzerland 🇨🇭 (20)](#switzerland)
-* [UK 🇺🇸 (80)](#uk)
-* [US 🇬🇧 (247)](#us)
+* [UK 🇬🇧 (80)](#uk)
+* [US 🇺🇸 (247)](#us)
 <hr>
 <h3 id="bnd_cfd">Bonds (CFD) 📊</h3>
 
@@ -534,7 +534,7 @@
 |`UBSGCHCHF`|UBSG.CH/CHF|UBS Group AG|Jun 15, 2015, 7 AM|Jun 15, 2015|Nov 1, 2014|Jan 1, 2014|
 |`UHRCHCHF`|UHR.CH/CHF|Swatch Group AG/The|Aug 7, 2015, 3 AM|Aug 7, 2015|Jan 1, 2011|Jan 1, 2011|
 |`ZURNCHCHF`|ZURN.CH/CHF|Zurich Insurance Group AG|Aug 7, 2015, 7 AM|Aug 7, 2015|Jan 1, 2011|Jan 1, 2011|
-<h3 id="uk">UK 🇺🇸</h3>
+<h3 id="uk">UK 🇬🇧</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -618,7 +618,7 @@
 |`WOSGBGBX`|WOS.GB/GBX|Wolseley PLC|Jul 6, 2016, 7 AM|Jul 6, 2016|Jan 1, 2011|Jan 1, 2011|
 |`WPPGBGBX`|WPP.GB/GBX|WPP PLC|Jul 8, 2016, 12 PM|Jul 8, 2016|Jan 1, 2011|Jan 1, 2011|
 |`WTBGBGBX`|WTB.GB/GBX|Whitbread PLC|Jul 6, 2016, 7 AM|Jul 6, 2016|Jan 1, 2011|Jan 1, 2011|
-<h3 id="us">US 🇬🇧</h3>
+<h3 id="us">US 🇺🇸</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
