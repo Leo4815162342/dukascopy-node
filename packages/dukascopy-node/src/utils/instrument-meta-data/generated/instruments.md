@@ -10,22 +10,22 @@
 * [America ](#idx_america)
 * [Asia / Pacific ](#idx_asia)
 * [Europe ](#idx_europe)
-* [Austria ](#austria)
-* [Belgium ](#belgium)
-* [Denmark ](#denmark)
-* [Finland ](#finland)
-* [France ](#france)
-* [Germany ](#germany)
-* [Hong Kong ](#hong-kong)
-* [Japan ](#japan)
-* [Netherlands ](#netherlands)
-* [Norway ](#norway)
-* [Portugal ](#portugal)
-* [Spain ](#spain)
-* [Sweden ](#sweden)
-* [Switzerland ](#switzerland)
-* [UK ](#uk)
-* [US ](#us)
+* [Austria 🇦🇹](#austria)
+* [Belgium 🇧🇪](#belgium)
+* [Denmark 🇩🇰](#denmark)
+* [Finland 🇫🇮](#finland)
+* [France 🇫🇷](#france)
+* [Germany 🇩🇪](#germany)
+* [Hong Kong 🇭🇰](#hong-kong)
+* [Japan 🇯🇵](#japan)
+* [Netherlands 🇳🇱](#netherlands)
+* [Norway 🇳🇴](#norway)
+* [Portugal 🇵🇹](#portugal)
+* [Spain 🇪🇸](#spain)
+* [Sweden 🇸🇪](#sweden)
+* [Switzerland 🇨🇭](#switzerland)
+* [UK 🇺🇸](#uk)
+* [US 🇬🇧](#us)
 <h3 id="bnd_cfd">Bonds (CFD) </h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
@@ -216,14 +216,14 @@
 |`CHEIDXCHF`|CHE.IDX/CHF|Switzerland 20 Index|Sep 18, 2011, 9 PM|Sep 18, 2011|Sep 1, 2011|Jan 1, 1992|
 |`NLDIDXEUR`|NLD.IDX/EUR|Netherlands 25 Index|Feb 25, 2013, 9 AM|Feb 27, 2013|Feb 1, 2013|Jan 1, 1999|
 |`PLNIDXPLN`|PLN.IDX/PLN|Poland 20 Index|Dec 1, 2017, 7 AM|Dec 1, 2017|Dec 1, 2017|Jan 1, 2017|
-<h3 id="austria">Austria </h3>
+<h3 id="austria">Austria 🇦🇹</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`EBSATEUR`|EBS.AT/EUR|Erste Group Bank AG|Nov 4, 2016, 3 PM|Nov 4, 2016|Jan 1, 2011|Jan 1, 2011|
 |`RBIATEUR`|RBI.AT/EUR|Raiffeisen Bank International AG|Nov 2, 2016, 8 AM|Nov 2, 2016|Jan 1, 2011|Jan 1, 2011|
 |`VOEATEUR`|VOE.AT/EUR|Voestalpine AG|Nov 4, 2016, 3 PM|Nov 4, 2016|Jan 1, 2011|Jan 1, 2011|
-<h3 id="belgium">Belgium </h3>
+<h3 id="belgium">Belgium 🇧🇪</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -234,7 +234,7 @@
 |`SOLBBEEUR`|SOLB.BE/EUR|Solvay SA|Nov 7, 2016, 8 AM|Nov 7, 2016|Jan 1, 2011|Jan 1, 2011|
 |`UCBBEEUR`|UCB.BE/EUR|UCB SA|Nov 7, 2016, 8 AM|Nov 7, 2016|Jan 1, 2011|Jan 1, 2011|
 |`UMIBEEUR`|UMI.BE/EUR|Umicore SA|Nov 7, 2016, 8 AM|Nov 7, 2016|Jan 1, 2011|Jan 1, 2011|
-<h3 id="denmark">Denmark </h3>
+<h3 id="denmark">Denmark 🇩🇰</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -246,7 +246,7 @@
 |`NZYMBDKDKK`|NZYMB.DK/DKK|Novozymes A/S|Nov 7, 2016, 3 PM|Nov 7, 2016|Jan 1, 2011|Jan 1, 2011|
 |`PNDORADKDKK`|PNDORA.DK/DKK|Pandora A/S|Nov 8, 2016, 2 PM|Nov 8, 2016|Jan 1, 2011|Jan 1, 2011|
 |`VWSDKDKK`|VWS.DK/DKK|Vestas Wind Systems A/S|Nov 7, 2016, 3 PM|Nov 7, 2016|Jan 1, 2011|Jan 1, 2011|
-<h3 id="finland">Finland </h3>
+<h3 id="finland">Finland 🇫🇮</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -257,7 +257,7 @@
 |`OUT1VFIEUR`|OUT1V.FI/EUR|Outokumpu OYJ|Nov 3, 2016, 8 AM|Nov 3, 2016|Jan 1, 2011|Jan 1, 2011|
 |`STERVFIEUR`|STERV.FI/EUR|Stora Enso OYJ|Nov 3, 2016, 8 AM|Nov 3, 2016|Jan 1, 2011|Jan 1, 2011|
 |`TLS1VFIEUR`|TLS1V.FI/EUR|Telia Company AB|Nov 9, 2016, 9 AM|Nov 9, 2016|Apr 1, 2016|Jan 1, 2016|
-<h3 id="france">France </h3>
+<h3 id="france">France 🇫🇷</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -296,7 +296,7 @@
 |`VIEFREUR`|VIE.FR/EUR|Veolia Environnement SA|Aug 5, 2016, 2 PM|Aug 5, 2016|Jan 1, 2011|Jan 1, 2011|
 |`VIVFREUR`|VIV.FR/EUR|Vivendi SA|Aug 5, 2016, 2 PM|Aug 5, 2016|Jan 1, 2011|Jan 1, 2011|
 |`VKFREUR`|VK.FR/EUR|Vallourec SA|Aug 5, 2016, 2 PM|Aug 5, 2016|Jan 1, 2011|Jan 1, 2011|
-<h3 id="germany">Germany </h3>
+<h3 id="germany">Germany 🇩🇪</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -335,7 +335,7 @@
 |`TUI1DEEUR`|TUI1.DE/EUR|TUI AG|Apr 15, 2015, 7 AM|Apr 15, 2015|Jan 1, 2011|Jan 1, 2011|
 |`VNADEEUR`|VNA.DE/EUR|Vonovia SE|Apr 14, 2015, 7 AM|Apr 14, 2015|Apr 1, 2015|Jan 1, 2015|
 |`VOW3DEEUR`|VOW3.DE/EUR|Volkswagen AG|Apr 14, 2015, 7 AM|Apr 14, 2015|Jan 1, 2011|Jan 1, 2011|
-<h3 id="hong-kong">Hong Kong </h3>
+<h3 id="hong-kong">Hong Kong 🇭🇰</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -365,7 +365,7 @@
 |`3333HKHKD`|3333.HK/HKD|China Evergrande Group|Jan 2, 2018, 1 AM|Jan 2, 2018|Jan 1, 2018|Jan 1, 2018|
 |`3968HKHKD`|3968.HK/HKD|China Merchants Bank|Jan 2, 2018, 1 AM|Jan 2, 2018|Jan 1, 2018|Jan 1, 2018|
 |`3988HKHKD`|3988.HK/HKD|Bank of China|Jan 2, 2018, 1 AM|Jan 2, 2018|Jan 1, 2018|Jan 1, 2018|
-<h3 id="japan">Japan </h3>
+<h3 id="japan">Japan 🇯🇵</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -425,7 +425,7 @@
 |`9501JPJPY`|9501.JP/JPY|Tokyo Electric Power Company|Jul 3, 2018, 12 AM|Jul 3, 2018|Jul 1, 2018|Jan 1, 2018|
 |`9983JPJPY`|9983.JP/JPY|Fast Retailing|Jul 3, 2018, 12 AM|Jul 3, 2018|Jul 1, 2018|Jan 1, 2018|
 |`9984JPJPY`|9984.JP/JPY|Softbank Group Corp|Aug 14, 2018, 12 AM|Sep 26, 2018|Sep 1, 2018|Jan 1, 2018|
-<h3 id="netherlands">Netherlands </h3>
+<h3 id="netherlands">Netherlands 🇳🇱</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -445,7 +445,7 @@
 |`UNANLEUR`|UNA.NL/EUR|Unilever NV|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
 |`VPKNLEUR`|VPK.NL/EUR|Koninklijke Vopak NV|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
 |`WKLNLEUR`|WKL.NL/EUR|Wolters Kluwer NV|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
-<h3 id="norway">Norway </h3>
+<h3 id="norway">Norway 🇳🇴</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -455,13 +455,13 @@
 |`ORKNONOK`|ORK.NO/NOK|Orkla ASA|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
 |`STLNONOK`|STL.NO/NOK|Statoil ASA|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
 |`TELNONOK`|TEL.NO/NOK|Telenor ASA|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
-<h3 id="portugal">Portugal </h3>
+<h3 id="portugal">Portugal 🇵🇹</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`EDPPTEUR`|EDP.PT/EUR|EDP - Energias de Portugal SA|Nov 14, 2016, 3 PM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
 |`GALPPTEUR`|GALP.PT/EUR|Galp Energia SGPS SA|Nov 14, 2016, 3 PM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
-<h3 id="spain">Spain </h3>
+<h3 id="spain">Spain 🇪🇸</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -483,7 +483,7 @@
 |`REPESEUR`|REP.ES/EUR|Repsol SA|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
 |`SANESEUR`|SAN.ES/EUR|Banco Santander SA|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
 |`TEFESEUR`|TEF.ES/EUR|Telefonica SA|Nov 14, 2016, 11 AM|Nov 14, 2016|Jan 1, 2011|Jan 1, 2011|
-<h3 id="sweden">Sweden </h3>
+<h3 id="sweden">Sweden 🇸🇪</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -507,7 +507,7 @@
 |`TEL2BSESEK`|TEL2B.SE/SEK|Tele2 AB|Nov 7, 2016, 8 AM|Nov 8, 2016|Jan 1, 2011|Jan 1, 2011|
 |`TLSNSESEK`|TLSN.SE/SEK|Telia Company AB|Nov 14, 2016, 4 PM|Nov 14, 2016|Apr 1, 2016|Jan 1, 2016|
 |`VOLVBSESEK`|VOLVB.SE/SEK|Volvo AB|Nov 7, 2016, 8 AM|Nov 7, 2016|Jan 1, 2011|Jan 1, 2011|
-<h3 id="switzerland">Switzerland </h3>
+<h3 id="switzerland">Switzerland 🇨🇭</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -531,7 +531,7 @@
 |`UBSGCHCHF`|UBSG.CH/CHF|UBS Group AG|Jun 15, 2015, 7 AM|Jun 15, 2015|Nov 1, 2014|Jan 1, 2014|
 |`UHRCHCHF`|UHR.CH/CHF|Swatch Group AG/The|Aug 7, 2015, 3 AM|Aug 7, 2015|Jan 1, 2011|Jan 1, 2011|
 |`ZURNCHCHF`|ZURN.CH/CHF|Zurich Insurance Group AG|Aug 7, 2015, 7 AM|Aug 7, 2015|Jan 1, 2011|Jan 1, 2011|
-<h3 id="uk">UK </h3>
+<h3 id="uk">UK 🇺🇸</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -615,7 +615,7 @@
 |`WOSGBGBX`|WOS.GB/GBX|Wolseley PLC|Jul 6, 2016, 7 AM|Jul 6, 2016|Jan 1, 2011|Jan 1, 2011|
 |`WPPGBGBX`|WPP.GB/GBX|WPP PLC|Jul 8, 2016, 12 PM|Jul 8, 2016|Jan 1, 2011|Jan 1, 2011|
 |`WTBGBGBX`|WTB.GB/GBX|Whitbread PLC|Jul 6, 2016, 7 AM|Jul 6, 2016|Jan 1, 2011|Jan 1, 2011|
-<h3 id="us">US </h3>
+<h3 id="us">US 🇬🇧</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|

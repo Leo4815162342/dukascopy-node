@@ -14,22 +14,22 @@ const saveFile = promisify(fs.writeFile);
 const filePath = path.resolve(__dirname, 'generated', 'instruments.md');
 
 const flagMap: Record<string, string> = {
-  Austria: '🇦🇹',
-  Belgium: '🇧🇪',
-  Denmark: '🇩🇰',
-  Finland: '🇫🇮',
-  France: '🇫🇷',
-  Germany: '🇩🇪',
-  Netherlands: '🇳🇱',
-  Norway: '🇳🇴',
-  Portugal: '🇵🇹',
-  Spain: '🇪🇸',
-  Sweden: '🇸🇪',
-  Switzerland: '🇨🇭',
-  Japan: '🇯🇵',
-  'Hong Kong': '🇭🇰',
-  UK: '🇬🇧',
-  US: '🇺🇸'
+  austria: '🇦🇹',
+  belgium: '🇧🇪',
+  denmark: '🇩🇰',
+  finland: '🇫🇮',
+  france: '🇫🇷',
+  germany: '🇩🇪',
+  netherlands: '🇳🇱',
+  norway: '🇳🇴',
+  portugal: '🇵🇹',
+  spain: '🇪🇸',
+  sweden: '🇸🇪',
+  switzerland: '🇨🇭',
+  japan: '🇯🇵',
+  'hong-kong': '🇭🇰',
+  us: '🇬🇧',
+  uk: '🇺🇸'
 };
 
 (async () => {
