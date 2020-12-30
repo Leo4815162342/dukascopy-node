@@ -1,0 +1,6 @@
+{
+  "startHourForTicks": "2016-11-14T11:00:00.000Z",
+  "startDayForMinuteCandles": "2016-11-14T00:00:00.000Z",
+  "startMonthForHourlyCandles": "2015-02-01T00:00:00.000Z",
+  "startYearForDailyCandles": "2015-01-01T00:00:00.000Z"
+}
