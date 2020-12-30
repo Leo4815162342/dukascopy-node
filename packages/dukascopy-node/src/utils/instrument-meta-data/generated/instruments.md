@@ -1,3 +1,5 @@
+### Instruments
+
 * [Bonds (CFD) (3)](#bnd_cfd)
 * [Crypto (CFD) (3)](#vccy)
 * [Agricultural (6)](#cmd_agricultural)
@@ -26,6 +28,7 @@
 * [Switzerland 🇨🇭 (20)](#switzerland)
 * [UK 🇺🇸 (80)](#uk)
 * [US 🇬🇧 (247)](#us)
+<hr>
 <h3 id="bnd_cfd">Bonds (CFD) </h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|

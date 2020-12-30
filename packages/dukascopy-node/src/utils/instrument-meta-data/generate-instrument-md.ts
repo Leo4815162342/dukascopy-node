@@ -34,12 +34,15 @@ const flagMap: Record<string, string> = {
 
 (async () => {
   try {
-    const contents = instrumentGroups
+    const contentListHeader = '### Instruments\n';
+    const contentList = instrumentGroups
       .map(
         ({ name, id, instruments }) =>
           `* [${name}${flagMap[id] ? ' ' + flagMap[id] : ''} (${instruments.length})](#${id})`
       )
       .join('\n');
+
+    const contentBody = [contentListHeader, contentList, '<hr>'].join('\n');
 
     const headers = [
       'Instrument id',
@@ -89,7 +92,7 @@ const flagMap: Record<string, string> = {
       })
       .join('\n');
 
-    await saveFile(filePath, [contents, instrumentTable].join('\n'));
+    await saveFile(filePath, [contentBody, instrumentTable].join('\n'));
     console.log('Created file');
   } catch (err) {
     console.log(err);
