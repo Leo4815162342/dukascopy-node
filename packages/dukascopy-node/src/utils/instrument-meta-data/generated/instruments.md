@@ -1,14 +1,14 @@
 ## Instruments
 
-* [Bonds (CFD) 📊 (3)](#bnd_cfd)
-* [Crypto (CFD) ₿ (3)](#vccy)
+* [Bonds 📊 (3)](#bnd_cfd)
+* [Crypto ₿ (3)](#vccy)
 * [Agricultural ☕ (6)](#cmd_agricultural)
 * [Energy ⚡ (4)](#cmd_energy)
 * [Metals ⚙️ (1)](#cmd_metals)
-* [US 📈 (43)](#etf_cfd_us)
-* [Crosses 💱 (54)](#fx_crosses)
-* [Majors 💶 (7)](#fx_majors)
-* [Metals 🥇 (2)](#fx_metals)
+* [ETFs 📈 (43)](#etf_cfd_us)
+* [Forex crosses 💱 (54)](#fx_crosses)
+* [Forex majors 💶 (7)](#fx_majors)
+* [Forex metals 🥇 (2)](#fx_metals)
 * [America 🌎 (5)](#idx_america)
 * [Asia / Pacific 🌏 (6)](#idx_asia)
 * [Europe 🌍 (8)](#idx_europe)
@@ -29,14 +29,14 @@
 * [UK 🇬🇧 (80)](#uk)
 * [US 🇺🇸 (247)](#us)
 <hr>
-<h3 id="bnd_cfd">Bonds (CFD) 📊</h3>
+<h3 id="bnd_cfd">Bonds 📊</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`BUNDTREUR`|BUND.TR/EUR|Euro Bund|May 2, 2016, 6 AM|May 2, 2016|May 1, 2016|Jan 1, 2016|
 |`UKGILTTRGBP`|UKGILT.TR/GBP|UK Long Gilt|Dec 26, 2017, 5 AM|Dec 26, 2017|Dec 1, 2017|Jan 1, 2017|
 |`USTBONDTRUSD`|USTBOND.TR/USD|US T-Bond|Jan 1, 2000, 12 AM|Jan 4, 2018|Dec 1, 2017|Jan 1, 2017|
-<h3 id="vccy">Crypto (CFD) ₿</h3>
+<h3 id="vccy">Crypto ₿</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -66,7 +66,7 @@
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`COPPERCMDUSD`|COPPER.CMD/USD|High Grade Copper|Mar 1, 2012, 12 AM|Mar 1, 2012|Mar 1, 2012|Jan 1, 2012|
-<h3 id="etf_cfd_us">US 📈</h3>
+<h3 id="etf_cfd_us">ETFs 📈</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -113,7 +113,7 @@
 |`XLVUSUSD`|XLV.US/USD|Health Care Select Sector SPDR Fund|Nov 15, 2017, 4 PM|Nov 15, 2017|Nov 1, 2017|Jan 1, 2017|
 |`XLYUSUSD`|XLY.US/USD|Consumer Discretionary Select Sector SPDR Fund|Nov 15, 2017, 4 PM|Nov 15, 2017|Nov 1, 2017|Jan 1, 2017|
 |`XOPUSUSD`|XOP.US/USD|SPDR S&P Oil & Gas Explor & Prodtn ETF|Jan 26, 2017, 2 PM|Jan 26, 2017|Jan 1, 2017|Jan 1, 2017|
-<h3 id="fx_crosses">Crosses 💱</h3>
+<h3 id="fx_crosses">Forex crosses 💱</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -171,7 +171,7 @@
 |`USDTRY`|USD/TRY|US Dollar vs Turkish Lira|Mar 13, 2007, 7 AM|Mar 13, 2007|Mar 1, 2007|Jan 1, 1998|
 |`USDZAR`|USD/ZAR|US Dollar vs South African Rand|Oct 13, 1997, 6 PM|Oct 13, 1997|Oct 1, 1997|Jan 1, 1990|
 |`ZARJPY`|ZAR/JPY|South African Rand vs Japanese Yen|Jun 4, 2007, 12 AM|Mar 3, 1999|Mar 1, 1999|Jan 1, 1997|
-<h3 id="fx_majors">Majors 💶</h3>
+<h3 id="fx_majors">Forex majors 💶</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -182,7 +182,7 @@
 |`USDCAD`|USD/CAD|US Dollar vs Canadian Dollar|Aug 3, 2003, 5 PM|Aug 3, 2003|Aug 1, 2003|Jan 1, 1986|
 |`USDCHF`|USD/CHF|US Dollar vs Swiss Franc|May 4, 2003, 8 PM|May 4, 2003|May 1, 2003|Jan 1, 1986|
 |`USDJPY`|USD/JPY|US Dollar vs Japanese Yen|May 4, 2003, 5 PM|May 4, 2003|May 1, 2003|Jan 1, 1986|
-<h3 id="fx_metals">Metals 🥇</h3>
+<h3 id="fx_metals">Forex metals 🥇</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|

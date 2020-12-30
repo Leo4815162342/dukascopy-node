@@ -1,12 +1,12 @@
 [
   {
     "id": "bnd_cfd",
-    "name": "Bonds (CFD)",
+    "name": "Bonds",
     "instruments": ["BUNDTREUR", "UKGILTTRGBP", "USTBONDTRUSD"]
   },
   {
     "id": "vccy",
-    "name": "Crypto (CFD)",
+    "name": "Crypto",
     "instruments": ["BTCUSD", "ETHUSD", "LTCUSD"]
   },
   {
@@ -33,7 +33,7 @@
   },
   {
     "id": "etf_cfd_us",
-    "name": "US",
+    "name": "ETFs",
     "instruments": [
       "DIAUSUSD",
       "DVYUSUSD",
@@ -82,7 +82,7 @@
   },
   {
     "id": "fx_crosses",
-    "name": "Crosses",
+    "name": "Forex crosses",
     "instruments": [
       "AUDCAD",
       "AUDCHF",
@@ -142,12 +142,12 @@
   },
   {
     "id": "fx_majors",
-    "name": "Majors",
+    "name": "Forex majors",
     "instruments": ["AUDUSD", "EURUSD", "GBPUSD", "NZDUSD", "USDCAD", "USDCHF", "USDJPY"]
   },
   {
     "id": "fx_metals",
-    "name": "Metals",
+    "name": "Forex metals",
     "instruments": ["XAGUSD", "XAUUSD"]
   },
   {
