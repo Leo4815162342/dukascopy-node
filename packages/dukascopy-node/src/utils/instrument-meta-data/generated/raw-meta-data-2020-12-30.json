@@ -8139,8 +8139,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -8152,8 +8152,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -8692,7 +8692,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -8707,7 +8707,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -8774,7 +8774,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -8789,7 +8789,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -8856,7 +8856,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -8871,7 +8871,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -9029,8 +9029,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -9042,8 +9042,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -9349,8 +9349,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -9362,8 +9362,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -9660,7 +9660,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -9675,7 +9675,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -9822,7 +9822,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -9837,7 +9837,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -9956,21 +9956,6 @@
       "trading_stop": {
         "WEEKLY": [
           {
-            "holiday_id": "292_0",
-            "start_day": "1",
-            "start_hour": "0",
-            "start_minute": "0",
-            "end_day": "1",
-            "end_hour": "8",
-            "end_minute": "59",
-            "timezone": "CET",
-            "updated": "2020-12-30",
-            "timezone_offset": -3600,
-            "timezone_hours_offset": -1,
-            "start": "2020-12-27T23:00:00.000Z",
-            "end": "2020-12-28T07:59:00.000Z"
-          },
-          {
             "holiday_id": "133_0",
             "start_day": "1",
             "start_hour": "0",
@@ -9986,7 +9971,22 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "292_0",
+            "start_day": "1",
+            "start_hour": "0",
+            "start_minute": "0",
+            "end_day": "1",
+            "end_hour": "8",
+            "end_minute": "59",
+            "timezone": "CET",
+            "updated": "2020-12-30",
+            "timezone_offset": -3600,
+            "timezone_hours_offset": -1,
+            "start": "2020-12-27T23:00:00.000Z",
+            "end": "2020-12-28T07:59:00.000Z"
+          },
+          {
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -10001,7 +10001,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -10148,7 +10148,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -10163,7 +10163,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -10392,7 +10392,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -10407,7 +10407,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -10485,8 +10485,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -10498,8 +10498,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -10604,21 +10604,6 @@
       "trading_stop": {
         "WEEKLY": [
           {
-            "holiday_id": "133_0",
-            "start_day": "1",
-            "start_hour": "0",
-            "start_minute": "0",
-            "end_day": "1",
-            "end_hour": "8",
-            "end_minute": "59",
-            "timezone": "CET",
-            "updated": "2020-12-30",
-            "timezone_offset": -3600,
-            "timezone_hours_offset": -1,
-            "start": "2020-12-27T23:00:00.000Z",
-            "end": "2020-12-28T07:59:00.000Z"
-          },
-          {
             "holiday_id": "292_0",
             "start_day": "1",
             "start_hour": "0",
@@ -10634,7 +10619,22 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "133_0",
+            "start_day": "1",
+            "start_hour": "0",
+            "start_minute": "0",
+            "end_day": "1",
+            "end_hour": "8",
+            "end_minute": "59",
+            "timezone": "CET",
+            "updated": "2020-12-30",
+            "timezone_offset": -3600,
+            "timezone_hours_offset": -1,
+            "start": "2020-12-27T23:00:00.000Z",
+            "end": "2020-12-28T07:59:00.000Z"
+          },
+          {
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -10649,7 +10649,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -10727,8 +10727,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -10740,8 +10740,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -11196,7 +11196,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -11211,7 +11211,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -11728,21 +11728,6 @@
       "trading_stop": {
         "WEEKLY": [
           {
-            "holiday_id": "133_0",
-            "start_day": "1",
-            "start_hour": "0",
-            "start_minute": "0",
-            "end_day": "1",
-            "end_hour": "8",
-            "end_minute": "59",
-            "timezone": "CET",
-            "updated": "2020-12-30",
-            "timezone_offset": -3600,
-            "timezone_hours_offset": -1,
-            "start": "2020-12-27T23:00:00.000Z",
-            "end": "2020-12-28T07:59:00.000Z"
-          },
-          {
             "holiday_id": "292_0",
             "start_day": "1",
             "start_hour": "0",
@@ -11758,7 +11743,22 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "133_0",
+            "start_day": "1",
+            "start_hour": "0",
+            "start_minute": "0",
+            "end_day": "1",
+            "end_hour": "8",
+            "end_minute": "59",
+            "timezone": "CET",
+            "updated": "2020-12-30",
+            "timezone_offset": -3600,
+            "timezone_hours_offset": -1,
+            "start": "2020-12-27T23:00:00.000Z",
+            "end": "2020-12-28T07:59:00.000Z"
+          },
+          {
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -11773,7 +11773,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -11851,8 +11851,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -11864,8 +11864,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -13193,8 +13193,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -13206,8 +13206,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -13353,8 +13353,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -13366,8 +13366,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -13513,8 +13513,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -13526,8 +13526,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -13662,7 +13662,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -13677,7 +13677,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -13915,8 +13915,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -13928,8 +13928,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -14477,8 +14477,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -14490,8 +14490,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -14708,7 +14708,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -14723,7 +14723,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -14881,8 +14881,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -14894,8 +14894,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -15478,8 +15478,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T06:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T06:59:00.000Z"
           },
           {
             "holiday_id": "312_0",
@@ -15491,8 +15491,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T21:00:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T21:00:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -16062,7 +16062,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -16077,7 +16077,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -16155,8 +16155,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "228_0",
@@ -16168,8 +16168,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T15:50:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T15:50:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -16315,8 +16315,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -16328,8 +16328,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -16949,8 +16949,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -16962,8 +16962,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -17669,8 +17669,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "228_0",
@@ -17682,8 +17682,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T15:50:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T15:50:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -17749,8 +17749,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -17762,8 +17762,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -18735,8 +18735,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -18748,8 +18748,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -19375,8 +19375,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -19388,8 +19388,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -19535,8 +19535,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "228_0",
@@ -19548,8 +19548,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T15:50:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T15:50:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -19615,8 +19615,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -19628,8 +19628,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -19695,8 +19695,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -19708,8 +19708,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -20326,7 +20326,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -20341,7 +20341,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -20711,8 +20711,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "217_0",
@@ -20724,8 +20724,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T15:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T15:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -20843,8 +20843,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -20856,8 +20856,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -21005,8 +21005,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -21018,8 +21018,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -21584,8 +21584,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "624_0",
@@ -21597,8 +21597,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -21653,7 +21653,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -21668,7 +21668,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -21735,7 +21735,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -21750,7 +21750,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -22310,8 +22310,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -7200,
             "timezone_hours_offset": -2,
-            "start": "2020-12-29T22:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T22:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "267_0",
@@ -22323,8 +22323,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -7200,
             "timezone_hours_offset": -2,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T21:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T21:59:00.000Z"
           }
         ]
       }
@@ -22390,8 +22390,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -22403,8 +22403,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -22589,21 +22589,6 @@
       "trading_stop": {
         "WEEKLY": [
           {
-            "holiday_id": "292_0",
-            "start_day": "1",
-            "start_hour": "0",
-            "start_minute": "0",
-            "end_day": "1",
-            "end_hour": "8",
-            "end_minute": "59",
-            "timezone": "CET",
-            "updated": "2020-12-30",
-            "timezone_offset": -3600,
-            "timezone_hours_offset": -1,
-            "start": "2020-12-27T23:00:00.000Z",
-            "end": "2020-12-28T07:59:00.000Z"
-          },
-          {
             "holiday_id": "133_0",
             "start_day": "1",
             "start_hour": "0",
@@ -22619,7 +22604,22 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "292_0",
+            "start_day": "1",
+            "start_hour": "0",
+            "start_minute": "0",
+            "end_day": "1",
+            "end_hour": "8",
+            "end_minute": "59",
+            "timezone": "CET",
+            "updated": "2020-12-30",
+            "timezone_offset": -3600,
+            "timezone_hours_offset": -1,
+            "start": "2020-12-27T23:00:00.000Z",
+            "end": "2020-12-28T07:59:00.000Z"
+          },
+          {
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -22634,7 +22634,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -22701,7 +22701,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -22716,7 +22716,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -22876,8 +22876,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -22889,8 +22889,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -23116,8 +23116,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -23129,8 +23129,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -23666,7 +23666,7 @@
       "trading_stop": {
         "WEEKLY": [
           {
-            "holiday_id": "181_0",
+            "holiday_id": "486_0",
             "start_day": "5",
             "start_hour": "23",
             "start_minute": "50",
@@ -23681,7 +23681,7 @@
             "end": "2021-01-03T20:59:00.000Z"
           },
           {
-            "holiday_id": "486_0",
+            "holiday_id": "181_0",
             "start_day": "5",
             "start_hour": "23",
             "start_minute": "50",
@@ -23707,8 +23707,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -10800,
             "timezone_hours_offset": -3,
-            "start": "2020-12-29T21:00:00.000Z",
-            "end": "2020-12-30T06:59:00.000Z"
+            "start": "2020-12-30T21:00:00.000Z",
+            "end": "2020-12-31T06:59:00.000Z"
           }
         ]
       }
@@ -24694,8 +24694,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T06:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T06:59:00.000Z"
           },
           {
             "holiday_id": "241_0",
@@ -24707,8 +24707,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T21:00:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T21:00:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -24811,8 +24811,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T21:15:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T21:15:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -24878,8 +24878,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T06:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T06:59:00.000Z"
           },
           {
             "holiday_id": "247_0",
@@ -24891,8 +24891,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T21:00:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T21:00:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -25103,8 +25103,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T06:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T06:59:00.000Z"
           },
           {
             "holiday_id": "250_0",
@@ -25116,8 +25116,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T19:00:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T19:00:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -25391,8 +25391,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T06:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T06:59:00.000Z"
           },
           {
             "holiday_id": "636_0",
@@ -25404,8 +25404,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T21:00:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T21:00:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -25910,7 +25910,7 @@
       "trading_stop": {
         "WEEKLY": [
           {
-            "holiday_id": "133_0",
+            "holiday_id": "292_0",
             "start_day": "1",
             "start_hour": "0",
             "start_minute": "0",
@@ -25925,7 +25925,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "292_0",
+            "holiday_id": "133_0",
             "start_day": "1",
             "start_hour": "0",
             "start_minute": "0",
@@ -26113,8 +26113,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -26126,8 +26126,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -26437,8 +26437,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -26450,8 +26450,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -26666,7 +26666,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -26681,7 +26681,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -26748,7 +26748,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -26763,7 +26763,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -26882,7 +26882,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -26897,7 +26897,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -27437,8 +27437,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -27450,8 +27450,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -27757,8 +27757,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -27770,8 +27770,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -27906,7 +27906,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -27921,7 +27921,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -28959,8 +28959,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -28972,8 +28972,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -29121,8 +29121,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -29134,8 +29134,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -29318,8 +29318,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -29331,8 +29331,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -30280,8 +30280,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -30293,8 +30293,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -30829,7 +30829,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -30844,7 +30844,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -31082,8 +31082,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -31095,8 +31095,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -31711,7 +31711,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -31726,7 +31726,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -32753,7 +32753,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -32768,7 +32768,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -33328,8 +33328,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -33341,8 +33341,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -33477,7 +33477,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -33492,7 +33492,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -34050,8 +34050,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -34063,8 +34063,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -34130,8 +34130,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -34143,8 +34143,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -34199,7 +34199,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -34214,7 +34214,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -34292,8 +34292,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -34305,8 +34305,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -34612,8 +34612,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -34625,8 +34625,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -34761,7 +34761,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -34776,7 +34776,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -35211,8 +35211,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -35224,8 +35224,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -35451,8 +35451,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "228_0",
@@ -35464,8 +35464,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T15:50:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T15:50:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -35680,7 +35680,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -35695,7 +35695,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -36253,8 +36253,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "217_0",
@@ -36266,8 +36266,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T15:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T15:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -36733,8 +36733,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -36746,8 +36746,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -37375,8 +37375,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -37388,8 +37388,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -37535,8 +37535,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -37548,8 +37548,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -37775,8 +37775,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -7200,
             "timezone_hours_offset": -2,
-            "start": "2020-12-29T22:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T22:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "267_0",
@@ -37788,8 +37788,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -7200,
             "timezone_hours_offset": -2,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T21:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T21:59:00.000Z"
           }
         ]
       }
@@ -37855,8 +37855,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -37868,8 +37868,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -38095,8 +38095,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "217_0",
@@ -38108,8 +38108,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T15:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T15:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -38255,8 +38255,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T06:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T06:59:00.000Z"
           },
           {
             "holiday_id": "253_0",
@@ -38268,8 +38268,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T21:00:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T21:00:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -38415,8 +38415,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -38428,8 +38428,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -38495,8 +38495,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "228_0",
@@ -38508,8 +38508,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T15:50:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T15:50:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -38575,8 +38575,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -7200,
             "timezone_hours_offset": -2,
-            "start": "2020-12-29T22:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T22:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "267_0",
@@ -38588,8 +38588,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -7200,
             "timezone_hours_offset": -2,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T21:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T21:59:00.000Z"
           }
         ]
       }
@@ -39203,8 +39203,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "228_0",
@@ -39216,8 +39216,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T15:50:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T15:50:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -39767,8 +39767,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "217_0",
@@ -39780,8 +39780,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T15:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T15:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -39927,8 +39927,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -7200,
             "timezone_hours_offset": -2,
-            "start": "2020-12-29T22:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T22:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "267_0",
@@ -39940,8 +39940,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -7200,
             "timezone_hours_offset": -2,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T21:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T21:59:00.000Z"
           }
         ]
       }
@@ -40007,8 +40007,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -7200,
             "timezone_hours_offset": -2,
-            "start": "2020-12-29T22:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T22:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "267_0",
@@ -40020,8 +40020,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -7200,
             "timezone_hours_offset": -2,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T21:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T21:59:00.000Z"
           }
         ]
       }
@@ -40167,8 +40167,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -40180,8 +40180,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -41086,21 +41086,6 @@
       "trading_stop": {
         "WEEKLY": [
           {
-            "holiday_id": "133_0",
-            "start_day": "1",
-            "start_hour": "0",
-            "start_minute": "0",
-            "end_day": "1",
-            "end_hour": "8",
-            "end_minute": "59",
-            "timezone": "CET",
-            "updated": "2020-12-30",
-            "timezone_offset": -3600,
-            "timezone_hours_offset": -1,
-            "start": "2020-12-27T23:00:00.000Z",
-            "end": "2020-12-28T07:59:00.000Z"
-          },
-          {
             "holiday_id": "292_0",
             "start_day": "1",
             "start_hour": "0",
@@ -41116,7 +41101,22 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "133_0",
+            "start_day": "1",
+            "start_hour": "0",
+            "start_minute": "0",
+            "end_day": "1",
+            "end_hour": "8",
+            "end_minute": "59",
+            "timezone": "CET",
+            "updated": "2020-12-30",
+            "timezone_offset": -3600,
+            "timezone_hours_offset": -1,
+            "start": "2020-12-27T23:00:00.000Z",
+            "end": "2020-12-28T07:59:00.000Z"
+          },
+          {
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -41131,7 +41131,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -41209,8 +41209,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:44:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:44:00.000Z"
           },
           {
             "holiday_id": "202_0",
@@ -41222,8 +41222,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T15:50:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T15:50:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -41449,8 +41449,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "228_0",
@@ -41462,8 +41462,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T15:50:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T15:50:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -41849,8 +41849,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -41862,8 +41862,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -42530,21 +42530,6 @@
       "trading_stop": {
         "WEEKLY": [
           {
-            "holiday_id": "292_0",
-            "start_day": "1",
-            "start_hour": "0",
-            "start_minute": "0",
-            "end_day": "1",
-            "end_hour": "8",
-            "end_minute": "59",
-            "timezone": "CET",
-            "updated": "2020-12-30",
-            "timezone_offset": -3600,
-            "timezone_hours_offset": -1,
-            "start": "2020-12-27T23:00:00.000Z",
-            "end": "2020-12-28T07:59:00.000Z"
-          },
-          {
             "holiday_id": "133_0",
             "start_day": "1",
             "start_hour": "0",
@@ -42560,7 +42545,22 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "292_0",
+            "start_day": "1",
+            "start_hour": "0",
+            "start_minute": "0",
+            "end_day": "1",
+            "end_hour": "8",
+            "end_minute": "59",
+            "timezone": "CET",
+            "updated": "2020-12-30",
+            "timezone_offset": -3600,
+            "timezone_hours_offset": -1,
+            "start": "2020-12-27T23:00:00.000Z",
+            "end": "2020-12-28T07:59:00.000Z"
+          },
+          {
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -42575,7 +42575,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -42733,8 +42733,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "624_0",
@@ -42746,8 +42746,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -43044,7 +43044,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -43059,7 +43059,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -43286,7 +43286,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -43301,7 +43301,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -43368,7 +43368,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -43383,7 +43383,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -43865,8 +43865,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -43878,8 +43878,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -44265,8 +44265,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -44278,8 +44278,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -44591,8 +44591,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -44604,8 +44604,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -44671,8 +44671,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -44684,8 +44684,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -44911,8 +44911,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -44924,8 +44924,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -45071,8 +45071,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -45084,8 +45084,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -45151,8 +45151,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -45164,8 +45164,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -45231,8 +45231,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -45244,8 +45244,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -45311,8 +45311,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -45324,8 +45324,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -45564,7 +45564,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -45579,7 +45579,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -45657,8 +45657,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -45670,8 +45670,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -45817,8 +45817,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -45830,8 +45830,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -45977,8 +45977,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -45990,8 +45990,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -46057,8 +46057,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -46070,8 +46070,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -46219,8 +46219,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -46232,8 +46232,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -46781,8 +46781,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -46794,8 +46794,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -47086,8 +47086,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -47099,8 +47099,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -47326,8 +47326,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -7200,
             "timezone_hours_offset": -2,
-            "start": "2020-12-29T22:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T22:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "267_0",
@@ -47339,8 +47339,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -7200,
             "timezone_hours_offset": -2,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T21:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T21:59:00.000Z"
           }
         ]
       }
@@ -47406,8 +47406,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "217_0",
@@ -47419,8 +47419,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T15:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T15:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -47635,7 +47635,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -47650,7 +47650,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -47888,8 +47888,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -47901,8 +47901,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -48048,8 +48048,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -48061,8 +48061,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -48487,21 +48487,6 @@
       "trading_stop": {
         "WEEKLY": [
           {
-            "holiday_id": "292_0",
-            "start_day": "1",
-            "start_hour": "0",
-            "start_minute": "0",
-            "end_day": "1",
-            "end_hour": "8",
-            "end_minute": "59",
-            "timezone": "CET",
-            "updated": "2020-12-30",
-            "timezone_offset": -3600,
-            "timezone_hours_offset": -1,
-            "start": "2020-12-27T23:00:00.000Z",
-            "end": "2020-12-28T07:59:00.000Z"
-          },
-          {
             "holiday_id": "133_0",
             "start_day": "1",
             "start_hour": "0",
@@ -48517,7 +48502,22 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "292_0",
+            "start_day": "1",
+            "start_hour": "0",
+            "start_minute": "0",
+            "end_day": "1",
+            "end_hour": "8",
+            "end_minute": "59",
+            "timezone": "CET",
+            "updated": "2020-12-30",
+            "timezone_offset": -3600,
+            "timezone_hours_offset": -1,
+            "start": "2020-12-27T23:00:00.000Z",
+            "end": "2020-12-28T07:59:00.000Z"
+          },
+          {
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -48532,7 +48532,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -48610,8 +48610,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "217_0",
@@ -48623,8 +48623,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T15:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T15:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -48690,8 +48690,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -48703,8 +48703,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -49090,8 +49090,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -49103,8 +49103,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -49170,8 +49170,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -7200,
             "timezone_hours_offset": -2,
-            "start": "2020-12-29T22:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T22:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "267_0",
@@ -49183,8 +49183,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -7200,
             "timezone_hours_offset": -2,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T21:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T21:59:00.000Z"
           }
         ]
       }
@@ -49250,8 +49250,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -49263,8 +49263,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -50167,8 +50167,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -50180,8 +50180,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -50407,8 +50407,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -50420,8 +50420,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -50476,7 +50476,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -50491,7 +50491,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -50558,7 +50558,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -50573,7 +50573,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -50981,7 +50981,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -50996,7 +50996,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -51879,7 +51879,7 @@
       "trading_stop": {
         "WEEKLY": [
           {
-            "holiday_id": "485_0",
+            "holiday_id": "179_0",
             "start_day": "5",
             "start_hour": "23",
             "start_minute": "50",
@@ -51894,7 +51894,7 @@
             "end": "2021-01-03T20:59:00.000Z"
           },
           {
-            "holiday_id": "179_0",
+            "holiday_id": "485_0",
             "start_day": "5",
             "start_hour": "23",
             "start_minute": "50",
@@ -51920,8 +51920,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -10800,
             "timezone_hours_offset": -3,
-            "start": "2020-12-29T21:00:00.000Z",
-            "end": "2020-12-30T06:59:00.000Z"
+            "start": "2020-12-30T21:00:00.000Z",
+            "end": "2020-12-31T06:59:00.000Z"
           }
         ]
       }
@@ -53257,8 +53257,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -53270,8 +53270,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -53497,8 +53497,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "624_0",
@@ -53510,8 +53510,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -53577,8 +53577,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "270_0",
@@ -53590,8 +53590,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:25:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:25:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -53657,8 +53657,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "627_0",
@@ -53670,8 +53670,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:30:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:30:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -53726,7 +53726,7 @@
             "end": "2020-12-28T07:59:00.000Z"
           },
           {
-            "holiday_id": "134_0",
+            "holiday_id": "154_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -53741,7 +53741,7 @@
             "end": "2021-01-03T22:59:00.000Z"
           },
           {
-            "holiday_id": "154_0",
+            "holiday_id": "134_0",
             "start_day": "5",
             "start_hour": "17",
             "start_minute": "30",
@@ -53899,8 +53899,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "228_0",
@@ -53912,8 +53912,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T15:50:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T15:50:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }
@@ -56284,8 +56284,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-29T23:00:00.000Z",
-            "end": "2020-12-30T07:59:00.000Z"
+            "start": "2020-12-30T23:00:00.000Z",
+            "end": "2020-12-31T07:59:00.000Z"
           },
           {
             "holiday_id": "223_0",
@@ -56297,8 +56297,8 @@
             "updated": "2020-12-30",
             "timezone_offset": -3600,
             "timezone_hours_offset": -1,
-            "start": "2020-12-30T16:20:00.000Z",
-            "end": "2020-12-30T22:59:00.000Z"
+            "start": "2020-12-31T16:20:00.000Z",
+            "end": "2020-12-31T22:59:00.000Z"
           }
         ]
       }

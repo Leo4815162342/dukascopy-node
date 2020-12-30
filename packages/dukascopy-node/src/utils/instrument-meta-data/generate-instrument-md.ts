@@ -35,7 +35,7 @@ const flagMap: Record<string, string> = {
 (async () => {
   try {
     const contents = instrumentGroups
-      .map(({ name, id }) => `* [${name} ${flagMap[id] || ''}](#${id.toLowerCase()})`)
+      .map(({ name, id }) => `* [${name} ${flagMap[id] || ''}](#${id})`)
       .join('\n');
 
     const headers = [
@@ -53,7 +53,7 @@ const flagMap: Record<string, string> = {
 
     const instrumentTable = instrumentGroups
       .map(({ id, name, instruments }) => {
-        const groupTitle = `<h3 id="${id.toLowerCase()}">${name} ${flagMap[id] || ''}</h3>\n`;
+        const groupTitle = `<h3 id="${id}">${name} ${flagMap[id] || ''}</h3>\n`;
 
         const listBody = instruments
           .map(instrumentId => {

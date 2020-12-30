@@ -28,7 +28,7 @@ export function generateInstrumentGroupData(
     }
 
     all.push({
-      id: group,
+      id: group.toLowerCase().replace(/\s/g, '-'),
       name: metadata.groups[group].title,
       instruments: metadata.groups[group].instruments
         .filter(inst => !!metadata.instruments[inst])

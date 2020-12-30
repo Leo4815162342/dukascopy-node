@@ -1,16 +1,16 @@
 [
   {
-    "id": "BND_CFD",
+    "id": "bnd_cfd",
     "name": "Bonds (CFD)",
     "instruments": ["BUNDTREUR", "UKGILTTRGBP", "USTBONDTRUSD"]
   },
   {
-    "id": "VCCY",
+    "id": "vccy",
     "name": "Crypto (CFD)",
     "instruments": ["BTCUSD", "ETHUSD", "LTCUSD"]
   },
   {
-    "id": "CMD_AGRICULTURAL",
+    "id": "cmd_agricultural",
     "name": "Agricultural",
     "instruments": [
       "COCOACMDUSD",
@@ -22,17 +22,17 @@
     ]
   },
   {
-    "id": "CMD_ENERGY",
+    "id": "cmd_energy",
     "name": "Energy",
     "instruments": ["DIESELCMDUSD", "BRENTCMDUSD", "LIGHTCMDUSD", "GASCMDUSD"]
   },
   {
-    "id": "CMD_METALS",
+    "id": "cmd_metals",
     "name": "Metals",
     "instruments": ["COPPERCMDUSD"]
   },
   {
-    "id": "ETF_CFD_US",
+    "id": "etf_cfd_us",
     "name": "US",
     "instruments": [
       "DIAUSUSD",
@@ -81,7 +81,7 @@
     ]
   },
   {
-    "id": "FX_CROSSES",
+    "id": "fx_crosses",
     "name": "Crosses",
     "instruments": [
       "AUDCAD",
@@ -141,17 +141,17 @@
     ]
   },
   {
-    "id": "FX_MAJORS",
+    "id": "fx_majors",
     "name": "Majors",
     "instruments": ["AUDUSD", "EURUSD", "GBPUSD", "NZDUSD", "USDCAD", "USDCHF", "USDJPY"]
   },
   {
-    "id": "FX_METALS",
+    "id": "fx_metals",
     "name": "Metals",
     "instruments": ["XAGUSD", "XAUUSD"]
   },
   {
-    "id": "IDX_AMERICA",
+    "id": "idx_america",
     "name": "America",
     "instruments": [
       "DOLLARIDXUSD",
@@ -162,12 +162,12 @@
     ]
   },
   {
-    "id": "IDX_ASIA",
+    "id": "idx_asia",
     "name": "Asia / Pacific",
     "instruments": ["CHIIDXUSD", "HKGIDXHKD", "JPNIDXJPY", "AUSIDXAUD", "INDIDXUSD", "SGDIDXSGD"]
   },
   {
-    "id": "IDX_EUROPE",
+    "id": "idx_europe",
     "name": "Europe",
     "instruments": [
       "FRAIDXEUR",
@@ -181,12 +181,12 @@
     ]
   },
   {
-    "id": "Austria",
+    "id": "austria",
     "name": "Austria",
     "instruments": ["EBSATEUR", "RBIATEUR", "VOEATEUR"]
   },
   {
-    "id": "Belgium",
+    "id": "belgium",
     "name": "Belgium",
     "instruments": [
       "ABIBEEUR",
@@ -199,7 +199,7 @@
     ]
   },
   {
-    "id": "Denmark",
+    "id": "denmark",
     "name": "Denmark",
     "instruments": [
       "CARLBDKDKK",
@@ -213,7 +213,7 @@
     ]
   },
   {
-    "id": "Finland",
+    "id": "finland",
     "name": "Finland",
     "instruments": [
       "ELI1VFIEUR",
@@ -226,7 +226,7 @@
     ]
   },
   {
-    "id": "France",
+    "id": "france",
     "name": "France",
     "instruments": [
       "ACFREUR",
@@ -267,7 +267,7 @@
     ]
   },
   {
-    "id": "Germany",
+    "id": "germany",
     "name": "Germany",
     "instruments": [
       "ADSDEEUR",
@@ -308,7 +308,7 @@
     ]
   },
   {
-    "id": "Hong Kong",
+    "id": "hong-kong",
     "name": "Hong Kong",
     "instruments": [
       "0005HKHKD",
@@ -340,7 +340,7 @@
     ]
   },
   {
-    "id": "Japan",
+    "id": "japan",
     "name": "Japan",
     "instruments": [
       "2502JPJPY",
@@ -402,7 +402,7 @@
     ]
   },
   {
-    "id": "Netherlands",
+    "id": "netherlands",
     "name": "Netherlands",
     "instruments": [
       "AGNNLEUR",
@@ -424,17 +424,17 @@
     ]
   },
   {
-    "id": "Norway",
+    "id": "norway",
     "name": "Norway",
     "instruments": ["DNBNONOK", "MHGNONOK", "NHYNONOK", "ORKNONOK", "STLNONOK", "TELNONOK"]
   },
   {
-    "id": "Portugal",
+    "id": "portugal",
     "name": "Portugal",
     "instruments": ["EDPPTEUR", "GALPPTEUR"]
   },
   {
-    "id": "Spain",
+    "id": "spain",
     "name": "Spain",
     "instruments": [
       "ACSESEUR",
@@ -458,7 +458,7 @@
     ]
   },
   {
-    "id": "Sweden",
+    "id": "sweden",
     "name": "Sweden",
     "instruments": [
       "ABBSESEK",
@@ -484,7 +484,7 @@
     ]
   },
   {
-    "id": "Switzerland",
+    "id": "switzerland",
     "name": "Switzerland",
     "instruments": [
       "ABBNCHCHF",
@@ -510,7 +510,7 @@
     ]
   },
   {
-    "id": "UK",
+    "id": "uk",
     "name": "UK",
     "instruments": [
       "AALGBGBX",
@@ -596,7 +596,7 @@
     ]
   },
   {
-    "id": "US",
+    "id": "us",
     "name": "US",
     "instruments": [
       "AUSUSD",
