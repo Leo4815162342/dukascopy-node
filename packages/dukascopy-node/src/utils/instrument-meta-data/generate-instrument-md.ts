@@ -2,6 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
+import { getFormattedDate } from '../date';
 import { InstrumentMetaData } from './generate-init-meta';
 
 import instrumentGroups from './generated/instrument-groups.json';
@@ -37,10 +38,10 @@ const flagMap: Record<string, string> = {
       'Instrument id',
       'Name',
       'Description',
-      'Earliset tick data',
-      'Earliset minute data',
-      'Earliset hour data',
-      'Earliset day data'
+      'Earliset tick data (UTC)',
+      'Earliset minute data (UTC)',
+      'Earliset hour data (UTC)',
+      'Earliset day data (UTC)'
     ];
 
     const header = headers.map((h, i) => `${!i ? '|' : ''}${h}|`).join('');
@@ -63,7 +64,17 @@ const flagMap: Record<string, string> = {
               instrumentId as keyof typeof instrumentMetaData
             ] as InstrumentMetaData & StartDates;
 
-            return `|\`${instrumentId}\`|${name}|${description}|${startHourForTicks}|${startDayForMinuteCandles}|${startMonthForHourlyCandles}|${startYearForDailyCandles}|`;
+            const line = [
+              `\`${instrumentId}\``,
+              name,
+              description,
+              getFormattedDate(startHourForTicks, { hour: 'numeric' }),
+              getFormattedDate(startDayForMinuteCandles),
+              getFormattedDate(startMonthForHourlyCandles),
+              getFormattedDate(startYearForDailyCandles)
+            ].join('|');
+
+            return `|${line}|`;
           })
           .join('\n');
 
