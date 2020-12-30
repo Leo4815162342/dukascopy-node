@@ -1,0 +1,6 @@
+{
+  "startHourForTicks": "2020-12-27T00:00:00.000Z",
+  "startDayForMinuteCandles": "2020-12-27T00:00:00.000Z",
+  "startMonthForHourlyCandles": "2020-12-27T00:00:00.000Z",
+  "startYearForDailyCandles": "2020-01-01T00:00:00.000Z"
+}

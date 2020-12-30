@@ -1,0 +1,6 @@
+{
+  "startHourForTicks": "2007-06-04T00:00:00.000Z",
+  "startDayForMinuteCandles": "1999-03-03T00:00:00.000Z",
+  "startMonthForHourlyCandles": "1999-03-01T00:00:00.000Z",
+  "startYearForDailyCandles": "1997-01-01T00:00:00.000Z"
+}
