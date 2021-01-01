@@ -2,12 +2,20 @@
   {
     "id": "bnd_cfd",
     "name": "Bonds",
-    "instruments": ["BUNDTREUR", "UKGILTTRGBP", "USTBONDTRUSD"]
+    "instruments": [
+      "BUNDTREUR",
+      "UKGILTTRGBP",
+      "USTBONDTRUSD"
+    ]
   },
   {
     "id": "vccy",
     "name": "Crypto",
-    "instruments": ["BTCUSD", "ETHUSD", "LTCUSD"]
+    "instruments": [
+      "BTCUSD",
+      "ETHUSD",
+      "LTCUSD"
+    ]
   },
   {
     "id": "cmd_agricultural",
@@ -24,12 +32,19 @@
   {
     "id": "cmd_energy",
     "name": "Energy",
-    "instruments": ["DIESELCMDUSD", "BRENTCMDUSD", "LIGHTCMDUSD", "GASCMDUSD"]
+    "instruments": [
+      "DIESELCMDUSD",
+      "BRENTCMDUSD",
+      "LIGHTCMDUSD",
+      "GASCMDUSD"
+    ]
   },
   {
     "id": "cmd_metals",
     "name": "Metals",
-    "instruments": ["COPPERCMDUSD"]
+    "instruments": [
+      "COPPERCMDUSD"
+    ]
   },
   {
     "id": "etf_cfd_us",
@@ -143,12 +158,23 @@
   {
     "id": "fx_majors",
     "name": "Forex majors",
-    "instruments": ["AUDUSD", "EURUSD", "GBPUSD", "NZDUSD", "USDCAD", "USDCHF", "USDJPY"]
+    "instruments": [
+      "AUDUSD",
+      "EURUSD",
+      "GBPUSD",
+      "NZDUSD",
+      "USDCAD",
+      "USDCHF",
+      "USDJPY"
+    ]
   },
   {
     "id": "fx_metals",
     "name": "Forex metals",
-    "instruments": ["XAGUSD", "XAUUSD"]
+    "instruments": [
+      "XAGUSD",
+      "XAUUSD"
+    ]
   },
   {
     "id": "idx_america",
@@ -164,7 +190,14 @@
   {
     "id": "idx_asia",
     "name": "Asia / Pacific",
-    "instruments": ["CHIIDXUSD", "HKGIDXHKD", "JPNIDXJPY", "AUSIDXAUD", "INDIDXUSD", "SGDIDXSGD"]
+    "instruments": [
+      "CHIIDXUSD",
+      "HKGIDXHKD",
+      "JPNIDXJPY",
+      "AUSIDXAUD",
+      "INDIDXUSD",
+      "SGDIDXSGD"
+    ]
   },
   {
     "id": "idx_europe",
@@ -183,7 +216,11 @@
   {
     "id": "austria",
     "name": "Austria",
-    "instruments": ["EBSATEUR", "RBIATEUR", "VOEATEUR"]
+    "instruments": [
+      "EBSATEUR",
+      "RBIATEUR",
+      "VOEATEUR"
+    ]
   },
   {
     "id": "belgium",
@@ -426,12 +463,22 @@
   {
     "id": "norway",
     "name": "Norway",
-    "instruments": ["DNBNONOK", "MHGNONOK", "NHYNONOK", "ORKNONOK", "STLNONOK", "TELNONOK"]
+    "instruments": [
+      "DNBNONOK",
+      "MHGNONOK",
+      "NHYNONOK",
+      "ORKNONOK",
+      "STLNONOK",
+      "TELNONOK"
+    ]
   },
   {
     "id": "portugal",
     "name": "Portugal",
-    "instruments": ["EDPPTEUR", "GALPPTEUR"]
+    "instruments": [
+      "EDPPTEUR",
+      "GALPPTEUR"
+    ]
   },
   {
     "id": "spain",
