@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
 import { getFormattedDate } from '../date';
-import { InstrumentMetaData } from './generate-init-meta';
+import { InstrumentInitMetaData } from './generate-init-meta';
 
 import instrumentGroups from './generated/instrument-groups.json';
 import instrumentMetaData from './generated/instrument-meta-data.json';
@@ -84,7 +84,7 @@ const flagMap: Record<string, string> = {
               startYearForDailyCandles
             } = instrumentMetaData[
               instrumentId as keyof typeof instrumentMetaData
-            ] as InstrumentMetaData & StartDates;
+            ] as InstrumentInitMetaData & StartDates;
 
             const line = [
               `\`${instrumentId}\``,

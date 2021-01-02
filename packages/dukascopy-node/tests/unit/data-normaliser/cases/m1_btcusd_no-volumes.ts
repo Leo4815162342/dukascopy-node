@@ -6,7 +6,7 @@ const input = {
   ],
   timeframe: 'm1',
   startTs: 1,
-  instrument: 'btcusd',
+  instrument: 'BTCUSD',
   volumes: false
 };
 

@@ -1,5 +1,6 @@
 const typescript = require('@rollup/plugin-typescript');
 const commonjs = require('@rollup/plugin-commonjs');
+const json = require('@rollup/plugin-json');
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const pkg = require('./package.json');
 
@@ -21,6 +22,7 @@ module.exports = {
   plugins: [
     nodeResolve(),
     commonjs(),
+    json(),
     typescript({
       tsconfig: './tsconfig.json',
       typescript: require('typescript')

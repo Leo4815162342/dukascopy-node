@@ -1,5 +1,5 @@
 const config = {
-  instrument: 'eurusd',
+  instrument: 'EURUSD',
   dates: {
     from: '2019-02-01',
     to: '2019-02-29'

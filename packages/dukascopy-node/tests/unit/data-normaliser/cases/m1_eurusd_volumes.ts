@@ -6,7 +6,7 @@ const input = {
   ],
   timeframe: 'm1',
   startTs: 1,
-  instrument: 'eurusd',
+  instrument: 'EURUSD',
   volumes: true
 };
 
