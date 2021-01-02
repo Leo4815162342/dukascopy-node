@@ -17,6 +17,10 @@
     "precommit": "lint-staged",
     "prepush": "yarn type-check",
     "build-instruments": "yarn ts-node dev-utils/generate-instruments.ts",
+    "gen:init-meta": "ts-node src/utils/instrument-meta-data/generate-data.ts",
+    "gen:fetch-start-dates": "mode=fetch ts-node src/utils/instrument-meta-data/start-dates.ts",
+    "gen:enrich-start-dates": "mode=enrich ts-node src/utils/instrument-meta-data/start-dates.ts",
+    "gen:instruments-md": "ts-node src/utils/instrument-meta-data/generate-instrument-md.ts",
     "test:call": "yarn ts-node dev-utils/test-call.ts"
   },
   "author": "leonid.pyrlia",
