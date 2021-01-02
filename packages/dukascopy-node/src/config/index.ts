@@ -5,7 +5,7 @@ import { InstrumentType } from './instruments';
 import { OptionalKeys } from 'utility-types';
 
 export interface Config {
-  instrument: InstrumentType | Lowercase<InstrumentType>;
+  instrument: InstrumentType;
   dates: {
     from: string;
     to: string;

@@ -56,7 +56,7 @@ async function getStartHourForTicks(instrument: string): Promise<string> {
     const day = pad(middleDate.getUTCDate());
     const hour = pad(middleDate.getUTCHours());
 
-    const url = `https://datafeed.dukascopy.com/datafeed/${instrument}/${year}/${month}/${day}/${hour}h_ticks.bi5`;
+    const url = `https://datafeed.dukascopy.com/datafeed/${instrument.toUpperCase()}/${year}/${month}/${day}/${hour}h_ticks.bi5`;
 
     const data = await fetch(url);
     const rawResponse = await data.text();
@@ -109,7 +109,7 @@ async function getStartDayForMinuteCandles(instrument: string): Promise<string> 
     const month = pad(middleDate.getUTCMonth());
     const day = pad(middleDate.getUTCDate());
 
-    const url = `https://datafeed.dukascopy.com/datafeed/${instrument}/${year}/${month}/${day}/ASK_candles_min_1.bi5`;
+    const url = `https://datafeed.dukascopy.com/datafeed/${instrument.toUpperCase()}/${year}/${month}/${day}/ASK_candles_min_1.bi5`;
 
     const data = await fetch(url);
     const rawResponse = await data.text();
@@ -161,7 +161,7 @@ async function getStartMonthForHourlyCandles(instrument: string): Promise<string
     const year = middleDate.getUTCFullYear();
     const month = pad(middleDate.getUTCMonth());
 
-    const url = `https://datafeed.dukascopy.com/datafeed/${instrument}/${year}/${month}/ASK_candles_hour_1.bi5`;
+    const url = `https://datafeed.dukascopy.com/datafeed/${instrument.toUpperCase()}/${year}/${month}/ASK_candles_hour_1.bi5`;
 
     const data = await fetch(url);
     const rawResponse = await data.text();
@@ -209,7 +209,7 @@ async function getStartYearForDailyCandles(instrument: string): Promise<string> 
   while (!minYear) {
     const midYear = start + Math.floor((end - start) / 2);
 
-    const url = `https://datafeed.dukascopy.com/datafeed/${instrument}/${midYear}/BID_candles_day_1.bi5`;
+    const url = `https://datafeed.dukascopy.com/datafeed/${instrument.toUpperCase()}/${midYear}/BID_candles_day_1.bi5`;
 
     const data = await fetch(url);
     const rawResponse = await data.text();

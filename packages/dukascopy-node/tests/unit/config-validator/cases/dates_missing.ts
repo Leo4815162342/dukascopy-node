@@ -1,5 +1,5 @@
 const config = {
-  instrument: 'EURUSD',
+  instrument: 'eurusd',
   timeframe: 'tick',
   priceType: 'bid',
   utcOffset: 60,

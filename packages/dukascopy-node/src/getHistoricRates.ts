@@ -15,7 +15,6 @@ import { BufferFetcher } from './buffer-fetcher';
 import { processData } from './processor';
 import { formatOutput } from './output-formatter';
 import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
-import { InstrumentType } from './config/instruments';
 
 export async function getHistoricRates(config: ConfigArrayItem): Promise<ArrayItem[]>;
 export async function getHistoricRates(config: ConfigArrayTickItem): Promise<ArrayTickItem[]>;
@@ -27,8 +26,7 @@ export async function getHistoricRates(config: Config): Promise<Output>;
 export async function getHistoricRates(config: Config): Promise<Output> {
   const mergedConfig = {
     ...defaultConfig,
-    ...config,
-    ...{ instrument: config?.instrument?.toUpperCase() as InstrumentType }
+    ...config
   };
 
   const { isValid, validationErrors } = validateConfig(mergedConfig);

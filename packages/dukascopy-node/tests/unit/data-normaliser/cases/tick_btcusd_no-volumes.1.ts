@@ -6,7 +6,7 @@ const input = {
   ],
   timeframe: 'tick',
   startTs: 1,
-  instrument: 'BTCUSD',
+  instrument: 'btcusd',
   volumes: false
 };
 

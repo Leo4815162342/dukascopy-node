@@ -4,4374 +4,4374 @@ export enum Instrument {
      * ### HSBC Holdings
      * *0005.HK/HKD*
      */
-    '0005HKHKD'='0005HKHKD',
+    '0005hkhkd'='0005hkhkd',
 
     /**
      * ### Galaxy Entertainment Group
      * *0027.HK/HKD*
      */
-    '0027HKHKD'='0027HKHKD',
+    '0027hkhkd'='0027hkhkd',
 
     /**
      * ### Geely Automobile Holdings
      * *0175.HK/HKD*
      */
-    '0175HKHKD'='0175HKHKD',
+    '0175hkhkd'='0175hkhkd',
 
     /**
      * ### China Resources Beer Holdings
      * *0291.HK/HKD*
      */
-    '0291HKHKD'='0291HKHKD',
+    '0291hkhkd'='0291hkhkd',
 
     /**
      * ### Sinopec Corp
      * *0386.HK/HKD*
      */
-    '0386HKHKD'='0386HKHKD',
+    '0386hkhkd'='0386hkhkd',
 
     /**
      * ### HK Exchanges & Clearing
      * *0388.HK/HKD*
      */
-    '0388HKHKD'='0388HKHKD',
+    '0388hkhkd'='0388hkhkd',
 
     /**
      * ### Tencent Holdings
      * *0700.HK/HKD*
      */
-    '0700HKHKD'='0700HKHKD',
+    '0700hkhkd'='0700hkhkd',
 
     /**
      * ### PetroChina
      * *0857.HK/HKD*
      */
-    '0857HKHKD'='0857HKHKD',
+    '0857hkhkd'='0857hkhkd',
 
     /**
      * ### China National Offshore Oil Corporation
      * *0883.HK/HKD*
      */
-    '0883HKHKD'='0883HKHKD',
+    '0883hkhkd'='0883hkhkd',
 
     /**
      * ### China Construction Bank
      * *0939.HK/HKD*
      */
-    '0939HKHKD'='0939HKHKD',
+    '0939hkhkd'='0939hkhkd',
 
     /**
      * ### China Mobile
      * *0941.HK/HKD*
      */
-    '0941HKHKD'='0941HKHKD',
+    '0941hkhkd'='0941hkhkd',
 
     /**
      * ### CITIC Bank International
      * *0998.HK/HKD*
      */
-    '0998HKHKD'='0998HKHKD',
+    '0998hkhkd'='0998hkhkd',
 
     /**
      * ### CSPC Pharmaceutical Group
      * *1093.HK/HKD*
      */
-    '1093HKHKD'='1093HKHKD',
+    '1093hkhkd'='1093hkhkd',
 
     /**
      * ### Sino Biopharmeceutical
      * *1177.HK/HKD*
      */
-    '1177HKHKD'='1177HKHKD',
+    '1177hkhkd'='1177hkhkd',
 
     /**
      * ### Agricultural Bank of China
      * *1288.HK/HKD*
      */
-    '1288HKHKD'='1288HKHKD',
+    '1288hkhkd'='1288hkhkd',
 
     /**
      * ### AIA
      * *1299.HK/HKD*
      */
-    '1299HKHKD'='1299HKHKD',
+    '1299hkhkd'='1299hkhkd',
 
     /**
      * ### Industrial and Commercial Bank of China
      * *1398.HK/HKD*
      */
-    '1398HKHKD'='1398HKHKD',
+    '1398hkhkd'='1398hkhkd',
 
     /**
      * ### Sunac China Holdings
      * *1918.HK/HKD*
      */
-    '1918HKHKD'='1918HKHKD',
+    '1918hkhkd'='1918hkhkd',
 
     /**
      * ### Country Garden Holdings
      * *2007.HK/HKD*
      */
-    '2007HKHKD'='2007HKHKD',
+    '2007hkhkd'='2007hkhkd',
 
     /**
      * ### AAC Technologies Holdings
      * *2018.HK/HKD*
      */
-    '2018HKHKD'='2018HKHKD',
+    '2018hkhkd'='2018hkhkd',
 
     /**
      * ### Ping An Insurance
      * *2318.HK/HKD*
      */
-    '2318HKHKD'='2318HKHKD',
+    '2318hkhkd'='2318hkhkd',
 
     /**
      * ### BOC Hong Kong (Holdings)
      * *2388.HK/HKD*
      */
-    '2388HKHKD'='2388HKHKD',
+    '2388hkhkd'='2388hkhkd',
 
     /**
      * ### Asahi Group Holdings
      * *2502.JP/JPY*
      */
-    '2502JPJPY'='2502JPJPY',
+    '2502jpjpy'='2502jpjpy',
 
     /**
      * ### Kirin Brewery Co
      * *2503.JP/JPY*
      */
-    '2503JPJPY'='2503JPJPY',
+    '2503jpjpy'='2503jpjpy',
 
     /**
      * ### China Life Insurance Company
      * *2628.HK/HKD*
      */
-    '2628HKHKD'='2628HKHKD',
+    '2628hkhkd'='2628hkhkd',
 
     /**
      * ### Japan Tobacco
      * *2914.JP/JPY*
      */
-    '2914JPJPY'='2914JPJPY',
+    '2914jpjpy'='2914jpjpy',
 
     /**
      * ### China Evergrande Group
      * *3333.HK/HKD*
      */
-    '3333HKHKD'='3333HKHKD',
+    '3333hkhkd'='3333hkhkd',
 
     /**
      * ### Seven and I Holdings
      * *3382.JP/JPY*
      */
-    '3382JPJPY'='3382JPJPY',
+    '3382jpjpy'='3382jpjpy',
 
     /**
      * ### Sumco Corp
      * *3436.JP/JPY*
      */
-    '3436JPJPY'='3436JPJPY',
+    '3436jpjpy'='3436jpjpy',
 
     /**
      * ### China Merchants Bank
      * *3968.HK/HKD*
      */
-    '3968HKHKD'='3968HKHKD',
+    '3968hkhkd'='3968hkhkd',
 
     /**
      * ### Bank of China
      * *3988.HK/HKD*
      */
-    '3988HKHKD'='3988HKHKD',
+    '3988hkhkd'='3988hkhkd',
 
     /**
      * ### Showa Denko
      * *4004.JP/JPY*
      */
-    '4004JPJPY'='4004JPJPY',
+    '4004jpjpy'='4004jpjpy',
 
     /**
      * ### Sumitomo Chemical
      * *4005.JP/JPY*
      */
-    '4005JPJPY'='4005JPJPY',
+    '4005jpjpy'='4005jpjpy',
 
     /**
      * ### Shin-Etsu Chemical
      * *4063.JP/JPY*
      */
-    '4063JPJPY'='4063JPJPY',
+    '4063jpjpy'='4063jpjpy',
 
     /**
      * ### Kao Corp
      * *4452.JP/JPY*
      */
-    '4452JPJPY'='4452JPJPY',
+    '4452jpjpy'='4452jpjpy',
 
     /**
      * ### Takeda
      * *4502.JP/JPY*
      */
-    '4502JPJPY'='4502JPJPY',
+    '4502jpjpy'='4502jpjpy',
 
     /**
      * ### Astellas Pharma
      * *4503.JP/JPY*
      */
-    '4503JPJPY'='4503JPJPY',
+    '4503jpjpy'='4503jpjpy',
 
     /**
      * ### Shionogi
      * *4507.JP/JPY*
      */
-    '4507JPJPY'='4507JPJPY',
+    '4507jpjpy'='4507jpjpy',
 
     /**
      * ### Eisai
      * *4523.JP/JPY*
      */
-    '4523JPJPY'='4523JPJPY',
+    '4523jpjpy'='4523jpjpy',
 
     /**
      * ### Terumo Corp
      * *4543.JP/JPY*
      */
-    '4543JPJPY'='4543JPJPY',
+    '4543jpjpy'='4543jpjpy',
 
     /**
      * ### Yahoo Japan Corp
      * *4689.JP/JPY*
      */
-    '4689JPJPY'='4689JPJPY',
+    '4689jpjpy'='4689jpjpy',
 
     /**
      * ### Shiseido
      * *4911.JP/JPY*
      */
-    '4911JPJPY'='4911JPJPY',
+    '4911jpjpy'='4911jpjpy',
 
     /**
      * ### Bridgestone Corp
      * *5108.JP/JPY*
      */
-    '5108JPJPY'='5108JPJPY',
+    '5108jpjpy'='5108jpjpy',
 
     /**
      * ### Tokai Carbon
      * *5301.JP/JPY*
      */
-    '5301JPJPY'='5301JPJPY',
+    '5301jpjpy'='5301jpjpy',
 
     /**
      * ### Nippon Steel Corp
      * *5401.JP/JPY*
      */
-    '5401JPJPY'='5401JPJPY',
+    '5401jpjpy'='5401jpjpy',
 
     /**
      * ### Recruit Holdings Co Ltd
      * *6098.JP/JPY*
      */
-    '6098JPJPY'='6098JPJPY',
+    '6098jpjpy'='6098jpjpy',
 
     /**
      * ### Komatsu
      * *6301.JP/JPY*
      */
-    '6301JPJPY'='6301JPJPY',
+    '6301jpjpy'='6301jpjpy',
 
     /**
      * ### Daikin Industries
      * *6367.JP/JPY*
      */
-    '6367JPJPY'='6367JPJPY',
+    '6367jpjpy'='6367jpjpy',
 
     /**
      * ### Hitachi
      * *6501.JP/JPY*
      */
-    '6501JPJPY'='6501JPJPY',
+    '6501jpjpy'='6501jpjpy',
 
     /**
      * ### Toshiba Corp
      * *6502.JP/JPY*
      */
-    '6502JPJPY'='6502JPJPY',
+    '6502jpjpy'='6502jpjpy',
 
     /**
      * ### Mitsubishi Electric Corp
      * *6503.JP/JPY*
      */
-    '6503JPJPY'='6503JPJPY',
+    '6503jpjpy'='6503jpjpy',
 
     /**
      * ### Yaskawa Electric Corp
      * *6506.JP/JPY*
      */
-    '6506JPJPY'='6506JPJPY',
+    '6506jpjpy'='6506jpjpy',
 
     /**
      * ### Fujitsu
      * *6702.JP/JPY*
      */
-    '6702JPJPY'='6702JPJPY',
+    '6702jpjpy'='6702jpjpy',
 
     /**
      * ### Panasonic Corp
      * *6752.JP/JPY*
      */
-    '6752JPJPY'='6752JPJPY',
+    '6752jpjpy'='6752jpjpy',
 
     /**
      * ### Sony Corp Japan
      * *6758.JP/JPY*
      */
-    '6758JPJPY'='6758JPJPY',
+    '6758jpjpy'='6758jpjpy',
 
     /**
      * ### TDK Corp
      * *6762.JP/JPY*
      */
-    '6762JPJPY'='6762JPJPY',
+    '6762jpjpy'='6762jpjpy',
 
     /**
      * ### Denso Corp
      * *6902.JP/JPY*
      */
-    '6902JPJPY'='6902JPJPY',
+    '6902jpjpy'='6902jpjpy',
 
     /**
      * ### Fanuc
      * *6954.JP/JPY*
      */
-    '6954JPJPY'='6954JPJPY',
+    '6954jpjpy'='6954jpjpy',
 
     /**
      * ### Kyocera
      * *6971.JP/JPY*
      */
-    '6971JPJPY'='6971JPJPY',
+    '6971jpjpy'='6971jpjpy',
 
     /**
      * ### Nissan Motor Co
      * *7201.JP/JPY*
      */
-    '7201JPJPY'='7201JPJPY',
+    '7201jpjpy'='7201jpjpy',
 
     /**
      * ### Toyota Motor Corp
      * *7203.JP/JPY*
      */
-    '7203JPJPY'='7203JPJPY',
+    '7203jpjpy'='7203jpjpy',
 
     /**
      * ### Mazda Motor
      * *7261.JP/JPY*
      */
-    '7261JPJPY'='7261JPJPY',
+    '7261jpjpy'='7261jpjpy',
 
     /**
      * ### Honda Motor Company
      * *7267.JP/JPY*
      */
-    '7267JPJPY'='7267JPJPY',
+    '7267jpjpy'='7267jpjpy',
 
     /**
      * ### Suzuki Motor Corp
      * *7269.JP/JPY*
      */
-    '7269JPJPY'='7269JPJPY',
+    '7269jpjpy'='7269jpjpy',
 
     /**
      * ### Subaru Corporation
      * *7270.JP/JPY*
      */
-    '7270JPJPY'='7270JPJPY',
+    '7270jpjpy'='7270jpjpy',
 
     /**
      * ### Canon
      * *7751.JP/JPY*
      */
-    '7751JPJPY'='7751JPJPY',
+    '7751jpjpy'='7751jpjpy',
 
     /**
      * ### Nintendo Co Ltd
      * *7974.JP/JPY*
      */
-    '7974JPJPY'='7974JPJPY',
+    '7974jpjpy'='7974jpjpy',
 
     /**
      * ### Mitsui and Company
      * *8031.JP/JPY*
      */
-    '8031JPJPY'='8031JPJPY',
+    '8031jpjpy'='8031jpjpy',
 
     /**
      * ### Tokyo Electron
      * *8035.JP/JPY*
      */
-    '8035JPJPY'='8035JPJPY',
+    '8035jpjpy'='8035jpjpy',
 
     /**
      * ### Mitsubishi UFJ Financial Group
      * *8306.JP/JPY*
      */
-    '8306JPJPY'='8306JPJPY',
+    '8306jpjpy'='8306jpjpy',
 
     /**
      * ### Sumitomo Mitsui Financial Group
      * *8316.JP/JPY*
      */
-    '8316JPJPY'='8316JPJPY',
+    '8316jpjpy'='8316jpjpy',
 
     /**
      * ### Mizuho Financial Group
      * *8411.JP/JPY*
      */
-    '8411JPJPY'='8411JPJPY',
+    '8411jpjpy'='8411jpjpy',
 
     /**
      * ### Tokio Marine Holdings
      * *8766.JP/JPY*
      */
-    '8766JPJPY'='8766JPJPY',
+    '8766jpjpy'='8766jpjpy',
 
     /**
      * ### Mitsui Fudosan Company
      * *8801.JP/JPY*
      */
-    '8801JPJPY'='8801JPJPY',
+    '8801jpjpy'='8801jpjpy',
 
     /**
      * ### Mitsubishi Estate Company
      * *8802.JP/JPY*
      */
-    '8802JPJPY'='8802JPJPY',
+    '8802jpjpy'='8802jpjpy',
 
     /**
      * ### East Japan Railway Company
      * *9020.JP/JPY*
      */
-    '9020JPJPY'='9020JPJPY',
+    '9020jpjpy'='9020jpjpy',
 
     /**
      * ### Nippon Telegraph and Tel
      * *9432.JP/JPY*
      */
-    '9432JPJPY'='9432JPJPY',
+    '9432jpjpy'='9432jpjpy',
 
     /**
      * ### KDDI Corp
      * *9433.JP/JPY*
      */
-    '9433JPJPY'='9433JPJPY',
+    '9433jpjpy'='9433jpjpy',
 
     /**
      * ### NTT Docomo
      * *9437.JP/JPY*
      */
-    '9437JPJPY'='9437JPJPY',
+    '9437jpjpy'='9437jpjpy',
 
     /**
      * ### Tokyo Electric Power Company
      * *9501.JP/JPY*
      */
-    '9501JPJPY'='9501JPJPY',
+    '9501jpjpy'='9501jpjpy',
 
     /**
      * ### Fast Retailing
      * *9983.JP/JPY*
      */
-    '9983JPJPY'='9983JPJPY',
+    '9983jpjpy'='9983jpjpy',
 
     /**
      * ### Softbank Group Corp
      * *9984.JP/JPY*
      */
-    '9984JPJPY'='9984JPJPY',
+    '9984jpjpy'='9984jpjpy',
 
     /**
      * ### AGILENT TECHNOLOGIES INC
      * *A.US/USD*
      */
-    AUSUSD='AUSUSD',
+    aususd='aususd',
 
     /**
      * ### ALCOA INC
      * *AA.US/USD*
      */
-    AAUSUSD='AAUSUSD',
+    aaususd='aaususd',
 
     /**
      * ### Anglo American PLC
      * *AAL.GB/GBX*
      */
-    AALGBGBX='AALGBGBX',
+    aalgbgbx='aalgbgbx',
 
     /**
      * ### AMERICAN AIRLINES GROUP INC
      * *AAL.US/USD*
      */
-    AALUSUSD='AALUSUSD',
+    aalususd='aalususd',
 
     /**
      * ### APPLE INC
      * *AAPL.US/USD*
      */
-    AAPLUSUSD='AAPLUSUSD',
+    aaplususd='aaplususd',
 
     /**
      * ### ABB Ltd
      * *ABB.SE/SEK*
      */
-    ABBSESEK='ABBSESEK',
+    abbsesek='abbsesek',
 
     /**
      * ### ABB Ltd
      * *ABBN.CH/CHF*
      */
-    ABBNCHCHF='ABBNCHCHF',
+    abbnchchf='abbnchchf',
 
     /**
      * ### AMERISOURCEBERGEN CORP
      * *ABC.US/USD*
      */
-    ABCUSUSD='ABCUSUSD',
+    abcususd='abcususd',
 
     /**
      * ### Ambev S.A.
      * *ABEV.US/USD*
      */
-    ABEVUSUSD='ABEVUSUSD',
+    abevususd='abevususd',
 
     /**
      * ### Associated British Foods PLC
      * *ABF.GB/GBX*
      */
-    ABFGBGBX='ABFGBGBX',
+    abfgbgbx='abfgbgbx',
 
     /**
      * ### Anheuser-Busch InBev NV
      * *ABI.BE/EUR*
      */
-    ABIBEEUR='ABIBEEUR',
+    abibeeur='abibeeur',
 
     /**
      * ### ABBOTT LABORATORIES
      * *ABT.US/USD*
      */
-    ABTUSUSD='ABTUSUSD',
+    abtususd='abtususd',
 
     /**
      * ### Accor SA
      * *AC.FR/EUR*
      */
-    ACFREUR='ACFREUR',
+    acfreur='acfreur',
 
     /**
      * ### Credit Agricole SA
      * *ACA.FR/EUR*
      */
-    ACAFREUR='ACAFREUR',
+    acafreur='acafreur',
 
     /**
      * ### ACS Actividades de Construccion y Servicios SA
      * *ACS.ES/EUR*
      */
-    ACSESEUR='ACSESEUR',
+    acseseur='acseseur',
 
     /**
      * ### Acerinox SA
      * *ACX.ES/EUR*
      */
-    ACXESEUR='ACXESEUR',
+    acxeseur='acxeseur',
 
     /**
      * ### ADOBE SYSTEMS INC
      * *ADBE.US/USD*
      */
-    ADBEUSUSD='ADBEUSUSD',
+    adbeususd='adbeususd',
 
     /**
      * ### Adecco SA
      * *ADEN.CH/CHF*
      */
-    ADENCHCHF='ADENCHCHF',
+    adenchchf='adenchchf',
 
     /**
      * ### ANALOG DEVICES INC
      * *ADI.US/USD*
      */
-    ADIUSUSD='ADIUSUSD',
+    adiususd='adiususd',
 
     /**
      * ### Admiral Group PLC
      * *ADM.GB/GBX*
      */
-    ADMGBGBX='ADMGBGBX',
+    admgbgbx='admgbgbx',
 
     /**
      * ### AUTOMATIC DATA PROCESSING
      * *ADP.US/USD*
      */
-    ADPUSUSD='ADPUSUSD',
+    adpususd='adpususd',
 
     /**
      * ### Adidas AG
      * *ADS.DE/EUR*
      */
-    ADSDEEUR='ADSDEEUR',
+    adsdeeur='adsdeeur',
 
     /**
      * ### AUTODESK INC
      * *ADSK.US/USD*
      */
-    ADSKUSUSD='ADSKUSUSD',
+    adskususd='adskususd',
 
     /**
      * ### Aena SA
      * *AENA.ES/EUR*
      */
-    AENAESEUR='AENAESEUR',
+    aenaeseur='aenaeseur',
 
     /**
      * ### AMERICAN ELECTRIC POWER
      * *AEP.US/USD*
      */
-    AEPUSUSD='AEPUSUSD',
+    aepususd='aepususd',
 
     /**
      * ### Air France-KLM
      * *AF.FR/EUR*
      */
-    AFFREUR='AFFREUR',
+    affreur='affreur',
 
     /**
      * ### Aggreko PLC
      * *AGK.GB/GBX*
      */
-    AGKGBGBX='AGKGBGBX',
+    agkgbgbx='agkgbgbx',
 
     /**
      * ### Aegon NV
      * *AGN.NL/EUR*
      */
-    AGNNLEUR='AGNNLEUR',
+    agnnleur='agnnleur',
 
     /**
      * ### Ageas
      * *AGS.BE/EUR*
      */
-    AGSBEEUR='AGSBEEUR',
+    agsbeeur='agsbeeur',
 
     /**
      * ### Koninklijke Ahold Delhaize NV
      * *AH.NL/EUR*
      */
-    AHNLEUR='AHNLEUR',
+    ahnleur='ahnleur',
 
     /**
      * ### Ashtead Group PLC
      * *AHT.GB/GBX*
      */
-    AHTGBGBX='AHTGBGBX',
+    ahtgbgbx='ahtgbgbx',
 
     /**
      * ### Air Liquide SA
      * *AI.FR/EUR*
      */
-    AIFREUR='AIFREUR',
+    aifreur='aifreur',
 
     /**
      * ### AMERICAN INTERNATIONAL GROUP
      * *AIG.US/USD*
      */
-    AIGUSUSD='AIGUSUSD',
+    aigususd='aigususd',
 
     /**
      * ### Airbus Group SE
      * *AIR.FR/EUR*
      */
-    AIRFREUR='AIRFREUR',
+    airfreur='airfreur',
 
     /**
      * ### Akzo Nobel NV
      * *AKZA.NL/EUR*
      */
-    AKZANLEUR='AKZANLEUR',
+    akzanleur='akzanleur',
 
     /**
      * ### Alfa Laval AB
      * *ALFA.SE/SEK*
      */
-    ALFASESEK='ALFASESEK',
+    alfasesek='alfasesek',
 
     /**
      * ### ALLSTATE CORP
      * *ALL.US/USD*
      */
-    ALLUSUSD='ALLUSUSD',
+    allususd='allususd',
 
     /**
      * ### Alstom SA
      * *ALO.FR/EUR*
      */
-    ALOFREUR='ALOFREUR',
+    alofreur='alofreur',
 
     /**
      * ### Allianz SE
      * *ALV.DE/EUR*
      */
-    ALVDEEUR='ALVDEEUR',
+    alvdeeur='alvdeeur',
 
     /**
      * ### ALEXION PHARMACEUTICALS INC
      * *ALXN.US/USD*
      */
-    ALXNUSUSD='ALXNUSUSD',
+    alxnususd='alxnususd',
 
     /**
      * ### APPLIED MATERIALS INC
      * *AMAT.US/USD*
      */
-    AMATUSUSD='AMATUSUSD',
+    amatususd='amatususd',
 
     /**
      * ### ADVANCED MICRO DEVICES
      * *AMD.US/USD*
      */
-    AMDUSUSD='AMDUSUSD',
+    amdususd='amdususd',
 
     /**
      * ### AMGEN INC
      * *AMGN.US/USD*
      */
-    AMGNUSUSD='AMGNUSUSD',
+    amgnususd='amgnususd',
 
     /**
      * ### AMERIPRISE FINANCIAL INC
      * *AMP.US/USD*
      */
-    AMPUSUSD='AMPUSUSD',
+    ampususd='ampususd',
 
     /**
      * ### Amadeus IT Holding SA
      * *AMS.ES/EUR*
      */
-    AMSESEUR='AMSESEUR',
+    amseseur='amseseur',
 
     /**
      * ### AMERICAN TOWER CORP
      * *AMT.US/USD*
      */
-    AMTUSUSD='AMTUSUSD',
+    amtususd='amtususd',
 
     /**
      * ### AMAZON.COM INC
      * *AMZN.US/USD*
      */
-    AMZNUSUSD='AMZNUSUSD',
+    amznususd='amznususd',
 
     /**
      * ### ANTHEM INC
      * *ANTM.US/USD*
      */
-    ANTMUSUSD='ANTMUSUSD',
+    antmususd='antmususd',
 
     /**
      * ### Antofagasta PLC
      * *ANTO.GB/GBX*
      */
-    ANTOGBGBX='ANTOGBGBX',
+    antogbgbx='antogbgbx',
 
     /**
      * ### APACHE CORP
      * *APA.US/USD*
      */
-    APAUSUSD='APAUSUSD',
+    apaususd='apaususd',
 
     /**
      * ### AIR PRODUCTS & CHEMICALS INC
      * *APD.US/USD*
      */
-    APDUSUSD='APDUSUSD',
+    apdususd='apdususd',
 
     /**
      * ### ASML Holding NV
      * *ASML.NL/EUR*
      */
-    ASMLNLEUR='ASMLNLEUR',
+    asmlnleur='asmlnleur',
 
     /**
      * ### Atlas Copco AB
      * *ATCOA.SE/SEK*
      */
-    ATCOASESEK='ATCOASESEK',
+    atcoasesek='atcoasesek',
 
     /**
      * ### ACTIVISION BLIZZARD INC
      * *ATVI.US/USD*
      */
-    ATVIUSUSD='ATVIUSUSD',
+    atviususd='atviususd',
 
     /**
      * ### Australian Dollar vs Canadian Dollar
      * *AUD/CAD*
      */
-    AUDCAD='AUDCAD',
+    audcad='audcad',
 
     /**
      * ### Australian Dollar vs Swiss Franc
      * *AUD/CHF*
      */
-    AUDCHF='AUDCHF',
+    audchf='audchf',
 
     /**
      * ### Australian Dollar vs Japanese Yen
      * *AUD/JPY*
      */
-    AUDJPY='AUDJPY',
+    audjpy='audjpy',
 
     /**
      * ### Australian Dollar vs New Zealand Dollar
      * *AUD/NZD*
      */
-    AUDNZD='AUDNZD',
+    audnzd='audnzd',
 
     /**
      * ### Australian Dollar vs Singapore Dollar
      * *AUD/SGD*
      */
-    AUDSGD='AUDSGD',
+    audsgd='audsgd',
 
     /**
      * ### Australian Dollar vs US Dollar
      * *AUD/USD*
      */
-    AUDUSD='AUDUSD',
+    audusd='audusd',
 
     /**
      * ### Aviva PLC
      * *AV.GB/GBX*
      */
-    AVGBGBX='AVGBGBX',
+    avgbgbx='avgbgbx',
 
     /**
      * ### AVALONBAY COMMUNITIES INC
      * *AVB.US/USD*
      */
-    AVBUSUSD='AVBUSUSD',
+    avbususd='avbususd',
 
     /**
      * ### Broadcom Limited
      * *AVGO.US/USD*
      */
-    AVGOUSUSD='AVGOUSUSD',
+    avgoususd='avgoususd',
 
     /**
      * ### AMERICAN EXPRESS CO
      * *AXP.US/USD*
      */
-    AXPUSUSD='AXPUSUSD',
+    axpususd='axpususd',
 
     /**
      * ### AstraZeneca PLC
      * *AZN.GB/GBX*
      */
-    AZNGBGBX='AZNGBGBX',
+    azngbgbx='azngbgbx',
 
     /**
      * ### AstraZeneca PLC
      * *AZN.US/USD*
      */
-    AZNUSUSD='AZNUSUSD',
+    aznususd='aznususd',
 
     /**
      * ### AUTOZONE INC
      * *AZO.US/USD*
      */
-    AZOUSUSD='AZOUSUSD',
+    azoususd='azoususd',
 
     /**
      * ### BAE Systems PLC
      * *BA.GB/GBX*
      */
-    BAGBGBX='BAGBGBX',
+    bagbgbx='bagbgbx',
 
     /**
      * ### Boeing Co
      * *BA.US/USD*
      */
-    BAUSUSD='BAUSUSD',
+    baususd='baususd',
 
     /**
      * ### Babcock International Group PLC
      * *BAB.GB/GBX*
      */
-    BABGBGBX='BABGBGBX',
+    babgbgbx='babgbgbx',
 
     /**
      * ### ALIBABA GROUP HOLDING-SP ADR
      * *BABA.US/USD*
      */
-    BABAUSUSD='BABAUSUSD',
+    babaususd='babaususd',
 
     /**
      * ### BANK OF AMERICA CORP
      * *BAC.US/USD*
      */
-    BACUSUSD='BACUSUSD',
+    bacususd='bacususd',
 
     /**
      * ### Julius Baer Group Ltd
      * *BAER.CH/CHF*
      */
-    BAERCHCHF='BAERCHCHF',
+    baerchchf='baerchchf',
 
     /**
      * ### Barclays PLC
      * *BARC.GB/GBX*
      */
-    BARCGBGBX='BARCGBGBX',
+    barcgbgbx='barcgbgbx',
 
     /**
      * ### BASF SE
      * *BAS.DE/EUR*
      */
-    BASDEEUR='BASDEEUR',
+    basdeeur='basdeeur',
 
     /**
      * ### British American Tobacco PLC
      * *BATS.GB/GBX*
      */
-    BATSGBGBX='BATSGBGBX',
+    batsgbgbx='batsgbgbx',
 
     /**
      * ### Bayer AG
      * *BAYN.DE/EUR*
      */
-    BAYNDEEUR='BAYNDEEUR',
+    bayndeeur='bayndeeur',
 
     /**
      * ### Banco Bradesco S.A.
      * *BBD.US/USD*
      */
-    BBDUSUSD='BBDUSUSD',
+    bbdususd='bbdususd',
 
     /**
      * ### Banco Bilbao Vizcaya Argentaria SA
      * *BBVA.ES/EUR*
      */
-    BBVAESEUR='BBVAESEUR',
+    bbvaeseur='bbvaeseur',
 
     /**
      * ### BEST BUY CO INC
      * *BBY.US/USD*
      */
-    BBYUSUSD='BBYUSUSD',
+    bbyususd='bbyususd',
 
     /**
      * ### BECTON DICKINSON AND CO
      * *BDX.US/USD*
      */
-    BDXUSUSD='BDXUSUSD',
+    bdxususd='bdxususd',
 
     /**
      * ### Beiersdorf AG
      * *BEI.DE/EUR*
      */
-    BEIDEEUR='BEIDEEUR',
+    beideeur='beideeur',
 
     /**
      * ### Proximus
      * *BELG.BE/EUR*
      */
-    BELGBEEUR='BELGBEEUR',
+    belgbeeur='belgbeeur',
 
     /**
      * ### BAIDU INC
      * *BIDU.US/USD*
      */
-    BIDUUSUSD='BIDUUSUSD',
+    biduususd='biduususd',
 
     /**
      * ### BIOGEN INC
      * *BIIB.US/USD*
      */
-    BIIBUSUSD='BIIBUSUSD',
+    biibususd='biibususd',
 
     /**
      * ### BANK OF NEW YORK MELLON CORP
      * *BK.US/USD*
      */
-    BKUSUSD='BKUSUSD',
+    bkususd='bkususd',
 
     /**
      * ### British Land Co PLC
      * *BLND.GB/GBX*
      */
-    BLNDGBGBX='BLNDGBGBX',
+    blndgbgbx='blndgbgbx',
 
     /**
      * ### BHP Billiton PLC
      * *BLT.GB/GBX*
      */
-    BLTGBGBX='BLTGBGBX',
+    bltgbgbx='bltgbgbx',
 
     /**
      * ### Bayerische Motoren Werke AG
      * *BMW.DE/EUR*
      */
-    BMWDEEUR='BMWDEEUR',
+    bmwdeeur='bmwdeeur',
 
     /**
      * ### BRISTOL-MYERS SQUIBB CO
      * *BMY.US/USD*
      */
-    BMYUSUSD='BMYUSUSD',
+    bmyususd='bmyususd',
 
     /**
      * ### Danone SA
      * *BN.FR/EUR*
      */
-    BNFREUR='BNFREUR',
+    bnfreur='bnfreur',
 
     /**
      * ### BNP Paribas SA
      * *BNP.FR/EUR*
      */
-    BNPFREUR='BNPFREUR',
+    bnpfreur='bnpfreur',
 
     /**
      * ### Bunzl PLC
      * *BNZL.GB/GBX*
      */
-    BNZLGBGBX='BNZLGBGBX',
+    bnzlgbgbx='bnzlgbgbx',
 
     /**
      * ### HUGO BOSS AG
      * *BOSS.DE/EUR*
      */
-    BOSSDEEUR='BOSSDEEUR',
+    bossdeeur='bossdeeur',
 
     /**
      * ### BP PLC
      * *BP.GB/GBX*
      */
-    BPGBGBX='BPGBGBX',
+    bpgbgbx='bpgbgbx',
 
     /**
      * ### BP p.l.c.
      * *BP.US/USD*
      */
-    BPUSUSD='BPUSUSD',
+    bpususd='bpususd',
 
     /**
      * ### Burberry Group PLC
      * *BRBY.GB/GBX*
      */
-    BRBYGBGBX='BRBYGBGBX',
+    brbygbgbx='brbygbgbx',
 
     /**
      * ### BERKSHIRE HATHAWAY INC-CL B
      * *BRKB.US/USD*
      */
-    BRKBUSUSD='BRKBUSUSD',
+    brkbususd='brkbususd',
 
     /**
      * ### BOSTON SCIENTIFIC CORP
      * *BSX.US/USD*
      */
-    BSXUSUSD='BSXUSUSD',
+    bsxususd='bsxususd',
 
     /**
      * ### BT Group PLC
      * *BT.GB/GBX*
      */
-    BTGBGBX='BTGBGBX',
+    btgbgbx='btgbgbx',
 
     /**
      * ### Bitcoin vs US Dollar
      * *BTC/USD*
      */
-    BTCUSD='BTCUSD',
+    btcusd='btcusd',
 
     /**
      * ### Euro Bund
      * *BUND.TR/EUR*
      */
-    BUNDTREUR='BUNDTREUR',
+    bundtreur='bundtreur',
 
     /**
      * ### CITIGROUP INC
      * *C.US/USD*
      */
-    CUSUSD='CUSUSD',
+    cususd='cususd',
 
     /**
      * ### Carrefour SA
      * *CA.FR/EUR*
      */
-    CAFREUR='CAFREUR',
+    cafreur='cafreur',
 
     /**
      * ### CaixaBank
      * *CABK.ES/EUR*
      */
-    CABKESEUR='CABKESEUR',
+    cabkeseur='cabkeseur',
 
     /**
      * ### Canadian Dollar vs Swiss Franc
      * *CAD/CHF*
      */
-    CADCHF='CADCHF',
+    cadchf='cadchf',
 
     /**
      * ### Canadian Dollar vs Hong Kong Dollar
      * *CAD/HKD*
      */
-    CADHKD='CADHKD',
+    cadhkd='cadhkd',
 
     /**
      * ### Canadian Dollar vs Japanese Yen
      * *CAD/JPY*
      */
-    CADJPY='CADJPY',
+    cadjpy='cadjpy',
 
     /**
      * ### CONAGRA FOODS INC
      * *CAG.US/USD*
      */
-    CAGUSUSD='CAGUSUSD',
+    cagususd='cagususd',
 
     /**
      * ### CARDINAL HEALTH INC
      * *CAH.US/USD*
      */
-    CAHUSUSD='CAHUSUSD',
+    cahususd='cahususd',
 
     /**
      * ### Cap Gemini SA
      * *CAP.FR/EUR*
      */
-    CAPFREUR='CAPFREUR',
+    capfreur='capfreur',
 
     /**
      * ### Carlsberg A/S
      * *CARLB.DK/DKK*
      */
-    CARLBDKDKK='CARLBDKDKK',
+    carlbdkdkk='carlbdkdkk',
 
     /**
      * ### CATERPILLAR INC
      * *CAT.US/USD*
      */
-    CATUSUSD='CATUSUSD',
+    catususd='catususd',
 
     /**
      * ### Commerzbank AG
      * *CBK.DE/EUR*
      */
-    CBKDEEUR='CBKDEEUR',
+    cbkdeeur='cbkdeeur',
 
     /**
      * ### Carnival PLC
      * *CCL.GB/GBX*
      */
-    CCLGBGBX='CCLGBGBX',
+    cclgbgbx='cclgbgbx',
 
     /**
      * ### CERNER CORP
      * *CERN.US/USD*
      */
-    CERNUSUSD='CERNUSUSD',
+    cernususd='cernususd',
 
     /**
      * ### CF INDUSTRIES HOLDINGS INC
      * *CF.US/USD*
      */
-    CFUSUSD='CFUSUSD',
+    cfususd='cfususd',
 
     /**
      * ### Swiss Franc vs Japanese Yen
      * *CHF/JPY*
      */
-    CHFJPY='CHFJPY',
+    chfjpy='chfjpy',
 
     /**
      * ### Swiss Franc vs Singapore Dollar
      * *CHF/SGD*
      */
-    CHFSGD='CHFSGD',
+    chfsgd='chfsgd',
 
     /**
      * ### China A50 Index
      * *CHI.IDX/USD*
      */
-    CHIIDXUSD='CHIIDXUSD',
+    chiidxusd='chiidxusd',
 
     /**
      * ### CIGNA CORP
      * *CI.US/USD*
      */
-    CIUSUSD='CIUSUSD',
+    ciususd='ciususd',
 
     /**
      * ### COLGATE-PALMOLIVE CO
      * *CL.US/USD*
      */
-    CLUSUSD='CLUSUSD',
+    clususd='clususd',
 
     /**
      * ### Clariant AG
      * *CLN.CH/CHF*
      */
-    CLNCHCHF='CLNCHCHF',
+    clnchchf='clnchchf',
 
     /**
      * ### COMCAST CORP-CLASS A
      * *CMCSA.US/USD*
      */
-    CMCSAUSUSD='CMCSAUSUSD',
+    cmcsaususd='cmcsaususd',
 
     /**
      * ### CME GROUP INC
      * *CME.US/USD*
      */
-    CMEUSUSD='CMEUSUSD',
+    cmeususd='cmeususd',
 
     /**
      * ### CHIPOTLE MEXICAN GRILL INC
      * *CMG.US/USD*
      */
-    CMGUSUSD='CMGUSUSD',
+    cmgususd='cmgususd',
 
     /**
      * ### CUMMINS INC
      * *CMI.US/USD*
      */
-    CMIUSUSD='CMIUSUSD',
+    cmiususd='cmiususd',
 
     /**
      * ### Centrica PLC
      * *CNA.GB/GBX*
      */
-    CNAGBGBX='CNAGBGBX',
+    cnagbgbx='cnagbgbx',
 
     /**
      * ### NY Cocoa
      * *COCOA.CMD/USD*
      */
-    COCOACMDUSD='COCOACMDUSD',
+    cocoacmdusd='cocoacmdusd',
 
     /**
      * ### CAPITAL ONE FINANCIAL CORP
      * *COF.US/USD*
      */
-    COFUSUSD='COFUSUSD',
+    cofususd='cofususd',
 
     /**
      * ### Coffee Arabica
      * *COFFEE.CMD/USX*
      */
-    COFFEECMDUSX='COFFEECMDUSX',
+    coffeecmdusx='coffeecmdusx',
 
     /**
      * ### Coloplast A/S
      * *COLOB.DK/DKK*
      */
-    COLOBDKDKK='COLOBDKDKK',
+    colobdkdkk='colobdkdkk',
 
     /**
      * ### Continental AG
      * *CON.DE/EUR*
      */
-    CONDEEUR='CONDEEUR',
+    condeeur='condeeur',
 
     /**
      * ### CONOCOPHILLIPS
      * *COP.US/USD*
      */
-    COPUSUSD='COPUSUSD',
+    copususd='copususd',
 
     /**
      * ### High Grade Copper
      * *COPPER.CMD/USD*
      */
-    COPPERCMDUSD='COPPERCMDUSD',
+    coppercmdusd='coppercmdusd',
 
     /**
      * ### COSTCO WHOLESALE CORP
      * *COST.US/USD*
      */
-    COSTUSUSD='COSTUSUSD',
+    costususd='costususd',
 
     /**
      * ### Cotton
      * *COTTON.CMD/USX*
      */
-    COTTONCMDUSX='COTTONCMDUSX',
+    cottoncmdusx='cottoncmdusx',
 
     /**
      * ### Compass Group PLC
      * *CPG.GB/GBX*
      */
-    CPGGBGBX='CPGGBGBX',
+    cpggbgbx='cpggbgbx',
 
     /**
      * ### Capita PLC
      * *CPI.GB/GBX*
      */
-    CPIGBGBX='CPIGBGBX',
+    cpigbgbx='cpigbgbx',
 
     /**
      * ### Croda International PLC
      * *CRDA.GB/GBX*
      */
-    CRDAGBGBX='CRDAGBGBX',
+    crdagbgbx='crdagbgbx',
 
     /**
      * ### CRH PLC
      * *CRH.GB/GBX*
      */
-    CRHGBGBX='CRHGBGBX',
+    crhgbgbx='crhgbgbx',
 
     /**
      * ### SALESFORCE.COM INC
      * *CRM.US/USD*
      */
-    CRMUSUSD='CRMUSUSD',
+    crmususd='crmususd',
 
     /**
      * ### AXA SA
      * *CS.FR/EUR*
      */
-    CSFREUR='CSFREUR',
+    csfreur='csfreur',
 
     /**
      * ### Credit Suisse Group AG
      * *CS.US/USD*
      */
-    CSUSUSD='CSUSUSD',
+    csususd='csususd',
 
     /**
      * ### CISCO SYSTEMS INC
      * *CSCO.US/USD*
      */
-    CSCOUSUSD='CSCOUSUSD',
+    cscoususd='cscoususd',
 
     /**
      * ### Credit Suisse Group AG
      * *CSGN.CH/CHF*
      */
-    CSGNCHCHF='CSGNCHCHF',
+    csgnchchf='csgnchchf',
 
     /**
      * ### CSX CORP
      * *CSX.US/USD*
      */
-    CSXUSUSD='CSXUSUSD',
+    csxususd='csxususd',
 
     /**
      * ### CENTURYLINK INC
      * *CTL.US/USD*
      */
-    CTLUSUSD='CTLUSUSD',
+    ctlususd='ctlususd',
 
     /**
      * ### COGNIZANT TECH SOLUTIONS-A
      * *CTSH.US/USD*
      */
-    CTSHUSUSD='CTSHUSUSD',
+    ctshususd='ctshususd',
 
     /**
      * ### CITRIX SYSTEMS INC
      * *CTXS.US/USD*
      */
-    CTXSUSUSD='CTXSUSUSD',
+    ctxsususd='ctxsususd',
 
     /**
      * ### CVS HEALTH CORP
      * *CVS.US/USD*
      */
-    CVSUSUSD='CVSUSUSD',
+    cvsususd='cvsususd',
 
     /**
      * ### CHEVRON CORP
      * *CVX.US/USD*
      */
-    CVXUSUSD='CVXUSUSD',
+    cvxususd='cvxususd',
 
     /**
      * ### DOMINION RESOURCES INC/VA
      * *D.US/USD*
      */
-    DUSUSD='DUSUSD',
+    dususd='dususd',
 
     /**
      * ### Daimler AG
      * *DAI.DE/EUR*
      */
-    DAIDEEUR='DAIDEEUR',
+    daideeur='daideeur',
 
     /**
      * ### DELTA AIR LINES INC
      * *DAL.US/USD*
      */
-    DALUSUSD='DALUSUSD',
+    dalususd='dalususd',
 
     /**
      * ### Danske Bank A/S
      * *DANSKE.DK/DKK*
      */
-    DANSKEDKDKK='DANSKEDKDKK',
+    danskedkdkk='danskedkdkk',
 
     /**
      * ### Deutsche Boerse AG
      * *DB1.DE/EUR*
      */
-    DB1DEEUR='DB1DEEUR',
+    db1deeur='db1deeur',
 
     /**
      * ### Deutsche Bank AG
      * *DBK.DE/EUR*
      */
-    DBKDEEUR='DBKDEEUR',
+    dbkdeeur='dbkdeeur',
 
     /**
      * ### DEERE & CO
      * *DE.US/USD*
      */
-    DEUSUSD='DEUSUSD',
+    deususd='deususd',
 
     /**
      * ### DISCOVER FINANCIAL SERVICES
      * *DFS.US/USD*
      */
-    DFSUSUSD='DFSUSUSD',
+    dfsususd='dfsususd',
 
     /**
      * ### Vinci SA
      * *DG.FR/EUR*
      */
-    DGFREUR='DGFREUR',
+    dgfreur='dgfreur',
 
     /**
      * ### DOLLAR GENERAL CORP
      * *DG.US/USD*
      */
-    DGUSUSD='DGUSUSD',
+    dgususd='dgususd',
 
     /**
      * ### Diageo PLC
      * *DGE.GB/GBX*
      */
-    DGEGBGBX='DGEGBGBX',
+    dgegbgbx='dgegbgbx',
 
     /**
      * ### DR HORTON INC
      * *DHI.US/USD*
      */
-    DHIUSUSD='DHIUSUSD',
+    dhiususd='dhiususd',
 
     /**
      * ### DANAHER CORP
      * *DHR.US/USD*
      */
-    DHRUSUSD='DHRUSUSD',
+    dhrususd='dhrususd',
 
     /**
      * ### Distribuidora Internacional de Alimentacion SA
      * *DIA.ES/EUR*
      */
-    DIAESEUR='DIAESEUR',
+    diaeseur='diaeseur',
 
     /**
      * ### SPDR Dow Jones® Industrial Average ETF
      * *DIA.US/USD*
      */
-    DIAUSUSD='DIAUSUSD',
+    diaususd='diaususd',
 
     /**
      * ### Gas oil
      * *DIESEL.CMD/USD*
      */
-    DIESELCMDUSD='DIESELCMDUSD',
+    dieselcmdusd='dieselcmdusd',
 
     /**
      * ### WALT DISNEY CO/THE
      * *DIS.US/USD*
      */
-    DISUSUSD='DISUSUSD',
+    disususd='disususd',
 
     /**
      * ### DOLLAR TREE INC
      * *DLTR.US/USD*
      */
-    DLTRUSUSD='DLTRUSUSD',
+    dltrususd='dltrususd',
 
     /**
      * ### DNB ASA
      * *DNB.NO/NOK*
      */
-    DNBNONOK='DNBNONOK',
+    dnbnonok='dnbnonok',
 
     /**
      * ### US Dollar Index
      * *DOLLAR.IDX/USD*
      */
-    DOLLARIDXUSD='DOLLARIDXUSD',
+    dollaridxusd='dollaridxusd',
 
     /**
      * ### Deutsche Post AG
      * *DPW.DE/EUR*
      */
-    DPWDEEUR='DPWDEEUR',
+    dpwdeeur='dpwdeeur',
 
     /**
      * ### Koninklijke DSM NV
      * *DSM.NL/EUR*
      */
-    DSMNLEUR='DSMNLEUR',
+    dsmnleur='dsmnleur',
 
     /**
      * ### Deutsche Telekom AG
      * *DTE.DE/EUR*
      */
-    DTEDEEUR='DTEDEEUR',
+    dtedeeur='dtedeeur',
 
     /**
      * ### Dukascoin vs Euro
      * *DUK+/EUR*
      */
-    DUKEUR='DUKEUR',
+    dukeur='dukeur',
 
     /**
      * ### DUKE ENERGY CORP
      * *DUK.US/USD*
      */
-    DUKUSUSD='DUKUSUSD',
+    dukususd='dukususd',
 
     /**
      * ### DAVITA HEALTHCARE PARTNERS I
      * *DVA.US/USD*
      */
-    DVAUSUSD='DVAUSUSD',
+    dvaususd='dvaususd',
 
     /**
      * ### DEVON ENERGY CORP
      * *DVN.US/USD*
      */
-    DVNUSUSD='DVNUSUSD',
+    dvnususd='dvnususd',
 
     /**
      * ### iShares Select Dividend ETF
      * *DVY.US/USD*
      */
-    DVYUSUSD='DVYUSUSD',
+    dvyususd='dvyususd',
 
     /**
      * ### ELECTRONIC ARTS INC
      * *EA.US/USD*
      */
-    EAUSUSD='EAUSUSD',
+    eaususd='eaususd',
 
     /**
      * ### EBAY INC
      * *EBAY.US/USD*
      */
-    EBAYUSUSD='EBAYUSUSD',
+    ebayususd='ebayususd',
 
     /**
      * ### Erste Group Bank AG
      * *EBS.AT/EUR*
      */
-    EBSATEUR='EBSATEUR',
+    ebsateur='ebsateur',
 
     /**
      * ### Electricite de France SA
      * *EDF.FR/EUR*
      */
-    EDFFREUR='EDFFREUR',
+    edffreur='edffreur',
 
     /**
      * ### EDP - Energias de Portugal SA
      * *EDP.PT/EUR*
      */
-    EDPPTEUR='EDPPTEUR',
+    edppteur='edppteur',
 
     /**
      * ### iShares MSCI Emerging Markets ETF
      * *EEM.US/USD*
      */
-    EEMUSUSD='EEMUSUSD',
+    eemususd='eemususd',
 
     /**
      * ### iShares MSCI EAFE ETF
      * *EFA.US/USD*
      */
-    EFAUSUSD='EFAUSUSD',
+    efaususd='efaususd',
 
     /**
      * ### EQUIFAX INC
      * *EFX.US/USD*
      */
-    EFXUSUSD='EFXUSUSD',
+    efxususd='efxususd',
 
     /**
      * ### EDISON INTERNATIONAL
      * *EIX.US/USD*
      */
-    EIXUSUSD='EIXUSUSD',
+    eixususd='eixususd',
 
     /**
      * ### ESTEE LAUDER COMPANIES-CL A
      * *EL.US/USD*
      */
-    ELUSUSD='ELUSUSD',
+    elususd='elususd',
 
     /**
      * ### Endesa SA
      * *ELE.ES/EUR*
      */
-    ELEESEUR='ELEESEUR',
+    eleeseur='eleeseur',
 
     /**
      * ### Elisa OYJ
      * *ELI1V.FI/EUR*
      */
-    ELI1VFIEUR='ELI1VFIEUR',
+    eli1vfieur='eli1vfieur',
 
     /**
      * ### Electrolux AB
      * *ELUXB.SE/SEK*
      */
-    ELUXBSESEK='ELUXBSESEK',
+    eluxbsesek='eluxbsesek',
 
     /**
      * ### iShares J.P. Morgan USD Emerging Markets Bond ETF
      * *EMB.US/USD*
      */
-    EMBUSUSD='EMBUSUSD',
+    embususd='embususd',
 
     /**
      * ### EMERSON ELECTRIC CO
      * *EMR.US/USD*
      */
-    EMRUSUSD='EMRUSUSD',
+    emrususd='emrususd',
 
     /**
      * ### Bouygues SA
      * *EN.FR/EUR*
      */
-    ENFREUR='ENFREUR',
+    enfreur='enfreur',
 
     /**
      * ### Enagas SA
      * *ENG.ES/EUR*
      */
-    ENGESEUR='ENGESEUR',
+    engeseur='engeseur',
 
     /**
      * ### Engie
      * *ENGI.FR/EUR*
      */
-    ENGIFREUR='ENGIFREUR',
+    engifreur='engifreur',
 
     /**
      * ### E.ON SE
      * *EOAN.DE/EUR*
      */
-    EOANDEEUR='EOANDEEUR',
+    eoandeeur='eoandeeur',
 
     /**
      * ### EOG RESOURCES INC
      * *EOG.US/USD*
      */
-    EOGUSUSD='EOGUSUSD',
+    eogususd='eogususd',
 
     /**
      * ### EQT CORP
      * *EQT.US/USD*
      */
-    EQTUSUSD='EQTUSUSD',
+    eqtususd='eqtususd',
 
     /**
      * ### Telefonaktiebolaget LM Ericsson
      * *ERICB.SE/SEK*
      */
-    ERICBSESEK='ERICBSESEK',
+    ericbsesek='ericbsesek',
 
     /**
      * ### Ether vs US Dollar
      * *ETH/USD*
      */
-    ETHUSD='ETHUSD',
+    ethusd='ethusd',
 
     /**
      * ### Euro vs Australian Dollar
      * *EUR/AUD*
      */
-    EURAUD='EURAUD',
+    euraud='euraud',
 
     /**
      * ### Euro vs Canadian Dollar
      * *EUR/CAD*
      */
-    EURCAD='EURCAD',
+    eurcad='eurcad',
 
     /**
      * ### Euro vs Swiss Franc
      * *EUR/CHF*
      */
-    EURCHF='EURCHF',
+    eurchf='eurchf',
 
     /**
      * ### Euro vs Czech Koruna
      * *EUR/CZK*
      */
-    EURCZK='EURCZK',
+    eurczk='eurczk',
 
     /**
      * ### Euro vs Danish Krone
      * *EUR/DKK*
      */
-    EURDKK='EURDKK',
+    eurdkk='eurdkk',
 
     /**
      * ### Euro vs Pound Sterling
      * *EUR/GBP*
      */
-    EURGBP='EURGBP',
+    eurgbp='eurgbp',
 
     /**
      * ### Euro vs Hong Kong Dollar
      * *EUR/HKD*
      */
-    EURHKD='EURHKD',
+    eurhkd='eurhkd',
 
     /**
      * ### Euro vs Hungarian Forint
      * *EUR/HUF*
      */
-    EURHUF='EURHUF',
+    eurhuf='eurhuf',
 
     /**
      * ### Euro vs Japanese Yen
      * *EUR/JPY*
      */
-    EURJPY='EURJPY',
+    eurjpy='eurjpy',
 
     /**
      * ### Euro vs Norwegian Krone
      * *EUR/NOK*
      */
-    EURNOK='EURNOK',
+    eurnok='eurnok',
 
     /**
      * ### Euro vs New Zealand Dollar
      * *EUR/NZD*
      */
-    EURNZD='EURNZD',
+    eurnzd='eurnzd',
 
     /**
      * ### Euro vs Polish Zloty
      * *EUR/PLN*
      */
-    EURPLN='EURPLN',
+    eurpln='eurpln',
 
     /**
      * ### Euro vs Russian Rouble
      * *EUR/RUB*
      */
-    EURRUB='EURRUB',
+    eurrub='eurrub',
 
     /**
      * ### Euro vs Swedish Krona
      * *EUR/SEK*
      */
-    EURSEK='EURSEK',
+    eursek='eursek',
 
     /**
      * ### Euro vs Singapore Dollar
      * *EUR/SGD*
      */
-    EURSGD='EURSGD',
+    eursgd='eursgd',
 
     /**
      * ### Euro vs Turkish Lira
      * *EUR/TRY*
      */
-    EURTRY='EURTRY',
+    eurtry='eurtry',
 
     /**
      * ### Euro vs US Dollar
      * *EUR/USD*
      */
-    EURUSD='EURUSD',
+    eurusd='eurusd',
 
     /**
      * ### iShares MSCI Hong Kong ETF
      * *EWH.US/USD*
      */
-    EWHUSUSD='EWHUSUSD',
+    ewhususd='ewhususd',
 
     /**
      * ### iShares MSCI Japan ETF
      * *EWJ.US/USD*
      */
-    EWJUSUSD='EWJUSUSD',
+    ewjususd='ewjususd',
 
     /**
      * ### iShares MSCI Mexico Capped
      * *EWW.US/USD*
      */
-    EWWUSUSD='EWWUSUSD',
+    ewwususd='ewwususd',
 
     /**
      * ### iShares MSCI Brazil Capped
      * *EWZ.US/USD*
      */
-    EWZUSUSD='EWZUSUSD',
+    ewzususd='ewzususd',
 
     /**
      * ### EXELON CORP
      * *EXC.US/USD*
      */
-    EXCUSUSD='EXCUSUSD',
+    excususd='excususd',
 
     /**
      * ### EXPEDIA INC
      * *EXPE.US/USD*
      */
-    EXPEUSUSD='EXPEUSUSD',
+    expeususd='expeususd',
 
     /**
      * ### Experian PLC
      * *EXPN.GB/GBX*
      */
-    EXPNGBGBX='EXPNGBGBX',
+    expngbgbx='expngbgbx',
 
     /**
      * ### easyJet PLC
      * *EZJ.GB/GBX*
      */
-    EZJGBGBX='EZJGBGBX',
+    ezjgbgbx='ezjgbgbx',
 
     /**
      * ### iShares MSCI EMU ETF
      * *EZU.US/USD*
      */
-    EZUUSUSD='EZUUSUSD',
+    ezuususd='ezuususd',
 
     /**
      * ### US Brent Crude Oil
      * *BRENT.CMD/USD*
      */
-    BRENTCMDUSD='BRENTCMDUSD',
+    brentcmdusd='brentcmdusd',
 
     /**
      * ### France 40 Index
      * *FRA.IDX/EUR*
      */
-    FRAIDXEUR='FRAIDXEUR',
+    fraidxeur='fraidxeur',
 
     /**
      * ### USA 30 Index
      * *USA30.IDX/USD*
      */
-    USA30IDXUSD='USA30IDXUSD',
+    usa30idxusd='usa30idxusd',
 
     /**
      * ### Germany 30 Index
      * *DEU.IDX/EUR*
      */
-    DEUIDXEUR='DEUIDXEUR',
+    deuidxeur='deuidxeur',
 
     /**
      * ### Europe 50 Index
      * *EUS.IDX/EUR*
      */
-    EUSIDXEUR='EUSIDXEUR',
+    eusidxeur='eusidxeur',
 
     /**
      * ### UK 100 Index
      * *GBR.IDX/GBP*
      */
-    GBRIDXGBP='GBRIDXGBP',
+    gbridxgbp='gbridxgbp',
 
     /**
      * ### Hong Kong 40 Index
      * *HKG.IDX/HKD*
      */
-    HKGIDXHKD='HKGIDXHKD',
+    hkgidxhkd='hkgidxhkd',
 
     /**
      * ### Spain 35 Index
      * *ESP.IDX/EUR*
      */
-    ESPIDXEUR='ESPIDXEUR',
+    espidxeur='espidxeur',
 
     /**
      * ### US Light Crude Oil
      * *LIGHT.CMD/USD*
      */
-    LIGHTCMDUSD='LIGHTCMDUSD',
+    lightcmdusd='lightcmdusd',
 
     /**
      * ### Japan 225
      * *JPN.IDX/JPY*
      */
-    JPNIDXJPY='JPNIDXJPY',
+    jpnidxjpy='jpnidxjpy',
 
     /**
      * ### USA 100 Technical Index
      * *USATECH.IDX/USD*
      */
-    USATECHIDXUSD='USATECHIDXUSD',
+    usatechidxusd='usatechidxusd',
 
     /**
      * ### USA 500 Index
      * *USA500.IDX/USD*
      */
-    USA500IDXUSD='USA500IDXUSD',
+    usa500idxusd='usa500idxusd',
 
     /**
      * ### Switzerland 20 Index
      * *CHE.IDX/CHF*
      */
-    CHEIDXCHF='CHEIDXCHF',
+    cheidxchf='cheidxchf',
 
     /**
      * ### Australia 200 Index
      * *AUS.IDX/AUD*
      */
-    AUSIDXAUD='AUSIDXAUD',
+    ausidxaud='ausidxaud',
 
     /**
      * ### FORD MOTOR CO
      * *F.US/USD*
      */
-    FUSUSD='FUSUSD',
+    fususd='fususd',
 
     /**
      * ### FACEBOOK INC-A
      * *FB.US/USD*
      */
-    FBUSUSD='FBUSUSD',
+    fbususd='fbususd',
 
     /**
      * ### FREEPORT-MCMORAN INC
      * *FCX.US/USD*
      */
-    FCXUSUSD='FCXUSUSD',
+    fcxususd='fcxususd',
 
     /**
      * ### FEDEX CORP
      * *FDX.US/USD*
      */
-    FDXUSUSD='FDXUSUSD',
+    fdxususd='fdxususd',
 
     /**
      * ### FIRSTENERGY CORP
      * *FE.US/USD*
      */
-    FEUSUSD='FEUSUSD',
+    feususd='feususd',
 
     /**
      * ### Ferrovial SA
      * *FER.ES/EUR*
      */
-    FERESEUR='FERESEUR',
+    fereseur='fereseur',
 
     /**
      * ### FIFTH THIRD BANCORP
      * *FITB.US/USD*
      */
-    FITBUSUSD='FITBUSUSD',
+    fitbususd='fitbususd',
 
     /**
      * ### Fresenius Medical Care AG & Co KGaA
      * *FME.DE/EUR*
      */
-    FMEDEEUR='FMEDEEUR',
+    fmedeeur='fmedeeur',
 
     /**
      * ### TWENTY-FIRST CENTURY FOX-A
      * *FOXA.US/USD*
      */
-    FOXAUSUSD='FOXAUSUSD',
+    foxaususd='foxaususd',
 
     /**
      * ### Total SA
      * *FP.FR/EUR*
      */
-    FPFREUR='FPFREUR',
+    fpfreur='fpfreur',
 
     /**
      * ### Valeo SA
      * *FR.FR/EUR*
      */
-    FRFREUR='FRFREUR',
+    frfreur='frfreur',
 
     /**
      * ### Fresenius SE & Co KGaA
      * *FRE.DE/EUR*
      */
-    FREDEEUR='FREDEEUR',
+    fredeeur='fredeeur',
 
     /**
      * ### Fresnillo PLC
      * *FRES.GB/GBX*
      */
-    FRESGBGBX='FRESGBGBX',
+    fresgbgbx='fresgbgbx',
 
     /**
      * ### iShares China Large-Cap ETF
      * *FXI.US/USD*
      */
-    FXIUSUSD='FXIUSUSD',
+    fxiususd='fxiususd',
 
     /**
      * ### Galp Energia SGPS SA
      * *GALP.PT/EUR*
      */
-    GALPPTEUR='GALPPTEUR',
+    galppteur='galppteur',
 
     /**
      * ### Gamesa Corporacion Tecnologica SA
      * *GAM.ES/EUR*
      */
-    GAMESEUR='GAMESEUR',
+    gameseur='gameseur',
 
     /**
      * ### Natural Gas
      * *GAS.CMD/USD*
      */
-    GASCMDUSD='GASCMDUSD',
+    gascmdusd='gascmdusd',
 
     /**
      * ### Gas Natural SDG SA
      * *GAS.ES/EUR*
      */
-    GASESEUR='GASESEUR',
+    gaseseur='gaseseur',
 
     /**
      * ### Pound Sterling vs Australian Dollar
      * *GBP/AUD*
      */
-    GBPAUD='GBPAUD',
+    gbpaud='gbpaud',
 
     /**
      * ### Pound Sterling vs Canadian Dollar
      * *GBP/CAD*
      */
-    GBPCAD='GBPCAD',
+    gbpcad='gbpcad',
 
     /**
      * ### Pound Sterling vs Swiss Franc
      * *GBP/CHF*
      */
-    GBPCHF='GBPCHF',
+    gbpchf='gbpchf',
 
     /**
      * ### Pound Sterling vs Japanese Yen
      * *GBP/JPY*
      */
-    GBPJPY='GBPJPY',
+    gbpjpy='gbpjpy',
 
     /**
      * ### Pound Sterling vs New Zealand Dollar
      * *GBP/NZD*
      */
-    GBPNZD='GBPNZD',
+    gbpnzd='gbpnzd',
 
     /**
      * ### Pound Sterling vs US Dollar
      * *GBP/USD*
      */
-    GBPUSD='GBPUSD',
+    gbpusd='gbpusd',
 
     /**
      * ### VanEck Vectors Gold Miners ETF
      * *GDX.US/USD*
      */
-    GDXUSUSD='GDXUSUSD',
+    gdxususd='gdxususd',
 
     /**
      * ### VanEck Vectors Junior Gold Miners ETF
      * *GDXJ.US/USD*
      */
-    GDXJUSUSD='GDXJUSUSD',
+    gdxjususd='gdxjususd',
 
     /**
      * ### GENERAL ELECTRIC CO
      * *GE.US/USD*
      */
-    GEUSUSD='GEUSUSD',
+    geususd='geususd',
 
     /**
      * ### Getinge AB
      * *GETIB.SE/SEK*
      */
-    GETIBSESEK='GETIBSESEK',
+    getibsesek='getibsesek',
 
     /**
      * ### G4S PLC
      * *GFS.GB/GBX*
      */
-    GFSGBGBX='GFSGBGBX',
+    gfsgbgbx='gfsgbgbx',
 
     /**
      * ### GILEAD SCIENCES INC
      * *GILD.US/USD*
      */
-    GILDUSUSD='GILDUSUSD',
+    gildususd='gildususd',
 
     /**
      * ### GENERAL MILLS INC
      * *GIS.US/USD*
      */
-    GISUSUSD='GISUSUSD',
+    gisususd='gisususd',
 
     /**
      * ### Givaudan SA
      * *GIVN.CH/CHF*
      */
-    GIVNCHCHF='GIVNCHCHF',
+    givnchchf='givnchchf',
 
     /**
      * ### SPDR Gold Shares ETF
      * *GLD.US/USD*
      */
-    GLDUSUSD='GLDUSUSD',
+    gldususd='gldususd',
 
     /**
      * ### Societe Generale SA
      * *GLE.FR/EUR*
      */
-    GLEFREUR='GLEFREUR',
+    glefreur='glefreur',
 
     /**
      * ### Glencore PLC
      * *GLEN.GB/GBX*
      */
-    GLENGBGBX='GLENGBGBX',
+    glengbgbx='glengbgbx',
 
     /**
      * ### CORNING INC
      * *GLW.US/USD*
      */
-    GLWUSUSD='GLWUSUSD',
+    glwususd='glwususd',
 
     /**
      * ### GENERAL MOTORS CO
      * *GM.US/USD*
      */
-    GMUSUSD='GMUSUSD',
+    gmususd='gmususd',
 
     /**
      * ### ALPHABET INC-CL C
      * *GOOG.US/USD*
      */
-    GOOGUSUSD='GOOGUSUSD',
+    googususd='googususd',
 
     /**
      * ### ALPHABET INC-CL A
      * *GOOGL.US/USD*
      */
-    GOOGLUSUSD='GOOGLUSUSD',
+    googlususd='googlususd',
 
     /**
      * ### GAP INC/THE
      * *GPS.US/USD*
      */
-    GPSUSUSD='GPSUSUSD',
+    gpsususd='gpsususd',
 
     /**
      * ### GOLDMAN SACHS GROUP INC
      * *GS.US/USD*
      */
-    GSUSUSD='GSUSUSD',
+    gsususd='gsususd',
 
     /**
      * ### GlaxoSmithKline PLC
      * *GSK.GB/GBX*
      */
-    GSKGBGBX='GSKGBGBX',
+    gskgbgbx='gskgbgbx',
 
     /**
      * ### WW GRAINGER INC
      * *GWW.US/USD*
      */
-    GWWUSUSD='GWWUSUSD',
+    gwwususd='gwwususd',
 
     /**
      * ### HALLIBURTON CO
      * *HAL.US/USD*
      */
-    HALUSUSD='HALUSUSD',
+    halususd='halususd',
 
     /**
      * ### WELLTOWER INC
      * *HCN.US/USD*
      */
-    HCNUSUSD='HCNUSUSD',
+    hcnususd='hcnususd',
 
     /**
      * ### HOME DEPOT INC
      * *HD.US/USD*
      */
-    HDUSUSD='HDUSUSD',
+    hdususd='hdususd',
 
     /**
      * ### HeidelbergCement AG
      * *HEI.DE/EUR*
      */
-    HEIDEEUR='HEIDEEUR',
+    heideeur='heideeur',
 
     /**
      * ### Heineken NV
      * *HEIA.NL/EUR*
      */
-    HEIANLEUR='HEIANLEUR',
+    heianleur='heianleur',
 
     /**
      * ### Henkel AG & Co KGaA
      * *HEN3.DE/EUR*
      */
-    HEN3DEEUR='HEN3DEEUR',
+    hen3deeur='hen3deeur',
 
     /**
      * ### HESS CORP
      * *HES.US/USD*
      */
-    HESUSUSD='HESUSUSD',
+    hesususd='hesususd',
 
     /**
      * ### Hong Kong Dollar vs Japanese Yen
      * *HKD/JPY*
      */
-    HKDJPY='HKDJPY',
+    hkdjpy='hkdjpy',
 
     /**
      * ### Hennes & Mauritz AB
      * *HMB.SE/SEK*
      */
-    HMBSESEK='HMBSESEK',
+    hmbsesek='hmbsesek',
 
     /**
      * ### Hammerson PLC
      * *HMSO.GB/GBX*
      */
-    HMSOGBGBX='HMSOGBGBX',
+    hmsogbgbx='hmsogbgbx',
 
     /**
      * ### HONEYWELL INTERNATIONAL INC
      * *HON.US/USD*
      */
-    HONUSUSD='HONUSUSD',
+    honususd='honususd',
 
     /**
      * ### HP INC
      * *HPQ.US/USD*
      */
-    HPQUSUSD='HPQUSUSD',
+    hpqususd='hpqususd',
 
     /**
      * ### HSBC Holdings PLC
      * *HSBA.GB/GBX*
      */
-    HSBAGBGBX='HSBAGBGBX',
+    hsbagbgbx='hsbagbgbx',
 
     /**
      * ### HUMANA INC
      * *HUM.US/USD*
      */
-    HUMUSUSD='HUMUSUSD',
+    humususd='humususd',
 
     /**
      * ### International Consolidated Airlines Grou
      * *IAG.GB/GBX*
      */
-    IAGGBGBX='IAGGBGBX',
+    iaggbgbx='iaggbgbx',
 
     /**
      * ### iShares Nasdaq Biotechnology ETF
      * *IBB.US/USD*
      */
-    IBBUSUSD='IBBUSUSD',
+    ibbususd='ibbususd',
 
     /**
      * ### Iberdrola SA
      * *IBE.ES/EUR*
      */
-    IBEESEUR='IBEESEUR',
+    ibeeseur='ibeeseur',
 
     /**
      * ### INTL BUSINESS MACHINES CORP
      * *IBM.US/USD*
      */
-    IBMUSUSD='IBMUSUSD',
+    ibmususd='ibmususd',
 
     /**
      * ### INTERCONTINENTAL EXCHANGE IN
      * *ICE.US/USD*
      */
-    ICEUSUSD='ICEUSUSD',
+    iceususd='iceususd',
 
     /**
      * ### iShares 7-10 Year Treasury Bond ETF
      * *IEF.US/USD*
      */
-    IEFUSUSD='IEFUSUSD',
+    iefususd='iefususd',
 
     /**
      * ### Infineon Technologies AG
      * *IFX.DE/EUR*
      */
-    IFXDEEUR='IFXDEEUR',
+    ifxdeeur='ifxdeeur',
 
     /**
      * ### InterContinental Hotels Group PLC
      * *IHG.GB/GBX*
      */
-    IHGGBGBX='IHGGBGBX',
+    ihggbgbx='ihggbgbx',
 
     /**
      * ### iShares Core S&P Mid-Cap ETF
      * *IJH.US/USD*
      */
-    IJHUSUSD='IJHUSUSD',
+    ijhususd='ijhususd',
 
     /**
      * ### iShares Core S&P Small-Cap ETF
      * *IJR.US/USD*
      */
-    IJRUSUSD='IJRUSUSD',
+    ijrususd='ijrususd',
 
     /**
      * ### ILLUMINA INC
      * *ILMN.US/USD*
      */
-    ILMNUSUSD='ILMNUSUSD',
+    ilmnususd='ilmnususd',
 
     /**
      * ### Imperial Brands Plc
      * *IMT.GB/GBX*
      */
-    IMTGBGBX='IMTGBGBX',
+    imtgbgbx='imtgbgbx',
 
     /**
      * ### India 50 Index
      * *IND.IDX/USD*
      */
-    INDIDXUSD='INDIDXUSD',
+    indidxusd='indidxusd',
 
     /**
      * ### ING Groep NV
      * *INGA.NL/EUR*
      */
-    INGANLEUR='INGANLEUR',
+    inganleur='inganleur',
 
     /**
      * ### INTEL CORP
      * *INTC.US/USD*
      */
-    INTCUSUSD='INTCUSUSD',
+    intcususd='intcususd',
 
     /**
      * ### INTUIT INC
      * *INTU.US/USD*
      */
-    INTUUSUSD='INTUUSUSD',
+    intuususd='intuususd',
 
     /**
      * ### Investor AB
      * *INVEB.SE/SEK*
      */
-    INVEBSESEK='INVEBSESEK',
+    invebsesek='invebsesek',
 
     /**
      * ### INTERPUBLIC GROUP OF COS INC
      * *IPG.US/USD*
      */
-    IPGUSUSD='IPGUSUSD',
+    ipgususd='ipgususd',
 
     /**
      * ### Inmarsat PLC
      * *ISAT.GB/GBX*
      */
-    ISATGBGBX='ISATGBGBX',
+    isatgbgbx='isatgbgbx',
 
     /**
      * ### INTUITIVE SURGICAL INC
      * *ISRG.US/USD*
      */
-    ISRGUSUSD='ISRGUSUSD',
+    isrgususd='isrgususd',
 
     /**
      * ### Intertek Group PLC
      * *ITRK.GB/GBX*
      */
-    ITRKGBGBX='ITRKGBGBX',
+    itrkgbgbx='itrkgbgbx',
 
     /**
      * ### Itau Unibanco Holding S.A.
      * *ITUB.US/USD*
      */
-    ITUBUSUSD='ITUBUSUSD',
+    itubususd='itubususd',
 
     /**
      * ### ITV PLC
      * *ITV.GB/GBX*
      */
-    ITVGBGBX='ITVGBGBX',
+    itvgbgbx='itvgbgbx',
 
     /**
      * ### ILLINOIS TOOL WORKS
      * *ITW.US/USD*
      */
-    ITWUSUSD='ITWUSUSD',
+    itwususd='itwususd',
 
     /**
      * ### Inditex SA
      * *ITX.ES/EUR*
      */
-    ITXESEUR='ITXESEUR',
+    itxeseur='itxeseur',
 
     /**
      * ### iShares S&P 500 Value ETF
      * *IVE.US/USD*
      */
-    IVEUSUSD='IVEUSUSD',
+    iveususd='iveususd',
 
     /**
      * ### iShares S&P 500 Growth ETF
      * *IVW.US/USD*
      */
-    IVWUSUSD='IVWUSUSD',
+    ivwususd='ivwususd',
 
     /**
      * ### iShares Russell 1000 Value ETF
      * *IWD.US/USD*
      */
-    IWDUSUSD='IWDUSUSD',
+    iwdususd='iwdususd',
 
     /**
      * ### iShares Russell 1000 Growth ETF
      * *IWF.US/USD*
      */
-    IWFUSUSD='IWFUSUSD',
+    iwfususd='iwfususd',
 
     /**
      * ### iShares Russell 2000 ETF
      * *IWM.US/USD*
      */
-    IWMUSUSD='IWMUSUSD',
+    iwmususd='iwmususd',
 
     /**
      * ### iShares U.S. Real Estate ETF
      * *IYR.US/USD*
      */
-    IYRUSUSD='IYRUSUSD',
+    iyrususd='iyrususd',
 
     /**
      * ### JOHNSON CONTROLS INC
      * *JCI.US/USD*
      */
-    JCIUSUSD='JCIUSUSD',
+    jciususd='jciususd',
 
     /**
      * ### JOHNSON & JOHNSON
      * *JNJ.US/USD*
      */
-    JNJUSUSD='JNJUSUSD',
+    jnjususd='jnjususd',
 
     /**
      * ### SPDR Barclays Capital High Yield Bond ETF
      * *JNK.US/USD*
      */
-    JNKUSUSD='JNKUSUSD',
+    jnkususd='jnkususd',
 
     /**
      * ### JPMORGAN CHASE & CO
      * *JPM.US/USD*
      */
-    JPMUSUSD='JPMUSUSD',
+    jpmususd='jpmususd',
 
     /**
      * ### NORDSTROM INC
      * *JWN.US/USD*
      */
-    JWNUSUSD='JWNUSUSD',
+    jwnususd='jwnususd',
 
     /**
      * ### KELLOGG CO
      * *K.US/USD*
      */
-    KUSUSD='KUSUSD',
+    kususd='kususd',
 
     /**
      * ### KBC Groep NV
      * *KBC.BE/EUR*
      */
-    KBCBEEUR='KBCBEEUR',
+    kbcbeeur='kbcbeeur',
 
     /**
      * ### Kering
      * *KER.FR/EUR*
      */
-    KERFREUR='KERFREUR',
+    kerfreur='kerfreur',
 
     /**
      * ### KEYCORP
      * *KEY.US/USD*
      */
-    KEYUSUSD='KEYUSUSD',
+    keyususd='keyususd',
 
     /**
      * ### Kingfisher PLC
      * *KGF.GB/GBX*
      */
-    KGFGBGBX='KGFGBGBX',
+    kgfgbgbx='kgfgbgbx',
 
     /**
      * ### KRAFT HEINZ CO/THE
      * *KHC.US/USD*
      */
-    KHCUSUSD='KHCUSUSD',
+    khcususd='khcususd',
 
     /**
      * ### KIMBERLY-CLARK CORP
      * *KMB.US/USD*
      */
-    KMBUSUSD='KMBUSUSD',
+    kmbususd='kmbususd',
 
     /**
      * ### KINDER MORGAN INC
      * *KMI.US/USD*
      */
-    KMIUSUSD='KMIUSUSD',
+    kmiususd='kmiususd',
 
     /**
      * ### Kuehne + Nagel International AG
      * *KNIN.CH/CHF*
      */
-    KNINCHCHF='KNINCHCHF',
+    kninchchf='kninchchf',
 
     /**
      * ### COCA-COLA CO/THE
      * *KO.US/USD*
      */
-    KOUSUSD='KOUSUSD',
+    koususd='koususd',
 
     /**
      * ### Koninklijke KPN NV
      * *KPN.NL/EUR*
      */
-    KPNNLEUR='KPNNLEUR',
+    kpnnleur='kpnnleur',
 
     /**
      * ### KROGER CO
      * *KR.US/USD*
      */
-    KRUSUSD='KRUSUSD',
+    krususd='krususd',
 
     /**
      * ### KOHLS CORP
      * *KSS.US/USD*
      */
-    KSSUSUSD='KSSUSUSD',
+    kssususd='kssususd',
 
     /**
      * ### LOEWS CORP
      * *L.US/USD*
      */
-    LUSUSD='LUSUSD',
+    lususd='lususd',
 
     /**
      * ### Land Securities Group PLC
      * *LAND.GB/GBX*
      */
-    LANDGBGBX='LANDGBGBX',
+    landgbgbx='landgbgbx',
 
     /**
      * ### LENNAR CORP-A
      * *LEN.US/USD*
      */
-    LENUSUSD='LENUSUSD',
+    lenususd='lenususd',
 
     /**
      * ### Legal & General Group PLC
      * *LGEN.GB/GBX*
      */
-    LGENGBGBX='LGENGBGBX',
+    lgengbgbx='lgengbgbx',
 
     /**
      * ### Deutsche Lufthansa AG
      * *LHA.DE/EUR*
      */
-    LHADEEUR='LHADEEUR',
+    lhadeeur='lhadeeur',
 
     /**
      * ### Lafarge Holcim Ltd
      * *LHN.CH/CHF*
      */
-    LHNCHCHF='LHNCHCHF',
+    lhnchchf='lhnchchf',
 
     /**
      * ### Klepierre
      * *LI.FR/EUR*
      */
-    LIFREUR='LIFREUR',
+    lifreur='lifreur',
 
     /**
      * ### Linde AG
      * *LIN.DE/EUR*
      */
-    LINDEEUR='LINDEEUR',
+    lindeeur='lindeeur',
 
     /**
      * ### Lloyds Banking Group PLC
      * *LLOY.GB/GBX*
      */
-    LLOYGBGBX='LLOYGBGBX',
+    lloygbgbx='lloygbgbx',
 
     /**
      * ### ELI LILLY & CO
      * *LLY.US/USD*
      */
-    LLYUSUSD='LLYUSUSD',
+    llyususd='llyususd',
 
     /**
      * ### LOCKHEED MARTIN CORP
      * *LMT.US/USD*
      */
-    LMTUSUSD='LMTUSUSD',
+    lmtususd='lmtususd',
 
     /**
      * ### Lonza Group AG
      * *LONN.CH/CHF*
      */
-    LONNCHCHF='LONNCHCHF',
+    lonnchchf='lonnchchf',
 
     /**
      * ### LOWE'S COS INC
      * *LOW.US/USD*
      */
-    LOWUSUSD='LOWUSUSD',
+    lowususd='lowususd',
 
     /**
      * ### Legrand SA
      * *LR.FR/EUR*
      */
-    LRFREUR='LRFREUR',
+    lrfreur='lrfreur',
 
     /**
      * ### LAM RESEARCH CORP
      * *LRCX.US/USD*
      */
-    LRCXUSUSD='LRCXUSUSD',
+    lrcxususd='lrcxususd',
 
     /**
      * ### London Stock Exchange Group PLC
      * *LSE.GB/GBX*
      */
-    LSEGBGBX='LSEGBGBX',
+    lsegbgbx='lsegbgbx',
 
     /**
      * ### Litecoin vs US Dollar
      * *LTC/USD*
      */
-    LTCUSD='LTCUSD',
+    ltcusd='ltcusd',
 
     /**
      * ### SOUTHWEST AIRLINES CO
      * *LUV.US/USD*
      */
-    LUVUSUSD='LUVUSUSD',
+    luvususd='luvususd',
 
     /**
      * ### Las Vegas Sands Corp.
      * *LVS.US/USD*
      */
-    LVSUSUSD='LVSUSUSD',
+    lvsususd='lvsususd',
 
     /**
      * ### Lanxess AG
      * *LXS.DE/EUR*
      */
-    LXSDEEUR='LXSDEEUR',
+    lxsdeeur='lxsdeeur',
 
     /**
      * ### MACY'S INC
      * *M.US/USD*
      */
-    MUSUSD='MUSUSD',
+    mususd='mususd',
 
     /**
      * ### MASTERCARD INC-CLASS A
      * *MA.US/USD*
      */
-    MAUSUSD='MAUSUSD',
+    maususd='maususd',
 
     /**
      * ### AP Moeller - Maersk A/S
      * *MAERSKB.DK/DKK*
      */
-    MAERSKBDKDKK='MAERSKBDKDKK',
+    maerskbdkdkk='maerskbdkdkk',
 
     /**
      * ### MARRIOTT INTERNATIONAL -CL A
      * *MAR.US/USD*
      */
-    MARUSUSD='MARUSUSD',
+    marususd='marususd',
 
     /**
      * ### MATTEL INC
      * *MAT.US/USD*
      */
-    MATUSUSD='MATUSUSD',
+    matususd='matususd',
 
     /**
      * ### LVMH Moet Hennessy Louis Vuitton SA
      * *MC.FR/EUR*
      */
-    MCFREUR='MCFREUR',
+    mcfreur='mcfreur',
 
     /**
      * ### MCDONALD'S CORP
      * *MCD.US/USD*
      */
-    MCDUSUSD='MCDUSUSD',
+    mcdususd='mcdususd',
 
     /**
      * ### MICROCHIP TECHNOLOGY INC
      * *MCHP.US/USD*
      */
-    MCHPUSUSD='MCHPUSUSD',
+    mchpususd='mchpususd',
 
     /**
      * ### MCKESSON CORP
      * *MCK.US/USD*
      */
-    MCKUSUSD='MCKUSUSD',
+    mckususd='mckususd',
 
     /**
      * ### MONDELEZ INTERNATIONAL INC-A
      * *MDLZ.US/USD*
      */
-    MDLZUSUSD='MDLZUSUSD',
+    mdlzususd='mdlzususd',
 
     /**
      * ### METLIFE INC
      * *MET.US/USD*
      */
-    METUSUSD='METUSUSD',
+    metususd='metususd',
 
     /**
      * ### MGM RESORTS INTERNATIONAL
      * *MGM.US/USD*
      */
-    MGMUSUSD='MGMUSUSD',
+    mgmususd='mgmususd',
 
     /**
      * ### Marine Harvest ASA
      * *MHG.NO/NOK*
      */
-    MHGNONOK='MHGNONOK',
+    mhgnonok='mhgnonok',
 
     /**
      * ### Marks & Spencer Group PLC
      * *MKS.GB/GBX*
      */
-    MKSGBGBX='MKSGBGBX',
+    mksgbgbx='mksgbgbx',
 
     /**
      * ### 3M CO
      * *MMM.US/USD*
      */
-    MMMUSUSD='MMMUSUSD',
+    mmmususd='mmmususd',
 
     /**
      * ### Mondi PLC
      * *MNDI.GB/GBX*
      */
-    MNDIGBGBX='MNDIGBGBX',
+    mndigbgbx='mndigbgbx',
 
     /**
      * ### ALTRIA GROUP INC
      * *MO.US/USD*
      */
-    MOUSUSD='MOUSUSD',
+    moususd='moususd',
 
     /**
      * ### MARATHON PETROLEUM CORP
      * *MPC.US/USD*
      */
-    MPCUSUSD='MPCUSUSD',
+    mpcususd='mpcususd',
 
     /**
      * ### Merck KGaA
      * *MRK.DE/EUR*
      */
-    MRKDEEUR='MRKDEEUR',
+    mrkdeeur='mrkdeeur',
 
     /**
      * ### MERCK & CO. INC.
      * *MRK.US/USD*
      */
-    MRKUSUSD='MRKUSUSD',
+    mrkususd='mrkususd',
 
     /**
      * ### MARATHON OIL CORP
      * *MRO.US/USD*
      */
-    MROUSUSD='MROUSUSD',
+    mroususd='mroususd',
 
     /**
      * ### WM Morrison Supermarkets PLC
      * *MRW.GB/GBX*
      */
-    MRWGBGBX='MRWGBGBX',
+    mrwgbgbx='mrwgbgbx',
 
     /**
      * ### MORGAN STANLEY
      * *MS.US/USD*
      */
-    MSUSUSD='MSUSUSD',
+    msususd='msususd',
 
     /**
      * ### MICROSOFT CORP
      * *MSFT.US/USD*
      */
-    MSFTUSUSD='MSFTUSUSD',
+    msftususd='msftususd',
 
     /**
      * ### ArcelorMittal
      * *MT.NL/EUR*
      */
-    MTNLEUR='MTNLEUR',
+    mtnleur='mtnleur',
 
     /**
      * ### MICRON TECHNOLOGY INC
      * *MU.US/USD*
      */
-    MUUSUSD='MUUSUSD',
+    muususd='muususd',
 
     /**
      * ### Muenchener Rueckversicherungs AG
      * *MUV2.DE/EUR*
      */
-    MUV2DEEUR='MUV2DEEUR',
+    muv2deeur='muv2deeur',
 
     /**
      * ### NOBLE ENERGY INC
      * *NBL.US/USD*
      */
-    NBLUSUSD='NBLUSUSD',
+    nblususd='nblususd',
 
     /**
      * ### Nordea Bank AB
      * *NDA.SE/SEK*
      */
-    NDASESEK='NDASESEK',
+    ndasesek='ndasesek',
 
     /**
      * ### NEXTERA ENERGY INC
      * *NEE.US/USD*
      */
-    NEEUSUSD='NEEUSUSD',
+    neeususd='neeususd',
 
     /**
      * ### NEWMONT MINING CORP
      * *NEM.US/USD*
      */
-    NEMUSUSD='NEMUSUSD',
+    nemususd='nemususd',
 
     /**
      * ### Neste OYJ
      * *NES1V.FI/EUR*
      */
-    NES1VFIEUR='NES1VFIEUR',
+    nes1vfieur='nes1vfieur',
 
     /**
      * ### Nestle SA
      * *NESN.CH/CHF*
      */
-    NESNCHCHF='NESNCHCHF',
+    nesnchchf='nesnchchf',
 
     /**
      * ### NETFLIX INC
      * *NFLX.US/USD*
      */
-    NFLXUSUSD='NFLXUSUSD',
+    nflxususd='nflxususd',
 
     /**
      * ### National Grid PLC
      * *NG.GB/GBX*
      */
-    NGGBGBX='NGGBGBX',
+    nggbgbx='nggbgbx',
 
     /**
      * ### Norsk Hydro ASA
      * *NHY.NO/NOK*
      */
-    NHYNONOK='NHYNONOK',
+    nhynonok='nhynonok',
 
     /**
      * ### NIKE INC
      * *NKE.US/USD*
      */
-    NKEUSUSD='NKEUSUSD',
+    nkeususd='nkeususd',
 
     /**
      * ### Netherlands 25 Index
      * *NLD.IDX/EUR*
      */
-    NLDIDXEUR='NLDIDXEUR',
+    nldidxeur='nldidxeur',
 
     /**
      * ### NORTHROP GRUMMAN CORP
      * *NOC.US/USD*
      */
-    NOCUSUSD='NOCUSUSD',
+    nocususd='nocususd',
 
     /**
      * ### Novartis AG
      * *NOVN.CH/CHF*
      */
-    NOVNCHCHF='NOVNCHCHF',
+    novnchchf='novnchchf',
 
     /**
      * ### Novo Nordisk A/S
      * *NOVOB.DK/DKK*
      */
-    NOVOBDKDKK='NOVOBDKDKK',
+    novobdkdkk='novobdkdkk',
 
     /**
      * ### Nokian Renkaat OYJ
      * *NRE1V.FI/EUR*
      */
-    NRE1VFIEUR='NRE1VFIEUR',
+    nre1vfieur='nre1vfieur',
 
     /**
      * ### NRG ENERGY INC
      * *NRG.US/USD*
      */
-    NRGUSUSD='NRGUSUSD',
+    nrgususd='nrgususd',
 
     /**
      * ### NORFOLK SOUTHERN CORP
      * *NSC.US/USD*
      */
-    NSCUSUSD='NSCUSUSD',
+    nscususd='nscususd',
 
     /**
      * ### NVIDIA CORP
      * *NVDA.US/USD*
      */
-    NVDAUSUSD='NVDAUSUSD',
+    nvdaususd='nvdaususd',
 
     /**
      * ### NEWELL BRANDS INC
      * *NWL.US/USD*
      */
-    NWLUSUSD='NWLUSUSD',
+    nwlususd='nwlususd',
 
     /**
      * ### Next PLC
      * *NXT.GB/GBX*
      */
-    NXTGBGBX='NXTGBGBX',
+    nxtgbgbx='nxtgbgbx',
 
     /**
      * ### New Zealand Dollar vs Canadian Dollar
      * *NZD/CAD*
      */
-    NZDCAD='NZDCAD',
+    nzdcad='nzdcad',
 
     /**
      * ### New Zealand Dollar vs Swiss Franc
      * *NZD/CHF*
      */
-    NZDCHF='NZDCHF',
+    nzdchf='nzdchf',
 
     /**
      * ### New Zealand Dollar vs Japanese Yen
      * *NZD/JPY*
      */
-    NZDJPY='NZDJPY',
+    nzdjpy='nzdjpy',
 
     /**
      * ### New Zealand Dollar vs US Dollar
      * *NZD/USD*
      */
-    NZDUSD='NZDUSD',
+    nzdusd='nzdusd',
 
     /**
      * ### Novozymes A/S
      * *NZYMB.DK/DKK*
      */
-    NZYMBDKDKK='NZYMBDKDKK',
+    nzymbdkdkk='nzymbdkdkk',
 
     /**
      * ### Orange Juice
      * *OJUICE.CMD/USX*
      */
-    OJUICECMDUSX='OJUICECMDUSX',
+    ojuicecmdusx='ojuicecmdusx',
 
     /**
      * ### ONEOK INC
      * *OKE.US/USD*
      */
-    OKEUSUSD='OKEUSUSD',
+    okeususd='okeususd',
 
     /**
      * ### OMNICOM GROUP
      * *OMC.US/USD*
      */
-    OMCUSUSD='OMCUSUSD',
+    omcususd='omcususd',
 
     /**
      * ### L'Oreal SA
      * *OR.FR/EUR*
      */
-    ORFREUR='ORFREUR',
+    orfreur='orfreur',
 
     /**
      * ### Orange SA
      * *ORA.FR/EUR*
      */
-    ORAFREUR='ORAFREUR',
+    orafreur='orafreur',
 
     /**
      * ### ORACLE CORP
      * *ORCL.US/USD*
      */
-    ORCLUSUSD='ORCLUSUSD',
+    orclususd='orclususd',
 
     /**
      * ### Orkla ASA
      * *ORK.NO/NOK*
      */
-    ORKNONOK='ORKNONOK',
+    orknonok='orknonok',
 
     /**
      * ### O'REILLY AUTOMOTIVE INC
      * *ORLY.US/USD*
      */
-    ORLYUSUSD='ORLYUSUSD',
+    orlyususd='orlyususd',
 
     /**
      * ### Outotec OYJ
      * *OTE1V.FI/EUR*
      */
-    OTE1VFIEUR='OTE1VFIEUR',
+    ote1vfieur='ote1vfieur',
 
     /**
      * ### Outokumpu OYJ
      * *OUT1V.FI/EUR*
      */
-    OUT1VFIEUR='OUT1VFIEUR',
+    out1vfieur='out1vfieur',
 
     /**
      * ### OCCIDENTAL PETROLEUM CORP
      * *OXY.US/USD*
      */
-    OXYUSUSD='OXYUSUSD',
+    oxyususd='oxyususd',
 
     /**
      * ### Porsche Automobil Holding SE
      * *PAH3.DE/EUR*
      */
-    PAH3DEEUR='PAH3DEEUR',
+    pah3deeur='pah3deeur',
 
     /**
      * ### PAYCHEX INC
      * *PAYX.US/USD*
      */
-    PAYXUSUSD='PAYXUSUSD',
+    payxususd='payxususd',
 
     /**
      * ### Petroleo Brasileiro S.A.
      * *PBR.US/USD*
      */
-    PBRUSUSD='PBRUSUSD',
+    pbrususd='pbrususd',
 
     /**
      * ### PACCAR INC
      * *PCAR.US/USD*
      */
-    PCARUSUSD='PCARUSUSD',
+    pcarususd='pcarususd',
 
     /**
      * ### P G & E CORP
      * *PCG.US/USD*
      */
-    PCGUSUSD='PCGUSUSD',
+    pcgususd='pcgususd',
 
     /**
      * ### PRICELINE GROUP INC/THE
      * *PCLN.US/USD*
      */
-    PCLNUSUSD='PCLNUSUSD',
+    pclnususd='pclnususd',
 
     /**
      * ### PEPSICO INC
      * *PEP.US/USD*
      */
-    PEPUSUSD='PEPUSUSD',
+    pepususd='pepususd',
 
     /**
      * ### Petrofac Ltd
      * *PFC.GB/GBX*
      */
-    PFCGBGBX='PFCGBGBX',
+    pfcgbgbx='pfcgbgbx',
 
     /**
      * ### PFIZER INC
      * *PFE.US/USD*
      */
-    PFEUSUSD='PFEUSUSD',
+    pfeususd='pfeususd',
 
     /**
      * ### PROCTER & GAMBLE CO/THE
      * *PG.US/USD*
      */
-    PGUSUSD='PGUSUSD',
+    pgususd='pgususd',
 
     /**
      * ### PROGRESSIVE CORP
      * *PGR.US/USD*
      */
-    PGRUSUSD='PGRUSUSD',
+    pgrususd='pgrususd',
 
     /**
      * ### PARKER HANNIFIN CORP
      * *PH.US/USD*
      */
-    PHUSUSD='PHUSUSD',
+    phususd='phususd',
 
     /**
      * ### Koninklijke Philips NV
      * *PHIA.NL/EUR*
      */
-    PHIANLEUR='PHIANLEUR',
+    phianleur='phianleur',
 
     /**
      * ### Poland 20 Index
      * *PLN.IDX/PLN*
      */
-    PLNIDXPLN='PLNIDXPLN',
+    plnidxpln='plnidxpln',
 
     /**
      * ### PHILIP MORRIS INTERNATIONAL
      * *PM.US/USD*
      */
-    PMUSUSD='PMUSUSD',
+    pmususd='pmususd',
 
     /**
      * ### PNC FINANCIAL SERVICES GROUP
      * *PNC.US/USD*
      */
-    PNCUSUSD='PNCUSUSD',
+    pncususd='pncususd',
 
     /**
      * ### Pandora A/S
      * *PNDORA.DK/DKK*
      */
-    PNDORADKDKK='PNDORADKDKK',
+    pndoradkdkk='pndoradkdkk',
 
     /**
      * ### PPG INDUSTRIES INC
      * *PPG.US/USD*
      */
-    PPGUSUSD='PPGUSUSD',
+    ppgususd='ppgususd',
 
     /**
      * ### Prudential PLC
      * *PRU.GB/GBX*
      */
-    PRUGBGBX='PRUGBGBX',
+    prugbgbx='prugbgbx',
 
     /**
      * ### PRUDENTIAL FINANCIAL INC
      * *PRU.US/USD*
      */
-    PRUUSUSD='PRUUSUSD',
+    pruususd='pruususd',
 
     /**
      * ### PUBLIC STORAGE
      * *PSA.US/USD*
      */
-    PSAUSUSD='PSAUSUSD',
+    psaususd='psaususd',
 
     /**
      * ### ProSiebenSat.1 Media AG
      * *PSM.DE/EUR*
      */
-    PSMDEEUR='PSMDEEUR',
+    psmdeeur='psmdeeur',
 
     /**
      * ### Persimmon PLC
      * *PSN.GB/GBX*
      */
-    PSNGBGBX='PSNGBGBX',
+    psngbgbx='psngbgbx',
 
     /**
      * ### Pearson PLC
      * *PSON.GB/GBX*
      */
-    PSONGBGBX='PSONGBGBX',
+    psongbgbx='psongbgbx',
 
     /**
      * ### PHILLIPS 66
      * *PSX.US/USD*
      */
-    PSXUSUSD='PSXUSUSD',
+    psxususd='psxususd',
 
     /**
      * ### Publicis Groupe SA
      * *PUB.FR/EUR*
      */
-    PUBFREUR='PUBFREUR',
+    pubfreur='pubfreur',
 
     /**
      * ### PIONEER NATURAL RESOURCES CO
      * *PXD.US/USD*
      */
-    PXDUSUSD='PXDUSUSD',
+    pxdususd='pxdususd',
 
     /**
      * ### PAYPAL HOLDINGS INC
      * *PYPL.US/USD*
      */
-    PYPLUSUSD='PYPLUSUSD',
+    pyplususd='pyplususd',
 
     /**
      * ### QUALCOMM INC
      * *QCOM.US/USD*
      */
-    QCOMUSUSD='QCOMUSUSD',
+    qcomususd='qcomususd',
 
     /**
      * ### PowerShares QQQ ETF
      * *QQQ.US/USD*
      */
-    QQQUSUSD='QQQUSUSD',
+    qqqususd='qqqususd',
 
     /**
      * ### Randstad Holding NV
      * *RAND.NL/EUR*
      */
-    RANDNLEUR='RANDNLEUR',
+    randnleur='randnleur',
 
     /**
      * ### Reckitt Benckiser Group PLC
      * *RB.GB/GBX*
      */
-    RBGBGBX='RBGBGBX',
+    rbgbgbx='rbgbgbx',
 
     /**
      * ### Raiffeisen Bank International AG
      * *RBI.AT/EUR*
      */
-    RBIATEUR='RBIATEUR',
+    rbiateur='rbiateur',
 
     /**
      * ### Royal Bank of Scotland Group PLC
      * *RBS.GB/GBX*
      */
-    RBSGBGBX='RBSGBGBX',
+    rbsgbgbx='rbsgbgbx',
 
     /**
      * ### Royal Dutch Shell PLC
      * *RDSA.NL/EUR*
      */
-    RDSANLEUR='RDSANLEUR',
+    rdsanleur='rdsanleur',
 
     /**
      * ### Royal Dutch Shell PLC
      * *RDSB.GB/GBX*
      */
-    RDSBGBGBX='RDSBGBGBX',
+    rdsbgbgbx='rdsbgbgbx',
 
     /**
      * ### Red Electrica Corp SA
      * *REE.ES/EUR*
      */
-    REEESEUR='REEESEUR',
+    reeeseur='reeeseur',
 
     /**
      * ### REGENERON PHARMACEUTICALS
      * *REGN.US/USD*
      */
-    REGNUSUSD='REGNUSUSD',
+    regnususd='regnususd',
 
     /**
      * ### Reed Elsevier PLC
      * *REL.GB/GBX*
      */
-    RELGBGBX='RELGBGBX',
+    relgbgbx='relgbgbx',
 
     /**
      * ### RELX NV
      * *REN.NL/EUR*
      */
-    RENNLEUR='RENNLEUR',
+    rennleur='rennleur',
 
     /**
      * ### Repsol SA
      * *REP.ES/EUR*
      */
-    REPESEUR='REPESEUR',
+    repeseur='repeseur',
 
     /**
      * ### REGIONS FINANCIAL CORP
      * *RF.US/USD*
      */
-    RFUSUSD='RFUSUSD',
+    rfususd='rfususd',
 
     /**
      * ### Pernod-Ricard SA
      * *RI.FR/EUR*
      */
-    RIFREUR='RIFREUR',
+    rifreur='rifreur',
 
     /**
      * ### Rio Tinto PLC
      * *RIO.GB/GBX*
      */
-    RIOGBGBX='RIOGBGBX',
+    riogbgbx='riogbgbx',
 
     /**
      * ### Royal Mail PLC
      * *RMG.GB/GBX*
      */
-    RMGGBGBX='RMGGBGBX',
+    rmggbgbx='rmggbgbx',
 
     /**
      * ### Renault SA
      * *RNO.FR/EUR*
      */
-    RNOFREUR='RNOFREUR',
+    rnofreur='rnofreur',
 
     /**
      * ### Roche Holding AG
      * *ROG.CH/CHF*
      */
-    ROGCHCHF='ROGCHCHF',
+    rogchchf='rogchchf',
 
     /**
      * ### ROSS STORES INC
      * *ROST.US/USD*
      */
-    ROSTUSUSD='ROSTUSUSD',
+    rostususd='rostususd',
 
     /**
      * ### Rolls-Royce Holdings PLC
      * *RR.GB/GBX*
      */
-    RRGBGBX='RRGBGBX',
+    rrgbgbx='rrgbgbx',
 
     /**
      * ### RANGE RESOURCES CORP
      * *RRC.US/USD*
      */
-    RRCUSUSD='RRCUSUSD',
+    rrcususd='rrcususd',
 
     /**
      * ### RSA Insurance Group PLC
      * *RSA.GB/GBX*
      */
-    RSAGBGBX='RSAGBGBX',
+    rsagbgbx='rsagbgbx',
 
     /**
      * ### RWE AG
      * *RWE.DE/EUR*
      */
-    RWEDEEUR='RWEDEEUR',
+    rwedeeur='rwedeeur',
 
     /**
      * ### Safran SA
      * *SAF.FR/EUR*
      */
-    SAFFREUR='SAFFREUR',
+    saffreur='saffreur',
 
     /**
      * ### Banco Santander SA
      * *SAN.ES/EUR*
      */
-    SANESEUR='SANESEUR',
+    saneseur='saneseur',
 
     /**
      * ### Sanofi
      * *SAN.FR/EUR*
      */
-    SANFREUR='SANFREUR',
+    sanfreur='sanfreur',
 
     /**
      * ### Sandvik AB
      * *SAND.SE/SEK*
      */
-    SANDSESEK='SANDSESEK',
+    sandsesek='sandsesek',
 
     /**
      * ### SAP AG
      * *SAP.DE/EUR*
      */
-    SAPDEEUR='SAPDEEUR',
+    sapdeeur='sapdeeur',
 
     /**
      * ### J Sainsbury PLC
      * *SBRY.GB/GBX*
      */
-    SBRYGBGBX='SBRYGBGBX',
+    sbrygbgbx='sbrygbgbx',
 
     /**
      * ### STARBUCKS CORP
      * *SBUX.US/USD*
      */
-    SBUXUSUSD='SBUXUSUSD',
+    sbuxususd='sbuxususd',
 
     /**
      * ### Svenska Cellulosa AB
      * *SCAB.SE/SEK*
      */
-    SCABSESEK='SCABSESEK',
+    scabsesek='scabsesek',
 
     /**
      * ### SCHWAB (CHARLES) CORP
      * *SCHW.US/USD*
      */
-    SCHWUSUSD='SCHWUSUSD',
+    schwususd='schwususd',
 
     /**
      * ### Swisscom AG
      * *SCMN.CH/CHF*
      */
-    SCMNCHCHF='SCMNCHCHF',
+    scmnchchf='scmnchchf',
 
     /**
      * ### K+S AG
      * *SDF.DE/EUR*
      */
-    SDFDEEUR='SDFDEEUR',
+    sdfdeeur='sdfdeeur',
 
     /**
      * ### Skandinaviska Enskilda Banken AB
      * *SEBA.SE/SEK*
      */
-    SEBASESEK='SEBASESEK',
+    sebasesek='sebasesek',
 
     /**
      * ### Securitas AB
      * *SECUB.SE/SEK*
      */
-    SECUBSESEK='SECUBSESEK',
+    secubsesek='secubsesek',
 
     /**
      * ### Singapore Blue Chip Cash Index
      * *SGD.IDX/SGD*
      */
-    SGDIDXSGD='SGDIDXSGD',
+    sgdidxsgd='sgdidxsgd',
 
     /**
      * ### Singapore Dollar vs Japanese Yen
      * *SGD/JPY*
      */
-    SGDJPY='SGDJPY',
+    sgdjpy='sgdjpy',
 
     /**
      * ### Sage Group PLC/The
      * *SGE.GB/GBX*
      */
-    SGEGBGBX='SGEGBGBX',
+    sgegbgbx='sgegbgbx',
 
     /**
      * ### Cie de St-Gobain
      * *SGO.FR/EUR*
      */
-    SGOFREUR='SGOFREUR',
+    sgofreur='sgofreur',
 
     /**
      * ### SGS SA
      * *SGSN.CH/CHF*
      */
-    SGSNCHCHF='SGSNCHCHF',
+    sgsnchchf='sgsnchchf',
 
     /**
      * ### SHERWIN-WILLIAMS COMPANY
      * *SHW.US/USD*
      */
-    SHWUSUSD='SHWUSUSD',
+    shwususd='shwususd',
 
     /**
      * ### Siemens AG
      * *SIE.DE/EUR*
      */
-    SIEDEEUR='SIEDEEUR',
+    siedeeur='siedeeur',
 
     /**
      * ### JM SMUCKER COMPANY
      * *SJM.US/USD*
      */
-    SJMUSUSD='SJMUSUSD',
+    sjmususd='sjmususd',
 
     /**
      * ### Skanska AB
      * *SKAB.SE/SEK*
      */
-    SKABSESEK='SKABSESEK',
+    skabsesek='skabsesek',
 
     /**
      * ### SKF AB
      * *SKFB.SE/SEK*
      */
-    SKFBSESEK='SKFBSESEK',
+    skfbsesek='skfbsesek',
 
     /**
      * ### Sky Plc
      * *SKY.GB/GBP*
      */
-    SKYGBGBX='SKYGBGBX',
+    skygbgbx='skygbgbx',
 
     /**
      * ### Swiss Life Holding AG
      * *SLHN.CH/CHF*
      */
-    SLHNCHCHF='SLHNCHCHF',
+    slhnchchf='slhnchchf',
 
     /**
      * ### iShares Silver Trust ETF
      * *SLV.US/USD*
      */
-    SLVUSUSD='SLVUSUSD',
+    slvususd='slvususd',
 
     /**
      * ### Smiths Group PLC
      * *SMIN.GB/GBX*
      */
-    SMINGBGBX='SMINGBGBX',
+    smingbgbx='smingbgbx',
 
     /**
      * ### Smith & Nephew PLC
      * *SN.GB/GBX*
      */
-    SNGBGBX='SNGBGBX',
+    sngbgbx='sngbgbx',
 
     /**
      * ### SNAP Inc
      * *SNAP.US/USD*
      */
-    SNAPUSUSD='SNAPUSUSD',
+    snapususd='snapususd',
 
     /**
      * ### SOUTHERN CO/THE
      * *SO.US/USD*
      */
-    SOUSUSD='SOUSUSD',
+    soususd='soususd',
 
     /**
      * ### Solvay SA
      * *SOLB.BE/EUR*
      */
-    SOLBBEEUR='SOLBBEEUR',
+    solbbeeur='solbbeeur',
 
     /**
      * ### Sonova Holding AG
      * *SOON.CH/CHF*
      */
-    SOONCHCHF='SOONCHCHF',
+    soonchchf='soonchchf',
 
     /**
      * ### Soybean
      * *SOYBEAN.CMD/USX*
      */
-    SOYBEANCMDUSX='SOYBEANCMDUSX',
+    soybeancmdusx='soybeancmdusx',
 
     /**
      * ### SIMON PROPERTY GROUP INC
      * *SPG.US/USD*
      */
-    SPGUSUSD='SPGUSUSD',
+    spgususd='spgususd',
 
     /**
      * ### SPDR S&P 500 ETF
      * *SPY.US/USD*
      */
-    SPYUSUSD='SPYUSUSD',
+    spyususd='spyususd',
 
     /**
      * ### Swiss Re AG
      * *SREN.CH/CHF*
      */
-    SRENCHCHF='SRENCHCHF',
+    srenchchf='srenchchf',
 
     /**
      * ### SSE PLC
      * *SSE.GB/GBX*
      */
-    SSEGBGBX='SSEGBGBX',
+    ssegbgbx='ssegbgbx',
 
     /**
      * ### Standard Chartered PLC
      * *STAN.GB/GBX*
      */
-    STANGBGBX='STANGBGBX',
+    stangbgbx='stangbgbx',
 
     /**
      * ### Stora Enso OYJ
      * *STERV.FI/EUR*
      */
-    STERVFIEUR='STERVFIEUR',
+    stervfieur='stervfieur',
 
     /**
      * ### Statoil ASA
      * *STL.NO/NOK*
      */
-    STLNONOK='STLNONOK',
+    stlnonok='stlnonok',
 
     /**
      * ### STATE STREET CORP
      * *STT.US/USD*
      */
-    STTUSUSD='STTUSUSD',
+    sttususd='sttususd',
 
     /**
      * ### CONSTELLATION BRANDS INC-A
      * *STZ.US/USD*
      */
-    STZUSUSD='STZUSUSD',
+    stzususd='stzususd',
 
     /**
      * ### Schneider Electric SA
      * *SU.FR/EUR*
      */
-    SUFREUR='SUFREUR',
+    sufreur='sufreur',
 
     /**
      * ### London Sugar No.5
      * *SUGAR.CMD/USD*
      */
-    SUGARCMDUSD='SUGARCMDUSD',
+    sugarcmdusd='sugarcmdusd',
 
     /**
      * ### Severn Trent PLC
      * *SVT.GB/GBX*
      */
-    SVTGBGBX='SVTGBGBX',
+    svtgbgbx='svtgbgbx',
 
     /**
      * ### Swedbank AB
      * *SWEDA.SE/SEK*
      */
-    SWEDASESEK='SWEDASESEK',
+    swedasesek='swedasesek',
 
     /**
      * ### STANLEY BLACK & DECKER INC
      * *SWK.US/USD*
      */
-    SWKUSUSD='SWKUSUSD',
+    swkususd='swkususd',
 
     /**
      * ### Swedish Match AB
      * *SWMA.SE/SEK*
      */
-    SWMASESEK='SWMASESEK',
+    swmasesek='swmasesek',
 
     /**
      * ### STRYKER CORP
      * *SYK.US/USD*
      */
-    SYKUSUSD='SYKUSUSD',
+    sykususd='sykususd',
 
     /**
      * ### SYSCO CORP
      * *SYY.US/USD*
      */
-    SYYUSUSD='SYYUSUSD',
+    syyususd='syyususd',
 
     /**
      * ### AT&T INC
      * *T.US/USD*
      */
-    TUSUSD='TUSUSD',
+    tususd='tususd',
 
     /**
      * ### MOLSON COORS BREWING CO -B
      * *TAP.US/USD*
      */
-    TAPUSUSD='TAPUSUSD',
+    tapususd='tapususd',
 
     /**
      * ### Tate & Lyle PLC
      * *TATE.GB/GBX*
      */
-    TATEGBGBX='TATEGBGBX',
+    tategbgbx='tategbgbx',
 
     /**
      * ### Telefonica SA
      * *TEF.ES/EUR*
      */
-    TEFESEUR='TEFESEUR',
+    tefeseur='tefeseur',
 
     /**
      * ### Telenor ASA
      * *TEL.NO/NOK*
      */
-    TELNONOK='TELNONOK',
+    telnonok='telnonok',
 
     /**
      * ### Tele2 AB
      * *TEL2B.SE/SEK*
      */
-    TEL2BSESEK='TEL2BSESEK',
+    tel2bsesek='tel2bsesek',
 
     /**
      * ### TEVA PHARMACEUTICAL-SP ADR
      * *TEVA.US/USD*
      */
-    TEVAUSUSD='TEVAUSUSD',
+    tevaususd='tevaususd',
 
     /**
      * ### TARGET CORP
      * *TGT.US/USD*
      */
-    TGTUSUSD='TGTUSUSD',
+    tgtususd='tgtususd',
 
     /**
      * ### TIFFANY & CO
      * *TIF.US/USD*
      */
-    TIFUSUSD='TIFUSUSD',
+    tifususd='tifususd',
 
     /**
      * ### TJX COMPANIES INC
      * *TJX.US/USD*
      */
-    TJXUSUSD='TJXUSUSD',
+    tjxususd='tjxususd',
 
     /**
      * ### ThyssenKrupp AG
      * *TKA.DE/EUR*
      */
-    TKADEEUR='TKADEEUR',
+    tkadeeur='tkadeeur',
 
     /**
      * ### Telia Company AB
      * *TLS1V.FI/EUR*
      */
-    TLS1VFIEUR='TLS1VFIEUR',
+    tls1vfieur='tls1vfieur',
 
     /**
      * ### Telia Company AB
      * *TLSN.SE/SEK*
      */
-    TLSNSESEK='TLSNSESEK',
+    tlsnsesek='tlsnsesek',
 
     /**
      * ### iShares 20+ Year Treasury Bond ETF
      * *TLT.US/USD*
      */
-    TLTUSUSD='TLTUSUSD',
+    tltususd='tltususd',
 
     /**
      * ### Tullow Oil PLC
      * *TLW.GB/GBX*
      */
-    TLWGBGBX='TLWGBGBX',
+    tlwgbgbx='tlwgbgbx',
 
     /**
      * ### THERMO FISHER SCIENTIFIC INC
      * *TMO.US/USD*
      */
-    TMOUSUSD='TMOUSUSD',
+    tmoususd='tmoususd',
 
     /**
      * ### Travis Perkins PLC
      * *TPK.GB/GBX*
      */
-    TPKGBGBX='TPKGBGBX',
+    tpkgbgbx='tpkgbgbx',
 
     /**
      * ### T ROWE PRICE GROUP INC
      * *TROW.US/USD*
      */
-    TROWUSUSD='TROWUSUSD',
+    trowususd='trowususd',
 
     /**
      * ### TRAVELERS COS INC/THE
      * *TRV.US/USD*
      */
-    TRVUSUSD='TRVUSUSD',
+    trvususd='trvususd',
 
     /**
      * ### Turkish Lira vs Japanese Yen
      * *TRY/JPY*
      */
-    TRYJPY='TRYJPY',
+    tryjpy='tryjpy',
 
     /**
      * ### Tesco PLC
      * *TSCO.GB/GBX*
      */
-    TSCOGBGBX='TSCOGBGBX',
+    tscogbgbx='tscogbgbx',
 
     /**
      * ### TESLA MOTORS INC
      * *TSLA.US/USD*
      */
-    TSLAUSUSD='TSLAUSUSD',
+    tslaususd='tslaususd',
 
     /**
      * ### Taiwan Semiconductor Manufacturing Company Limited
      * *TSM.US/USD*
      */
-    TSMUSUSD='TSMUSUSD',
+    tsmususd='tsmususd',
 
     /**
      * ### TYSON FOODS INC-CL A
      * *TSN.US/USD*
      */
-    TSNUSUSD='TSNUSUSD',
+    tsnususd='tsnususd',
 
     /**
      * ### TUI AG
      * *TUI1.DE/EUR*
      */
-    TUI1DEEUR='TUI1DEEUR',
+    tui1deeur='tui1deeur',
 
     /**
      * ### TWITTER INC
      * *TWTR.US/USD*
      */
-    TWTRUSUSD='TWTRUSUSD',
+    twtrususd='twtrususd',
 
     /**
      * ### TEXAS INSTRUMENTS INC
      * *TXN.US/USD*
      */
-    TXNUSUSD='TXNUSUSD',
+    txnususd='txnususd',
 
     /**
      * ### UBS Group AG
      * *UBSG.CH/CHF*
      */
-    UBSGCHCHF='UBSGCHCHF',
+    ubsgchchf='ubsgchchf',
 
     /**
      * ### UCB SA
      * *UCB.BE/EUR*
      */
-    UCBBEEUR='UCBBEEUR',
+    ucbbeeur='ucbbeeur',
 
     /**
      * ### Peugeot SA
      * *UG.FR/EUR*
      */
-    UGFREUR='UGFREUR',
+    ugfreur='ugfreur',
 
     /**
      * ### Swatch Group AG/The
      * *UHR.CH/CHF*
      */
-    UHRCHCHF='UHRCHCHF',
+    uhrchchf='uhrchchf',
 
     /**
      * ### UK Long Gilt
      * *UKGILT.TR/GBP*
      */
-    UKGILTTRGBP='UKGILTTRGBP',
+    ukgilttrgbp='ukgilttrgbp',
 
     /**
      * ### ULTA SALON COSMETICS & FRAGR
      * *ULTA.US/USD*
      */
-    ULTAUSUSD='ULTAUSUSD',
+    ultaususd='ultaususd',
 
     /**
      * ### Unilever PLC
      * *ULVR.GB/GBX*
      */
-    ULVRGBGBX='ULVRGBGBX',
+    ulvrgbgbx='ulvrgbgbx',
 
     /**
      * ### Umicore SA
      * *UMI.BE/EUR*
      */
-    UMIBEEUR='UMIBEEUR',
+    umibeeur='umibeeur',
 
     /**
      * ### Unilever NV
      * *UNA.NL/EUR*
      */
-    UNANLEUR='UNANLEUR',
+    unanleur='unanleur',
 
     /**
      * ### UNITEDHEALTH GROUP INC
      * *UNH.US/USD*
      */
-    UNHUSUSD='UNHUSUSD',
+    unhususd='unhususd',
 
     /**
      * ### UNION PACIFIC CORP
      * *UNP.US/USD*
      */
-    UNPUSUSD='UNPUSUSD',
+    unpususd='unpususd',
 
     /**
      * ### UNITED PARCEL SERVICE-CL B
      * *UPS.US/USD*
      */
-    UPSUSUSD='UPSUSUSD',
+    upsususd='upsususd',
 
     /**
      * ### US BANCORP
      * *USB.US/USD*
      */
-    USBUSUSD='USBUSUSD',
+    usbususd='usbususd',
 
     /**
      * ### US Dollar vs Canadian Dollar
      * *USD/CAD*
      */
-    USDCAD='USDCAD',
+    usdcad='usdcad',
 
     /**
      * ### US Dollar vs Swiss Franc
      * *USD/CHF*
      */
-    USDCHF='USDCHF',
+    usdchf='usdchf',
 
     /**
      * ### US Dollar vs Offshore Chinese Renminbi
      * *USD/CNH*
      */
-    USDCNH='USDCNH',
+    usdcnh='usdcnh',
 
     /**
      * ### US Dollar vs Czech Koruna
      * *USD/CZK*
      */
-    USDCZK='USDCZK',
+    usdczk='usdczk',
 
     /**
      * ### US Dollar vs Danish Krone
      * *USD/DKK*
      */
-    USDDKK='USDDKK',
+    usddkk='usddkk',
 
     /**
      * ### US Dollar vs Hong Kong Dollar
      * *USD/HKD*
      */
-    USDHKD='USDHKD',
+    usdhkd='usdhkd',
 
     /**
      * ### US Dollar vs Hungarian Forint
      * *USD/HUF*
      */
-    USDHUF='USDHUF',
+    usdhuf='usdhuf',
 
     /**
      * ### US Dollar vs Israeli Shekel
      * *USD/ILS*
      */
-    USDILS='USDILS',
+    usdils='usdils',
 
     /**
      * ### US Dollar vs Japanese Yen
      * *USD/JPY*
      */
-    USDJPY='USDJPY',
+    usdjpy='usdjpy',
 
     /**
      * ### US Dollar vs Mexican Peso
      * *USD/MXN*
      */
-    USDMXN='USDMXN',
+    usdmxn='usdmxn',
 
     /**
      * ### US Dollar vs Norwegian Krone
      * *USD/NOK*
      */
-    USDNOK='USDNOK',
+    usdnok='usdnok',
 
     /**
      * ### US Dollar vs Polish Zloty
      * *USD/PLN*
      */
-    USDPLN='USDPLN',
+    usdpln='usdpln',
 
     /**
      * ### US Dollar vs Romanian Leu
      * *USD/RON*
      */
-    USDRON='USDRON',
+    usdron='usdron',
 
     /**
      * ### US Dollar vs Russian Ruble
      * *USD/RUB*
      */
-    USDRUB='USDRUB',
+    usdrub='usdrub',
 
     /**
      * ### US Dollar vs Swedish Krona
      * *USD/SEK*
      */
-    USDSEK='USDSEK',
+    usdsek='usdsek',
 
     /**
      * ### US Dollar vs Singapore Dollar
      * *USD/SGD*
      */
-    USDSGD='USDSGD',
+    usdsgd='usdsgd',
 
     /**
      * ### US Dollar vs Thai Baht
      * *USD/THB*
      */
-    USDTHB='USDTHB',
+    usdthb='usdthb',
 
     /**
      * ### US Dollar vs Turkish Lira
      * *USD/TRY*
      */
-    USDTRY='USDTRY',
+    usdtry='usdtry',
 
     /**
      * ### US Dollar vs South African Rand
      * *USD/ZAR*
      */
-    USDZAR='USDZAR',
+    usdzar='usdzar',
 
     /**
      * ### United States Oil
      * *USO.US/USD*
      */
-    USOUSUSD='USOUSUSD',
+    usoususd='usoususd',
 
     /**
      * ### US Small Cap 2000
      * *USSC2000.IDX/USD*
      */
-    USSC2000IDXUSD='USSC2000IDXUSD',
+    ussc2000idxusd='ussc2000idxusd',
 
     /**
      * ### US T-Bond
      * *USTBOND.TR/USD*
      */
-    USTBONDTRUSD='USTBONDTRUSD',
+    ustbondtrusd='ustbondtrusd',
 
     /**
      * ### United Utilities Group PLC
      * *UU.GB/GBX*
      */
-    UUGBGBX='UUGBGBX',
+    uugbgbx='uugbgbx',
 
     /**
      * ### VISA INC-CLASS A SHARES
      * *V.US/USD*
      */
-    VUSUSD='VUSUSD',
+    vususd='vususd',
 
     /**
      * ### Vale S.A.
      * *VALE.US/USD*
      */
-    VALEUSUSD='VALEUSUSD',
+    valeususd='valeususd',
 
     /**
      * ### Vanguard FTSE Developed Markets ETF
      * *VEA.US/USD*
      */
-    VEAUSUSD='VEAUSUSD',
+    veaususd='veaususd',
 
     /**
      * ### VF CORP
      * *VFC.US/USD*
      */
-    VFCUSUSD='VFCUSUSD',
+    vfcususd='vfcususd',
 
     /**
      * ### Vanguard FTSE Europe ETF
      * *VGK.US/USD*
      */
-    VGKUSUSD='VGKUSUSD',
+    vgkususd='vgkususd',
 
     /**
      * ### Veolia Environnement SA
      * *VIE.FR/EUR*
      */
-    VIEFREUR='VIEFREUR',
+    viefreur='viefreur',
 
     /**
      * ### Vivendi SA
      * *VIV.FR/EUR*
      */
-    VIVFREUR='VIVFREUR',
+    vivfreur='vivfreur',
 
     /**
      * ### Vallourec SA
      * *VK.FR/EUR*
      */
-    VKFREUR='VKFREUR',
+    vkfreur='vkfreur',
 
     /**
      * ### VALERO ENERGY CORP
      * *VLO.US/USD*
      */
-    VLOUSUSD='VLOUSUSD',
+    vloususd='vloususd',
 
     /**
      * ### VULCAN MATERIALS CO
      * *VMC.US/USD*
      */
-    VMCUSUSD='VMCUSUSD',
+    vmcususd='vmcususd',
 
     /**
      * ### Vonovia SE
      * *VNA.DE/EUR*
      */
-    VNADEEUR='VNADEEUR',
+    vnadeeur='vnadeeur',
 
     /**
      * ### Vanguard REIT ETF
      * *VNQ.US/USD*
      */
-    VNQUSUSD='VNQUSUSD',
+    vnqususd='vnqususd',
 
     /**
      * ### Vodafone Group PLC
      * *VOD.GB/GBX*
      */
-    VODGBGBX='VODGBGBX',
+    vodgbgbx='vodgbgbx',
 
     /**
      * ### Voestalpine AG
      * *VOE.AT/EUR*
      */
-    VOEATEUR='VOEATEUR',
+    voeateur='voeateur',
 
     /**
      * ### Volvo AB
      * *VOLVB.SE/SEK*
      */
-    VOLVBSESEK='VOLVBSESEK',
+    volvbsesek='volvbsesek',
 
     /**
      * ### Volkswagen AG
      * *VOW3.DE/EUR*
      */
-    VOW3DEEUR='VOW3DEEUR',
+    vow3deeur='vow3deeur',
 
     /**
      * ### Koninklijke Vopak NV
      * *VPK.NL/EUR*
      */
-    VPKNLEUR='VPKNLEUR',
+    vpknleur='vpknleur',
 
     /**
      * ### VERTEX PHARMACEUTICALS INC
      * *VRTX.US/USD*
      */
-    VRTXUSUSD='VRTXUSUSD',
+    vrtxususd='vrtxususd',
 
     /**
      * ### Vestas Wind Systems A/S
      * *VWS.DK/DKK*
      */
-    VWSDKDKK='VWSDKDKK',
+    vwsdkdkk='vwsdkdkk',
 
     /**
      * ### iPath S&P 500 VIX ST Futures ETN
      * *VXX.US/USD*
      */
-    VXXUSUSD='VXXUSUSD',
+    vxxususd='vxxususd',
 
     /**
      * ### VERIZON COMMUNICATIONS INC
      * *VZ.US/USD*
      */
-    VZUSUSD='VZUSUSD',
+    vzususd='vzususd',
 
     /**
      * ### WALGREENS BOOTS ALLIANCE INC
      * *WBA.US/USD*
      */
-    WBAUSUSD='WBAUSUSD',
+    wbaususd='wbaususd',
 
     /**
      * ### WESTERN DIGITAL CORP
      * *WDC.US/USD*
      */
-    WDCUSUSD='WDCUSUSD',
+    wdcususd='wdcususd',
 
     /**
      * ### Weir Group PLC/The
      * *WEIR.GB/GBX*
      */
-    WEIRGBGBX='WEIRGBGBX',
+    weirgbgbx='weirgbgbx',
 
     /**
      * ### WELLS FARGO & CO
      * *WFC.US/USD*
      */
-    WFCUSUSD='WFCUSUSD',
+    wfcususd='wfcususd',
 
     /**
      * ### WHIRLPOOL CORP
      * *WHR.US/USD*
      */
-    WHRUSUSD='WHRUSUSD',
+    whrususd='whrususd',
 
     /**
      * ### Wolters Kluwer NV
      * *WKL.NL/EUR*
      */
-    WKLNLEUR='WKLNLEUR',
+    wklnleur='wklnleur',
 
     /**
      * ### WAL-MART STORES INC
      * *WMT.US/USD*
      */
-    WMTUSUSD='WMTUSUSD',
+    wmtususd='wmtususd',
 
     /**
      * ### Wolseley PLC
      * *WOS.GB/GBX*
      */
-    WOSGBGBX='WOSGBGBX',
+    wosgbgbx='wosgbgbx',
 
     /**
      * ### WPP PLC
      * *WPP.GB/GBX*
      */
-    WPPGBGBX='WPPGBGBX',
+    wppgbgbx='wppgbgbx',
 
     /**
      * ### Whitbread PLC
      * *WTB.GB/GBX*
      */
-    WTBGBGBX='WTBGBGBX',
+    wtbgbgbx='wtbgbgbx',
 
     /**
      * ### WYNN RESORTS LTD
      * *WYNN.US/USD*
      */
-    WYNNUSUSD='WYNNUSUSD',
+    wynnususd='wynnususd',
 
     /**
      * ### UNITED STATES STEEL CORP
      * *X.US/USD*
      */
-    XUSUSD='XUSUSD',
+    xususd='xususd',
 
     /**
      * ### Spot silver
      * *XAG/USD*
      */
-    XAGUSD='XAGUSD',
+    xagusd='xagusd',
 
     /**
      * ### Spot gold
      * *XAU/USD*
      */
-    XAUUSD='XAUUSD',
+    xauusd='xauusd',
 
     /**
      * ### Energy Select Sector SPDR Fund
      * *XLE.US/USD*
      */
-    XLEUSUSD='XLEUSUSD',
+    xleususd='xleususd',
 
     /**
      * ### Financial Select Sector SPDR Fund
      * *XLF.US/USD*
      */
-    XLFUSUSD='XLFUSUSD',
+    xlfususd='xlfususd',
 
     /**
      * ### Industrial Select Sector SPDR Fund
      * *XLI.US/USD*
      */
-    XLIUSUSD='XLIUSUSD',
+    xliususd='xliususd',
 
     /**
      * ### Technology Select Sector SPDR Fund
      * *XLK.US/USD*
      */
-    XLKUSUSD='XLKUSUSD',
+    xlkususd='xlkususd',
 
     /**
      * ### XILINX INC
      * *XLNX.US/USD*
      */
-    XLNXUSUSD='XLNXUSUSD',
+    xlnxususd='xlnxususd',
 
     /**
      * ### Consumer Staples Select Sector SPDR Fund
      * *XLP.US/USD*
      */
-    XLPUSUSD='XLPUSUSD',
+    xlpususd='xlpususd',
 
     /**
      * ### Utilities Select Sector SPDR Fund
      * *XLU.US/USD*
      */
-    XLUUSUSD='XLUUSUSD',
+    xluususd='xluususd',
 
     /**
      * ### Health Care Select Sector SPDR Fund
      * *XLV.US/USD*
      */
-    XLVUSUSD='XLVUSUSD',
+    xlvususd='xlvususd',
 
     /**
      * ### Consumer Discretionary Select Sector SPDR Fund
      * *XLY.US/USD*
      */
-    XLYUSUSD='XLYUSUSD',
+    xlyususd='xlyususd',
 
     /**
      * ### EXXON MOBIL CORP
      * *XOM.US/USD*
      */
-    XOMUSUSD='XOMUSUSD',
+    xomususd='xomususd',
 
     /**
      * ### SPDR S&P Oil & Gas Explor & Prodtn ETF
      * *XOP.US/USD*
      */
-    XOPUSUSD='XOPUSUSD',
+    xopususd='xopususd',
 
     /**
      * ### YUM! BRANDS INC
      * *YUM.US/USD*
      */
-    YUMUSUSD='YUMUSUSD',
+    yumususd='yumususd',
 
     /**
      * ### South African Rand vs Japanese Yen
      * *ZAR/JPY*
      */
-    ZARJPY='ZARJPY',
+    zarjpy='zarjpy',
 
     /**
      * ### ZIMMER BIOMET HOLDINGS INC
      * *ZBH.US/USD*
      */
-    ZBHUSUSD='ZBHUSUSD',
+    zbhususd='zbhususd',
 
     /**
      * ### Zurich Insurance Group AG
      * *ZURN.CH/CHF*
      */
-    ZURNCHCHF='ZURNCHCHF',
+    zurnchchf='zurnchchf',
 }
 export type InstrumentType = keyof typeof Instrument;

@@ -1,5 +1,5 @@
 const input = {
-  instrument: 'EURUSD',
+  instrument: 'eurusd',
   startDate: '1970-01-01',
   endDate: '2019-02-02',
   timeframe: 'tick'

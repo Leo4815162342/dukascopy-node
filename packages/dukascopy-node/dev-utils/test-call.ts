@@ -4,7 +4,7 @@ import { getHistoricRates, Config } from '../src';
 (async () => {
   try {
     const config: Config = {
-      instrument: 'BTCUSD',
+      instrument: 'btcusd',
       dates: { from: '2019-01-01', to: '2019-02-01' },
       priceType: 'bid',
       timeframe: 'm1',

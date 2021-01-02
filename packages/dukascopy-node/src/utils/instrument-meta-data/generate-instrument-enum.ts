@@ -2,6 +2,7 @@
 import fs from 'fs';
 import { promisify } from 'util';
 import { MetaDataResponse } from './generate-data.types';
+import { generateIdName } from './generate-id-name';
 const saveFile = promisify(fs.writeFile);
 
 export function generateInstrumentEnum(
@@ -11,7 +12,7 @@ export function generateInstrumentEnum(
   const enumKeys = Object.keys(instruments).map(inst => {
     const { name, description, historical_filename } = instruments[inst];
 
-    const cleanName = historical_filename || inst.replace(/\W/g, '');
+    const cleanName = generateIdName(historical_filename, inst);
     const key = /^\d/.test(cleanName) ? `'${cleanName}'` : cleanName;
 
     const line = `

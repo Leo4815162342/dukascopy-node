@@ -2,6 +2,7 @@
 import fs from 'fs';
 import { promisify } from 'util';
 import { MetaDataResponse } from './generate-data.types';
+import { generateIdName } from './generate-id-name';
 const saveFile = promisify(fs.writeFile);
 
 interface GroupData {
@@ -41,7 +42,7 @@ export function generateInstrumentGroupData(
       name: renameMap[metadata.groups[group].id] || metadata.groups[group].title,
       instruments: metadata.groups[group].instruments
         .filter(inst => !!metadata.instruments[inst])
-        .map(inst => metadata.instruments[inst].historical_filename || inst.replace(/\W/g, ''))
+        .map(inst => generateIdName(metadata.instruments[inst].historical_filename, inst))
     });
 
     return all;
