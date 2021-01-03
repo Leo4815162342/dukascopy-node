@@ -8,7 +8,7 @@
 </p>
 
 
-> Download historical market prices for 700+ instruments (Stocks / Commodities/ Bonds / Currencies / CFDs / ETFs / Crypto) via Node.js
+> Download historical market prices for 700+ instruments (Stocks / Commodities / Bonds / Currencies / CFDs / ETFs / Crypto) via Node.js
 
 ## Installation
 
