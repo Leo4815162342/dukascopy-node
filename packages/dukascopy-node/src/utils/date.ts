@@ -86,4 +86,32 @@ function getDateFromUrl(url: string): Date {
   return utcDate;
 }
 
-export { getUTCDateFromString, getYMDH, getStartOfUtc, getIsCurrentObj, getDateFromUrl };
+function getFormattedDate(
+  input: Date | string | number,
+  options?: Intl.DateTimeFormatOptions
+): string {
+  const date = typeof input === 'string' || typeof input === 'number' ? new Date(input) : input;
+
+  const opts = {
+    ...{
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      timeZone: 'UTC'
+    },
+    ...(options || {})
+  };
+
+  const formatted = new Intl.DateTimeFormat('en-US', opts).format(date);
+
+  return formatted;
+}
+
+export {
+  getUTCDateFromString,
+  getYMDH,
+  getStartOfUtc,
+  getIsCurrentObj,
+  getDateFromUrl,
+  getFormattedDate
+};

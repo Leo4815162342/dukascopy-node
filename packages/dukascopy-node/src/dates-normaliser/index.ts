@@ -26,12 +26,26 @@ export function normaliseDates({
     .map(d => getUTCDateFromString(d) || new Date())
     .sort((a, b) => +a - +b);
 
-  const { minStartDate, minStartDateDaily } = instrumentMetaData[instrument];
+  const {
+    startHourForTicks,
+    startDayForMinuteCandles,
+    startMonthForHourlyCandles,
+    startYearForDailyCandles
+  } = instrumentMetaData[instrument];
 
-  const minIsoDate =
-    timeframe === Timeframe.d1 || timeframe === Timeframe.mn1 ? minStartDateDaily : minStartDate;
+  let minFromIsoDate = startHourForTicks;
 
-  const minFromIsoDate = `${minIsoDate}:00:00:00.000Z`;
+  if (timeframe === Timeframe.m1 || timeframe === Timeframe.m15 || timeframe === Timeframe.m30) {
+    minFromIsoDate = startDayForMinuteCandles;
+  }
+
+  if (timeframe === Timeframe.h1) {
+    minFromIsoDate = startMonthForHourlyCandles;
+  }
+
+  if (timeframe === Timeframe.d1 || timeframe === Timeframe.mn1) {
+    minFromIsoDate = startYearForDailyCandles;
+  }
 
   let minFromDate = new Date(minFromIsoDate);
   let maxToDate = new Date();

@@ -24,7 +24,10 @@ export async function getHistoricRates(config: ConfigCsvItem): Promise<string>;
 export async function getHistoricRates(config: Config): Promise<Output>;
 
 export async function getHistoricRates(config: Config): Promise<Output> {
-  const mergedConfig = { ...defaultConfig, ...config };
+  const mergedConfig = {
+    ...defaultConfig,
+    ...config
+  };
 
   const { isValid, validationErrors } = validateConfig(mergedConfig);
 

@@ -9,7 +9,8 @@
     "strict": true,
     "target": "es2017",
     "esModuleInterop": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "resolveJsonModule": true
   },
   "exclude": ["node_modules", "build", "bin", "lib"]
 }

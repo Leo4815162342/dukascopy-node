@@ -1,6 +1,6 @@
 {
   "name": "dukascopy-node",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "description": "Node.js library for downloading historical market data",
   "main": "lib/index.js",
   "module": "lib/index.es.js",
@@ -17,6 +17,10 @@
     "precommit": "lint-staged",
     "prepush": "yarn type-check",
     "build-instruments": "yarn ts-node dev-utils/generate-instruments.ts",
+    "gen:init-meta": "ts-node src/utils/instrument-meta-data/generate-data.ts",
+    "gen:fetch-start-dates": "mode=fetch ts-node src/utils/instrument-meta-data/start-dates.ts",
+    "gen:enrich-start-dates": "mode=enrich ts-node src/utils/instrument-meta-data/start-dates.ts",
+    "gen:instruments-md": "ts-node src/utils/instrument-meta-data/generate-instrument-md.ts",
     "test:call": "yarn ts-node dev-utils/test-call.ts"
   },
   "author": "leonid.pyrlia",
@@ -44,6 +48,7 @@
     "python-struct": "^1.0.6"
   },
   "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0",
     "@types/node-fetch": "^2.1.7",
     "jest-date-mock": "^1.0.8",
     "lint-staged": "^10.5.3"
