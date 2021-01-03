@@ -8,7 +8,7 @@
 </p>
 
 
-> Historical market prices for 700+ instruments (Stocks / Commodities/ Currencies / CFDs / ETFs / Crypto)
+> Historical market prices for 700+ instruments (Stocks / Commodities/ Bonds /Currencies / CFDs / ETFs / Crypto)
 
 ## Installation
 
@@ -24,22 +24,9 @@ npm install dukascopy-node --save
 yarn add dukascopy-node
 ```
 
-## Usage
 
-**[Try it live](https://runkit.com/embed/of4ho2xv8rvv)**
 
-#### import/require:
-
-```javascript
-// ES6 Import
-import { getHistoricRates } from 'dukascopy-node';
-
-// CommonJS
-const { getHistoricRates } = require('dukascopy-node');
-```
-
-#### calling with `async/await`:
-
+## Usage ([try it live](https://runkit.com/embed/of4ho2xv8rvv))
 
 ```javascript
 const { getHistoricRates } = require('dukascopy-node');
@@ -62,217 +49,23 @@ const { getHistoricRates } = require('dukascopy-node');
   }
 })();
 ```
-#### calling with `.then()`:
 
+## Config object
 
-```javascript
-const { getHistoricRates } = require('dukascopy-node');
-
-getHistoricRates({
-  instrument: 'btcusd',
-  dates: {
-    from: '2018-01-01',
-    to: '2019-01-01'
-  },
-  timeframe: 'd1',
-  format: 'json'
-})
-  .then(data => {
-    console.log(data);
-  })
-  .catch(error => {
-    console.log('error', error);
-  });
-```
-
-***
-
-<h2>Output</h2>
-
-### timeframe: `m1` | `m15`| `m30` | `h1`| `d1` | `mn1`
-
-### format: `json`
-
-```json
-    [
-      {
-        "timestamp": 1218153600000,
-        "open": 1.53117,
-        "high": 1.53128,
-        "low": 1.52343,
-        "close": 1.52458,
-        "volume": 28078.0156
-      }
-    ]
-```
-
-### format: `array`
-
-```javascript
-    [
-      // timestamp,   open,    high,    low,     close,   volume
-      [1218153600000, 1.53117, 1.53128, 1.52343, 1.52458, 28078.0156],
-      [1218157200000, 1.52428, 1.52497, 1.51920, 1.52292, 24342.3906],
-      [1218160800000, 1.52289, 1.52449, 1.52029, 1.52325, 24014.8496],
-    ]
-```
-
-
-### format: `csv`
-
-```csv
-timestamp,open,high,low,close,volume
-1218153600000,1.53117,1.53128,1.52343,1.52458,28078.0156
-1218157200000,1.52428,1.52497,1.51920,1.52292,24342.3906
-1218160800000,1.52289,1.52449,1.52029,1.52325,24014.8496
-```
-
-***
-
-### timeframe: `tick`
-
-### format: `json`
-
-```json
-    [
-      {
-        "timestamp": 1218153600033,
-        "askPrice": 1.53137,
-        "bidPrice": 1.53117,
-        "askVolume": 9.3,
-        "bidVolume": 9.6,
-      }
-    ]
-```
-
-### format: `array`
-
-```javascript
-    [
-      // timestamp, askPrice, bidPrice, askVolume, bidVolume
-      [1218153600033, 1.53137, 1.53117, 9.3, 9.6],
-      [1218153600306, 1.53133, 1.53113, 12.1, 2.4],
-      [1218153600445, 1.53127, 1.53112, 6, 8.4],
-    ]
-```
-
-### format: `csv`
-
-```csv
-timestamp,askPrice,bidPrice,askVolume,bidVolume
-1218153600033,1.53137,1.53117,9.3,9.6
-1218153600306,1.53133,1.53113,12.1,2.4
-1218153600445,1.53127,1.53112,6,8.4
-```
-
-***
-
-<h2>Config parameters:</h2>
-
-#### **`instrument`**
-
-- Type: `String`
-- Description: an id of the trading instrument
-- Supported values: [see list](#instruments)
-- Required: true
-
-#### **`dates`**
-
-- Type: `Object`
-- Description: an object with a date range
-- Required: true
-
-#### **`dates.from`**
-
-- Type: `String`
-- Description: UTC-based date string representing start of the time range
-- Accepted formats:
-
-  - `yyyy-MM-dd`
-  - `yyyy-MM-dd HH:mm`
-  - ISO string `1970-01-01T00:00:00.000Z`
-
-- Required: true
-
-#### **`dates.to`**
-
-- Type: `String`
-- Description: UTC-based date string representing end of time range (not inclusive)
-- Accepted formats:
-
-  - `yyyy-MM-dd`
-  - `yyyy-MM-dd HH:mm`
-  - ISO string `1970-01-01T00:00:00.000Z`
-
-- Required: true
-
-#### **`timeframe`**
-
-- Type: `String`
-- Description: timeframe aggregation of OHLC (open, high, low, close) data
-- Supported values:
-
-  - `tick` (every single tick/price change)
-  - `m1` (1 minute)
-  - `m15` (15 minutes)
-  - `m30` (30 minutes)
-  - `h1` (1 hour)
-  - `d1` (1 day)
-  - `mn1` (1 month)
-
-- Required: false
-- Default: `d1`
-
-#### **`priceType`**
-
-- Type: `String`
-- Description: type of price (offer side)
-- Supported values: `bid`, `ask`
-- Required: false
-- Default: `bid`
-
-#### **`format`**
-
-- Type: `String`
-- Description: format of the output
-- Supported values: `json`, `array`, `csv`
-- Required: false
-- Default: `array`
-
-#### **`utcOffset`**
-
-- Type: `Number`
-- Description: UTC offset in minutes
-- Required: false
-- Default: `0`
-
-#### **`volumes`**
-
-- Type: `Boolean`
-- Description: a flag indicating whether the output should contain volume data
-- Required: false
-- Default: `true`
-
-#### **`ignoreFlats`**
-
-- Type: `Boolean`
-- Description: a flag indicating whether the output should contain timeframe entries with 0 (flat) volume. Those mainly come from non-trading days, such as weekends or bank holidays.
-- Required: false
-- Default: `true`
-
-#### **`batchSize`**
-
-- Type: `Number`
-- Description: number of requests per batch. We don't want to send bunch of requests at the same time, we want to split them in groups (batches) and fetch them one by one with pause in between (see `pauseBetweenBatchesMs`). Main purpose - not to fall under rate limiting restrictions.
-- Required: false
-- Default: `10`
-
-#### **`pauseBetweenBatchesMs`**
-
-- Type: `Number`
-- Description: pause between downloading batches (in milliseconds)
-- Required: false
-- Default: `1000`
+|Name|Type|Required|Default|Description|
+|-|-|-|-|-|
+|`instrument`|String|true||An id of the trading instrument. Supported values: [see list](#instruments)|
+|`dates`|Object|true||An object with a date range|
+|`dates.from`|String|true||UTC-based date string representing start of the time range Accepted formats:<ul><li>`yyyy-MM-dd`</li> <li>`yyyy-MM-dd HH:mm`</li><li>ISO string `1970-01-01T00:00:00.000Z`</li></ul>|
+|`dates.to`|String|true||UTC-based date string representing end of the time range. Accepted formats:<ul><li>`yyyy-MM-dd`</li> <li>`yyyy-MM-dd HH:mm`</li><li>ISO string `1970-01-01T00:00:00.000Z`</li></ul>|`|
+|`timeframe`|String|false|`d1`|Granularity of aggregation of OHLC (open, high, low, close) data. Supported values:<ul><li>`tick` (every single tick/price change)</li><li>`m1` (1 minute)</li><li>`m15` (15 minutes)</li><li>`m30` (30 minutes)</li><li>`h1` (1 hour)</li><li>`d1` (1 day)</li><li>`mn1` (1 month)</li></ul>|
+|`priceType`|String|false|`bid`|Type of price (offer side). Supported values:<ul><li>`bid`</li><li>`ask`</li></ul>|
+|`format`|String|false|`array`|Format of the generated output. Supported values:<ul><li>`array`</li><li>`json`</li><li>`csv`</li></ul>|
+|`utcOffset`|Number|false|`0`|UTC offset in minutes.|
+|`volumes`|Boolean|false|`true`|A flag indicating whether the output should contain volume data|
+|`ignoreFlats`|Boolean|false|`true`|A flag indicating whether the output should contain timeframe entries with 0 (flat) volume. Those mainly come from non-trading days, such as weekends or bank holidays.|
+|`batchSize`|Number|false|`10`|Number of requests sent to data storage per batch. We don't want to send bunch of requests at the same time, we want to split them in groups (batches) and fetch them one by one with pause in between (see `pauseBetweenBatchesMs`). Main purpose - not to fall under rate limiting restrictions.|
+|`pauseBetweenBatchesMs`|Number|false|`1000`|Pause between downloading batches (in milliseconds).|
 
 ***
 
