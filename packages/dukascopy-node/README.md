@@ -8,7 +8,7 @@
 </p>
 
 
-> Historical market prices for 700+ instruments (Stocks / Commodities/ Bonds /Currencies / CFDs / ETFs / Crypto)
+> Historical market prices for 700+ instruments (Stocks / Commodities/ Bonds / Currencies / CFDs / ETFs / Crypto)
 
 ## Installation
 
