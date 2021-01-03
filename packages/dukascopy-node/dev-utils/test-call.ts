@@ -4,10 +4,11 @@ import { getHistoricRates, Config } from '../src';
 (async () => {
   try {
     const config: Config = {
-      instrument: 'btcusd',
-      dates: { from: '2019-01-01', to: '2019-02-01' },
+      instrument: 'avgbgbx',
+      dates: { from: '2016-09-06', to: '2017-09-06' },
       priceType: 'bid',
-      timeframe: 'm1',
+      timeframe: 'd1',
+      format: 'json',
       volumes: true,
       utcOffset: 0,
       ignoreFlats: false
