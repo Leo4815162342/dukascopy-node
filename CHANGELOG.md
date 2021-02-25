@@ -1,3 +1,7 @@
+## [1.3.2] - 2021-02-25
+
+- Additional checks for empty binary files
+
 ## [1.3.1] - 2020-06-06
 
 ### Fixed
