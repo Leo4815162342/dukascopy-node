@@ -76,6 +76,10 @@ export function formatOutput({
   timeframe: TimeframeType;
   format: FormatType;
 }): Output {
+  if (processedData.length === 0) {
+    return [];
+  }
+
   const bodyHeaders = timeframe === Timeframe.tick ? tickHeaders : headers;
 
   if (format === Format.json) {

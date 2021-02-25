@@ -10,7 +10,10 @@ import {
   generateUrls,
   BufferFetcher,
   processData,
-  formatOutput
+  formatOutput,
+  JsonItem,
+  JsonItemTick,
+  ArrayTickItem
 } from 'dukascopy-node';
 import { printDivider, printHeader, printSuccess, printErrors } from './printer';
 
@@ -69,24 +72,30 @@ const filePath = resolve(folderPath, fileName);
 
       const bufferredData = await bufferFetcher.fetch(urls);
 
-      const processedData = processData({
-        instrument,
-        requestedTimeframe: timeframe,
-        bufferObjects: bufferredData,
-        priceType,
-        volumes,
-        ignoreFlats
-      });
+      let savePayload: string | JsonItem[] | JsonItemTick[] | ArrayTickItem[];
 
-      const [startDateMs, endDateMs] = [+startDate, +endDate];
+      if (bufferredData.length) {
+        const processedData = processData({
+          instrument,
+          requestedTimeframe: timeframe,
+          bufferObjects: bufferredData,
+          priceType,
+          volumes,
+          ignoreFlats
+        });
 
-      const filteredData = processedData.filter(
-        ([timestamp]) => timestamp && timestamp >= startDateMs && timestamp < endDateMs
-      );
+        const [startDateMs, endDateMs] = [+startDate, +endDate];
 
-      const formatted = formatOutput({ processedData: filteredData, timeframe, format });
+        const filteredData = processedData.filter(
+          ([timestamp]) => timestamp && timestamp >= startDateMs && timestamp < endDateMs
+        );
 
-      const savePayload = format === 'csv' ? formatted : JSON.stringify(formatted, null, 2);
+        const formatted = formatOutput({ processedData: filteredData, timeframe, format });
+
+        savePayload = format === 'csv' ? formatted : JSON.stringify(formatted, null, 2);
+      } else {
+        savePayload = format === 'csv' ? '' : JSON.stringify([]);
+      }
 
       await outputFile(filePath, savePayload);
 
