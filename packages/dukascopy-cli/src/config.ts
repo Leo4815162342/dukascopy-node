@@ -44,7 +44,9 @@ export const cliConfig: CliConfig = {
   silent: options.silent,
   format: options.format,
   batchSize: options.batchSize,
-  pauseBetweenBatchesMs: options.batchPause
+  pauseBetweenBatchesMs: options.batchPause,
+  useCache: options.useCache,
+  cacheFolderPath: options.cacheFolderPath
 };
 
 const cliValidationSchema = {
