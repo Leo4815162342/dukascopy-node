@@ -8,6 +8,7 @@ import {
   defaultConfig
 } from './config';
 
+import { resolve } from 'path';
 import { validateConfig } from './config-validator';
 import { normaliseDates } from './dates-normaliser';
 import { generateUrls } from './url-generator';
@@ -45,7 +46,9 @@ export async function getHistoricRates(config: Config): Promise<Output> {
     ignoreFlats,
     format,
     batchSize,
-    pauseBetweenBatchesMs
+    pauseBetweenBatchesMs,
+    useCache,
+    cacheFolderPath
   } = mergedConfig;
 
   const [startDate, endDate] = normaliseDates({
@@ -59,6 +62,10 @@ export async function getHistoricRates(config: Config): Promise<Output> {
   const urls = generateUrls({ instrument, timeframe, priceType, startDate, endDate });
 
   const bufferFetcher = new BufferFetcher({ batchSize, pauseBetweenBatchesMs });
+
+  if (useCache) {
+    await bufferFetcher.initCache(cacheFolderPath || resolve(process.cwd(), '.dukascopy-cache'));
+  }
 
   const bufferredData = await bufferFetcher.fetch(urls);
 

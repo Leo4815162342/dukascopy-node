@@ -29,5 +29,9 @@
       "pre-commit": "lerna run --concurrency 1 --stream precommit --since master --exclude-dependents",
       "pre-push": "lerna run --concurrency 1 --stream prepush --since master --exclude-dependents"
     }
+  },
+  "dependencies": {
+    "@types/fs-extra": "^9.0.7",
+    "fs-extra": "^9.1.0"
   }
 }

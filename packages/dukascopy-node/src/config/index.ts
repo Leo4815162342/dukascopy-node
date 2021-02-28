@@ -18,6 +18,8 @@ export interface Config {
   format?: FormatType;
   batchSize?: number;
   pauseBetweenBatchesMs?: number;
+  useCache?: boolean;
+  cacheFolderPath?: string;
 }
 
 export type DefaultConfig = Required<Pick<Config, OptionalKeys<Config>>>;
@@ -30,7 +32,9 @@ export const defaultConfig: DefaultConfig = {
   ignoreFlats: true,
   format: Format.array,
   batchSize: 10,
-  pauseBetweenBatchesMs: 1000
+  pauseBetweenBatchesMs: 1000,
+  useCache: false,
+  cacheFolderPath: ''
 };
 
 export interface ConfigArrayTickItem extends Config {

@@ -3,6 +3,7 @@ bin
 download
 .vscode
 .cache/
+.dukascopy-cache
 ### Node ###
 # Logs
 logs
