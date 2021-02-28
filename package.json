@@ -9,6 +9,7 @@
     "@rollup/plugin-node-resolve": "^11.0.1",
     "@rollup/plugin-typescript": "^8.1.0",
     "@types/jest": "^26.0.19",
+    "@types/fs-extra": "^9.0.7",
     "@typescript-eslint/eslint-plugin": "^4.11.0",
     "@typescript-eslint/parser": "^4.11.0",
     "eslint": "^7.16.0",
@@ -31,7 +32,6 @@
     }
   },
   "dependencies": {
-    "@types/fs-extra": "^9.0.7",
     "fs-extra": "^9.1.0"
   }
 }
