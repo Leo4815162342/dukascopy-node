@@ -14,16 +14,19 @@ export class BufferFetcher {
   cacheManifestPath?: string;
   cacheManifest?: Record<string, boolean>;
   isCacheUsed: boolean;
+  fetcherFn;
 
   constructor({
     batchSize = 10,
     pauseBetweenBatchesMs = 1000,
-    notifyOnItemFetchFn
+    notifyOnItemFetchFn,
+    fetcherFn
   }: BufferFetcherInput = {}) {
     this.batchSize = batchSize;
     this.pauseBetweenBatchesMs = pauseBetweenBatchesMs;
     this.notifyOnItemFetchFn = notifyOnItemFetchFn;
     this.isCacheUsed = false;
+    this.fetcherFn = fetcherFn;
   }
 
   public async initCache(cacheFolderPath: string): Promise<void> {
@@ -53,8 +56,7 @@ export class BufferFetcher {
             console.log('Fetching from cache', cacheKey);
             buffer = await readFile(cacheItemPath);
           } else {
-            const data = await fetch(url);
-            buffer = await data.buffer();
+            buffer = await this.fetchBuffer(url);
 
             if (buffer.length) {
               // eslint-disable-next-line no-console
@@ -70,10 +72,7 @@ export class BufferFetcher {
             }
           }
         } else {
-          // eslint-disable-next-line no-console
-          console.log('Fetching from network', url);
-          const data = await fetch(url);
-          buffer = await data.buffer();
+          buffer = await this.fetchBuffer(url);
         }
 
         this.notifyOnItemFetchFn && this.notifyOnItemFetchFn(url);
@@ -98,7 +97,17 @@ export class BufferFetcher {
     const bufferObjects = ([] as BufferObject[])
       .concat(...fetchedObjects)
       .filter(({ buffer }) => buffer.length > 0);
-
     return bufferObjects;
+  }
+
+  private async fetchBuffer(url: string): Promise<Buffer> {
+    if (this.fetcherFn) {
+      // eslint-disable-next-line no-console
+      console.log('Fetching via custom function', url);
+      return this.fetcherFn(url);
+    }
+
+    const data = await fetch(url);
+    return data.buffer();
   }
 }
