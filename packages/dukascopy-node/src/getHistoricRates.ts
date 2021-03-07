@@ -8,7 +8,6 @@ import {
   defaultConfig
 } from './config';
 
-import { resolve } from 'path';
 import { validateConfig } from './config-validator';
 import { normaliseDates } from './dates-normaliser';
 import { generateUrls } from './url-generator';
@@ -16,6 +15,7 @@ import { BufferFetcher } from './buffer-fetcher';
 import { processData } from './processor';
 import { formatOutput } from './output-formatter';
 import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
+import { CacheManager } from './cache-manager';
 
 export async function getHistoricRates(config: ConfigArrayItem): Promise<ArrayItem[]>;
 export async function getHistoricRates(config: ConfigArrayTickItem): Promise<ArrayTickItem[]>;
@@ -61,11 +61,11 @@ export async function getHistoricRates(config: Config): Promise<Output> {
 
   const urls = generateUrls({ instrument, timeframe, priceType, startDate, endDate });
 
-  const bufferFetcher = new BufferFetcher({ batchSize, pauseBetweenBatchesMs });
-
-  if (useCache) {
-    await bufferFetcher.initCache(cacheFolderPath || resolve(process.cwd(), '.dukascopy-cache'));
-  }
+  const bufferFetcher = new BufferFetcher({
+    batchSize,
+    pauseBetweenBatchesMs,
+    cacheManager: useCache ? new CacheManager(cacheFolderPath) : undefined
+  });
 
   const bufferredData = await bufferFetcher.fetch(urls);
 

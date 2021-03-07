@@ -1,3 +1,5 @@
+import { CacheManagerBase } from '../cache-manager';
+
 export interface BufferObject {
   url: string;
   buffer: Buffer;
@@ -10,4 +12,5 @@ export interface BufferFetcherInput {
   pauseBetweenBatchesMs?: number; // TODO: use exponential backoff
   notifyOnItemFetchFn?: NotifyFn;
   fetcherFn?: (url: string) => Promise<Buffer>;
+  cacheManager?: CacheManagerBase;
 }
