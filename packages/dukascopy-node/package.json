@@ -21,7 +21,7 @@
     "gen:fetch-start-dates": "mode=fetch ts-node src/utils/instrument-meta-data/start-dates.ts",
     "gen:enrich-start-dates": "mode=enrich ts-node src/utils/instrument-meta-data/start-dates.ts",
     "gen:instruments-md": "ts-node src/utils/instrument-meta-data/generate-instrument-md.ts",
-    "test:call": "yarn ts-node dev-utils/test-call.ts"
+    "test:call": "node -r ts-node/register dev-utils/test-call.ts"
   },
   "author": "leonid.pyrlia",
   "license": "MIT",

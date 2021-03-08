@@ -5,14 +5,14 @@ import { getHistoricRates, Config } from '../src';
   try {
     const config: Config = {
       instrument: 'eurusd',
-      dates: { from: '2020-06-01', to: '2020-07-01' },
+      dates: { from: '2019-06-01', to: '2019-07-01' },
       priceType: 'bid',
       timeframe: 'd1',
       format: 'json',
       volumes: true,
       utcOffset: 0,
       ignoreFlats: false,
-      useCache: true
+      useCache: false
     };
     console.log('fetching started');
     console.log(JSON.stringify(config));

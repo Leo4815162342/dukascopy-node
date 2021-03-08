@@ -17,8 +17,8 @@ export class CacheManager implements CacheManagerBase {
   cacheManifestPath: string;
   cacheFolderPath: string;
 
-  constructor(cacheFolderPath = resolve(process.cwd(), '.dukascopy-cache')) {
-    this.cacheFolderPath = cacheFolderPath;
+  constructor(cacheFolderPath: string) {
+    this.cacheFolderPath = cacheFolderPath || resolve(process.cwd(), '.dukascopy-cache');
     this.cacheManifestPath = resolve(cacheFolderPath, 'manifest.json');
     ensureFileSync(this.cacheManifestPath);
     const manifestData =
