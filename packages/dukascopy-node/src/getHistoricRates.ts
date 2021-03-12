@@ -64,7 +64,7 @@ export async function getHistoricRates(config: Config): Promise<Output> {
   const bufferFetcher = new BufferFetcher({
     batchSize,
     pauseBetweenBatchesMs,
-    cacheManager: useCache ? new CacheManager(cacheFolderPath) : undefined
+    cacheManager: useCache ? new CacheManager({ cacheFolderPath }) : undefined
   });
 
   const bufferredData = await bufferFetcher.fetch(urls);

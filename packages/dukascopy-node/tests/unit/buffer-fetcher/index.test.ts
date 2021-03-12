@@ -1,9 +1,8 @@
 import { resolve } from 'path';
-import { remove, readdir, readJSON, readFile } from 'fs-extra';
+import { remove } from 'fs-extra';
 import { BufferFetcher } from '../../../src/buffer-fetcher';
 import { BufferObject } from '../../../src/buffer-fetcher/types';
 import { CacheManager } from '../../../src/cache-manager';
-import { URL_ROOT } from '../../../src';
 
 const urls = [
   'https://datafeed.dukascopy.com/datafeed/EURUSD/2019/01/04/BID_candles_min_1.bi5',
@@ -68,54 +67,59 @@ describe('Buffer fetcher', () => {
 });
 
 describe('Buffer fetcher with file cache', () => {
+  const cacheManager = new CacheManager({ cacheFolderPath, cacheKeyFormatter: item => item });
+
+  const readSpy = jest.spyOn(cacheManager, 'readItemFromCache');
+  const writeSpy = jest.spyOn(cacheManager, 'writeItemsToCache');
+
   const buffetFetcher = new BufferFetcher({
     fetcherFn: fileSystemFetcherFn,
     pauseBetweenBatchesMs: 0,
-    cacheManager: new CacheManager(cacheFolderPath)
+    cacheManager
   });
 
-  it('Creates a cache folder and manifest', async () => {
-    const folderContent = await readdir(cacheFolderPath);
-    expect(folderContent).toEqual(['manifest.json']);
-  });
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-ignore
+  const fetchSpy = jest.spyOn(buffetFetcher, 'fetchBuffer');
 
-  it('Creates correct cache folder structure and manifest', async () => {
+  it('Makes correct number of network calls', async () => {
     await buffetFetcher.fetch(urls);
-    expect(await readdir(cacheFolderPath)).toEqual(['EURUSD', 'manifest.json']);
-    expect(await readdir(resolve(cacheFolderPath, 'EURUSD'))).toEqual(['2019']);
-    expect(await readdir(resolve(cacheFolderPath, 'EURUSD', '2019'))).toEqual(['01']);
-    expect(await readdir(resolve(cacheFolderPath, 'EURUSD', '2019', '01'))).toEqual([
-      '04',
-      '05',
-      '06',
-      '07',
-      '08',
-      '09',
-      '10',
-      '11',
-      '12',
-      '13'
+    expect(fetchSpy).toHaveBeenCalledTimes(10);
+    fetchSpy.mockClear();
+  });
+
+  it('Tries to check if data exists in cache', async () => {
+    const cacheData = await Promise.all(readSpy.mock.results.map(item => item.value));
+
+    expect(cacheData.every(result => result === null)).toEqual(true);
+
+    expect(readSpy).toHaveBeenCalledTimes(10);
+    readSpy.mockClear();
+  });
+
+  it('Writes correct number of entries to cache once ', () => {
+    expect(writeSpy.mock.calls[0][0]).toHaveLength(10);
+    expect(writeSpy).toHaveBeenCalledTimes(1);
+  });
+
+  it('Upon same request, it does not make any network calls', async () => {
+    await buffetFetcher.fetch(urls);
+    expect(fetchSpy).toHaveBeenCalledTimes(0);
+    fetchSpy.mockClear();
+  });
+
+  it('Retrieves data from cache', async () => {
+    const cacheData = await Promise.all(readSpy.mock.results.map(item => item.value));
+    expect(cacheData.every(result => result !== null)).toEqual(true);
+    expect(readSpy).toHaveBeenCalledTimes(10);
+  });
+
+  it('Makes network calls only for new items', async () => {
+    await buffetFetcher.fetch([
+      ...urls,
+      'https://datafeed.dukascopy.com/datafeed/EURUSD/2019/01/14/BID_candles_min_1.bi5'
     ]);
 
-    const manifest = await readJSON(resolve(cacheFolderPath, 'manifest.json'));
-
-    expect(manifest).toEqual({
-      'EURUSD/2019/01/04/BID_candles_min_1.bi5': true,
-      'EURUSD/2019/01/05/BID_candles_min_1.bi5': true,
-      'EURUSD/2019/01/06/BID_candles_min_1.bi5': true,
-      'EURUSD/2019/01/07/BID_candles_min_1.bi5': true,
-      'EURUSD/2019/01/08/BID_candles_min_1.bi5': true,
-      'EURUSD/2019/01/09/BID_candles_min_1.bi5': true,
-      'EURUSD/2019/01/10/BID_candles_min_1.bi5': true,
-      'EURUSD/2019/01/11/BID_candles_min_1.bi5': true,
-      'EURUSD/2019/01/12/BID_candles_min_1.bi5': true,
-      'EURUSD/2019/01/13/BID_candles_min_1.bi5': true
-    });
-
-    Object.keys(manifest).forEach(async path => {
-      const itemPath = resolve(cacheFolderPath, ...path.split('/'));
-      const itemContent = await readFile(itemPath, 'utf8');
-      expect(itemContent).toEqual(`${URL_ROOT}/${path}`);
-    });
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
   });
 });
