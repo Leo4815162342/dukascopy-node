@@ -66,7 +66,7 @@ const { getHistoricRates } = require('dukascopy-node');
 |`ignoreFlats`|Boolean|false|`true`|A flag indicating whether the output should contain timeframe entries with 0 (flat) volume. Those mainly come from non-trading days, such as weekends or bank holidays.|
 |`batchSize`|Number|false|`10`|Number of requests sent to data storage per batch. We don't want to send bunch of requests at the same time, we want to split them in groups (batches) and fetch them one by one with pause in between (see `pauseBetweenBatchesMs`). Main purpose - not to fall under rate limiting restrictions.|
 |`pauseBetweenBatchesMs`|Number|false|`1000`|Pause between downloading batches (in milliseconds).|
-|`useCache`|Boolean|false|`false`|A flag indicating whether a file-system cache is going to be used to store response artifacts for subsequent lookups. When set to `true`, it significantly speeds up calls when requesting overlapping data|
+|`useCache`|Boolean|false|`false`|A flag indicating whether a file-system cache is going to be used to store response artifacts for subsequent lookups. When set to `true`, it significantly speeds up calls when requesting overlapping or similar data|
 |`cacheFolderPath`|String|false|`/.dukascopy-cache`|Folder path where all cache artifacts (binary data) will be stored|
 
 ***
