@@ -9,6 +9,7 @@ import {
   normaliseDates,
   generateUrls,
   BufferFetcher,
+  CacheManager,
   processData,
   formatOutput,
   JsonItem,
@@ -31,6 +32,8 @@ const {
   format,
   batchSize,
   pauseBetweenBatchesMs,
+  useCache,
+  cacheFolderPath,
   dir,
   silent
 } = cliConfig;
@@ -64,6 +67,7 @@ const filePath = resolve(folderPath, fileName);
       const bufferFetcher = new BufferFetcher({
         batchSize,
         pauseBetweenBatchesMs,
+        cacheManager: useCache ? new CacheManager({ cacheFolderPath }) : undefined,
         notifyOnItemFetchFn: (): void => {
           val += 1;
           progressBar.update(val);

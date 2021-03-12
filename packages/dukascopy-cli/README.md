@@ -33,27 +33,37 @@ dukascopy-cli -i eurusd -from 2006-01-01 -to 2020-01-01 -t d1 -f json
 
 #### As dev dependency
 
+#### yarn:
+
 ```bash
 yarn dukascopy-cli -i eurusd -from 2006-01-01 -to 2020-01-01 -t d1 -f json
+```
+
+#### NPM:
+
+```bash
+npx dukascopy-cli -i eurusd -from 2006-01-01 -to 2020-01-01 -t d1 -f json
 ```
 
 ## Options
 
 ```bash
-  -d, --debug                 Output extra debugging
-  -s, --silent                Hides the search config in the CLI output (default: false)
-  -i, --instrument <value>    Trading instrument
-  -from, --date-from <value>  From date (yyyy-mm-dd)
-  -to, --date-to <value>      To date (yyyy-mm-dd)
-  -t, --timeframe <value>     Timeframe aggregation (tick, m1, m15, m30, h1, d1, mn1) (default: "d1")
-  -p, --price-type <value>    Price type: (bid, ask) (default: "bid")
-  -utc, --utc-offset <value>  UTC offset in minutes (default: 0)
-  -v, --volumes               Include volumes (default: false)
-  -fl, --flats                Include flats (0 volumes) (default: false)
-  -f, --format <value>        Output format (csv, json, array) (default: "json")
-  -dir, --directory <value>   Download directory (default: "./download")
-  -bs, --batch-size <value>   Batch size of downloaded artifacts (default: 10)
-  -bp, --batch-pause <value>  Pause between batches in ms (default: 1000)
+  -d, --debug                   Output extra debugging
+  -s, --silent                  Hides the search config in the CLI output (default: false)
+  -i, --instrument <value>      Trading instrument
+  -from, --date-from <value>    From date (yyyy-mm-dd)
+  -to, --date-to <value>        To date (yyyy-mm-dd)
+  -t, --timeframe <value>       Timeframe aggregation (tick, m1, m15, m30, h1, d1, mn1) (default: "d1")
+  -p, --price-type <value>      Price type: (bid, ask) (default: "bid")
+  -utc, --utc-offset <value>    UTC offset in minutes (default: 0)
+  -v, --volumes                 Include volumes (default: false)
+  -fl, --flats                  Include flats (0 volumes) (default: false)
+  -f, --format <value>          Output format (csv, json, array) (default: "json")
+  -dir, --directory <value>     Download directory (default: "./download")
+  -bs, --batch-size <value>     Batch size of downloaded artifacts (default: 10)
+  -bp, --batch-pause <value>    Pause between batches in ms (default: 1000)
+  -ch, --cache                  Use cache (default: false)
+  -chpath, --cache-path <value> Folder path for cache data (default: './.dukascopy-cache')
   -h, --help                  display help for command
 ```
 

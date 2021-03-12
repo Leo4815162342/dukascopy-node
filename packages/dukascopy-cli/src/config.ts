@@ -20,7 +20,9 @@ program
   .option('-f, --format <value>', 'Output format (csv, json, array)', Format.json)
   .option('-dir, --directory <value>', 'Download directory', './download')
   .option('-bs, --batch-size <value>', 'Batch size of downloaded artifacts', Number, 10)
-  .option('-bp, --batch-pause <value>', 'Pause between batches in ms', Number, 1000);
+  .option('-bp, --batch-pause <value>', 'Pause between batches in ms', Number, 1000)
+  .option('-ch, --cache', 'Use cache', false)
+  .option('-chpath, --cache-path <value>', 'Folder path for cache data', './.dukascopy-cache');
 
 program.parse(process.argv);
 
@@ -45,8 +47,8 @@ export const cliConfig: CliConfig = {
   format: options.format,
   batchSize: options.batchSize,
   pauseBetweenBatchesMs: options.batchPause,
-  useCache: options.useCache,
-  cacheFolderPath: options.cacheFolderPath
+  useCache: options.cache,
+  cacheFolderPath: options.cachePath
 };
 
 const cliValidationSchema = {

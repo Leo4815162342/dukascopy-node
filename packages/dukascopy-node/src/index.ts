@@ -4,6 +4,7 @@ export { generateUrls, URL_ROOT } from './url-generator';
 export { BufferFetcher } from './buffer-fetcher';
 export { processData } from './processor';
 export { formatOutput } from './output-formatter';
+export { CacheManager } from './cache-manager';
 
 export { Config, DefaultConfig, defaultConfig } from './config';
 export { Instrument, InstrumentType } from './config/instruments';
