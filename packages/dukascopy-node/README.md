@@ -88,7 +88,9 @@ const { getHistoricRates } = require('dukascopy-node');
   volumes: true,
   ignoreFlats: true,
   batchSize: 10,
-  pauseBetweenBatchesMs: 1000
+  pauseBetweenBatchesMs: 1000,
+  useCache: true,
+  cacheFolderPath: '.dukascopy-cache'
 }
 ```
 
