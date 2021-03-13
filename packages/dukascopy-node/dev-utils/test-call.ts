@@ -4,14 +4,15 @@ import { getHistoricRates, Config } from '../src';
 (async () => {
   try {
     const config: Config = {
-      instrument: 'avgbgbx',
-      dates: { from: '2016-09-06', to: '2017-09-06' },
+      instrument: 'eurusd',
+      dates: { from: '2019-06-01', to: '2019-07-01' },
       priceType: 'bid',
       timeframe: 'd1',
       format: 'json',
       volumes: true,
       utcOffset: 0,
-      ignoreFlats: false
+      ignoreFlats: false,
+      useCache: false
     };
     console.log('fetching started');
     console.log(JSON.stringify(config));

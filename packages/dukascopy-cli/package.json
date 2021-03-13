@@ -17,7 +17,7 @@
     "lint": "eslint -c ../../.eslintrc.json --ignore-path ../../.eslintignore . --ext ts --ext tsx --ext js",
     "precommit": "lint-staged",
     "prepush": "yarn type-check",
-    "test:call": "yarn ts-node src/index.ts -i eurusd -from 2019-02-01 -to 2020-02-09 -t d1 -f csv -v -fl"
+    "test:call": "yarn ts-node src/index.ts -i gbpusd -from 2018-02-01 -to 2019-02-09 -t h1 -f csv -v -fl -ch"
   },
   "keywords": [
     "cli",
@@ -36,11 +36,11 @@
     "cli-progress": "^3.4.0",
     "commander": "^5.0.0",
     "dukascopy-node": "^1.4.2",
-    "fs-extra": "^8.1.0"
+    "fs-extra": "^9.1.0"
   },
   "devDependencies": {
     "@types/cli-progress": "^1.8.1",
-    "@types/fs-extra": "^8.0.1",
+    "@types/fs-extra": "^9.0.8",
     "lint-staged": "^10.5.3",
     "rollup-plugin-preserve-shebangs": "^0.2.0"
   },

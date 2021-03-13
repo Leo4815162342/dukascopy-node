@@ -4,13 +4,24 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "commit": "git-cz",
+    "bootstrap": "lerna bootstrap",
+    "lerna-version": "lerna version --conventional-commits",
+    "lerna-publish": "lerna publish"
+  },
   "devDependencies": {
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.1",
     "@rollup/plugin-typescript": "^8.1.0",
     "@types/jest": "^26.0.19",
+    "@types/node": "^14.14.34",
     "@typescript-eslint/eslint-plugin": "^4.11.0",
     "@typescript-eslint/parser": "^4.11.0",
+    "commitizen": "^4.2.3",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.3.0",
@@ -27,7 +38,21 @@
   "husky": {
     "hooks": {
       "pre-commit": "lerna run --concurrency 1 --stream precommit --since master --exclude-dependents",
-      "pre-push": "lerna run --concurrency 1 --stream prepush --since master --exclude-dependents"
+      "pre-push": "lerna run --concurrency 1 --stream prepush --since master --exclude-dependents",
+      "commit-msg": "commitlint --color -E HUSKY_GIT_PARAMS"
     }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }

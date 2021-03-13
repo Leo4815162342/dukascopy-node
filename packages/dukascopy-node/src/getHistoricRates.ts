@@ -15,6 +15,7 @@ import { BufferFetcher } from './buffer-fetcher';
 import { processData } from './processor';
 import { formatOutput } from './output-formatter';
 import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
+import { CacheManager } from './cache-manager';
 
 export async function getHistoricRates(config: ConfigArrayItem): Promise<ArrayItem[]>;
 export async function getHistoricRates(config: ConfigArrayTickItem): Promise<ArrayTickItem[]>;
@@ -45,7 +46,9 @@ export async function getHistoricRates(config: Config): Promise<Output> {
     ignoreFlats,
     format,
     batchSize,
-    pauseBetweenBatchesMs
+    pauseBetweenBatchesMs,
+    useCache,
+    cacheFolderPath
   } = mergedConfig;
 
   const [startDate, endDate] = normaliseDates({
@@ -58,7 +61,11 @@ export async function getHistoricRates(config: Config): Promise<Output> {
 
   const urls = generateUrls({ instrument, timeframe, priceType, startDate, endDate });
 
-  const bufferFetcher = new BufferFetcher({ batchSize, pauseBetweenBatchesMs });
+  const bufferFetcher = new BufferFetcher({
+    batchSize,
+    pauseBetweenBatchesMs,
+    cacheManager: useCache ? new CacheManager({ cacheFolderPath }) : undefined
+  });
 
   const bufferredData = await bufferFetcher.fetch(urls);
 
