@@ -8,7 +8,8 @@
     "commit": "git-cz",
     "bootstrap": "lerna bootstrap",
     "lerna-version": "lerna version --conventional-commits",
-    "lerna-publish": "lerna publish"
+    "lerna-publish": "lerna publish from-package",
+    "release": "yarn lerna-version && yarn lerna-publish"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
