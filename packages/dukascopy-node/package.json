@@ -50,6 +50,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
+    "@types/fs-extra": "^9.0.8",
     "@types/node-fetch": "^2.1.7",
     "jest-date-mock": "^1.0.8",
     "lint-staged": "^10.5.3"

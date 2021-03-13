@@ -35,11 +35,12 @@
     "chalk": "^3.0.0",
     "cli-progress": "^3.4.0",
     "commander": "^5.0.0",
-    "fs-extra": "^9.1.0",
-    "dukascopy-node": "^1.4.2"
+    "dukascopy-node": "^1.4.2",
+    "fs-extra": "^9.1.0"
   },
   "devDependencies": {
     "@types/cli-progress": "^1.8.1",
+    "@types/fs-extra": "^9.0.8",
     "lint-staged": "^10.5.3",
     "rollup-plugin-preserve-shebangs": "^0.2.0"
   },
