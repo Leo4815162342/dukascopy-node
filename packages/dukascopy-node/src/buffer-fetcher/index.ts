@@ -75,8 +75,6 @@ export class BufferFetcher {
 
   private async fetchBuffer(url: string): Promise<Buffer> {
     if (this.fetcherFn) {
-      // eslint-disable-next-line no-console
-      console.log('Fetching via custom function', url);
       return this.fetcherFn(url);
     }
 
