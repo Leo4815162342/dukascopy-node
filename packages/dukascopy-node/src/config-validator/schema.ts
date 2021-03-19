@@ -4,22 +4,19 @@ import Validator, {
   RuleNumber,
   RuleObject,
   RuleString,
-  // ValidationError,
+  ValidationError,
   ValidationRule
-  // ValidationSchema
 } from 'fastest-validator';
 import { Instrument } from '../config/instruments';
 import { Timeframe } from '../config/timeframes';
 import { Price } from '../config/price-types';
 import { Format } from '../config/format';
-// import { getUTCDateFromString } from '../utils/date';
-// import { ValidationFn } from './types';
+
 import { Config } from '../config';
 
-export type BaseSchema<T extends string> = Record<T, ValidationRule>;
-export type Schema = BaseSchema<keyof Required<Config>>;
+type InputSchema<Input> = Record<keyof Required<Input>, ValidationRule>;
 
-const schema: Schema = {
+const schema: InputSchema<Config> = {
   instrument: { type: 'string', enum: Object.keys(Instrument), required: true } as RuleString,
   dates: {
     type: 'object',
@@ -63,17 +60,32 @@ const schema: Schema = {
 
 const validator = new Validator();
 
+type ValidError = Pick<ValidationError, 'message' | 'expected' | 'actual'>;
+
+interface ValidateConfigOutput<Input> {
+  input: Required<Input>;
+  isValid: boolean;
+  validationErrors: ValidError[];
+}
+
+/**
+ *
+ * Validates the config and sanitizes some of the params
+ *
+ */
 function validateConfig<InputConfig>(
   input: InputConfig extends Config ? InputConfig : never,
-  extraSchema: BaseSchema<string> = {}
-) {
-  const check = validator.compile({ ...schema, ...extraSchema });
+  schema: InputSchema<InputConfig> extends InputSchema<Config> ? InputSchema<InputConfig> : never
+): ValidateConfigOutput<InputConfig> {
+  const check = validator.compile(schema);
   const validationResult = check(input);
 
   const isValid = validationResult === true;
 
+  const sanitaizedInput = (input as unknown) as Required<InputConfig>;
+
   return {
-    input,
+    input: sanitaizedInput,
     isValid,
     validationErrors:
       !isValid && Array.isArray(validationResult)
@@ -82,16 +94,20 @@ function validateConfig<InputConfig>(
   };
 }
 
-const result = validateConfig({
+export function validateConfigNode(input: Config): ValidateConfigOutput<Config> {
+  return validateConfig(input, schema);
+}
+
+const result = validateConfigNode({
   instrument: 'eurusd',
-  dates: { from: '2019-02-28', to: '2019-07-01' },
-  priceType: 'bid',
-  timeframe: 'd1',
-  format: 'json',
-  volumes: true,
-  utcOffset: 0,
-  ignoreFlats: false,
-  useCache: false
+  dates: { from: '2019-02-28', to: '2019-07-01' }
+  // priceType: 'bid',
+  // timeframe: 'd1',
+  // format: 'json'
+  // volumes: true,
+  // utcOffset: 0,
+  // ignoreFlats: false,
+  // useCache: false
 });
 
 // eslint-disable-next-line no-console
