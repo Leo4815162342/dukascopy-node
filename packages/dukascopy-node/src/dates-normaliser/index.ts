@@ -1,6 +1,5 @@
 import { instrumentMetaData } from '../config/instruments-metadata';
 import { Timeframe } from '../config/timeframes';
-// import { getUTCDateFromString } from '../utils/date';
 import { NormaliseDatesInput } from './types';
 
 function applyDateLimits(date: Date, min: Date, max: Date): Date {

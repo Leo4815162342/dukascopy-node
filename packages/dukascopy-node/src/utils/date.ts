@@ -1,25 +1,5 @@
 import { TimeRange } from './range';
 
-function getUTCDateFromString(date: string): false | Date {
-  const match = date.match(
-    /^(\d{4})(?:-|\.)(\d{2})(?:-|\.)(\d{2})(?:T| )?(\d{2})?:?(\d{2})?:?(?:\d{2})?:?(?:.\d{3}Z)?$/
-  );
-
-  if (!match) {
-    return false;
-  }
-
-  const [_, year, month, day, hour, minute] = match;
-
-  const utcIsoString = `${year}-${month}-${day}T${hour || '00'}:${minute || '00'}:00.000Z`;
-
-  const parsedDate = new Date(utcIsoString);
-
-  const isValid = !isNaN(+parsedDate) && parsedDate.toISOString() === utcIsoString;
-
-  return isValid ? parsedDate : false;
-}
-
 function getYMDH(date: Date): number[] {
   const [year, month, day, hours] = [
     date.getUTCFullYear(),
@@ -107,11 +87,4 @@ function getFormattedDate(
   return formatted;
 }
 
-export {
-  getUTCDateFromString,
-  getYMDH,
-  getStartOfUtc,
-  getIsCurrentObj,
-  getDateFromUrl,
-  getFormattedDate
-};
+export { getYMDH, getStartOfUtc, getIsCurrentObj, getDateFromUrl, getFormattedDate };
