@@ -1,6 +1,6 @@
 import { instrumentMetaData } from '../config/instruments-metadata';
 import { Timeframe } from '../config/timeframes';
-import { getUTCDateFromString } from '../utils/date';
+// import { getUTCDateFromString } from '../utils/date';
 import { NormaliseDatesInput } from './types';
 
 function applyDateLimits(date: Date, min: Date, max: Date): Date {
@@ -22,10 +22,6 @@ export function normaliseDates({
   timeframe,
   utcOffset
 }: NormaliseDatesInput): [Date, Date] {
-  const [parsedFromDate, parsedToDate] = [startDate, endDate]
-    .map(d => getUTCDateFromString(d) || new Date())
-    .sort((a, b) => +a - +b);
-
   const {
     startHourForTicks,
     startDayForMinuteCandles,
@@ -51,12 +47,12 @@ export function normaliseDates({
   let maxToDate = new Date();
 
   if (utcOffset) {
-    parsedFromDate.setUTCMinutes(parsedFromDate.getUTCMinutes() + utcOffset);
-    parsedToDate.setUTCMinutes(parsedToDate.getUTCMinutes() + utcOffset);
+    startDate.setUTCMinutes(startDate.getUTCMinutes() + utcOffset);
+    endDate.setUTCMinutes(endDate.getUTCMinutes() + utcOffset);
   }
 
-  let adjustedFromDate = applyDateLimits(parsedFromDate, minFromDate, maxToDate);
-  let adjustedToDate = applyDateLimits(parsedToDate, minFromDate, maxToDate);
+  let adjustedFromDate = applyDateLimits(startDate, minFromDate, maxToDate);
+  let adjustedToDate = applyDateLimits(endDate, minFromDate, maxToDate);
 
   return [adjustedFromDate, adjustedToDate];
 }

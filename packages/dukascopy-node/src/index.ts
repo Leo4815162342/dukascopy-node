@@ -1,4 +1,11 @@
-export { validator, validateConfig, schema } from './config-validator';
+export {
+  validateConfig,
+  ConfigValidationError,
+  SanitizedConfig,
+  ValidateConfigOutput,
+  validateConfigNode
+} from './config-validator';
+export { InputSchema, schema } from './config-validator/schema';
 export { normaliseDates } from './dates-normaliser';
 export { generateUrls, URL_ROOT } from './url-generator';
 export { BufferFetcher } from './buffer-fetcher';
