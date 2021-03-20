@@ -21,4 +21,6 @@ export { Price, PriceType } from './config/price-types';
 
 export { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
 
+export { RuleDate, RuleBoolean, RuleNumber, RuleString, RuleObject } from 'fastest-validator';
+
 export { getHistoricRates } from './getHistoricRates';
