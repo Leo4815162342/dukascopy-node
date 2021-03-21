@@ -1,6 +1,10 @@
 ## Usage with cache
 
-With cache enabled (`{ useCache: true }`), all the binary artifacts (which are downloaded from the dukascopy servers) will be stored in the file system, and all the subsequent requests with similar instruments and date ranges will no longer be downloaded from those servers, and will be fetched from the file system instead.
+Be default caching capabilities are disabled.
+
+In order to enable them, set `useCache` flag to `true` and optionally specify the `cacheFolderPath` (default is `.dukascopy-cache`).
+
+All the binary artifacts (which are downloaded from the dukascopy servers) will be stored in the file system, and all the subsequent requests with similar instruments and date ranges will no longer be downloaded from those servers, and will be fetched from the file system instead.
 
 ---
 
