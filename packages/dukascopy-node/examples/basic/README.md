@@ -1,5 +1,6 @@
 ## Basic usage of `dukascopy-node`
 
+There are three basic output formats: `array`, `json` and `csv`
 
 |Format|Example call|Example output|
 |-|-|-|
