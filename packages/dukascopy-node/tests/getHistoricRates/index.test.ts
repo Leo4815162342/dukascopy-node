@@ -4,8 +4,7 @@
 // m1, m30: EURUSD, bid, 2019-02-04 - 2019-02-06
 // h1, d1, mn1: EURUSD, bid, 2019-01-01, 2019-03-01
 
-import fs from 'fs';
-import { promisify } from 'util';
+import { promises } from 'fs';
 import { getHistoricRates } from '../../src';
 import { URL_ROOT } from '../../src/url-generator';
 import { BufferFetcher } from '../../src/buffer-fetcher';
@@ -16,17 +15,9 @@ import { advanceTo, clear } from 'jest-date-mock';
 
 beforeAll(() => jest.clearAllMocks());
 
-// Naive mocking of fetch calls
-BufferFetcher.prototype.fetch = async (urls: string[]) => {
-  const buffers = await Promise.all(
-    urls.map(url => promisify(fs.readFile)(url.replace(URL_ROOT, './../../dummy-data')))
-  );
-
-  return urls.map((_, i) => ({
-    url: urls[i],
-    buffer: buffers[i]
-  }));
-};
+// Naive mocking of fetcherFn
+BufferFetcher.prototype.fetcherFn = async (url: string) =>
+  promises.readFile(url.replace(URL_ROOT, './../../dummy-data'));
 
 type TestCase = {
   config: Config;
@@ -44,7 +35,7 @@ describe('getHistoricRates', () => {
     clear();
   });
 
-  const testCases = getTestCases<TestCase>('./tests/integration/cases');
+  const testCases = getTestCases<TestCase>('./tests/getHistoricRates/cases').slice(0, 20);
   testCases.forEach(({ content, path }) => {
     const [fileName] = path.split('/').reverse();
     if (path.indexOf('fail_') >= 0) {

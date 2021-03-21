@@ -1,4 +1,4 @@
-import { CliConfig } from './types';
+import { CliConfig } from './config';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const chalk = require('chalk');
 
