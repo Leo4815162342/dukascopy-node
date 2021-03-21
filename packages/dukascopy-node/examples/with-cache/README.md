@@ -33,7 +33,7 @@ After running, you can see that `dukascopy-node` has created the cache folder ca
 
 ![dukascopy-node default cache folder](https://raw.githubusercontent.com/Leo4815162342/dukascopy-tools/docs/node_examples/packages/dukascopy-node/examples/with-cache/with-cache.png "dukascopy-node default cache folder")
 
-If you run the same code again, then you will notice that it's faster, since the data comes from your local disk rather then from network.
+If you run the same code again, then you will notice that it's faster, since the data comes from your local disk rather than from network.
 
 ---
 
@@ -53,6 +53,7 @@ const { getHistoricRates } = require('dukascopy-node');
       timeframe: 'd1',
       format: 'json',
       useCache: true,
+      cacheFolderPath: './my-custom-cache-folder'
     });
 
     console.log(data);
