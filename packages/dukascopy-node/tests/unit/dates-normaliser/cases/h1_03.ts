@@ -1,7 +1,7 @@
 const input = {
   instrument: 'eurusd',
-  startDate: '2018-06-06 12:00',
-  endDate: '2018-06-06 16:00',
+  startDate: new Date('2018-06-06T12:00:00.000Z'),
+  endDate: new Date('2018-06-06T16:00:00.000Z'),
   timeframe: 'h1',
   utcOffset: 120
 };

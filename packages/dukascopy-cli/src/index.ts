@@ -3,7 +3,7 @@
 import { resolve } from 'path';
 import { progressBar } from './progress';
 import { outputFile } from 'fs-extra';
-import { cliConfig, isValid, validationErrors } from './config';
+import { isValid, validationErrors, input } from './config';
 import {
   Format,
   normaliseDates,
@@ -36,11 +36,13 @@ const {
   cacheFolderPath,
   dir,
   silent
-} = cliConfig;
+} = input;
 
 const fileName = `${instrument}-${timeframe}${
   timeframe === 'tick' ? '' : '-' + priceType
-}-${fromDate}-${toDate}.${format === Format.csv ? Format.csv : Format.json}`;
+}-${fromDate.toISOString().slice(0, 10)}-${toDate.toISOString().slice(0, 10)}.${
+  format === Format.csv ? Format.csv : Format.json
+}`;
 const folderPath = resolve(process.cwd(), dir);
 const filePath = resolve(folderPath, fileName);
 
@@ -56,7 +58,7 @@ const filePath = resolve(folderPath, fileName);
         utcOffset
       });
 
-      silent ? printDivider() : printHeader(cliConfig, startDate, endDate);
+      silent ? printDivider() : printHeader(input, startDate, endDate);
 
       const urls = generateUrls({ instrument, timeframe, priceType, startDate, endDate });
 
@@ -107,9 +109,13 @@ const filePath = resolve(folderPath, fileName);
 
       printSuccess(`√ File saved: ${chalk.bold(fileName)}`);
     } else {
-      printErrors('Search config invalid:', validationErrors);
+      printErrors(
+        'Search config invalid:',
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        validationErrors.map(err => err.message!)
+      );
     }
   } catch (err) {
-    printErrors('Something went wrong:', err.message || JSON.stringify(err));
+    printErrors('\nSomething went wrong:', err.message || JSON.stringify(err));
   }
 })();

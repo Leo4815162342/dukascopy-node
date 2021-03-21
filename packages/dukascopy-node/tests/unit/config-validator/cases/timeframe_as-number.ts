@@ -13,7 +13,13 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: ["The 'timeframe' field must be a string!"]
+  validationErrors: [
+    {
+      actual: 12345,
+      expected: undefined,
+      message: "The 'timeframe' field must be a string."
+    }
+  ]
 };
 
 export { config, expectedOutput };
