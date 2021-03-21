@@ -13,13 +13,7 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: [
-    {
-      actual: 'xxx',
-      expected: undefined,
-      message: "The 'volumes' field must be a boolean."
-    }
-  ]
+  validationErrors: ["The 'volumes' field must be a boolean!"]
 };
 
 export { config, expectedOutput };

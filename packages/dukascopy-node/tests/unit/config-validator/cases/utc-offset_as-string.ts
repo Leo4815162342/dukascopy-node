@@ -13,13 +13,7 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: [
-    {
-      actual: 'xxx',
-      expected: undefined,
-      message: "The 'utcOffset' field must be a number."
-    }
-  ]
+  validationErrors: ["The 'utcOffset' field must be a number!"]
 };
 
 export { config, expectedOutput };

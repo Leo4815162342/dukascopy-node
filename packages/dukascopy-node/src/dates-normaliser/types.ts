@@ -3,8 +3,8 @@ import { InstrumentType } from '../config/instruments';
 
 export interface NormaliseDatesInput {
   instrument: InstrumentType;
-  startDate: Date;
-  endDate: Date;
+  startDate: string;
+  endDate: string;
   timeframe: TimeframeType;
   utcOffset: number;
 }

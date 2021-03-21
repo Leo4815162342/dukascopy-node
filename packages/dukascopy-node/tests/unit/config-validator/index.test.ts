@@ -1,12 +1,12 @@
 import { Config } from '../../../src/config';
 
-import { validateConfigNode } from '../../../src/config-validator';
+import { validateConfig } from '../../../src/config-validator';
 
 import { getTestCases } from '../../utils';
 
 type TestCase = {
   config: Config;
-  expectedOutput: ReturnType<typeof validateConfigNode>;
+  expectedOutput: ReturnType<typeof validateConfig>;
 };
 
 function generateTestSuite({ config, expectedOutput }: TestCase, path: string): void {
@@ -14,7 +14,7 @@ function generateTestSuite({ config, expectedOutput }: TestCase, path: string): 
   const [testGroup] = filePath.split('_');
 
   describe(testGroup, () => {
-    const { isValid, validationErrors } = validateConfigNode(config);
+    const { isValid, validationErrors } = validateConfig(config);
 
     it(`${filePath}: validation shoud return ${expectedOutput.isValid}`, () => {
       expect(isValid).toBe(expectedOutput.isValid);

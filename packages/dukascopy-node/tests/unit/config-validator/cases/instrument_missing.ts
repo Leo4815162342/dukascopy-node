@@ -12,13 +12,7 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: [
-    {
-      actual: undefined,
-      expected: undefined,
-      message: "The 'instrument' field is required."
-    }
-  ]
+  validationErrors: ["The 'instrument' field is required!"]
 };
 
 export { config, expectedOutput };

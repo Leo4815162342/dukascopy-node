@@ -1,10 +1,10 @@
 const config = {
   instrument: 'eurusd',
   dates: {
-    from: '2019-03-01',
-    to: '2019-03-05'
+    from: '2019-02-01',
+    to: '2019-02-29'
   },
-  timeframe: 12345,
+  timeframe: 'tick',
   priceType: 'bid',
   utcOffset: 60,
   volumes: true,
@@ -13,7 +13,7 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: ["The 'timeframe' field must be a string!"]
+  validationErrors: ["The 'dates.to' field must be a valid date string! Actual: 2019-02-29"]
 };
 
 export { config, expectedOutput };

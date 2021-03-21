@@ -13,13 +13,7 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: [
-    {
-      actual: 0,
-      expected: undefined,
-      message: "The 'priceType' field must be a string."
-    }
-  ]
+  validationErrors: ["The 'priceType' field must be a string!"]
 };
 
 export { config, expectedOutput };

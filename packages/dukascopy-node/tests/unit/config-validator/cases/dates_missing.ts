@@ -9,13 +9,7 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: [
-    {
-      actual: undefined,
-      expected: undefined,
-      message: "The 'dates' field is required."
-    }
-  ]
+  validationErrors: ["The 'dates' field is required!"]
 };
 
 export { config, expectedOutput };

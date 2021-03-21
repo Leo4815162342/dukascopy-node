@@ -1,7 +1,7 @@
 const input = {
   instrument: 'eurusd',
-  startDate: new Date('2019-02-01T00:00:00.000Z'),
-  endDate: new Date('2019-02-13T00:00:00.000Z'),
+  startDate: '2019-02-01',
+  endDate: '2019-02-13',
   timeframe: 'd1'
 };
 

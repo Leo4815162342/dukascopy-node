@@ -13,13 +13,7 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: [
-    {
-      actual: 'true',
-      expected: undefined,
-      message: "The 'ignoreFlats' field must be a boolean."
-    }
-  ]
+  validationErrors: ["The 'ignoreFlats' field must be a boolean!"]
 };
 
 export { config, expectedOutput };

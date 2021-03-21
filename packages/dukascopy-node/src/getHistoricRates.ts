@@ -4,10 +4,11 @@ import {
   ConfigJsonItem,
   ConfigJsonTickItem,
   ConfigCsvItem,
-  Config
+  Config,
+  defaultConfig
 } from './config';
 
-import { validateConfigNode } from './config-validator';
+import { validateConfig } from './config-validator';
 import { normaliseDates } from './dates-normaliser';
 import { generateUrls } from './url-generator';
 import { BufferFetcher } from './buffer-fetcher';
@@ -24,7 +25,12 @@ export async function getHistoricRates(config: ConfigCsvItem): Promise<string>;
 export async function getHistoricRates(config: Config): Promise<Output>;
 
 export async function getHistoricRates(config: Config): Promise<Output> {
-  const { input, isValid, validationErrors } = validateConfigNode(config);
+  const mergedConfig = {
+    ...defaultConfig,
+    ...config
+  };
+
+  const { isValid, validationErrors } = validateConfig(mergedConfig);
 
   if (!isValid) {
     throw { validationErrors };
@@ -43,7 +49,7 @@ export async function getHistoricRates(config: Config): Promise<Output> {
     pauseBetweenBatchesMs,
     useCache,
     cacheFolderPath
-  } = input;
+  } = mergedConfig;
 
   const [startDate, endDate] = normaliseDates({
     instrument,

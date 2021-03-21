@@ -1,15 +1,6 @@
 import { program } from 'commander';
-import {
-  Timeframe,
-  Price,
-  Format,
-  schema,
-  validateConfig,
-  RuleBoolean,
-  RuleString,
-  Config,
-  InputSchema
-} from 'dukascopy-node';
+import { Timeframe, Price, Format, schema, validator, validateConfig } from 'dukascopy-node';
+import { CliConfig } from './types';
 
 program
   .option('-d, --debug', 'Output extra debugging')
@@ -40,12 +31,7 @@ const options = program.opts();
 // eslint-disable-next-line no-console
 if (program.debug) console.log(options);
 
-export interface CliConfig extends Config {
-  dir: string;
-  silent: boolean;
-}
-
-const cliConfig: CliConfig = {
+export const cliConfig: CliConfig = {
   instrument: options.instrument,
   dates: {
     from: options.dateFrom,
@@ -65,12 +51,14 @@ const cliConfig: CliConfig = {
   cacheFolderPath: options.cachePath
 };
 
-const cliSchema: InputSchema<CliConfig> = {
+const cliValidationSchema = {
   ...schema,
   ...{
-    dir: { type: 'string', required: true } as RuleString,
-    silent: { type: 'boolean', required: false } as RuleBoolean
+    dir: { type: 'string', required: true },
+    silent: { type: 'boolean', required: true }
   }
-};
+} as typeof schema;
 
-export const { input, isValid, validationErrors } = validateConfig(cliConfig, cliSchema);
+const cliCheck = validator.compile(cliValidationSchema);
+
+export const { isValid, validationErrors } = validateConfig(cliConfig, cliCheck);

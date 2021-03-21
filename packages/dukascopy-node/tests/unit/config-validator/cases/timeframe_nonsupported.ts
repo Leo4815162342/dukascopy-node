@@ -13,13 +13,7 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: [
-    {
-      actual: 'xxxyyyzzz',
-      expected: 'tick, m1, m15, m30, h1, d1, mn1',
-      message: "The 'timeframe' field does not match any of the allowed values."
-    }
-  ]
+  validationErrors: ["The 'timeframe' field does not match any of the allowed values!"]
 };
 
 export { config, expectedOutput };

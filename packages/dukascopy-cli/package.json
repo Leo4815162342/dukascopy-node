@@ -17,7 +17,7 @@
     "lint": "eslint -c ../../.eslintrc.json --ignore-path ../../.eslintignore . --ext ts --ext tsx --ext js",
     "precommit": "lint-staged",
     "prepush": "yarn type-check",
-    "test:call": "yarn ts-node src/index.ts -i gbpusd -from 2019-02-01 -to 2019-02-09 -t d1 -f json -v -fl -ch"
+    "test:call": "yarn ts-node src/index.ts -i gbpusd -from 2018-02-01 -to 2019-02-09 -t h1 -f csv -v -fl -ch"
   },
   "keywords": [
     "cli",

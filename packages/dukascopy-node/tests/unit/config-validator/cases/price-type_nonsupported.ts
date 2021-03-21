@@ -13,13 +13,7 @@ const config = {
 
 const expectedOutput = {
   isValid: false,
-  validationErrors: [
-    {
-      actual: 'aaabbbccc',
-      expected: 'bid, ask',
-      message: "The 'priceType' field does not match any of the allowed values."
-    }
-  ]
+  validationErrors: ["The 'priceType' field does not match any of the allowed values!"]
 };
 
 export { config, expectedOutput };

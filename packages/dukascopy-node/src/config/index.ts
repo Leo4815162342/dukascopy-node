@@ -4,13 +4,11 @@ import { FormatType, Format } from './format';
 import { InstrumentType } from './instruments';
 import { OptionalKeys } from 'utility-types';
 
-export type DateInput = string | Date | number;
-
 export interface Config {
   instrument: InstrumentType;
   dates: {
-    from: DateInput;
-    to: DateInput;
+    from: string;
+    to: string;
   };
   timeframe?: TimeframeType;
   priceType?: PriceType;
