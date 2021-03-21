@@ -1,4 +1,4 @@
-## Usage with cache
+## With cache
 
 Be default caching capabilities are disabled.
 
