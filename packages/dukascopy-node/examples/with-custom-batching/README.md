@@ -110,6 +110,6 @@ you can expect the following sequence of steps
 3) Download URLs in group 2 (items 15-30)
 ```
 
-### General recommendation
+ ### ❗General recommendation❗
 
 If you want to download a significant volume of data (for example tick data for large periods of time: months, years, etc.), it's recommended to tweak those values: minimize `batchSize` and maximize `pauseBetweenBatchesMs` - with that you have higher chances to download the requested data.
