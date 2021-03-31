@@ -1,12 +1,14 @@
 ## With custom batching
 
-In order to download historical price data, `dukascopy-node` needs to generate a list of URLs of all artifacts. These artifacts will be then downloaded form Dukascopy datafeed servers, decompressed, parsed and aggregated.
+In order to download historical price data, `dukascopy-node` needs to generate a list of URLs of all artifacts. These artifacts will be then downloaded from Dukascopy datafeed servers, decompressed, parsed and aggregated.
 
-In some cases such list of URLs can be huge. Since we do not want to overwhelm the dukascopy servers with a lot of subsequent requests and in order to not fall under the rate-limiting restrictions, we need to breakdown this list into groups and download them one-by-one with a pause in between.
+In some cases such list of URLs can be huge. Since we do not want to overwhelm Dukascopy servers with a lot of requests at the same time, and in order not to fall under the rate-limiting restrictions, we need to break this list down into groups (a.k.a. batches) and download them one-by-one with a pause in between.
 
 For example - fetching historical price data for `eurusd` for the whole month of June in 2019, with minutely aggregation (`m1` timeframe):
 
 ```javascript
+const { getHistoricRates } = require('dukascopy-node');
+
 getHistoricRates({
   instrument: 'eurusd',
   dates: {
@@ -19,7 +21,7 @@ getHistoricRates({
 })
 ```
 
-will generate 30 urls:
+will generate 30 urls under the hood:
 
 ```javascript
 [
@@ -56,7 +58,7 @@ will generate 30 urls:
 ]
 ```
 
-By default `dukascopy-node` will split such list into groups (batches) of `10` items (this is controlled by the config parameter `batchSize`) and will start downloading these groups. After first group of `10` items is downloaded, it will wait `1000 ms` (parameter `pauseBetweenBatchesMs`) and will proceed to the next group, and so on.
+By default `dukascopy-node` will split this list into groups (batches) of `10` items (this is controlled by the config parameter `batchSize`) and will start downloading these groups with the first one. After first group of `10` items is downloaded, it will wait `1000 ms` (parameter `pauseBetweenBatchesMs`) and will proceed to the next group, and so on.
 
 This can also be expressed as a sequence of the following steps:
 
@@ -71,6 +73,8 @@ This can also be expressed as a sequence of the following steps:
 If you want to change those values, to let's say `batchSize: 15` and `pauseBetweenBatchesMs: 2000`
 
 ```javascript
+const { getHistoricRates } = require('dukascopy-node');
+
 getHistoricRates({
   instrument: 'eurusd',
   dates: {
