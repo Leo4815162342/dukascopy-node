@@ -9,16 +9,23 @@ For example - fetching historical price data for `eurusd` for the whole month of
 ```javascript
 const { getHistoricRates } = require('dukascopy-node');
 
-getHistoricRates({
-  instrument: 'eurusd',
-  dates: {
-    from: new Date('2019-06-01'),
-    to: new Date('2019-07-01'),
-  },
-  timeframe: 'm1',
-  batchSize: 10, // 10 is default
-  pauseBetweenBatchesMs: 1000 // 1000 is default
-})
+(async () => {
+  try {
+    const data = await getHistoricRates({
+      instrument: 'eurusd',
+      dates: {
+        from: new Date('2019-06-01'),
+        to: new Date('2019-07-01'),
+      },
+      timeframe: 'm1',
+      batchSize: 10, // 10 is default
+      pauseBetweenBatchesMs: 1000 // 1000 is default
+    });
+    console.log(data);
+  } catch (error) {
+    console.log('error', error);
+  }
+})();
 ```
 
 will generate 30 urls under the hood:
@@ -72,19 +79,29 @@ This can also be expressed as a sequence of the following steps:
 
 If you want to change those values, to let's say `batchSize: 15` and `pauseBetweenBatchesMs: 2000`
 
+### Example: [with-custom-batching.js](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-custom-batching/with-custom-batching.js)
+
 ```javascript
 const { getHistoricRates } = require('dukascopy-node');
 
-getHistoricRates({
-  instrument: 'eurusd',
-  dates: {
-    from: new Date('2019-06-01'),
-    to: new Date('2019-07-01'),
-  },
-  timeframe: 'm1',
-  batchSize: 15,
-  pauseBetweenBatchesMs: 2000
-})
+(async () => {
+  try {
+    const data = await getHistoricRates({
+      instrument: 'eurusd',
+      dates: {
+        from: new Date('2019-06-01'),
+        to: new Date('2019-07-01'),
+      },
+      timeframe: 'm1',
+      batchSize: 15,
+      pauseBetweenBatchesMs: 2000
+    });
+
+    console.log(data);
+  } catch (error) {
+    console.log('error', error);
+  }
+})();
 ```
 
 you can expect the following sequence of steps
