@@ -7,7 +7,7 @@ import { getHistoricRates, Config } from '../src';
       instrument: 'eurusd',
       dates: { from: '2019-06-01', to: '2019-07-01' },
       priceType: 'bid',
-      timeframe: 'd1',
+      timeframe: 'm1',
       format: 'json',
       volumes: true,
       utcOffset: 0,
