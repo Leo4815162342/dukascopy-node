@@ -17,9 +17,7 @@ const { getHistoricRates } = require('dukascopy-node');
         from: new Date('2019-06-01'),
         to: new Date('2019-07-01'),
       },
-      timeframe: 'm1',
-      batchSize: 10, // 10 is default
-      pauseBetweenBatchesMs: 1000 // 1000 is default
+      timeframe: 'm1'
     });
     console.log(data);
   } catch (error) {
