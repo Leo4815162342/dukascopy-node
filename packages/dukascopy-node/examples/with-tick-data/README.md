@@ -38,10 +38,8 @@ Output shape:
     "askVolume": 0.75,
     "bidVolume": 0.75
   },
-  // ...
 ]
 ```
-
 
 Full example output: [with-tick-data.output.json](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-tick-data/with-tick-data.output.json)
 
