@@ -25,9 +25,18 @@ const { getHistoricRates } = require('dukascopy-node');
   }
 })();
 ```
+Output shape:
 
+```json
+[
+  [ 1612137600000, 1.21225, 1.21363, 1.2056, 1.20676, 165569.8187 ],
+  [ 1612224000000, 1.20676, 1.20877, 1.20115, 1.20365, 147916.4607 ],
+  [ 1612310400000, 1.20365, 1.205, 1.2004, 1.20412, 119397.1138 ],
+//   ...
+]
+```
 
-Example output: [basic-array.output.json](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/basic/basic-array.output.json)
+Full example output: [basic-array.output.json](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/basic/basic-array.output.json)
 
 ---
 
@@ -55,7 +64,23 @@ const { getHistoricRates } = require('dukascopy-node');
 })();
 ```
 
-Example output: [basic-json.output.json](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/basic/basic-json.output.json)
+Output shape:
+
+```json
+[
+  {
+    "timestamp": 1612137600000,
+    "open": 1.21225,
+    "high": 1.21363,
+    "low": 1.2056,
+    "close": 1.20676,
+    "volume": 165569.8187
+  },
+//   ...
+]
+```
+
+Full example output: [basic-json.output.json](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/basic/basic-json.output.json)
 
 ---
 
@@ -84,6 +109,16 @@ const { getHistoricRates } = require('dukascopy-node');
 })();
 ```
 
-Example output: [basic-csv.output.csv](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/basic/basic-csv.output.csv)
+Output shape:
+
+```
+timestamp,open,high,low,close,volume
+1612137600000,1.21225,1.21363,1.2056,1.20676,165569.8187
+1612224000000,1.20676,1.20877,1.20115,1.20365,147916.4607
+1612310400000,1.20365,1.205,1.2004,1.20412,119397.1138
+...
+```
+
+Full example output: [basic-csv.output.csv](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/basic/basic-csv.output.csv)
 
 
