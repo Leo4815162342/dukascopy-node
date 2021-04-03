@@ -35,7 +35,7 @@ When `json` is requested as format for non-tick timeframe
 
 #### `ArrayItem`
 
-When `array` is requested as timeframe for non-tick timeframe
+When `array` is requested as format for non-tick timeframe
 
 ![ArrayItem](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-typescript/array_item.png?raw=true)
 
@@ -51,7 +51,7 @@ When `json` is requested as format for tick timeframe
 
 #### `ArrayTickItem`
 
-When `array` is requested as timeframe for tick timeframe
+When `array` is requested as format for tick timeframe
 
 ![ArrayTickItem](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-typescript/array_tick_item.png?raw=true)
 
@@ -59,7 +59,7 @@ When `array` is requested as timeframe for tick timeframe
 
 #### `string`
 
-When `csv` is requested as timeframe
+When `csv` is requested as format
 
 ![string](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-typescript/string.png?raw=true)
 
