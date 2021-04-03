@@ -77,7 +77,7 @@ This can also be expressed as a sequence of the following steps:
 
 If you want to change those values, to let's say `batchSize: 15` and `pauseBetweenBatchesMs: 2000`
 
-### Example: [with-custom-batching.js](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-custom-batching/with-custom-batching.js)
+### Example: [with-custom-batching.js](https://github.com/Leo4815162342/dukascopy-tools/blob/master/packages/dukascopy-node/examples/with-custom-batching/with-custom-batching.js)
 
 ```javascript
 const { getHistoricRates } = require('dukascopy-node');

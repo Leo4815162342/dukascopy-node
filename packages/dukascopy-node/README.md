@@ -51,12 +51,11 @@ const { getHistoricRates } = require('dukascopy-node');
 ```
 
 ## Detailed examples
-
-* [Basic usage](https://github.com/Leo4815162342/dukascopy-tools/tree/docs/node_examples/packages/dukascopy-node/examples/basic)
-* [With tick data](https://github.com/Leo4815162342/dukascopy-tools/tree/docs/node_examples/packages/dukascopy-node/examples/with-tick-data)
-* [With cache](https://github.com/Leo4815162342/dukascopy-tools/tree/docs/node_examples/packages/dukascopy-node/examples/with-cache)
-* [With custom batching](https://github.com/Leo4815162342/dukascopy-tools/tree/docs/node_examples/packages/dukascopy-node/examples/with-custom-batching)
-* [With typescript](https://github.com/Leo4815162342/dukascopy-tools/tree/docs/node_examples/packages/dukascopy-node/examples/with-typescript)
+* [Basic usage](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node/examples/basic)
+* [With tick data](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node/examples/with-tick-data)
+* [With cache](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node/examples/with-cache)
+* [With custom batching](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node/examples/with-custom-batching)
+* [With typescript](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node/examples/with-typescript)
 
 
 ## Config object

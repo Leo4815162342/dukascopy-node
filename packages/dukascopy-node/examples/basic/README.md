@@ -2,7 +2,7 @@
 
 There are three basic output formats: `array`, `json` and `csv`
 
-### [basic-array.js](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/basic/basic-array.js)
+### [basic-array.js](https://github.com/Leo4815162342/dukascopy-tools/blob/master/packages/dukascopy-node/examples/basic/basic-array.js)
 
 ```javascript
 const { getHistoricRates } = require('dukascopy-node');
@@ -35,11 +35,11 @@ Output shape:
 ]
 ```
 
-Full example output: [basic-array.output.json](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/basic/basic-array.output.json)
+Full example output: [basic-array.output.json](https://github.com/Leo4815162342/dukascopy-tools/blob/master/packages/dukascopy-node/examples/basic/basic-array.output.json)
 
 ---
 
-### [basic-json.js](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/basic/basic-json.js)
+### [basic-json.js](https://github.com/Leo4815162342/dukascopy-tools/blob/master/packages/dukascopy-node/examples/basic/basic-json.js)
 
 ```javascript
 const { getHistoricRates } = require('dukascopy-node');
@@ -78,12 +78,12 @@ Output shape:
 ]
 ```
 
-Full example output: [basic-json.output.json](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/basic/basic-json.output.json)
+Full example output: [basic-json.output.json](https://github.com/Leo4815162342/dukascopy-tools/blob/master/packages/dukascopy-node/examples/basic/basic-json.output.json)
 
 ---
 
 
-### [basic-csv.js](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/basic/basic-csv.js)
+### [basic-csv.js](https://github.com/Leo4815162342/dukascopy-tools/blob/master/packages/dukascopy-node/examples/basic/basic-csv.js)
 
 ```javascript
 const { getHistoricRates } = require('dukascopy-node');
@@ -117,6 +117,6 @@ timestamp,open,high,low,close,volume
 ...
 ```
 
-Full example output: [basic-csv.output.csv](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/basic/basic-csv.output.csv)
+Full example output: [basic-csv.output.csv](https://github.com/Leo4815162342/dukascopy-tools/blob/master/packages/dukascopy-node/examples/basic/basic-csv.output.csv)
 
 

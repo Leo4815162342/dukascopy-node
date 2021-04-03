@@ -47,7 +47,7 @@ const config: Config = {
 getHistoricRates(config).then(data => console.log(data));
 ```
 
-![JsonItem](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-typescript/json_item.png?raw=true)
+![JsonItem](https://github.com/Leo4815162342/dukascopy-tools/blob/master/packages/dukascopy-node/examples/with-typescript/json_item.png?raw=true)
 
 ---
 
@@ -73,7 +73,7 @@ const config: Config = {
 getHistoricRates(config).then(data => console.log(data));
 ```
 
-![ArrayItem](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-typescript/array_item.png?raw=true)
+![ArrayItem](https://github.com/Leo4815162342/dukascopy-tools/blob/master/packages/dukascopy-node/examples/with-typescript/array_item.png?raw=true)
 
 ---
 
@@ -99,7 +99,7 @@ const config: Config = {
 getHistoricRates(config).then(data => console.log(data));
 ```
 
-![JsonItemTick](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-typescript/json_item_tick.png?raw=true)
+![JsonItemTick](https://github.com/Leo4815162342/dukascopy-tools/blob/master/packages/dukascopy-node/examples/with-typescript/json_item_tick.png?raw=true)
 
 ---
 
@@ -125,7 +125,7 @@ const config: Config = {
 getHistoricRates(config).then(data => console.log(data));
 ```
 
-![ArrayTickItem](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-typescript/array_tick_item.png?raw=true)
+![ArrayTickItem](https://github.com/Leo4815162342/dukascopy-tools/blob/master/packages/dukascopy-node/examples/with-typescript/array_tick_item.png?raw=true)
 
 ---
 
@@ -151,5 +151,5 @@ const config: Config = {
 getHistoricRates(config).then(data => console.log(data));
 ```
 
-![string](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-typescript/string.png?raw=true)
+![string](https://github.com/Leo4815162342/dukascopy-tools/blob/master/packages/dukascopy-node/examples/with-typescript/string.png?raw=true)
 

@@ -4,7 +4,7 @@
 
 Since `tick` timeframe represents a raw price change, the output will NOT contain OHLC data (`open`, `high`, `low`, `close` prices).
 
-### Example: [with-tick-data.js](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-tick-data/with-tick-data.js)
+### Example: [with-tick-data.js](https://github.com/Leo4815162342/dukascopy-tools/blob/master/packages/dukascopy-node/examples/with-tick-data/with-tick-data.js)
 
 ```javascript
 const { getHistoricRates } = require('dukascopy-node');
@@ -41,8 +41,8 @@ Output shape:
 ]
 ```
 
-Full example output: [with-tick-data.output.json](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-tick-data/with-tick-data.output.json)
+Full example output: [with-tick-data.output.json](https://github.com/Leo4815162342/dukascopy-tools/blob/master/packages/dukascopy-node/examples/with-tick-data/with-tick-data.output.json)
 
  ### ❗Keep in mind❗
 
-When downloading tick data, expect slow loading times and big output, and consider adjusting `batchSize` and `pauseBetweenBatchesMs` parameters. More info: [With custom batching](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-custom-batching)
+When downloading tick data, expect slow loading times and big output, and consider adjusting `batchSize` and `pauseBetweenBatchesMs` parameters. More info: [With custom batching](https://github.com/Leo4815162342/dukascopy-tools/blob/master/packages/dukascopy-node/examples/with-custom-batching)

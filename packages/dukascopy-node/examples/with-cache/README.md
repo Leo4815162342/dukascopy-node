@@ -8,7 +8,7 @@ All the binary artifacts (which are downloaded from the dukascopy servers) will 
 
 ---
 
-### Example: [with-cache.js](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-cache/with-cache.js)
+### Example: [with-cache.js](https://github.com/Leo4815162342/dukascopy-tools/blob/master/packages/dukascopy-node/examples/with-cache/with-cache.js)
 
 ```javascript
 const { getHistoricRates } = require('dukascopy-node');
@@ -35,13 +35,13 @@ const { getHistoricRates } = require('dukascopy-node');
 
 After running, you can see that `dukascopy-node` has created the cache folder called `.dukascopy-cache` and stored the downloaded artifacts there.
 
-![dukascopy-node default cache folder](https://raw.githubusercontent.com/Leo4815162342/dukascopy-tools/docs/node_examples/packages/dukascopy-node/examples/with-cache/with-cache.png "dukascopy-node default cache folder")
+![dukascopy-node default cache folder](https://raw.githubusercontent.com/Leo4815162342/dukascopy-tools/master/packages/dukascopy-node/examples/with-cache/with-cache.png "dukascopy-node default cache folder")
 
 If you run the same code again, then you will notice that it's faster, since the data comes from your local disk rather than from network.
 
 ---
 
-### Example: [with-cache-custom-folder.js](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-cache/with-cache-custom-folder.js)
+### Example: [with-cache-custom-folder.js](https://github.com/Leo4815162342/dukascopy-tools/blob/master/packages/dukascopy-node/examples/with-cache/with-cache-custom-folder.js)
 
 ```javascript
 const { getHistoricRates } = require('dukascopy-node');
@@ -67,4 +67,4 @@ const { getHistoricRates } = require('dukascopy-node');
 })();
 ```
 
-![dukascopy-node custom cache folder](https://raw.githubusercontent.com/Leo4815162342/dukascopy-tools/docs/node_examples/packages/dukascopy-node/examples/with-cache/with-cache-custom-folder.png "dukascopy-node custom cache folder")
+![dukascopy-node custom cache folder](https://raw.githubusercontent.com/Leo4815162342/dukascopy-tools/master/packages/dukascopy-node/examples/with-cache/with-cache-custom-folder.png "dukascopy-node custom cache folder")
