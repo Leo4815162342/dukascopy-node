@@ -29,6 +29,24 @@ Through the power of overloads in Typescript, `dukascopy-node` knows the precise
 
 When `json` is requested as format for non-tick timeframe
 
+```typescript
+
+import { getHistoricRates, Config, Instrument, Timeframe, Format } from 'dukascopy-node';
+
+const config: Config = {
+  instrument: Instrument.eurusd,
+  dates: {
+    from: new Date('2021-03-30'),
+    to: new Date('2021-03-31')
+  },
+  timeframe: Timeframe.d1,
+  format: Format.json,
+  priceType: Price.bid
+};
+
+getHistoricRates(config).then(data => console.log(data));
+```
+
 ![JsonItem](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-typescript/json_item.png?raw=true)
 
 ---
@@ -36,6 +54,24 @@ When `json` is requested as format for non-tick timeframe
 #### `ArrayItem`
 
 When `array` is requested as format for non-tick timeframe
+
+```typescript
+
+import { getHistoricRates, Config, Instrument, Timeframe, Format } from 'dukascopy-node';
+
+const config: Config = {
+  instrument: Instrument.eurusd,
+  dates: {
+    from: new Date('2021-03-30'),
+    to: new Date('2021-03-31')
+  },
+  timeframe: Timeframe.d1,
+  format: Format.array,
+  priceType: Price.bid
+};
+
+getHistoricRates(config).then(data => console.log(data));
+```
 
 ![ArrayItem](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-typescript/array_item.png?raw=true)
 
@@ -45,6 +81,24 @@ When `array` is requested as format for non-tick timeframe
 
 When `json` is requested as format for tick timeframe
 
+```typescript
+
+import { getHistoricRates, Config, Instrument, Timeframe, Format } from 'dukascopy-node';
+
+const config: Config = {
+  instrument: Instrument.eurusd,
+  dates: {
+    from: new Date('2021-03-30'),
+    to: new Date('2021-03-31')
+  },
+  timeframe: Timeframe.tick,
+  format: Format.json,
+  priceType: Price.bid
+};
+
+getHistoricRates(config).then(data => console.log(data));
+```
+
 ![JsonItemTick](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-typescript/json_item_tick.png?raw=true)
 
 ---
@@ -53,6 +107,24 @@ When `json` is requested as format for tick timeframe
 
 When `array` is requested as format for tick timeframe
 
+```typescript
+
+import { getHistoricRates, Config, Instrument, Timeframe, Format } from 'dukascopy-node';
+
+const config: Config = {
+  instrument: Instrument.eurusd,
+  dates: {
+    from: new Date('2021-03-30'),
+    to: new Date('2021-03-31')
+  },
+  timeframe: Timeframe.tick,
+  format: Format.array,
+  priceType: Price.bid
+};
+
+getHistoricRates(config).then(data => console.log(data));
+```
+
 ![ArrayTickItem](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-typescript/array_tick_item.png?raw=true)
 
 ---
@@ -60,6 +132,24 @@ When `array` is requested as format for tick timeframe
 #### `string`
 
 When `csv` is requested as format
+
+```typescript
+
+import { getHistoricRates, Config, Instrument, Timeframe, Format } from 'dukascopy-node';
+
+const config: Config = {
+  instrument: Instrument.eurusd,
+  dates: {
+    from: new Date('2021-03-30'),
+    to: new Date('2021-03-31')
+  },
+  timeframe: Timeframe.d1,
+  format: Format.csv,
+  priceType: Price.bid
+};
+
+getHistoricRates(config).then(data => console.log(data));
+```
 
 ![string](https://github.com/Leo4815162342/dukascopy-tools/blob/docs/node_examples/packages/dukascopy-node/examples/with-typescript/string.png?raw=true)
 
