@@ -1,8 +1,8 @@
 import { resolve } from 'path';
 import { remove } from 'fs-extra';
-import { BufferFetcher } from '../../../src/buffer-fetcher';
-import { BufferObject } from '../../../src/buffer-fetcher/types';
-import { CacheManager } from '../../../src/cache-manager';
+import { BufferObject } from './types';
+import { BufferFetcher } from '.';
+import { CacheManager } from '../cache-manager';
 
 const urls = [
   'https://datafeed.dukascopy.com/datafeed/EURUSD/2019/01/04/BID_candles_min_1.bi5',

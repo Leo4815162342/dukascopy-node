@@ -1,5 +1,5 @@
-import { getTestCases } from '../../utils';
 import { aggregate } from '../../../src/aggregator';
+import { getTestCases } from '../../utils/testUtils';
 
 // tests/__test-data__/EURUSD/2019/01/04/00h_ticks.bi5
 // tests/__test-data__/EURUSD/2019/01/04/BID_candles_min_1.bi5

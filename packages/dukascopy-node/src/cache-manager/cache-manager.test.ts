@@ -1,6 +1,6 @@
 import { readdir, remove, readFile, readJSON, pathExists } from 'fs-extra';
 import { resolve } from 'path';
-import { CacheManager, DEFAULT_MANIFEST_FILE } from '../../../src/cache-manager';
+import { CacheManager, DEFAULT_MANIFEST_FILE } from '.';
 
 const cacheFolderPath = resolve(process.cwd(), 'test-cache-folder');
 
