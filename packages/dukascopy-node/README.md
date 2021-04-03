@@ -36,8 +36,8 @@ const { getHistoricRates } = require('dukascopy-node');
     const data = await getHistoricRates({
       instrument: 'btcusd',
       dates: {
-        from: '2018-01-01',
-        to: '2019-01-01'
+        from: new Date('2018-01-01'),
+        to: new Date('2019-01-01')
       },
       timeframe: 'd1',
       format: 'json'
@@ -49,6 +49,15 @@ const { getHistoricRates } = require('dukascopy-node');
   }
 })();
 ```
+
+## Detailed examples
+
+* [Basic usage](https://github.com/Leo4815162342/dukascopy-tools/tree/docs/node_examples/packages/dukascopy-node/examples/basic)
+* [With tick data](https://github.com/Leo4815162342/dukascopy-tools/tree/docs/node_examples/packages/dukascopy-node/examples/with-tick-data)
+* [With cache](https://github.com/Leo4815162342/dukascopy-tools/tree/docs/node_examples/packages/dukascopy-node/examples/with-cache)
+* [With custom batching](https://github.com/Leo4815162342/dukascopy-tools/tree/docs/node_examples/packages/dukascopy-node/examples/with-custom-batching)
+* [With typescript](https://github.com/Leo4815162342/dukascopy-tools/tree/docs/node_examples/packages/dukascopy-node/examples/with-typescript)
+
 
 ## Config object
 
