@@ -6,7 +6,7 @@ const { getHistoricRates } = require('dukascopy-node');
       instrument: 'eurusd',
       dates: {
         from: new Date('2021-03-30'),
-        to: new Date('2021-03-31'),
+        to: new Date('2021-03-31')
       },
       timeframe: 'tick'
     });

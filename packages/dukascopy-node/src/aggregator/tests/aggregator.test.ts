@@ -12,7 +12,7 @@ type TestCase = {
 };
 
 describe('Aggregator', () => {
-  const testCases = getTestCases<TestCase>('tests/unit/aggregator/cases');
+  const testCases = getTestCases<TestCase>('src/aggregator/tests/cases');
   testCases.forEach(({ path, content }) => generateTestSuite(content, path));
 });
 

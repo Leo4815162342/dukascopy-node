@@ -1,7 +1,7 @@
 // ALL TESTS ARE RUN ASSUMING Current Date is: July 12th, 2019, 21:05 UTC
-import { getTestCases } from '../../utils';
-import { normaliseDates } from '../../../src/dates-normaliser';
 import { advanceTo, clear } from 'jest-date-mock';
+import { normaliseDates } from '..';
+import { getTestCases } from '../../utils/testUtils';
 
 const customDateNow = '2019-07-12T21:05:00.000Z'; // mocking new Date()
 
@@ -29,7 +29,7 @@ describe(`Dates normaliser (mocked current time: ${customDateNow})`, () => {
     clear();
   });
 
-  const testCases = getTestCases<TestCase>('tests/unit/dates-normaliser/cases');
+  const testCases = getTestCases<TestCase>('src/dates-normaliser/tests/cases');
 
   testCases.forEach(({ path, content }) => generateTestSuite(content, path));
 });

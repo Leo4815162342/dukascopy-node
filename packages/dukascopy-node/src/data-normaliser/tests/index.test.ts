@@ -1,5 +1,5 @@
-import { getTestCases } from '../../utils';
-import { normalise } from '../../../src/data-normaliser';
+import { normalise } from '..';
+import { getTestCases } from '../../utils/testUtils';
 
 type Input = Parameters<typeof normalise>[0];
 type Output = ReturnType<typeof normalise>;
@@ -10,7 +10,7 @@ type TestCase = {
 };
 
 describe('Data normaliser', () => {
-  const testCases = getTestCases<TestCase>('tests/unit/data-normaliser/cases');
+  const testCases = getTestCases<TestCase>('src/data-normaliser/tests/cases');
   testCases.forEach(({ path, content }) => generateTestSuite(content, path));
 });
 

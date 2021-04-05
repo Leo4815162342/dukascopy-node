@@ -1,8 +1,7 @@
 import { Config } from '../../../src/config';
 
 import { validateConfigNode } from '../../../src/config-validator';
-
-import { getTestCases } from '../../utils';
+import { getTestCases } from '../../utils/testUtils';
 
 type TestCase = {
   config: Config;
@@ -24,6 +23,6 @@ function generateTestSuite({ config, expectedOutput }: TestCase, path: string): 
 }
 
 describe('Config validator', () => {
-  const testCases = getTestCases<TestCase>('tests/unit/config-validator/cases');
+  const testCases = getTestCases<TestCase>('src/config-validator/tests/cases');
   testCases.forEach(({ path, content }) => generateTestSuite(content, path));
 });
