@@ -91,9 +91,13 @@ const flagMap: Record<string, string> = {
               `\`${instrumentId}\``,
               name,
               description,
-              getFormattedDate(startHourForTicks, { hour: 'numeric' }),
-              getFormattedDate(startDayForMinuteCandles),
-              getFormattedDate(startMonthForHourlyCandles),
+              getFormattedDate(startHourForTicks, {
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric'
+              }),
+              getFormattedDate(startDayForMinuteCandles, { hour: 'numeric', minute: 'numeric' }),
+              getFormattedDate(startMonthForHourlyCandles, { hour: 'numeric' }),
               getFormattedDate(startYearForDailyCandles)
             ].join('|');
 
