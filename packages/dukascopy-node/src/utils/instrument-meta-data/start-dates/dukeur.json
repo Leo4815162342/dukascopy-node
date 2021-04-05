@@ -1,6 +1,0 @@
-{
-  "startHourForTicks": "2000-01-01T00:00:00.000Z",
-  "startDayForMinuteCandles": "2019-02-28T00:00:00.000Z",
-  "startMonthForHourlyCandles": "2019-02-01T00:00:00.000Z",
-  "startYearForDailyCandles": "2019-01-01T00:00:00.000Z"
-}
