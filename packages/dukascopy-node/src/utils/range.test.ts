@@ -1,4 +1,4 @@
-import { getTimeframeFromUrl } from '../../../src/utils/range';
+import { getTimeframeFromUrl } from './range';
 
 const TEST_NAMESPACE = 'Range utils';
 

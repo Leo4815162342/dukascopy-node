@@ -6,7 +6,7 @@ const { getHistoricRates } = require('dukascopy-node');
       instrument: 'eurusd',
       dates: {
         from: new Date('2019-06-01'),
-        to: new Date('2019-07-01'),
+        to: new Date('2019-07-01')
       },
       timeframe: 'm1',
       batchSize: 15,

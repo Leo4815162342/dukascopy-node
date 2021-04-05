@@ -1,5 +1,5 @@
 import { readdirSync } from 'fs';
-import { Config } from '../src/config';
+import { Config } from '../config';
 
 function getTestCases<T>(
   folder: string

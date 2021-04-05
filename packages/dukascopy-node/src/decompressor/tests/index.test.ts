@@ -1,5 +1,5 @@
-import { getTestCases } from '../../utils';
 import { decompress } from '../../../src/decompressor';
+import { getTestCases } from '../../utils/testUtils';
 
 function generateTestSuite({ input, expectedOutput }: TestCase, path: string): void {
   const [fileName] = path.split('/').reverse();
@@ -17,6 +17,6 @@ type TestCase = {
 };
 
 describe('Decompressor', () => {
-  const testCases = getTestCases<TestCase>('tests/unit/decompressor/cases');
+  const testCases = getTestCases<TestCase>('src/decompressor/tests/cases');
   testCases.forEach(({ path, content }) => generateTestSuite(content, path));
 });

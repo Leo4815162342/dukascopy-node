@@ -1,4 +1,4 @@
-import { getDateFromUrl } from '../../../src/utils/date';
+import { getDateFromUrl } from './date';
 
 const urls = [
   {

@@ -1,8 +1,8 @@
 // ALL TESTS ARE RUN ASSUMING Current Date is: July 12th, 2019, 21:05 UTC
-import { getTestCases } from '../../utils';
 import { generateUrls } from '../../../src/url-generator';
 
 import { advanceTo, clear } from 'jest-date-mock';
+import { getTestCases } from '../../utils/testUtils';
 
 const customDateNow = '2019-07-12T21:05:00.000Z'; // mocking new Date()
 
@@ -20,7 +20,7 @@ describe(`Url generator (mocked current time: ${customDateNow})`, () => {
     clear();
   });
 
-  const testCases = getTestCases<TestCase>('tests/unit/url-generator/cases');
+  const testCases = getTestCases<TestCase>('src/url-generator/tests/cases');
 
   testCases.forEach(({ path, content }) => generateTestSuite(content, path));
 });

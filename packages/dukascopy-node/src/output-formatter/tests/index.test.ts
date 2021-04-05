@@ -1,5 +1,5 @@
-import { getTestCases } from '../../utils';
 import { formatOutput } from '../../../src/output-formatter';
+import { getTestCases } from '../../utils/testUtils';
 
 type TestCase = {
   input: Parameters<typeof formatOutput>[0];
@@ -17,6 +17,6 @@ function generateTestSuite({ input, expectedOutput }: TestCase, path: string): v
 }
 
 describe('Output formatter', () => {
-  const testCases = getTestCases<TestCase>('tests/unit/output-formatter/cases');
+  const testCases = getTestCases<TestCase>('src/output-formatter/tests/cases');
   testCases.forEach(({ path, content }) => generateTestSuite(content, path));
 });

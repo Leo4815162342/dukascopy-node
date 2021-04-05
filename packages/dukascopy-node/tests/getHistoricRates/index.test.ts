@@ -8,8 +8,8 @@ import { promises } from 'fs';
 import { getHistoricRates } from '../../src';
 import { URL_ROOT } from '../../src/url-generator';
 import { BufferFetcher } from '../../src/buffer-fetcher';
-import { getTestCases, getConfigDescription } from '../utils';
 import { Config } from '../../src/config';
+import { getTestCases, getConfigDescription } from '../../src/utils/testUtils';
 import { PromiseType } from 'utility-types';
 import { advanceTo, clear } from 'jest-date-mock';
 
