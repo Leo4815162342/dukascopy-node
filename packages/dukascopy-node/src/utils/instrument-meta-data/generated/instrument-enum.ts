@@ -103,6 +103,12 @@ export enum Instrument {
     '1398hkhkd'='1398hkhkd',
 
     /**
+     * ### Xiaomi Corp
+     * *1810.HK/HKD*
+     */
+    '1810hkhkd'='1810hkhkd',
+
+    /**
      * ### Sunac China Holdings
      * *1918.HK/HKD*
      */
@@ -151,10 +157,40 @@ export enum Instrument {
     '2628hkhkd'='2628hkhkd',
 
     /**
+     * ### CSOP FTSE China A50 ETF
+     * *2822.HK/HKD*
+     */
+    '2822hkhkd'='2822hkhkd',
+
+    /**
+     * ### Hang Seng H-Share Index ETF
+     * *2828.HK/HKD*
+     */
+    '2828hkhkd'='2828hkhkd',
+
+    /**
+     * ### Hang Seng Index ETF
+     * *2833.HK/HKD*
+     */
+    '2833hkhkd'='2833hkhkd',
+
+    /**
+     * ### iShares Core S&P BSE SENSEX India ETF
+     * *2836.HK/HKD*
+     */
+    '2836hkhkd'='2836hkhkd',
+
+    /**
      * ### Japan Tobacco
      * *2914.JP/JPY*
      */
     '2914jpjpy'='2914jpjpy',
+
+    /**
+     * ### ChinaAMC CSI 300 Index ETF
+     * *3188.HK/HKD*
+     */
+    '3188hkhkd'='3188hkhkd',
 
     /**
      * ### China Evergrande Group
@@ -469,12 +505,6 @@ export enum Instrument {
     '9433jpjpy'='9433jpjpy',
 
     /**
-     * ### NTT Docomo
-     * *9437.JP/JPY*
-     */
-    '9437jpjpy'='9437jpjpy',
-
-    /**
      * ### Tokyo Electric Power Company
      * *9501.JP/JPY*
      */
@@ -499,10 +529,22 @@ export enum Instrument {
     aususd='aususd',
 
     /**
+     * ### A2A Spa
+     * *A2A.IT/EUR*
+     */
+    a2aiteur='a2aiteur',
+
+    /**
      * ### ALCOA INC
      * *AA.US/USD*
      */
     aaususd='aaususd',
+
+    /**
+     * ### AbbVie Inc
+     * *AABV.US/USD*
+     */
+    aabvususd='aabvususd',
 
     /**
      * ### Anglo American PLC
@@ -655,6 +697,12 @@ export enum Instrument {
     agkgbgbx='agkgbgbx',
 
     /**
+     * ### Autogrill Spa
+     * *AGL.IT/EUR*
+     */
+    agliteur='agliteur',
+
+    /**
      * ### Aegon NV
      * *AGN.NL/EUR*
      */
@@ -751,6 +799,12 @@ export enum Instrument {
     amgnususd='amgnususd',
 
     /**
+     * ### Amplifon Spa
+     * *AMP.IT/EUR*
+     */
+    ampiteur='ampiteur',
+
+    /**
      * ### AMERIPRISE FINANCIAL INC
      * *AMP.US/USD*
      */
@@ -767,6 +821,12 @@ export enum Instrument {
      * *AMT.US/USD*
      */
     amtususd='amtususd',
+
+    /**
+     * ### American Well Corp Class A
+     * *AMWL.US/USD*
+     */
+    amwlususd='amwlususd',
 
     /**
      * ### AMAZON.COM INC
@@ -809,6 +869,12 @@ export enum Instrument {
      * *ATCOA.SE/SEK*
      */
     atcoasesek='atcoasesek',
+
+    /**
+     * ### Atlantia Spa
+     * *ATL.IT/EUR*
+     */
+    atliteur='atliteur',
 
     /**
      * ### ACTIVISION BLIZZARD INC
@@ -877,6 +943,12 @@ export enum Instrument {
     axpususd='axpususd',
 
     /**
+     * ### Azimut Holding Spa
+     * *AZM.IT/EUR*
+     */
+    azmiteur='azmiteur',
+
+    /**
      * ### AstraZeneca PLC
      * *AZN.GB/GBX*
      */
@@ -931,6 +1003,12 @@ export enum Instrument {
     baerchchf='baerchchf',
 
     /**
+     * ### Banco BPM Spa
+     * *BAMI.IT/EUR*
+     */
+    bamiiteur='bamiiteur',
+
+    /**
      * ### Barclays PLC
      * *BARC.GB/GBX*
      */
@@ -973,6 +1051,12 @@ export enum Instrument {
     bbyususd='bbyususd',
 
     /**
+     * ### Brunello Cucinelli Spa
+     * *BC.IT/EUR*
+     */
+    bciteur='bciteur',
+
+    /**
      * ### BECTON DICKINSON AND CO
      * *BDX.US/USD*
      */
@@ -1003,6 +1087,12 @@ export enum Instrument {
     biibususd='biibususd',
 
     /**
+     * ### Bank Of Ireland Plc
+     * *BIRG.IE/EUR*
+     */
+    birgieeur='birgieeur',
+
+    /**
      * ### BANK OF NEW YORK MELLON CORP
      * *BK.US/USD*
      */
@@ -1019,6 +1109,12 @@ export enum Instrument {
      * *BLT.GB/GBX*
      */
     bltgbgbx='bltgbgbx',
+
+    /**
+     * ### Banca Monte dei Paschi di Siena Spa
+     * *BMPS.IT/EUR*
+     */
+    bmpsiteur='bmpsiteur',
 
     /**
      * ### Bayerische Motoren Werke AG
@@ -1069,10 +1165,22 @@ export enum Instrument {
     bpususd='bpususd',
 
     /**
+     * ### Bper Banca Spa
+     * *BPE.IT/EUR*
+     */
+    bpeiteur='bpeiteur',
+
+    /**
      * ### Burberry Group PLC
      * *BRBY.GB/GBX*
      */
     brbygbgbx='brbygbgbx',
+
+    /**
+     * ### Brembo Spa
+     * *BRE.IT/EUR*
+     */
+    breiteur='breiteur',
 
     /**
      * ### BERKSHIRE HATHAWAY INC-CL B
@@ -1103,6 +1211,12 @@ export enum Instrument {
      * *BUND.TR/EUR*
      */
     bundtreur='bundtreur',
+
+    /**
+     * ### Buzzi Unicem Spa
+     * *BZU.IT/EUR*
+     */
+    bzuiteur='bzuiteur',
 
     /**
      * ### CITIGROUP INC
@@ -1165,6 +1279,12 @@ export enum Instrument {
     carlbdkdkk='carlbdkdkk',
 
     /**
+     * ### Cattolica Ass Coop A
+     * *CASS.IT/EUR*
+     */
+    cassiteur='cassiteur',
+
+    /**
      * ### CATERPILLAR INC
      * *CAT.US/USD*
      */
@@ -1187,6 +1307,12 @@ export enum Instrument {
      * *CERN.US/USD*
      */
     cernususd='cernususd',
+
+    /**
+     * ### Cerved Information Solutions SPA
+     * *CERV.IT/EUR*
+     */
+    cerviteur='cerviteur',
 
     /**
      * ### CF INDUSTRIES HOLDINGS INC
@@ -1327,10 +1453,22 @@ export enum Instrument {
     cpigbgbx='cpigbgbx',
 
     /**
+     * ### Davide Campari-Milano Spa
+     * *CPR.IT/EUR*
+     */
+    cpriteur='cpriteur',
+
+    /**
      * ### Croda International PLC
      * *CRDA.GB/GBX*
      */
     crdagbgbx='crdagbgbx',
+
+    /**
+     * ### CRH Plc
+     * *CRG.IE/EUR*
+     */
+    crgieeur='crgieeur',
 
     /**
      * ### CRH PLC
@@ -1393,6 +1531,12 @@ export enum Instrument {
     ctxsususd='ctxsususd',
 
     /**
+     * ### Credito Valtellinese Spa
+     * *CVAL.IT/EUR*
+     */
+    cvaliteur='cvaliteur',
+
+    /**
      * ### CVS HEALTH CORP
      * *CVS.US/USD*
      */
@@ -1421,6 +1565,12 @@ export enum Instrument {
      * *DAL.US/USD*
      */
     dalususd='dalususd',
+
+    /**
+     * ### Danieli & Co Spa
+     * *DAN.IT/EUR*
+     */
+    daniteur='daniteur',
 
     /**
      * ### Danske Bank A/S
@@ -1489,6 +1639,12 @@ export enum Instrument {
     diaeseur='diaeseur',
 
     /**
+     * ### Diasorin Spa
+     * *DIA.IT/EUR*
+     */
+    diaiteur='diaiteur',
+
+    /**
      * ### SPDR Dow Jones® Industrial Average ETF
      * *DIA.US/USD*
      */
@@ -1529,6 +1685,12 @@ export enum Instrument {
      * *DPW.DE/EUR*
      */
     dpwdeeur='dpwdeeur',
+
+    /**
+     * ### LYXOR ETF Daily X2 Short Bund
+     * *DSB.FR/EUR*
+     */
+    dsbfreur='dsbfreur',
 
     /**
      * ### Koninklijke DSM NV
@@ -1669,6 +1831,12 @@ export enum Instrument {
     enfreur='enfreur',
 
     /**
+     * ### Enel SpA
+     * *ENEL.IT/EUR*
+     */
+    eneliteur='eneliteur',
+
+    /**
      * ### Enagas SA
      * *ENG.ES/EUR*
      */
@@ -1679,6 +1847,12 @@ export enum Instrument {
      * *ENGI.FR/EUR*
      */
     engifreur='engifreur',
+
+    /**
+     * ### ENI Spa
+     * *ENI.IT/EUR*
+     */
+    eniiteur='eniiteur',
 
     /**
      * ### E.ON SE
@@ -1697,6 +1871,12 @@ export enum Instrument {
      * *EQT.US/USD*
      */
     eqtususd='eqtususd',
+
+    /**
+     * ### ERG Spa
+     * *ERG.IT/EUR*
+     */
+    ergiteur='ergiteur',
 
     /**
      * ### Telefonaktiebolaget LM Ericsson
@@ -1963,6 +2143,18 @@ export enum Instrument {
     fbususd='fbususd',
 
     /**
+     * ### FinecoBank Banca Fineco Spa
+     * *FBK.IT/EUR*
+     */
+    fbkiteur='fbkiteur',
+
+    /**
+     * ### Fiat Chrysler Auto NV
+     * *FCA.IT/EUR*
+     */
+    fcaiteur='fcaiteur',
+
+    /**
      * ### FREEPORT-MCMORAN INC
      * *FCX.US/USD*
      */
@@ -2033,6 +2225,12 @@ export enum Instrument {
      * *FXI.US/USD*
      */
     fxiususd='fxiususd',
+
+    /**
+     * ### Assicurazioni Generali Spa
+     * *DLG.IT/EUR*
+     */
+    giteur='giteur',
 
     /**
      * ### Galp Energia SGPS SA
@@ -2335,6 +2533,12 @@ export enum Instrument {
     ifxdeeur='ifxdeeur',
 
     /**
+     * ### Italgas Spa
+     * *IG.IT/EUR*
+     */
+    igiteur='igiteur',
+
+    /**
      * ### InterContinental Hotels Group PLC
      * *IHG.GB/GBX*
      */
@@ -2395,16 +2599,22 @@ export enum Instrument {
     invebsesek='invebsesek',
 
     /**
+     * ### Infrastrutture Wireless Italiane Spa
+     * *INW.IT/EUR*
+     */
+    inwiteur='inwiteur',
+
+    /**
      * ### INTERPUBLIC GROUP OF COS INC
      * *IPG.US/USD*
      */
     ipgususd='ipgususd',
 
     /**
-     * ### Inmarsat PLC
-     * *ISAT.GB/GBX*
+     * ### Intesa Sanpaolo Spa
+     * *ISP.IT/EUR*
      */
-    isatgbgbx='isatgbgbx',
+    ispiteur='ispiteur',
 
     /**
      * ### INTUITIVE SURGICAL INC
@@ -2503,6 +2713,12 @@ export enum Instrument {
     jpmususd='jpmususd',
 
     /**
+     * ### Juventus Football Club Spa
+     * *JUVE.IT/EUR*
+     */
+    juveiteur='juveiteur',
+
+    /**
      * ### NORDSTROM INC
      * *JWN.US/USD*
      */
@@ -2581,6 +2797,18 @@ export enum Instrument {
     krususd='krususd',
 
     /**
+     * ### Kingspan Group Plc
+     * *KRX.IE/EUR*
+     */
+    krxieeur='krxieeur',
+
+    /**
+     * ### Kerry Group Plc
+     * *KRZ.IE/EUR*
+     */
+    krzieeur='krzieeur',
+
+    /**
      * ### KOHLS CORP
      * *KSS.US/USD*
      */
@@ -2597,6 +2825,12 @@ export enum Instrument {
      * *LAND.GB/GBX*
      */
     landgbgbx='landgbgbx',
+
+    /**
+     * ### Leonardo Spa
+     * *LDO.IT/EUR*
+     */
+    ldoiteur='ldoiteur',
 
     /**
      * ### LENNAR CORP-A
@@ -2695,6 +2929,12 @@ export enum Instrument {
     luvususd='luvususd',
 
     /**
+     * ### Lyxor ETF Leverage CAC 40
+     * *LVC.FR/EUR*
+     */
+    lvcfreur='lvcfreur',
+
+    /**
      * ### Las Vegas Sands Corp.
      * *LVS.US/USD*
      */
@@ -2705,6 +2945,12 @@ export enum Instrument {
      * *LXS.DE/EUR*
      */
     lxsdeeur='lxsdeeur',
+
+    /**
+     * ### Lyxor UCITS ETF STOXX EUROPE 600 Banks
+     * *LYXBNK.FR/EUR*
+     */
+    lyxbnkfreur='lyxbnkfreur',
 
     /**
      * ### MACY'S INC
@@ -2735,6 +2981,12 @@ export enum Instrument {
      * *MAT.US/USD*
      */
     matususd='matususd',
+
+    /**
+     * ### Mediobanca Spa
+     * *MB.IT/EUR*
+     */
+    mbiteur='mbiteur',
 
     /**
      * ### LVMH Moet Hennessy Louis Vuitton SA
@@ -2809,6 +3061,12 @@ export enum Instrument {
     moususd='moususd',
 
     /**
+     * ### Moncler Spa
+     * *MONC.IT/EUR*
+     */
+    monciteur='monciteur',
+
+    /**
      * ### MARATHON PETROLEUM CORP
      * *MPC.US/USD*
      */
@@ -2827,6 +3085,12 @@ export enum Instrument {
     mrkususd='mrkususd',
 
     /**
+     * ### Moderna
+     * *MRNA.US/USD*
+     */
+    mrnaususd='mrnaususd',
+
+    /**
      * ### MARATHON OIL CORP
      * *MRO.US/USD*
      */
@@ -2837,6 +3101,12 @@ export enum Instrument {
      * *MRW.GB/GBX*
      */
     mrwgbgbx='mrwgbgbx',
+
+    /**
+     * ### Mediaset Spa
+     * *MS.IT/EUR*
+     */
+    msiteur='msiteur',
 
     /**
      * ### MORGAN STANLEY
@@ -2867,12 +3137,6 @@ export enum Instrument {
      * *MUV2.DE/EUR*
      */
     muv2deeur='muv2deeur',
-
-    /**
-     * ### NOBLE ENERGY INC
-     * *NBL.US/USD*
-     */
-    nblususd='nblususd',
 
     /**
      * ### Nordea Bank AB
@@ -2921,6 +3185,12 @@ export enum Instrument {
      * *NHY.NO/NOK*
      */
     nhynonok='nhynonok',
+
+    /**
+     * ### Nio INC
+     * *NIO.US/USD*
+     */
+    nioususd='nioususd',
 
     /**
      * ### NIKE INC
@@ -3163,10 +3433,28 @@ export enum Instrument {
     phianleur='phianleur',
 
     /**
+     * ### Piaggio & C. Spa
+     * *PIA.IT/EUR*
+     */
+    piaiteur='piaiteur',
+
+    /**
      * ### Poland 20 Index
      * *PLN.IDX/PLN*
      */
     plnidxpln='plnidxpln',
+
+    /**
+     * ### Palantir Tech Inc A
+     * *PLTR.US/USD*
+     */
+    pltrususd='pltrususd',
+
+    /**
+     * ### Plug Power Inc
+     * *PLUG.US/USD*
+     */
+    plugususd='plugususd',
 
     /**
      * ### PHILIP MORRIS INTERNATIONAL
@@ -3205,6 +3493,12 @@ export enum Instrument {
     pruususd='pruususd',
 
     /**
+     * ### Prysmian Spa
+     * *PRY.IT/EUR*
+     */
+    pryiteur='pryiteur',
+
+    /**
      * ### PUBLIC STORAGE
      * *PSA.US/USD*
      */
@@ -3235,6 +3529,12 @@ export enum Instrument {
     psxususd='psxususd',
 
     /**
+     * ### Peloton Interactive Inc
+     * *PTON.US/USD*
+     */
+    ptonususd='ptonususd',
+
+    /**
      * ### Publicis Groupe SA
      * *PUB.FR/EUR*
      */
@@ -3263,6 +3563,12 @@ export enum Instrument {
      * *QQQ.US/USD*
      */
     qqqususd='qqqususd',
+
+    /**
+     * ### Ferrari NV
+     * *RACE.IT/EUR*
+     */
+    raceiteur='raceiteur',
 
     /**
      * ### Randstad Holding NV
@@ -3299,6 +3605,12 @@ export enum Instrument {
      * *RDSB.GB/GBX*
      */
     rdsbgbgbx='rdsbgbgbx',
+
+    /**
+     * ### Recordati Industria Chimica e Farma Spa
+     * *REC.IT/EUR*
+     */
+    reciteur='reciteur',
 
     /**
      * ### Red Electrica Corp SA
@@ -3367,6 +3679,12 @@ export enum Instrument {
     rogchchf='rogchchf',
 
     /**
+     * ### Roku Inc
+     * *ROKU.US/USD*
+     */
+    rokuususd='rokuususd',
+
+    /**
      * ### ROSS STORES INC
      * *ROST.US/USD*
      */
@@ -3395,6 +3713,12 @@ export enum Instrument {
      * *RWE.DE/EUR*
      */
     rwedeeur='rwedeeur',
+
+    /**
+     * ### Ryanair Holdings Plc
+     * *RY4C.IE/EUR*
+     */
+    ry4cieeur='ry4cieeur',
 
     /**
      * ### Safran SA
@@ -3473,6 +3797,12 @@ export enum Instrument {
      * *SECUB.SE/SEK*
      */
     secubsesek='secubsesek',
+
+    /**
+     * ### Salvat Ferragamo Spa
+     * *SFER.IT/EUR*
+     */
+    sferiteur='sferiteur',
 
     /**
      * ### Singapore Blue Chip Cash Index
@@ -3571,6 +3901,12 @@ export enum Instrument {
     snapususd='snapususd',
 
     /**
+     * ### Snowflake Inc Class A
+     * *SNOW.US/USD*
+     */
+    snowususd='snowususd',
+
+    /**
      * ### SOUTHERN CO/THE
      * *SO.US/USD*
      */
@@ -3601,16 +3937,40 @@ export enum Instrument {
     spgususd='spgususd',
 
     /**
+     * ### SAIPEM Spa
+     * *SPM.IT/EUR*
+     */
+    spmiteur='spmiteur',
+
+    /**
      * ### SPDR S&P 500 ETF
      * *SPY.US/USD*
      */
     spyususd='spyususd',
 
     /**
+     * ### Square Inc
+     * *SQ.US/USD*
+     */
+    sqususd='sqususd',
+
+    /**
      * ### Swiss Re AG
      * *SREN.CH/CHF*
      */
     srenchchf='srenchchf',
+
+    /**
+     * ### Snam Spa
+     * *SRG.IT/EUR*
+     */
+    srgiteur='srgiteur',
+
+    /**
+     * ### Saras Spa
+     * *SRS.IT/EUR*
+     */
+    srsiteur='srsiteur',
 
     /**
      * ### SSE PLC
@@ -3635,6 +3995,12 @@ export enum Instrument {
      * *STL.NO/NOK*
      */
     stlnonok='stlnonok',
+
+    /**
+     * ### STMicroelectronics NV
+     * *STM.IT/EUR*
+     */
+    stmiteur='stmiteur',
 
     /**
      * ### STATE STREET CORP
@@ -3715,6 +4081,12 @@ export enum Instrument {
     tategbgbx='tategbgbx',
 
     /**
+     * ### iShares TecDAX UCITS DE ETF
+     * *TECDAXE.DE/EUR*
+     */
+    tecdaxedeeur='tecdaxedeeur',
+
+    /**
      * ### Telefonica SA
      * *TEF.ES/EUR*
      */
@@ -3733,6 +4105,12 @@ export enum Instrument {
     tel2bsesek='tel2bsesek',
 
     /**
+     * ### Tenaris SA
+     * *TEN.IT/EUR*
+     */
+    teniteur='teniteur',
+
+    /**
      * ### TEVA PHARMACEUTICAL-SP ADR
      * *TEVA.US/USD*
      */
@@ -3745,10 +4123,16 @@ export enum Instrument {
     tgtususd='tgtususd',
 
     /**
-     * ### TIFFANY & CO
-     * *TIF.US/USD*
+     * ### Tiscali Spa
+     * *TIS.IT/EUR*
      */
-    tifususd='tifususd',
+    tisiteur='tisiteur',
+
+    /**
+     * ### Telecom Italia Spa
+     * *TIT.IT/EUR*
+     */
+    tititeur='tititeur',
 
     /**
      * ### TJX COMPANIES INC
@@ -3793,10 +4177,22 @@ export enum Instrument {
     tmoususd='tmoususd',
 
     /**
+     * ### Tods Spa
+     * *TOD.IT/EUR*
+     */
+    toditeur='toditeur',
+
+    /**
      * ### Travis Perkins PLC
      * *TPK.GB/GBX*
      */
     tpkgbgbx='tpkgbgbx',
+
+    /**
+     * ### Terna Spa
+     * *TRN.IT/EUR*
+     */
+    trniteur='trniteur',
 
     /**
      * ### T ROWE PRICE GROUP INC
@@ -3859,6 +4255,12 @@ export enum Instrument {
     txnususd='txnususd',
 
     /**
+     * ### Uber Inc
+     * *UBER.US/USD*
+     */
+    uberususd='uberususd',
+
+    /**
      * ### UBS Group AG
      * *UBSG.CH/CHF*
      */
@@ -3869,6 +4271,12 @@ export enum Instrument {
      * *UCB.BE/EUR*
      */
     ucbbeeur='ucbbeeur',
+
+    /**
+     * ### UniCredit Spa
+     * *UCG.IT/EUR*
+     */
+    ucgiteur='ucgiteur',
 
     /**
      * ### Peugeot SA
@@ -3929,6 +4337,12 @@ export enum Instrument {
      * *UPS.US/USD*
      */
     upsususd='upsususd',
+
+    /**
+     * ### Unipolsai Assicurazioni Spa
+     * *US.IT/EUR*
+     */
+    usiteur='usiteur',
 
     /**
      * ### US BANCORP
@@ -4207,6 +4621,12 @@ export enum Instrument {
     wbaususd='wbaususd',
 
     /**
+     * ### WeBuild Spa
+     * *WBD.IT/EUR*
+     */
+    wbditeur='wbditeur',
+
+    /**
      * ### WESTERN DIGITAL CORP
      * *WDC.US/USD*
      */
@@ -4351,6 +4771,12 @@ export enum Instrument {
     xopususd='xopususd',
 
     /**
+     * ### Xpeng Inc ADR
+     * *XPEV.US/USD*
+     */
+    xpevususd='xpevususd',
+
+    /**
      * ### YUM! BRANDS INC
      * *YUM.US/USD*
      */
@@ -4367,6 +4793,12 @@ export enum Instrument {
      * *ZBH.US/USD*
      */
     zbhususd='zbhususd',
+
+    /**
+     * ### Zoom Video Communications (A Class)
+     * *ZM.US/USD*
+     */
+    zmususd='zmususd',
 
     /**
      * ### Zurich Insurance Group AG

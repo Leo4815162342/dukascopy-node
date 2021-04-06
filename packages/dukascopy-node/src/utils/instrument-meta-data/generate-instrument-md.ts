@@ -3,11 +3,10 @@ import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
 import { getFormattedDate } from '../date';
-import { InstrumentInitMetaData } from './generate-init-meta';
+import { InstrumentMetaData } from './generate-meta';
 
 import instrumentGroups from './generated/instrument-groups.json';
 import instrumentMetaData from './generated/instrument-meta-data.json';
-import { StartDates } from './min-start-date';
 
 const saveFile = promisify(fs.writeFile);
 
@@ -32,6 +31,8 @@ const flagMap: Record<string, string> = {
   finland: '🇫🇮',
   france: '🇫🇷',
   germany: '🇩🇪',
+  italy: '🇮🇹',
+  ireland: '🇮🇪',
   netherlands: '🇳🇱',
   norway: '🇳🇴',
   portugal: '🇵🇹',
@@ -84,15 +85,19 @@ const flagMap: Record<string, string> = {
               startYearForDailyCandles
             } = instrumentMetaData[
               instrumentId as keyof typeof instrumentMetaData
-            ] as InstrumentInitMetaData & StartDates;
+            ] as InstrumentMetaData;
 
             const line = [
               `\`${instrumentId}\``,
               name,
               description,
-              getFormattedDate(startHourForTicks, { hour: 'numeric' }),
-              getFormattedDate(startDayForMinuteCandles),
-              getFormattedDate(startMonthForHourlyCandles),
+              getFormattedDate(startHourForTicks, {
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric'
+              }),
+              getFormattedDate(startDayForMinuteCandles, { hour: 'numeric', minute: 'numeric' }),
+              getFormattedDate(startMonthForHourlyCandles, { hour: 'numeric' }),
               getFormattedDate(startYearForDailyCandles)
             ].join('|');
 

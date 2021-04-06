@@ -4,7 +4,7 @@ import fs from 'fs';
 import { promisify } from 'util';
 import fetch from 'node-fetch';
 import { generateInstrumentGroupData } from './generate-group-data';
-import { generateInitMeta } from './generate-init-meta';
+import { generateMeta } from './generate-meta';
 import { generateInstrumentEnum } from './generate-instrument-enum';
 import { MetaDataResponse } from './generate-data.types';
 const saveFile = promisify(fs.writeFile);
@@ -30,7 +30,7 @@ fetch('https://freeserv.dukascopy.com/2.0/index.php?path=common%2Finstruments', 
     });
 
     return Promise.all([
-      generateInitMeta(obj.instruments, path.resolve(OUTPUT_FOLDER, 'instrument-meta-data.json')),
+      generateMeta(obj.instruments, path.resolve(OUTPUT_FOLDER, 'instrument-meta-data.json')),
       generateInstrumentEnum(obj.instruments, path.resolve(OUTPUT_FOLDER, 'instrument-enum.ts')),
       generateInstrumentGroupData(obj, path.resolve(OUTPUT_FOLDER, 'instrument-groups.json'))
     ]);
