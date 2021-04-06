@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-cli/compare/dukascopy-cli@1.4.1...dukascopy-cli@1.5.0) (2021-04-06)
+
+
+### Features
+
+* new instruments as of April, 2021 ([0ebb9e1](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-cli/commit/0ebb9e11ee3d99502eca065565c399049812e64c))
+
+
+
+
+
 ## [1.4.1](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-cli/compare/dukascopy-cli@1.4.0...dukascopy-cli@1.4.1) (2021-03-21)
 
 
