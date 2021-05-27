@@ -1,6 +1,6 @@
 <h1>Dukascopy tools</h1>
 
-Download historical market prices for [800+ instruments](#instruments) via:
+Download historical market tick data for [800+ instruments](#instruments) via:
 
 [`dukascopy-node`](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node) | [`dukascopy-cli`](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-cli)
 :---: | :---:
