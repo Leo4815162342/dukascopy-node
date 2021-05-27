@@ -7,7 +7,7 @@
   <a href="https://github.com/facebook/jest"><img src="https://img.shields.io/badge/tested_with-jest-99424f.svg" alt="dukascopy-node tested with jest"></a>
 </p>
 
-> Download historical market prices for 800+ instruments (Stocks / Commodities / Bonds / Currencies / CFDs / ETFs / Crypto) via CLI
+> Download historical market tick data for 800+ instruments (Stocks / Commodities / Bonds / Currencies / CFDs / ETFs / Crypto) via CLI
 
 ## Installation
 
