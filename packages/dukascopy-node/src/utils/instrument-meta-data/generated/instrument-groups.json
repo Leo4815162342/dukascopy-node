@@ -12,9 +12,11 @@
     "id": "vccy",
     "name": "Crypto",
     "instruments": [
+      "bchusd",
       "btcusd",
       "ethusd",
-      "ltcusd"
+      "ltcusd",
+      "xlmusd"
     ]
   },
   {
@@ -44,6 +46,33 @@
     "name": "Metals",
     "instruments": [
       "coppercmdusd"
+    ]
+  },
+  {
+    "id": "etf_cfd_de",
+    "name": "Germany",
+    "instruments": [
+      "tecdaxedeeur"
+    ]
+  },
+  {
+    "id": "etf_cfd_fr",
+    "name": "France",
+    "instruments": [
+      "dsbfreur",
+      "lvcfreur",
+      "lyxbnkfreur"
+    ]
+  },
+  {
+    "id": "etf_cfd_hk",
+    "name": "Hong Kong",
+    "instruments": [
+      "2822hkhkd",
+      "2828hkhkd",
+      "2833hkhkd",
+      "2836hkhkd",
+      "3188hkhkd"
     ]
   },
   {
@@ -278,7 +307,6 @@
       "capfreur",
       "csfreur",
       "dgfreur",
-      "dsbfreur",
       "edffreur",
       "enfreur",
       "engifreur",
@@ -288,8 +316,6 @@
       "kerfreur",
       "lifreur",
       "lrfreur",
-      "lvcfreur",
-      "lyxbnkfreur",
       "mcfreur",
       "orfreur",
       "orafreur",
@@ -341,7 +367,6 @@
       "sapdeeur",
       "sdfdeeur",
       "siedeeur",
-      "tecdaxedeeur",
       "tkadeeur",
       "tui1deeur",
       "vnadeeur",
@@ -376,11 +401,6 @@
       "2318hkhkd",
       "2388hkhkd",
       "2628hkhkd",
-      "2822hkhkd",
-      "2828hkhkd",
-      "2833hkhkd",
-      "2836hkhkd",
-      "3188hkhkd",
       "3333hkhkd",
       "3968hkhkd",
       "3988hkhkd"
@@ -697,6 +717,7 @@
       "sbrygbgbx",
       "sgegbgbx",
       "skygbgbx",
+      "slagbgbx",
       "smingbgbx",
       "sngbgbx",
       "ssegbgbx",

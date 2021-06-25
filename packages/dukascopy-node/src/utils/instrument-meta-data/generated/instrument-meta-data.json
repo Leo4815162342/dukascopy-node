@@ -156,10 +156,10 @@
     "name": "1810.HK/HKD",
     "description": "Xiaomi Corp",
     "decimalFactor": 1000,
-    "startHourForTicks": "2020-12-24T22:00:13.187Z",
-    "startDayForMinuteCandles": "2020-12-24T22:00:00.000Z",
-    "startMonthForHourlyCandles": "2020-12-24T22:00:00.000Z",
-    "startYearForDailyCandles": "2020-12-24T00:00:00.000Z"
+    "startHourForTicks": "2020-09-28T01:00:00.025Z",
+    "startDayForMinuteCandles": "2020-09-28T01:00:00.000Z",
+    "startMonthForHourlyCandles": "2020-09-28T01:00:00.000Z",
+    "startYearForDailyCandles": "2020-09-28T00:00:00.000Z"
   },
   "1918hkhkd": {
     "name": "1918.HK/HKD",
@@ -237,37 +237,37 @@
     "name": "2822.HK/HKD",
     "description": "CSOP FTSE China A50 ETF",
     "decimalFactor": 1000,
-    "startHourForTicks": "2020-12-23T21:47:31.206Z",
-    "startDayForMinuteCandles": "2020-12-23T21:47:00.000Z",
-    "startMonthForHourlyCandles": "2020-12-23T21:00:00.000Z",
-    "startYearForDailyCandles": "2020-12-23T00:00:00.000Z"
+    "startHourForTicks": "2020-09-28T01:00:00.077Z",
+    "startDayForMinuteCandles": "2020-09-28T01:00:00.000Z",
+    "startMonthForHourlyCandles": "2020-09-28T01:00:00.000Z",
+    "startYearForDailyCandles": "2020-09-28T00:00:00.000Z"
   },
   "2828hkhkd": {
     "name": "2828.HK/HKD",
     "description": "Hang Seng H-Share Index ETF",
     "decimalFactor": 1000,
-    "startHourForTicks": "2020-12-23T21:47:31.317Z",
-    "startDayForMinuteCandles": "2020-12-23T21:47:00.000Z",
-    "startMonthForHourlyCandles": "2020-12-23T21:00:00.000Z",
-    "startYearForDailyCandles": "2020-12-23T00:00:00.000Z"
+    "startHourForTicks": "2020-09-28T01:00:00.003Z",
+    "startDayForMinuteCandles": "2020-09-28T01:00:00.000Z",
+    "startMonthForHourlyCandles": "2020-09-28T01:00:00.000Z",
+    "startYearForDailyCandles": "2020-09-28T00:00:00.000Z"
   },
   "2833hkhkd": {
     "name": "2833.HK/HKD",
     "description": "Hang Seng Index ETF",
     "decimalFactor": 1000,
-    "startHourForTicks": "2020-12-23T21:47:31.206Z",
-    "startDayForMinuteCandles": "2020-12-23T21:47:00.000Z",
-    "startMonthForHourlyCandles": "2020-12-23T21:00:00.000Z",
-    "startYearForDailyCandles": "2020-12-23T00:00:00.000Z"
+    "startHourForTicks": "2020-09-28T01:00:03.454Z",
+    "startDayForMinuteCandles": "2020-09-28T01:00:00.000Z",
+    "startMonthForHourlyCandles": "2020-09-28T01:00:00.000Z",
+    "startYearForDailyCandles": "2020-09-28T00:00:00.000Z"
   },
   "2836hkhkd": {
     "name": "2836.HK/HKD",
     "description": "iShares Core S&P BSE SENSEX India ETF",
     "decimalFactor": 1000,
-    "startHourForTicks": "2020-12-23T21:47:31.324Z",
-    "startDayForMinuteCandles": "2020-12-23T21:47:00.000Z",
-    "startMonthForHourlyCandles": "2020-12-23T21:00:00.000Z",
-    "startYearForDailyCandles": "2020-12-23T00:00:00.000Z"
+    "startHourForTicks": "2020-09-28T01:00:04.651Z",
+    "startDayForMinuteCandles": "2020-09-28T01:00:00.000Z",
+    "startMonthForHourlyCandles": "2020-09-28T01:00:00.000Z",
+    "startYearForDailyCandles": "2020-09-28T00:00:00.000Z"
   },
   "2914jpjpy": {
     "name": "2914.JP/JPY",
@@ -282,10 +282,10 @@
     "name": "3188.HK/HKD",
     "description": "ChinaAMC CSI 300 Index ETF",
     "decimalFactor": 1000,
-    "startHourForTicks": "2020-12-23T21:47:31.351Z",
-    "startDayForMinuteCandles": "2020-12-23T21:47:00.000Z",
-    "startMonthForHourlyCandles": "2020-12-23T21:00:00.000Z",
-    "startYearForDailyCandles": "2020-12-23T00:00:00.000Z"
+    "startHourForTicks": "2020-09-28T01:00:00.226Z",
+    "startDayForMinuteCandles": "2020-09-28T01:00:00.000Z",
+    "startMonthForHourlyCandles": "2020-09-28T01:00:00.000Z",
+    "startYearForDailyCandles": "2020-09-28T00:00:00.000Z"
   },
   "3333hkhkd": {
     "name": "3333.HK/HKD",
@@ -1583,6 +1583,15 @@
     "startMonthForHourlyCandles": "2020-11-02T05:00:00.000Z",
     "startYearForDailyCandles": "2020-11-02T00:00:00.000Z"
   },
+  "bchusd": {
+    "name": "BCH/USD",
+    "description": "Bitcoin Cash vs US dollar",
+    "decimalFactor": 10,
+    "startHourForTicks": "2021-05-17T12:09:25.871Z",
+    "startDayForMinuteCandles": "2021-05-17T12:09:00.000Z",
+    "startMonthForHourlyCandles": "2021-05-17T13:00:00.000Z",
+    "startYearForDailyCandles": "2021-05-18T00:00:00.000Z"
+  },
   "bdxususd": {
     "name": "BDX.US/USD",
     "description": "BECTON DICKINSON AND CO",
@@ -2532,10 +2541,10 @@
     "name": "DSB.FR/EUR",
     "description": "LYXOR ETF Daily X2 Short Bund",
     "decimalFactor": 1000,
-    "startHourForTicks": "2020-12-23T12:13:11.755Z",
-    "startDayForMinuteCandles": "2020-12-23T12:13:00.000Z",
-    "startMonthForHourlyCandles": "2020-12-23T12:00:00.000Z",
-    "startYearForDailyCandles": "2020-12-23T00:00:00.000Z"
+    "startHourForTicks": "2020-09-22T01:01:02.268Z",
+    "startDayForMinuteCandles": "2020-09-22T01:01:00.000Z",
+    "startMonthForHourlyCandles": "2020-09-22T01:00:00.000Z",
+    "startYearForDailyCandles": "2020-09-22T00:00:00.000Z"
   },
   "dsmnleur": {
     "name": "DSM.NL/EUR",
@@ -4395,10 +4404,10 @@
     "name": "LVC.FR/EUR",
     "description": "Lyxor ETF Leverage CAC 40",
     "decimalFactor": 1000,
-    "startHourForTicks": "2020-12-23T12:24:49.198Z",
-    "startDayForMinuteCandles": "2020-12-23T12:24:00.000Z",
-    "startMonthForHourlyCandles": "2020-12-23T12:00:00.000Z",
-    "startYearForDailyCandles": "2020-12-23T00:00:00.000Z"
+    "startHourForTicks": "2020-09-22T01:01:02.608Z",
+    "startDayForMinuteCandles": "2020-09-22T01:01:00.000Z",
+    "startMonthForHourlyCandles": "2020-09-22T01:00:00.000Z",
+    "startYearForDailyCandles": "2020-09-22T00:00:00.000Z"
   },
   "lvsususd": {
     "name": "LVS.US/USD",
@@ -4422,10 +4431,10 @@
     "name": "LYXBNK.FR/EUR",
     "description": "Lyxor UCITS ETF STOXX EUROPE 600 Banks",
     "decimalFactor": 1000,
-    "startHourForTicks": "2020-12-23T12:24:14.174Z",
-    "startDayForMinuteCandles": "2020-12-23T12:24:00.000Z",
-    "startMonthForHourlyCandles": "2020-12-23T12:00:00.000Z",
-    "startYearForDailyCandles": "2020-12-23T00:00:00.000Z"
+    "startHourForTicks": "2020-09-22T01:01:02.989Z",
+    "startDayForMinuteCandles": "2020-09-22T01:01:00.000Z",
+    "startMonthForHourlyCandles": "2020-09-22T01:00:00.000Z",
+    "startYearForDailyCandles": "2020-09-22T00:00:00.000Z"
   },
   "mususd": {
     "name": "M.US/USD",
@@ -5804,6 +5813,15 @@
     "startMonthForHourlyCandles": "2014-11-14T08:00:00.000Z",
     "startYearForDailyCandles": "2014-11-14T00:00:00.000Z"
   },
+  "slagbgbx": {
+    "name": "SLA.GB/GBX",
+    "description": "Standard Life Aberdeen Plc",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2017-09-05T12:47:07.382Z",
+    "startDayForMinuteCandles": "2017-09-05T12:47:00.000Z",
+    "startMonthForHourlyCandles": "2017-09-05T12:00:00.000Z",
+    "startYearForDailyCandles": "2017-09-05T00:00:00.000Z"
+  },
   "slhnchchf": {
     "name": "SLHN.CH/CHF",
     "description": "Swiss Life Holding AG",
@@ -6123,10 +6141,10 @@
     "name": "TECDAXE.DE/EUR",
     "description": "iShares TecDAX UCITS DE ETF",
     "decimalFactor": 1000,
-    "startHourForTicks": "2020-12-23T12:24:09.035Z",
-    "startDayForMinuteCandles": "2020-12-23T12:24:00.000Z",
-    "startMonthForHourlyCandles": "2020-12-23T12:00:00.000Z",
-    "startYearForDailyCandles": "2020-12-23T00:00:00.000Z"
+    "startHourForTicks": "2020-09-22T06:00:02.477Z",
+    "startDayForMinuteCandles": "2020-09-22T06:00:00.000Z",
+    "startMonthForHourlyCandles": "2020-09-22T06:00:00.000Z",
+    "startYearForDailyCandles": "2020-09-22T00:00:00.000Z"
   },
   "tefeseur": {
     "name": "TEF.ES/EUR",
@@ -7090,6 +7108,15 @@
     "startDayForMinuteCandles": "2017-11-15T16:49:00.000Z",
     "startMonthForHourlyCandles": "2017-11-15T16:00:00.000Z",
     "startYearForDailyCandles": "2017-11-15T00:00:00.000Z"
+  },
+  "xlmusd": {
+    "name": "XLM/USD",
+    "description": "Stellar vs US Dollar",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2021-05-25T12:06:24.154Z",
+    "startDayForMinuteCandles": "2021-05-25T12:06:00.000Z",
+    "startMonthForHourlyCandles": "2021-05-25T12:00:00.000Z",
+    "startYearForDailyCandles": "2021-05-25T00:00:00.000Z"
   },
   "xlnxususd": {
     "name": "XLNX.US/USD",
