@@ -1057,6 +1057,12 @@ export enum Instrument {
     bciteur='bciteur',
 
     /**
+     * ### Bitcoin Cash vs US dollar
+     * *BCH/USD*
+     */
+    bchusd='bchusd',
+
+    /**
      * ### BECTON DICKINSON AND CO
      * *BDX.US/USD*
      */
@@ -3871,6 +3877,12 @@ export enum Instrument {
     skygbgbx='skygbgbx',
 
     /**
+     * ### Standard Life Aberdeen Plc
+     * *SLA.GB/GBX*
+     */
+    slagbgbx='slagbgbx',
+
+    /**
      * ### Swiss Life Holding AG
      * *SLHN.CH/CHF*
      */
@@ -4727,6 +4739,12 @@ export enum Instrument {
      * *XLK.US/USD*
      */
     xlkususd='xlkususd',
+
+    /**
+     * ### Stellar vs US Dollar
+     * *XLM/USD*
+     */
+    xlmusd='xlmusd',
 
     /**
      * ### XILINX INC

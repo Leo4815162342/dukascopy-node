@@ -1,24 +1,27 @@
 ## Instruments
 
 * [Bonds 📊 (3)](#bnd_cfd)
-* [Crypto ₿ (3)](#vccy)
-* [Agricultural ☕ (6)](#cmd_agricultural)
-* [Energy ⚡ (4)](#cmd_energy)
-* [Metals ⚙️ (1)](#cmd_metals)
-* [ETFs 📈 (43)](#etf_cfd_us)
-* [Forex crosses 💱 (54)](#fx_crosses)
-* [Forex majors 💶 (7)](#fx_majors)
+* [Crypto assets ₿ (5)](#vccy)
+* [Agricultural commodities ☕ (6)](#cmd_agricultural)
+* [Energy commodities ⚡ (4)](#cmd_energy)
+* [Metals commodities ⚙️ (1)](#cmd_metals)
+* [Germany ETFs 🇩🇪📈 (1)](#etf_cfd_de)
+* [France ETFs 🇫🇷📈 (3)](#etf_cfd_fr)
+* [Hong Kong ETFs 🇭🇰📈 (5)](#etf_cfd_hk)
+* [United States ETFs 🇺🇸📈 (43)](#etf_cfd_us)
+* [Forex currencies 💱 (54)](#fx_crosses)
+* [Forex major currencies 💶 (7)](#fx_majors)
 * [Forex metals 🥇 (2)](#fx_metals)
 * [America 🌎 (5)](#idx_america)
-* [Asia / Pacific 🌏 (6)](#idx_asia)
+* [Asia 🌏 (6)](#idx_asia)
 * [Europe 🌍 (8)](#idx_europe)
 * [Austria 🇦🇹 (3)](#austria)
 * [Belgium 🇧🇪 (7)](#belgium)
 * [Denmark 🇩🇰 (8)](#denmark)
 * [Finland 🇫🇮 (7)](#finland)
-* [France 🇫🇷 (38)](#france)
-* [Germany 🇩🇪 (36)](#germany)
-* [Hong Kong 🇭🇰 (32)](#hong-kong)
+* [France 🇫🇷 (35)](#france)
+* [Germany 🇩🇪 (35)](#germany)
+* [Hong Kong 🇭🇰 (27)](#hong-kong)
 * [Ireland 🇮🇪 (5)](#ireland)
 * [Italy 🇮🇹 (48)](#italy)
 * [Japan 🇯🇵 (55)](#japan)
@@ -28,8 +31,8 @@
 * [Spain 🇪🇸 (18)](#spain)
 * [Sweden 🇸🇪 (20)](#sweden)
 * [Switzerland 🇨🇭 (20)](#switzerland)
-* [UK 🇬🇧 (79)](#uk)
-* [US 🇺🇸 (258)](#us)
+* [United Kingdom 🇬🇧 (80)](#uk)
+* [United States 🇺🇸 (258)](#us)
 <hr>
 <h3 id="bnd_cfd">Bonds 📊</h3>
 
@@ -38,14 +41,16 @@
 |`bundtreur`|BUND.TR/EUR|Euro Bund|May 2, 2016, 6:01:02 AM|May 2, 2016, 6:01 AM|May 2, 2016, 6 AM|May 2, 2016|
 |`ukgilttrgbp`|UKGILT.TR/GBP|UK Long Gilt|Dec 26, 2017, 5:00:01 AM|Dec 26, 2017, 5:00 AM|Dec 26, 2017, 5 AM|Dec 26, 2017|
 |`ustbondtrusd`|USTBOND.TR/USD|US T-Bond|Dec 18, 2018, 8:02:08 PM|Dec 18, 2018, 8:02 PM|Dec 18, 2018, 8 PM|Dec 18, 2018|
-<h3 id="vccy">Crypto ₿</h3>
+<h3 id="vccy">Crypto assets ₿</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
+|`bchusd`|BCH/USD|Bitcoin Cash vs US dollar|May 17, 2021, 12:09:25 PM|May 17, 2021, 12:09 PM|May 17, 2021, 1 PM|May 18, 2021|
 |`btcusd`|BTC/USD|Bitcoin vs US Dollar|May 7, 2017, 11:59:59 PM|May 7, 2017, 11:59 PM|May 7, 2017, 11 PM|May 7, 2017|
 |`ethusd`|ETH/USD|Ether vs US Dollar|Dec 11, 2017, 11:51:21 PM|Dec 11, 2017, 11:51 PM|Dec 11, 2017, 11 PM|Dec 11, 2017|
 |`ltcusd`|LTC/USD|Litecoin vs US Dollar|Sep 3, 2018, 12:00:00 AM|Sep 3, 2018, 12:00 AM|Sep 3, 2018, 12 AM|Sep 3, 2018|
-<h3 id="cmd_agricultural">Agricultural ☕</h3>
+|`xlmusd`|XLM/USD|Stellar vs US Dollar|May 25, 2021, 12:06:24 PM|May 25, 2021, 12:06 PM|May 25, 2021, 12 PM|May 25, 2021|
+<h3 id="cmd_agricultural">Agricultural commodities ☕</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -55,7 +60,7 @@
 |`ojuicecmdusx`|OJUICE.CMD/USX|Orange Juice|Oct 20, 2017, 12:00:00 PM|Oct 20, 2017, 12:00 PM|Oct 20, 2017, 12 PM|Oct 20, 2017|
 |`soybeancmdusx`|SOYBEAN.CMD/USX|Soybean|Dec 1, 2017, 12:51:39 AM|Dec 1, 2017, 12:51 AM|Dec 1, 2017, 12 AM|Dec 1, 2017|
 |`sugarcmdusd`|SUGAR.CMD/USD|London Sugar No.5|Oct 2, 2017, 12:01:00 AM|Oct 2, 2017, 12:01 AM|Oct 2, 2017, 12 AM|Oct 2, 2017|
-<h3 id="cmd_energy">Energy ⚡</h3>
+<h3 id="cmd_energy">Energy commodities ⚡</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -63,12 +68,33 @@
 |`brentcmdusd`|BRENT.CMD/USD|US Brent Crude Oil|Dec 2, 2010, 1:00:33 AM|Jan 16, 1970, 11:46 PM|Dec 2, 2010, 1 AM|Dec 2, 2010|
 |`lightcmdusd`|LIGHT.CMD/USD|US Light Crude Oil|Jan 1, 2013, 5:44:02 AM|Dec 20, 2011, 10:31 AM|Nov 10, 2011, 1 PM|Nov 10, 2011|
 |`gascmdusd`|GAS.CMD/USD|Natural Gas|Jun 24, 2012, 10:00:06 PM|Jun 24, 2012, 9:52 PM|Jun 24, 2012, 10 PM|Jun 24, 2012|
-<h3 id="cmd_metals">Metals ⚙️</h3>
+<h3 id="cmd_metals">Metals commodities ⚙️</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
 |`coppercmdusd`|COPPER.CMD/USD|High Grade Copper|Mar 1, 2012, 12:02:48 AM|Mar 1, 2012, 12:03 AM|Mar 1, 2012, 1 AM|Mar 2, 2012|
-<h3 id="etf_cfd_us">ETFs 📈</h3>
+<h3 id="etf_cfd_de">Germany ETFs 🇩🇪📈</h3>
+
+|Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|-|-|-|-|-|-|-|
+|`tecdaxedeeur`|TECDAXE.DE/EUR|iShares TecDAX UCITS DE ETF|Sep 22, 2020, 6:00:02 AM|Sep 22, 2020, 6:00 AM|Sep 22, 2020, 6 AM|Sep 22, 2020|
+<h3 id="etf_cfd_fr">France ETFs 🇫🇷📈</h3>
+
+|Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|-|-|-|-|-|-|-|
+|`dsbfreur`|DSB.FR/EUR|LYXOR ETF Daily X2 Short Bund|Sep 22, 2020, 1:01:02 AM|Sep 22, 2020, 1:01 AM|Sep 22, 2020, 1 AM|Sep 22, 2020|
+|`lvcfreur`|LVC.FR/EUR|Lyxor ETF Leverage CAC 40|Sep 22, 2020, 1:01:02 AM|Sep 22, 2020, 1:01 AM|Sep 22, 2020, 1 AM|Sep 22, 2020|
+|`lyxbnkfreur`|LYXBNK.FR/EUR|Lyxor UCITS ETF STOXX EUROPE 600 Banks|Sep 22, 2020, 1:01:02 AM|Sep 22, 2020, 1:01 AM|Sep 22, 2020, 1 AM|Sep 22, 2020|
+<h3 id="etf_cfd_hk">Hong Kong ETFs 🇭🇰📈</h3>
+
+|Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|-|-|-|-|-|-|-|
+|`2822hkhkd`|2822.HK/HKD|CSOP FTSE China A50 ETF|Sep 28, 2020, 1:00:00 AM|Sep 28, 2020, 1:00 AM|Sep 28, 2020, 1 AM|Sep 28, 2020|
+|`2828hkhkd`|2828.HK/HKD|Hang Seng H-Share Index ETF|Sep 28, 2020, 1:00:00 AM|Sep 28, 2020, 1:00 AM|Sep 28, 2020, 1 AM|Sep 28, 2020|
+|`2833hkhkd`|2833.HK/HKD|Hang Seng Index ETF|Sep 28, 2020, 1:00:03 AM|Sep 28, 2020, 1:00 AM|Sep 28, 2020, 1 AM|Sep 28, 2020|
+|`2836hkhkd`|2836.HK/HKD|iShares Core S&P BSE SENSEX India ETF|Sep 28, 2020, 1:00:04 AM|Sep 28, 2020, 1:00 AM|Sep 28, 2020, 1 AM|Sep 28, 2020|
+|`3188hkhkd`|3188.HK/HKD|ChinaAMC CSI 300 Index ETF|Sep 28, 2020, 1:00:00 AM|Sep 28, 2020, 1:00 AM|Sep 28, 2020, 1 AM|Sep 28, 2020|
+<h3 id="etf_cfd_us">United States ETFs 🇺🇸📈</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -115,7 +141,7 @@
 |`xlvususd`|XLV.US/USD|Health Care Select Sector SPDR Fund|Nov 15, 2017, 4:49:17 PM|Nov 15, 2017, 4:49 PM|Nov 15, 2017, 4 PM|Nov 15, 2017|
 |`xlyususd`|XLY.US/USD|Consumer Discretionary Select Sector SPDR Fund|Nov 15, 2017, 5:49:16 PM|Nov 15, 2017, 5:49 PM|Nov 15, 2017, 5 PM|Nov 15, 2017|
 |`xopususd`|XOP.US/USD|SPDR S&P Oil & Gas Explor & Prodtn ETF|Mar 1, 2017, 6:13:54 PM|Mar 1, 2017, 6:13 PM|Mar 1, 2017, 6 PM|Mar 1, 2017|
-<h3 id="fx_crosses">Forex crosses 💱</h3>
+<h3 id="fx_crosses">Forex currencies 💱</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -173,7 +199,7 @@
 |`usdtry`|USD/TRY|US Dollar vs Turkish Lira|Feb 9, 2012, 2:05:41 PM|Jan 11, 2012, 1:37 AM|Jan 1, 2010, 12 AM|Oct 18, 2001|
 |`usdzar`|USD/ZAR|US Dollar vs South African Rand|Feb 9, 2012, 2:05:45 PM|Jan 11, 2012, 1:37 AM|Oct 13, 1997, 6 PM|Nov 17, 2004|
 |`zarjpy`|ZAR/JPY|South African Rand vs Japanese Yen|Aug 2, 2012, 12:00:16 AM|Jan 3, 2011, 12:01 AM|Jan 3, 2011, 12 AM|Jan 3, 2011|
-<h3 id="fx_majors">Forex majors 💶</h3>
+<h3 id="fx_majors">Forex major currencies 💶</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -199,7 +225,7 @@
 |`usatechidxusd`|USATECH.IDX/USD|USA 100 Technical Index|Jun 14, 2012, 1:30:08 PM|Jan 16, 1970, 11:49 PM|Jan 19, 2012, 4 PM|Jan 18, 2012|
 |`usa500idxusd`|USA500.IDX/USD|USA 500 Index|Jan 16, 2012, 12:00:07 AM|Jan 16, 2012, 12:00 AM|Jan 16, 2012, 12 AM|Jan 16, 2012|
 |`ussc2000idxusd`|USSC2000.IDX/USD|US Small Cap 2000|Aug 8, 2018, 1:30:05 PM|Aug 8, 2018, 1:30 PM|Aug 8, 2018, 1 PM|Aug 8, 2018|
-<h3 id="idx_asia">Asia / Pacific 🌏</h3>
+<h3 id="idx_asia">Asia 🌏</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -278,7 +304,6 @@
 |`capfreur`|CAP.FR/EUR|Cap Gemini SA|Nov 8, 2016, 8:01:01 AM|Nov 8, 2016, 8:01 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |`csfreur`|CS.FR/EUR|AXA SA|Nov 7, 2016, 8:02:00 AM|Nov 7, 2016, 8:02 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |`dgfreur`|DG.FR/EUR|Vinci SA|Nov 7, 2016, 8:00:24 AM|Nov 7, 2016, 8:00 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
-|`dsbfreur`|DSB.FR/EUR|LYXOR ETF Daily X2 Short Bund|Dec 23, 2020, 12:13:11 PM|Dec 23, 2020, 12:13 PM|Dec 23, 2020, 12 PM|Dec 23, 2020|
 |`edffreur`|EDF.FR/EUR|Electricite de France SA|Oct 11, 2016, 7:02:18 AM|Oct 11, 2016, 7:02 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |`enfreur`|EN.FR/EUR|Bouygues SA|Nov 8, 2016, 8:01:30 AM|Nov 8, 2016, 8:01 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |`engifreur`|ENGI.FR/EUR|Engie|Nov 7, 2016, 8:01:01 AM|Nov 7, 2016, 8:01 AM|Jul 31, 2015, 7 AM|Jul 31, 2015|
@@ -288,8 +313,6 @@
 |`kerfreur`|KER.FR/EUR|Kering|Nov 8, 2016, 10:00:00 AM|Nov 8, 2016, 10:00 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |`lifreur`|LI.FR/EUR|Klepierre|Aug 5, 2016, 3:00:00 PM|Aug 5, 2016, 3:00 PM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |`lrfreur`|LR.FR/EUR|Legrand SA|Aug 12, 2016, 2:00:00 PM|Aug 12, 2016, 2:00 PM|Jan 3, 2011, 8 AM|Jan 3, 2011|
-|`lvcfreur`|LVC.FR/EUR|Lyxor ETF Leverage CAC 40|Dec 23, 2020, 12:24:49 PM|Dec 23, 2020, 12:24 PM|Dec 23, 2020, 12 PM|Dec 23, 2020|
-|`lyxbnkfreur`|LYXBNK.FR/EUR|Lyxor UCITS ETF STOXX EUROPE 600 Banks|Dec 23, 2020, 12:24:14 PM|Dec 23, 2020, 12:24 PM|Dec 23, 2020, 12 PM|Dec 23, 2020|
 |`mcfreur`|MC.FR/EUR|LVMH Moet Hennessy Louis Vuitton SA|Aug 5, 2016, 3:00:00 PM|Aug 5, 2016, 3:00 PM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |`orfreur`|OR.FR/EUR|L'Oreal SA|Aug 5, 2016, 3:00:00 PM|Aug 5, 2016, 3:00 PM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |`orafreur`|ORA.FR/EUR|Orange SA|Aug 5, 2016, 3:00:01 PM|Aug 5, 2016, 3:00 PM|Jul 1, 2013, 7 AM|Jul 1, 2013|
@@ -339,7 +362,6 @@
 |`sapdeeur`|SAP.DE/EUR|SAP AG|Apr 16, 2015, 7:00:26 AM|Apr 16, 2015, 7:00 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |`sdfdeeur`|SDF.DE/EUR|K+S AG|Apr 15, 2015, 7:00:08 AM|Apr 15, 2015, 7:00 AM|Aug 8, 2011, 7 AM|Aug 8, 2011|
 |`siedeeur`|SIE.DE/EUR|Siemens AG|Apr 20, 2015, 7:00:01 AM|Apr 20, 2015, 7:00 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
-|`tecdaxedeeur`|TECDAXE.DE/EUR|iShares TecDAX UCITS DE ETF|Dec 23, 2020, 12:24:09 PM|Dec 23, 2020, 12:24 PM|Dec 23, 2020, 12 PM|Dec 23, 2020|
 |`tkadeeur`|TKA.DE/EUR|ThyssenKrupp AG|Apr 14, 2015, 7:00:06 AM|Apr 14, 2015, 7:00 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |`tui1deeur`|TUI1.DE/EUR|TUI AG|Apr 15, 2015, 7:02:21 AM|Apr 15, 2015, 7:02 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |`vnadeeur`|VNA.DE/EUR|Vonovia SE|Apr 14, 2015, 7:02:17 AM|Apr 14, 2015, 7:02 AM|Apr 14, 2015, 7 AM|Apr 14, 2015|
@@ -365,18 +387,13 @@
 |`1288hkhkd`|1288.HK/HKD|Agricultural Bank of China|Jan 2, 2018, 1:00:00 AM|Jan 2, 2018, 1:00 AM|Jan 2, 2018, 1 AM|Jan 2, 2018|
 |`1299hkhkd`|1299.HK/HKD|AIA|Jan 2, 2018, 1:00:00 AM|Jan 2, 2018, 1:00 AM|Jan 2, 2018, 1 AM|Jan 2, 2018|
 |`1398hkhkd`|1398.HK/HKD|Industrial and Commercial Bank of China|Apr 22, 2013, 7:59:31 AM|Apr 22, 2013, 7:54 AM|Apr 22, 2013, 7 AM|Apr 22, 2013|
-|`1810hkhkd`|1810.HK/HKD|Xiaomi Corp|Dec 24, 2020, 10:00:13 PM|Dec 24, 2020, 10:00 PM|Dec 24, 2020, 10 PM|Dec 24, 2020|
+|`1810hkhkd`|1810.HK/HKD|Xiaomi Corp|Sep 28, 2020, 1:00:00 AM|Sep 28, 2020, 1:00 AM|Sep 28, 2020, 1 AM|Sep 28, 2020|
 |`1918hkhkd`|1918.HK/HKD|Sunac China Holdings|Feb 1, 2018, 1:00:01 AM|Feb 1, 2018, 1:00 AM|Feb 1, 2018, 1 AM|Feb 1, 2018|
 |`2007hkhkd`|2007.HK/HKD|Country Garden Holdings|Jan 2, 2018, 1:00:01 AM|Jan 2, 2018, 1:00 AM|Jan 2, 2018, 1 AM|Jan 2, 2018|
 |`2018hkhkd`|2018.HK/HKD|AAC Technologies Holdings|Jan 2, 2018, 1:00:00 AM|Jan 2, 2018, 1:00 AM|Jan 2, 2018, 1 AM|Jan 2, 2018|
 |`2318hkhkd`|2318.HK/HKD|Ping An Insurance|Jan 2, 2018, 1:00:00 AM|Jan 2, 2018, 1:00 AM|Jan 2, 2018, 1 AM|Jan 2, 2018|
 |`2388hkhkd`|2388.HK/HKD|BOC Hong Kong (Holdings)|Feb 5, 2018, 1:38:23 AM|Feb 5, 2018, 1:38 AM|Feb 5, 2018, 1 AM|Feb 5, 2018|
 |`2628hkhkd`|2628.HK/HKD|China Life Insurance Company|Jan 2, 2018, 1:00:00 AM|Jan 2, 2018, 1:00 AM|Jan 2, 2018, 1 AM|Jan 2, 2018|
-|`2822hkhkd`|2822.HK/HKD|CSOP FTSE China A50 ETF|Dec 23, 2020, 9:47:31 PM|Dec 23, 2020, 9:47 PM|Dec 23, 2020, 9 PM|Dec 23, 2020|
-|`2828hkhkd`|2828.HK/HKD|Hang Seng H-Share Index ETF|Dec 23, 2020, 9:47:31 PM|Dec 23, 2020, 9:47 PM|Dec 23, 2020, 9 PM|Dec 23, 2020|
-|`2833hkhkd`|2833.HK/HKD|Hang Seng Index ETF|Dec 23, 2020, 9:47:31 PM|Dec 23, 2020, 9:47 PM|Dec 23, 2020, 9 PM|Dec 23, 2020|
-|`2836hkhkd`|2836.HK/HKD|iShares Core S&P BSE SENSEX India ETF|Dec 23, 2020, 9:47:31 PM|Dec 23, 2020, 9:47 PM|Dec 23, 2020, 9 PM|Dec 23, 2020|
-|`3188hkhkd`|3188.HK/HKD|ChinaAMC CSI 300 Index ETF|Dec 23, 2020, 9:47:31 PM|Dec 23, 2020, 9:47 PM|Dec 23, 2020, 9 PM|Dec 23, 2020|
 |`3333hkhkd`|3333.HK/HKD|China Evergrande Group|Jan 2, 2018, 1:00:00 AM|Jan 2, 2018, 1:00 AM|Jan 2, 2018, 1 AM|Jan 2, 2018|
 |`3968hkhkd`|3968.HK/HKD|China Merchants Bank|Jan 2, 2018, 1:00:00 AM|Jan 2, 2018, 1:00 AM|Jan 2, 2018, 1 AM|Jan 2, 2018|
 |`3988hkhkd`|3988.HK/HKD|Bank of China|Apr 22, 2013, 8:02:35 AM|Apr 22, 2013, 7:54 AM|Apr 22, 2013, 7 AM|Apr 22, 2013|
@@ -606,7 +623,7 @@
 |`ubsgchchf`|UBSG.CH/CHF|UBS Group AG|Feb 5, 2016, 8:00:37 AM|Feb 5, 2016, 8:00 AM|Nov 28, 2014, 8 AM|Nov 28, 2014|
 |`uhrchchf`|UHR.CH/CHF|Swatch Group AG/The|May 30, 2016, 12:52:07 PM|May 30, 2016, 12:52 PM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |`zurnchchf`|ZURN.CH/CHF|Zurich Insurance Group AG|Aug 21, 2015, 7:01:48 AM|Aug 21, 2015, 7:01 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
-<h3 id="uk">UK 🇬🇧</h3>
+<h3 id="uk">United Kingdom 🇬🇧</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
@@ -673,6 +690,7 @@
 |`sbrygbgbx`|SBRY.GB/GBX|J Sainsbury PLC|Jul 7, 2016, 9:22:39 AM|Jul 7, 2016, 9:22 AM|Jan 4, 2011, 8 AM|Jan 4, 2011|
 |`sgegbgbx`|SGE.GB/GBX|Sage Group PLC/The|Jul 8, 2016, 2:51:23 PM|Jul 8, 2016, 2:51 PM|Jan 4, 2011, 8 AM|Jan 4, 2011|
 |`skygbgbx`|SKY.GB/GBP|Sky Plc|Jul 7, 2016, 9:22:29 AM|Jul 7, 2016, 9:22 AM|Nov 14, 2014, 8 AM|Nov 14, 2014|
+|`slagbgbx`|SLA.GB/GBX|Standard Life Aberdeen Plc|Sep 5, 2017, 12:47:07 PM|Sep 5, 2017, 12:47 PM|Sep 5, 2017, 12 PM|Sep 5, 2017|
 |`smingbgbx`|SMIN.GB/GBX|Smiths Group PLC|Jul 8, 2016, 2:51:38 PM|Jul 8, 2016, 2:51 PM|Jan 4, 2011, 8 AM|Jan 4, 2011|
 |`sngbgbx`|SN.GB/GBX|Smith & Nephew PLC|Jul 8, 2016, 2:51:42 PM|Jul 8, 2016, 2:51 PM|Jan 4, 2011, 8 AM|Jan 4, 2011|
 |`ssegbgbx`|SSE.GB/GBX|SSE PLC|Jul 8, 2016, 2:51:48 PM|Jul 8, 2016, 2:51 PM|Jan 4, 2011, 8 AM|Jan 4, 2011|
@@ -689,7 +707,7 @@
 |`wosgbgbx`|WOS.GB/GBX|Wolseley PLC|Jul 6, 2016, 7:08:57 AM|Jul 6, 2016, 7:08 AM|Jan 4, 2011, 8 AM|Jan 4, 2011|
 |`wppgbgbx`|WPP.GB/GBX|WPP PLC|Jul 8, 2016, 12:41:45 PM|Jul 8, 2016, 12:41 PM|Jan 4, 2011, 8 AM|Jan 4, 2011|
 |`wtbgbgbx`|WTB.GB/GBX|Whitbread PLC|Jul 6, 2016, 7:09:30 AM|Jul 6, 2016, 7:09 AM|Jan 4, 2011, 8 AM|Jan 4, 2011|
-<h3 id="us">US 🇺🇸</h3>
+<h3 id="us">United States 🇺🇸</h3>
 
 |Instrument id|Name|Description|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|-|
