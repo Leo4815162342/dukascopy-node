@@ -1,7 +1,7 @@
 {
   "name": "dukascopy-cli",
   "description": "Command line interface for downloading historical market data in json, csv formats",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "main": "bin/index.js",
   "files": [
     "bin"
@@ -35,7 +35,7 @@
     "chalk": "^3.0.0",
     "cli-progress": "^3.4.0",
     "commander": "^5.0.0",
-    "dukascopy-node": "^1.6.0",
+    "dukascopy-node": "^1.7.0",
     "fs-extra": "^9.1.0"
   },
   "devDependencies": {

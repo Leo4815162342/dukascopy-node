@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node/compare/dukascopy-node@1.6.0...dukascopy-node@1.7.0) (2021-06-27)
+
+
+### Features
+
+* new instruments June 2021 ([#42](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node/issues/42)) ([cf8cf94](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node/commit/cf8cf943b2271fe939115b40b6a954116c1d7280))
+
+
+
+
+
 # [1.6.0](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node/compare/dukascopy-node@1.5.1...dukascopy-node@1.6.0) (2021-04-06)
 
 
