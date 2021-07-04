@@ -1,7 +1,6 @@
 [
   {
     "id": "bnd_cfd",
-    "name": "Bonds",
     "instruments": [
       "bundtreur",
       "ukgilttrgbp",
@@ -10,7 +9,6 @@
   },
   {
     "id": "vccy",
-    "name": "Crypto",
     "instruments": [
       "bchusd",
       "btcusd",
@@ -21,7 +19,6 @@
   },
   {
     "id": "cmd_agricultural",
-    "name": "Agricultural",
     "instruments": [
       "cocoacmdusd",
       "coffeecmdusx",
@@ -33,7 +30,6 @@
   },
   {
     "id": "cmd_energy",
-    "name": "Energy",
     "instruments": [
       "dieselcmdusd",
       "brentcmdusd",
@@ -43,21 +39,18 @@
   },
   {
     "id": "cmd_metals",
-    "name": "Metals",
     "instruments": [
       "coppercmdusd"
     ]
   },
   {
     "id": "etf_cfd_de",
-    "name": "Germany",
     "instruments": [
       "tecdaxedeeur"
     ]
   },
   {
     "id": "etf_cfd_fr",
-    "name": "France",
     "instruments": [
       "dsbfreur",
       "lvcfreur",
@@ -66,7 +59,6 @@
   },
   {
     "id": "etf_cfd_hk",
-    "name": "Hong Kong",
     "instruments": [
       "2822hkhkd",
       "2828hkhkd",
@@ -77,7 +69,6 @@
   },
   {
     "id": "etf_cfd_us",
-    "name": "ETFs",
     "instruments": [
       "diaususd",
       "dvyususd",
@@ -126,7 +117,6 @@
   },
   {
     "id": "fx_crosses",
-    "name": "Forex crosses",
     "instruments": [
       "audcad",
       "audchf",
@@ -186,7 +176,6 @@
   },
   {
     "id": "fx_majors",
-    "name": "Forex majors",
     "instruments": [
       "audusd",
       "eurusd",
@@ -199,7 +188,6 @@
   },
   {
     "id": "fx_metals",
-    "name": "Forex metals",
     "instruments": [
       "xagusd",
       "xauusd"
@@ -207,7 +195,6 @@
   },
   {
     "id": "idx_america",
-    "name": "America",
     "instruments": [
       "dollaridxusd",
       "usa30idxusd",
@@ -218,7 +205,6 @@
   },
   {
     "id": "idx_asia",
-    "name": "Asia / Pacific",
     "instruments": [
       "chiidxusd",
       "hkgidxhkd",
@@ -230,7 +216,6 @@
   },
   {
     "id": "idx_europe",
-    "name": "Europe",
     "instruments": [
       "fraidxeur",
       "deuidxeur",
@@ -244,7 +229,6 @@
   },
   {
     "id": "austria",
-    "name": "Austria",
     "instruments": [
       "ebsateur",
       "rbiateur",
@@ -253,7 +237,6 @@
   },
   {
     "id": "belgium",
-    "name": "Belgium",
     "instruments": [
       "abibeeur",
       "agsbeeur",
@@ -266,7 +249,6 @@
   },
   {
     "id": "denmark",
-    "name": "Denmark",
     "instruments": [
       "carlbdkdkk",
       "colobdkdkk",
@@ -280,7 +262,6 @@
   },
   {
     "id": "finland",
-    "name": "Finland",
     "instruments": [
       "eli1vfieur",
       "nes1vfieur",
@@ -293,7 +274,6 @@
   },
   {
     "id": "france",
-    "name": "France",
     "instruments": [
       "acfreur",
       "acafreur",
@@ -334,7 +314,6 @@
   },
   {
     "id": "germany",
-    "name": "Germany",
     "instruments": [
       "adsdeeur",
       "alvdeeur",
@@ -375,7 +354,6 @@
   },
   {
     "id": "hong-kong",
-    "name": "Hong Kong",
     "instruments": [
       "0005hkhkd",
       "0027hkhkd",
@@ -408,7 +386,6 @@
   },
   {
     "id": "ireland",
-    "name": "Ireland",
     "instruments": [
       "birgieeur",
       "crgieeur",
@@ -419,7 +396,6 @@
   },
   {
     "id": "italy",
-    "name": "Italy",
     "instruments": [
       "a2aiteur",
       "agliteur",
@@ -473,7 +449,6 @@
   },
   {
     "id": "japan",
-    "name": "Japan",
     "instruments": [
       "2502jpjpy",
       "2503jpjpy",
@@ -534,7 +509,6 @@
   },
   {
     "id": "netherlands",
-    "name": "Netherlands",
     "instruments": [
       "agnnleur",
       "ahnleur",
@@ -556,7 +530,6 @@
   },
   {
     "id": "norway",
-    "name": "Norway",
     "instruments": [
       "dnbnonok",
       "mhgnonok",
@@ -568,7 +541,6 @@
   },
   {
     "id": "portugal",
-    "name": "Portugal",
     "instruments": [
       "edppteur",
       "galppteur"
@@ -576,7 +548,6 @@
   },
   {
     "id": "spain",
-    "name": "Spain",
     "instruments": [
       "acseseur",
       "acxeseur",
@@ -600,7 +571,6 @@
   },
   {
     "id": "sweden",
-    "name": "Sweden",
     "instruments": [
       "abbsesek",
       "alfasesek",
@@ -626,7 +596,6 @@
   },
   {
     "id": "switzerland",
-    "name": "Switzerland",
     "instruments": [
       "abbnchchf",
       "adenchchf",
@@ -652,7 +621,6 @@
   },
   {
     "id": "uk",
-    "name": "UK",
     "instruments": [
       "aalgbgbx",
       "abfgbgbx",
@@ -738,7 +706,6 @@
   },
   {
     "id": "us",
-    "name": "US",
     "instruments": [
       "aususd",
       "aaususd",

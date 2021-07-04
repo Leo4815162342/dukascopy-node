@@ -7,18 +7,8 @@ const saveFile = promisify(fs.writeFile);
 
 interface GroupData {
   id: string;
-  name: string;
   instruments: string[];
 }
-
-const renameMap: Record<string, string> = {
-  ETF_CFD_US: 'ETFs',
-  FX_CROSSES: 'Forex crosses',
-  FX_MAJORS: 'Forex majors',
-  FX_METALS: 'Forex metals',
-  BND_CFD: 'Bonds',
-  VCCY: 'Crypto'
-};
 
 export function generateInstrumentGroupData(
   metadata: MetaDataResponse,
@@ -39,7 +29,6 @@ export function generateInstrumentGroupData(
 
     all.push({
       id: group.toLowerCase().replace(/\s/g, '-'),
-      name: renameMap[metadata.groups[group].id] || metadata.groups[group].title,
       instruments: metadata.groups[group].instruments
         .filter(inst => !!metadata.instruments[inst])
         .map(inst => generateIdName(metadata.instruments[inst].historical_filename, inst))
