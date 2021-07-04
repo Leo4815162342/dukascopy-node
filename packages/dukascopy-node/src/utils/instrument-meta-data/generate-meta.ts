@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import fs from 'fs';
 import { promisify } from 'util';
-import { MetaDataResponse } from './generate-data.types';
+import { ActualStartDates, MetaDataResponse } from './generate-data.types';
 import { generateIdName } from './generate-id-name';
 const saveFile = promisify(fs.writeFile);
 
@@ -17,6 +17,7 @@ export interface InstrumentMetaData {
 
 export function generateMeta(
   instruments: MetaDataResponse['instruments'],
+  actualStartDates: ActualStartDates,
   path: string
 ): Promise<void> {
   const data = Object.keys(instruments).reduce<Record<string, InstrumentMetaData>>((all, inst) => {
@@ -33,14 +34,30 @@ export function generateMeta(
 
     const cleanName = generateIdName(historical_filename, inst);
 
+    const cleanNameUC = cleanName.toUpperCase();
+
+    const hasActualStartDates = Boolean(cleanNameUC && actualStartDates[cleanNameUC]);
+
+    if (!hasActualStartDates) {
+      console.log(cleanNameUC);
+    }
+
     all[cleanName] = {
       name,
       description,
       decimalFactor: 10 / pipValue,
-      startHourForTicks: new Date(Number(history_start_tick)).toISOString(),
-      startDayForMinuteCandles: new Date(Number(history_start_60sec)).toISOString(),
-      startMonthForHourlyCandles: new Date(Number(history_start_60min)).toISOString(),
-      startYearForDailyCandles: new Date(Number(history_start_day)).toISOString()
+      startHourForTicks: hasActualStartDates
+        ? new Date(actualStartDates[cleanNameUC]['0'] * 1000).toISOString()
+        : new Date(Number(history_start_tick)).toISOString(),
+      startDayForMinuteCandles: hasActualStartDates
+        ? new Date(actualStartDates[cleanNameUC]['1'] * 1000).toISOString()
+        : new Date(Number(history_start_60sec)).toISOString(),
+      startMonthForHourlyCandles: hasActualStartDates
+        ? new Date(actualStartDates[cleanNameUC]['60'] * 1000).toISOString()
+        : new Date(Number(history_start_60min)).toISOString(),
+      startYearForDailyCandles: hasActualStartDates
+        ? new Date(actualStartDates[cleanNameUC]['1440'] * 1000).toISOString()
+        : new Date(Number(history_start_day)).toISOString()
     };
 
     return all;

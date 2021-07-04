@@ -54,7 +54,7 @@ const titleMap: Record<string, { emoji: string; title: string }> = {
     const contentList = instrumentGroups
       .map(
         ({ id, instruments }) =>
-          `* [${titleMap[id].title}${titleMap[id].emoji} (${instruments.length})](#${id})`
+          `* [${titleMap[id].title} ${titleMap[id].emoji} (${instruments.length})](#${id})`
       )
       .join('\n');
 

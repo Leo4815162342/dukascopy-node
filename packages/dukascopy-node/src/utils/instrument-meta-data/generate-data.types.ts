@@ -51,3 +51,8 @@ export interface MetaDataResponse {
   groups: Record<string, GroupData>;
   tags: unknown[];
 }
+
+export type ActualStartDates = Record<
+  string,
+  { '0': number; '1': number; '60': number; '1440': number }
+>;
