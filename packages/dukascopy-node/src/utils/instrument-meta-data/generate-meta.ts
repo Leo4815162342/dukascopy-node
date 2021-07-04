@@ -38,10 +38,6 @@ export function generateMeta(
 
     const hasActualStartDates = Boolean(cleanNameUC && actualStartDates[cleanNameUC]);
 
-    if (!hasActualStartDates) {
-      console.log(cleanNameUC);
-    }
-
     all[cleanName] = {
       name,
       description,
