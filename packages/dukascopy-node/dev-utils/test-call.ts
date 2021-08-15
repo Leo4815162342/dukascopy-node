@@ -18,7 +18,7 @@ import { getHistoricRates, Config } from '../src';
     const quotes = await getHistoricRates(config);
     const d2 = +new Date();
     console.log('fetching success');
-    console.log(JSON.stringify(quotes));
+    // console.log(JSON.stringify(quotes));
     console.log(`size: ${quotes.length}`);
     console.log(`time ms: ${d2 - d1}`);
   } catch (error) {
