@@ -1,8 +1,18 @@
 {
-  "extends": "./../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "./",
-    "rootDir": "./src"
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "declaration": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noUnusedParameters": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2017",
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
   },
   "include": ["./src/**/*.ts"],
   "exclude": ["node_modules", "./src/**/__tests__/**/*", "lib", "coverage", "tests"]
