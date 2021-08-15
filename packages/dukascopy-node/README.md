@@ -51,11 +51,11 @@ const { getHistoricRates } = require('dukascopy-node');
 ```
 
 ## Detailed examples
-* [Basic usage](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node/examples/basic)
-* [With tick data](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node/examples/with-tick-data)
-* [With cache](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node/examples/with-cache)
-* [With custom batching](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node/examples/with-custom-batching)
-* [With typescript](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node/examples/with-typescript)
+* [Basic usage of `dukascopy-node`](https://github.com/Leo4815162342/dukascopy-tools/wiki/Basic-usage-of-dukascopy-node)
+* [Downloading tick data](https://github.com/Leo4815162342/dukascopy-tools/wiki/Downloading-tick-data)
+* [Downloading data with cache](https://github.com/Leo4815162342/dukascopy-tools/wiki/Downloading-data-with-cache)
+* [Downloading data with custom batching](https://github.com/Leo4815162342/dukascopy-tools/wiki/Downloading-data-with-custom-batching)
+* [Usage with typescript](https://github.com/Leo4815162342/dukascopy-tools/wiki/Usage-with-typescript)
 
 
 ## Config object
