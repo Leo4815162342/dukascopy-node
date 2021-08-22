@@ -61,9 +61,9 @@ const titleMap: Record<string, { emoji: string; title: string }> = {
     const contentBody = [contentListHeader, contentList, '<hr>'].join('\n');
 
     const headers = [
-      'Instrument id',
-      'Name',
-      'Description',
+      'Instrument',
+      // 'Name',
+      'id',
       'Earliset tick data (UTC)',
       'Earliset minute data (UTC)',
       'Earliset hour data (UTC)',
@@ -82,7 +82,6 @@ const titleMap: Record<string, { emoji: string; title: string }> = {
         const listBody = instruments
           .map(instrumentId => {
             const {
-              name,
               description,
               startHourForTicks,
               startDayForMinuteCandles,
@@ -93,9 +92,8 @@ const titleMap: Record<string, { emoji: string; title: string }> = {
             ] as InstrumentMetaData;
 
             const line = [
-              `\`${instrumentId}\``,
-              name,
               description,
+              `\`${instrumentId}\``,
               getFormattedDate(startHourForTicks, {
                 hour: 'numeric',
                 minute: 'numeric',

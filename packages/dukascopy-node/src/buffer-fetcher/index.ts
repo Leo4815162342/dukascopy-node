@@ -9,6 +9,8 @@ export class BufferFetcher {
   pauseBetweenBatchesMs: number;
   notifyOnItemFetchFn?: NotifyFn;
   fetcherFn;
+  retryCount: number;
+  pauseBetweenRetriesMs: number;
   cacheManager?: CacheManagerBase;
 
   constructor({
@@ -16,6 +18,8 @@ export class BufferFetcher {
     pauseBetweenBatchesMs = 1000,
     notifyOnItemFetchFn,
     fetcherFn,
+    retryCount,
+    pauseBetweenRetriesMs,
     cacheManager
   }: BufferFetcherInput) {
     this.batchSize = batchSize;
@@ -23,6 +27,8 @@ export class BufferFetcher {
     this.notifyOnItemFetchFn = notifyOnItemFetchFn;
     this.fetcherFn = fetcherFn;
     this.cacheManager = cacheManager;
+    this.retryCount = retryCount || 0;
+    this.pauseBetweenRetriesMs = pauseBetweenRetriesMs || 500;
   }
 
   private async fetchBatch(urls: string[]): Promise<BufferObject[]> {
@@ -78,7 +84,22 @@ export class BufferFetcher {
       return this.fetcherFn(url);
     }
 
-    const data = await fetch(url);
+    let data = await fetch(url);
+
+    if (this.retryCount && data.status !== 200) {
+      let retries = 0;
+      let isRetrySuccess = false;
+      while (retries < this.retryCount && !isRetrySuccess) {
+        data = await fetch(url);
+        isRetrySuccess = data.status === 200;
+        retries++;
+        const isLastRetry = retries === this.retryCount;
+        if (!isRetrySuccess && !isLastRetry) {
+          await wait(this.pauseBetweenRetriesMs);
+        }
+      }
+    }
+
     return data.buffer();
   }
 }
