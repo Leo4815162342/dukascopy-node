@@ -64,7 +64,9 @@ npx dukascopy-cli -i eurusd -from 2006-01-01 -to 2020-01-01 -t d1 -f json
   -bp, --batch-pause <value>    Pause between batches in ms (default: 1000)
   -ch, --cache                  Use cache (default: false)
   -chpath, --cache-path <value> Folder path for cache data (default: './.dukascopy-cache')
-  -h, --help                  display help for command
+  -r, --retries <value>         Number of retries for a failed artifact download (default: `0`)
+  -rp, --retry-pause <value>    Pause between retries in milliseconds (default: `500`)
+  -h, --help                    display help for command
 ```
 
 ## Screenshots

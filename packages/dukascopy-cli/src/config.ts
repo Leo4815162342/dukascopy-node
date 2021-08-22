@@ -31,7 +31,9 @@ program
   .option('-bs, --batch-size <value>', 'Batch size of downloaded artifacts', Number, 10)
   .option('-bp, --batch-pause <value>', 'Pause between batches in ms', Number, 1000)
   .option('-ch, --cache', 'Use cache', false)
-  .option('-chpath, --cache-path <value>', 'Folder path for cache data', './.dukascopy-cache');
+  .option('-chpath, --cache-path <value>', 'Folder path for cache data', './.dukascopy-cache')
+  .option('-r, --retries <value>', 'Number of retries for a failed artifact download', Number, 0)
+  .option('-rp, --retry-pause <value>', 'Pause between retries in milliseconds', Number, 500);
 
 program.parse(process.argv);
 
@@ -62,7 +64,9 @@ const cliConfig: CliConfig = {
   batchSize: options.batchSize,
   pauseBetweenBatchesMs: options.batchPause,
   useCache: options.cache,
-  cacheFolderPath: options.cachePath
+  cacheFolderPath: options.cachePath,
+  retryCount: options.retries,
+  pauseBetweenRetriesMs: options.retryPause
 };
 
 const cliSchema: InputSchema<CliConfig> = {
