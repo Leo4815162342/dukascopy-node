@@ -73,16 +73,16 @@ export const schema: InputSchema<Config> = {
     optional: true,
     default: defaultConfig.cacheFolderPath
   } as RuleString,
-  onFetchFailRetries: {
+  retryCount: {
     type: 'number',
     integer: true,
     optional: true,
-    default: defaultConfig.onFetchFailRetries
+    default: defaultConfig.retryCount
   } as RuleNumber,
-  waitAfterOnFetchFailRetry: {
+  pauseBetweenRetriesMs: {
     type: 'number',
     integer: true,
     optional: true,
-    default: defaultConfig.pauseBetweenBatchesMs
+    default: defaultConfig.pauseBetweenRetriesMs
   } as RuleNumber
 };

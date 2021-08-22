@@ -43,8 +43,8 @@ export async function getHistoricRates(config: Config): Promise<Output> {
     pauseBetweenBatchesMs,
     useCache,
     cacheFolderPath,
-    onFetchFailRetries,
-    waitAfterOnFetchFailRetry
+    retryCount,
+    pauseBetweenRetriesMs
   } = input;
 
   const [startDate, endDate] = normaliseDates({
@@ -61,8 +61,8 @@ export async function getHistoricRates(config: Config): Promise<Output> {
     batchSize,
     pauseBetweenBatchesMs,
     cacheManager: useCache ? new CacheManager({ cacheFolderPath }) : undefined,
-    retryCount: onFetchFailRetries,
-    retryPause: waitAfterOnFetchFailRetry
+    retryCount,
+    pauseBetweenRetriesMs
   });
 
   const bufferredData = await bufferFetcher.fetch(urls);

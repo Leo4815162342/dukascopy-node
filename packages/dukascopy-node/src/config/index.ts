@@ -22,8 +22,8 @@ export interface Config {
   pauseBetweenBatchesMs?: number;
   useCache?: boolean;
   cacheFolderPath?: string;
-  onFetchFailRetries?: number;
-  waitAfterOnFetchFailRetry?: number;
+  retryCount?: number;
+  pauseBetweenRetriesMs?: number;
 }
 
 export type DefaultConfig = Required<Pick<Config, OptionalKeys<Config>>>;
@@ -39,8 +39,8 @@ export const defaultConfig: DefaultConfig = {
   pauseBetweenBatchesMs: 1000,
   useCache: false,
   cacheFolderPath: '',
-  onFetchFailRetries: 0,
-  waitAfterOnFetchFailRetry: 0
+  retryCount: 0,
+  pauseBetweenRetriesMs: 500
 };
 
 export interface ConfigArrayTickItem extends Config {
