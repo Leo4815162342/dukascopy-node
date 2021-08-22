@@ -76,6 +76,8 @@ const { getHistoricRates } = require('dukascopy-node');
 |`pauseBetweenBatchesMs`|`Number`|false|`1000`|Pause between downloading batches (in milliseconds).|
 |`useCache`|`Boolean`|false|`false`|A flag indicating whether a file-system cache is going to be used to store response artifacts for subsequent lookups. When set to `true`, it significantly speeds up calls when requesting overlapping or similar data|
 |`cacheFolderPath`|`String`|false|`./.dukascopy-cache`|Folder path where all cache artifacts (binary data) will be stored|
+|`retryCount`|`Number`|false|`0`|Number of retries for a failed artifact download. If `0` no retries will happen even for failed requests.|
+|`pauseBetweenRetriesMs`|`Number`|false|`500`|Pause between retries. If `retryCount` is `0` this parameter will be ignored|
 
 ***
 
@@ -98,7 +100,9 @@ const { getHistoricRates } = require('dukascopy-node');
   batchSize: 10,
   pauseBetweenBatchesMs: 1000,
   useCache: true,
-  cacheFolderPath: '.dukascopy-cache'
+  cacheFolderPath: '.dukascopy-cache',
+  retryCount: 5,
+  pauseBetweenRetriesMs: 250
 }
 ```
 
