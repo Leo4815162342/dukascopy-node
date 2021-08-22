@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-cli/compare/dukascopy-cli@1.7.0...dukascopy-cli@1.8.0) (2021-08-22)
+
+
+### Features
+
+* add retry on fetch fail ([#49](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-cli/issues/49)) ([c05d71d](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-cli/commit/c05d71d638dae04a56c4cddeb6602ceaecd10314))
+
+
+
+
+
 # [1.7.0](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-cli/compare/dukascopy-cli@1.6.0...dukascopy-cli@1.7.0) (2021-07-04)
 
 
