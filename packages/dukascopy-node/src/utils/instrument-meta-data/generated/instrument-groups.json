@@ -12,9 +12,13 @@
     "instruments": [
       "bchusd",
       "btcusd",
+      "dshusd",
+      "eosusd",
       "ethusd",
       "ltcusd",
-      "xlmusd"
+      "trxusd",
+      "xlmusd",
+      "xmrusd"
     ]
   },
   {
@@ -62,7 +66,6 @@
     "instruments": [
       "2822hkhkd",
       "2828hkhkd",
-      "2833hkhkd",
       "2836hkhkd",
       "3188hkhkd"
     ]

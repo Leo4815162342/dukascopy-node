@@ -169,12 +169,6 @@ export enum Instrument {
     '2828hkhkd'='2828hkhkd',
 
     /**
-     * ### Hang Seng Index ETF
-     * *2833.HK/HKD*
-     */
-    '2833hkhkd'='2833hkhkd',
-
-    /**
      * ### iShares Core S&P BSE SENSEX India ETF
      * *2836.HK/HKD*
      */
@@ -1699,6 +1693,12 @@ export enum Instrument {
     dsbfreur='dsbfreur',
 
     /**
+     * ### Dashcoin vs US Dollar
+     * *DSH/USD*
+     */
+    dshusd='dshusd',
+
+    /**
      * ### Koninklijke DSM NV
      * *DSM.NL/EUR*
      */
@@ -1871,6 +1871,12 @@ export enum Instrument {
      * *EOG.US/USD*
      */
     eogususd='eogususd',
+
+    /**
+     * ### EOS vs US Dollar
+     * *EOS/USD*
+     */
+    eosusd='eosusd',
 
     /**
      * ### EQT CORP
@@ -4219,6 +4225,12 @@ export enum Instrument {
     trvususd='trvususd',
 
     /**
+     * ### TRON vs US Dollar
+     * *TRX/USD*
+     */
+    trxusd='trxusd',
+
+    /**
      * ### Turkish Lira vs Japanese Yen
      * *TRY/JPY*
      */
@@ -4775,6 +4787,12 @@ export enum Instrument {
      * *XLY.US/USD*
      */
     xlyususd='xlyususd',
+
+    /**
+     * ### Monero vs US Dollar
+     * *XMR/USD*
+     */
+    xmrusd='xmrusd',
 
     /**
      * ### EXXON MOBIL CORP

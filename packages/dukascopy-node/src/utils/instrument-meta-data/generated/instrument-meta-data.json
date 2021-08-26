@@ -251,15 +251,6 @@
     "startMonthForHourlyCandles": "2020-09-28T01:00:00.000Z",
     "startYearForDailyCandles": "2020-09-28T00:00:00.000Z"
   },
-  "2833hkhkd": {
-    "name": "2833.HK/HKD",
-    "description": "Hang Seng Index ETF",
-    "decimalFactor": 1000,
-    "startHourForTicks": "2020-09-28T01:30:00.048Z",
-    "startDayForMinuteCandles": "2020-09-28T01:30:00.000Z",
-    "startMonthForHourlyCandles": "2020-09-28T01:00:00.000Z",
-    "startYearForDailyCandles": "2020-09-28T00:00:00.000Z"
-  },
   "2836hkhkd": {
     "name": "2836.HK/HKD",
     "description": "iShares Core S&P BSE SENSEX India ETF",
@@ -2546,6 +2537,15 @@
     "startMonthForHourlyCandles": "2020-09-22T07:00:00.000Z",
     "startYearForDailyCandles": "2020-09-22T00:00:00.000Z"
   },
+  "dshusd": {
+    "name": "DSH/USD",
+    "description": "Dashcoin vs US Dollar",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2019-08-04T22:00:17.191Z",
+    "startDayForMinuteCandles": "2019-08-04T22:00:00.000Z",
+    "startMonthForHourlyCandles": "2019-08-04T22:00:00.000Z",
+    "startYearForDailyCandles": "2019-08-04T00:00:00.000Z"
+  },
   "dsmnleur": {
     "name": "DSM.NL/EUR",
     "description": "Koninklijke DSM NV",
@@ -2806,6 +2806,15 @@
     "startDayForMinuteCandles": "2017-11-02T14:09:00.000Z",
     "startMonthForHourlyCandles": "2017-11-02T14:00:00.000Z",
     "startYearForDailyCandles": "2017-11-02T00:00:00.000Z"
+  },
+  "eosusd": {
+    "name": "EOS/USD",
+    "description": "EOS vs US Dollar",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2019-08-04T22:00:17.191Z",
+    "startDayForMinuteCandles": "2019-08-04T22:00:00.000Z",
+    "startMonthForHourlyCandles": "2019-08-04T22:00:00.000Z",
+    "startYearForDailyCandles": "2019-08-04T00:00:00.000Z"
   },
   "eqtususd": {
     "name": "EQT.US/USD",
@@ -6326,6 +6335,15 @@
     "startMonthForHourlyCandles": "2017-11-02T13:00:00.000Z",
     "startYearForDailyCandles": "2017-11-02T00:00:00.000Z"
   },
+  "trxusd": {
+    "name": "TRX/USD",
+    "description": "TRON vs US Dollar",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2019-08-04T22:00:02.269Z",
+    "startDayForMinuteCandles": "2019-08-04T22:00:00.000Z",
+    "startMonthForHourlyCandles": "2019-08-04T22:00:00.000Z",
+    "startYearForDailyCandles": "2019-08-04T00:00:00.000Z"
+  },
   "tryjpy": {
     "name": "TRY/JPY",
     "description": "Turkish Lira vs Japanese Yen",
@@ -7162,6 +7180,15 @@
     "startDayForMinuteCandles": "2017-11-15T16:49:00.000Z",
     "startMonthForHourlyCandles": "2017-11-15T16:00:00.000Z",
     "startYearForDailyCandles": "2017-11-15T00:00:00.000Z"
+  },
+  "xmrusd": {
+    "name": "XMR/USD",
+    "description": "Monero vs US Dollar",
+    "decimalFactor": 100,
+    "startHourForTicks": "2019-11-25T11:57:28.148Z",
+    "startDayForMinuteCandles": "2019-11-25T11:57:00.000Z",
+    "startMonthForHourlyCandles": "2019-11-25T11:00:00.000Z",
+    "startYearForDailyCandles": "2019-11-25T00:00:00.000Z"
   },
   "xomususd": {
     "name": "XOM.US/USD",
