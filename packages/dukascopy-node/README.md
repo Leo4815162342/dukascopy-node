@@ -111,13 +111,13 @@ const { getHistoricRates } = require('dukascopy-node');
 ## Instruments
 
 * [Bonds 📊 (3)](#bnd_cfd)
-* [Crypto assets ₿ (5)](#vccy)
+* [Crypto assets ₿ (9)](#vccy)
 * [Agricultural commodities ☕ (6)](#cmd_agricultural)
 * [Energy commodities ⚡ (4)](#cmd_energy)
 * [Metals commodities ⚙️ (1)](#cmd_metals)
 * [Germany ETFs 🇩🇪📈 (1)](#etf_cfd_de)
 * [France ETFs 🇫🇷📈 (3)](#etf_cfd_fr)
-* [Hong Kong ETFs 🇭🇰📈 (5)](#etf_cfd_hk)
+* [Hong Kong ETFs 🇭🇰📈 (4)](#etf_cfd_hk)
 * [United States ETFs 🇺🇸📈 (43)](#etf_cfd_us)
 * [Forex currencies 💱 (54)](#fx_crosses)
 * [Forex major currencies 💶 (7)](#fx_majors)
@@ -157,9 +157,13 @@ const { getHistoricRates } = require('dukascopy-node');
 |-|-|-|-|-|-|
 |Bitcoin Cash vs US dollar|`bchusd`|May 17, 2021, 12:09:25 PM|Jun 9, 2021, 2:38 PM|Jun 9, 2021, 3 PM|Jun 10, 2021|
 |Bitcoin vs US Dollar|`btcusd`|May 7, 2017, 11:59:59 PM|May 7, 2017, 11:59 PM|May 7, 2017, 11 PM|May 7, 2017|
+|Dashcoin vs US Dollar|`dshusd`|Aug 4, 2019, 10:00:17 PM|Aug 4, 2019, 10:00 PM|Aug 4, 2019, 10 PM|Aug 4, 2019|
+|EOS vs US Dollar|`eosusd`|Aug 4, 2019, 10:00:17 PM|Aug 4, 2019, 10:00 PM|Aug 4, 2019, 10 PM|Aug 4, 2019|
 |Ether vs US Dollar|`ethusd`|Dec 11, 2017, 11:51:21 PM|Dec 11, 2017, 11:51 PM|Dec 11, 2017, 11 PM|Dec 11, 2017|
 |Litecoin vs US Dollar|`ltcusd`|Sep 3, 2018, 12:00:00 AM|Sep 3, 2018, 12:00 AM|Sep 3, 2018, 12 AM|Sep 3, 2018|
+|TRON vs US Dollar|`trxusd`|Aug 4, 2019, 10:00:02 PM|Aug 4, 2019, 10:00 PM|Aug 4, 2019, 10 PM|Aug 4, 2019|
 |Stellar vs US Dollar|`xlmusd`|Jan 1, 2000, 12:00:00 AM|May 25, 2021, 7:58 AM|May 25, 2021, 7 AM|May 25, 2021|
+|Monero vs US Dollar|`xmrusd`|Nov 25, 2019, 11:57:28 AM|Nov 25, 2019, 11:57 AM|Nov 25, 2019, 11 AM|Nov 25, 2019|
 <h3 id="cmd_agricultural">Agricultural commodities ☕</h3>
 
 |Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
@@ -201,7 +205,6 @@ const { getHistoricRates } = require('dukascopy-node');
 |-|-|-|-|-|-|
 |CSOP FTSE China A50 ETF|`2822hkhkd`|Sep 28, 2020, 1:30:00 AM|Sep 28, 2020, 1:30 AM|Sep 28, 2020, 1 AM|Sep 28, 2020|
 |Hang Seng H-Share Index ETF|`2828hkhkd`|Sep 28, 2020, 1:30:00 AM|Sep 28, 2020, 1:30 AM|Sep 28, 2020, 1 AM|Sep 28, 2020|
-|Hang Seng Index ETF|`2833hkhkd`|Sep 28, 2020, 1:30:00 AM|Sep 28, 2020, 1:30 AM|Sep 28, 2020, 1 AM|Sep 28, 2020|
 |iShares Core S&P BSE SENSEX India ETF|`2836hkhkd`|Sep 28, 2020, 1:30:02 AM|Sep 28, 2020, 1:30 AM|Sep 28, 2020, 1 AM|Sep 28, 2020|
 |ChinaAMC CSI 300 Index ETF|`3188hkhkd`|Sep 28, 2020, 1:30:00 AM|Sep 28, 2020, 1:30 AM|Sep 28, 2020, 1 AM|Sep 28, 2020|
 <h3 id="etf_cfd_us">United States ETFs 🇺🇸📈</h3>
