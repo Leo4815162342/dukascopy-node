@@ -53,7 +53,7 @@ npx dukascopy-cli -i eurusd -from 2006-01-01 -to 2020-01-01 -t d1 -f json
   -i, --instrument <value>      Trading instrument
   -from, --date-from <value>    From date (yyyy-mm-dd)
   -to, --date-to <value>        To date (yyyy-mm-dd)
-  -t, --timeframe <value>       Timeframe aggregation (tick, m1, m15, m30, h1, d1, mn1) (default: "d1")
+  -t, --timeframe <value>       Timeframe aggregation (tick, m1, m5, m15, m30, h1, h4, d1, mn1) (default: "d1")
   -p, --price-type <value>      Price type: (bid, ask) (default: "bid")
   -utc, --utc-offset <value>    UTC offset in minutes (default: 0)
   -v, --volumes                 Include volumes (default: false)
