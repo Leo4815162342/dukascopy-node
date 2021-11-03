@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-cli/compare/dukascopy-cli@1.9.0...dukascopy-cli@1.10.0) (2021-11-03)
+
+
+### Features
+
+* more timeframes (m5 and h4) ([#53](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-cli/issues/53)) ([0fec595](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-cli/commit/0fec5952ac9c6e1be5439f8fb75ac854900dfcfe))
+
+
+
+
+
 # [1.9.0](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-cli/compare/dukascopy-cli@1.8.0...dukascopy-cli@1.9.0) (2021-08-26)
 
 
