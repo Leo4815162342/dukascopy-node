@@ -935,6 +935,15 @@
     "startMonthForHourlyCandles": "2011-01-03T08:00:00.000Z",
     "startYearForDailyCandles": "2011-01-03T00:00:00.000Z"
   },
+  "adausd": {
+    "name": "ADA/USD",
+    "description": "Cardano vs US Dollar",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2000-01-01T00:00:00.000Z",
+    "startDayForMinuteCandles": "2021-09-25T17:32:00.000Z",
+    "startMonthForHourlyCandles": "2021-09-25T17:00:00.000Z",
+    "startYearForDailyCandles": "2021-09-25T00:00:00.000Z"
+  },
   "adbeususd": {
     "name": "ADBE.US/USD",
     "description": "ADOBE SYSTEMS INC",
@@ -1385,6 +1394,15 @@
     "startMonthForHourlyCandles": "2018-01-31T16:00:00.000Z",
     "startYearForDailyCandles": "2018-01-31T00:00:00.000Z"
   },
+  "aveusd": {
+    "name": "AVE/USD",
+    "description": "Aave vs US Dollar",
+    "decimalFactor": 100,
+    "startHourForTicks": "2000-01-01T00:00:00.000Z",
+    "startDayForMinuteCandles": "2021-10-01T00:00:00.000Z",
+    "startMonthForHourlyCandles": "2021-10-01T00:00:00.000Z",
+    "startYearForDailyCandles": "2021-09-15T00:00:00.000Z"
+  },
   "avgoususd": {
     "name": "AVGO.US/USD",
     "description": "Broadcom Limited",
@@ -1519,6 +1537,15 @@
     "startDayForMinuteCandles": "2015-04-22T07:00:00.000Z",
     "startMonthForHourlyCandles": "2011-01-03T08:00:00.000Z",
     "startYearForDailyCandles": "2011-01-03T00:00:00.000Z"
+  },
+  "batusd": {
+    "name": "BAT/USD",
+    "description": "Basic Attention Token vs US Dollar",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2019-08-05T00:00:02.214Z",
+    "startDayForMinuteCandles": "2019-08-05T00:00:00.000Z",
+    "startMonthForHourlyCandles": "2019-08-05T00:00:00.000Z",
+    "startYearForDailyCandles": "2019-08-05T00:00:00.000Z"
   },
   "batsgbgbx": {
     "name": "BATS.GB/GBX",
@@ -2068,6 +2095,15 @@
     "startDayForMinuteCandles": "2018-02-01T14:34:00.000Z",
     "startMonthForHourlyCandles": "2018-02-01T14:00:00.000Z",
     "startYearForDailyCandles": "2018-02-01T00:00:00.000Z"
+  },
+  "cmpusd": {
+    "name": "CMP/USD",
+    "description": "Compound vs US Dollar",
+    "decimalFactor": 100,
+    "startHourForTicks": "2000-01-01T00:00:00.000Z",
+    "startDayForMinuteCandles": "2021-09-25T17:38:00.000Z",
+    "startMonthForHourlyCandles": "2021-09-25T17:00:00.000Z",
+    "startYearForDailyCandles": "2021-09-25T00:00:00.000Z"
   },
   "cnagbgbx": {
     "name": "CNA.GB/GBX",
@@ -2789,6 +2825,15 @@
     "startMonthForHourlyCandles": "2020-12-17T14:00:00.000Z",
     "startYearForDailyCandles": "2020-12-17T00:00:00.000Z"
   },
+  "enjusd": {
+    "name": "ENJ/USD",
+    "description": "Enjin vs US Dollar",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2000-01-01T00:00:00.000Z",
+    "startDayForMinuteCandles": "2021-09-25T17:42:00.000Z",
+    "startMonthForHourlyCandles": "2021-09-25T17:00:00.000Z",
+    "startYearForDailyCandles": "2021-09-25T00:00:00.000Z"
+  },
   "eoandeeur": {
     "name": "EOAN.DE/EUR",
     "description": "E.ON SE",
@@ -3115,7 +3160,7 @@
   },
   "deuidxeur": {
     "name": "DEU.IDX/EUR",
-    "description": "Germany 30 Index",
+    "description": "Germany 40 Index",
     "decimalFactor": 1000,
     "startHourForTicks": "2013-01-01T05:44:03.103Z",
     "startDayForMinuteCandles": "2013-09-30T15:13:00.000Z",
@@ -4346,6 +4391,15 @@
     "startMonthForHourlyCandles": "2017-05-11T13:00:00.000Z",
     "startYearForDailyCandles": "2017-05-11T00:00:00.000Z"
   },
+  "lnkusd": {
+    "name": "LNK/USD",
+    "description": "Chainlink vs US Dollar",
+    "decimalFactor": 100,
+    "startHourForTicks": "2000-01-01T00:00:00.000Z",
+    "startDayForMinuteCandles": "2021-09-25T17:49:00.000Z",
+    "startMonthForHourlyCandles": "2021-09-25T17:00:00.000Z",
+    "startYearForDailyCandles": "2021-09-25T00:00:00.000Z"
+  },
   "lonnchchf": {
     "name": "LONN.CH/CHF",
     "description": "Lonza Group AG",
@@ -4490,6 +4544,15 @@
     "startMonthForHourlyCandles": "2018-02-01T14:00:00.000Z",
     "startYearForDailyCandles": "2018-02-01T00:00:00.000Z"
   },
+  "matusd": {
+    "name": "MAT/USD",
+    "description": "Polygon vs US Dollar",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2000-01-01T00:00:00.000Z",
+    "startDayForMinuteCandles": "2021-09-25T17:52:00.000Z",
+    "startMonthForHourlyCandles": "2021-09-25T17:00:00.000Z",
+    "startYearForDailyCandles": "2021-09-25T00:00:00.000Z"
+  },
   "mbiteur": {
     "name": "MB.IT/EUR",
     "description": "Mediobanca Spa",
@@ -4570,6 +4633,15 @@
     "startDayForMinuteCandles": "2016-11-14T11:26:00.000Z",
     "startMonthForHourlyCandles": "2011-01-03T08:00:00.000Z",
     "startYearForDailyCandles": "2011-01-03T00:00:00.000Z"
+  },
+  "mkrusd": {
+    "name": "MKR/USD",
+    "description": "Maker vs US Dollar",
+    "decimalFactor": 100,
+    "startHourForTicks": "2000-01-01T00:00:00.000Z",
+    "startDayForMinuteCandles": "2021-09-25T17:54:00.000Z",
+    "startMonthForHourlyCandles": "2021-09-25T17:00:00.000Z",
+    "startYearForDailyCandles": "2021-09-25T00:00:00.000Z"
   },
   "mksgbgbx": {
     "name": "MKS.GB/GBX",
@@ -6465,8 +6537,8 @@
     "name": "UHR.CH/CHF",
     "description": "Swatch Group AG/The",
     "decimalFactor": 1000,
-    "startHourForTicks": "2015-08-07T03:45:00.598Z",
-    "startDayForMinuteCandles": "2015-08-07T03:45:00.000Z",
+    "startHourForTicks": "2015-08-07T07:00:48.078Z",
+    "startDayForMinuteCandles": "2015-08-07T07:00:00.000Z",
     "startMonthForHourlyCandles": "2011-01-03T08:00:00.000Z",
     "startYearForDailyCandles": "2011-01-03T00:00:00.000Z"
   },
@@ -6523,6 +6595,15 @@
     "startDayForMinuteCandles": "2017-11-02T16:21:00.000Z",
     "startMonthForHourlyCandles": "2017-11-02T16:00:00.000Z",
     "startYearForDailyCandles": "2017-11-02T00:00:00.000Z"
+  },
+  "uniusd": {
+    "name": "UNI/USD",
+    "description": "Uniswap vs US Dollar",
+    "decimalFactor": 100,
+    "startHourForTicks": "2000-01-01T00:00:00.000Z",
+    "startDayForMinuteCandles": "2021-10-01T00:00:00.000Z",
+    "startMonthForHourlyCandles": "2021-10-01T00:00:00.000Z",
+    "startYearForDailyCandles": "2021-10-01T00:00:00.000Z"
   },
   "unpususd": {
     "name": "UNP.US/USD",
@@ -7216,6 +7297,15 @@
     "startDayForMinuteCandles": "2020-12-23T14:41:00.000Z",
     "startMonthForHourlyCandles": "2020-12-23T14:00:00.000Z",
     "startYearForDailyCandles": "2020-12-23T00:00:00.000Z"
+  },
+  "yfiusd": {
+    "name": "YFI/USD",
+    "description": "Yearn.finance vs US Dollar",
+    "decimalFactor": 10,
+    "startHourForTicks": "2000-01-01T00:00:00.000Z",
+    "startDayForMinuteCandles": "2021-09-25T17:59:00.000Z",
+    "startMonthForHourlyCandles": "2021-09-25T17:00:00.000Z",
+    "startYearForDailyCandles": "2021-09-25T00:00:00.000Z"
   },
   "yumususd": {
     "name": "YUM.US/USD",

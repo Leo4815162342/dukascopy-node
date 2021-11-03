@@ -10,15 +10,25 @@
   {
     "id": "vccy",
     "instruments": [
+      "adausd",
+      "aveusd",
+      "batusd",
       "bchusd",
       "btcusd",
+      "cmpusd",
       "dshusd",
+      "enjusd",
       "eosusd",
       "ethusd",
+      "lnkusd",
       "ltcusd",
+      "matusd",
+      "mkrusd",
       "trxusd",
+      "uniusd",
       "xlmusd",
-      "xmrusd"
+      "xmrusd",
+      "yfiusd"
     ]
   },
   {
