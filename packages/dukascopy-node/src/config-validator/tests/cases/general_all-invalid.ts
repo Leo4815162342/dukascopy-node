@@ -1,4 +1,5 @@
 import { Instrument } from '../../../config/instruments';
+import { Timeframe } from '../../../config/timeframes';
 
 const config = {
   instrument: '',
@@ -25,7 +26,7 @@ const expectedOutput = {
     },
     {
       actual: '',
-      expected: 'tick, m1, m15, m30, h1, d1, mn1',
+      expected: Object.keys(Timeframe).join(', '),
       message: "The 'timeframe' field does not match any of the allowed values."
     },
     {
