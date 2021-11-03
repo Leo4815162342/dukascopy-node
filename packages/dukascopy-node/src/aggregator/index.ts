@@ -31,6 +31,10 @@ export function aggregate({
         return minuteOHLC;
       }
 
+      if (toTimeframe === Timeframe.m5) {
+        return splitArrayInChunks(minuteOHLC, 5).map(d => getOHLC(d, ignoreFlats));
+      }
+
       if (toTimeframe === Timeframe.m15) {
         return splitArrayInChunks(minuteOHLC, 15).map(d => getOHLC(d, ignoreFlats));
       }
@@ -45,6 +49,10 @@ export function aggregate({
     }
 
     if (fromTimeframe === Timeframe.m1) {
+      if (toTimeframe === Timeframe.m5) {
+        return splitArrayInChunks(data, 5).map(d => getOHLC(d, ignoreFlats));
+      }
+
       if (toTimeframe === Timeframe.m15) {
         return splitArrayInChunks(data, 15).map(d => getOHLC(d, ignoreFlats));
       }
@@ -57,12 +65,19 @@ export function aggregate({
         return splitArrayInChunks(data, 60).map(d => getOHLC(d, ignoreFlats));
       }
 
+      if (toTimeframe === Timeframe.h4) {
+        return splitArrayInChunks(data, 240).map(d => getOHLC(d, ignoreFlats));
+      }
+
       if (toTimeframe === Timeframe.d1) {
         return [data].map(d => getOHLC(d, ignoreFlats));
       }
     }
 
     if (fromTimeframe === Timeframe.h1) {
+      if (toTimeframe === Timeframe.h4) {
+        return splitArrayInChunks(data, 4).map(d => getOHLC(d, ignoreFlats));
+      }
       if (toTimeframe === Timeframe.d1) {
         return splitArrayInChunks(data, 24).map(d => getOHLC(d, ignoreFlats));
       }

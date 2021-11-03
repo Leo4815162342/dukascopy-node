@@ -4,13 +4,14 @@ import { getHistoricRates, Config } from '../src';
 (async () => {
   try {
     const config: Config = {
-      instrument: 'eurusd',
+      instrument: 'btcusd',
       dates: {
-        from: new Date('2021-03-30'),
-        to: new Date('2021-03-31')
+        from: '2020-12-03T00:00:00.000Z',
+        to: '2020-12-04T00:00:00.000Z'
       },
-      timeframe: 'tick',
-      format: 'json'
+      timeframe: 'h4',
+      format: 'json',
+      ignoreFlats: false
     };
     console.log('fetching started');
     console.log(JSON.stringify(config));
@@ -20,6 +21,7 @@ import { getHistoricRates, Config } from '../src';
     console.log('fetching success');
     // console.log(JSON.stringify(quotes));
     console.log(`size: ${quotes.length}`);
+    console.log(JSON.stringify(quotes, null, 2));
     console.log(`time ms: ${d2 - d1}`);
   } catch (error) {
     console.log('error', error);
