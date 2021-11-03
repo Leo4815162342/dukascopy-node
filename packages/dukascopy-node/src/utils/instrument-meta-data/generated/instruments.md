@@ -1,7 +1,7 @@
 ## Instruments
 
 * [Bonds 📊 (3)](#bnd_cfd)
-* [Crypto assets ₿ (9)](#vccy)
+* [Crypto assets ₿ (19)](#vccy)
 * [Agricultural commodities ☕ (6)](#cmd_agricultural)
 * [Energy commodities ⚡ (4)](#cmd_energy)
 * [Metals commodities ⚙️ (1)](#cmd_metals)
@@ -45,15 +45,25 @@
 
 |Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|
+|Cardano vs US Dollar|`adausd`|Jan 1, 2000, 12:00:00 AM|Sep 25, 2021, 5:32 PM|Sep 25, 2021, 5 PM|Sep 25, 2021|
+|Aave vs US Dollar|`aveusd`|Jan 1, 2000, 12:00:00 AM|Oct 1, 2021, 12:00 AM|Oct 1, 2021, 12 AM|Sep 15, 2021|
+|Basic Attention Token vs US Dollar|`batusd`|Aug 5, 2019, 12:00:02 AM|Aug 5, 2019, 12:00 AM|Aug 5, 2019, 12 AM|Aug 5, 2019|
 |Bitcoin Cash vs US dollar|`bchusd`|May 17, 2021, 12:09:25 PM|Jun 9, 2021, 2:38 PM|Jun 9, 2021, 3 PM|Jun 10, 2021|
 |Bitcoin vs US Dollar|`btcusd`|May 7, 2017, 11:59:59 PM|May 7, 2017, 11:59 PM|May 7, 2017, 11 PM|May 7, 2017|
+|Compound vs US Dollar|`cmpusd`|Jan 1, 2000, 12:00:00 AM|Sep 25, 2021, 5:38 PM|Sep 25, 2021, 5 PM|Sep 25, 2021|
 |Dashcoin vs US Dollar|`dshusd`|Aug 4, 2019, 10:00:17 PM|Aug 4, 2019, 10:00 PM|Aug 4, 2019, 10 PM|Aug 4, 2019|
+|Enjin vs US Dollar|`enjusd`|Jan 1, 2000, 12:00:00 AM|Sep 25, 2021, 5:42 PM|Sep 25, 2021, 5 PM|Sep 25, 2021|
 |EOS vs US Dollar|`eosusd`|Aug 4, 2019, 10:00:17 PM|Aug 4, 2019, 10:00 PM|Aug 4, 2019, 10 PM|Aug 4, 2019|
 |Ether vs US Dollar|`ethusd`|Dec 11, 2017, 11:51:21 PM|Dec 11, 2017, 11:51 PM|Dec 11, 2017, 11 PM|Dec 11, 2017|
+|Chainlink vs US Dollar|`lnkusd`|Jan 1, 2000, 12:00:00 AM|Sep 25, 2021, 5:49 PM|Sep 25, 2021, 5 PM|Sep 25, 2021|
 |Litecoin vs US Dollar|`ltcusd`|Sep 3, 2018, 12:00:00 AM|Sep 3, 2018, 12:00 AM|Sep 3, 2018, 12 AM|Sep 3, 2018|
+|Polygon vs US Dollar|`matusd`|Jan 1, 2000, 12:00:00 AM|Sep 25, 2021, 5:52 PM|Sep 25, 2021, 5 PM|Sep 25, 2021|
+|Maker vs US Dollar|`mkrusd`|Jan 1, 2000, 12:00:00 AM|Sep 25, 2021, 5:54 PM|Sep 25, 2021, 5 PM|Sep 25, 2021|
 |TRON vs US Dollar|`trxusd`|Aug 4, 2019, 10:00:02 PM|Aug 4, 2019, 10:00 PM|Aug 4, 2019, 10 PM|Aug 4, 2019|
+|Uniswap vs US Dollar|`uniusd`|Jan 1, 2000, 12:00:00 AM|Oct 1, 2021, 12:00 AM|Oct 1, 2021, 12 AM|Oct 1, 2021|
 |Stellar vs US Dollar|`xlmusd`|Jan 1, 2000, 12:00:00 AM|May 25, 2021, 7:58 AM|May 25, 2021, 7 AM|May 25, 2021|
 |Monero vs US Dollar|`xmrusd`|Nov 25, 2019, 11:57:28 AM|Nov 25, 2019, 11:57 AM|Nov 25, 2019, 11 AM|Nov 25, 2019|
+|Yearn.finance vs US Dollar|`yfiusd`|Jan 1, 2000, 12:00:00 AM|Sep 25, 2021, 5:59 PM|Sep 25, 2021, 5 PM|Sep 25, 2021|
 <h3 id="cmd_agricultural">Agricultural commodities ☕</h3>
 
 |Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
@@ -243,7 +253,7 @@
 |Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|
 |France 40 Index|`fraidxeur`|Jan 1, 2013, 5:15:34 PM|Sep 19, 2011, 7:00 AM|Sep 19, 2011, 7 AM|Dec 31, 1987|
-|Germany 30 Index|`deuidxeur`|Jan 1, 2013, 5:44:03 AM|Sep 30, 2013, 3:13 PM|Sep 30, 2013, 2 PM|Sep 30, 2013|
+|Germany 40 Index|`deuidxeur`|Jan 1, 2013, 5:44:03 AM|Sep 30, 2013, 3:13 PM|Sep 30, 2013, 2 PM|Sep 30, 2013|
 |Europe 50 Index|`eusidxeur`|Jun 2, 2014, 6:00:57 AM|Jun 2, 2014, 6:00 AM|Jun 2, 2014, 6 AM|Jun 2, 2014|
 |UK 100 Index|`gbridxgbp`|Jan 1, 2013, 3:51:37 AM|Sep 19, 2011, 2:06 AM|Sep 18, 2011, 9 PM|Apr 5, 1988|
 |Spain 35 Index|`espidxeur`|Jun 2, 2014, 7:01:09 AM|Jun 2, 2014, 7:01 AM|Jun 2, 2014, 7 AM|Jun 2, 2014|
@@ -624,7 +634,7 @@
 |Sonova Holding AG|`soonchchf`|Aug 7, 2015, 7:00:48 AM|Aug 7, 2015, 7:00 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |Swiss Re AG|`srenchchf`|Aug 6, 2015, 7:00:11 AM|Aug 6, 2015, 7:00 AM|May 23, 2011, 7 AM|May 23, 2011|
 |UBS Group AG|`ubsgchchf`|Jun 15, 2015, 7:00:43 AM|Jun 15, 2015, 7:00 AM|Nov 28, 2014, 8 AM|Nov 28, 2014|
-|Swatch Group AG/The|`uhrchchf`|Aug 7, 2015, 3:45:00 AM|Aug 7, 2015, 3:45 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
+|Swatch Group AG/The|`uhrchchf`|Aug 7, 2015, 7:00:48 AM|Aug 7, 2015, 7:00 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |Zurich Insurance Group AG|`zurnchchf`|Aug 7, 2015, 7:00:49 AM|Aug 7, 2015, 7:00 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 <h3 id="uk">United Kingdom 🇬🇧</h3>
 

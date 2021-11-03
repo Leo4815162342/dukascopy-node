@@ -625,6 +625,12 @@ export enum Instrument {
     acxeseur='acxeseur',
 
     /**
+     * ### Cardano vs US Dollar
+     * *ADA/USD*
+     */
+    adausd='adausd',
+
+    /**
      * ### ADOBE SYSTEMS INC
      * *ADBE.US/USD*
      */
@@ -925,6 +931,12 @@ export enum Instrument {
     avbususd='avbususd',
 
     /**
+     * ### Aave vs US Dollar
+     * *AVE/USD*
+     */
+    aveusd='aveusd',
+
+    /**
      * ### Broadcom Limited
      * *AVGO.US/USD*
      */
@@ -1013,6 +1025,12 @@ export enum Instrument {
      * *BAS.DE/EUR*
      */
     basdeeur='basdeeur',
+
+    /**
+     * ### Basic Attention Token vs US Dollar
+     * *BAT/USD*
+     */
+    batusd='batusd',
 
     /**
      * ### British American Tobacco PLC
@@ -1379,6 +1397,12 @@ export enum Instrument {
      * *CMI.US/USD*
      */
     cmiususd='cmiususd',
+
+    /**
+     * ### Compound vs US Dollar
+     * *CMP/USD*
+     */
+    cmpusd='cmpusd',
 
     /**
      * ### Centrica PLC
@@ -1861,6 +1885,12 @@ export enum Instrument {
     eniiteur='eniiteur',
 
     /**
+     * ### Enjin vs US Dollar
+     * *ENJ/USD*
+     */
+    enjusd='enjusd',
+
+    /**
      * ### E.ON SE
      * *EOAN.DE/EUR*
      */
@@ -2077,7 +2107,7 @@ export enum Instrument {
     usa30idxusd='usa30idxusd',
 
     /**
-     * ### Germany 30 Index
+     * ### Germany 40 Index
      * *DEU.IDX/EUR*
      */
     deuidxeur='deuidxeur',
@@ -2899,6 +2929,12 @@ export enum Instrument {
     lmtususd='lmtususd',
 
     /**
+     * ### Chainlink vs US Dollar
+     * *LNK/USD*
+     */
+    lnkusd='lnkusd',
+
+    /**
      * ### Lonza Group AG
      * *LONN.CH/CHF*
      */
@@ -2995,6 +3031,12 @@ export enum Instrument {
     matususd='matususd',
 
     /**
+     * ### Polygon vs US Dollar
+     * *MAT/USD*
+     */
+    matusd='matusd',
+
+    /**
      * ### Mediobanca Spa
      * *MB.IT/EUR*
      */
@@ -3047,6 +3089,12 @@ export enum Instrument {
      * *MHG.NO/NOK*
      */
     mhgnonok='mhgnonok',
+
+    /**
+     * ### Maker vs US Dollar
+     * *MKR/USD*
+     */
+    mkrusd='mkrusd',
 
     /**
      * ### Marks & Spencer Group PLC
@@ -4351,6 +4399,12 @@ export enum Instrument {
     unhususd='unhususd',
 
     /**
+     * ### Uniswap vs US Dollar
+     * *UNI/USD*
+     */
+    uniusd='uniusd',
+
+    /**
      * ### UNION PACIFIC CORP
      * *UNP.US/USD*
      */
@@ -4811,6 +4865,12 @@ export enum Instrument {
      * *XPEV.US/USD*
      */
     xpevususd='xpevususd',
+
+    /**
+     * ### Yearn.finance vs US Dollar
+     * *YFI/USD*
+     */
+    yfiusd='yfiusd',
 
     /**
      * ### YUM! BRANDS INC
