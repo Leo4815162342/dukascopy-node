@@ -1,3 +1,5 @@
+import { Timeframe } from '../../../config/timeframes';
+
 const config = {
   instrument: 'eurusd',
   dates: {
