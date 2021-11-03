@@ -66,7 +66,7 @@ const { getHistoricRates } = require('dukascopy-node');
 |`dates`|`Object`|true||An object with a date range|
 |`dates.from`|<p>`Date`</p><p>`String`</p><p>`Number`</p>|true||Date representing the start of the time range. Can be of Date type, string (e.g. `2021-03-04` or `2021-03-04T00:00:00.000Z`), or timestamp integer (e.g. `1614816000000`)|
 |`dates.to`|<p>`Date`</p><p>`String`</p><p>`Number`</p>|true||Date representing the end of the time range Can be of Date type, string (e.g. `2021-03-04` or `2021-03-04T00:00:00.000Z`), or timestamp integer (e.g.   `1614816000000`)|
-|`timeframe`|`String`|false|`d1`|Granularity of aggregation of OHLC (open, high, low, close) data. Supported values:<ul><li>`tick` (every single tick/price change)</li><li>`m1` (1 minute)</li><li>`m15` (15 minutes)</li><li>`m30` (30 minutes)</li><li>`h1` (1 hour)</li><li>`d1` (1 day)</li><li>`mn1` (1 month)</li></ul>|
+|`timeframe`|`String`|false|`d1`|Granularity of aggregation of OHLC (open, high, low, close) data. Supported values:<ul><li>`tick` (every single tick/price change)</li><li>`m1` (1 minute)</li><li>`m5` (5 minutes)</li><li>`m15` (15 minutes)</li><li>`m30` (30 minutes)</li><li>`h1` (1 hour)</li><li>`h4` (4 hours)</li><li>`d1` (1 day)</li><li>`mn1` (1 month)</li></ul>|
 |`priceType`|`String`|false|`bid`|Type of price (offer side). Supported values:<ul><li>`bid`</li><li>`ask`</li></ul>|
 |`format`|`String`|false|`array`|Format of the generated output. Supported values:<ul><li>`array`</li><li>`json`</li><li>`csv`</li></ul>|
 |`utcOffset`|`Number`|false|`0`|UTC offset in minutes.|
