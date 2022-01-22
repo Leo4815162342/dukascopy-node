@@ -43,7 +43,7 @@
     "fastest-validator": "1.10.0",
     "fs-extra": "^9.1.0",
     "lzma-purejs": "^0.9.3",
-    "node-fetch": "^2.3.0",
+    "node-fetch": "^3.1.1",
     "python-struct": "^1.0.6"
   },
   "devDependencies": {
