@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.13.1](https://github.com/Leo4815162342/dukascopy-node/compare/v1.13.0...v1.13.1) (2022-04-23)
+
+
+### Bug Fixes
+
+* fs-extra as dep insted of dev-dep ([ca77cbb](https://github.com/Leo4815162342/dukascopy-node/commit/ca77cbbb4d67b40783b2ee807fb5a98746f01a5b))
+
 ## [1.13.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.12.0...v1.13.0) (2022-04-23)
 
 
