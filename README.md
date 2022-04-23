@@ -1,11 +1,134 @@
-<h1>Dukascopy tools</h1>
+<h1>dukascopy-node</h1>
 
-Download historical market tick data for [800+ instruments](#instruments) via:
+<p align="center"><img width="150" src="https://github.com/Leo4815162342/dukascopy-node/blob/main/dukascopy-node.png?raw=true" alt="dukascopy-node"></p>
 
-[`dukascopy-node`](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node) | [`dukascopy-cli`](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-cli)
-:---: | :---:
-[<img align="center" width="120" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-node/dukascopy-node.png?raw=true" alt="dukascopy-node">](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-node) | [<img align="center" width="120" src="https://github.com/Leo4815162342/dukascopy-node/blob/feat/workspaces/packages/dukascopy-cli/dukascopy-cli.png?raw=true" alt="dukascopy-cli">](https://github.com/Leo4815162342/dukascopy-tools/tree/master/packages/dukascopy-cli)
+<p align="center">
+    <a href="https://github.com/Leo4815162342/dukascopy-node/actions/workflows/cicd.yaml"><img src="https://github.com/Leo4815162342/dukascopy-node/actions/workflows/cicd.yaml/badge.svg" alt="Build Status of dukascopy-node npm package"></a>
+    <a href="https://www.npmjs.com/package/dukascopy-node"><img src="https://img.shields.io/npm/dt/dukascopy-node.svg" alt="Total number of downloads of dukascopy-node npm package"></a>
+</p>
 
+> Download historical market tick data for 800+ instruments (Stocks / Commodities / Bonds / Currencies / CFDs / ETFs / Crypto) via Node.js and CLI
+
+## Installation
+
+#### npm:
+
+```bash
+npm install dukascopy-node --save
+```
+
+#### yarn:
+
+```bash
+yarn add dukascopy-node
+```
+
+#### pnpm:
+
+```bash
+pnpm add dukascopy-node
+```
+
+
+## Usage ([try it live](https://runkit.com/embed/of4ho2xv8rvv))
+
+```javascript
+const { getHistoricRates } = require('dukascopy-node');
+
+(async () => {
+  try {
+    const data = await getHistoricRates({
+      instrument: 'btcusd',
+      dates: {
+        from: new Date('2018-01-01'),
+        to: new Date('2019-01-01')
+      },
+      timeframe: 'd1',
+      format: 'json'
+    });
+
+    console.log(data);
+  } catch (error) {
+    console.log('error', error);
+  }
+})();
+```
+
+## Detailed examples
+* [Basic usage of `dukascopy-node`](https://github.com/Leo4815162342/dukascopy-node/wiki/Basic-usage-of-dukascopy-node)
+* [Downloading tick data](https://github.com/Leo4815162342/dukascopy-node/wiki/Downloading-tick-data)
+* [Downloading data with cache](https://github.com/Leo4815162342/dukascopy-node/wiki/Downloading-data-with-cache)
+* [Downloading data with custom batching](https://github.com/Leo4815162342/dukascopy-node/wiki/Downloading-data-with-custom-batching)
+* [Usage with typescript](https://github.com/Leo4815162342/dukascopy-node/wiki/Usage-with-typescript)
+
+
+## Config object
+
+|Name|Type|Required|Default|Description|
+|-|-|-|-|-|
+|`instrument`|`String`|true||An id of the trading instrument. Supported values: [see list](#instruments)|
+|`dates`|`Object`|true||An object with a date range|
+|`dates.from`|<p>`Date`</p><p>`String`</p><p>`Number`</p>|true||Date representing the start of the time range. Can be of Date type, string (e.g. `2021-03-04` or `2021-03-04T00:00:00.000Z`), or timestamp integer (e.g. `1614816000000`)|
+|`dates.to`|<p>`Date`</p><p>`String`</p><p>`Number`</p>|true||Date representing the end of the time range Can be of Date type, string (e.g. `2021-03-04` or `2021-03-04T00:00:00.000Z`), or timestamp integer (e.g.   `1614816000000`)|
+|`timeframe`|`String`|false|`d1`|Granularity of aggregation of OHLC (open, high, low, close) data. Supported values:<ul><li>`tick` (every single tick/price change)</li><li>`m1` (1 minute)</li><li>`m5` (5 minutes)</li><li>`m15` (15 minutes)</li><li>`m30` (30 minutes)</li><li>`h1` (1 hour)</li><li>`h4` (4 hours)</li><li>`d1` (1 day)</li><li>`mn1` (1 month)</li></ul>|
+|`priceType`|`String`|false|`bid`|Type of price (offer side). Supported values:<ul><li>`bid`</li><li>`ask`</li></ul>|
+|`format`|`String`|false|`array`|Format of the generated output. Supported values:<ul><li>`array`</li><li>`json`</li><li>`csv`</li></ul>|
+|`utcOffset`|`Number`|false|`0`|UTC offset in minutes.|
+|`volumes`|`Boolean`|false|`true`|A flag indicating whether the output should contain volume data|
+|`ignoreFlats`|`Boolean`|false|`true`|A flag indicating whether the output should contain timeframe entries with 0 (flat) volume. Those mainly come from non-trading days, such as weekends or bank holidays.|
+|`batchSize`|`Number`|false|`10`|Number of requests sent to data storage per batch. We don't want to send bunch of requests at the same time, we want to split them in groups (batches) and fetch them one by one with pause in between (see `pauseBetweenBatchesMs`). Main purpose - not to fall under rate limiting restrictions.|
+|`pauseBetweenBatchesMs`|`Number`|false|`1000`|Pause between downloading batches (in milliseconds).|
+|`useCache`|`Boolean`|false|`false`|A flag indicating whether a file-system cache is going to be used to store response artifacts for subsequent lookups. When set to `true`, it significantly speeds up calls when requesting overlapping or similar data|
+|`cacheFolderPath`|`String`|false|`./.dukascopy-cache`|Folder path where all cache artifacts (binary data) will be stored|
+|`retryCount`|`Number`|false|`0`|Number of retries for a failed artifact download. If `0` no retries will happen even for failed requests.|
+|`pauseBetweenRetriesMs`|`Number`|false|`500`|Pause between retries. If `retryCount` is `0` this parameter will be ignored|
+
+***
+
+#### Example of a full config object
+
+
+```javascript
+{
+  instrument: 'btcusd',
+  dates: {
+    from: '2018-01-01', // or 2018-01-01T00:00:00.000Z
+    to: '2019-01-01', // or 2019-01-01T00:00:00.000Z
+  },
+  timeframe: 'd1',
+  priceType: 'ask',
+  format: 'json',
+  utcOffset: 0,
+  volumes: true,
+  ignoreFlats: true,
+  batchSize: 10,
+  pauseBetweenBatchesMs: 1000,
+  useCache: true,
+  cacheFolderPath: '.dukascopy-cache',
+  retryCount: 5,
+  pauseBetweenRetriesMs: 250
+}
+```
+
+## Usage via CLI
+
+#### yarn:
+
+```bash
+yarn dukascopy-cli -i btcusd -from 2018-01-01 -to 2019-01-01 -t d1 -f json
+```
+
+#### npm:
+
+```bash
+npm run dukascopy-cli -i btcusd -from 2018-01-01 -to 2019-01-01 -t d1 -f json
+```
+
+#### pnpm:
+
+```bash
+pnpm dukascopy-cli -i btcusd -from 2018-01-01 -to 2019-01-01 -t d1 -f json
+```
 
 ***
 

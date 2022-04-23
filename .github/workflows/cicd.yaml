@@ -1,16 +1,24 @@
-name: cd/cd
-
-on: [push]
-
+name: build
+on:
+  - push
+  - pull_request
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 14
-      - run: yarn
-      - run: yarn workspace dukascopy-node run build
-      - run: yarn workspaces run type-check
-      - run: yarn workspaces run test
+          node-version: 16
+      - uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
+      - uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 7.0.0-rc.7
+          run_install: true
+      - run: pnpm test
+      - run: pnpm build

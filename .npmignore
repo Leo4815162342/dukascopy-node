@@ -8,7 +8,5 @@ src/**/*
 dev-utils
 coverage
 .prettierrc
-.travis.yml
 logo.png
 tsconfig.json
-jest.config.js

@@ -3,4 +3,5 @@
 **/bin/*
 **/coverage/*
 **/build/*
+**/dist/*
 **/examples/*
