@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.13.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.12.0...v1.13.0) (2022-04-23)
+
+
+### Features
+
+* move cli under dukascopy-node package ([15d7e47](https://github.com/Leo4815162342/dukascopy-node/commit/15d7e4725ad21d2f15aab1ef09248cf8e39ef613))
+
 ## [1.12.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.0.12...v1.12.0) (2022-04-23)
 
 
