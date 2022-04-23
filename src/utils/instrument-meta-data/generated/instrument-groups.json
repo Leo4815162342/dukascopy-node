@@ -54,7 +54,9 @@
   {
     "id": "cmd_metals",
     "instruments": [
-      "coppercmdusd"
+      "coppercmdusd",
+      "xpdcmdusd",
+      "xptcmdusd"
     ]
   },
   {

@@ -7271,6 +7271,15 @@
     "startMonthForHourlyCandles": "2017-01-26T14:00:00.000Z",
     "startYearForDailyCandles": "2017-01-26T00:00:00.000Z"
   },
+  "xpdcmdusd": {
+    "name": "XPD.CMD/USD",
+    "description": "Palladium",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2021-07-04T22:00:00.309Z",
+    "startDayForMinuteCandles": "2021-07-04T22:00:00.000Z",
+    "startMonthForHourlyCandles": "2021-07-04T22:00:00.000Z",
+    "startYearForDailyCandles": "2021-07-04T00:00:00.000Z"
+  },
   "xpevususd": {
     "name": "XPEV.US/USD",
     "description": "Xpeng Inc ADR",
@@ -7279,6 +7288,15 @@
     "startDayForMinuteCandles": "2020-12-23T14:41:00.000Z",
     "startMonthForHourlyCandles": "2020-12-23T14:00:00.000Z",
     "startYearForDailyCandles": "2020-12-23T00:00:00.000Z"
+  },
+  "xptcmdusd": {
+    "name": "XPT.CMD/USD",
+    "description": "Platinum",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2021-11-01T00:00:00.046Z",
+    "startDayForMinuteCandles": "2021-11-01T00:00:00.000Z",
+    "startMonthForHourlyCandles": "2021-11-01T00:00:00.000Z",
+    "startYearForDailyCandles": "2021-11-01T00:00:00.000Z"
   },
   "yfiusd": {
     "name": "YFI/USD",

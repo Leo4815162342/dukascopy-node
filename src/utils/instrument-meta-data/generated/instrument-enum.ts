@@ -4849,10 +4849,22 @@ export enum Instrument {
     xopususd='xopususd',
 
     /**
+     * ### Palladium
+     * *XPD.CMD/USD*
+     */
+    xpdcmdusd='xpdcmdusd',
+
+    /**
      * ### Xpeng Inc ADR
      * *XPEV.US/USD*
      */
     xpevususd='xpevususd',
+
+    /**
+     * ### Platinum
+     * *XPT.CMD/USD*
+     */
+    xptcmdusd='xptcmdusd',
 
     /**
      * ### Yearn.finance vs US Dollar
