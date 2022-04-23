@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "module": "commonjs",
     "moduleResolution": "node",
     "noUnusedParameters": true,
     "removeComments": false,
@@ -12,5 +10,5 @@
     "noImplicitAny": true,
     "resolveJsonModule": true
   },
-  "exclude": ["node_modules", "build", "bin", "lib"]
+  "exclude": ["node_modules", "build", "bin", "lib", "dist"]
 }

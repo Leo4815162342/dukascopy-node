@@ -1,7 +1,7 @@
 lib
 bin
+dist/
 download
-.vscode
 .cache/
 .dukascopy-cache
 ### Node ###
