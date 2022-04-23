@@ -32,7 +32,7 @@ export function normaliseDates({
 
   if (
     timeframe === Timeframe.m1 ||
-    Timeframe.m5 ||
+    timeframe === Timeframe.m5 ||
     timeframe === Timeframe.m15 ||
     timeframe === Timeframe.m30
   ) {
