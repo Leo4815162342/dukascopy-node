@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.2](https://github.com/Leo4815162342/dukascopy-node/compare/v1.14.1...v1.14.2) (2022-04-23)
+
+
+### Bug Fixes
+
+* proper m5 and h4 date normalisation ([#64](https://github.com/Leo4815162342/dukascopy-node/issues/64)) ([2024b4e](https://github.com/Leo4815162342/dukascopy-node/commit/2024b4e908c8fc3240808f6e35eaff87692aca98))
+
 ### [1.14.1](https://github.com/Leo4815162342/dukascopy-node/compare/v1.14.0...v1.14.1) (2022-04-23)
 
 
