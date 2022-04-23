@@ -138,12 +138,12 @@ pnpm dukascopy-cli -i btcusd -from 2018-01-01 -to 2019-01-01 -t d1 -f json
 * [Crypto assets ₿ (19)](#vccy)
 * [Agricultural commodities ☕ (6)](#cmd_agricultural)
 * [Energy commodities ⚡ (4)](#cmd_energy)
-* [Metals commodities ⚙️ (1)](#cmd_metals)
+* [Metals commodities ⚙️ (3)](#cmd_metals)
 * [Germany ETFs 🇩🇪📈 (1)](#etf_cfd_de)
 * [France ETFs 🇫🇷📈 (3)](#etf_cfd_fr)
 * [Hong Kong ETFs 🇭🇰📈 (4)](#etf_cfd_hk)
 * [United States ETFs 🇺🇸📈 (43)](#etf_cfd_us)
-* [Forex currencies 💱 (54)](#fx_crosses)
+* [Forex currencies 💱 (52)](#fx_crosses)
 * [Forex major currencies 💶 (7)](#fx_majors)
 * [Forex metals 🥇 (2)](#fx_metals)
 * [America 🌎 (5)](#idx_america)
@@ -221,6 +221,8 @@ pnpm dukascopy-cli -i btcusd -from 2018-01-01 -to 2019-01-01 -t d1 -f json
 |Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|
 |High Grade Copper|`coppercmdusd`|Mar 2, 2012, 12:00:07 AM|Mar 2, 2012, 12:00 AM|Mar 2, 2012, 12 AM|Mar 2, 2012|
+|Palladium|`xpdcmdusd`|Jul 4, 2021, 10:00:00 PM|Jul 4, 2021, 10:00 PM|Jul 4, 2021, 10 PM|Jul 4, 2021|
+|Platinum|`xptcmdusd`|Nov 1, 2021, 12:00:00 AM|Nov 1, 2021, 12:00 AM|Nov 1, 2021, 12 AM|Nov 1, 2021|
 <h3 id="etf_cfd_de">Germany ETFs 🇩🇪📈</h3>
 
 |Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
@@ -314,7 +316,6 @@ pnpm dukascopy-cli -i btcusd -from 2018-01-01 -to 2019-01-01 -t d1 -f json
 |Euro vs Norwegian Krone|`eurnok`|Oct 25, 2004, 12:18:08 AM|Oct 25, 2004, 12:18 AM|Oct 25, 2004, 12 AM|Jun 3, 1991|
 |Euro vs New Zealand Dollar|`eurnzd`|Jan 2, 2006, 10:38:22 PM|Jan 2, 2006, 10:38 PM|Jan 2, 2006, 10 PM|Jan 5, 1999|
 |Euro vs Polish Zloty|`eurpln`|Mar 14, 2007, 12:00:03 AM|Mar 13, 2007, 4:45 AM|Mar 13, 2007, 4 AM|Jun 3, 1999|
-|Euro vs Russian Rouble|`eurrub`|Mar 13, 2007, 7:00:04 AM|Mar 13, 2007, 7:00 AM|Mar 13, 2007, 7 AM|Jun 3, 1999|
 |Euro vs Swedish Krona|`eursek`|Oct 27, 2004, 5:16:02 PM|Oct 27, 2004, 5:16 PM|Oct 27, 2004, 5 PM|Nov 20, 1992|
 |Euro vs Singapore Dollar|`eursgd`|Mar 13, 2007, 4:42:05 AM|Mar 13, 2007, 4:42 AM|Mar 13, 2007, 4 AM|Apr 29, 1998|
 |Euro vs Turkish Lira|`eurtry`|Mar 13, 2007, 4:54:03 AM|Mar 13, 2007, 4:54 AM|Mar 13, 2007, 4 AM|Jan 3, 2005|
@@ -339,7 +340,6 @@ pnpm dukascopy-cli -i btcusd -from 2018-01-01 -to 2019-01-01 -t d1 -f json
 |US Dollar vs Norwegian Krone|`usdnok`|Aug 4, 2003, 12:00:08 AM|Aug 4, 2003, 12:00 AM|Aug 3, 2003, 9 PM|Mar 27, 1991|
 |US Dollar vs Polish Zloty|`usdpln`|Mar 13, 2007, 4:56:04 AM|Mar 13, 2007, 4:56 AM|Mar 13, 2007, 4 AM|Mar 22, 1999|
 |US Dollar vs Romanian Leu|`usdron`|Dec 19, 2016, 6:30:00 AM|Dec 19, 2016, 6:30 AM|Dec 19, 2016, 7 AM|Dec 20, 2016|
-|US Dollar vs Russian Ruble|`usdrub`|Mar 13, 2007, 7:03:01 AM|Mar 13, 2007, 7:03 AM|Mar 13, 2007, 7 AM|Mar 22, 1999|
 |US Dollar vs Swedish Krona|`usdsek`|Aug 4, 2003, 12:00:01 AM|Aug 4, 2003, 12:00 AM|Aug 3, 2003, 9 PM|Jul 16, 1991|
 |US Dollar vs Singapore Dollar|`usdsgd`|Nov 16, 2004, 6:03:02 PM|Nov 16, 2004, 6:03 PM|Nov 16, 2004, 6 PM|Jan 21, 1991|
 |US Dollar vs Thai Baht|`usdthb`|Feb 13, 2017, 6:00:01 AM|Feb 13, 2017, 6:00 AM|Feb 13, 2017, 6 AM|Feb 13, 2017|
