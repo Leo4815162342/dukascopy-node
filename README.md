@@ -1,6 +1,6 @@
 <h1>dukascopy-node</h1>
 
-<p align="center"><img width="150" src="https://github.com/Leo4815162342/dukascopy-node/blob/main/dukascopy-node.png?raw=true" alt="dukascopy-node"></p>
+<p align="center"><img width="150" src="https://github.com/Leo4815162342/dukascopy-node/blob/master/dukascopy-node.png?raw=true" alt="dukascopy-node"></p>
 
 <p align="center">
     <a href="https://github.com/Leo4815162342/dukascopy-node/actions/workflows/cicd.yaml"><img src="https://github.com/Leo4815162342/dukascopy-node/actions/workflows/cicd.yaml/badge.svg" alt="Build Status of dukascopy-node npm package"></a>
