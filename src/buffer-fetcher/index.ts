@@ -100,6 +100,6 @@ export class BufferFetcher {
       }
     }
 
-    return data.buffer();
+    return data.status === 200 ? data.buffer() : Buffer.from('');
   }
 }
