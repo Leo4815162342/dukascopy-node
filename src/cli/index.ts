@@ -111,5 +111,6 @@ const filePath = resolve(folderPath, fileName);
     }
   } catch (err) {
     printErrors('\nSomething went wrong:', JSON.stringify(err));
+    process.exit(0);
   }
 })();
