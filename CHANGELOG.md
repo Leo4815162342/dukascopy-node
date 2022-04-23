@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.1](https://github.com/Leo4815162342/dukascopy-node/compare/v1.14.0...v1.14.1) (2022-04-23)
+
+
+### Bug Fixes
+
+* changed node engine restrictions ([1d73fb7](https://github.com/Leo4815162342/dukascopy-node/commit/1d73fb7fff5b3bb22895e2848c56951000526662))
+
 ## [1.14.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.13.1...v1.14.0) (2022-04-23)
 
 
