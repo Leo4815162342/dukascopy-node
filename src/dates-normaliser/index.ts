@@ -30,11 +30,16 @@ export function normaliseDates({
 
   let minFromIsoDate = startHourForTicks;
 
-  if (timeframe === Timeframe.m1 || timeframe === Timeframe.m15 || timeframe === Timeframe.m30) {
+  if (
+    timeframe === Timeframe.m1 ||
+    timeframe === Timeframe.m5 ||
+    timeframe === Timeframe.m15 ||
+    timeframe === Timeframe.m30
+  ) {
     minFromIsoDate = startDayForMinuteCandles;
   }
 
-  if (timeframe === Timeframe.h1) {
+  if (timeframe === Timeframe.h1 || timeframe === Timeframe.h4) {
     minFromIsoDate = startMonthForHourlyCandles;
   }
 
