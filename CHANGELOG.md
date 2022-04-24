@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.3](https://github.com/Leo4815162342/dukascopy-node/compare/v1.14.2...v1.14.3) (2022-04-24)
+
+
+### Bug Fixes
+
+* cli graceful handling of shutdown and non-200 responses ([#65](https://github.com/Leo4815162342/dukascopy-node/issues/65)) ([894bfb2](https://github.com/Leo4815162342/dukascopy-node/commit/894bfb227320efd91b1609ce49240ded17824446))
+
 ### [1.14.2](https://github.com/Leo4815162342/dukascopy-node/compare/v1.14.1...v1.14.2) (2022-04-23)
 
 
