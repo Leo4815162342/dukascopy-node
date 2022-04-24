@@ -100,6 +100,8 @@ const filePath = resolve(folderPath, fileName);
       const isEmpty = savePayload === '' || savePayload === '[]' || savePayload.length === 0;
       progressBar.stop();
 
+      await outputFile(filePath, savePayload);
+
       if (isEmpty) {
         printWarning(
           [
@@ -108,7 +110,6 @@ const filePath = resolve(folderPath, fileName);
           ].join('\n')
         );
       } else {
-        await outputFile(filePath, savePayload);
         printSuccess(`√ File saved: ${chalk.bold(fileName)}`);
       }
     } else {
