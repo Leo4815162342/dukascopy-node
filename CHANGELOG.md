@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.15.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.14.3...v1.15.0) (2022-04-24)
+
+
+### Features
+
+* cli empty data warning msg ([#66](https://github.com/Leo4815162342/dukascopy-node/issues/66)) ([cf77a40](https://github.com/Leo4815162342/dukascopy-node/commit/cf77a4046f7005ae4e1c4ba54e241f532ec8c334))
+
 ### [1.14.3](https://github.com/Leo4815162342/dukascopy-node/compare/v1.14.2...v1.14.3) (2022-04-24)
 
 
