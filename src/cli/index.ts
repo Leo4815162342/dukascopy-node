@@ -98,15 +98,17 @@ const filePath = resolve(folderPath, fileName);
       }
 
       const isEmpty = savePayload === '' || savePayload === '[]' || savePayload.length === 0;
-      progressBar.stop();
 
       await outputFile(filePath, savePayload);
+
+      progressBar.stop();
 
       if (isEmpty) {
         printWarning(
           [
-            '⚠ Data from dukascopy servers is empty',
-            'This could be caused by either 404 or empty binaries responses'
+            '⚠ Response for your config is currently empty.',
+            'Try again later when data is available.',
+            'see https://github.com/Leo4815162342/dukascopy-node/wiki/Information-on-empty-responses'
           ].join('\n')
         );
       } else {
