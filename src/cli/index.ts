@@ -6,7 +6,7 @@ import { outputFile } from 'fs-extra';
 import { isValid, validationErrors, input } from './config';
 import { normaliseDates } from '../dates-normaliser';
 import { generateUrls } from '../url-generator';
-import { printDivider, printHeader, printSuccess, printErrors } from './printer';
+import { printDivider, printHeader, printSuccess, printErrors, printWarning } from './printer';
 import { Format } from '../config/format';
 import { BufferFetcher } from '../buffer-fetcher';
 import { CacheManager } from '../cache-manager';
@@ -97,17 +97,30 @@ const filePath = resolve(folderPath, fileName);
         savePayload = format === 'csv' ? '' : JSON.stringify([]);
       }
 
+      const isEmpty = savePayload === '' || savePayload === '[]' || savePayload.length === 0;
+
       await outputFile(filePath, savePayload);
 
       progressBar.stop();
 
-      printSuccess(`√ File saved: ${chalk.bold(fileName)}`);
+      if (isEmpty) {
+        printWarning(
+          [
+            '⚠ Response for your config is currently empty.',
+            'Try again later when data is available.',
+            'see https://github.com/Leo4815162342/dukascopy-node/wiki/Information-on-empty-responses'
+          ].join('\n')
+        );
+      } else {
+        printSuccess(`√ File saved: ${chalk.bold(fileName)}`);
+      }
     } else {
       printErrors(
         'Search config invalid:',
         // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         validationErrors.map(err => err.message!)
       );
+      process.exit(0);
     }
   } catch (err) {
     printErrors('\nSomething went wrong:', JSON.stringify(err));
