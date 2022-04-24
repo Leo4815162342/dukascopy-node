@@ -47,3 +47,9 @@ export function printSuccess(text: string): void {
   log(chalk.greenBright(text));
   printSpacer();
 }
+
+export function printWarning(text: string): void {
+  printDivider();
+  log(chalk.yellowBright(text));
+  printSpacer();
+}

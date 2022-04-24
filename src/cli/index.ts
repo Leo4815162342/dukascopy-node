@@ -6,7 +6,7 @@ import { outputFile } from 'fs-extra';
 import { isValid, validationErrors, input } from './config';
 import { normaliseDates } from '../dates-normaliser';
 import { generateUrls } from '../url-generator';
-import { printDivider, printHeader, printSuccess, printErrors } from './printer';
+import { printDivider, printHeader, printSuccess, printErrors, printWarning } from './printer';
 import { Format } from '../config/format';
 import { BufferFetcher } from '../buffer-fetcher';
 import { CacheManager } from '../cache-manager';
@@ -97,17 +97,22 @@ const filePath = resolve(folderPath, fileName);
         savePayload = format === 'csv' ? '' : JSON.stringify([]);
       }
 
-      await outputFile(filePath, savePayload);
-
+      const isEmpty = savePayload === '' || savePayload === '[]' || savePayload.length === 0;
       progressBar.stop();
 
-      printSuccess(`√ File saved: ${chalk.bold(fileName)}`);
+      if (isEmpty) {
+        printWarning('⚠ Data could not be retrieved from dukascopy servers or empty.');
+      } else {
+        await outputFile(filePath, savePayload);
+        printSuccess(`√ File saved: ${chalk.bold(fileName)}`);
+      }
     } else {
       printErrors(
         'Search config invalid:',
         // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         validationErrors.map(err => err.message!)
       );
+      process.exit(0);
     }
   } catch (err) {
     printErrors('\nSomething went wrong:', JSON.stringify(err));
