@@ -5,9 +5,10 @@
 <p align="center">
     <a href="https://github.com/Leo4815162342/dukascopy-node/actions/workflows/cicd.yaml"><img src="https://github.com/Leo4815162342/dukascopy-node/actions/workflows/cicd.yaml/badge.svg" alt="Build Status of dukascopy-node npm package"></a>
     <a href="https://www.npmjs.com/package/dukascopy-node"><img src="https://badgen.net/npm/v/dukascopy-node" alt="dukascopy-node latest version"></a>
-    <a href="https://www.npmjs.com/package/dukascopy-node"><img src="https://img.shields.io/npm/dt/dukascopy-node.svg" alt="Total number of downloads of dukascopy-node npm package"></a>
+    <a href="https://www.npmjs.com/package/dukascopy-node"><img src="https://badgen.net/npm/dt/dukascopy-node" alt="Total number of downloads of dukascopy-node npm package"></a>
     <a href="https://github.com/Leo4815162342/dukascopy-node"><img src="https://badgen.net/github/stars/Leo4815162342/dukascopy-node" alt="dukascopy-node github stars"></a>
 </p>
+
 
 > Download historical market tick data for 800+ instruments (Stocks / Commodities / Bonds / Currencies / CFDs / ETFs / Crypto) via Node.js and CLI
 
