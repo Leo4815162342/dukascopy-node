@@ -101,7 +101,12 @@ const filePath = resolve(folderPath, fileName);
       progressBar.stop();
 
       if (isEmpty) {
-        printWarning('⚠ Data could not be retrieved from dukascopy servers or empty.');
+        printWarning(
+          [
+            '⚠ Data from dukascopy servers is empty',
+            'This could be caused by either 404 or empty binaries responses'
+          ].join('\n')
+        );
       } else {
         await outputFile(filePath, savePayload);
         printSuccess(`√ File saved: ${chalk.bold(fileName)}`);
