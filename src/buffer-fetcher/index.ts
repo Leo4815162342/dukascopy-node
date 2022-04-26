@@ -1,7 +1,6 @@
 import fetch from 'node-fetch';
 import { CacheManagerBase } from '../cache-manager';
 import { splitArrayInChunks, wait } from '../utils/general';
-
 import { NotifyFn, BufferFetcherInput, BufferObject } from './types';
 
 export class BufferFetcher {
@@ -35,10 +34,12 @@ export class BufferFetcher {
     return await Promise.all(
       urls.map(async url => {
         let buffer: Buffer;
+        let isCacheHit = false;
 
         if (this.cacheManager) {
           const bufferFromCache = await this.cacheManager.readItemFromCache(url);
           if (bufferFromCache) {
+            isCacheHit = true;
             buffer = bufferFromCache;
           } else {
             buffer = await this.fetchBuffer(url);
@@ -47,7 +48,7 @@ export class BufferFetcher {
           buffer = await this.fetchBuffer(url);
         }
 
-        this.notifyOnItemFetchFn && this.notifyOnItemFetchFn(url);
+        this.notifyOnItemFetchFn && this.notifyOnItemFetchFn(url, buffer, isCacheHit);
 
         return { url, buffer };
       })

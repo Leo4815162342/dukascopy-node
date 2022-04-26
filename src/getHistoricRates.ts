@@ -13,8 +13,14 @@ import { generateUrls } from './url-generator';
 import { BufferFetcher } from './buffer-fetcher';
 import { processData } from './processor';
 import { formatOutput } from './output-formatter';
-import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
 import { CacheManager } from './cache-manager';
+import { formatBytes } from './utils/formatBytes';
+import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
+import { NotifyFn } from './buffer-fetcher/types';
+
+import debug from 'debug';
+
+const DEBUG_NAMESPACE = 'dukascopy-tools:node';
 
 export async function getHistoricRates(config: ConfigArrayItem): Promise<ArrayItem[]>;
 export async function getHistoricRates(config: ConfigArrayTickItem): Promise<ArrayTickItem[]>;
@@ -25,6 +31,12 @@ export async function getHistoricRates(config: Config): Promise<Output>;
 
 export async function getHistoricRates(config: Config): Promise<Output> {
   const { input, isValid, validationErrors } = validateConfigNode(config);
+
+  debug(`${DEBUG_NAMESPACE}:config`)('%O', {
+    input,
+    isValid,
+    validationErrors
+  });
 
   if (!isValid) {
     throw { validationErrors };
@@ -63,12 +75,26 @@ export async function getHistoricRates(config: Config): Promise<Output> {
     endDate
   });
 
+  debug(`${DEBUG_NAMESPACE}:urls`)(`Generated ${urls.length} urls`);
+  debug(`${DEBUG_NAMESPACE}:urls`)(`%O`, urls);
+
+  const notifyOnItemFetchFn: NotifyFn | undefined = process.env.DEBUG
+    ? (url, buffer, isCacheHit) => {
+        debug(`${DEBUG_NAMESPACE}:fetcher`)(
+          url,
+          `| ${formatBytes(buffer.length)} |`,
+          `${isCacheHit ? 'cache' : 'network'}`
+        );
+      }
+    : undefined;
+
   const bufferFetcher = new BufferFetcher({
     batchSize,
     pauseBetweenBatchesMs,
     cacheManager: useCache ? new CacheManager({ cacheFolderPath }) : undefined,
     retryCount,
-    pauseBetweenRetriesMs
+    pauseBetweenRetriesMs,
+    notifyOnItemFetchFn
   });
 
   const bufferredData = await bufferFetcher.fetch(urls);

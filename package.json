@@ -45,6 +45,7 @@
 		"chalk": "3.0.0",
 		"cli-progress": "3.10.0",
 		"commander": "5.0.0",
+		"debug": "4.3.4",
 		"fastest-validator": "1.10.0",
 		"fs-extra": "10.1.0",
 		"lzma-purejs": "0.9.3",
@@ -53,6 +54,7 @@
 	},
 	"devDependencies": {
 		"@types/cli-progress": "3.9.2",
+		"@types/debug": "4.1.7",
 		"@types/fs-extra": "9.0.13",
 		"@types/node": "17.0.25",
 		"@types/node-fetch": "2.6.1",
