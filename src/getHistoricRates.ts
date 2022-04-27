@@ -20,7 +20,7 @@ import { NotifyFn } from './buffer-fetcher/types';
 
 import debug from 'debug';
 
-const DEBUG_NAMESPACE = 'dukascopy-tools:node';
+const DEBUG_NAMESPACE = 'dukascopy-node';
 
 export async function getHistoricRates(config: ConfigArrayItem): Promise<ArrayItem[]>;
 export async function getHistoricRates(config: ConfigArrayTickItem): Promise<ArrayTickItem[]>;

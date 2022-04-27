@@ -8,7 +8,7 @@ import { Price } from '../config/price-types';
 import { Timeframe } from '../config/timeframes';
 
 program
-  .option('-d, --debug', 'Output extra debugging')
+  .option('-d, --debug', 'Output extra debugging', false)
   .option('-s, --silent', 'Hides the search config in the CLI output', false)
   .requiredOption('-i, --instrument <value>', 'Trading instrument')
   .requiredOption('-from, --date-from <value>', 'From date (yyyy-mm-dd)')
@@ -35,12 +35,10 @@ program.parse(process.argv);
 
 const options = program.opts();
 
-// eslint-disable-next-line no-console
-if (program.debug) console.log(options);
-
 export interface CliConfig extends Config {
   dir: string;
   silent: boolean;
+  debug: boolean;
 }
 
 const cliConfig: CliConfig = {
@@ -62,14 +60,16 @@ const cliConfig: CliConfig = {
   useCache: options.cache,
   cacheFolderPath: options.cachePath,
   retryCount: options.retries,
-  pauseBetweenRetriesMs: options.retryPause
+  pauseBetweenRetriesMs: options.retryPause,
+  debug: options.debug
 };
 
 const cliSchema: InputSchema<CliConfig> = {
   ...schema,
   ...{
     dir: { type: 'string', required: true } as RuleString,
-    silent: { type: 'boolean', required: false } as RuleBoolean
+    silent: { type: 'boolean', required: false } as RuleBoolean,
+    debug: { type: 'boolean', required: false } as RuleBoolean
   }
 };
 

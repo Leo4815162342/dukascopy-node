@@ -4,10 +4,10 @@ import { getHistoricRates, Config } from '../src';
 (async () => {
   try {
     const config: Config = {
-      instrument: 'usdjpy',
+      instrument: 'eurusd',
       dates: {
-        from: '2022-03-01',
-        to: '2022-04-01'
+        from: '2022-04-25',
+        to: '2022-04-26'
       },
       timeframe: 'm1',
       format: 'array',
