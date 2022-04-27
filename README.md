@@ -63,6 +63,7 @@ const { getHistoricRates } = require('dukascopy-node');
 * [Downloading data with cache](https://github.com/Leo4815162342/dukascopy-node/wiki/Downloading-data-with-cache)
 * [Downloading data with custom batching](https://github.com/Leo4815162342/dukascopy-node/wiki/Downloading-data-with-custom-batching)
 * [Usage with typescript](https://github.com/Leo4815162342/dukascopy-node/wiki/Usage-with-typescript)
+* [Debugging](https://github.com/Leo4815162342/dukascopy-node/wiki/Debugging)
 
 
 ## Config object
@@ -165,23 +166,6 @@ Options:
 
 ***
 
-## Debugging
-
-The library ships with a built-in [`debug`](https://www.npmjs.com/package/debug) module.
-
-To enable debugging add `DEBUG=dukascopy-node:*` environment variable to your execution code.
-
-For CLI calls, add `-d` flag (or alternatively prepend `DEBUG=dukascopy-node:cli:*`):
-
-```bash
-dukascopy-cli -i usdjpy -from 2022-03-21 -to 2022-03-22 -t m1 -d
-```
-
-```bash
-DEBUG=dukascopy-node:cli:* dukascopy-cli -i usdjpy -from 2022-03-21 -to 2022-03-22 -t m1
-```
-
-[View example of debugging output](https://github.com/Leo4815162342/dukascopy-node/blob/feat/debug_module/media/dukascopy-node-cli-debug.png?raw=true)
 
 ## Instruments
 
