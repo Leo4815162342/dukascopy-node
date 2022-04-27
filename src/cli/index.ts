@@ -17,6 +17,7 @@ import chalk from 'chalk';
 import debug from 'debug';
 
 import { Output } from '../output-formatter/types';
+import { Timeframe } from '../config/timeframes';
 
 const DEBUG_NAMESPACE = 'dukascopy-node:cli';
 
@@ -123,6 +124,12 @@ const filePath = resolve(folderPath, fileName);
 
         const filteredData = processedData.filter(
           ([timestamp]) => timestamp && timestamp >= startDateMs && timestamp < endDateMs
+        );
+
+        debug(`${DEBUG_NAMESPACE}:data`)(
+          `Generated ${filteredData.length} ${
+            timeframe === Timeframe.tick ? 'ticks' : 'OHLC candles'
+          }`
         );
 
         const formatted = formatOutput({ processedData: filteredData, timeframe, format });

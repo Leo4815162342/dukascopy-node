@@ -15,6 +15,7 @@ import { processData } from './processor';
 import { formatOutput } from './output-formatter';
 import { CacheManager } from './cache-manager';
 import { formatBytes } from './utils/formatBytes';
+import { Timeframe } from './config/timeframes';
 import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
 import { NotifyFn } from './buffer-fetcher/types';
 
@@ -112,6 +113,10 @@ export async function getHistoricRates(config: Config): Promise<Output> {
 
   const filteredData = processedData.filter(
     ([timestamp]) => timestamp && timestamp >= startDateMs && timestamp < endDateMs
+  );
+
+  debug(`${DEBUG_NAMESPACE}:data`)(
+    `Generated ${filteredData.length} ${timeframe === Timeframe.tick ? 'ticks' : 'OHLC candles'}`
   );
 
   const formattedData = formatOutput({
