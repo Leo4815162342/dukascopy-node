@@ -14,4 +14,4 @@ dukascopy-cli -i usdjpy -from 2022-03-21 -to 2022-03-22 -t m1 -d
 DEBUG=dukascopy-node:cli:* dukascopy-cli -i usdjpy -from 2022-03-21 -to 2022-03-22 -t m1
 ```
 
-[View example of debugging output](https://github.com/Leo4815162342/dukascopy-node/blob/feat/debug_module/media/dukascopy-node-cli-debug.png?raw=true)
+![example of debugging output](https://github.com/Leo4815162342/dukascopy-node/blob/feat/debug_module/examples/with-debugging/with-debugging.png?raw=true)
