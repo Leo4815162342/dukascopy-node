@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/cli-progress': 3.9.2
+  '@types/debug': 4.1.7
   '@types/fs-extra': 9.0.13
   '@types/node': 17.0.25
   '@types/node-fetch': 2.6.1
@@ -10,6 +11,7 @@ specifiers:
   chalk: 3.0.0
   cli-progress: 3.10.0
   commander: 5.0.0
+  debug: 4.3.4
   eslint: 8.13.0
   eslint-config-prettier: 8.5.0
   eslint-plugin-prettier: 4.0.0
@@ -30,6 +32,7 @@ dependencies:
   chalk: 3.0.0
   cli-progress: 3.10.0
   commander: 5.0.0
+  debug: 4.3.4
   fastest-validator: 1.10.0
   fs-extra: 10.1.0
   lzma-purejs: 0.9.3
@@ -38,6 +41,7 @@ dependencies:
 
 devDependencies:
   '@types/cli-progress': 3.9.2
+  '@types/debug': 4.1.7
   '@types/fs-extra': 9.0.13
   '@types/node': 17.0.25
   '@types/node-fetch': 2.6.1
@@ -151,6 +155,12 @@ packages:
       '@types/node': 17.0.25
     dev: true
 
+  /@types/debug/4.1.7:
+    resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
+    dependencies:
+      '@types/ms': 0.7.31
+    dev: true
+
   /@types/fs-extra/9.0.13:
     resolution: {integrity: sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA==}
     dependencies:
@@ -163,6 +173,10 @@ packages:
 
   /@types/minimist/1.2.2:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
+    dev: true
+
+  /@types/ms/0.7.31:
+    resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
     dev: true
 
   /@types/node-fetch/2.6.1:
@@ -801,7 +815,6 @@ packages:
         optional: true
     dependencies:
       ms: 2.1.2
-    dev: true
 
   /decamelize-keys/1.1.0:
     resolution: {integrity: sha1-0XGoeTMlKAfrPLYdwcFEXQeN8tk=}
@@ -1929,7 +1942,6 @@ packages:
 
   /ms/2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
-    dev: true
 
   /mz/2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}

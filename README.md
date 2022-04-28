@@ -63,6 +63,7 @@ const { getHistoricRates } = require('dukascopy-node');
 * [Downloading data with cache](https://github.com/Leo4815162342/dukascopy-node/wiki/Downloading-data-with-cache)
 * [Downloading data with custom batching](https://github.com/Leo4815162342/dukascopy-node/wiki/Downloading-data-with-custom-batching)
 * [Usage with typescript](https://github.com/Leo4815162342/dukascopy-node/wiki/Usage-with-typescript)
+* [Debugging](https://github.com/Leo4815162342/dukascopy-node/wiki/Debugging)
 
 
 ## Config object
@@ -164,6 +165,7 @@ Options:
 </details>
 
 ***
+
 
 ## Instruments
 

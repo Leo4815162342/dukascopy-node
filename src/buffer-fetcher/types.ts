@@ -5,7 +5,7 @@ export interface BufferObject {
   buffer: Buffer;
 }
 
-export type NotifyFn = (downloadedUrl: string) => void;
+export type NotifyFn = (url: string, buffer: Buffer, isCacheHit: boolean) => void;
 
 export interface BufferFetcherInput {
   batchSize?: number;

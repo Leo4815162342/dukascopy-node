@@ -12,10 +12,16 @@ import { BufferFetcher } from '../buffer-fetcher';
 import { CacheManager } from '../cache-manager';
 import { processData } from '../processor';
 import { formatOutput } from '../output-formatter';
+import { formatBytes } from '../utils/formatBytes';
 import chalk from 'chalk';
-import { Output } from '../output-formatter/types';
+import debug from 'debug';
 
-const {
+import { Output } from '../output-formatter/types';
+import { Timeframe } from '../config/timeframes';
+
+const DEBUG_NAMESPACE = 'dukascopy-node:cli';
+
+let {
   instrument,
   dates: { from: fromDate, to: toDate },
   timeframe,
@@ -29,8 +35,18 @@ const {
   useCache,
   cacheFolderPath,
   dir,
-  silent
+  silent,
+  debug: isDebugActive
 } = input;
+
+if (isDebugActive) {
+  debug.enable(`${DEBUG_NAMESPACE}:*`);
+} else {
+  if (process.env.DEBUG) {
+    isDebugActive = true;
+    debug.enable(process.env.DEBUG);
+  }
+}
 
 const fileName = `${instrument}-${timeframe}${
   timeframe === 'tick' ? '' : '-' + priceType
@@ -43,6 +59,12 @@ const filePath = resolve(folderPath, fileName);
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 (async () => {
   try {
+    debug(`${DEBUG_NAMESPACE}:config`)('%O', {
+      input,
+      isValid,
+      validationErrors
+    });
+
     if (isValid) {
       const [startDate, endDate] = normaliseDates({
         instrument,
@@ -52,21 +74,35 @@ const filePath = resolve(folderPath, fileName);
         utcOffset
       });
 
-      silent ? printDivider() : printHeader(input, startDate, endDate);
+      if (!isDebugActive) {
+        silent ? printDivider() : printHeader(input, startDate, endDate);
+      }
 
       const urls = generateUrls({ instrument, timeframe, priceType, startDate, endDate });
 
+      debug(`${DEBUG_NAMESPACE}:urls`)(`Generated ${urls.length} urls`);
+      debug(`${DEBUG_NAMESPACE}:urls`)(`%O`, urls);
+
       let val = 0;
 
-      progressBar.start(urls.length, val);
+      if (!isDebugActive) {
+        progressBar.start(urls.length, val);
+      }
 
       const bufferFetcher = new BufferFetcher({
         batchSize,
         pauseBetweenBatchesMs,
         cacheManager: useCache ? new CacheManager({ cacheFolderPath }) : undefined,
-        notifyOnItemFetchFn: (): void => {
-          val += 1;
-          progressBar.update(val);
+        notifyOnItemFetchFn: (url, buffer, isCacheHit): void => {
+          debug(`${DEBUG_NAMESPACE}:fetcher`)(
+            url,
+            `| ${formatBytes(buffer.length)} |`,
+            `${isCacheHit ? 'cache' : 'network'}`
+          );
+          if (!isDebugActive) {
+            val += 1;
+            progressBar.update(val);
+          }
         }
       });
 
@@ -90,6 +126,12 @@ const filePath = resolve(folderPath, fileName);
           ([timestamp]) => timestamp && timestamp >= startDateMs && timestamp < endDateMs
         );
 
+        debug(`${DEBUG_NAMESPACE}:data`)(
+          `Generated ${filteredData.length} ${
+            timeframe === Timeframe.tick ? 'ticks' : 'OHLC candles'
+          }`
+        );
+
         const formatted = formatOutput({ processedData: filteredData, timeframe, format });
 
         savePayload = format === 'csv' ? formatted : JSON.stringify(formatted, null, 2);
@@ -101,7 +143,9 @@ const filePath = resolve(folderPath, fileName);
 
       await outputFile(filePath, savePayload);
 
-      progressBar.stop();
+      if (!isDebugActive) {
+        progressBar.stop();
+      }
 
       if (isEmpty) {
         printWarning(
