@@ -125,7 +125,7 @@ yarn dukascopy-cli -i btcusd -from 2018-01-01 -to 2019-01-01 -t d1 -f json
 #### npm:
 
 ```bash
-npm run dukascopy-cli -i btcusd -from 2018-01-01 -to 2019-01-01 -t d1 -f json
+npx dukascopy-cli -i btcusd -from 2018-01-01 -to 2019-01-01 -t d1 -f json
 ```
 
 #### pnpm:
