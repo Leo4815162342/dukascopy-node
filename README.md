@@ -111,7 +111,8 @@ const { getHistoricRates } = require('dukascopy-node');
   useCache: true,
   cacheFolderPath: '.dukascopy-cache',
   retryCount: 5,
-  pauseBetweenRetriesMs: 250
+  pauseBetweenRetriesMs: 250,
+  analytics: true
 }
 ```
 
