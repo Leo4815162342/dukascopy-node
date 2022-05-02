@@ -24,7 +24,7 @@ export interface Config {
   cacheFolderPath?: string;
   retryCount?: number;
   pauseBetweenRetriesMs?: number;
-  analytics?: true;
+  analytics?: boolean;
 }
 
 export type DefaultConfig = Required<Pick<Config, OptionalKeys<Config>>>;
