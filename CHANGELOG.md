@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.17.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.16.0...v1.17.0) (2022-05-02)
+
+
+### Features
+
+* adding plausible analytics ([#68](https://github.com/Leo4815162342/dukascopy-node/issues/68)) ([40eb2c8](https://github.com/Leo4815162342/dukascopy-node/commit/40eb2c82e1293d08cc41721575e7a4d9b7452787))
+
 ## [1.16.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.15.0...v1.16.0) (2022-04-28)
 
 
