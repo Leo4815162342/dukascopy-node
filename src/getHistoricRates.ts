@@ -41,7 +41,9 @@ export async function getHistoricRates(config: Config): Promise<Output> {
   });
 
   if (config.analytics) {
-    debug(`${DEBUG_NAMESPACE}:analytics`)('Sending custom goal to analytics');
+    debug(`${DEBUG_NAMESPACE}:analytics`)(
+      `Sending "${GOALS.getHistoricalRates}" custom goal to analytics`
+    );
     trackCustomGoal(GOALS.getHistoricalRates, config, isValid, 'node');
   }
 
