@@ -16,6 +16,7 @@ import { formatOutput } from './output-formatter';
 import { CacheManager } from './cache-manager';
 import { formatBytes } from './utils/formatBytes';
 import { Timeframe } from './config/timeframes';
+import { GOALS, trackCustomGoal } from './analytics';
 import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
 import { NotifyFn } from './buffer-fetcher/types';
 
@@ -38,6 +39,13 @@ export async function getHistoricRates(config: Config): Promise<Output> {
     isValid,
     validationErrors
   });
+
+  if (config.analytics) {
+    debug(`${DEBUG_NAMESPACE}:analytics`)(
+      `Sending "${GOALS.getHistoricalRates}" custom goal to analytics`
+    );
+    trackCustomGoal(GOALS.getHistoricalRates, config, isValid, 'node');
+  }
 
   if (!isValid) {
     throw { validationErrors };

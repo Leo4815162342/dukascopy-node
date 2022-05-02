@@ -86,6 +86,7 @@ const { getHistoricRates } = require('dukascopy-node');
 |`cacheFolderPath`|`String`|false|`./.dukascopy-cache`|Folder path where all cache artifacts (binary data) will be stored|
 |`retryCount`|`Number`|false|`0`|Number of retries for a failed artifact download. If `0` no retries will happen even for failed requests.|
 |`pauseBetweenRetriesMs`|`Number`|false|`500`|Pause between retries. If `retryCount` is `0` this parameter will be ignored|
+|`analytics`|`Boolean`|false|`true`|A flag indicating whether the library should send analytics remote report, which is used for improving the DX and the library itself|
 
 ***
 
@@ -110,7 +111,8 @@ const { getHistoricRates } = require('dukascopy-node');
   useCache: true,
   cacheFolderPath: '.dukascopy-cache',
   retryCount: 5,
-  pauseBetweenRetriesMs: 250
+  pauseBetweenRetriesMs: 250,
+  analytics: true
 }
 ```
 
@@ -141,13 +143,12 @@ pnpm dukascopy-cli -i btcusd -from 2018-01-01 -to 2019-01-01 -t d1 -f json
 Usage: dukascopy-cli [options]
 
 Options:
-  -d, --debug                    Output extra debugging
+  -d, --debug                    Output extra debugging (default: false)
   -s, --silent                   Hides the search config in the CLI output (default: false)
   -i, --instrument <value>       Trading instrument
   -from, --date-from <value>     From date (yyyy-mm-dd)
   -to, --date-to <value>         To date (yyyy-mm-dd)
-  -t, --timeframe <value>        Timeframe aggregation (tick, m1, m5, m15, m30, h1, h4, d1, mn1) (default:
-                                 "d1")
+  -t, --timeframe <value>        Timeframe aggregation (tick, m1, m5, m15, m30, h1, h4, d1, mn1) (default: "d1")
   -p, --price-type <value>       Price type: (bid, ask) (default: "bid")
   -utc, --utc-offset <value>     UTC offset in minutes (default: 0)
   -v, --volumes                  Include volumes (default: false)
@@ -160,6 +161,8 @@ Options:
   -chpath, --cache-path <value>  Folder path for cache data (default: "./.dukascopy-cache")
   -r, --retries <value>          Number of retries for a failed artifact download (default: 0)
   -rp, --retry-pause <value>     Pause between retries in milliseconds (default: 500)
+  -a, --analytics                Enable remote analytics (default: true)
+  --no-analytics                 Disable remote analytics
   -h, --help                     display help for command
 ```
 </details>

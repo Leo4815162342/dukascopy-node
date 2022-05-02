@@ -18,6 +18,7 @@ import debug from 'debug';
 
 import { Output } from '../output-formatter/types';
 import { Timeframe } from '../config/timeframes';
+import { GOALS, trackCustomGoal } from '../analytics';
 
 const DEBUG_NAMESPACE = 'dukascopy-node:cli';
 
@@ -36,7 +37,8 @@ let {
   cacheFolderPath,
   dir,
   silent,
-  debug: isDebugActive
+  debug: isDebugActive,
+  analytics
 } = input;
 
 if (isDebugActive) {
@@ -64,6 +66,13 @@ const filePath = resolve(folderPath, fileName);
       isValid,
       validationErrors
     });
+
+    if (analytics) {
+      debug(`${DEBUG_NAMESPACE}:analytics`)(
+        `Sending "${GOALS.getHistoricalRates}" custom goal to analytics`
+      );
+      trackCustomGoal(GOALS.getHistoricalRates, input, isValid, 'cli');
+    }
 
     if (isValid) {
       const [startDate, endDate] = normaliseDates({
