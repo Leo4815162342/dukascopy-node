@@ -1,5 +1,7 @@
 import os from 'os';
 import fetch from 'node-fetch';
+import { getSafeVal } from '../utils/getSafeVal';
+import { getIp } from '../utils/getIp';
 import { version } from '../../package.json';
 import { Config } from '../config';
 
@@ -17,6 +19,7 @@ export function trackCustomGoal(
   const os_type = getSafeVal(() => os.type());
   const os_release = getSafeVal(() => os.release());
   const os_platform = getSafeVal(() => os.platform());
+  const ip = getSafeVal(getIp);
 
   try {
     fetch('https://plausible.io/api/event', {
@@ -41,22 +44,10 @@ export function trackCustomGoal(
           os_platform
         }
       }),
-      headers: { 'X-Forwarded-For': '127.0.0.1', 'Content-Type': 'application/json' }
+      headers: { 'X-Forwarded-For': ip || '127.0.0.1', 'Content-Type': 'application/json' }
     });
     // eslint-disable-next-line no-empty
   } catch (err) {}
 
   return true;
-}
-
-function getSafeVal(func: () => string): string {
-  let val = '';
-
-  try {
-    val = func();
-  } catch (err) {
-    val = '';
-  }
-
-  return val;
 }
