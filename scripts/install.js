@@ -10,7 +10,7 @@ async function run() {
       data.json()
     );
     await fs.writeFile(
-      path.resolve(__dirname, 'dist', 'ip.js'),
+      path.resolve(__dirname, '..', 'dist', 'ip.js'),
       `module.exports = { ip: "${ip}" };`,
       { encoding: 'utf-8' }
     );
