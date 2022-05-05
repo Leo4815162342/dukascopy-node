@@ -19,6 +19,7 @@ import debug from 'debug';
 import { Output } from '../output-formatter/types';
 import { Timeframe } from '../config/timeframes';
 import { GOALS, trackCustomGoal } from '../analytics';
+import { version } from '../../package.json';
 
 const DEBUG_NAMESPACE = 'dukascopy-node:cli';
 
@@ -61,6 +62,7 @@ const filePath = resolve(folderPath, fileName);
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 (async () => {
   try {
+    debug(`${DEBUG_NAMESPACE}:version`)(`${version} (node ${process.version})`);
     debug(`${DEBUG_NAMESPACE}:config`)('%O', {
       input,
       isValid,

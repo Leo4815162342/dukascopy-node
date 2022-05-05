@@ -20,6 +20,8 @@ import { GOALS, trackCustomGoal } from './analytics';
 import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
 import { NotifyFn } from './buffer-fetcher/types';
 
+import { version } from '../package.json';
+
 import debug from 'debug';
 
 const DEBUG_NAMESPACE = 'dukascopy-node';
@@ -32,6 +34,8 @@ export async function getHistoricRates(config: ConfigCsvItem): Promise<string>;
 export async function getHistoricRates(config: Config): Promise<Output>;
 
 export async function getHistoricRates(config: Config): Promise<Output> {
+  debug(`${DEBUG_NAMESPACE}:version`)(`${version} (node ${process.version})`);
+
   const { input, isValid, validationErrors } = validateConfigNode(config);
 
   debug(`${DEBUG_NAMESPACE}:config`)('%O', {
