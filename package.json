@@ -1,13 +1,13 @@
 {
 	"name": "dukascopy-node",
-	"version": "1.18.0",
+	"version": "1.19.0",
 	"description": "Node.js library for downloading historical market tick data for 800+ different instruments (stocks, crypto, commodities, forex, etc.)",
 	"main": "dist/index.js",
 	"module": "dist/esm/index.js",
 	"types": "dist/index.d.ts",
 	"files": [
 		"dist",
-		 "scripts"
+		"scripts"
 	],
 	"bin": {
 		"dukascopy-cli": "./dist/cli/index.js"
@@ -21,7 +21,7 @@
 		"gen:meta": "ts-node src/utils/instrument-meta-data/generate-data.ts",
 		"gen:instruments-md": "ts-node src/utils/instrument-meta-data/generate-instrument-md.ts",
 		"release": "standard-version && git push --follow-tags origin master && pnpm build && npm publish",
-		"postinstall" : "node scripts/install.js"
+		"postinstall": "node scripts/install.js"
 	},
 	"author": "leonid.pyrlia",
 	"license": "MIT",
