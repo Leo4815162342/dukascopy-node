@@ -25,6 +25,13 @@ const { getHistoricRates } = require('dukascopy-node');
   }
 })();
 ```
+
+or via CLI:
+
+```bash
+npx dukascopy-cli -i eurusd -from 2021-02-01 -to 2021-03-01 -t d1 -f array
+```
+
 Output shape:
 
 ```json
@@ -61,6 +68,12 @@ const { getHistoricRates } = require('dukascopy-node');
     console.log('error', error);
   }
 })();
+```
+
+or via CLI:
+
+```bash
+npx dukascopy-cli -i eurusd -from 2021-02-01 -to 2021-03-01 -t d1 -f json
 ```
 
 Output shape:
@@ -105,6 +118,12 @@ const { getHistoricRates } = require('dukascopy-node');
     console.log('error', error);
   }
 })();
+```
+
+or via CLI:
+
+```bash
+npx dukascopy-cli -i eurusd -from 2021-02-01 -to 2021-03-01 -t d1 -f csv
 ```
 
 Output shape:
