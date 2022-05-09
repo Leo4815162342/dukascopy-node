@@ -24,7 +24,6 @@ export interface Config {
   cacheFolderPath?: string;
   retryCount?: number;
   pauseBetweenRetriesMs?: number;
-  analytics?: boolean;
 }
 
 export type DefaultConfig = Required<Pick<Config, OptionalKeys<Config>>>;
@@ -41,8 +40,7 @@ export const defaultConfig: DefaultConfig = {
   useCache: false,
   cacheFolderPath: '',
   retryCount: 0,
-  pauseBetweenRetriesMs: 500,
-  analytics: true
+  pauseBetweenRetriesMs: 500
 };
 
 export interface ConfigArrayTickItem extends Config {

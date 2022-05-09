@@ -84,10 +84,5 @@ export const schema: InputSchema<Config> = {
     integer: true,
     optional: true,
     default: defaultConfig.pauseBetweenRetriesMs
-  } as RuleNumber,
-  analytics: {
-    type: 'boolean',
-    optional: true,
-    default: defaultConfig.analytics
-  } as RuleBoolean
+  } as RuleNumber
 };
