@@ -86,7 +86,6 @@ const { getHistoricRates } = require('dukascopy-node');
 |`cacheFolderPath`|`String`|false|`./.dukascopy-cache`|Folder path where all cache artifacts (binary data) will be stored|
 |`retryCount`|`Number`|false|`0`|Number of retries for a failed artifact download. If `0` no retries will happen even for failed requests.|
 |`pauseBetweenRetriesMs`|`Number`|false|`500`|Pause between retries. If `retryCount` is `0` this parameter will be ignored|
-|`analytics`|`Boolean`|false|`true`|A flag indicating whether the library should send analytics remote report, which is used for improving the DX and the library itself|
 
 ***
 
@@ -163,8 +162,6 @@ Options:
   -chpath, --cache-path <value>  Folder path for cache data (default: "./.dukascopy-cache")
   -r, --retries <value>          Number of retries for a failed artifact download (default: 0)
   -rp, --retry-pause <value>     Pause between retries in milliseconds (default: 500)
-  -a, --analytics                Enable remote analytics (default: true)
-  --no-analytics                 Disable remote analytics
   -h, --help                     display help for command
 ```
 </details>

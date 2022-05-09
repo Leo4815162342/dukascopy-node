@@ -69,13 +69,6 @@ const filePath = resolve(folderPath, fileName);
       validationErrors
     });
 
-    if (analytics) {
-      debug(`${DEBUG_NAMESPACE}:analytics`)(
-        `Sending "${GOALS.getHistoricalRates}" custom goal to analytics`
-      );
-      trackCustomGoal(GOALS.getHistoricalRates, input, isValid, 'cli');
-    }
-
     if (isValid) {
       const [startDate, endDate] = normaliseDates({
         instrument,

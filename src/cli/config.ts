@@ -29,9 +29,7 @@ program
   .option('-ch, --cache', 'Use cache', false)
   .option('-chpath, --cache-path <value>', 'Folder path for cache data', './.dukascopy-cache')
   .option('-r, --retries <value>', 'Number of retries for a failed artifact download', Number, 0)
-  .option('-rp, --retry-pause <value>', 'Pause between retries in milliseconds', Number, 500)
-  .option('-a, --analytics', 'Enable remote analytics', true)
-  .option('--no-analytics', 'Disable remote analytics');
+  .option('-rp, --retry-pause <value>', 'Pause between retries in milliseconds', Number, 500);
 
 program.parse(process.argv);
 
