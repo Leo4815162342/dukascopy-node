@@ -61,8 +61,7 @@ const cliConfig: CliConfig = {
   cacheFolderPath: options.cachePath,
   retryCount: options.retries,
   pauseBetweenRetriesMs: options.retryPause,
-  debug: options.debug,
-  analytics: options.analytics
+  debug: options.debug
 };
 
 const cliSchema: InputSchema<CliConfig> = {

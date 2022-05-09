@@ -16,7 +16,6 @@ import { formatOutput } from './output-formatter';
 import { CacheManager } from './cache-manager';
 import { formatBytes } from './utils/formatBytes';
 import { Timeframe } from './config/timeframes';
-import { GOALS, trackCustomGoal } from './analytics';
 import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
 import { NotifyFn } from './buffer-fetcher/types';
 
