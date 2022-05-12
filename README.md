@@ -28,7 +28,7 @@
         <tr>
             <td><pre><code>npm install dukascopy-node --save</code></pre></td>
             <td><pre><code>yarn add dukascopy-node</code></pre></td>
-            <td><pre><code>pnpm install dukascopy-node</code></pre></td>
+            <td><pre><code>pnpm add dukascopy-node</code></pre></td>
         </tr>
     </tbody>
 </table>
