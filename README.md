@@ -14,23 +14,9 @@
 
 ## Installation
 
-#### npm:
-
-```bash
-npm install dukascopy-node --save
-```
-
-#### yarn:
-
-```bash
-yarn add dukascopy-node
-```
-
-#### pnpm:
-
-```bash
-pnpm add dukascopy-node
-```
+| **npm** | **yarn** | **pnpm** |
+| ------------- | ------------- | ------------- |
+| <pre>`npm install dukascopy-node --save`</pre> | <pre>`yarn add dukascopy-node`</pre> | <pre>`pnpm install dukascopy-node`</pre> | 
 
 
 ## Usage ([try it live](https://runkit.com/embed/of4ho2xv8rvv))
