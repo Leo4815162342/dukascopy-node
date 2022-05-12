@@ -12,11 +12,26 @@
 
 > Download historical market tick data for 800+ instruments (Stocks / Commodities / Bonds / Currencies / CFDs / ETFs / Crypto) via Node.js and CLI
 
+
 ## Installation
 
-| **npm** | **yarn** | **pnpm** |
-| ------------- | ------------- | ------------- |
-| <pre>`npm install dukascopy-node --save`</pre> | <pre>`yarn add dukascopy-node`</pre> | <pre>`pnpm install dukascopy-node`</pre> | 
+
+<table>
+    <thead>
+        <tr>
+            <th><img width="16" src="https://static.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png" alt="dukascopy-node via npm"> npm</th>
+            <th><img width="16" src="https://yarnpkg.com/favicon-32x32.png" alt="dukascopy-node via yarn"> yarn</th>
+            <th><img width="16" src="https://pnpm.io/img/favicon.png" alt="dukascopy-node via pnpm"> pnpm</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><pre><code>npm install dukascopy-node --save</code></pre></td>
+            <td><pre><code>yarn add dukascopy-node</code></pre></td>
+            <td><pre><code>pnpm install dukascopy-node</code></pre></td>
+        </tr>
+    </tbody>
+</table>
 
 
 ## Usage ([try it live](https://runkit.com/embed/of4ho2xv8rvv))
