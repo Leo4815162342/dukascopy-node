@@ -67,4 +67,4 @@ const { getHistoricRates } = require('dukascopy-node');
 })();
 ```
 
-![dukascopy-node custom cache folder](https://raw.githubusercontent.com/Leo4815162342/dukascopy-node/blob/master/examples/with-cache/with-cache-custom-folder.png "dukascopy-node custom cache folder")
+![dukascopy-node custom cache folder](https://github.com/Leo4815162342/dukascopy-node/blob/master/examples/with-cache/with-cache-custom-folder.png?raw=true "dukascopy-node custom cache folder")
