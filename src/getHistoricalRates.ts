@@ -132,4 +132,10 @@ export async function getHistoricalRates(config: Config): Promise<Output> {
   return formattedData;
 }
 
+/**
+ * @deprecated use `getHistoricalRates` instead
+ *
+ * Preserving for backwards compatibility
+ * @see https://github.com/Leo4815162342/dukascopy-node/pull/73
+ */
 export const getHistoricRates = getHistoricalRates;
