@@ -39,11 +39,11 @@
 ## Usage ([try it live](https://runkit.com/embed/of4ho2xv8rvv))
 
 ```javascript
-const { getHistoricRates } = require('dukascopy-node');
+const { getHistoricalRates } = require('dukascopy-node');
 
 (async () => {
   try {
-    const data = await getHistoricRates({
+    const data = await getHistoricalRates({
       instrument: 'btcusd',
       dates: {
         from: new Date('2018-01-01'),
