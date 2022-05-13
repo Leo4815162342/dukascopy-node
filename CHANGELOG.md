@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.19.2](https://github.com/Leo4815162342/dukascopy-node/compare/v1.19.1...v1.19.2) (2022-05-13)
+
+
+### Bug Fixes
+
+* proper name for getHistoricalRates function ([#73](https://github.com/Leo4815162342/dukascopy-node/issues/73)) ([51acaaa](https://github.com/Leo4815162342/dukascopy-node/commit/51acaaa0119a49cd8db6245a828b3f1eca2a77b3))
+
 ### [1.19.1](https://github.com/Leo4815162342/dukascopy-node/compare/v1.19.0...v1.19.1) (2022-05-09)
 
 ## [1.19.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.18.0...v1.19.0) (2022-05-05)
