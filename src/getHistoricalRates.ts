@@ -25,14 +25,14 @@ import debug from 'debug';
 
 const DEBUG_NAMESPACE = 'dukascopy-node';
 
-export async function getHistoricRates(config: ConfigArrayItem): Promise<ArrayItem[]>;
-export async function getHistoricRates(config: ConfigArrayTickItem): Promise<ArrayTickItem[]>;
-export async function getHistoricRates(config: ConfigJsonItem): Promise<JsonItem[]>;
-export async function getHistoricRates(config: ConfigJsonTickItem): Promise<JsonItemTick[]>;
-export async function getHistoricRates(config: ConfigCsvItem): Promise<string>;
-export async function getHistoricRates(config: Config): Promise<Output>;
+export async function getHistoricalRates(config: ConfigArrayItem): Promise<ArrayItem[]>;
+export async function getHistoricalRates(config: ConfigArrayTickItem): Promise<ArrayTickItem[]>;
+export async function getHistoricalRates(config: ConfigJsonItem): Promise<JsonItem[]>;
+export async function getHistoricalRates(config: ConfigJsonTickItem): Promise<JsonItemTick[]>;
+export async function getHistoricalRates(config: ConfigCsvItem): Promise<string>;
+export async function getHistoricalRates(config: Config): Promise<Output>;
 
-export async function getHistoricRates(config: Config): Promise<Output> {
+export async function getHistoricalRates(config: Config): Promise<Output> {
   debug(`${DEBUG_NAMESPACE}:version`)(`${version} (node ${process.version})`);
 
   const { input, isValid, validationErrors } = validateConfigNode(config);
@@ -131,3 +131,11 @@ export async function getHistoricRates(config: Config): Promise<Output> {
 
   return formattedData;
 }
+
+/**
+ * @deprecated use `getHistoricalRates` instead
+ *
+ * Preserving for backwards compatibility
+ * @see https://github.com/Leo4815162342/dukascopy-node/pull/73
+ */
+export const getHistoricRates = getHistoricalRates;

@@ -1,8 +1,8 @@
-const { getHistoricRates } = require('dukascopy-node');
+const { getHistoricalRates } = require('dukascopy-node');
 
 (async () => {
   try {
-    const data = await getHistoricRates({
+    const data = await getHistoricalRates({
       instrument: 'eurusd',
       dates: {
         from: new Date('2021-02-01'),

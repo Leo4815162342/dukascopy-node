@@ -5,11 +5,11 @@ There are three basic output formats: `array`, `json` and `csv`
 ### [basic-array.js](https://github.com/Leo4815162342/dukascopy-node/blob/master/examples/basic/basic-array.js)
 
 ```javascript
-const { getHistoricRates } = require('dukascopy-node');
+const { getHistoricalRates } = require('dukascopy-node');
 
 (async () => {
   try {
-    const data = await getHistoricRates({
+    const data = await getHistoricalRates({
       instrument: 'eurusd',
       dates: {
         from: new Date('2021-02-01'),
@@ -49,11 +49,11 @@ Full example output: [basic-array.output.json](https://github.com/Leo4815162342/
 ### [basic-json.js](https://github.com/Leo4815162342/dukascopy-node/blob/master/examples/basic/basic-json.js)
 
 ```javascript
-const { getHistoricRates } = require('dukascopy-node');
+const { getHistoricalRates } = require('dukascopy-node');
 
 (async () => {
   try {
-    const data = await getHistoricRates({
+    const data = await getHistoricalRates({
       instrument: 'eurusd',
       dates: {
         from: new Date('2021-02-01'),
@@ -99,11 +99,11 @@ Full example output: [basic-json.output.json](https://github.com/Leo4815162342/d
 ### [basic-csv.js](https://github.com/Leo4815162342/dukascopy-node/blob/master/examples/basic/basic-csv.js)
 
 ```javascript
-const { getHistoricRates } = require('dukascopy-node');
+const { getHistoricalRates } = require('dukascopy-node');
 
 (async () => {
   try {
-    const data = await getHistoricRates({
+    const data = await getHistoricalRates({
       instrument: 'eurusd',
       dates: {
         from: new Date('2021-02-01'),

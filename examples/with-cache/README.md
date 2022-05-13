@@ -11,11 +11,11 @@ All the binary artifacts (which are downloaded from the dukascopy servers) will 
 ### Example: [with-cache.js](https://github.com/Leo4815162342/dukascopy-node/blob/master/examples/with-cache/with-cache.js)
 
 ```javascript
-const { getHistoricRates } = require('dukascopy-node');
+const { getHistoricalRates } = require('dukascopy-node');
 
 (async () => {
   try {
-    const data = await getHistoricRates({
+    const data = await getHistoricalRates({
       instrument: 'eurusd',
       dates: {
         from: new Date('2021-02-01'),
@@ -44,11 +44,11 @@ If you run the same code again, then you will notice that it's faster, since the
 ### Example: [with-cache-custom-folder.js](https://github.com/Leo4815162342/dukascopy-node/blob/master/examples/with-cache/with-cache-custom-folder.js)
 
 ```javascript
-const { getHistoricRates } = require('dukascopy-node');
+const { getHistoricalRates } = require('dukascopy-node');
 
 (async () => {
   try {
-    const data = await getHistoricRates({
+    const data = await getHistoricalRates({
       instrument: 'eurusd',
       dates: {
         from: new Date('2021-02-01'),

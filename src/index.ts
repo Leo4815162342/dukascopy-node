@@ -23,4 +23,4 @@ export { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './outp
 
 export { RuleDate, RuleBoolean, RuleNumber, RuleString, RuleObject } from 'fastest-validator';
 
-export { getHistoricRates } from './getHistoricRates';
+export { getHistoricRates, getHistoricalRates } from './getHistoricalRates';
