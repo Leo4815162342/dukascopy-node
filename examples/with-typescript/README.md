@@ -4,7 +4,7 @@
 
 ```typescript
 
-import { getHistoricRates, Config, Instrument, Timeframe, Format } from 'dukascopy-node';
+import { getHistoricalRates, Config, Instrument, Timeframe, Format } from 'dukascopy-node';
 
 const config: Config = {
   instrument: Instrument.eurusd,
@@ -17,7 +17,7 @@ const config: Config = {
   priceType: Price.bid
 };
 
-getHistoricRates(config).then(data => console.log(data));
+getHistoricalRates(config).then(data => console.log(data));
 
 ```
 
@@ -31,7 +31,7 @@ When `json` is requested as format for non-tick timeframe
 
 ```typescript
 
-import { getHistoricRates, Config, Instrument, Timeframe, Format } from 'dukascopy-node';
+import { getHistoricalRates, Config, Instrument, Timeframe, Format } from 'dukascopy-node';
 
 const config: Config = {
   instrument: Instrument.eurusd,
@@ -44,7 +44,7 @@ const config: Config = {
   priceType: Price.bid
 };
 
-getHistoricRates(config).then(data => console.log(data));
+getHistoricalRates(config).then(data => console.log(data));
 ```
 
 ![JsonItem](https://github.com/Leo4815162342/dukascopy-node/blob/master/examples/with-typescript/json_item.png?raw=true)
@@ -57,7 +57,7 @@ When `array` is requested as format for non-tick timeframe
 
 ```typescript
 
-import { getHistoricRates, Config, Instrument, Timeframe, Format } from 'dukascopy-node';
+import { getHistoricalRates, Config, Instrument, Timeframe, Format } from 'dukascopy-node';
 
 const config: Config = {
   instrument: Instrument.eurusd,
@@ -70,7 +70,7 @@ const config: Config = {
   priceType: Price.bid
 };
 
-getHistoricRates(config).then(data => console.log(data));
+getHistoricalRates(config).then(data => console.log(data));
 ```
 
 ![ArrayItem](https://github.com/Leo4815162342/dukascopy-node/blob/master/examples/with-typescript/array_item.png?raw=true)
@@ -83,7 +83,7 @@ When `json` is requested as format for tick timeframe
 
 ```typescript
 
-import { getHistoricRates, Config, Instrument, Timeframe, Format } from 'dukascopy-node';
+import { getHistoricalRates, Config, Instrument, Timeframe, Format } from 'dukascopy-node';
 
 const config: Config = {
   instrument: Instrument.eurusd,
@@ -96,7 +96,7 @@ const config: Config = {
   priceType: Price.bid
 };
 
-getHistoricRates(config).then(data => console.log(data));
+getHistoricalRates(config).then(data => console.log(data));
 ```
 
 ![JsonItemTick](https://github.com/Leo4815162342/dukascopy-node/blob/master/examples/with-typescript/json_item_tick.png?raw=true)
@@ -109,7 +109,7 @@ When `array` is requested as format for tick timeframe
 
 ```typescript
 
-import { getHistoricRates, Config, Instrument, Timeframe, Format } from 'dukascopy-node';
+import { getHistoricalRates, Config, Instrument, Timeframe, Format } from 'dukascopy-node';
 
 const config: Config = {
   instrument: Instrument.eurusd,
@@ -122,7 +122,7 @@ const config: Config = {
   priceType: Price.bid
 };
 
-getHistoricRates(config).then(data => console.log(data));
+getHistoricalRates(config).then(data => console.log(data));
 ```
 
 ![ArrayTickItem](https://github.com/Leo4815162342/dukascopy-node/blob/master/examples/with-typescript/array_tick_item.png?raw=true)
@@ -135,7 +135,7 @@ When `csv` is requested as format
 
 ```typescript
 
-import { getHistoricRates, Config, Instrument, Timeframe, Format } from 'dukascopy-node';
+import { getHistoricalRates, Config, Instrument, Timeframe, Format } from 'dukascopy-node';
 
 const config: Config = {
   instrument: Instrument.eurusd,
@@ -148,7 +148,7 @@ const config: Config = {
   priceType: Price.bid
 };
 
-getHistoricRates(config).then(data => console.log(data));
+getHistoricalRates(config).then(data => console.log(data));
 ```
 
 ![string](https://github.com/Leo4815162342/dukascopy-node/blob/master/examples/with-typescript/string.png?raw=true)
