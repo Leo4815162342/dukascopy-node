@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-    <b>📥 Download historical market 📈 tick data for 8️⃣0️⃣0️⃣+ instruments</b> <br> Stocks | Commodities | Bonds | Currencies | CFDs | ETFs | Crypto <br> via Node.js and CLI
+    <b>📥 Download historical market 📈 tick data for 800+ instruments</b> <br>Stocks • Crypto • Commodities • Bonds • Currencies • CFDs • ETFs  <br> via Node.js and CLI
 </p>
 
 ***
