@@ -56,7 +56,6 @@ function breakdownByInterval(input: number[][], interval: 'minute' | 'month'): n
     }
     dataByInterval[intervalValue].push(data);
   }
-
   return dataByInterval;
 }
 function tickOHLC(input: number[][], priceType: PriceType): number[] {
@@ -106,14 +105,14 @@ function tickOHLC(input: number[][], priceType: PriceType): number[] {
 
 function getMinuteOHLCfromTicks(input: number[][], priceType: PriceType): number[][] {
   const breakdown = breakdownByInterval(input, 'minute');
-  const ohlc = breakdown.map(data => tickOHLC(data, priceType));
+  const ohlc = breakdown.filter(Boolean).map(data => tickOHLC(data, priceType));
 
   return ohlc;
 }
 
 function getMonthlyOHLCfromDays(input: number[][]): number[][] {
   const breakdown = breakdownByInterval(input, 'month');
-  const ohlc = breakdown.map(data => getOHLC(data));
+  const ohlc = breakdown.filter(Boolean).map(data => getOHLC(data));
 
   return ohlc;
 }
