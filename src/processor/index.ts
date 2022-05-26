@@ -31,8 +31,11 @@ function processData({
       fromTimeframe: urlTimeframe,
       toTimeframe: requestedTimeframe,
       priceType,
-      ignoreFlats
+      ignoreFlats,
+      startTs: +startDate,
+      volumes
     });
+    console.log('aggregatedData', aggregatedData);
 
     return aggregatedData;
   });

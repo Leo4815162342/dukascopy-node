@@ -1,43 +1,82 @@
 import { roundNum } from './../utils/general';
 import { PriceType } from '../config/price-types';
 
-function getOHLC(input: number[][], filterFlats = true): number[] {
-  const startMs = input[0][0];
+interface GetOHLCInput {
+  input: number[][];
+  filterFlats?: boolean;
+  startTs?: number;
+  volumes: boolean;
+}
 
+function getOHLC({
+  input,
+  filterFlats = true,
+  startTs = input[0][0],
+  volumes
+}: GetOHLCInput): number[] {
   if (filterFlats) {
     // ignoring flat-volumed (0 volume) entries
-    input = input.filter(data => data[5] !== 0);
+    input = input.filter(data => data?.[5] !== 0);
   }
 
   if (input.length === 0) {
     return [];
   }
 
-  let open = input[0][1];
-  let high = input[0][2];
-  let low = input[0][3];
-  let close = input[input.length - 1][4];
-  let volume = input[0][5];
+  let open = 0;
+  let high = -Infinity;
+  let low = Infinity;
+  let close = 0;
+  let volume = 0;
 
-  for (let i = 1, n = input.length; i < n; i++) {
-    const [, , h, l, , v] = input[i];
+  let openPriceDetected = false;
+  let closePriceDetected = false;
 
-    if (h > high) {
-      high = h;
+  let isEmpty = true;
+
+  for (let i = 0, n = input.length; i < n; i++) {
+    const head = input[i];
+    const tail = input[input.length - 1 - i];
+
+    if (head && Array.isArray(head) && head.length === 6) {
+      const [, o, h, l, , v] = head;
+
+      if (!openPriceDetected) {
+        open = o;
+        openPriceDetected = true;
+      }
+
+      if (h > high) {
+        high = h;
+      }
+
+      if (l < low) {
+        low = l;
+      }
+
+      if (v) {
+        volume += v;
+      }
+
+      isEmpty = false;
     }
 
-    if (l < low) {
-      low = l;
-    }
-
-    if (v !== undefined) {
-      volume += v;
+    if (!closePriceDetected) {
+      if (tail && Array.isArray(tail) && tail.length === 6) {
+        const [, , , , c] = tail;
+        close = c;
+        closePriceDetected = true;
+      }
     }
   }
 
-  const ohlc = [startMs, open, high, low, close];
+  if (isEmpty) {
+    return [];
+  }
 
-  if (volume !== undefined) {
+  const ohlc = [startTs, open, high, low, close];
+
+  if (volumes) {
     ohlc.push(roundNum(volume));
   }
 
@@ -56,6 +95,7 @@ function breakdownByInterval(input: number[][], interval: 'minute' | 'month'): n
     }
     dataByInterval[intervalValue].push(data);
   }
+
   return dataByInterval;
 }
 function tickOHLC(input: number[][], priceType: PriceType): number[] {
@@ -105,14 +145,14 @@ function tickOHLC(input: number[][], priceType: PriceType): number[] {
 
 function getMinuteOHLCfromTicks(input: number[][], priceType: PriceType): number[][] {
   const breakdown = breakdownByInterval(input, 'minute');
-  const ohlc = breakdown.filter(Boolean).map(data => tickOHLC(data, priceType));
+  const ohlc = breakdown.map(data => tickOHLC(data, priceType));
 
   return ohlc;
 }
 
-function getMonthlyOHLCfromDays(input: number[][]): number[][] {
+function getMonthlyOHLCfromDays(input: number[][], volumes: boolean): number[][] {
   const breakdown = breakdownByInterval(input, 'month');
-  const ohlc = breakdown.filter(Boolean).map(data => getOHLC(data));
+  const ohlc = breakdown.map(data => getOHLC({ input: data, volumes }));
 
   return ohlc;
 }

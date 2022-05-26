@@ -2,7 +2,8 @@ const input = {
   data: require('./../sample_tick_data.json'),
   fromTimeframe: 'tick',
   toTimeframe: 'm1',
-  priceType: 'bid'
+  priceType: 'bid',
+  startTs: 1549238400000
 };
 
 const expectedOutput = [

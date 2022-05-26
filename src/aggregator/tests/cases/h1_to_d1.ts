@@ -2,7 +2,8 @@ const input = {
   data: require('./../sample_h1_data.json'),
   fromTimeframe: 'h1',
   toTimeframe: 'd1',
-  priceType: 'bid'
+  priceType: 'bid',
+  volumes: true
 };
 
 const expectedOutput = [

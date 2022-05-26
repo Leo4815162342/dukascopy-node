@@ -7,4 +7,6 @@ export type AggregateInput = {
   toTimeframe: TimeframeType;
   priceType: PriceType;
   ignoreFlats: boolean;
+  startTs: number;
+  volumes: boolean;
 };
