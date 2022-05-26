@@ -35,7 +35,6 @@ function processData({
       startTs: +startDate,
       volumes
     });
-    console.log('aggregatedData', aggregatedData);
 
     return aggregatedData;
   });

@@ -18,7 +18,6 @@ function getOHLC({
     // ignoring flat-volumed (0 volume) entries
     input = input.filter(data => data?.[5] !== 0);
   }
-
   if (input.length === 0) {
     return [];
   }
@@ -38,7 +37,7 @@ function getOHLC({
     const head = input[i];
     const tail = input[input.length - 1 - i];
 
-    if (head && Array.isArray(head) && head.length === 6) {
+    if (head && Array.isArray(head) && head.length > 0) {
       const [, o, h, l, , v] = head;
 
       if (!openPriceDetected) {
@@ -62,7 +61,7 @@ function getOHLC({
     }
 
     if (!closePriceDetected) {
-      if (tail && Array.isArray(tail) && tail.length === 6) {
+      if (tail && Array.isArray(tail) && tail.length > 0) {
         const [, , , , c] = tail;
         close = c;
         closePriceDetected = true;
@@ -86,13 +85,14 @@ function getOHLC({
 function breakdownByInterval(input: number[][], interval: 'minute' | 'month'): number[][][] {
   const dataByInterval: number[][][] = [];
 
+  for (let i = 0, n = interval === 'minute' ? 60 : 12; i < n; i++) {
+    dataByInterval.push([]);
+  }
+
   for (let i = 0, n = input.length; i < n; i++) {
     const data = input[i];
     const date = new Date(data[0]);
     const intervalValue = interval === 'minute' ? date.getUTCMinutes() : date.getUTCMonth();
-    if (!dataByInterval[intervalValue]) {
-      dataByInterval[intervalValue] = [];
-    }
     dataByInterval[intervalValue].push(data);
   }
 
@@ -145,14 +145,14 @@ function tickOHLC(input: number[][], priceType: PriceType): number[] {
 
 function getMinuteOHLCfromTicks(input: number[][], priceType: PriceType): number[][] {
   const breakdown = breakdownByInterval(input, 'minute');
-  const ohlc = breakdown.map(data => tickOHLC(data, priceType));
+  const ohlc = breakdown.map(data => (data.length > 0 ? tickOHLC(data, priceType) : []));
 
   return ohlc;
 }
 
 function getMonthlyOHLCfromDays(input: number[][], volumes: boolean): number[][] {
   const breakdown = breakdownByInterval(input, 'month');
-  const ohlc = breakdown.map(data => getOHLC({ input: data, volumes }));
+  const ohlc = breakdown.map(data => (data.length > 0 ? getOHLC({ input: data, volumes }) : []));
 
   return ohlc;
 }
