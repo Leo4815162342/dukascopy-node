@@ -29,7 +29,7 @@ export function aggregate({
     );
   } else {
     if (fromTimeframe === Timeframe.tick) {
-      const minuteOHLC = getMinuteOHLCfromTicks(data, priceType);
+      const minuteOHLC = getMinuteOHLCfromTicks(data, priceType, startTs, volumes);
 
       if (toTimeframe === Timeframe.m1) {
         return minuteOHLC;

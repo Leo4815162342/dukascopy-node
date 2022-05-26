@@ -98,25 +98,28 @@ function breakdownByInterval(input: number[][], interval: 'minute' | 'month'): n
 
   return dataByInterval;
 }
-function tickOHLC(input: number[][], priceType: PriceType): number[] {
+interface TicksToOHLCInput {
+  ticks: number[][];
+  priceType: PriceType;
+  startTs: number;
+  volumes: boolean;
+}
+
+function ticksToOHLC({ ticks, priceType, startTs, volumes }: TicksToOHLCInput): number[] {
   // timestamp, askPrice, bidPrice, askVolume, bidVolume
 
-  const date = new Date(input[0][0]);
-  const minuteValue = date.getUTCMinutes();
+  const openPrice = priceType === 'ask' ? ticks[0][1] : ticks[0][2];
+  const closePrice = priceType === 'ask' ? ticks[ticks.length - 1][1] : ticks[ticks.length - 1][2];
+  const initialVolume = priceType === 'ask' ? ticks[0][3] : ticks[0][4];
 
-  const openPrice = priceType === 'ask' ? input[0][1] : input[0][2];
-  const closePrice = priceType === 'ask' ? input[input.length - 1][1] : input[input.length - 1][2];
-  const initialVolume = priceType === 'ask' ? input[0][3] : input[0][4];
-
-  const startTs = date.setUTCMinutes(minuteValue, 0, 0);
   const open = openPrice;
   let high = openPrice;
   let low = openPrice;
   const close = closePrice;
   let volume = initialVolume;
 
-  for (let i = 1, n = input.length; i < n; i++) {
-    const [, askPrice, bidPrice, askVolume, bidVolume] = input[i];
+  for (let i = 1, n = ticks.length; i < n; i++) {
+    const [, askPrice, bidPrice, askVolume, bidVolume] = ticks[i];
 
     const targetPrice = priceType === 'ask' ? askPrice : bidPrice;
     const targetVolume = priceType === 'ask' ? askVolume : bidVolume;
@@ -129,23 +132,32 @@ function tickOHLC(input: number[][], priceType: PriceType): number[] {
       low = targetPrice;
     }
 
-    if (targetVolume !== undefined) {
+    if (targetVolume) {
       volume += targetVolume;
     }
   }
 
   const ohlc = [startTs, open, high, low, close];
 
-  if (volume !== undefined) {
+  if (volumes) {
     ohlc.push(roundNum(volume));
   }
 
   return ohlc;
 }
 
-function getMinuteOHLCfromTicks(input: number[][], priceType: PriceType): number[][] {
-  const breakdown = breakdownByInterval(input, 'minute');
-  const ohlc = breakdown.map(data => (data.length > 0 ? tickOHLC(data, priceType) : []));
+function getMinuteOHLCfromTicks(
+  ticks: number[][],
+  priceType: PriceType,
+  startTs: number,
+  volumes: boolean
+): number[][] {
+  const ticksByMinute = breakdownByInterval(ticks, 'minute');
+  const ohlc = ticksByMinute.map((data, i) =>
+    data.length > 0
+      ? ticksToOHLC({ ticks: data, priceType, startTs: startTs + i * 1000 * 60, volumes })
+      : []
+  );
 
   return ohlc;
 }
@@ -157,4 +169,4 @@ function getMonthlyOHLCfromDays(input: number[][], volumes: boolean): number[][]
   return ohlc;
 }
 
-export { getOHLC, getMinuteOHLCfromTicks, getMonthlyOHLCfromDays };
+export { getOHLC, ticksToOHLC, getMinuteOHLCfromTicks, getMonthlyOHLCfromDays };
