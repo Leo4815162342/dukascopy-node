@@ -59,112 +59,117 @@ const filePath = resolve(folderPath, fileName);
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 (async () => {
-  debug(`${DEBUG_NAMESPACE}:version`)(`${version} (node ${process.version})`);
-  debug(`${DEBUG_NAMESPACE}:config`)('%O', {
-    input,
-    isValid,
-    validationErrors
-  });
-
-  if (isValid) {
-    const [startDate, endDate] = normaliseDates({
-      instrument,
-      startDate: fromDate,
-      endDate: toDate,
-      timeframe,
-      utcOffset
+  try {
+    debug(`${DEBUG_NAMESPACE}:version`)(`${version} (node ${process.version})`);
+    debug(`${DEBUG_NAMESPACE}:config`)('%O', {
+      input,
+      isValid,
+      validationErrors
     });
 
-    if (!isDebugActive) {
-      silent ? printDivider() : printHeader(input, startDate, endDate);
-    }
-
-    const urls = generateUrls({ instrument, timeframe, priceType, startDate, endDate });
-
-    debug(`${DEBUG_NAMESPACE}:urls`)(`Generated ${urls.length} urls`);
-    debug(`${DEBUG_NAMESPACE}:urls`)(`%O`, urls);
-
-    let val = 0;
-
-    if (!isDebugActive) {
-      progressBar.start(urls.length, val);
-    }
-
-    const bufferFetcher = new BufferFetcher({
-      batchSize,
-      pauseBetweenBatchesMs,
-      cacheManager: useCache ? new CacheManager({ cacheFolderPath }) : undefined,
-      notifyOnItemFetchFn: (url, buffer, isCacheHit): void => {
-        debug(`${DEBUG_NAMESPACE}:fetcher`)(
-          url,
-          `| ${formatBytes(buffer.length)} |`,
-          `${isCacheHit ? 'cache' : 'network'}`
-        );
-        if (!isDebugActive) {
-          val += 1;
-          progressBar.update(val);
-        }
-      }
-    });
-
-    const bufferredData = await bufferFetcher.fetch(urls);
-
-    let savePayload: Output;
-
-    if (bufferredData.length) {
-      const processedData = processData({
+    if (isValid) {
+      const [startDate, endDate] = normaliseDates({
         instrument,
-        requestedTimeframe: timeframe,
-        bufferObjects: bufferredData,
-        priceType,
-        volumes,
-        ignoreFlats
+        startDate: fromDate,
+        endDate: toDate,
+        timeframe,
+        utcOffset
       });
 
-      const [startDateMs, endDateMs] = [+startDate, +endDate];
+      if (!isDebugActive) {
+        silent ? printDivider() : printHeader(input, startDate, endDate);
+      }
 
-      const filteredData = processedData.filter(
-        ([timestamp]) => timestamp && timestamp >= startDateMs && timestamp < endDateMs
-      );
+      const urls = generateUrls({ instrument, timeframe, priceType, startDate, endDate });
 
-      debug(`${DEBUG_NAMESPACE}:data`)(
-        `Generated ${filteredData.length} ${
-          timeframe === Timeframe.tick ? 'ticks' : 'OHLC candles'
-        }`
-      );
+      debug(`${DEBUG_NAMESPACE}:urls`)(`Generated ${urls.length} urls`);
+      debug(`${DEBUG_NAMESPACE}:urls`)(`%O`, urls);
 
-      const formatted = formatOutput({ processedData: filteredData, timeframe, format });
+      let val = 0;
 
-      savePayload = format === 'csv' ? formatted : JSON.stringify(formatted, null, 2);
+      if (!isDebugActive) {
+        progressBar.start(urls.length, val);
+      }
+
+      const bufferFetcher = new BufferFetcher({
+        batchSize,
+        pauseBetweenBatchesMs,
+        cacheManager: useCache ? new CacheManager({ cacheFolderPath }) : undefined,
+        notifyOnItemFetchFn: (url, buffer, isCacheHit): void => {
+          debug(`${DEBUG_NAMESPACE}:fetcher`)(
+            url,
+            `| ${formatBytes(buffer.length)} |`,
+            `${isCacheHit ? 'cache' : 'network'}`
+          );
+          if (!isDebugActive) {
+            val += 1;
+            progressBar.update(val);
+          }
+        }
+      });
+
+      const bufferredData = await bufferFetcher.fetch(urls);
+
+      let savePayload: Output;
+
+      if (bufferredData.length) {
+        const processedData = processData({
+          instrument,
+          requestedTimeframe: timeframe,
+          bufferObjects: bufferredData,
+          priceType,
+          volumes,
+          ignoreFlats
+        });
+
+        const [startDateMs, endDateMs] = [+startDate, +endDate];
+
+        const filteredData = processedData.filter(
+          ([timestamp]) => timestamp && timestamp >= startDateMs && timestamp < endDateMs
+        );
+
+        debug(`${DEBUG_NAMESPACE}:data`)(
+          `Generated ${filteredData.length} ${
+            timeframe === Timeframe.tick ? 'ticks' : 'OHLC candles'
+          }`
+        );
+
+        const formatted = formatOutput({ processedData: filteredData, timeframe, format });
+
+        savePayload = format === 'csv' ? formatted : JSON.stringify(formatted, null, 2);
+      } else {
+        savePayload = format === 'csv' ? '' : JSON.stringify([]);
+      }
+
+      const isEmpty = savePayload === '' || savePayload === '[]' || savePayload.length === 0;
+
+      await outputFile(filePath, savePayload);
+
+      if (!isDebugActive) {
+        progressBar.stop();
+      }
+
+      if (isEmpty) {
+        printWarning(
+          [
+            '⚠ Response for your config is currently empty.',
+            'Try again later when data is available.',
+            'see https://github.com/Leo4815162342/dukascopy-node/wiki/Information-on-empty-responses'
+          ].join('\n')
+        );
+      } else {
+        printSuccess(`√ File saved: ${chalk.bold(fileName)}`);
+      }
     } else {
-      savePayload = format === 'csv' ? '' : JSON.stringify([]);
-    }
-
-    const isEmpty = savePayload === '' || savePayload === '[]' || savePayload.length === 0;
-
-    await outputFile(filePath, savePayload);
-
-    if (!isDebugActive) {
-      progressBar.stop();
-    }
-
-    if (isEmpty) {
-      printWarning(
-        [
-          '⚠ Response for your config is currently empty.',
-          'Try again later when data is available.',
-          'see https://github.com/Leo4815162342/dukascopy-node/wiki/Information-on-empty-responses'
-        ].join('\n')
+      printErrors(
+        'Search config invalid:',
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        validationErrors.map(err => err.message!)
       );
-    } else {
-      printSuccess(`√ File saved: ${chalk.bold(fileName)}`);
+      process.exit(0);
     }
-  } else {
-    printErrors(
-      'Search config invalid:',
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      validationErrors.map(err => err.message!)
-    );
+  } catch (err) {
+    printErrors('\nSomething went wrong:', JSON.stringify(err));
     process.exit(0);
   }
 })();
