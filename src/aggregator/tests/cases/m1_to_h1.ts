@@ -3,7 +3,8 @@ const input = {
   fromTimeframe: 'm1',
   toTimeframe: 'h1',
   priceType: 'bid',
-  volumes: true
+  volumes: true,
+  startTs: 1549238400000
 };
 
 const expectedOutput = [

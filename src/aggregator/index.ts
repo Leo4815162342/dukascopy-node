@@ -82,53 +82,95 @@ export function aggregate({
 
     if (fromTimeframe === Timeframe.m1) {
       if (toTimeframe === Timeframe.m5) {
-        return splitArrayInChunks(data, 5).map(d =>
-          getOHLC({ input: d, filterFlats: ignoreFlats, volumes })
+        return splitArrayInChunks(data, 5).map((d, i) =>
+          getOHLC({
+            input: d,
+            filterFlats: ignoreFlats,
+            startTs: startTs + i * 5 * 1000 * 60,
+            volumes
+          })
         );
       }
 
       if (toTimeframe === Timeframe.m15) {
-        return splitArrayInChunks(data, 15).map(d =>
-          getOHLC({ input: d, filterFlats: ignoreFlats, volumes })
+        return splitArrayInChunks(data, 15).map((d, i) =>
+          getOHLC({
+            input: d,
+            filterFlats: ignoreFlats,
+            startTs: startTs + i * 15 * 1000 * 60,
+            volumes
+          })
         );
       }
 
       if (toTimeframe === Timeframe.m30) {
-        return splitArrayInChunks(data, 30).map(d =>
-          getOHLC({ input: d, filterFlats: ignoreFlats, volumes })
+        return splitArrayInChunks(data, 30).map((d, i) =>
+          getOHLC({
+            input: d,
+            filterFlats: ignoreFlats,
+            startTs: startTs + i * 30 * 1000 * 60,
+            volumes
+          })
         );
       }
 
       if (toTimeframe === Timeframe.h1) {
-        return splitArrayInChunks(data, 60).map(d =>
-          getOHLC({ input: d, filterFlats: ignoreFlats, volumes })
+        return splitArrayInChunks(data, 60).map((d, i) =>
+          getOHLC({
+            input: d,
+            filterFlats: ignoreFlats,
+            startTs: startTs + i * 60 * 1000 * 60,
+            volumes
+          })
         );
       }
 
       if (toTimeframe === Timeframe.h4) {
-        return splitArrayInChunks(data, 240).map(d =>
-          getOHLC({ input: d, filterFlats: ignoreFlats, volumes })
+        return splitArrayInChunks(data, 240).map((d, i) =>
+          getOHLC({
+            input: d,
+            filterFlats: ignoreFlats,
+            startTs: startTs + i * 240 * 1000 * 60,
+            volumes
+          })
         );
       }
 
       if (toTimeframe === Timeframe.d1) {
-        return [data].map(d => getOHLC({ input: d, filterFlats: ignoreFlats, volumes }));
+        return [
+          getOHLC({
+            input: data,
+            filterFlats: ignoreFlats,
+            startTs,
+            volumes
+          })
+        ];
       }
     }
 
     if (fromTimeframe === Timeframe.h1) {
       if (toTimeframe === Timeframe.h4) {
-        return splitArrayInChunks(data, 4).map(d =>
-          getOHLC({ input: d, filterFlats: ignoreFlats, volumes })
+        return splitArrayInChunks(data, 4).map((d, i) =>
+          getOHLC({
+            input: d,
+            filterFlats: ignoreFlats,
+            startTs: startTs + i * 240 * 1000 * 60,
+            volumes
+          })
         );
       }
       if (toTimeframe === Timeframe.d1) {
-        return splitArrayInChunks(data, 24).map(d =>
-          getOHLC({ input: d, filterFlats: ignoreFlats, volumes })
+        return splitArrayInChunks(data, 24).map((d, i) =>
+          getOHLC({
+            input: d,
+            filterFlats: ignoreFlats,
+            startTs: startTs + i * 1440 * 1000 * 60,
+            volumes
+          })
         );
       }
       if (toTimeframe === Timeframe.mn1) {
-        return [data].map(d => getOHLC({ input: d, filterFlats: ignoreFlats, volumes }));
+        return [getOHLC({ input: data, filterFlats: ignoreFlats, startTs, volumes })];
       }
     }
 
