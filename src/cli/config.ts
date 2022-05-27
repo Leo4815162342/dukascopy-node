@@ -35,6 +35,16 @@ program.parse(process.argv);
 
 const options = program.opts();
 
+// Parse "now" date parameters and convert
+// them to current time.
+if (options.dateFrom === 'now') {
+  options.dateFrom = new Date();
+}
+
+if (options.dateTo === 'now') {
+  options.dateTo = new Date();
+}
+
 export interface CliConfig extends Config {
   dir: string;
   silent: boolean;
