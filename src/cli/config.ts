@@ -37,11 +37,12 @@ const options = program.opts();
 
 // Parse "now" date parameters and convert
 // them to current time.
-if (options.dateFrom === 'now') {
+const now = 'now';
+if (options.dateFrom === now) {
   options.dateFrom = new Date();
 }
 
-if (options.dateTo === 'now') {
+if (options.dateTo === now) {
   options.dateTo = new Date();
 }
 
