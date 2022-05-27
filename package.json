@@ -9,7 +9,8 @@
 		"dist"
 	],
 	"bin": {
-		"dukascopy-cli": "./dist/cli/index.js"
+		"dukascopy-cli": "./dist/cli/index.js",
+		"dukascopy-node": "./dist/cli/index.js"
 	},
 	"scripts": {
 		"build": "rm -rf dist && tsup-node src/index.ts src/cli/index.ts --format esm,cjs --dts --legacy-output",

@@ -120,7 +120,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 ## Usage via CLI
 
 ```bash
-npx dukascopy-cli -i btcusd -from 2018-01-01 -to 2019-01-01 -t d1 -f json
+npx dukascopy-node -i btcusd -from 2018-01-01 -to 2019-01-01 -t d1 -f json
 ```
 
 ![dukascopy-node-cli](https://user-images.githubusercontent.com/12486774/165928641-ae7ea6f7-c5a9-4ab6-b153-c6bef5076433.gif)
@@ -129,7 +129,7 @@ npx dukascopy-cli -i btcusd -from 2018-01-01 -to 2019-01-01 -t d1 -f json
 <summary>CLI full specification</summary>
 
 ```
-Usage: dukascopy-cli [options]
+Usage: dukascopy-node [options]
 
 Options:
   -d, --debug                    Output extra debugging (default: false)
