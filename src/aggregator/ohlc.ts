@@ -82,18 +82,24 @@ function getOHLC({
   return ohlc;
 }
 
-function breakdownByInterval(input: number[][], interval: 'minute' | 'month'): number[][][] {
+function breakdownByInterval(
+  items: number[][],
+  interval: number,
+  indexFromDateGetter: (date: Date) => number
+): number[][][] {
   const dataByInterval: number[][][] = [];
 
-  for (let i = 0, n = interval === 'minute' ? 60 : 12; i < n; i++) {
+  for (let i = 0, n = interval; i < n; i++) {
     dataByInterval.push([]);
   }
 
-  for (let i = 0, n = input.length; i < n; i++) {
-    const data = input[i];
-    const date = new Date(data[0]);
-    const intervalValue = interval === 'minute' ? date.getUTCMinutes() : date.getUTCMonth();
-    dataByInterval[intervalValue].push(data);
+  for (let i = 0, n = items.length; i < n; i++) {
+    const data = items[i];
+    if (data && Array.isArray(data) && data.length > 0) {
+      const date = new Date(data[0]);
+      const intervalIndex = indexFromDateGetter(date);
+      dataByInterval[intervalIndex].push(data);
+    }
   }
 
   return dataByInterval;
@@ -152,7 +158,7 @@ function getMinuteOHLCfromTicks(
   startTs: number,
   volumes: boolean
 ): number[][] {
-  const ticksByMinute = breakdownByInterval(ticks, 'minute');
+  const ticksByMinute = breakdownByInterval(ticks, 60, d => d.getUTCMinutes());
   const ohlc = ticksByMinute.map((data, i) =>
     data.length > 0
       ? ticksToOHLC({ ticks: data, priceType, startTs: startTs + i * 1000 * 60, volumes })
@@ -162,11 +168,17 @@ function getMinuteOHLCfromTicks(
   return ohlc;
 }
 
-function getMonthlyOHLCfromDays(input: number[][], volumes: boolean): number[][] {
-  const breakdown = breakdownByInterval(input, 'month');
+function getMonthlyOHLCfromDays(dailyCandles: number[][], volumes: boolean): number[][] {
+  const breakdown = breakdownByInterval(dailyCandles, 12, d => d.getUTCMonth());
   const ohlc = breakdown.map(data => (data.length > 0 ? getOHLC({ input: data, volumes }) : []));
 
   return ohlc;
 }
 
-export { getOHLC, ticksToOHLC, getMinuteOHLCfromTicks, getMonthlyOHLCfromDays };
+export {
+  getOHLC,
+  ticksToOHLC,
+  breakdownByInterval,
+  getMinuteOHLCfromTicks,
+  getMonthlyOHLCfromDays
+};
