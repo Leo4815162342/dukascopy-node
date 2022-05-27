@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.19.3](https://github.com/Leo4815162342/dukascopy-node/compare/v1.19.2...v1.19.3) (2022-05-27)
+
+
+### Bug Fixes
+
+* fix for empty tick to minute aggregations ([#78](https://github.com/Leo4815162342/dukascopy-node/issues/78)) ([8cecc89](https://github.com/Leo4815162342/dukascopy-node/commit/8cecc89ae04cfd1259dcc3e9333240172e4c6382))
+
 ### [1.19.2](https://github.com/Leo4815162342/dukascopy-node/compare/v1.19.1...v1.19.2) (2022-05-13)
 
 
