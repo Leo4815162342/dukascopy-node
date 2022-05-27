@@ -13,7 +13,7 @@ program
   .option('-d, --debug', 'Output extra debugging', false)
   .option('-s, --silent', 'Hides the search config in the CLI output', false)
   .requiredOption('-i, --instrument <value>', 'Trading instrument')
-  .requiredOption('-from, --date-from <value>', `From date (yyyy-mm-dd or '${now}')`)
+  .requiredOption('-from, --date-from <value>', `From date (yyyy-mm-dd')`)
   .requiredOption('-to, --date-to <value>', `To date (yyyy-mm-dd or '${now}')`)
   .option(
     '-t, --timeframe <value>',
@@ -37,12 +37,8 @@ program.parse(process.argv);
 
 const options = program.opts();
 
-// Parse "now" date parameters and convert
-// them to current time.
-if (options.dateFrom === now) {
-  options.dateFrom = new Date();
-}
-
+// Parse "now" date parameter and convert
+// it to current time.
 if (options.dateTo === now) {
   options.dateTo = new Date();
 }
