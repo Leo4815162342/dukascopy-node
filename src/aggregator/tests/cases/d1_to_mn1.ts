@@ -1,10 +1,13 @@
-const input = {
+import { AggregateInput } from '../../types';
+
+const input: AggregateInput = {
   data: require('./../sample_d1_data.json'),
   fromTimeframe: 'd1',
   toTimeframe: 'mn1',
   priceType: 'bid',
   volumes: true,
-  startTs: 1514764800000
+  startTs: 1514764800000,
+  ignoreFlats: true
 };
 
 const expectedOutput = [

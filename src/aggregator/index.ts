@@ -13,6 +13,7 @@ export function aggregate({
   volumes
 }: AggregateInput): number[][] {
   if (fromTimeframe === Timeframe.tick && toTimeframe === Timeframe.tick) {
+    // ignoring of flats is skipped for tick data
     return data;
   }
 
