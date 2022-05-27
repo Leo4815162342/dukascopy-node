@@ -13,7 +13,7 @@ program
   .option('-d, --debug', 'Output extra debugging', false)
   .option('-s, --silent', 'Hides the search config in the CLI output', false)
   .requiredOption('-i, --instrument <value>', 'Trading instrument')
-  .requiredOption('-from, --date-from <value>', `From date (yyyy-mm-dd')`)
+  .requiredOption('-from, --date-from <value>', 'From date (yyyy-mm-dd)')
   .requiredOption('-to, --date-to <value>', `To date (yyyy-mm-dd or '${now}')`)
   .option(
     '-t, --timeframe <value>',
