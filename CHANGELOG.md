@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.20.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.19.3...v1.20.0) (2022-05-27)
+
+
+### Features
+
+* support "now" in and "to" cli parameter. ([#77](https://github.com/Leo4815162342/dukascopy-node/issues/77)) ([efe3187](https://github.com/Leo4815162342/dukascopy-node/commit/efe318797176b84c2eae1cda1f1d1081f20142d1))
+
 ### [1.19.3](https://github.com/Leo4815162342/dukascopy-node/compare/v1.19.2...v1.19.3) (2022-05-27)
 
 
