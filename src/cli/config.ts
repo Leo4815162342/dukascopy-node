@@ -7,12 +7,14 @@ import { Format } from '../config/format';
 import { Price } from '../config/price-types';
 import { Timeframe } from '../config/timeframes';
 
+const now = 'now';
+
 program
   .option('-d, --debug', 'Output extra debugging', false)
   .option('-s, --silent', 'Hides the search config in the CLI output', false)
   .requiredOption('-i, --instrument <value>', 'Trading instrument')
   .requiredOption('-from, --date-from <value>', 'From date (yyyy-mm-dd)')
-  .requiredOption('-to, --date-to <value>', 'To date (yyyy-mm-dd)')
+  .option('-to, --date-to <value>', `To date (yyyy-mm-dd or '${now}')`, now)
   .option(
     '-t, --timeframe <value>',
     'Timeframe aggregation (tick, m1, m5, m15, m30, h1, h4, d1, mn1)',
@@ -34,6 +36,12 @@ program
 program.parse(process.argv);
 
 const options = program.opts();
+
+// Parse "now" date parameter and convert
+// it to current time.
+if (options.dateTo === now) {
+  options.dateTo = new Date();
+}
 
 export interface CliConfig extends Config {
   dir: string;
