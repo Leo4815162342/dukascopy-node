@@ -136,7 +136,7 @@ Options:
   -s, --silent                   Hides the search config in the CLI output (default: false)
   -i, --instrument <value>       Trading instrument
   -from, --date-from <value>     From date (yyyy-mm-dd)
-  -to, --date-to <value>         To date (yyyy-mm-dd)
+  -to, --date-to <value>         To date (yyyy-mm-dd or 'now') (default: "now")
   -t, --timeframe <value>        Timeframe aggregation (tick, m1, m5, m15, m30, h1, h4, d1, mn1) (default: "d1")
   -p, --price-type <value>       Price type: (bid, ask) (default: "bid")
   -utc, --utc-offset <value>     UTC offset in minutes (default: 0)
