@@ -15,7 +15,7 @@
 
 ***
 
-## Installation
+## 🚀 Installation
 
 
 <table>
@@ -35,8 +35,44 @@
     </tbody>
 </table>
 
+## ✨ Usage via CLI
 
-## Usage ([try it live](https://runkit.com/embed/of4ho2xv8rvv))
+```bash
+npx dukascopy-node -i btcusd -from 2018-01-01 -to 2019-01-01 -t d1 -f json
+```
+
+![dukascopy-node-cli](https://user-images.githubusercontent.com/12486774/165928641-ae7ea6f7-c5a9-4ab6-b153-c6bef5076433.gif)
+
+<details>
+<summary>CLI full specification</summary>
+
+```
+Usage: dukascopy-node [options]
+
+Options:
+  -d, --debug                    Output extra debugging (default: false)
+  -s, --silent                   Hides the search config in the CLI output (default: false)
+  -i, --instrument <value>       Trading instrument
+  -from, --date-from <value>     From date (yyyy-mm-dd)
+  -to, --date-to <value>         To date (yyyy-mm-dd or 'now') (default: "now")
+  -t, --timeframe <value>        Timeframe aggregation (tick, m1, m5, m15, m30, h1, h4, d1, mn1) (default: "d1")
+  -p, --price-type <value>       Price type: (bid, ask) (default: "bid")
+  -utc, --utc-offset <value>     UTC offset in minutes (default: 0)
+  -v, --volumes                  Include volumes (default: false)
+  -fl, --flats                   Include flats (0 volumes) (default: false)
+  -f, --format <value>           Output format (csv, json, array) (default: "json")
+  -dir, --directory <value>      Download directory (default: "./download")
+  -bs, --batch-size <value>      Batch size of downloaded artifacts (default: 10)
+  -bp, --batch-pause <value>     Pause between batches in ms (default: 1000)
+  -ch, --cache                   Use cache (default: false)
+  -chpath, --cache-path <value>  Folder path for cache data (default: "./.dukascopy-cache")
+  -r, --retries <value>          Number of retries for a failed artifact download (default: 0)
+  -rp, --retry-pause <value>     Pause between retries in milliseconds (default: 500)
+  -h, --help                     display help for command
+```
+</details>
+
+## ✨ Usage via Node.js ([try it live](https://runkit.com/embed/of4ho2xv8rvv))
 
 ```javascript
 const { getHistoricalRates } = require('dukascopy-node');
@@ -60,7 +96,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 })();
 ```
 
-## Detailed examples
+## 📖 Detailed examples
 * [Basic usage of `dukascopy-node`](https://github.com/Leo4815162342/dukascopy-node/wiki/Basic-usage-of-dukascopy-node)
 * [Downloading tick data](https://github.com/Leo4815162342/dukascopy-node/wiki/Downloading-tick-data)
 * [Downloading data with cache](https://github.com/Leo4815162342/dukascopy-node/wiki/Downloading-data-with-cache)
@@ -69,7 +105,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 * [Debugging](https://github.com/Leo4815162342/dukascopy-node/wiki/Debugging)
 
 
-## Config object
+## ⚙️ Config object
 
 |Name|Type|Required|Default|Description|
 |-|-|-|-|-|
@@ -116,48 +152,9 @@ const { getHistoricalRates } = require('dukascopy-node');
   pauseBetweenRetriesMs: 250
 }
 ```
-
-## Usage via CLI
-
-```bash
-npx dukascopy-node -i btcusd -from 2018-01-01 -to 2019-01-01 -t d1 -f json
-```
-
-![dukascopy-node-cli](https://user-images.githubusercontent.com/12486774/165928641-ae7ea6f7-c5a9-4ab6-b153-c6bef5076433.gif)
-
-<details>
-<summary>CLI full specification</summary>
-
-```
-Usage: dukascopy-node [options]
-
-Options:
-  -d, --debug                    Output extra debugging (default: false)
-  -s, --silent                   Hides the search config in the CLI output (default: false)
-  -i, --instrument <value>       Trading instrument
-  -from, --date-from <value>     From date (yyyy-mm-dd)
-  -to, --date-to <value>         To date (yyyy-mm-dd or 'now') (default: "now")
-  -t, --timeframe <value>        Timeframe aggregation (tick, m1, m5, m15, m30, h1, h4, d1, mn1) (default: "d1")
-  -p, --price-type <value>       Price type: (bid, ask) (default: "bid")
-  -utc, --utc-offset <value>     UTC offset in minutes (default: 0)
-  -v, --volumes                  Include volumes (default: false)
-  -fl, --flats                   Include flats (0 volumes) (default: false)
-  -f, --format <value>           Output format (csv, json, array) (default: "json")
-  -dir, --directory <value>      Download directory (default: "./download")
-  -bs, --batch-size <value>      Batch size of downloaded artifacts (default: 10)
-  -bp, --batch-pause <value>     Pause between batches in ms (default: 1000)
-  -ch, --cache                   Use cache (default: false)
-  -chpath, --cache-path <value>  Folder path for cache data (default: "./.dukascopy-cache")
-  -r, --retries <value>          Number of retries for a failed artifact download (default: 0)
-  -rp, --retry-pause <value>     Pause between retries in milliseconds (default: 500)
-  -h, --help                     display help for command
-```
-</details>
-
 ***
 
-
-## Instruments
+## 📂 Instruments
 
 * [Bonds 📊 (3)](#bnd_cfd)
 * [Crypto assets ₿ (19)](#vccy)
