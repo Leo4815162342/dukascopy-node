@@ -29,7 +29,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 or via CLI:
 
 ```bash
-npx dukascopy-cli -i eurusd -from 2021-02-01 -to 2021-03-01 -t d1 -f array
+npx dukascopy-node -i eurusd -from 2021-02-01 -to 2021-03-01 -t d1 -f array
 ```
 
 Output shape:
@@ -73,7 +73,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 or via CLI:
 
 ```bash
-npx dukascopy-cli -i eurusd -from 2021-02-01 -to 2021-03-01 -t d1 -f json
+npx dukascopy-node -i eurusd -from 2021-02-01 -to 2021-03-01 -t d1 -f json
 ```
 
 Output shape:
@@ -123,7 +123,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 or via CLI:
 
 ```bash
-npx dukascopy-cli -i eurusd -from 2021-02-01 -to 2021-03-01 -t d1 -f csv
+npx dukascopy-node -i eurusd -from 2021-02-01 -to 2021-03-01 -t d1 -f csv
 ```
 
 Output shape:
