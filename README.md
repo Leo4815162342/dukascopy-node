@@ -3,15 +3,17 @@
 <p align="center"><img width="150" src="https://github.com/Leo4815162342/dukascopy-node/blob/master/dukascopy-node.png?raw=true" alt="dukascopy-node"></p>
 
 <p align="center">
+    <b>📥 Download historical market 📈 tick data for 800+ instruments</b> <br>Stocks • Crypto • Commodities • Bonds • Currencies • CFDs • ETFs  <br> via Node.js and CLI
+</p>
+
+<p align="center">
     <a href="https://github.com/Leo4815162342/dukascopy-node/actions/workflows/cicd.yaml"><img src="https://github.com/Leo4815162342/dukascopy-node/actions/workflows/cicd.yaml/badge.svg" alt="Build Status of dukascopy-node npm package"></a>
     <a href="https://www.npmjs.com/package/dukascopy-node"><img src="https://badgen.net/npm/v/dukascopy-node?cache=600" alt="dukascopy-node latest version"></a>
     <a href="https://www.npmjs.com/package/dukascopy-node"><img src="https://badgen.net/npm/dt/dukascopy-node?cache=600" alt="Total number of downloads of dukascopy-node npm package"></a>
     <a href="https://github.com/Leo4815162342/dukascopy-node"><img src="https://badgen.net/github/stars/Leo4815162342/dukascopy-node?cache=600" alt="dukascopy-node github stars"></a>
 </p>
 
-<p align="center">
-    <b>📥 Download historical market 📈 tick data for 800+ instruments</b> <br>Stocks • Crypto • Commodities • Bonds • Currencies • CFDs • ETFs  <br> via Node.js and CLI
-</p>
+
 
 ***
 
