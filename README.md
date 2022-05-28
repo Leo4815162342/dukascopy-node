@@ -40,13 +40,14 @@
 ## ✨ Usage via CLI
 
 ```bash
-npx dukascopy-node -i btcusd -from 2018-01-01 -to 2019-01-01 -t d1 -f json
+npx dukascopy-node -i btcusd -from 2019-01-01 -to 2019-01-14 -t m1 -f json
 ```
 
-![dukascopy-node-cli](https://user-images.githubusercontent.com/12486774/165928641-ae7ea6f7-c5a9-4ab6-b153-c6bef5076433.gif)
+![dukascopy-node](https://user-images.githubusercontent.com/12486774/170841768-e59570a1-d9aa-4655-9a57-8e5e2543a725.gif)
+
 
 <details>
-<summary>CLI full specification</summary>
+<summary>View CLI full specification</summary>
 
 ```
 Usage: dukascopy-node [options]
