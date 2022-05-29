@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { resolve } from 'path';
+import { resolve, join } from 'path';
 import { progressBar } from './progress';
 import { outputFile } from 'fs-extra';
 import { isValid, validationErrors, input } from './config';
@@ -158,7 +158,8 @@ const filePath = resolve(folderPath, fileName);
           ].join('\n')
         );
       } else {
-        printSuccess(`√ File saved: ${chalk.bold(fileName)}`);
+        const relativeFilePath = join(dir, fileName);
+        printSuccess(`√ File saved: ${chalk.bold(relativeFilePath)}`);
       }
     } else {
       printErrors(
