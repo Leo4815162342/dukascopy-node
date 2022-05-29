@@ -20,7 +20,7 @@
 		"lint": "eslint ./src --ext ts --ext js",
 		"gen:meta": "ts-node src/utils/instrument-meta-data/generate-data.ts",
 		"gen:instruments-md": "ts-node src/utils/instrument-meta-data/generate-instrument-md.ts",
-		"release": "standard-version && git push --follow-tags origin master && pnpm build && npm publish"
+		"release": "pnpm build && standard-version && git push --follow-tags origin master && npm publish"
 	},
 	"author": "leonid.pyrlia",
 	"license": "MIT",
