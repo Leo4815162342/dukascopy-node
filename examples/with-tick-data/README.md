@@ -27,6 +27,12 @@ const { getHistoricalRates } = require('dukascopy-node');
 })();
 ```
 
+or via CLI:
+
+```bash
+npx dukascopy-node -i eurusd -from 2021-03-30 -to 2021-03-31 -t tick
+```
+
 Output shape:
 
 ```json
