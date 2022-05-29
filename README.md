@@ -112,7 +112,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 
 |Name|Type|Required|Default|Description|
 |-|-|-|-|-|
-|`instrument`|`String`|true||An id of the trading instrument. Supported values: [see list](#instruments)|
+|`instrument`|`String`|true||An id of the trading instrument. Supported values: [see list](#-instruments)|
 |`dates`|`Object`|true||An object with a date range|
 |`dates.from`|<p>`Date`</p><p>`String`</p><p>`Number`</p>|true||Date representing the start of the time range. Can be of Date type, string (e.g. `2021-03-04` or `2021-03-04T00:00:00.000Z`), or timestamp integer (e.g. `1614816000000`)|
 |`dates.to`|<p>`Date`</p><p>`String`</p><p>`Number`</p>|true||Date representing the end of the time range Can be of Date type, string (e.g. `2021-03-04` or `2021-03-04T00:00:00.000Z`), or timestamp integer (e.g.   `1614816000000`)|
