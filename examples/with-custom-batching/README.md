@@ -26,6 +26,12 @@ const { getHistoricalRates } = require('dukascopy-node');
 })();
 ```
 
+or via CLI:
+
+```bash
+npx dukascopy-node -i eurusd -from 2019-06-01 -to 2019-07-01 -t m1
+```
+
 will generate 30 urls under the hood:
 
 ```javascript
@@ -100,6 +106,12 @@ const { getHistoricalRates } = require('dukascopy-node');
     console.log('error', error);
   }
 })();
+```
+
+or via CLI:
+
+```bash
+npx dukascopy-node -i eurusd -from 2019-06-01 -to 2019-07-01 -t m1 --batch-size 15 --batch-pause 2000
 ```
 
 you can expect the following sequence of steps
