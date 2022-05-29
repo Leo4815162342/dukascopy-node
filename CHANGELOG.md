@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.21.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.20.0...v1.21.0) (2022-05-29)
+
+
+### Features
+
+* **cli:** print relative path to file instead of file name in the success message ([#80](https://github.com/Leo4815162342/dukascopy-node/issues/80)) ([7f6d374](https://github.com/Leo4815162342/dukascopy-node/commit/7f6d374b1554ee404fdddededf6397f0366e3167))
+
 ## [1.20.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.19.3...v1.20.0) (2022-05-27)
 
 
