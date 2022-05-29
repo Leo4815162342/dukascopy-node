@@ -33,6 +33,12 @@ const { getHistoricalRates } = require('dukascopy-node');
 })();
 ```
 
+or via CLI:
+
+```bash
+npx dukascopy-node -i eurusd -from 2021-02-01 -to 2021-03-01 -t d1 -f json --cache
+```
+
 After running, you can see that `dukascopy-node` has created the cache folder called `.dukascopy-cache` and stored the downloaded artifacts there.
 
 ![dukascopy-node default cache folder](https://raw.githubusercontent.com/Leo4815162342/dukascopy-node/master/examples/with-cache/with-cache.png "dukascopy-node default cache folder")
@@ -65,6 +71,12 @@ const { getHistoricalRates } = require('dukascopy-node');
     console.log('error', error);
   }
 })();
+```
+
+or via CLI:
+
+```bash
+npx dukascopy-node -i eurusd -from 2021-02-01 -to 2021-03-01 -t d1 -f json --cache --cache-path my-custom-cache-folder
 ```
 
 ![dukascopy-node custom cache folder](https://github.com/Leo4815162342/dukascopy-node/blob/master/examples/with-cache/with-cache-custom-folder.png?raw=true "dukascopy-node custom cache folder")
