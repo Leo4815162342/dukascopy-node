@@ -42,7 +42,7 @@
 		"btcusd"
 	],
 	"dependencies": {
-		"chalk": "3.0.0",
+		"chalk": "^4.0.0",
 		"cli-progress": "3.10.0",
 		"commander": "5.0.0",
 		"debug": "4.3.4",
