@@ -3,7 +3,7 @@
 <p align="center"><img width="150" src="https://github.com/Leo4815162342/dukascopy-node/blob/master/dukascopy-node.png?raw=true" alt="dukascopy-node"></p>
 
 <p align="center">
-    <b>📥 Download historical market 📈 tick data for 800+ instruments</b> <br>Stocks • Crypto • Commodities • Bonds • Currencies • CFDs • ETFs  <br> via Node.js and CLI
+    <b>✨ Download free historical market price tick data ✨</b> <br>Stocks • Crypto • Commodities • Bonds • Currencies • CFDs • ETFs  <br> via Node.js and CLI
 </p>
 
 <p align="center">
