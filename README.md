@@ -1355,7 +1355,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |PACCAR INC|`pcarususd`|Feb 1, 2018, 2:50:58 PM|Feb 1, 2018, 2:50 PM|Feb 1, 2018, 2 PM|Feb 1, 2018|
 |P G & E CORP|`pcgususd`|Nov 2, 2017, 3:54:09 PM|Nov 2, 2017, 3:54 PM|Nov 2, 2017, 3 PM|Nov 2, 2017|
 |PRICELINE GROUP INC/THE|`pclnususd`|Jan 26, 2017, 2:30:14 PM|Jan 26, 2017, 2:30 PM|Jan 26, 2017, 2 PM|Jan 26, 2017|
-|PAYLOCITY HOLDING CORP|`pctyususd`|Jan 1, 1970, 12:00:00 AM|Jan 1, 1970, 12:00 AM|Jan 1, 1970, 12 AM|Jan 1, 1970|
+|PAYLOCITY HOLDING CORP|`pctyususd`|May 19, 2022, 1:30:08 PM|May 19, 2022, 1:30 PM|May 19, 2022, 1 PM|May 19, 2022|
 |HEALTHPEAK PROPERTIES INC|`peakususd`|Jun 15, 2022, 4:38:56 PM|Jun 15, 2022, 4:38 PM|Jun 15, 2022, 4 PM|Jun 15, 2022|
 |PENN NATIONAL GAMING INC|`pennususd`|May 13, 2022, 1:30:00 PM|May 13, 2022, 1:30 PM|May 13, 2022, 1 PM|May 13, 2022|
 |PEPSICO INC|`pepususd`|Nov 2, 2017, 3:55:51 PM|Nov 2, 2017, 3:55 PM|Nov 2, 2017, 3 PM|Nov 2, 2017|
@@ -1393,7 +1393,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |REGENCY CENTERS CORP|`regususd`|May 13, 2022, 1:30:00 PM|May 13, 2022, 1:30 PM|May 13, 2022, 1 PM|May 13, 2022|
 |REGENERON PHARMACEUTICALS|`regnususd`|Nov 2, 2017, 1:30:00 PM|Nov 2, 2017, 1:30 PM|Nov 2, 2017, 1 PM|Nov 2, 2017|
 |REGIONS FINANCIAL CORP|`rfususd`|Feb 1, 2018, 3:01:00 PM|Feb 1, 2018, 3:00 PM|Feb 1, 2018, 3 PM|Feb 1, 2018|
-|REINSURANCE GROUP OF AMERICA|`rgaususd`|Jan 1, 1970, 12:00:00 AM|Jan 1, 1970, 12:00 AM|Jan 1, 1970, 12 AM|Jan 1, 1970|
+|REINSURANCE GROUP OF AMERICA|`rgaususd`|May 23, 2022, 1:30:05 PM|May 23, 2022, 1:30 PM|May 23, 2022, 1 PM|May 23, 2022|
 |ROYAL GOLD INC|`rgldususd`|May 13, 2022, 1:30:00 PM|May 13, 2022, 1:30 PM|May 13, 2022, 1 PM|May 13, 2022|
 |RAYMOND JAMES FINANCIAL INC|`rjfususd`|May 13, 2022, 1:30:04 PM|May 13, 2022, 1:30 PM|May 13, 2022, 1 PM|May 13, 2022|
 |RESMED INC|`rmdususd`|May 13, 2022, 1:30:03 PM|May 13, 2022, 1:30 PM|May 13, 2022, 1 PM|May 13, 2022|
@@ -1507,7 +1507,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |WABTEC CORP|`wabususd`|May 13, 2022, 1:30:02 PM|May 13, 2022, 1:30 PM|May 13, 2022, 1 PM|May 13, 2022|
 |WESTERN ALLIANCE BANCORP|`walususd`|May 13, 2022, 1:30:02 PM|May 13, 2022, 1:30 PM|May 13, 2022, 1 PM|May 13, 2022|
 |WALGREENS BOOTS ALLIANCE INC|`wbaususd`|Nov 15, 2017, 3:56:02 PM|Nov 15, 2017, 3:56 PM|Nov 15, 2017, 3 PM|Nov 15, 2017|
-|WEBSTER FINANCIAL CORP|`wbsususd`|Jan 1, 1970, 12:00:00 AM|Jan 1, 1970, 12:00 AM|Jan 1, 1970, 12 AM|Jan 1, 1970|
+|WEBSTER FINANCIAL CORP|`wbsususd`|May 16, 2022, 1:30:07 PM|May 16, 2022, 1:30 PM|May 16, 2022, 1 PM|May 16, 2022|
 |WORKDAY INC-CLASS A|`wdayususd`|May 13, 2022, 1:30:00 PM|May 13, 2022, 1:30 PM|May 13, 2022, 1 PM|May 13, 2022|
 |WESTERN DIGITAL CORP|`wdcususd`|Nov 15, 2017, 4:41:01 PM|Nov 15, 2017, 4:40 PM|Nov 15, 2017, 4 PM|Nov 15, 2017|
 |WENDY'S CO/THE|`wenususd`|May 13, 2022, 1:30:02 PM|May 13, 2022, 1:30 PM|May 13, 2022, 1 PM|May 13, 2022|
@@ -1525,7 +1525,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |WEST PHARMACEUTICAL SERVICES|`wstususd`|May 13, 2022, 1:30:02 PM|May 13, 2022, 1:30 PM|May 13, 2022, 1 PM|May 13, 2022|
 |ESSENTIAL UTILITIES INC|`wtrgususd`|May 13, 2022, 1:30:04 PM|May 13, 2022, 1:30 PM|May 13, 2022, 1 PM|May 13, 2022|
 |WILLIS TOWERS WATSON PLC|`wtwususd`|May 13, 2022, 1:30:05 PM|May 13, 2022, 1:30 PM|May 13, 2022, 1 PM|May 13, 2022|
-|WOODWARD INC|`wwdususd`|Jan 1, 1970, 12:00:00 AM|Jan 1, 1970, 12:00 AM|Jan 1, 1970, 12 AM|Jan 1, 1970|
+|WOODWARD INC|`wwdususd`|May 16, 2022, 1:30:00 PM|May 16, 2022, 1:30 PM|May 16, 2022, 1 PM|May 16, 2022|
 |WYNN RESORTS LTD|`wynnususd`|Nov 15, 2017, 4:42:00 PM|Nov 15, 2017, 4:41 PM|Nov 15, 2017, 4 PM|Nov 15, 2017|
 |UNITED STATES STEEL CORP|`xususd`|Nov 15, 2017, 4:45:20 PM|Nov 15, 2017, 4:45 PM|Nov 15, 2017, 4 PM|Nov 15, 2017|
 |XILINX INC|`xlnxususd`|Feb 1, 2018, 3:40:19 PM|Feb 1, 2018, 3:40 PM|Feb 1, 2018, 3 PM|Feb 1, 2018|
