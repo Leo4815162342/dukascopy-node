@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.22.2](https://github.com/Leo4815162342/dukascopy-node/compare/v1.22.1...v1.22.2) (2022-08-18)
+
+
+### Bug Fixes
+
+* **cli:** proper file name when date out of bound ([#89](https://github.com/Leo4815162342/dukascopy-node/issues/89)) ([15d4cdf](https://github.com/Leo4815162342/dukascopy-node/commit/15d4cdf00f1fb867e2ac4d2f9b3658145eb5cff9))
+
 ### [1.22.1](https://github.com/Leo4815162342/dukascopy-node/compare/v1.22.0...v1.22.1) (2022-08-09)
 
 
