@@ -49,14 +49,6 @@ if (isDebugActive) {
   }
 }
 
-const fileName = `${instrument}-${timeframe}${
-  timeframe === 'tick' ? '' : '-' + priceType
-}-${fromDate.toISOString().slice(0, 10)}-${toDate.toISOString().slice(0, 10)}.${
-  format === Format.csv ? Format.csv : Format.json
-}`;
-const folderPath = resolve(process.cwd(), dir);
-const filePath = resolve(folderPath, fileName);
-
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 (async () => {
   try {
@@ -75,6 +67,14 @@ const filePath = resolve(folderPath, fileName);
         timeframe,
         utcOffset
       });
+
+      const fileName = `${instrument}-${timeframe}${
+        timeframe === 'tick' ? '' : '-' + priceType
+      }-${startDate.toISOString().slice(0, 10)}-${endDate.toISOString().slice(0, 10)}.${
+        format === Format.csv ? Format.csv : Format.json
+      }`;
+      const folderPath = resolve(process.cwd(), dir);
+      const filePath = resolve(folderPath, fileName);
 
       if (!isDebugActive) {
         silent ? printDivider() : printHeader(input, startDate, endDate);
