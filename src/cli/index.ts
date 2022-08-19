@@ -159,7 +159,9 @@ if (isDebugActive) {
         );
       } else {
         const relativeFilePath = join(dir, fileName);
-        printSuccess(`√ File saved: ${chalk.bold(relativeFilePath)}`);
+        printSuccess(
+          `√ File saved: ${chalk.bold(relativeFilePath)} (${formatBytes(savePayload.length)})`
+        );
       }
     } else {
       printErrors(
