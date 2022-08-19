@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.23.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.22.2...v1.23.0) (2022-08-19)
+
+
+### Features
+
+* **cli:** display size of output file ([#90](https://github.com/Leo4815162342/dukascopy-node/issues/90)) ([32aab61](https://github.com/Leo4815162342/dukascopy-node/commit/32aab61676dca00350a9f0cb546ad841e2cf0d57))
+
 ### [1.22.2](https://github.com/Leo4815162342/dukascopy-node/compare/v1.22.1...v1.22.2) (2022-08-18)
 
 
