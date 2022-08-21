@@ -43,7 +43,8 @@
 npx dukascopy-node -i btcusd -from 2019-01-01 -to 2019-01-14 -t m1 -f json
 ```
 
-![dukascopy-node](https://user-images.githubusercontent.com/12486774/170841768-e59570a1-d9aa-4655-9a57-8e5e2543a725.gif)
+![dukascopy-node-1080p](https://user-images.githubusercontent.com/12486774/185784690-c592a707-b6bc-4adb-82cf-527737e9278a.gif)
+
 
 
 <details>
