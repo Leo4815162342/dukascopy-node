@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.24.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.23.0...v1.24.0) (2022-08-21)
+
+
+### Features
+
+* **cli:** human readable output for instrument and dates ([#91](https://github.com/Leo4815162342/dukascopy-node/issues/91)) ([4473a6f](https://github.com/Leo4815162342/dukascopy-node/commit/4473a6f26cd66d47a95770c022f0827e74d10d0c))
+
 ## [1.23.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.22.2...v1.23.0) (2022-08-19)
 
 
