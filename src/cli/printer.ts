@@ -1,3 +1,5 @@
+import { instrumentMetaData } from '../config/instruments-metadata';
+import { getDateTimeFormatOptions, getFormattedDate } from '../utils/date';
 import { CliConfig } from './config';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const chalk = require('chalk');
@@ -21,13 +23,21 @@ export function printHeader(
   const { instrument, timeframe, priceType, utcOffset, volumes, ignoreFlats, format } =
     searchConfig;
 
+  const dateTimeFormatOptions = getDateTimeFormatOptions(timeframe!);
+
   printDivider();
   log(chalk.whiteBright('Downloading historical price data for:'));
   printDivider();
-  log('Instrument:    ', chalk.bold(chalk.yellow(instrument)));
+  log('Instrument:    ', chalk.bold(chalk.yellow(instrumentMetaData[instrument].description)));
   log('Timeframe:     ', chalk.bold(chalk.yellow(timeframe)));
-  log('From date:     ', chalk.bold(chalk.yellow(adjustedStartDate.toISOString())));
-  log('To date:       ', chalk.bold(chalk.yellow(adjustedEndDate.toISOString())));
+  log(
+    'From date:     ',
+    chalk.bold(chalk.yellow(getFormattedDate(adjustedStartDate, dateTimeFormatOptions)))
+  );
+  log(
+    'To date:       ',
+    chalk.bold(chalk.yellow(getFormattedDate(adjustedEndDate, dateTimeFormatOptions)))
+  );
   log('Price type:    ', chalk.bold(chalk.yellow(priceType)));
   log('Volumes:       ', chalk.bold(chalk.yellow(volumes)));
   log('UTC Offset:    ', chalk.bold(chalk.yellow(utcOffset)));
