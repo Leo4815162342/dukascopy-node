@@ -19,6 +19,7 @@ import debug from 'debug';
 import { Output } from '../output-formatter/types';
 import { Timeframe } from '../config/timeframes';
 import { version } from '../../package.json';
+import { getDateString } from '../utils/date';
 
 const DEBUG_NAMESPACE = 'dukascopy-node:cli';
 
@@ -70,7 +71,7 @@ if (isDebugActive) {
 
       const fileName = `${instrument}-${timeframe}${
         timeframe === 'tick' ? '' : '-' + priceType
-      }-${startDate.toISOString().slice(0, 10)}-${endDate.toISOString().slice(0, 10)}.${
+      }-${getDateString(startDate)}-${getDateString(endDate)}.${
         format === Format.csv ? Format.csv : Format.json
       }`;
       const folderPath = resolve(process.cwd(), dir);

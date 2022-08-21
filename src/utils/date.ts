@@ -1,3 +1,4 @@
+import { TimeframeType } from '../config/timeframes';
 import { TimeRange } from './range';
 
 function getYMDH(date: Date): number[] {
@@ -70,6 +71,8 @@ function getFormattedDate(
 ): string {
   const date = typeof input === 'string' || typeof input === 'number' ? new Date(input) : input;
 
+  let formatted = date.toISOString();
+
   const opts: Intl.DateTimeFormatOptions = {
     ...{
       year: 'numeric',
@@ -80,9 +83,42 @@ function getFormattedDate(
     ...(options || {})
   };
 
-  const formatted = new Intl.DateTimeFormat('en-US', opts).format(date);
+  try {
+    formatted = new Intl.DateTimeFormat('en-US', opts).format(date);
+    // eslint-disable-next-line no-empty
+  } catch (err) {}
 
   return formatted;
 }
 
-export { getYMDH, getStartOfUtc, getIsCurrentObj, getDateFromUrl, getFormattedDate };
+function getDateString(date: Date): string {
+  return date.toISOString().slice(0, 10);
+}
+
+function getDateTimeFormatOptions(timeframe: TimeframeType): Intl.DateTimeFormatOptions {
+  if (timeframe === 'tick') {
+    return {
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric'
+    };
+  }
+  if (timeframe === 'm1' || timeframe === 'm5' || timeframe === 'm15' || timeframe === 'm30') {
+    return { hour: 'numeric', minute: 'numeric' };
+  }
+  if (timeframe === 'h1' || timeframe === 'h4') {
+    return { hour: 'numeric' };
+  }
+
+  return {};
+}
+
+export {
+  getYMDH,
+  getStartOfUtc,
+  getIsCurrentObj,
+  getDateFromUrl,
+  getFormattedDate,
+  getDateString,
+  getDateTimeFormatOptions
+};
