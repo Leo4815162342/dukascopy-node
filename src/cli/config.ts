@@ -31,7 +31,12 @@ program
   .option('-ch, --cache', 'Use cache', false)
   .option('-chpath, --cache-path <value>', 'Folder path for cache data', './.dukascopy-cache')
   .option('-r, --retries <value>', 'Number of retries for a failed artifact download', Number, 0)
-  .option('-rp, --retry-pause <value>', 'Pause between retries in milliseconds', Number, 500);
+  .option('-rp, --retry-pause <value>', 'Pause between retries in milliseconds', Number, 500)
+  .option(
+    '-in, --inline',
+    'Makes files smaller in size by removing new lines in the output (works only with json and array formats)',
+    false
+  );
 
 program.parse(process.argv);
 
@@ -47,6 +52,7 @@ export interface CliConfig extends Config {
   dir: string;
   silent: boolean;
   debug: boolean;
+  inline: boolean;
 }
 
 const cliConfig: CliConfig = {
@@ -69,7 +75,8 @@ const cliConfig: CliConfig = {
   cacheFolderPath: options.cachePath,
   retryCount: options.retries,
   pauseBetweenRetriesMs: options.retryPause,
-  debug: options.debug
+  debug: options.debug,
+  inline: options.inline
 };
 
 const cliSchema: InputSchema<CliConfig> = {
@@ -77,7 +84,8 @@ const cliSchema: InputSchema<CliConfig> = {
   ...{
     dir: { type: 'string', required: true } as RuleString,
     silent: { type: 'boolean', required: false } as RuleBoolean,
-    debug: { type: 'boolean', required: false } as RuleBoolean
+    debug: { type: 'boolean', required: false } as RuleBoolean,
+    inline: { type: 'boolean', required: false } as RuleBoolean
   }
 };
 
