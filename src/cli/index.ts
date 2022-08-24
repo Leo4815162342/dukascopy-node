@@ -38,7 +38,8 @@ let {
   cacheFolderPath,
   dir,
   silent,
-  debug: isDebugActive
+  debug: isDebugActive,
+  inline
 } = input;
 
 if (isDebugActive) {
@@ -137,7 +138,8 @@ if (isDebugActive) {
 
         const formatted = formatOutput({ processedData: filteredData, timeframe, format });
 
-        savePayload = format === 'csv' ? formatted : JSON.stringify(formatted, null, 2);
+        savePayload =
+          format === 'csv' ? formatted : JSON.stringify(formatted, null, inline ? undefined : 2);
       } else {
         savePayload = format === 'csv' ? '' : JSON.stringify([]);
       }

@@ -72,6 +72,7 @@ Options:
   -chpath, --cache-path <value>  Folder path for cache data (default: "./.dukascopy-cache")
   -r, --retries <value>          Number of retries for a failed artifact download (default: 0)
   -rp, --retry-pause <value>     Pause between retries in milliseconds (default: 500)
+  -in, --inline                  Makes files smaller in size by removing new lines in the output (default: false)
   -h, --help                     display help for command
 ```
 </details>
