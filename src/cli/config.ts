@@ -34,7 +34,7 @@ program
   .option('-rp, --retry-pause <value>', 'Pause between retries in milliseconds', Number, 500)
   .option(
     '-in, --inline',
-    'Makes files smaller in size by removing new lines in the output',
+    'Makes files smaller in size by removing new lines in the output (works only with json and array formats)',
     false
   );
 
