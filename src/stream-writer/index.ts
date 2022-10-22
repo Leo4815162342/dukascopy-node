@@ -39,7 +39,7 @@ export async function writeStream(
         const jsonObjectBody = item.map((val, i) => `"${existingBodyHeaders[i]}":${val}`).join(',');
         body += `{${jsonObjectBody}}`;
       } else {
-        const arrayBody = item.map(val => val).join(',');
+        const arrayBody = item.join(',');
         body += `[${arrayBody}]`;
       }
 
