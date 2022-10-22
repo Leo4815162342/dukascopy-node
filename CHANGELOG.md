@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.26.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.25.0...v1.26.0) (2022-10-22)
+
+
+### Features
+
+* **cli:** save file via writable stream ([#97](https://github.com/Leo4815162342/dukascopy-node/issues/97)) ([3039543](https://github.com/Leo4815162342/dukascopy-node/commit/3039543f2ba3ec5bd5ceca282df43e234db8cdbf))
+
 ## [1.25.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.24.0...v1.25.0) (2022-08-24)
 
 
