@@ -2,24 +2,23 @@
 
 import { resolve, join } from 'path';
 import { progressBar } from './progress';
-import { outputFile } from 'fs-extra';
+import { ensureDir, stat } from 'fs-extra';
 import { isValid, validationErrors, input } from './config';
 import { normaliseDates } from '../dates-normaliser';
 import { generateUrls } from '../url-generator';
-import { printDivider, printHeader, printSuccess, printErrors, printWarning } from './printer';
+import { printDivider, printHeader, printSuccess, printErrors } from './printer';
 import { Format } from '../config/format';
 import { BufferFetcher } from '../buffer-fetcher';
 import { CacheManager } from '../cache-manager';
 import { processData } from '../processor';
-import { formatOutput } from '../output-formatter';
 import { formatBytes } from '../utils/formatBytes';
 import chalk from 'chalk';
 import debug from 'debug';
 
-import { Output } from '../output-formatter/types';
 import { Timeframe } from '../config/timeframes';
 import { version } from '../../package.json';
 import { getDateString } from '../utils/date';
+import { writeStream } from '../stream-writer';
 
 const DEBUG_NAMESPACE = 'dukascopy-node:cli';
 
@@ -112,8 +111,6 @@ if (isDebugActive) {
 
       const bufferredData = await bufferFetcher.fetch(urls);
 
-      let savePayload: Output;
-
       if (bufferredData.length) {
         const processedData = processData({
           instrument,
@@ -136,36 +133,18 @@ if (isDebugActive) {
           }`
         );
 
-        const formatted = formatOutput({ processedData: filteredData, timeframe, format });
+        await ensureDir(folderPath);
 
-        savePayload =
-          format === 'csv' ? formatted : JSON.stringify(formatted, null, inline ? undefined : 2);
-      } else {
-        savePayload = format === 'csv' ? '' : JSON.stringify([]);
+        await writeStream(filteredData, timeframe, format, filePath, inline);
       }
-
-      const isEmpty = savePayload === '' || savePayload === '[]' || savePayload.length === 0;
-
-      await outputFile(filePath, savePayload);
 
       if (!isDebugActive) {
         progressBar.stop();
       }
 
-      if (isEmpty) {
-        printWarning(
-          [
-            '⚠ Response for your config is currently empty.',
-            'Try again later when data is available.',
-            'see https://github.com/Leo4815162342/dukascopy-node/wiki/Information-on-empty-responses'
-          ].join('\n')
-        );
-      } else {
-        const relativeFilePath = join(dir, fileName);
-        printSuccess(
-          `√ File saved: ${chalk.bold(relativeFilePath)} (${formatBytes(savePayload.length)})`
-        );
-      }
+      const relativeFilePath = join(dir, fileName);
+      const { size } = await stat(filePath);
+      printSuccess(`√ File saved: ${chalk.bold(relativeFilePath)} (${formatBytes(size)})`);
     } else {
       printErrors(
         'Search config invalid:',
