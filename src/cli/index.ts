@@ -2,7 +2,7 @@
 
 import { resolve, join } from 'path';
 import { progressBar } from './progress';
-import { ensureDir, stat } from 'fs-extra';
+import { ensureDir, ensureFile, stat } from 'fs-extra';
 import { isValid, validationErrors, input } from './config';
 import { normaliseDates } from '../dates-normaliser';
 import { generateUrls } from '../url-generator';
@@ -143,6 +143,7 @@ if (isDebugActive) {
       }
 
       const relativeFilePath = join(dir, fileName);
+      await ensureFile(filePath);
       const { size } = await stat(filePath);
       printSuccess(`√ File saved: ${chalk.bold(relativeFilePath)} (${formatBytes(size)})`);
     } else {
