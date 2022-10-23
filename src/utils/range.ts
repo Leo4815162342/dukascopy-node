@@ -16,7 +16,8 @@ const rangeInferMap: RangeInferMap = {
   m15: ['day', 'hour'],
   m5: ['day', 'hour'],
   m1: ['day', 'hour'],
-  tick: ['hour']
+  tick: ['hour'],
+  s1: ['hour']
 };
 
 function getLowerRange(range: TimeRange): TimeRange {

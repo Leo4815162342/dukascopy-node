@@ -168,6 +168,26 @@ function getMinuteOHLCfromTicks(
   return ohlc;
 }
 
+function getSecondOHLCfromTicks(
+  ticks: number[][],
+  priceType: PriceType,
+  startTs: number,
+  volumes: boolean
+): number[][] {
+  const ticksBySecond = breakdownByInterval(
+    ticks,
+    3600,
+    d => d.getUTCMinutes() * 60 + d.getUTCSeconds()
+  );
+  const ohlc = ticksBySecond.map((data, i) =>
+    data.length > 0
+      ? ticksToOHLC({ ticks: data, priceType, startTs: startTs + i * 1000, volumes })
+      : []
+  );
+
+  return ohlc;
+}
+
 function getMonthlyOHLCfromDays(dailyCandles: number[][], volumes: boolean): number[][] {
   const breakdown = breakdownByInterval(dailyCandles, 12, d => d.getUTCMonth());
   const ohlc = breakdown.map(data => (data.length > 0 ? getOHLC({ input: data, volumes }) : []));
@@ -179,6 +199,7 @@ export {
   getOHLC,
   ticksToOHLC,
   breakdownByInterval,
+  getSecondOHLCfromTicks,
   getMinuteOHLCfromTicks,
   getMonthlyOHLCfromDays
 };
