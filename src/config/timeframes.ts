@@ -4,6 +4,10 @@ export enum Timeframe {
    */
   tick = 'tick',
   /**
+   *  secondly `(1 second)` aggregation of OHLC price data
+   */
+  s1 = 's1',
+  /**
    *  minutely `(1 minute)` aggregation of OHLC price data
    */
   m1 = 'm1',

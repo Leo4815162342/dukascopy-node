@@ -28,6 +28,7 @@ export function normaliseDates({
     startYearForDailyCandles
   } = instrumentMetaData[instrument];
 
+  // start for tick and second timeframes
   let minFromIsoDate = startHourForTicks;
 
   if (

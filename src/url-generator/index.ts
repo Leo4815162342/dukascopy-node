@@ -75,7 +75,9 @@ function getDateLimit(startDate: Date, endDate: Date, timeframe: TimeframeType):
 
   if (
     timeframe === Timeframe.tick ||
+    timeframe === Timeframe.s1 ||
     timeframe === Timeframe.m1 ||
+    timeframe === Timeframe.m5 ||
     timeframe === Timeframe.m15 ||
     timeframe === Timeframe.m30
   ) {
