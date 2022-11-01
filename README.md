@@ -159,7 +159,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 ```
 ***
 
-## 📂 Instruments
+## Instruments
 
 * [Bonds 📊 (3)](#bnd_cfd)
 * [Crypto assets ₿ (18)](#vccy)
@@ -173,9 +173,10 @@ const { getHistoricalRates } = require('dukascopy-node');
 * [Forex currencies 💱 (52)](#fx_crosses)
 * [Forex major currencies 💶 (7)](#fx_majors)
 * [Forex metals 🥇 (2)](#fx_metals)
-* [America 🌎 (5)](#idx_america)
+* [America 🌎 (6)](#idx_america)
 * [Asia 🌏 (6)](#idx_asia)
-* [Europe 🌍 (8)](#idx_europe)
+* [Europe 🇪🇺 (8)](#idx_europe)
+* [Africa 🌍 (1)](#idx_africa)
 * [Austria 🇦🇹 (3)](#austria)
 * [Belgium 🇧🇪 (7)](#belgium)
 * [Denmark 🇩🇰 (8)](#denmark)
@@ -192,7 +193,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 * [Spain 🇪🇸 (24)](#spain)
 * [Sweden 🇸🇪 (20)](#sweden)
 * [Switzerland 🇨🇭 (28)](#switzerland)
-* [United Kingdom 🇬🇧 (103)](#uk)
+* [United Kingdom 🇬🇧 (102)](#uk)
 * [United States 🇺🇸 (608)](#us)
 <hr>
 <h3 id="bnd_cfd">Bonds 📊</h3>
@@ -398,6 +399,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |USA 100 Technical Index|`usatechidxusd`|Jan 1, 2013, 5:44:03 AM|Sep 19, 2011, 1:30 PM|Sep 18, 2011, 9 PM|Nov 7, 1990|
 |USA 500 Index|`usa500idxusd`|Jan 16, 2012, 12:00:07 AM|Sep 19, 2011, 6:31 AM|Sep 18, 2011, 9 PM|Jan 2, 1980|
 |US Small Cap 2000|`ussc2000idxusd`|Aug 8, 2018, 1:30:05 PM|Aug 8, 2018, 1:30 PM|Aug 8, 2018, 1 PM|Aug 8, 2018|
+|Volatility Index|`volidxusd`|Oct 5, 2022, 1:16:58 PM|Oct 5, 2022, 1:16 PM|Oct 5, 2022, 1 PM|Oct 5, 2022|
 <h3 id="idx_asia">Asia 🌏</h3>
 
 |Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
@@ -408,7 +410,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Australia 200 Index|`ausidxaud`|Jun 1, 2014, 11:50:09 PM|Jun 1, 2014, 11:50 PM|Jun 1, 2014, 11 PM|Jun 1, 2014|
 |India 50 Index|`indidxusd`|Dec 1, 2017, 2:36:15 AM|Dec 1, 2017, 2:36 AM|Dec 1, 2017, 2 AM|Dec 1, 2017|
 |Singapore Blue Chip Cash Index|`sgdidxsgd`|Dec 1, 2017, 12:58:48 AM|Dec 1, 2017, 12:58 AM|Dec 1, 2017, 12 AM|Dec 1, 2017|
-<h3 id="idx_europe">Europe 🌍</h3>
+<h3 id="idx_europe">Europe 🇪🇺</h3>
 
 |Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
 |-|-|-|-|-|-|
@@ -420,6 +422,11 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Switzerland 20 Index|`cheidxchf`|Jan 3, 2013, 8:02:00 AM|Sep 19, 2011, 7:02 AM|Sep 19, 2011, 7 AM|Jan 3, 1992|
 |Netherlands 25 Index|`nldidxeur`|Dec 1, 2017, 8:00:23 AM|Dec 1, 2017, 8:00 AM|Dec 1, 2017, 8 AM|Dec 1, 2017|
 |Poland 20 Index|`plnidxpln`|Dec 1, 2017, 7:45:00 AM|Dec 1, 2017, 7:45 AM|Dec 1, 2017, 7 AM|Dec 1, 2017|
+<h3 id="idx_africa">Africa 🌍</h3>
+
+|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|-|-|-|-|-|-|
+|South Africa 40 Index|`soaidxzar`|Oct 5, 2022, 1:16:58 PM|Oct 5, 2022, 1:16 PM|Oct 5, 2022, 1 PM|Oct 5, 2022|
 <h3 id="austria">Austria 🇦🇹</h3>
 
 |Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
@@ -837,7 +844,6 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Ashtead Group PLC|`ahtgbgbx`|Sep 6, 2016, 7:00:06 AM|Sep 6, 2016, 7:00 AM|Jan 4, 2011, 8 AM|Jan 4, 2011|
 |Antofagasta PLC|`antogbgbx`|Sep 6, 2016, 7:00:11 AM|Sep 6, 2016, 7:00 AM|Jan 4, 2011, 8 AM|Jan 4, 2011|
 |Aviva PLC|`avgbgbx`|Sep 6, 2016, 7:00:10 AM|Sep 6, 2016, 7:00 AM|Jan 4, 2011, 8 AM|Jan 4, 2011|
-|AVAST PLC|`avstgbgbx`|May 11, 2022, 2:29:28 PM|May 11, 2022, 2:29 PM|May 11, 2022, 2 PM|May 11, 2022|
 |AVEVA GROUP PLC|`avvgbgbx`|May 11, 2022, 2:29:34 PM|May 11, 2022, 2:29 PM|May 11, 2022, 2 PM|May 11, 2022|
 |AstraZeneca PLC|`azngbgbx`|Sep 6, 2016, 7:00:22 AM|Sep 6, 2016, 7:00 AM|Jan 4, 2011, 8 AM|Jan 4, 2011|
 |BAE Systems PLC|`bagbgbx`|Sep 6, 2016, 7:00:02 AM|Sep 6, 2016, 7:00 AM|Jan 4, 2011, 8 AM|Jan 4, 2011|
@@ -955,7 +961,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |AUTOMATIC DATA PROCESSING|`adpususd`|Nov 2, 2017, 1:30:00 PM|Nov 2, 2017, 1:30 PM|Nov 2, 2017, 1 PM|Nov 2, 2017|
 |AUTODESK INC|`adskususd`|Jan 30, 2018, 4:19:51 PM|Jan 30, 2018, 4:19 PM|Jan 30, 2018, 4 PM|Jan 30, 2018|
 |AMERICAN ELECTRIC POWER|`aepususd`|Sep 26, 2016, 2:30:34 PM|Sep 26, 2016, 2:30 PM|Sep 26, 2016, 2 PM|Sep 26, 2016|
-|AMERICAN FINANCIAL GROUP INC|`afgususd`|May 12, 2022, 1:30:08 PM|May 12, 2022, 1:30 PM|May 12, 2022, 1 PM|May 12, 2022|
+|AMERICAN FINANCIAL GROUP INC|`afgususd`|Aug 22, 2022, 3:47:58 PM|Aug 22, 2022, 3:47 PM|Aug 22, 2022, 3 PM|Aug 22, 2022|
 |AGNC INVESTMENT CORP|`agncususd`|May 12, 2022, 1:30:03 PM|May 12, 2022, 1:30 PM|May 12, 2022, 1 PM|May 12, 2022|
 |AMERICAN INTERNATIONAL GROUP|`aigususd`|May 11, 2017, 1:30:33 PM|May 11, 2017, 1:30 PM|May 11, 2017, 1 PM|May 11, 2017|
 |ARTHUR J GALLAGHER & CO|`ajgususd`|May 12, 2022, 1:30:02 PM|May 12, 2022, 1:30 PM|May 12, 2022, 1 PM|May 12, 2022|
