@@ -212,7 +212,8 @@
       "usa30idxusd",
       "usatechidxusd",
       "usa500idxusd",
-      "ussc2000idxusd"
+      "ussc2000idxusd",
+      "volidxusd"
     ]
   },
   {
@@ -237,6 +238,12 @@
       "cheidxchf",
       "nldidxeur",
       "plnidxpln"
+    ]
+  },
+  {
+    "id": "idx_africa",
+    "instruments": [
+      "soaidxzar"
     ]
   },
   {
@@ -671,7 +678,6 @@
       "ahtgbgbx",
       "antogbgbx",
       "avgbgbx",
-      "avstgbgbx",
       "avvgbgbx",
       "azngbgbx",
       "bagbgbx",

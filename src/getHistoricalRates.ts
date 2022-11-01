@@ -139,3 +139,14 @@ export async function getHistoricalRates(config: Config): Promise<Output> {
  * @see https://github.com/Leo4815162342/dukascopy-node/pull/73
  */
 export const getHistoricRates = getHistoricalRates;
+
+const options: Intl.DateTimeFormatOptions = {
+  year: 'numeric',
+  month: 'numeric',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric',
+  hour12: false
+};
+new Intl.DateTimeFormat('uk', options).format(new Date());

@@ -1123,12 +1123,6 @@ export enum Instrument {
     avlrususd='avlrususd',
 
     /**
-     * ### AVAST PLC
-     * *AVST.GB/GBX*
-     */
-    avstgbgbx='avstgbgbx',
-
-    /**
      * ### AVANTOR INC
      * *AVTR.US/USD*
      */
@@ -5905,6 +5899,12 @@ export enum Instrument {
     soususd='soususd',
 
     /**
+     * ### South Africa 40 Index
+     * *SOA.IDX/ZAR*
+     */
+    soaidxzar='soaidxzar',
+
+    /**
      * ### Solvay SA
      * *SOLB.BE/EUR*
      */
@@ -6875,6 +6875,12 @@ export enum Instrument {
      * *VOE.AT/EUR*
      */
     voeateur='voeateur',
+
+    /**
+     * ### Volatility Index
+     * *VOL.IDX/USD*
+     */
+    volidxusd='volidxusd',
 
     /**
      * ### Volvo AB
