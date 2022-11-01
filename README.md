@@ -159,7 +159,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 ```
 ***
 
-## Instruments
+## 📂 Instruments
 
 * [Bonds 📊 (3)](#bnd_cfd)
 * [Crypto assets ₿ (18)](#vccy)
