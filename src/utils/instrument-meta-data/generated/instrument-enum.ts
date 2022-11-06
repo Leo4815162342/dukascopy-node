@@ -1300,7 +1300,7 @@ export enum Instrument {
      * ### Banco Del Bajio SA
      * *BBAJIOO.MX/MXN*
      */
-    bbajioo.mx/mxn='bbajioo.mx/mxn',
+    bbajioomxmxn='bbajioomxmxn',
 
     /**
      * ### Banco Bradesco S.A.
@@ -1786,7 +1786,7 @@ export enum Instrument {
      * ### Cemex Sab de CV
      * *CEMEXCPO.MX/MXN*
      */
-    cemexcpo.mx/mxn='cemexcpo.mx/mxn',
+    cemexcpomxmxn='cemexcpomxmxn',
 
     /**
      * ### CERNER CORP
