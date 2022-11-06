@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.29.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.28.0...v1.29.0) (2022-11-06)
+
+
+### Features
+
+* new instruments for Mexico ([#102](https://github.com/Leo4815162342/dukascopy-node/issues/102)) ([8ca6147](https://github.com/Leo4815162342/dukascopy-node/commit/8ca6147787f4dfe4caf80f8a44e72721601efde5))
+
+
+### Bug Fixes
+
+* date formatting for readme ([5a93430](https://github.com/Leo4815162342/dukascopy-node/commit/5a9343020dbc8b466919a98b757c32d06ba49f8e))
+
 ## [1.28.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.27.0...v1.28.0) (2022-11-01)
 
 
