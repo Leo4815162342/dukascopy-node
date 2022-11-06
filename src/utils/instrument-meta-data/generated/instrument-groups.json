@@ -542,6 +542,40 @@
     ]
   },
   {
+    "id": "mexico",
+    "instruments": [
+      "alfaamxmxn",
+      "alseamxmxn",
+      "amxlmxmxn",
+      "arcamxmxn",
+      "asurbmxmxn",
+      "bbajioo.mx/mxn",
+      "bolsaamxmxn",
+      "cemexcpo.mx/mxn",
+      "elektramxmxn",
+      "femsaubdmxmxn",
+      "gapbmxmxn",
+      "gcarsoa1mxmxn",
+      "gccmxmxn",
+      "gfnorteomxmxn",
+      "gmexicobmxmxn",
+      "grumabmxmxn",
+      "kimberamxmxn",
+      "kofublmxmxn",
+      "labbmxmxn",
+      "livepolc1mxmxn",
+      "megacpomxmxn",
+      "omabmxmxn",
+      "orbiamxmxn",
+      "peolesmxmxn",
+      "pinframxmxn",
+      "qmxmxn",
+      "ramxmxn",
+      "volaramxmxn",
+      "walmexmxmxn"
+    ]
+  },
+  {
     "id": "netherlands",
     "instruments": [
       "agnnleur",

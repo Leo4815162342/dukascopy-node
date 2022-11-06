@@ -187,6 +187,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 * [Ireland 🇮🇪 (5)](#ireland)
 * [Italy 🇮🇹 (48)](#italy)
 * [Japan 🇯🇵 (55)](#japan)
+* [Mexico 🇲🇽 (29)](#mexico)
 * [Netherlands 🇳🇱 (17)](#netherlands)
 * [Norway 🇳🇴 (6)](#norway)
 * [Portugal 🇵🇹 (2)](#portugal)
@@ -712,6 +713,39 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Tokyo Electric Power Company|`9501jpjpy`|Sep 21, 2018, 12:00:00 AM|Sep 21, 2018, 12:00 AM|Sep 21, 2018, 12 AM|Sep 21, 2018|
 |Fast Retailing|`9983jpjpy`|Sep 21, 2018, 12:00:00 AM|Sep 21, 2018, 12:00 AM|Sep 21, 2018, 12 AM|Sep 21, 2018|
 |Softbank Group Corp|`9984jpjpy`|Sep 21, 2018, 12:00:00 AM|Sep 26, 2018, 12:00 AM|Sep 26, 2018, 12 AM|Sep 26, 2018|
+<h3 id="mexico">Mexico 🇲🇽</h3>
+
+|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|-|-|-|-|-|-|
+|Alfa SA B A|`alfaamxmxn`|Oct 13, 2022, 1:30:00 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Alsea SAB de CV|`alseamxmxn`|Oct 13, 2022, 1:30:34 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|America Movil SAB de C SERL|`amxlmxmxn`|Oct 13, 2022, 1:30:03 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Arca Continental SAB de CV|`arcamxmxn`|Oct 13, 2022, 1:38:08 PM|Oct 13, 2022, 1:38 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Grupo Aeroportuario del Sureste|`asurbmxmxn`|Oct 13, 2022, 1:30:05 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Banco Del Bajio SA|`bbajioo.mx/mxn`|Oct 13, 2022, 1:32:09 PM|Oct 13, 2022, 1:32 PM|Oct 13, 2022, 1 PM|Jan 1, 1970|
+|Bolsa Mexicana de Valores SAB de CV|`bolsaamxmxn`|Oct 13, 2022, 1:30:27 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Cemex Sab de CV|`cemexcpo.mx/mxn`|Oct 13, 2022, 1:30:03 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Jan 1, 1970|
+|Grupo Elektra SAB DE CV|`elektramxmxn`|Oct 13, 2022, 1:30:00 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Fomento Economico Mexica UBD|`femsaubdmxmxn`|Oct 13, 2022, 1:30:05 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Grupo Aeroportuario del Pacific Sab CV|`gapbmxmxn`|Oct 13, 2022, 1:30:03 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Grupo Carso Sab De CV|`gcarsoa1mxmxn`|Oct 13, 2022, 1:35:30 PM|Oct 13, 2022, 1:35 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Grupo Cementos de Chihuahua|`gccmxmxn`|Oct 13, 2022, 1:37:51 PM|Oct 13, 2022, 1:37 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Grupo Financiero Banorte O|`gfnorteomxmxn`|Oct 13, 2022, 1:30:03 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Grupo Mexico SAB DE CV SER B|`gmexicobmxmxn`|Oct 13, 2022, 1:30:03 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Gruma SA BB|`grumabmxmxn`|Oct 13, 2022, 1:30:34 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Kimberly Clark DE Mexico A|`kimberamxmxn`|Oct 13, 2022, 1:30:19 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Coca Cola Femsa Sab|`kofublmxmxn`|Oct 13, 2022, 1:30:31 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Genomma Lab Internacional SAB de CV|`labbmxmxn`|Oct 13, 2022, 1:30:04 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|El Puerto de Liverpool|`livepolc1mxmxn`|Oct 13, 2022, 1:37:51 PM|Oct 13, 2022, 1:37 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Megacable Holdings SAB de CV|`megacpomxmxn`|Oct 13, 2022, 1:30:07 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Grupo Aeroportuario del Centro Norte|`omabmxmxn`|Oct 13, 2022, 1:30:05 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Orbia Advance Corp SAB DE CV|`orbiamxmxn`|Oct 13, 2022, 1:30:53 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Industrias Penoles SAB DE CV|`peolesmxmxn`|Oct 13, 2022, 1:30:25 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Promotora Y Operadora DE INF|`pinframxmxn`|Oct 13, 2022, 1:30:05 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Qualitas Controladora SAB|`qmxmxn`|Oct 13, 2022, 1:30:03 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Regional Sab De CV|`ramxmxn`|Oct 13, 2022, 1:30:00 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Controladora Vuela Comp de Aviacion|`volaramxmxn`|Oct 13, 2022, 1:30:04 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
+|Walmart De Mexico SAB|`walmexmxmxn`|Oct 13, 2022, 1:31:25 PM|Oct 13, 2022, 1:31 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
 <h3 id="netherlands">Netherlands 🇳🇱</h3>
 
 |Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|

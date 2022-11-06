@@ -37,6 +37,7 @@ const titleMap: Record<string, { emoji: string; title: string }> = {
   germany: { emoji: '🇩🇪', title: 'Germany' },
   italy: { emoji: '🇮🇹', title: 'Italy' },
   ireland: { emoji: '🇮🇪', title: 'Ireland' },
+  mexico: { emoji: '🇲🇽', title: 'Mexico' },
   netherlands: { emoji: '🇳🇱', title: 'Netherlands' },
   norway: { emoji: '🇳🇴', title: 'Norway' },
   portugal: { emoji: '🇵🇹', title: 'Portugal' },

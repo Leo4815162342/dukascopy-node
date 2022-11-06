@@ -1214,6 +1214,15 @@
     "startMonthForHourlyCandles": "2011-01-03T08:00:00.000Z",
     "startYearForDailyCandles": "2011-01-03T00:00:00.000Z"
   },
+  "alfaamxmxn": {
+    "name": "ALFAA.MX/MXN",
+    "description": "Alfa SA B A",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:00.748Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
+  },
   "algnususd": {
     "name": "ALGN.US/USD",
     "description": "ALIGN TECHNOLOGY INC",
@@ -1285,6 +1294,15 @@
     "startDayForMinuteCandles": "2016-09-27T07:53:00.000Z",
     "startMonthForHourlyCandles": "2011-01-03T08:00:00.000Z",
     "startYearForDailyCandles": "2011-01-03T00:00:00.000Z"
+  },
+  "alseamxmxn": {
+    "name": "ALSEA.MX/MXN",
+    "description": "Alsea SAB de CV",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:34.774Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
   },
   "alvdeeur": {
     "name": "ALV.DE/EUR",
@@ -1394,6 +1412,15 @@
     "startMonthForHourlyCandles": "2020-10-01T14:00:00.000Z",
     "startYearForDailyCandles": "2020-10-01T00:00:00.000Z"
   },
+  "amxlmxmxn": {
+    "name": "AMXL.MX/MXN",
+    "description": "America Movil SAB de C SERL",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:03.763Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
+  },
   "amznususd": {
     "name": "AMZN.US/USD",
     "description": "AMAZON.COM INC",
@@ -1502,6 +1529,15 @@
     "startMonthForHourlyCandles": "2022-05-12T13:00:00.000Z",
     "startYearForDailyCandles": "2022-05-12T00:00:00.000Z"
   },
+  "arcamxmxn": {
+    "name": "ARCA.MX/MXN",
+    "description": "Arca Continental SAB de CV",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:38:08.865Z",
+    "startDayForMinuteCandles": "2022-10-13T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
+  },
   "areususd": {
     "name": "ARE.US/USD",
     "description": "ALEXANDRIA REAL ESTATE EQUIT",
@@ -1537,6 +1573,15 @@
     "startDayForMinuteCandles": "2016-11-14T11:24:00.000Z",
     "startMonthForHourlyCandles": "2011-01-03T08:00:00.000Z",
     "startYearForDailyCandles": "2011-01-03T00:00:00.000Z"
+  },
+  "asurbmxmxn": {
+    "name": "ASURB.MX/MXN",
+    "description": "Grupo Aeroportuario del Sureste",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:05.250Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
   },
   "atcoasesek": {
     "name": "ATCOA.SE/SEK",
@@ -1898,6 +1943,15 @@
     "startMonthForHourlyCandles": "2011-01-03T08:00:00.000Z",
     "startYearForDailyCandles": "2011-01-03T00:00:00.000Z"
   },
+  "bbajioo.mx/mxn": {
+    "name": "BBAJIOO.MX/MXN",
+    "description": "Banco Del Bajio SA",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:32:09.893Z",
+    "startDayForMinuteCandles": "2022-10-13T13:32:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "1970-01-01T00:00:00.000Z"
+  },
   "bbdususd": {
     "name": "BBD.US/USD",
     "description": "Banco Bradesco S.A.",
@@ -2167,6 +2221,15 @@
     "startDayForMinuteCandles": "2016-09-06T07:00:00.000Z",
     "startMonthForHourlyCandles": "2011-01-04T08:00:00.000Z",
     "startYearForDailyCandles": "2011-01-04T00:00:00.000Z"
+  },
+  "bolsaamxmxn": {
+    "name": "BOLSAA.MX/MXN",
+    "description": "Bolsa Mexicana de Valores SAB de CV",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:27.771Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
   },
   "bossdeeur": {
     "name": "BOSS.DE/EUR",
@@ -2608,6 +2671,15 @@
     "startDayForMinuteCandles": "2022-05-12T13:30:00.000Z",
     "startMonthForHourlyCandles": "2022-05-12T13:00:00.000Z",
     "startYearForDailyCandles": "2022-05-12T00:00:00.000Z"
+  },
+  "cemexcpo.mx/mxn": {
+    "name": "CEMEXCPO.MX/MXN",
+    "description": "Cemex Sab de CV",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:03.761Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "1970-01-01T00:00:00.000Z"
   },
   "cernususd": {
     "name": "CERN.US/USD",
@@ -3770,6 +3842,15 @@
     "startMonthForHourlyCandles": "2011-01-03T08:00:00.000Z",
     "startYearForDailyCandles": "2011-01-03T00:00:00.000Z"
   },
+  "elektramxmxn": {
+    "name": "ELEKTRA.MX/MXN",
+    "description": "Grupo Elektra SAB DE CV",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:00.249Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
+  },
   "eli1vfieur": {
     "name": "ELI1V.FI/EUR",
     "description": "Elisa OYJ",
@@ -4517,6 +4598,15 @@
     "startMonthForHourlyCandles": "2018-02-01T14:00:00.000Z",
     "startYearForDailyCandles": "2018-02-01T00:00:00.000Z"
   },
+  "femsaubdmxmxn": {
+    "name": "FEMSAUBD.MX/MXN",
+    "description": "Fomento Economico Mexica UBD",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:05.250Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
+  },
   "fereseur": {
     "name": "FER.ES/EUR",
     "description": "Ferrovial SA",
@@ -4724,6 +4814,15 @@
     "startMonthForHourlyCandles": "2011-01-03T08:00:00.000Z",
     "startYearForDailyCandles": "2011-01-03T00:00:00.000Z"
   },
+  "gapbmxmxn": {
+    "name": "GAPB.MX/MXN",
+    "description": "Grupo Aeroportuario del Pacific Sab CV",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:03.761Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
+  },
   "gascmdusd": {
     "name": "GAS.CMD/USD",
     "description": "Natural Gas",
@@ -4796,6 +4895,24 @@
     "startMonthForHourlyCandles": "2003-05-04T20:00:00.000Z",
     "startYearForDailyCandles": "1986-02-10T00:00:00.000Z"
   },
+  "gcarsoa1mxmxn": {
+    "name": "GCARSOA1.MX/MXN",
+    "description": "Grupo Carso Sab De CV",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:35:30.156Z",
+    "startDayForMinuteCandles": "2022-10-13T13:35:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
+  },
+  "gccmxmxn": {
+    "name": "GCC.MX/MXN",
+    "description": "Grupo Cementos de Chihuahua",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:37:51.824Z",
+    "startDayForMinuteCandles": "2022-10-13T13:37:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
+  },
   "gdususd": {
     "name": "GD.US/USD",
     "description": "GENERAL DYNAMICS CORP",
@@ -4849,6 +4966,15 @@
     "startDayForMinuteCandles": "2016-11-07T08:01:00.000Z",
     "startMonthForHourlyCandles": "2011-01-03T08:00:00.000Z",
     "startYearForDailyCandles": "2011-01-03T00:00:00.000Z"
+  },
+  "gfnorteomxmxn": {
+    "name": "GFNORTEO.MX/MXN",
+    "description": "Grupo Financiero Banorte O",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:03.761Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
   },
   "gfsgbgbx": {
     "name": "GFS.GB/GBX",
@@ -4967,6 +5093,15 @@
     "startMonthForHourlyCandles": "2017-11-02T14:00:00.000Z",
     "startYearForDailyCandles": "2017-11-02T00:00:00.000Z"
   },
+  "gmexicobmxmxn": {
+    "name": "GMEXICOB.MX/MXN",
+    "description": "Grupo Mexico SAB DE CV SER B",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:03.379Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
+  },
   "gnrcususd": {
     "name": "GNRC.US/USD",
     "description": "GENERAC HOLDINGS INC",
@@ -5020,6 +5155,15 @@
     "startDayForMinuteCandles": "2022-05-11T14:29:00.000Z",
     "startMonthForHourlyCandles": "2022-05-11T14:00:00.000Z",
     "startYearForDailyCandles": "2022-05-11T00:00:00.000Z"
+  },
+  "grumabmxmxn": {
+    "name": "GRUMAB.MX/MXN",
+    "description": "Gruma SA BB",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:34.774Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
   },
   "gsususd": {
     "name": "GS.US/USD",
@@ -5912,6 +6056,15 @@
     "startMonthForHourlyCandles": "2017-05-11T13:00:00.000Z",
     "startYearForDailyCandles": "2017-05-11T00:00:00.000Z"
   },
+  "kimberamxmxn": {
+    "name": "KIMBERA.MX/MXN",
+    "description": "Kimberly Clark DE Mexico A",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:19.758Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
+  },
   "kmbususd": {
     "name": "KMB.US/USD",
     "description": "KIMBERLY-CLARK CORP",
@@ -5965,6 +6118,15 @@
     "startDayForMinuteCandles": "2017-01-26T14:30:00.000Z",
     "startMonthForHourlyCandles": "2017-01-26T14:00:00.000Z",
     "startYearForDailyCandles": "2017-01-26T00:00:00.000Z"
+  },
+  "kofublmxmxn": {
+    "name": "KOFUBL.MX/MXN",
+    "description": "Coca Cola Femsa Sab",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:31.277Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
   },
   "kpnnleur": {
     "name": "KPN.NL/EUR",
@@ -6028,6 +6190,15 @@
     "startDayForMinuteCandles": "2017-05-11T13:30:00.000Z",
     "startMonthForHourlyCandles": "2017-05-11T13:00:00.000Z",
     "startYearForDailyCandles": "2017-05-11T00:00:00.000Z"
+  },
+  "labbmxmxn": {
+    "name": "LABB.MX/MXN",
+    "description": "Genomma Lab Internacional SAB de CV",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:04.265Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
   },
   "lamrususd": {
     "name": "LAMR.US/USD",
@@ -6145,6 +6316,15 @@
     "startDayForMinuteCandles": "2022-06-14T10:45:00.000Z",
     "startMonthForHourlyCandles": "2022-06-14T10:00:00.000Z",
     "startYearForDailyCandles": "2022-06-14T00:00:00.000Z"
+  },
+  "livepolc1mxmxn": {
+    "name": "LIVEPOLC1.MX/MXN",
+    "description": "El Puerto de Liverpool",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:37:51.826Z",
+    "startDayForMinuteCandles": "2022-10-13T13:37:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
   },
   "lkqususd": {
     "name": "LKQ.US/USD",
@@ -6568,6 +6748,15 @@
     "startDayForMinuteCandles": "2022-05-13T13:30:00.000Z",
     "startMonthForHourlyCandles": "2022-05-13T13:00:00.000Z",
     "startYearForDailyCandles": "2022-05-13T00:00:00.000Z"
+  },
+  "megacpomxmxn": {
+    "name": "MEGACPO.MX/MXN",
+    "description": "Megacable Holdings SAB de CV",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:07.751Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
   },
   "metususd": {
     "name": "MET.US/USD",
@@ -7388,6 +7577,15 @@
     "startMonthForHourlyCandles": "2022-05-13T13:00:00.000Z",
     "startYearForDailyCandles": "2022-05-13T00:00:00.000Z"
   },
+  "omabmxmxn": {
+    "name": "OMAB.MX/MXN",
+    "description": "Grupo Aeroportuario del Centro Norte",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:05.249Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
+  },
   "omcususd": {
     "name": "OMC.US/USD",
     "description": "OMNICOM GROUP",
@@ -7432,6 +7630,15 @@
     "startDayForMinuteCandles": "2016-08-05T15:00:00.000Z",
     "startMonthForHourlyCandles": "2013-07-01T07:00:00.000Z",
     "startYearForDailyCandles": "2013-07-01T00:00:00.000Z"
+  },
+  "orbiamxmxn": {
+    "name": "ORBIA.MX/MXN",
+    "description": "Orbia Advance Corp SAB DE CV",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:53.800Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
   },
   "orclususd": {
     "name": "ORCL.US/USD",
@@ -7613,6 +7820,15 @@
     "startMonthForHourlyCandles": "2022-05-13T13:00:00.000Z",
     "startYearForDailyCandles": "2022-05-13T00:00:00.000Z"
   },
+  "peolesmxmxn": {
+    "name": "PEOLES.MX/MXN",
+    "description": "Industrias Penoles SAB DE CV",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:25.767Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
+  },
   "pepususd": {
     "name": "PEP.US/USD",
     "description": "PEPSICO INC",
@@ -7702,6 +7918,15 @@
     "startDayForMinuteCandles": "2022-05-13T13:30:00.000Z",
     "startMonthForHourlyCandles": "2022-05-13T13:00:00.000Z",
     "startYearForDailyCandles": "2022-05-13T00:00:00.000Z"
+  },
+  "pinframxmxn": {
+    "name": "PINFRA.MX/MXN",
+    "description": "Promotora Y Operadora DE INF",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:05.250Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
   },
   "pkgususd": {
     "name": "PKG.US/USD",
@@ -7982,6 +8207,15 @@
     "startMonthForHourlyCandles": "2017-11-02T16:00:00.000Z",
     "startYearForDailyCandles": "2017-11-02T00:00:00.000Z"
   },
+  "qmxmxn": {
+    "name": "Q.MX/MXN",
+    "description": "Qualitas Controladora SAB",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:03.761Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
+  },
   "qcomususd": {
     "name": "QCOM.US/USD",
     "description": "QUALCOMM INC",
@@ -8017,6 +8251,15 @@
     "startDayForMinuteCandles": "2022-05-13T13:30:00.000Z",
     "startMonthForHourlyCandles": "2022-05-13T13:00:00.000Z",
     "startYearForDailyCandles": "2022-05-13T00:00:00.000Z"
+  },
+  "ramxmxn": {
+    "name": "RA.MX/MXN",
+    "description": "Regional Sab De CV",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:00.752Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
   },
   "raceiteur": {
     "name": "RACE.IT/EUR",
@@ -10322,6 +10565,15 @@
     "startMonthForHourlyCandles": "2022-10-05T13:00:00.000Z",
     "startYearForDailyCandles": "2022-10-05T00:00:00.000Z"
   },
+  "volaramxmxn": {
+    "name": "VOLARA.MX/MXN",
+    "description": "Controladora Vuela Comp de Aviacion",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:30:04.265Z",
+    "startDayForMinuteCandles": "2022-10-13T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
+  },
   "volvbsesek": {
     "name": "VOLVB.SE/SEK",
     "description": "Volvo AB",
@@ -10438,6 +10690,15 @@
     "startDayForMinuteCandles": "2022-05-13T13:30:00.000Z",
     "startMonthForHourlyCandles": "2022-05-13T13:00:00.000Z",
     "startYearForDailyCandles": "2022-05-13T00:00:00.000Z"
+  },
+  "walmexmxmxn": {
+    "name": "WALMEX.MX/MXN",
+    "description": "Walmart De Mexico SAB",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2022-10-13T13:31:25.342Z",
+    "startDayForMinuteCandles": "2022-10-13T13:31:00.000Z",
+    "startMonthForHourlyCandles": "2022-10-13T13:00:00.000Z",
+    "startYearForDailyCandles": "2022-10-13T00:00:00.000Z"
   },
   "wbaususd": {
     "name": "WBA.US/USD",
