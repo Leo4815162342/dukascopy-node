@@ -722,9 +722,9 @@ const { getHistoricalRates } = require('dukascopy-node');
 |America Movil SAB de C SERL|`amxlmxmxn`|Oct 13, 2022, 1:30:03 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
 |Arca Continental SAB de CV|`arcamxmxn`|Oct 13, 2022, 1:38:08 PM|Oct 13, 2022, 1:38 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
 |Grupo Aeroportuario del Sureste|`asurbmxmxn`|Oct 13, 2022, 1:30:05 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
-|Banco Del Bajio SA|`bbajioo.mx/mxn`|Oct 13, 2022, 1:32:09 PM|Oct 13, 2022, 1:32 PM|Oct 13, 2022, 1 PM|Jan 1, 1970|
+|Banco Del Bajio SA|`bbajioomxmxn`|Oct 13, 2022, 1:32:09 PM|Oct 13, 2022, 1:32 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
 |Bolsa Mexicana de Valores SAB de CV|`bolsaamxmxn`|Oct 13, 2022, 1:30:27 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
-|Cemex Sab de CV|`cemexcpo.mx/mxn`|Oct 13, 2022, 1:30:03 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Jan 1, 1970|
+|Cemex Sab de CV|`cemexcpomxmxn`|Oct 13, 2022, 1:30:03 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
 |Grupo Elektra SAB DE CV|`elektramxmxn`|Oct 13, 2022, 1:30:00 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
 |Fomento Economico Mexica UBD|`femsaubdmxmxn`|Oct 13, 2022, 1:30:05 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
 |Grupo Aeroportuario del Pacific Sab CV|`gapbmxmxn`|Oct 13, 2022, 1:30:03 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
@@ -1091,7 +1091,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |CADENCE DESIGN SYS INC|`cdnsususd`|May 12, 2022, 1:30:03 PM|May 12, 2022, 1:29 PM|May 12, 2022, 1 PM|May 12, 2022|
 |CDW CORP/DE|`cdwususd`|May 12, 2022, 1:30:03 PM|May 12, 2022, 1:29 PM|May 12, 2022, 1 PM|May 12, 2022|
 |CELANESE CORP|`ceususd`|May 12, 2022, 1:30:03 PM|May 12, 2022, 1:30 PM|May 12, 2022, 1 PM|May 12, 2022|
-|CERNER CORP|`cernususd`|May 18, 2018, 1:30:00 PM|May 18, 2018, 1:30 PM|May 18, 2018, 1 PM|Jan 1, 1970|
+|CERNER CORP|`cernususd`|May 18, 2018, 1:30:00 PM|May 18, 2018, 1:30 PM|May 18, 2018, 1 PM|N/A|
 |CF INDUSTRIES HOLDINGS INC|`cfususd`|Jan 31, 2018, 4:49:59 PM|Jan 31, 2018, 4:49 PM|Jan 31, 2018, 4 PM|Jan 31, 2018|
 |CITIZENS FINANCIAL GROUP|`cfgususd`|May 12, 2022, 1:30:02 PM|May 12, 2022, 1:29 PM|May 12, 2022, 1 PM|May 12, 2022|
 |CULLEN/FROST BANKERS INC|`cfrususd`|May 12, 2022, 1:30:05 PM|May 12, 2022, 1:30 PM|May 12, 2022, 1 PM|May 12, 2022|
@@ -1106,7 +1106,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |CHIPOTLE MEXICAN GRILL INC|`cmgususd`|May 11, 2017, 1:30:05 PM|May 11, 2017, 1:30 PM|May 11, 2017, 1 PM|May 11, 2017|
 |CUMMINS INC|`cmiususd`|Feb 1, 2018, 2:34:59 PM|Feb 1, 2018, 2:34 PM|Feb 1, 2018, 2 PM|Feb 1, 2018|
 |CENTENE CORP|`cncususd`|May 12, 2022, 1:30:07 PM|May 12, 2022, 1:30 PM|May 12, 2022, 1 PM|May 12, 2022|
-|CAPITAL ONE FINANCIAL CORP|`cofususd`|May 18, 2018, 1:30:02 PM|May 18, 2018, 1:30 PM|May 18, 2018, 1 PM|Jan 1, 1970|
+|CAPITAL ONE FINANCIAL CORP|`cofususd`|May 18, 2018, 1:30:02 PM|May 18, 2018, 1:30 PM|May 18, 2018, 1 PM|N/A|
 |COHERENT INC|`cohrususd`|May 13, 2022, 1:30:10 PM|May 13, 2022, 1:30 PM|May 13, 2022, 1 PM|May 13, 2022|
 |AMERICOLD REALTY TRUST|`coldususd`|May 12, 2022, 7:59:58 PM|May 12, 2022, 7:59 PM|May 12, 2022, 7 PM|May 12, 2022|
 |COOPER COS INC/THE|`cooususd`|May 12, 2022, 1:30:08 PM|May 12, 2022, 1:29 PM|May 12, 2022, 1 PM|May 12, 2022|
@@ -1127,7 +1127,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |CATALENT INC|`ctltususd`|May 12, 2022, 1:30:06 PM|May 12, 2022, 1:29 PM|May 12, 2022, 1 PM|May 12, 2022|
 |COGNIZANT TECH SOLUTIONS-A|`ctshususd`|Nov 2, 2017, 1:30:00 PM|Nov 2, 2017, 1:30 PM|Nov 2, 2017, 1 PM|Nov 2, 2017|
 |CORTEVA INC|`ctvaususd`|May 12, 2022, 1:30:06 PM|May 12, 2022, 1:30 PM|May 12, 2022, 1 PM|May 12, 2022|
-|CITRIX SYSTEMS INC|`ctxsususd`|May 18, 2018, 1:30:00 PM|May 18, 2018, 1:30 PM|May 18, 2018, 1 PM|Jan 1, 1970|
+|CITRIX SYSTEMS INC|`ctxsususd`|May 18, 2018, 1:30:00 PM|May 18, 2018, 1:30 PM|May 18, 2018, 1 PM|N/A|
 |CUBESMART|`cubeususd`|May 12, 2022, 1:30:07 PM|May 12, 2022, 1:30 PM|May 12, 2022, 1 PM|May 12, 2022|
 |CARVANA CO|`cvnaususd`|May 12, 2022, 1:30:11 PM|May 12, 2022, 1:30 PM|May 12, 2022, 1 PM|May 12, 2022|
 |CVS HEALTH CORP|`cvsususd`|Nov 2, 2017, 2:04:03 PM|Nov 2, 2017, 2:04 PM|Nov 2, 2017, 2 PM|Nov 2, 2017|

@@ -69,6 +69,10 @@ function getFormattedDate(
   input: Date | string | number,
   options?: Intl.DateTimeFormatOptions
 ): string {
+  if (!input || input === '0' || input === '1970-01-01T00:00:00.000Z') {
+    return 'N/A';
+  }
+
   const date = typeof input === 'string' || typeof input === 'number' ? new Date(input) : input;
 
   let formatted = date.toISOString();
