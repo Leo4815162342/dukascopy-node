@@ -811,6 +811,12 @@ export enum Instrument {
     alfasesek='alfasesek',
 
     /**
+     * ### Alfa SA B A
+     * *ALFAA.MX/MXN*
+     */
+    alfaamxmxn='alfaamxmxn',
+
+    /**
      * ### ALIGN TECHNOLOGY INC
      * *ALGN.US/USD*
      */
@@ -857,6 +863,12 @@ export enum Instrument {
      * *ALO.FR/EUR*
      */
     alofreur='alofreur',
+
+    /**
+     * ### Alsea SAB de CV
+     * *ALSEA.MX/MXN*
+     */
+    alseamxmxn='alseamxmxn',
 
     /**
      * ### Allianz SE
@@ -931,6 +943,12 @@ export enum Instrument {
     amwlususd='amwlususd',
 
     /**
+     * ### America Movil SAB de C SERL
+     * *AMXL.MX/MXN*
+     */
+    amxlmxmxn='amxlmxmxn',
+
+    /**
      * ### AMAZON.COM INC
      * *AMZN.US/USD*
      */
@@ -1003,6 +1021,12 @@ export enum Instrument {
     arususd='arususd',
 
     /**
+     * ### Arca Continental SAB de CV
+     * *ARCA.MX/MXN*
+     */
+    arcamxmxn='arcamxmxn',
+
+    /**
      * ### ALEXANDRIA REAL ESTATE EQUIT
      * *ARE.US/USD*
      */
@@ -1025,6 +1049,12 @@ export enum Instrument {
      * *ASML.NL/EUR*
      */
     asmlnleur='asmlnleur',
+
+    /**
+     * ### Grupo Aeroportuario del Sureste
+     * *ASURB.MX/MXN*
+     */
+    asurbmxmxn='asurbmxmxn',
 
     /**
      * ### Atlas Copco AB
@@ -1267,6 +1297,12 @@ export enum Instrument {
     bayndeeur='bayndeeur',
 
     /**
+     * ### Banco Del Bajio SA
+     * *BBAJIOO.MX/MXN*
+     */
+    bbajioomxmxn='bbajioomxmxn',
+
+    /**
      * ### Banco Bradesco S.A.
      * *BBD.US/USD*
      */
@@ -1445,6 +1481,12 @@ export enum Instrument {
      * *BNZL.GB/GBX*
      */
     bnzlgbgbx='bnzlgbgbx',
+
+    /**
+     * ### Bolsa Mexicana de Valores SAB de CV
+     * *BOLSAA.MX/MXN*
+     */
+    bolsaamxmxn='bolsaamxmxn',
 
     /**
      * ### HUGO BOSS AG
@@ -1739,6 +1781,12 @@ export enum Instrument {
      * *CE.US/USD*
      */
     ceususd='ceususd',
+
+    /**
+     * ### Cemex Sab de CV
+     * *CEMEXCPO.MX/MXN*
+     */
+    cemexcpomxmxn='cemexcpomxmxn',
 
     /**
      * ### CERNER CORP
@@ -2515,6 +2563,12 @@ export enum Instrument {
     eleeseur='eleeseur',
 
     /**
+     * ### Grupo Elektra SAB DE CV
+     * *ELEKTRA.MX/MXN*
+     */
+    elektramxmxn='elektramxmxn',
+
+    /**
      * ### Elisa OYJ
      * *ELI1V.FI/EUR*
      */
@@ -3013,6 +3067,12 @@ export enum Instrument {
     feususd='feususd',
 
     /**
+     * ### Fomento Economico Mexica UBD
+     * *FEMSAUBD.MX/MXN*
+     */
+    femsaubdmxmxn='femsaubdmxmxn',
+
+    /**
      * ### Ferrovial SA
      * *FER.ES/EUR*
      */
@@ -3151,6 +3211,12 @@ export enum Instrument {
     gameseur='gameseur',
 
     /**
+     * ### Grupo Aeroportuario del Pacific Sab CV
+     * *GAPB.MX/MXN*
+     */
+    gapbmxmxn='gapbmxmxn',
+
+    /**
      * ### Natural Gas
      * *GAS.CMD/USD*
      */
@@ -3199,6 +3265,18 @@ export enum Instrument {
     gbpusd='gbpusd',
 
     /**
+     * ### Grupo Carso Sab De CV
+     * *GCARSOA1.MX/MXN*
+     */
+    gcarsoa1mxmxn='gcarsoa1mxmxn',
+
+    /**
+     * ### Grupo Cementos de Chihuahua
+     * *GCC.MX/MXN*
+     */
+    gccmxmxn='gccmxmxn',
+
+    /**
      * ### GENERAL DYNAMICS CORP
      * *GD.US/USD*
      */
@@ -3233,6 +3311,12 @@ export enum Instrument {
      * *GETIB.SE/SEK*
      */
     getibsesek='getibsesek',
+
+    /**
+     * ### Grupo Financiero Banorte O
+     * *GFNORTEO.MX/MXN*
+     */
+    gfnorteomxmxn='gfnorteomxmxn',
 
     /**
      * ### G4S PLC
@@ -3313,6 +3397,12 @@ export enum Instrument {
     gmususd='gmususd',
 
     /**
+     * ### Grupo Mexico SAB DE CV SER B
+     * *GMEXICOB.MX/MXN*
+     */
+    gmexicobmxmxn='gmexicobmxmxn',
+
+    /**
      * ### GENERAC HOLDINGS INC
      * *GNRC.US/USD*
      */
@@ -3347,6 +3437,12 @@ export enum Instrument {
      * *GRF.ES/EUR*
      */
     grfeseur='grfeseur',
+
+    /**
+     * ### Gruma SA BB
+     * *GRUMAB.MX/MXN*
+     */
+    grumabmxmxn='grumabmxmxn',
 
     /**
      * ### GOLDMAN SACHS GROUP INC
@@ -3943,6 +4039,12 @@ export enum Instrument {
     khcususd='khcususd',
 
     /**
+     * ### Kimberly Clark DE Mexico A
+     * *KIMBERA.MX/MXN*
+     */
+    kimberamxmxn='kimberamxmxn',
+
+    /**
      * ### KIMBERLY-CLARK CORP
      * *KMB.US/USD*
      */
@@ -3977,6 +4079,12 @@ export enum Instrument {
      * *KO.US/USD*
      */
     koususd='koususd',
+
+    /**
+     * ### Coca Cola Femsa Sab
+     * *KOFUBL.MX/MXN*
+     */
+    kofublmxmxn='kofublmxmxn',
 
     /**
      * ### Koninklijke KPN NV
@@ -4019,6 +4127,12 @@ export enum Instrument {
      * *L.US/USD*
      */
     lususd='lususd',
+
+    /**
+     * ### Genomma Lab Internacional SAB de CV
+     * *LABB.MX/MXN*
+     */
+    labbmxmxn='labbmxmxn',
 
     /**
      * ### LAMAR ADVERTISING CO-A
@@ -4097,6 +4211,12 @@ export enum Instrument {
      * *LISP.CH/CHF*
      */
     lispchchf='lispchchf',
+
+    /**
+     * ### El Puerto de Liverpool
+     * *LIVEPOLC1.MX/MXN*
+     */
+    livepolc1mxmxn='livepolc1mxmxn',
 
     /**
      * ### LKQ CORP
@@ -4379,6 +4499,12 @@ export enum Instrument {
      * *MDT.US/USD*
      */
     mdtususd='mdtususd',
+
+    /**
+     * ### Megacable Holdings SAB de CV
+     * *MEGACPO.MX/MXN*
+     */
+    megacpomxmxn='megacpomxmxn',
 
     /**
      * ### METLIFE INC
@@ -4927,6 +5053,12 @@ export enum Instrument {
     olnususd='olnususd',
 
     /**
+     * ### Grupo Aeroportuario del Centro Norte
+     * *OMAB.MX/MXN*
+     */
+    omabmxmxn='omabmxmxn',
+
+    /**
      * ### OMNICOM GROUP
      * *OMC.US/USD*
      */
@@ -4955,6 +5087,12 @@ export enum Instrument {
      * *ORA.FR/EUR*
      */
     orafreur='orafreur',
+
+    /**
+     * ### Orbia Advance Corp SAB DE CV
+     * *ORBIA.MX/MXN*
+     */
+    orbiamxmxn='orbiamxmxn',
 
     /**
      * ### ORACLE CORP
@@ -5077,6 +5215,12 @@ export enum Instrument {
     pennususd='pennususd',
 
     /**
+     * ### Industrias Penoles SAB DE CV
+     * *PEOLES.MX/MXN*
+     */
+    peolesmxmxn='peolesmxmxn',
+
+    /**
      * ### PEPSICO INC
      * *PEP.US/USD*
      */
@@ -5135,6 +5279,12 @@ export enum Instrument {
      * *PII.US/USD*
      */
     piiususd='piiususd',
+
+    /**
+     * ### Promotora Y Operadora DE INF
+     * *PINFRA.MX/MXN*
+     */
+    pinframxmxn='pinframxmxn',
 
     /**
      * ### PACKAGING CORP OF AMERICA
@@ -5323,6 +5473,12 @@ export enum Instrument {
     pyplususd='pyplususd',
 
     /**
+     * ### Qualitas Controladora SAB
+     * *Q.MX/MXN*
+     */
+    qmxmxn='qmxmxn',
+
+    /**
      * ### QUALCOMM INC
      * *QCOM.US/USD*
      */
@@ -5345,6 +5501,12 @@ export enum Instrument {
      * *QRVO.US/USD*
      */
     qrvoususd='qrvoususd',
+
+    /**
+     * ### Regional Sab De CV
+     * *RA.MX/MXN*
+     */
+    ramxmxn='ramxmxn',
 
     /**
      * ### Ferrari NV
@@ -6883,6 +7045,12 @@ export enum Instrument {
     volidxusd='volidxusd',
 
     /**
+     * ### Controladora Vuela Comp de Aviacion
+     * *VOLARA.MX/MXN*
+     */
+    volaramxmxn='volaramxmxn',
+
+    /**
      * ### Volvo AB
      * *VOLVB.SE/SEK*
      */
@@ -6959,6 +7127,12 @@ export enum Instrument {
      * *WAL.US/USD*
      */
     walususd='walususd',
+
+    /**
+     * ### Walmart De Mexico SAB
+     * *WALMEX.MX/MXN*
+     */
+    walmexmxmxn='walmexmxmxn',
 
     /**
      * ### WALGREENS BOOTS ALLIANCE INC
