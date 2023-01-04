@@ -54,7 +54,7 @@ if (isDebugActive) {
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 (async () => {
   try {
-    debug(`${DEBUG_NAMESPACE}:version`)(`${version} `);
+    debug(`${DEBUG_NAMESPACE}:version`)(version);
     debug(`${DEBUG_NAMESPACE}:nodejs`)(process.version);
     debug(`${DEBUG_NAMESPACE}:os`)(`${os.type()}, ${os.release()} (${os.platform()})`);
     debug(`${DEBUG_NAMESPACE}:config`)('%O', {
