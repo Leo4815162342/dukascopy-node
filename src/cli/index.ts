@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { resolve, join } from 'path';
+import os from 'os';
 import { progressBar } from './progress';
 import { ensureDir, ensureFile, stat } from 'fs-extra';
 import { isValid, validationErrors, input } from './config';
@@ -53,7 +54,9 @@ if (isDebugActive) {
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 (async () => {
   try {
-    debug(`${DEBUG_NAMESPACE}:version`)(`${version} (node ${process.version})`);
+    debug(`${DEBUG_NAMESPACE}:version`)(`${version} `);
+    debug(`${DEBUG_NAMESPACE}:nodejs`)(process.version);
+    debug(`${DEBUG_NAMESPACE}:os`)(`${os.type()}, ${os.release()} (${os.platform()})`);
     debug(`${DEBUG_NAMESPACE}:config`)('%O', {
       input,
       isValid,
