@@ -40,11 +40,10 @@
 ## ✨ Usage via CLI
 
 ```bash
-npx dukascopy-node -i btcusd -from 2019-01-01 -to 2019-01-14 -t m1 -f json
+npx dukascopy-node -i btcusd -from 2019-01-13 -to 2019-01-14 -t tick -f csv
 ```
 
-![dukascopy-node-1080p](https://user-images.githubusercontent.com/12486774/185784690-c592a707-b6bc-4adb-82cf-527737e9278a.gif)
-
+![dukascopy-node-1080p](https://user-images.githubusercontent.com/12486774/210557823-63ba12f1-ab77-42ae-ad27-6c199b0c1fdb.gif)
 
 
 <details>
@@ -87,10 +86,10 @@ const { getHistoricalRates } = require('dukascopy-node');
     const data = await getHistoricalRates({
       instrument: 'btcusd',
       dates: {
-        from: new Date('2018-01-01'),
-        to: new Date('2019-01-01')
+        from: new Date('2019-01-13'),
+        to: new Date('2019-01-14')
       },
-      timeframe: 'd1',
+      timeframe: 'tick',
       format: 'json'
     });
 
