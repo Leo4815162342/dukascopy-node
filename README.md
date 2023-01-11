@@ -198,14 +198,14 @@ const { getHistoricalRates } = require('dukascopy-node');
 <hr>
 <h3 id="bnd_cfd">Bonds 📊</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |Euro Bund|`bundtreur`|May 2, 2016, 6:01:02 AM|May 2, 2016, 6:01 AM|May 2, 2016, 6 AM|May 2, 2016|
 |UK Long Gilt|`ukgilttrgbp`|Dec 28, 2017, 4:18:15 PM|Dec 28, 2017, 4:18 PM|Dec 28, 2017, 4 PM|Dec 26, 2017|
 |US T-Bond|`ustbondtrusd`|Dec 18, 2018, 8:02:08 PM|Jan 21, 2019, 12:00 AM|Jan 21, 2019, 12 AM|Dec 18, 2018|
 <h3 id="vccy">Crypto assets ₿</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |Cardano vs US Dollar|`adausd`|Jan 1, 2000, 12:00:00 AM|Sep 25, 2021, 5:32 PM|Sep 25, 2021, 5 PM|Sep 25, 2021|
 |Aave vs US Dollar|`aveusd`|Jan 1, 2000, 12:00:00 AM|Oct 1, 2021, 12:00 AM|Oct 1, 2021, 12 AM|Sep 15, 2021|
@@ -227,7 +227,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Yearn.finance vs US Dollar|`yfiusd`|Jan 1, 2000, 12:00:00 AM|Sep 25, 2021, 5:59 PM|Sep 25, 2021, 5 PM|Sep 25, 2021|
 <h3 id="cmd_agricultural">Agricultural commodities ☕</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |NY Cocoa|`cocoacmdusd`|Oct 20, 2017, 8:45:00 AM|Oct 20, 2017, 8:45 AM|Oct 20, 2017, 8 AM|Oct 20, 2017|
 |Coffee Arabica|`coffeecmdusx`|Dec 4, 2017, 9:15:00 AM|Dec 4, 2017, 9:15 AM|Dec 4, 2017, 10 AM|Dec 4, 2017|
@@ -237,7 +237,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |London Sugar No.5|`sugarcmdusd`|Oct 2, 2017, 7:45:00 AM|Oct 2, 2017, 7:45 AM|Oct 2, 2017, 8 AM|Oct 2, 2017|
 <h3 id="cmd_energy">Energy commodities ⚡</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |Gas oil|`dieselcmdusd`|Dec 26, 2017, 1:00:00 AM|Dec 26, 2017, 1:00 AM|Dec 26, 2017, 1 AM|Dec 26, 2017|
 |US Brent Crude Oil|`brentcmdusd`|Dec 2, 2010, 1:00:33 AM|Dec 2, 2010, 1:00 AM|Dec 2, 2010, 1 AM|Nov 17, 2006|
@@ -245,26 +245,26 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Natural Gas|`gascmdusd`|Sep 2, 2012, 10:02:33 PM|Sep 2, 2012, 10:02 PM|Sep 2, 2012, 10 PM|Sep 2, 2012|
 <h3 id="cmd_metals">Metals commodities ⚙️</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |High Grade Copper|`coppercmdusd`|Mar 2, 2012, 12:00:07 AM|Mar 2, 2012, 12:00 AM|Mar 2, 2012, 12 AM|Mar 2, 2012|
 |Palladium|`xpdcmdusd`|Jul 4, 2021, 10:00:00 PM|Jul 4, 2021, 10:00 PM|Jul 4, 2021, 10 PM|Jul 4, 2021|
 |Platinum|`xptcmdusd`|Nov 1, 2021, 12:00:00 AM|Nov 1, 2021, 12:00 AM|Nov 1, 2021, 12 AM|Nov 1, 2021|
 <h3 id="etf_cfd_de">Germany ETFs 🇩🇪📈</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |iShares TecDAX UCITS DE ETF|`tecdaxedeeur`|Sep 22, 2020, 7:00:00 AM|Sep 22, 2020, 7:00 AM|Sep 22, 2020, 6 AM|Sep 22, 2020|
 <h3 id="etf_cfd_fr">France ETFs 🇫🇷📈</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |LYXOR ETF Daily X2 Short Bund|`dsbfreur`|Sep 22, 2020, 7:00:00 AM|Sep 22, 2020, 7:00 AM|Sep 22, 2020, 7 AM|Sep 22, 2020|
 |Lyxor ETF Leverage CAC 40|`lvcfreur`|Sep 22, 2020, 7:00:00 AM|Sep 22, 2020, 7:00 AM|Sep 22, 2020, 7 AM|Sep 22, 2020|
 |Lyxor UCITS ETF STOXX EUROPE 600 Banks|`lyxbnkfreur`|Sep 22, 2020, 7:00:12 AM|Sep 22, 2020, 7:00 AM|Sep 22, 2020, 7 AM|Sep 22, 2020|
 <h3 id="etf_cfd_hk">Hong Kong ETFs 🇭🇰📈</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |CSOP FTSE China A50 ETF|`2822hkhkd`|Sep 28, 2020, 1:30:00 AM|Sep 28, 2020, 1:30 AM|Sep 28, 2020, 1 AM|Sep 28, 2020|
 |Hang Seng H-Share Index ETF|`2828hkhkd`|Sep 28, 2020, 1:30:00 AM|Sep 28, 2020, 1:30 AM|Sep 28, 2020, 1 AM|Sep 28, 2020|
@@ -272,7 +272,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |ChinaAMC CSI 300 Index ETF|`3188hkhkd`|Sep 28, 2020, 1:30:00 AM|Sep 28, 2020, 1:30 AM|Sep 28, 2020, 1 AM|Sep 28, 2020|
 <h3 id="etf_cfd_us">United States ETFs 🇺🇸📈</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |SPDR Dow Jones® Industrial Average ETF|`diaususd`|May 11, 2017, 1:30:01 PM|May 11, 2017, 1:30 PM|May 11, 2017, 1 PM|May 11, 2017|
 |iShares Select Dividend ETF|`dvyususd`|May 11, 2017, 1:30:13 PM|May 11, 2017, 1:30 PM|May 11, 2017, 1 PM|May 11, 2017|
@@ -319,7 +319,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |SPDR S&P Oil & Gas Explor & Prodtn ETF|`xopususd`|Jan 26, 2017, 2:30:01 PM|Jan 26, 2017, 2:30 PM|Jan 26, 2017, 2 PM|Jan 26, 2017|
 <h3 id="fx_crosses">Forex currencies 💱</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |Australian Dollar vs Canadian Dollar|`audcad`|Jan 3, 2006, 12:00:05 AM|Jan 3, 2006, 12:00 AM|Jan 3, 2006, 12 AM|Nov 18, 1992|
 |Australian Dollar vs Swiss Franc|`audchf`|Mar 1, 2006, 12:01:00 AM|Mar 1, 2006, 12:01 AM|Mar 1, 2006, 12 AM|Nov 22, 1991|
@@ -375,7 +375,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |South African Rand vs Japanese Yen|`zarjpy`|Jun 4, 2007, 12:00:18 AM|Jun 4, 2007, 12:00 AM|Jun 4, 2007, 12 AM|Jun 7, 1999|
 <h3 id="fx_majors">Forex major currencies 💶</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |Australian Dollar vs US Dollar|`audusd`|Aug 3, 2003, 9:00:05 PM|Aug 3, 2003, 9:00 PM|Aug 3, 2003, 9 PM|Jan 4, 1993|
 |Euro vs US Dollar|`eurusd`|May 4, 2003, 9:00:00 PM|May 4, 2003, 9:00 PM|May 4, 2003, 9 PM|Mar 1, 1973|
@@ -386,13 +386,13 @@ const { getHistoricalRates } = require('dukascopy-node');
 |US Dollar vs Japanese Yen|`usdjpy`|May 4, 2003, 9:00:00 PM|May 4, 2003, 9:00 PM|May 4, 2003, 9 PM|Feb 10, 1986|
 <h3 id="fx_metals">Forex metals 🥇</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |Spot silver|`xagusd`|May 4, 2003, 11:09:04 PM|May 4, 2003, 11:09 PM|May 4, 2003, 11 PM|Jun 3, 1999|
 |Spot gold|`xauusd`|May 5, 2003, 12:01:03 AM|May 5, 2003, 12:01 AM|May 5, 2003, 12 AM|Jun 3, 1999|
 <h3 id="idx_america">America 🌎</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |US Dollar Index|`dollaridxusd`|Dec 1, 2017, 1:00:00 AM|Dec 1, 2017, 1:00 AM|Dec 1, 2017, 12 AM|Dec 1, 2017|
 |USA 30 Index|`usa30idxusd`|Jan 1, 2013, 5:44:03 AM|Sep 30, 2013, 1:34 PM|Sep 30, 2013, 1 PM|Sep 30, 2013|
@@ -402,7 +402,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Volatility Index|`volidxusd`|Oct 5, 2022, 1:16:58 PM|Oct 5, 2022, 1:16 PM|Oct 5, 2022, 1 PM|Oct 5, 2022|
 <h3 id="idx_asia">Asia 🌏</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |China A50 Index|`chiidxusd`|Jul 17, 2017, 7:30:02 PM|Jul 17, 2017, 7:30 PM|Jul 17, 2017, 7 PM|Jul 17, 2017|
 |Hong Kong 40 Index|`hkgidxhkd`|Jun 3, 2013, 1:15:21 AM|Jun 3, 2013, 1:15 AM|Jun 3, 2013, 1 AM|Jun 3, 2013|
@@ -412,7 +412,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Singapore Blue Chip Cash Index|`sgdidxsgd`|Dec 1, 2017, 12:58:48 AM|Dec 1, 2017, 12:58 AM|Dec 1, 2017, 12 AM|Dec 1, 2017|
 <h3 id="idx_europe">Europe 🇪🇺</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |France 40 Index|`fraidxeur`|Jan 1, 2013, 5:15:34 PM|Sep 19, 2011, 7:00 AM|Sep 19, 2011, 7 AM|Dec 31, 1987|
 |Germany 40 Index|`deuidxeur`|Jan 1, 2013, 5:44:03 AM|Sep 30, 2013, 3:13 PM|Sep 30, 2013, 2 PM|Sep 30, 2013|
@@ -424,19 +424,19 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Poland 20 Index|`plnidxpln`|Dec 1, 2017, 7:45:00 AM|Dec 1, 2017, 7:45 AM|Dec 1, 2017, 7 AM|Dec 1, 2017|
 <h3 id="idx_africa">Africa 🌍</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |South Africa 40 Index|`soaidxzar`|Oct 5, 2022, 1:16:58 PM|Oct 5, 2022, 1:16 PM|Oct 5, 2022, 1 PM|Oct 5, 2022|
 <h3 id="austria">Austria 🇦🇹</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |Erste Group Bank AG|`ebsateur`|Nov 15, 2016, 8:27:59 AM|Nov 15, 2016, 8:27 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |Raiffeisen Bank International AG|`rbiateur`|Nov 15, 2016, 8:28:00 AM|Nov 15, 2016, 8:28 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |Voestalpine AG|`voeateur`|Nov 15, 2016, 8:27:58 AM|Nov 15, 2016, 8:27 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 <h3 id="belgium">Belgium 🇧🇪</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |Anheuser-Busch InBev NV|`abibeeur`|Nov 21, 2016, 8:00:06 AM|Nov 21, 2016, 8:00 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |Ageas|`agsbeeur`|Nov 21, 2016, 8:00:06 AM|Nov 21, 2016, 8:00 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
@@ -447,7 +447,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Umicore SA|`umibeeur`|Nov 7, 2016, 8:01:02 AM|Nov 7, 2016, 8:01 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 <h3 id="denmark">Denmark 🇩🇰</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |Carlsberg A/S|`carlbdkdkk`|Nov 8, 2016, 8:00:03 AM|Nov 8, 2016, 8:00 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |Coloplast A/S|`colobdkdkk`|Nov 8, 2016, 8:00:04 AM|Nov 8, 2016, 8:00 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
@@ -459,7 +459,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Vestas Wind Systems A/S|`vwsdkdkk`|Nov 8, 2016, 8:01:02 AM|Nov 8, 2016, 8:01 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 <h3 id="finland">Finland 🇫🇮</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |Elisa OYJ|`eli1vfieur`|Nov 3, 2016, 8:00:04 AM|Nov 3, 2016, 8:00 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |Neste OYJ|`nes1vfieur`|Nov 3, 2016, 8:02:00 AM|Nov 3, 2016, 8:02 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
@@ -470,7 +470,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Telia Company AB|`tls1vfieur`|Nov 9, 2016, 9:14:30 AM|Nov 9, 2016, 9:14 AM|Apr 18, 2016, 7 AM|Apr 18, 2016|
 <h3 id="france">France 🇫🇷</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |Accor SA|`acfreur`|Aug 11, 2016, 8:59:52 AM|Aug 11, 2016, 8:59 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |Credit Agricole SA|`acafreur`|Sep 30, 2016, 7:00:19 AM|Sep 30, 2016, 7:00 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
@@ -515,7 +515,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Vallourec SA|`vkfreur`|Aug 5, 2016, 3:00:05 PM|Aug 5, 2016, 3:00 PM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 <h3 id="germany">Germany 🇩🇪</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |Adidas AG|`adsdeeur`|Mar 13, 2015, 8:00:16 AM|Mar 13, 2015, 8:00 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |Allianz SE|`alvdeeur`|Apr 9, 2015, 7:00:27 AM|Apr 9, 2015, 7:00 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
@@ -563,7 +563,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Volkswagen AG|`vow3deeur`|Apr 14, 2015, 7:00:21 AM|Apr 14, 2015, 7:00 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 <h3 id="hong-kong">Hong Kong 🇭🇰</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |HSBC Holdings|`0005hkhkd`|Jan 2, 2018, 1:30:00 AM|Jan 2, 2018, 1:30 AM|Jan 2, 2018, 1 AM|Jan 2, 2018|
 |Galaxy Entertainment Group|`0027hkhkd`|Jan 2, 2018, 1:30:00 AM|Jan 2, 2018, 1:30 AM|Jan 2, 2018, 1 AM|Jan 2, 2018|
@@ -594,7 +594,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Bank of China|`3988hkhkd`|Jun 4, 2019, 7:21:06 AM|Jun 4, 2019, 7:21 AM|Jun 4, 2019, 7 AM|Jun 4, 2019|
 <h3 id="ireland">Ireland 🇮🇪</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |Bank Of Ireland Plc|`birgieeur`|Jun 1, 2020, 7:00:00 AM|Jun 1, 2020, 7:00 AM|Jun 1, 2020, 7 AM|Jun 1, 2020|
 |CRH Plc|`crgieeur`|Oct 1, 2020, 7:00:00 AM|Oct 1, 2020, 7:00 AM|Oct 1, 2020, 7 AM|Oct 1, 2020|
@@ -603,7 +603,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Ryanair Holdings Plc|`ry4cieeur`|Oct 1, 2020, 7:00:00 AM|Oct 1, 2020, 7:00 AM|Oct 1, 2020, 7 AM|Oct 1, 2020|
 <h3 id="italy">Italy 🇮🇹</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |A2A Spa|`a2aiteur`|Jun 1, 2020, 7:00:01 AM|Jun 1, 2020, 7:00 AM|Jun 1, 2020, 7 AM|Jun 1, 2020|
 |Autogrill Spa|`agliteur`|Jun 1, 2020, 7:00:00 AM|Jun 1, 2020, 7:00 AM|Jun 1, 2020, 7 AM|Jun 1, 2020|
@@ -655,7 +655,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |WeBuild Spa|`wbditeur`|Dec 17, 2020, 2:18:28 PM|Dec 17, 2020, 2:18 PM|Dec 17, 2020, 2 PM|Dec 17, 2020|
 <h3 id="japan">Japan 🇯🇵</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |Asahi Group Holdings|`2502jpjpy`|Sep 26, 2018, 12:01:30 AM|Sep 26, 2018, 12:01 AM|Sep 26, 2018, 12 AM|Sep 26, 2018|
 |Kirin Brewery Co|`2503jpjpy`|Sep 26, 2018, 12:01:57 AM|Sep 26, 2018, 12:01 AM|Sep 26, 2018, 12 AM|Sep 26, 2018|
@@ -714,7 +714,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Softbank Group Corp|`9984jpjpy`|Sep 21, 2018, 12:00:00 AM|Sep 26, 2018, 12:00 AM|Sep 26, 2018, 12 AM|Sep 26, 2018|
 <h3 id="mexico">Mexico 🇲🇽</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |Alfa SA B A|`alfaamxmxn`|Oct 13, 2022, 1:30:00 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
 |Alsea SAB de CV|`alseamxmxn`|Oct 13, 2022, 1:30:34 PM|Oct 13, 2022, 1:30 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
@@ -747,7 +747,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Walmart De Mexico SAB|`walmexmxmxn`|Oct 13, 2022, 1:31:25 PM|Oct 13, 2022, 1:31 PM|Oct 13, 2022, 1 PM|Oct 13, 2022|
 <h3 id="netherlands">Netherlands 🇳🇱</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |Aegon NV|`agnnleur`|Nov 14, 2016, 11:24:13 AM|Nov 14, 2016, 11:24 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |Koninklijke Ahold Delhaize NV|`ahnleur`|Nov 14, 2016, 11:24:13 AM|Nov 14, 2016, 11:24 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
@@ -768,7 +768,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Wolters Kluwer NV|`wklnleur`|Nov 14, 2016, 11:24:13 AM|Nov 14, 2016, 11:24 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 <h3 id="norway">Norway 🇳🇴</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |DNB ASA|`dnbnonok`|Nov 14, 2016, 11:25:59 AM|Nov 14, 2016, 11:25 AM|Nov 15, 2011, 8 AM|Nov 15, 2011|
 |Marine Harvest ASA|`mhgnonok`|Nov 14, 2016, 11:26:00 AM|Nov 14, 2016, 11:26 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
@@ -778,13 +778,13 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Telenor ASA|`telnonok`|Nov 14, 2016, 11:26:39 AM|Nov 14, 2016, 11:26 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 <h3 id="portugal">Portugal 🇵🇹</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |EDP - Energias de Portugal SA|`edppteur`|Nov 14, 2016, 3:55:01 PM|Nov 14, 2016, 3:55 PM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |Galp Energia SGPS SA|`galppteur`|Nov 14, 2016, 3:55:01 PM|Nov 14, 2016, 3:54 PM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 <h3 id="spain">Spain 🇪🇸</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |ACS Actividades de Construccion y Servicios SA|`acseseur`|Nov 14, 2016, 11:23:20 AM|Nov 14, 2016, 11:23 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |Acerinox SA|`acxeseur`|Nov 14, 2016, 11:23:18 AM|Nov 14, 2016, 11:23 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
@@ -812,7 +812,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Viscofan SA|`viseseur`|May 11, 2022, 2:32:26 PM|May 11, 2022, 2:32 PM|May 11, 2022, 2 PM|May 11, 2022|
 <h3 id="sweden">Sweden 🇸🇪</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |ABB Ltd|`abbsesek`|Nov 14, 2016, 4:09:04 PM|Nov 14, 2016, 4:09 PM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |Alfa Laval AB|`alfasesek`|Nov 7, 2016, 8:01:35 AM|Nov 7, 2016, 8:01 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
@@ -836,7 +836,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Volvo AB|`volvbsesek`|Nov 7, 2016, 8:01:18 AM|Nov 7, 2016, 8:01 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 <h3 id="switzerland">Switzerland 🇨🇭</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |ABB Ltd|`abbnchchf`|Jun 16, 2015, 7:01:50 AM|Jun 16, 2015, 7:01 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 |Adecco SA|`adenchchf`|Jun 16, 2015, 7:01:50 AM|Jun 16, 2015, 7:01 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
@@ -868,7 +868,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Zurich Insurance Group AG|`zurnchchf`|Aug 7, 2015, 7:00:49 AM|Aug 7, 2015, 7:00 AM|Jan 3, 2011, 8 AM|Jan 3, 2011|
 <h3 id="uk">United Kingdom 🇬🇧</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |Anglo American PLC|`aalgbgbx`|Aug 25, 2015, 7:00:26 AM|Aug 10, 2016, 8:02 AM|Jan 4, 2011, 8 AM|Jan 4, 2011|
 |Associated British Foods PLC|`abfgbgbx`|Sep 6, 2016, 7:00:11 AM|Sep 6, 2016, 7:00 AM|Jan 4, 2011, 8 AM|Jan 4, 2011|
@@ -974,7 +974,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |Whitbread PLC|`wtbgbgbx`|Jul 6, 2016, 7:09:30 AM|Jul 6, 2016, 7:09 AM|Jan 4, 2011, 8 AM|Jan 4, 2011|
 <h3 id="us">United States 🇺🇸</h3>
 
-|Instrument|id|Earliset tick data (UTC)|Earliset minute data (UTC)|Earliset hour data (UTC)|Earliset day data (UTC)|
+|Instrument|id|Earliest tick data (UTC)|Earliest minute data (UTC)|Earliest hour data (UTC)|Earliest day data (UTC)|
 |-|-|-|-|-|-|
 |AGILENT TECHNOLOGIES INC|`aususd`|May 25, 2017, 2:30:00 PM|May 25, 2017, 2:30 PM|May 25, 2017, 2 PM|May 25, 2017|
 |ALCOA INC|`aaususd`|Jan 30, 2018, 5:32:23 PM|Jan 30, 2018, 5:32 PM|Jan 30, 2018, 5 PM|Jan 30, 2018|

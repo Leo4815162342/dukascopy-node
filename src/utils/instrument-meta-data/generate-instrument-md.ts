@@ -66,10 +66,10 @@ const titleMap: Record<string, { emoji: string; title: string }> = {
       'Instrument',
       // 'Name',
       'id',
-      'Earliset tick data (UTC)',
-      'Earliset minute data (UTC)',
-      'Earliset hour data (UTC)',
-      'Earliset day data (UTC)'
+      'Earliest tick data (UTC)',
+      'Earliest minute data (UTC)',
+      'Earliest hour data (UTC)',
+      'Earliest day data (UTC)'
     ];
 
     const header = headers.map((h, i) => `${!i ? '|' : ''}${h}|`).join('');
