@@ -28,6 +28,7 @@
 		"type": "git",
 		"url": "https://github.com/Leo4815162342/dukascopy-node"
 	},
+	"homepage": "https://www.dukascopy-node.app",
 	"keywords": [
 		"dukascopy",
 		"stock-data",
