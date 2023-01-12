@@ -12,6 +12,7 @@
     <a href="https://www.npmjs.com/package/dukascopy-node"><img src="https://badgen.net/npm/dt/dukascopy-node?cache=600" alt="Total number of downloads of dukascopy-node npm package"></a>
     <a href="https://github.com/Leo4815162342/dukascopy-node"><img src="https://badgen.net/github/stars/Leo4815162342/dukascopy-node?cache=600" alt="dukascopy-node github stars"></a>
 </p>
+<p align="center"><a href="https://www.dukascopy-node.app/">📖 Documentation</a></p>
 
 
 
