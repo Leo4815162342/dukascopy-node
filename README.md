@@ -112,24 +112,24 @@ const { getHistoricalRates } = require('dukascopy-node');
 
 ## ⚙️ Config object
 
-|Name|Type|Required|Default|Description|
-|-|-|-|-|-|
-|`instrument`|`String`|true||An id of the trading instrument. Supported values: [see list](#-instruments)|
-|`dates`|`Object`|true||An object with a date range|
-|`dates.from`|<p>`Date`</p><p>`String`</p><p>`Number`</p>|true||Date representing the start of the time range. Can be of Date type, string (e.g. `2021-03-04` or `2021-03-04T00:00:00.000Z`), or timestamp integer (e.g. `1614816000000`)|
-|`dates.to`|<p>`Date`</p><p>`String`</p><p>`Number`</p>|true||Date representing the end of the time range Can be of Date type, string (e.g. `2021-03-04` or `2021-03-04T00:00:00.000Z`), or timestamp integer (e.g.   `1614816000000`)|
-|`timeframe`|`String`|false|`d1`|Granularity of aggregation of OHLC (open, high, low, close) data. Supported values:<ul><li>`tick` (every single tick/price change)</li><li>`s1` (1 second)</li><li>`m1` (1 minute)</li><li>`m5` (5 minutes)</li><li>`m15` (15 minutes)</li><li>`m30` (30 minutes)</li><li>`h1` (1 hour)</li><li>`h4` (4 hours)</li><li>`d1` (1 day)</li><li>`mn1` (1 month)</li></ul>|
-|`priceType`|`String`|false|`bid`|Type of price (offer side). Supported values:<ul><li>`bid`</li><li>`ask`</li></ul>|
-|`format`|`String`|false|`array`|Format of the generated output. Supported values:<ul><li>`array`</li><li>`json`</li><li>`csv`</li></ul>|
-|`utcOffset`|`Number`|false|`0`|UTC offset in minutes.|
-|`volumes`|`Boolean`|false|`true`|A flag indicating whether the output should contain volume data|
-|`ignoreFlats`|`Boolean`|false|`true`|A flag indicating whether the output should contain timeframe entries with 0 (flat) volume. Those mainly come from non-trading days, such as weekends or bank holidays.|
-|`batchSize`|`Number`|false|`10`|Number of requests sent to data storage per batch. We don't want to send bunch of requests at the same time, we want to split them in groups (batches) and fetch them one by one with pause in between (see `pauseBetweenBatchesMs`). Main purpose - not to fall under rate limiting restrictions.|
-|`pauseBetweenBatchesMs`|`Number`|false|`1000`|Pause between downloading batches (in milliseconds).|
-|`useCache`|`Boolean`|false|`false`|A flag indicating whether a file-system cache is going to be used to store response artifacts for subsequent lookups. When set to `true`, it significantly speeds up calls when requesting overlapping or similar data|
-|`cacheFolderPath`|`String`|false|`./.dukascopy-cache`|Folder path where all cache artifacts (binary data) will be stored|
-|`retryCount`|`Number`|false|`0`|Number of retries for a failed artifact download. If `0` no retries will happen even for failed requests.|
-|`pauseBetweenRetriesMs`|`Number`|false|`500`|Pause between retries. If `retryCount` is `0` this parameter will be ignored|
+|Name|Type|Default|Description|
+|-|-|-|-|
+|`instrument`|`String`||An id of the trading instrument. Supported values: [see list](#-instruments)|
+|`dates`|`Object`||An object with a date range|
+|`dates.from`|<p>`Date`</p><p>`String`</p><p>`Number`</p>||Date representing the start of the time range. Can be of Date type, string (e.g. `2021-03-04` or `2021-03-04T00:00:00.000Z`), or timestamp integer (e.g. `1614816000000`)|
+|`dates.to`|<p>`Date`</p><p>`String`</p><p>`Number`</p>||Date representing the end of the time range Can be of Date type, string (e.g. `2021-03-04` or `2021-03-04T00:00:00.000Z`), or timestamp integer (e.g.   `1614816000000`)|
+|`timeframe`|`String`|`d1`|Granularity of aggregation of OHLC (open, high, low, close) data. Supported values:<ul><li>`tick` (every single tick/price change)</li><li>`s1` (1 second)</li><li>`m1` (1 minute)</li><li>`m5` (5 minutes)</li><li>`m15` (15 minutes)</li><li>`m30` (30 minutes)</li><li>`h1` (1 hour)</li><li>`h4` (4 hours)</li><li>`d1` (1 day)</li><li>`mn1` (1 month)</li></ul>|
+|`priceType`|`String`|`bid`|Type of price (offer side). Supported values:<ul><li>`bid`</li><li>`ask`</li></ul>|
+|`format`|`String`|`array`|Format of the generated output. Supported values:<ul><li>`array`</li><li>`json`</li><li>`csv`</li></ul>|
+|`utcOffset`|`Number`|`0`|UTC offset in minutes.|
+|`volumes`|`Boolean`|`true`|A flag indicating whether the output should contain volume data|
+|`ignoreFlats`|`Boolean`|`true`|A flag indicating whether the output should contain timeframe entries with 0 (flat) volume. Those mainly come from non-trading days, such as weekends or bank holidays.|
+|`batchSize`|`Number`|`10`|Number of requests sent to data storage per batch. We don't want to send bunch of requests at the same time, we want to split them in groups (batches) and fetch them one by one with pause in between (see `pauseBetweenBatchesMs`). Main purpose - not to fall under rate limiting restrictions.|
+|`pauseBetweenBatchesMs`|`Number`|`1000`|Pause between downloading batches (in milliseconds).|
+|`useCache`|`Boolean`|`false`|A flag indicating whether a file-system cache is going to be used to store response artifacts for subsequent lookups. When set to `true`, it significantly speeds up calls when requesting overlapping or similar data|
+|`cacheFolderPath`|`String`|`./.dukascopy-cache`|Folder path where all cache artifacts (binary data) will be stored|
+|`retryCount`|`Number`|`0`|Number of retries for a failed artifact download. If `0` no retries will happen even for failed requests.|
+|`pauseBetweenRetriesMs`|`Number`|`500`|Pause between retries. If `retryCount` is `0` this parameter will be ignored|
 
 ***
 
