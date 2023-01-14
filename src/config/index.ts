@@ -2,7 +2,10 @@ import { PriceType, Price } from './price-types';
 import { TimeframeType, Timeframe } from './timeframes';
 import { FormatType, Format } from './format';
 import { InstrumentType } from './instruments';
-import { OptionalKeys } from 'utility-types';
+
+type OptionalKeys<T> = {
+  [K in keyof T]-?: {} extends Pick<T, K> ? K : never;
+}[keyof T];
 
 export type DateInput = string | Date | number;
 

@@ -25,7 +25,6 @@ specifiers:
   ts-node: 9.1.1
   tsup: 5.12.5
   typescript: 4.6.3
-  utility-types: 3.10.0
   vitest: 0.9.3
 
 dependencies:
@@ -55,7 +54,6 @@ devDependencies:
   ts-node: 9.1.1_typescript@4.6.3
   tsup: 5.12.5_wxzcnpkbc6war466kzs22twgje
   typescript: 4.6.3
-  utility-types: 3.10.0
   vitest: 0.9.3
 
 packages:
@@ -2796,11 +2794,6 @@ packages:
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
-    dev: true
-
-  /utility-types/3.10.0:
-    resolution: {integrity: sha512-O11mqxmi7wMKCo6HKFt5AhO4BwY3VV68YU07tgxfz8zJTIxr4BpsezN49Ffwy9j3ZpwwJp4fkRwjRzq3uWE6Rg==}
-    engines: {node: '>= 4'}
     dev: true
 
   /v8-compile-cache/2.3.0:
