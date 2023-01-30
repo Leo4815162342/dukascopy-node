@@ -1,7 +1,7 @@
 import fs from 'fs';
 
 const input = {
-  buffer: fs.readFileSync('./dummy-data/EURUSD/2019/01/BID_candles_hour_1.bi5'),
+  buffer: fs.readFileSync('./src/__mocks__/EURUSD/2019/01/BID_candles_hour_1.bi5'),
   timeframe: 'h1'
 };
 
