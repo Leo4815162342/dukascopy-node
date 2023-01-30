@@ -122,11 +122,3 @@ function generateSeed() {
   for (let i = 10; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
   return result;
 }
-
-getCurrentRates({ instrument: 'eurusd', limit: 5, timeframe: 'tick', volumes: false }).then(
-  rates => {
-    rates.forEach(rate => {
-      console.log(new Date(rate[0]), ...rate);
-    });
-  }
-);
