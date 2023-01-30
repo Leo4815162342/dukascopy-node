@@ -11,7 +11,7 @@ export type RealtimeRatesArgs = {
   volumes?: boolean;
   priceType?: PriceType;
   order?: 'asc' | 'desc';
-  onItemDownload?: (item: unknown) => void;
+  onItemDownload?: () => void;
 };
 
 const timeframeMap: Record<TimeframeType, string> = {
@@ -56,7 +56,8 @@ export async function getRealtimeRates({
   priceType = 'bid',
   order = 'asc',
   timeframe = 'd1',
-  volumes = true
+  volumes = true,
+  onItemDownload
 }: RealtimeRatesArgs): Promise<ArrayItem[] | ArrayTickItem[]> {
   const mappedTimeframe = timeframeMap[timeframe];
   const instrumentName = instrumentMetaData[instrument].name;
@@ -89,6 +90,7 @@ export async function getRealtimeRates({
         Referer: 'https://freeserv.dukascopy.com/2.0'
       }
     });
+    onItemDownload && onItemDownload();
     const rawResponseText = await rawResponse.text();
 
     const responseClean = rawResponseText
@@ -106,7 +108,7 @@ export async function getRealtimeRates({
     if (timeframe === 'tick') {
       rates = rates.map(item => [item[0], item[1], item[2]]);
     } else {
-      rates = rates.map(item => [item[0], item[1], item[2], item[3]]);
+      rates = rates.map(item => [item[0], item[1], item[2], item[3], item[4]]);
     }
   }
 
@@ -119,3 +121,11 @@ function generateSeed() {
   for (let i = 10; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
   return result;
 }
+
+// getRealtimeRates({ instrument: 'eurusd', last: 10, timeframe: 'd1', volumes: false }).then(
+//   rates => {
+//     rates.forEach(rate => {
+//       console.log(new Date(rate[0]), ...rate);
+//     });
+//   }
+// );
