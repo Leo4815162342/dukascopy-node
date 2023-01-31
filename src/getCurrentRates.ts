@@ -1,18 +1,20 @@
 import fetch from 'node-fetch';
+import { FormatType } from './config/format';
 import { InstrumentType } from './config/instruments';
 import { instrumentMetaData } from './config/instruments-metadata';
 import { PriceType } from './config/price-types';
 import { TimeframeType } from './config/timeframes';
-import { ArrayItem, ArrayTickItem } from './output-formatter/types';
+import { formatOutput } from './output-formatter';
+import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
 
 export type CurrentRatesArgs = {
   instrument: InstrumentType;
   timeframe?: TimeframeType;
   limit?: number;
   volumes?: boolean;
+  format?: FormatType;
   priceType?: PriceType;
   order?: 'asc' | 'desc';
-  onItemDownload?: () => void;
 };
 
 const timeframeMap: Record<TimeframeType, string> = {
@@ -29,22 +31,38 @@ const timeframeMap: Record<TimeframeType, string> = {
 };
 
 export type CurrentRatesArgsArrayItem = CurrentRatesArgs & {
-  timeframe?: Exclude<TimeframeType, 'tick'> | undefined;
+  timeframe?: Exclude<TimeframeType, 'tick'>;
+  format?: 'array';
 };
 
 export type CurrentRatesArgsArrayTickItem = CurrentRatesArgs & {
-  timeframe?: 'tick' | undefined;
+  timeframe?: 'tick';
+  format?: 'array';
+};
+
+export type CurrentRatesArgsJsonItem = CurrentRatesArgs & {
+  timeframe?: Exclude<TimeframeType, 'tick'>;
+  format?: 'json';
+};
+
+export type CurrentRatesArgsJsonTickItem = CurrentRatesArgs & {
+  timeframe?: 'tick';
+  format?: 'json';
+};
+
+export type CurrentRatesArgsCsv = CurrentRatesArgs & {
+  format?: 'csv';
 };
 
 export async function getCurrentRates(config: CurrentRatesArgsArrayItem): Promise<ArrayItem[]>;
-
 export async function getCurrentRates(
   config: CurrentRatesArgsArrayTickItem
 ): Promise<ArrayTickItem[]>;
-
+export async function getCurrentRates(config: CurrentRatesArgsJsonItem): Promise<JsonItem[]>;
 export async function getCurrentRates(
-  config: CurrentRatesArgs
-): Promise<ArrayItem[] | ArrayTickItem[]>;
+  config: CurrentRatesArgsJsonTickItem
+): Promise<JsonItemTick[]>;
+export async function getCurrentRates(config: CurrentRatesArgsCsv): Promise<string>;
 
 /**
  * Get realtime rates for a given instrument.
@@ -58,8 +76,8 @@ export async function getCurrentRates({
   order = 'asc',
   timeframe = 'd1',
   volumes = true,
-  onItemDownload
-}: CurrentRatesArgs): Promise<ArrayItem[] | ArrayTickItem[]> {
+  format = 'array'
+}: CurrentRatesArgs): Promise<Output> {
   const mappedTimeframe = timeframeMap[timeframe];
   const instrumentName = instrumentMetaData[instrument].name;
   const offerSide = priceType === 'bid' ? 'B' : 'A';
@@ -83,7 +101,7 @@ export async function getCurrentRates({
 
   const url = `https://freeserv.dukascopy.com/2.0/index.php?${urlParams.toString()}`;
 
-  let rates: ArrayItem[] | ArrayTickItem[] = [];
+  let rates: number[][] = [];
 
   try {
     const rawResponse = await fetch(url, {
@@ -91,7 +109,6 @@ export async function getCurrentRates({
         Referer: 'https://freeserv.dukascopy.com/2.0'
       }
     });
-    onItemDownload && onItemDownload();
     const rawResponseText = await rawResponse.text();
 
     const responseClean = rawResponseText
@@ -113,7 +130,9 @@ export async function getCurrentRates({
     }
   }
 
-  return rates;
+  const output = formatOutput({ processedData: rates, format, timeframe });
+
+  return output;
 }
 
 function generateSeed() {
@@ -122,3 +141,15 @@ function generateSeed() {
   for (let i = 10; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
   return result;
 }
+
+getCurrentRates({
+  instrument: 'btcusd',
+  timeframe: 'm1',
+  format: 'array',
+  limit: 1,
+  volumes: false
+}).then(data =>
+  data.forEach(item => {
+    console.log(new Date(item[0]), ...item);
+  })
+);
