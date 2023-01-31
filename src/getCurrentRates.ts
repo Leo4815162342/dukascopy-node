@@ -141,15 +141,3 @@ function generateSeed() {
   for (let i = 10; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
   return result;
 }
-
-getCurrentRates({
-  instrument: 'btcusd',
-  timeframe: 'm1',
-  format: 'array',
-  limit: 1,
-  volumes: false
-}).then(data =>
-  data.forEach(item => {
-    console.log(new Date(item[0]), ...item);
-  })
-);
