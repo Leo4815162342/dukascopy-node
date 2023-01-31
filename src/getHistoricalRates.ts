@@ -22,6 +22,7 @@ import { NotifyFn } from './buffer-fetcher/types';
 import { version } from '../package.json';
 
 import debug from 'debug';
+import os from 'os';
 
 const DEBUG_NAMESPACE = 'dukascopy-node';
 
@@ -33,7 +34,9 @@ export async function getHistoricalRates(config: ConfigCsvItem): Promise<string>
 export async function getHistoricalRates(config: Config): Promise<Output>;
 
 export async function getHistoricalRates(config: Config): Promise<Output> {
-  debug(`${DEBUG_NAMESPACE}:version`)(`${version} (node ${process.version})`);
+  debug(`${DEBUG_NAMESPACE}:version`)(version);
+  debug(`${DEBUG_NAMESPACE}:nodejs`)(process.version);
+  debug(`${DEBUG_NAMESPACE}:os`)(`${os.type()}, ${os.release()} (${os.platform()})`);
 
   const { input, isValid, validationErrors } = validateConfigNode(config);
 
