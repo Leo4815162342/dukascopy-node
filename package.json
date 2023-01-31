@@ -18,8 +18,8 @@
 		"coverage": "vitest run --coverage",
 		"format": "prettier --config .prettierrc 'src/**/*.ts' --write",
 		"lint": "eslint ./src --ext ts --ext js",
-		"gen:meta": "ts-node src/utils/instrument-meta-data/generate-data.ts",
-		"gen:instruments-md": "ts-node src/utils/instrument-meta-data/generate-instrument-md.ts",
+		"gen:meta": "tsx src/utils/instrument-meta-data/generate-data.ts",
+		"gen:instruments-md": "tsx src/utils/instrument-meta-data/generate-instrument-md.ts",
 		"release": "standard-version && git push --follow-tags origin master && pnpm build && npm publish"
 	},
 	"author": "leonid.pyrlia",

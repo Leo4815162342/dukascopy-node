@@ -66,10 +66,7 @@ const titleMap: Record<string, { emoji: string; title: string }> = {
       'Instrument',
       // 'Name',
       'id',
-      'Earliest tick data (UTC)',
-      'Earliest minute data (UTC)',
-      'Earliest hour data (UTC)',
-      'Earliest day data (UTC)'
+      'Earliest data (UTC)'
     ];
 
     const header = headers.map((h, i) => `${!i ? '|' : ''}${h}|`).join('');
@@ -93,17 +90,21 @@ const titleMap: Record<string, { emoji: string; title: string }> = {
               instrumentId as keyof typeof instrumentMetaData
             ] as InstrumentMetaData;
 
+            const dates = [
+              startHourForTicks,
+              startDayForMinuteCandles,
+              startMonthForHourlyCandles,
+              startYearForDailyCandles
+            ]
+              .filter(d => d !== '1970-01-01T00:00:00.000Z' && d !== '2000-01-01T00:00:00.000Z')
+              .map(item => new Date(item));
+
+            const minDate = Math.min(...dates.map(d => d.getTime()));
+
             const line = [
-              description,
+              `[${description}](https://www.dukascopy-node.app/instrument/${instrumentId})`,
               `\`${instrumentId}\``,
-              getFormattedDate(startHourForTicks, {
-                hour: 'numeric',
-                minute: 'numeric',
-                second: 'numeric'
-              }),
-              getFormattedDate(startDayForMinuteCandles, { hour: 'numeric', minute: 'numeric' }),
-              getFormattedDate(startMonthForHourlyCandles, { hour: 'numeric' }),
-              getFormattedDate(startYearForDailyCandles)
+              getFormattedDate(minDate)
             ].join('|');
 
             return `|${line}|`;
