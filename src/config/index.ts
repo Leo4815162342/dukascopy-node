@@ -4,12 +4,13 @@ import { FormatType, Format } from './format';
 import { InstrumentType } from './instruments';
 
 type OptionalKeys<T> = {
+  // eslint-disable-next-line @typescript-eslint/ban-types
   [K in keyof T]-?: {} extends Pick<T, K> ? K : never;
 }[keyof T];
 
 export type DateInput = string | Date | number;
 
-export interface Config {
+export interface ConfigBase {
   instrument: InstrumentType;
   dates: {
     from: DateInput;
@@ -29,7 +30,7 @@ export interface Config {
   pauseBetweenRetriesMs?: number;
 }
 
-export type DefaultConfig = Required<Pick<Config, OptionalKeys<Config>>>;
+export type DefaultConfig = Required<Pick<ConfigBase, OptionalKeys<ConfigBase>>>;
 
 export const defaultConfig: DefaultConfig = {
   timeframe: Timeframe.d1,
@@ -46,26 +47,33 @@ export const defaultConfig: DefaultConfig = {
   pauseBetweenRetriesMs: 500
 };
 
-export interface ConfigArrayTickItem extends Config {
+export interface ConfigArrayTickItem extends ConfigBase {
   timeframe?: 'tick';
   format?: 'array';
 }
 
-export interface ConfigArrayItem extends Config {
-  timeframe?: Exclude<TimeframeType, 'tick'> | undefined;
+export interface ConfigArrayItem extends ConfigBase {
+  timeframe?: Exclude<TimeframeType, 'tick'>;
   format?: 'array';
 }
 
-export interface ConfigJsonTickItem extends Config {
+export interface ConfigJsonTickItem extends ConfigBase {
   timeframe?: 'tick';
   format?: 'json';
 }
 
-export interface ConfigJsonItem extends Config {
+export interface ConfigJsonItem extends ConfigBase {
   timeframe?: Exclude<TimeframeType, 'tick'>;
   format?: 'json';
 }
 
-export interface ConfigCsvItem extends Config {
+export interface ConfigCsvItem extends ConfigBase {
   format?: 'csv';
 }
+
+export type Config =
+  | ConfigArrayTickItem
+  | ConfigArrayItem
+  | ConfigJsonTickItem
+  | ConfigJsonItem
+  | ConfigCsvItem;

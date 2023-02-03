@@ -1,6 +1,6 @@
 import { program } from 'commander';
 import { RuleBoolean, RuleString } from 'fastest-validator';
-import { Config } from '../config';
+import { ConfigBase } from '../config';
 import { validateConfig } from '../config-validator';
 import { InputSchema, schema } from '../config-validator/schema';
 import { Format } from '../config/format';
@@ -48,7 +48,7 @@ if (options.dateTo === now) {
   options.dateTo = new Date();
 }
 
-export interface CliConfig extends Config {
+export interface CliConfig extends ConfigBase {
   dir: string;
   silent: boolean;
   debug: boolean;

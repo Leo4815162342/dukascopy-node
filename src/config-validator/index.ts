@@ -1,14 +1,16 @@
-import { Config } from '../config';
+import { Config, ConfigBase } from '../config';
 import Validator, { ValidationError } from 'fastest-validator';
 import { InputSchema, schema } from './schema';
 
 export type ConfigValidationError = Pick<ValidationError, 'message' | 'expected' | 'actual'>;
 
-export type SanitizedConfig<InputConfig extends Config> = Required<Omit<InputConfig, 'dates'>> & {
+export type SanitizedConfig<InputConfig extends ConfigBase> = Required<
+  Omit<InputConfig, 'dates'>
+> & {
   dates: { from: Date; to: Date };
 };
 
-export interface ValidateConfigOutput<InputConfig extends Config> {
+export interface ValidateConfigOutput<InputConfig extends ConfigBase> {
   input: SanitizedConfig<InputConfig>;
   isValid: boolean;
   validationErrors: ConfigValidationError[];
@@ -21,7 +23,7 @@ const validator = new Validator();
  * Validates the config and sanitizes some of the params
  *
  */
-export function validateConfig<InputConfig extends Config>(
+export function validateConfig<InputConfig extends ConfigBase>(
   input: InputConfig,
   schema: InputSchema<InputConfig>
 ): ValidateConfigOutput<InputConfig> {
@@ -30,10 +32,10 @@ export function validateConfig<InputConfig extends Config>(
 
   const isValid = validationResult === true;
 
-  const sanitaizedInput = input as unknown as SanitizedConfig<InputConfig>;
+  const sanitizedInput = input as unknown as SanitizedConfig<InputConfig>;
 
   return {
-    input: sanitaizedInput,
+    input: sanitizedInput,
     isValid,
     validationErrors:
       !isValid && Array.isArray(validationResult)
