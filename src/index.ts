@@ -25,4 +25,12 @@ export { RuleDate, RuleBoolean, RuleNumber, RuleString, RuleObject } from 'faste
 
 export { getHistoricRates, getHistoricalRates } from './getHistoricalRates';
 
-export { getCurrentRates } from './getCurrentRates';
+export {
+  getCurrentRates,
+  CurrentRatesConfig,
+  CurrentRatesConfigArrayItem,
+  CurrentRatesConfigArrayTickItem,
+  CurrentRatesConfigCsv,
+  CurrentRatesConfigJsonItem,
+  CurrentRatesConfigJsonTickItem
+} from './getCurrentRates';
