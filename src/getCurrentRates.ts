@@ -59,7 +59,7 @@ export type CurrentRatesConfigCsv = CurrentRatesConfigBase & {
   format?: 'csv';
 };
 
-type CurrentRatesConfig =
+export type CurrentRatesConfig =
   | CurrentRatesConfigArrayItem
   | CurrentRatesConfigArrayTickItem
   | CurrentRatesConfigJsonItem
