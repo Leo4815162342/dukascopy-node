@@ -8,18 +8,28 @@ import { TimeframeType } from './config/timeframes';
 import { formatOutput } from './output-formatter';
 import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
 
-export type CurrentRatesConfig = {
+export type CurrentRatesConfigBase = {
   instrument: InstrumentType;
   timeframe?: TimeframeType;
+  volumes?: boolean;
+  format?: FormatType;
+  priceType?: PriceType;
+};
+
+export type CurrentRatesConfigWithDates = CurrentRatesConfigBase & {
   dates: {
     from: DateInput;
     to?: DateInput;
   };
-  volumes?: boolean;
-  format?: FormatType;
-  priceType?: PriceType;
-  order?: 'asc' | 'desc';
+  limit?: never;
 };
+
+export type CurrentRatesConfigWithLimit = CurrentRatesConfigBase & {
+  limit: number;
+  dates?: never;
+};
+
+export type CurrentRatesConfig = CurrentRatesConfigWithDates | CurrentRatesConfigWithLimit;
 
 const timeframeMap: Record<TimeframeType, string> = {
   tick: 'TICK',
@@ -76,25 +86,33 @@ export async function getCurrentRates(config: CurrentRatesConfigCsv): Promise<st
 export async function getCurrentRates({
   instrument,
   priceType = 'bid',
-  order = 'asc',
   timeframe = 'd1',
   volumes = true,
   format = 'array',
-  dates
+  dates,
+  limit
 }: CurrentRatesConfig): Promise<Output> {
   const mappedTimeframe = timeframeMap[timeframe];
   const instrumentName = instrumentMetaData[instrument].name;
   const offerSide = priceType === 'bid' ? 'B' : 'A';
-  const timeDirection = order === 'asc' ? 'N' : 'P';
+  // const timeDirection = order === 'asc' ? 'N' : 'P';
+  const timeDirection = 'N';
 
-  const { from, to } = dates;
+  const now = new Date();
 
-  const fromDate = typeof from === 'string' || typeof from === 'number' ? new Date(from) : from;
-  const toDate = to
-    ? typeof to === 'string' || typeof to === 'number'
-      ? new Date(to)
-      : to
-    : new Date();
+  let fromDate: Date = now;
+  let toDate: Date = now;
+
+  if (dates) {
+    const { from, to = now } = dates;
+    fromDate = typeof from === 'string' || typeof from === 'number' ? new Date(from) : from;
+    toDate = typeof to === 'string' || typeof to === 'number' ? new Date(to) : to;
+  } else {
+    fromDate = getTimeframeLimit(timeframe, now, limit || 10);
+    toDate = now;
+  }
+
+  console.log(fromDate, toDate);
 
   let targetTimestamp = +toDate;
   let shouldFetch = true;
@@ -147,6 +165,10 @@ export async function getCurrentRates({
     }
   }
 
+  if (limit) {
+    rates = rates.slice(-limit);
+  }
+
   if (!volumes) {
     if (timeframe === 'tick') {
       rates = rates.map(item => [item[0], item[1], item[2]]);
@@ -183,4 +205,24 @@ function generateSeed() {
   let result = '';
   for (let i = 10; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
   return result;
+}
+
+function getTimeframeLimit(timeframe: TimeframeType, now: Date, limit: number) {
+  const nowTimestamp = +now;
+  const bufferMultiplier = 5; // needed to account for weekends and holidays or holes in the datafeed
+
+  const timeframeLimits: Record<TimeframeType, number> = {
+    tick: 1000,
+    s1: 1000,
+    m1: 60 * 1000,
+    m5: 5 * 60 * 1000,
+    m15: 15 * 60 * 1000,
+    m30: 30 * 60 * 1000,
+    h1: 60 * 60 * 1000,
+    h4: 4 * 60 * 60 * 1000,
+    d1: 24 * 60 * 60 * 1000,
+    mn1: 30 * 24 * 60 * 60 * 1000
+  };
+
+  return new Date(nowTimestamp - limit * bufferMultiplier * timeframeLimits[timeframe]);
 }
