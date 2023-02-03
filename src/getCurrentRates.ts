@@ -8,7 +8,7 @@ import { TimeframeType } from './config/timeframes';
 import { formatOutput } from './output-formatter';
 import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
 
-export type CurrentRatesConfig = {
+export type CurrentRatesConfigBase = {
   instrument: InstrumentType;
   timeframe?: TimeframeType;
   dates?: {
@@ -34,29 +34,37 @@ const timeframeMap: Record<TimeframeType, string> = {
   mn1: '1MONTH'
 };
 
-export type CurrentRatesConfigArrayItem = CurrentRatesConfig & {
+export type CurrentRatesConfigArrayItem = CurrentRatesConfigBase & {
   timeframe?: Exclude<TimeframeType, 'tick'>;
   format?: 'array';
 };
 
-export type CurrentRatesConfigArrayTickItem = CurrentRatesConfig & {
+export type CurrentRatesConfigArrayTickItem = CurrentRatesConfigBase & {
   timeframe?: 'tick';
   format?: 'array';
 };
 
-export type CurrentRatesConfigJsonItem = CurrentRatesConfig & {
+export type CurrentRatesConfigJsonItem = CurrentRatesConfigBase & {
   timeframe?: Exclude<TimeframeType, 'tick'>;
   format?: 'json';
 };
 
-export type CurrentRatesConfigJsonTickItem = CurrentRatesConfig & {
+export type CurrentRatesConfigJsonTickItem = CurrentRatesConfigBase & {
   timeframe?: 'tick';
   format?: 'json';
 };
 
-export type CurrentRatesConfigCsv = CurrentRatesConfig & {
+export type CurrentRatesConfigCsv = CurrentRatesConfigBase & {
+  timeframe?: TimeframeType;
   format?: 'csv';
 };
+
+type CurrentRatesConfig =
+  | CurrentRatesConfigArrayItem
+  | CurrentRatesConfigArrayTickItem
+  | CurrentRatesConfigJsonItem
+  | CurrentRatesConfigJsonTickItem
+  | CurrentRatesConfigCsv;
 
 export async function getCurrentRates(config: CurrentRatesConfigArrayItem): Promise<ArrayItem[]>;
 export async function getCurrentRates(
@@ -81,7 +89,7 @@ export async function getCurrentRates({
   format = 'array',
   dates,
   limit
-}: CurrentRatesConfig): Promise<Output> {
+}: CurrentRatesConfig) {
   const mappedTimeframe = timeframeMap[timeframe];
   const instrumentName = instrumentMetaData[instrument].name;
   const offerSide = priceType === 'bid' ? 'B' : 'A';
