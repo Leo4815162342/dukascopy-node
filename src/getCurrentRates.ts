@@ -163,35 +163,33 @@ export async function getCurrentRates({
     }
   }
 
-  if (limit) {
-    rates = rates.slice(-limit);
-  }
+  // TODO: handle perf issues for low-volume low-timeframe requests
+  let filteredRates = limit
+    ? rates.slice((limit || 10) * -1)
+    : rates.filter(function (item) {
+        let key = item[0];
+
+        const isWithinBounds = item[0] >= +fromDate && item[0] < +toDate;
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        //@ts-ignore
+        const isUnique = !this.has(key);
+        if (isWithinBounds && isUnique) {
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          //@ts-ignore
+          this.add(key);
+          return true;
+        }
+
+        return false;
+      }, new Set());
 
   if (!volumes) {
     if (timeframe === 'tick') {
-      rates = rates.map(item => [item[0], item[1], item[2]]);
+      filteredRates = filteredRates.map(item => [item[0], item[1], item[2]]);
     } else {
-      rates = rates.map(item => [item[0], item[1], item[2], item[3], item[4]]);
+      filteredRates = filteredRates.map(item => [item[0], item[1], item[2], item[3], item[4]]);
     }
   }
-
-  // TODO: handle perf issues for low-volume low-timeframe requests
-  const filteredRates = rates.filter(function (item) {
-    let key = item[0];
-
-    const isWithinBounds = item[0] >= +fromDate && item[0] < +toDate;
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    //@ts-ignore
-    const isUnique = !this.has(key);
-    if (isWithinBounds && isUnique) {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      //@ts-ignore
-      this.add(key);
-      return true;
-    }
-
-    return false;
-  }, new Set());
 
   const output = formatOutput({ processedData: filteredRates, format, timeframe });
 
