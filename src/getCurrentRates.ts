@@ -8,28 +8,18 @@ import { TimeframeType } from './config/timeframes';
 import { formatOutput } from './output-formatter';
 import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
 
-export type CurrentRatesConfigBase = {
+export type CurrentRatesConfig = {
   instrument: InstrumentType;
   timeframe?: TimeframeType;
+  dates?: {
+    from: DateInput;
+    to?: DateInput;
+  };
+  limit?: number;
   volumes?: boolean;
   format?: FormatType;
   priceType?: PriceType;
 };
-
-export type CurrentRatesConfigWithDates = CurrentRatesConfigBase & {
-  dates: {
-    from: DateInput;
-    to?: DateInput;
-  };
-  limit?: never;
-};
-
-export type CurrentRatesConfigWithLimit = CurrentRatesConfigBase & {
-  limit: number;
-  dates?: never;
-};
-
-export type CurrentRatesConfig = CurrentRatesConfigWithDates | CurrentRatesConfigWithLimit;
 
 const timeframeMap: Record<TimeframeType, string> = {
   tick: 'TICK',
