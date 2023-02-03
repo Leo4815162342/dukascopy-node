@@ -1,4 +1,5 @@
 import fetch from 'node-fetch';
+import { DateInput } from './config';
 import { FormatType } from './config/format';
 import { InstrumentType } from './config/instruments';
 import { instrumentMetaData } from './config/instruments-metadata';
@@ -11,8 +12,8 @@ export type CurrentRatesConfig = {
   instrument: InstrumentType;
   timeframe?: TimeframeType;
   dates: {
-    from: Date;
-    to?: Date;
+    from: DateInput;
+    to?: DateInput;
   };
   volumes?: boolean;
   format?: FormatType;
@@ -86,7 +87,14 @@ export async function getCurrentRates({
   const offerSide = priceType === 'bid' ? 'B' : 'A';
   const timeDirection = order === 'asc' ? 'N' : 'P';
 
-  const { from: fromDate, to: toDate = new Date() } = dates;
+  const { from, to } = dates;
+
+  const fromDate = typeof from === 'string' || typeof from === 'number' ? new Date(from) : from;
+  const toDate = to
+    ? typeof to === 'string' || typeof to === 'number'
+      ? new Date(to)
+      : to
+    : new Date();
 
   let targetTimestamp = +toDate;
   let shouldFetch = true;
@@ -176,21 +184,3 @@ function generateSeed() {
   for (let i = 10; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
   return result;
 }
-
-getCurrentRates({
-  instrument: 'audusd',
-  timeframe: 'm1',
-  format: 'array',
-  dates: {
-    from: new Date('2023-01-30')
-  }
-}).then(rates => {
-  const first = rates[0];
-  const last = rates[rates.length - 1];
-  console.log('size', rates.length);
-  console.log('first', new Date(first[0]));
-  console.log('last', new Date(last[0]));
-  rates.forEach(rate => {
-    // console.log(new Date(rate[0]), ...rate);
-  });
-});
