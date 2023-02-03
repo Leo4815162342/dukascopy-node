@@ -112,8 +112,6 @@ export async function getCurrentRates({
     toDate = now;
   }
 
-  console.log(fromDate, toDate);
-
   let targetTimestamp = +toDate;
   let shouldFetch = true;
 
