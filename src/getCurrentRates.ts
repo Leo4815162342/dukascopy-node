@@ -153,8 +153,10 @@ export async function getCurrentRates({
     }
   }
 
+  const shouldSlice = !dates && (typeof limit === 'undefined' || typeof limit === 'number');
+
   // TODO: handle perf issues for low-volume low-timeframe requests
-  let filteredRates = limit
+  let filteredRates = shouldSlice
     ? rates.slice((limit || 10) * -1)
     : rates.filter(function (item) {
         let key = item[0];
