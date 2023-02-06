@@ -1,4 +1,5 @@
 import fetch from 'node-fetch';
+import { DateInput } from './config';
 import { FormatType } from './config/format';
 import { InstrumentType } from './config/instruments';
 import { instrumentMetaData } from './config/instruments-metadata';
@@ -7,14 +8,17 @@ import { TimeframeType } from './config/timeframes';
 import { formatOutput } from './output-formatter';
 import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
 
-export type CurrentRatesArgs = {
+export type CurrentRatesConfigBase = {
   instrument: InstrumentType;
   timeframe?: TimeframeType;
+  dates?: {
+    from: DateInput;
+    to?: DateInput;
+  };
   limit?: number;
   volumes?: boolean;
   format?: FormatType;
   priceType?: PriceType;
-  order?: 'asc' | 'desc';
 };
 
 const timeframeMap: Record<TimeframeType, string> = {
@@ -30,39 +34,47 @@ const timeframeMap: Record<TimeframeType, string> = {
   mn1: '1MONTH'
 };
 
-export type CurrentRatesArgsArrayItem = CurrentRatesArgs & {
+export type CurrentRatesConfigArrayItem = CurrentRatesConfigBase & {
   timeframe?: Exclude<TimeframeType, 'tick'>;
   format?: 'array';
 };
 
-export type CurrentRatesArgsArrayTickItem = CurrentRatesArgs & {
+export type CurrentRatesConfigArrayTickItem = CurrentRatesConfigBase & {
   timeframe?: 'tick';
   format?: 'array';
 };
 
-export type CurrentRatesArgsJsonItem = CurrentRatesArgs & {
+export type CurrentRatesConfigJsonItem = CurrentRatesConfigBase & {
   timeframe?: Exclude<TimeframeType, 'tick'>;
   format?: 'json';
 };
 
-export type CurrentRatesArgsJsonTickItem = CurrentRatesArgs & {
+export type CurrentRatesConfigJsonTickItem = CurrentRatesConfigBase & {
   timeframe?: 'tick';
   format?: 'json';
 };
 
-export type CurrentRatesArgsCsv = CurrentRatesArgs & {
+export type CurrentRatesConfigCsv = CurrentRatesConfigBase & {
+  timeframe?: TimeframeType;
   format?: 'csv';
 };
 
-export async function getCurrentRates(config: CurrentRatesArgsArrayItem): Promise<ArrayItem[]>;
+export type CurrentRatesConfig =
+  | CurrentRatesConfigArrayItem
+  | CurrentRatesConfigArrayTickItem
+  | CurrentRatesConfigJsonItem
+  | CurrentRatesConfigJsonTickItem
+  | CurrentRatesConfigCsv;
+
+export async function getCurrentRates(config: CurrentRatesConfigArrayItem): Promise<ArrayItem[]>;
 export async function getCurrentRates(
-  config: CurrentRatesArgsArrayTickItem
+  config: CurrentRatesConfigArrayTickItem
 ): Promise<ArrayTickItem[]>;
-export async function getCurrentRates(config: CurrentRatesArgsJsonItem): Promise<JsonItem[]>;
+export async function getCurrentRates(config: CurrentRatesConfigJsonItem): Promise<JsonItem[]>;
 export async function getCurrentRates(
-  config: CurrentRatesArgsJsonTickItem
+  config: CurrentRatesConfigJsonTickItem
 ): Promise<JsonItemTick[]>;
-export async function getCurrentRates(config: CurrentRatesArgsCsv): Promise<string>;
+export async function getCurrentRates(config: CurrentRatesConfigCsv): Promise<string>;
 
 /**
  * Get realtime rates for a given instrument.
@@ -71,66 +83,115 @@ export async function getCurrentRates(config: CurrentRatesArgsCsv): Promise<stri
  */
 export async function getCurrentRates({
   instrument,
-  limit = 100000,
   priceType = 'bid',
-  order = 'asc',
   timeframe = 'd1',
   volumes = true,
-  format = 'array'
-}: CurrentRatesArgs): Promise<Output> {
+  format = 'array',
+  dates,
+  limit
+}: CurrentRatesConfig) {
   const mappedTimeframe = timeframeMap[timeframe];
   const instrumentName = instrumentMetaData[instrument].name;
   const offerSide = priceType === 'bid' ? 'B' : 'A';
-  const timeDirection = order === 'asc' ? 'N' : 'P';
+  // const timeDirection = order === 'asc' ? 'N' : 'P';
+  const timeDirection = 'N';
 
-  const fetchSeed = generateSeed();
+  const now = new Date();
 
-  const urlParams = new URLSearchParams({
-    path: 'chart/json3',
-    instrument: instrumentName,
-    offer_side: offerSide,
-    interval: mappedTimeframe,
-    splits: 'true',
-    stocks: 'true',
-    init: 'true',
-    limit: String(limit * 2),
-    time_direction: timeDirection,
-    timestamp: String(+new Date()),
-    jsonp: `_callbacks____${fetchSeed}`
-  });
+  let fromDate: Date = now;
+  let toDate: Date = now;
 
-  const url = `https://freeserv.dukascopy.com/2.0/index.php?${urlParams.toString()}`;
+  if (dates) {
+    const { from, to = now } = dates;
+    fromDate = typeof from === 'string' || typeof from === 'number' ? new Date(from) : from;
+    toDate = typeof to === 'string' || typeof to === 'number' ? new Date(to) : to;
+  } else {
+    fromDate = getTimeframeLimit(timeframe, now, limit || 10);
+    toDate = now;
+  }
+
+  let targetTimestamp = +toDate;
+  let shouldFetch = true;
 
   let rates: number[][] = [];
 
-  try {
-    const rawResponse = await fetch(url, {
-      headers: {
-        Referer: 'https://freeserv.dukascopy.com/2.0'
-      }
+  while (targetTimestamp > +fromDate && shouldFetch) {
+    const fetchSeed = generateSeed();
+
+    const urlParams = new URLSearchParams({
+      path: 'chart/json3',
+      instrument: instrumentName,
+      offer_side: offerSide,
+      interval: mappedTimeframe,
+      splits: 'true',
+      stocks: 'true',
+      init: 'true',
+      time_direction: timeDirection,
+      timestamp: String(targetTimestamp),
+      jsonp: `_callbacks____${fetchSeed}`
     });
-    const rawResponseText = await rawResponse.text();
 
-    const responseClean = rawResponseText
-      .replace(`_callbacks____${fetchSeed}(`, '')
-      .replace(');', '');
-    rates = JSON.parse(responseClean);
-  } catch (err: unknown) {
-    // TODO: handle silent failure
-    rates = [];
-  }
+    const url = `https://freeserv.dukascopy.com/2.0/index.php?${urlParams.toString()}`;
 
-  rates = rates.length <= limit ? rates : rates.slice(0, limit);
+    let fetchedRates: number[][] = [];
 
-  if (!volumes) {
-    if (timeframe === 'tick') {
-      rates = rates.map(item => [item[0], item[1], item[2]]);
-    } else {
-      rates = rates.map(item => [item[0], item[1], item[2], item[3], item[4]]);
+    try {
+      const rawResponse = await fetch(url, {
+        headers: {
+          Referer: 'https://freeserv.dukascopy.com/2.0'
+        }
+      });
+      const rawResponseText = await rawResponse.text();
+
+      const responseClean = rawResponseText
+        .replace(`_callbacks____${fetchSeed}(`, '')
+        .replace(');', '');
+      fetchedRates = JSON.parse(responseClean);
+
+      if (fetchedRates.length > 0) {
+        const start = +new Date(fetchedRates[0][0]);
+        targetTimestamp = start;
+        rates.unshift(...fetchedRates);
+      } else {
+        shouldFetch = false;
+      }
+    } catch (err: unknown) {
+      // TODO: handle silent failure
+      shouldFetch = false;
     }
   }
 
-  const output = formatOutput({ processedData: rates, format, timeframe });
+  const shouldSlice = !dates && (typeof limit === 'undefined' || typeof limit === 'number');
+
+  // TODO: handle perf issues for low-volume low-timeframe requests
+  let filteredRates = shouldSlice
+    ? rates.slice((limit || 10) * -1)
+    : rates.filter(function (item) {
+        let key = item[0];
+
+        const isWithinBounds = item[0] >= +fromDate && item[0] < +toDate;
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        //@ts-ignore
+        const isUnique = !this.has(key);
+        if (isWithinBounds && isUnique) {
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          //@ts-ignore
+          this.add(key);
+          return true;
+        }
+
+        return false;
+      }, new Set());
+
+  if (!volumes) {
+    if (timeframe === 'tick') {
+      filteredRates = filteredRates.map(item => [item[0], item[1], item[2]]);
+    } else {
+      filteredRates = filteredRates.map(item => [item[0], item[1], item[2], item[3], item[4]]);
+    }
+  }
+
+  const output = formatOutput({ processedData: filteredRates, format, timeframe });
 
   return output;
 }
@@ -140,4 +201,24 @@ function generateSeed() {
   let result = '';
   for (let i = 10; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
   return result;
+}
+
+function getTimeframeLimit(timeframe: TimeframeType, now: Date, limit: number) {
+  const nowTimestamp = +now;
+  const bufferMultiplier = 5; // needed to account for weekends and holidays or holes in the datafeed
+
+  const timeframeLimits: Record<TimeframeType, number> = {
+    tick: 1000,
+    s1: 1000,
+    m1: 60 * 1000,
+    m5: 5 * 60 * 1000,
+    m15: 15 * 60 * 1000,
+    m30: 30 * 60 * 1000,
+    h1: 60 * 60 * 1000,
+    h4: 4 * 60 * 60 * 1000,
+    d1: 24 * 60 * 60 * 1000,
+    mn1: 30 * 24 * 60 * 60 * 1000
+  };
+
+  return new Date(nowTimestamp - limit * bufferMultiplier * timeframeLimits[timeframe]);
 }
