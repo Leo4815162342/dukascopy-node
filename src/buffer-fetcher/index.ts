@@ -1,12 +1,13 @@
 import fetch from 'node-fetch';
 import { CacheManagerBase } from '../cache-manager';
 import { splitArrayInChunks, wait } from '../utils/general';
-import { NotifyFn, BufferFetcherInput, BufferObject } from './types';
+import { BufferFetcherInput, BufferObject } from './types';
 
 export class BufferFetcher {
   batchSize: number;
   pauseBetweenBatchesMs: number;
-  notifyOnItemFetchFn?: NotifyFn;
+  onItemFetch?: BufferFetcherInput['onItemFetch'];
+  onBatchFetch?: BufferFetcherInput['onBatchFetch'];
   fetcherFn;
   retryCount: number;
   pauseBetweenRetriesMs: number;
@@ -15,7 +16,8 @@ export class BufferFetcher {
   constructor({
     batchSize = 10,
     pauseBetweenBatchesMs = 1000,
-    notifyOnItemFetchFn,
+    onItemFetch,
+    onBatchFetch,
     fetcherFn,
     retryCount,
     pauseBetweenRetriesMs,
@@ -23,7 +25,8 @@ export class BufferFetcher {
   }: BufferFetcherInput) {
     this.batchSize = batchSize;
     this.pauseBetweenBatchesMs = pauseBetweenBatchesMs;
-    this.notifyOnItemFetchFn = notifyOnItemFetchFn;
+    this.onItemFetch = onItemFetch;
+    this.onBatchFetch = onBatchFetch;
     this.fetcherFn = fetcherFn;
     this.cacheManager = cacheManager;
     this.retryCount = retryCount || 0;
@@ -48,11 +51,34 @@ export class BufferFetcher {
           buffer = await this.fetchBuffer(url);
         }
 
-        this.notifyOnItemFetchFn && this.notifyOnItemFetchFn(url, buffer, isCacheHit);
+        this.onItemFetch && this.onItemFetch(url, buffer, isCacheHit);
 
         return { url, buffer };
       })
     );
+  }
+
+  /**
+   * @experimental
+   */
+  public async fetch_optimized(urls: string[]): Promise<void> {
+    const batches = splitArrayInChunks(urls, this.batchSize);
+
+    for (let i = 0, n = batches.length; i < n; i++) {
+      const data = await this.fetchBatch(batches[i]);
+
+      if (this.cacheManager) {
+        await this.cacheManager.writeItemsToCache(data);
+      }
+
+      if (this.onBatchFetch) {
+        await this.onBatchFetch(data);
+      }
+
+      if (n > 1) {
+        await wait(this.pauseBetweenBatchesMs);
+      }
+    }
   }
 
   public async fetch(urls: string[]): Promise<BufferObject[]> {

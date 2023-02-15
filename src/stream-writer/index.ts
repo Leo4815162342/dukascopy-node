@@ -25,7 +25,7 @@ export async function writeStream(
     let body = '';
 
     if (format === Format.csv) {
-      if (i === 0) {
+      if (isFirstItem) {
         const csvHeaders = existingBodyHeaders.join(',');
         body += `${csvHeaders}\n`;
       }

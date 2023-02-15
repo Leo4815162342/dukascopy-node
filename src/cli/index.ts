@@ -99,7 +99,7 @@ if (isDebugActive) {
         batchSize,
         pauseBetweenBatchesMs,
         cacheManager: useCache ? new CacheManager({ cacheFolderPath }) : undefined,
-        notifyOnItemFetchFn: (url, buffer, isCacheHit): void => {
+        onItemFetch: (url, buffer, isCacheHit): void => {
           debug(`${DEBUG_NAMESPACE}:fetcher`)(
             url,
             `| ${formatBytes(buffer.length)} |`,

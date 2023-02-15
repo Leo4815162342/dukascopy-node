@@ -2,20 +2,22 @@
 import { createWriteStream, WriteStream } from 'fs';
 
 export class MemoryUsageReporter {
-  interval: NodeJS.Timeout | null;
-  intervalStep: number;
-  writeStream: WriteStream;
+  private interval: NodeJS.Timeout | null;
+  private intervalStep: number;
+  private writeStream: WriteStream;
 
   constructor({
-    csvReportPath,
+    csvReportPath = `./memory-usage-${new Date().toISOString().slice(0, 19)}.csv`,
     intervalStep = 1000
-  }: {
-    csvReportPath?: string;
-    intervalStep?: number;
-  }) {
+  }:
+    | {
+        csvReportPath?: string;
+        intervalStep?: number;
+      }
+    | undefined = {}) {
     this.interval = null;
     this.intervalStep = intervalStep;
-    this.writeStream = createWriteStream(csvReportPath || './memory-usage.csv', {
+    this.writeStream = createWriteStream(csvReportPath, {
       flags: 'a+'
     });
 
@@ -25,7 +27,7 @@ export class MemoryUsageReporter {
       .on('unhandledRejection', () => this.stop('unhandledRejection'));
   }
 
-  start() {
+  public start() {
     console.log('Starting memory usage tracker');
     this.interval = setInterval(() => {
       const { rss, heapTotal, heapUsed, external, arrayBuffers } = process.memoryUsage();
@@ -38,7 +40,7 @@ export class MemoryUsageReporter {
     }, this.intervalStep);
   }
 
-  stop(reason: string) {
+  public stop(reason?: string) {
     if (!this.interval) {
       console.log('Tried to stop memory usage tracker, but it was already stopped');
       return;
