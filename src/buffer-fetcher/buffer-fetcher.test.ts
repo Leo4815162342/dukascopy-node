@@ -38,7 +38,7 @@ describe('Buffer fetcher', () => {
 
   const bufferFetcher = new BufferFetcher({
     fetcherFn: fileSystemFetcherFn,
-    notifyOnItemFetchFn: notifyFn,
+    onItemFetch: notifyFn,
     batchSize: 2,
     pauseBetweenBatchesMs: 0
   });
