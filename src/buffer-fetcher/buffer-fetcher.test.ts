@@ -1,12 +1,10 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { expect, it, beforeEach, afterAll, describe, vi, MockedFunction } from 'vitest';
+import { expect, it, beforeEach, afterAll, describe, vi } from 'vitest';
 import { resolve } from 'path';
 import { remove } from 'fs-extra';
 import { BufferObject } from './types';
 import { BufferFetcher } from '.';
 import { CacheManager } from '../cache-manager';
-// import fetch from 'node-fetch';
-// vi.mock('node-fetch');
 
 const urls = [
   'https://datafeed.dukascopy.com/datafeed/EURUSD/2019/01/04/BID_candles_min_1.bi5',
