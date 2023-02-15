@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.31.2](https://github.com/Leo4815162342/dukascopy-node/compare/v1.31.1...v1.31.2) (2023-02-15)
+
+
+### Bug Fixes
+
+* lzma-purejs as cjs ([#118](https://github.com/Leo4815162342/dukascopy-node/issues/118)) ([243d4ca](https://github.com/Leo4815162342/dukascopy-node/commit/243d4ca09f112238e1b7d8e8417342fddc33b27f))
+
 ### [1.31.1](https://github.com/Leo4815162342/dukascopy-node/compare/v1.31.0...v1.31.1) (2023-02-03)
 
 
