@@ -6,10 +6,16 @@ export class MemoryUsageReporter {
   intervalStep: number;
   writeStream: WriteStream;
 
-  constructor(csvReportPath: string, intervalStep = 1000) {
+  constructor({
+    csvReportPath,
+    intervalStep = 1000
+  }: {
+    csvReportPath?: string;
+    intervalStep?: number;
+  }) {
     this.interval = null;
     this.intervalStep = intervalStep;
-    this.writeStream = createWriteStream(csvReportPath, {
+    this.writeStream = createWriteStream(csvReportPath || './memory-usage.csv', {
       flags: 'a+'
     });
 
