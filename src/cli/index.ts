@@ -3,6 +3,7 @@
 import { resolve, join } from 'path';
 import os from 'os';
 import { progressBar } from './progress';
+import { createWriteStream } from 'fs';
 import { ensureDir, ensureFile, stat } from 'fs-extra';
 import { isValid, validationErrors, input } from './config';
 import { normaliseDates } from '../dates-normaliser';
@@ -16,10 +17,10 @@ import { formatBytes } from '../utils/formatBytes';
 import chalk from 'chalk';
 import debug from 'debug';
 
-import { Timeframe } from '../config/timeframes';
 import { version } from '../../package.json';
 import { getDateString } from '../utils/date';
-import { writeStream } from '../stream-writer';
+import { writeStreamBatch } from '../stream-writer';
+import { MemoryUsageReporter } from '../utils/MemoryUsageReporter';
 
 const DEBUG_NAMESPACE = 'dukascopy-node:cli';
 
@@ -53,6 +54,10 @@ if (isDebugActive) {
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 (async () => {
+  const tracker = new MemoryUsageReporter();
+
+  tracker.start();
+
   try {
     debug(`${DEBUG_NAMESPACE}:version`)(version);
     debug(`${DEBUG_NAMESPACE}:nodejs`)(process.version);
@@ -89,11 +94,25 @@ if (isDebugActive) {
       debug(`${DEBUG_NAMESPACE}:urls`)(`Generated ${urls.length} urls`);
       debug(`${DEBUG_NAMESPACE}:urls`)(`%O`, urls);
 
-      let val = 0;
+      let step = 0;
 
       if (!isDebugActive) {
-        progressBar.start(urls.length, val);
+        progressBar.start(urls.length, step);
       }
+
+      await ensureDir(folderPath);
+
+      const fileWriteStream = createWriteStream(filePath, { flags: 'w+' });
+
+      fileWriteStream.on('finish', async () => {
+        if (!isDebugActive) {
+          progressBar.stop();
+        }
+        const relativeFilePath = join(dir, fileName);
+        await ensureFile(filePath);
+        const { size } = await stat(filePath);
+        printSuccess(`√ File saved: ${chalk.bold(relativeFilePath)} (${formatBytes(size)})`);
+      });
 
       const bufferFetcher = new BufferFetcher({
         batchSize,
@@ -106,49 +125,71 @@ if (isDebugActive) {
             `${isCacheHit ? 'cache' : 'network'}`
           );
           if (!isDebugActive) {
-            val += 1;
-            progressBar.update(val);
+            step += 1;
+            progressBar.update(step);
           }
+        },
+        onBatchFetch: (bufferObjects, isFirstBatch, isLastBatch) => {
+          const processedBatch = processData({
+            instrument,
+            requestedTimeframe: timeframe,
+            bufferObjects,
+            priceType,
+            volumes,
+            ignoreFlats
+          });
+
+          return writeStreamBatch({
+            fileWriteStream,
+            batch: processedBatch,
+            timeframe,
+            format,
+            isInline: inline,
+            isFirstBatch,
+            isLastBatch
+          });
         }
       });
 
-      const bufferredData = await bufferFetcher.fetch(urls);
+      await bufferFetcher.fetch_optimized(urls);
 
-      if (bufferredData.length) {
-        const processedData = processData({
-          instrument,
-          requestedTimeframe: timeframe,
-          bufferObjects: bufferredData,
-          priceType,
-          volumes,
-          ignoreFlats
-        });
+      // const bufferredData = await bufferFetcher.fetch(urls);
 
-        const [startDateMs, endDateMs] = [+startDate, +endDate];
+      // if (bufferredData.length) {
+      //   const processedData = processData({
+      //     instrument,
+      //     requestedTimeframe: timeframe,
+      //     bufferObjects: bufferredData,
+      //     priceType,
+      //     volumes,
+      //     ignoreFlats
+      //   });
 
-        const filteredData = processedData.filter(
-          ([timestamp]) => timestamp && timestamp >= startDateMs && timestamp < endDateMs
-        );
+      //   const [startDateMs, endDateMs] = [+startDate, +endDate];
 
-        debug(`${DEBUG_NAMESPACE}:data`)(
-          `Generated ${filteredData.length} ${
-            timeframe === Timeframe.tick ? 'ticks' : 'OHLC candles'
-          }`
-        );
+      //   const filteredData = processedData.filter(
+      //     ([timestamp]) => timestamp && timestamp >= startDateMs && timestamp < endDateMs
+      //   );
 
-        await ensureDir(folderPath);
+      //   debug(`${DEBUG_NAMESPACE}:data`)(
+      //     `Generated ${filteredData.length} ${
+      //       timeframe === Timeframe.tick ? 'ticks' : 'OHLC candles'
+      //     }`
+      //   );
 
-        await writeStream(filteredData, timeframe, format, filePath, inline);
-      }
+      //   await ensureDir(folderPath);
 
-      if (!isDebugActive) {
-        progressBar.stop();
-      }
+      //   await writeStream(filteredData, timeframe, format, filePath, inline);
+      // }
 
-      const relativeFilePath = join(dir, fileName);
-      await ensureFile(filePath);
-      const { size } = await stat(filePath);
-      printSuccess(`√ File saved: ${chalk.bold(relativeFilePath)} (${formatBytes(size)})`);
+      // if (!isDebugActive) {
+      //   progressBar.stop();
+      // }
+
+      // const relativeFilePath = join(dir, fileName);
+      // await ensureFile(filePath);
+      // const { size } = await stat(filePath);
+      // printSuccess(`√ File saved: ${chalk.bold(relativeFilePath)} (${formatBytes(size)})`);
     } else {
       printErrors(
         'Search config invalid:',
@@ -161,4 +202,5 @@ if (isDebugActive) {
     printErrors('\nSomething went wrong:', JSON.stringify(err));
     process.exit(0);
   }
+  tracker.stop();
 })();

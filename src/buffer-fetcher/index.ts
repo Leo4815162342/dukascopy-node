@@ -63,16 +63,27 @@ export class BufferFetcher {
    */
   public async fetch_optimized(urls: string[]): Promise<void> {
     const batches = splitArrayInChunks(urls, this.batchSize);
-
     for (let i = 0, n = batches.length; i < n; i++) {
-      const data = await this.fetchBatch(batches[i]);
+      const batchData = await this.fetchBatch(batches[i]);
 
       if (this.cacheManager) {
-        await this.cacheManager.writeItemsToCache(data);
+        await this.cacheManager.writeItemsToCache(batchData);
       }
 
       if (this.onBatchFetch) {
-        await this.onBatchFetch(data);
+        const isFirstBatch = i === 0;
+        const isLastBatch = i === n - 1;
+        const filteredBatchData = [];
+
+        for (let j = 0, m = batchData.length; j < m; j++) {
+          if (batchData[j].buffer.length > 0) {
+            filteredBatchData.push(batchData[j]);
+          }
+        }
+
+        if (filteredBatchData.length) {
+          await this.onBatchFetch(filteredBatchData, isFirstBatch, isLastBatch);
+        }
       }
 
       if (n > 1) {

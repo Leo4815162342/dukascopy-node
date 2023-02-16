@@ -8,7 +8,7 @@ export class MemoryUsageReporter {
 
   constructor({
     csvReportPath = `./memory-usage-${new Date().toISOString().slice(0, 19)}.csv`,
-    intervalStep = 1000
+    intervalStep = 5000
   }:
     | {
         csvReportPath?: string;
