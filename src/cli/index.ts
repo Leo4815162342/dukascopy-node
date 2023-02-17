@@ -19,8 +19,7 @@ import debug from 'debug';
 
 import { version } from '../../package.json';
 import { getDateString } from '../utils/date';
-import { writeStreamBatch } from '../stream-writer';
-import { MemoryUsageReporter } from '../utils/MemoryUsageReporter';
+import { BatchStreamWriter } from '../stream-writer';
 
 const DEBUG_NAMESPACE = 'dukascopy-node:cli';
 
@@ -54,10 +53,6 @@ if (isDebugActive) {
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 (async () => {
-  const tracker = new MemoryUsageReporter();
-
-  tracker.start();
-
   try {
     debug(`${DEBUG_NAMESPACE}:version`)(version);
     debug(`${DEBUG_NAMESPACE}:nodejs`)(process.version);
@@ -90,7 +85,6 @@ if (isDebugActive) {
       }
 
       const urls = generateUrls({ instrument, timeframe, priceType, startDate, endDate });
-
       debug(`${DEBUG_NAMESPACE}:urls`)(`Generated ${urls.length} urls`);
       debug(`${DEBUG_NAMESPACE}:urls`)(`%O`, urls);
 
@@ -114,6 +108,16 @@ if (isDebugActive) {
         printSuccess(`√ File saved: ${chalk.bold(relativeFilePath)} (${formatBytes(size)})`);
       });
 
+      const batchStreamWriter = new BatchStreamWriter({
+        fileWriteStream,
+        timeframe,
+        format,
+        isInline: inline,
+        volumes,
+        startDateTs: +startDate,
+        endDateTs: +endDate
+      });
+
       const bufferFetcher = new BufferFetcher({
         batchSize,
         pauseBetweenBatchesMs,
@@ -129,67 +133,35 @@ if (isDebugActive) {
             progressBar.update(step);
           }
         },
-        onBatchFetch: (bufferObjects, isFirstBatch, isLastBatch) => {
-          const processedBatch = processData({
-            instrument,
-            requestedTimeframe: timeframe,
-            bufferObjects,
-            priceType,
-            volumes,
-            ignoreFlats
-          });
+        onBatchFetch: async (bufferObjects, isLastBatch) => {
+          const filteredBatchData = [];
 
-          return writeStreamBatch({
-            fileWriteStream,
-            batch: processedBatch,
-            timeframe,
-            format,
-            isInline: inline,
-            isFirstBatch,
-            isLastBatch
-          });
+          for (let j = 0, m = bufferObjects.length; j < m; j++) {
+            if (bufferObjects[j].buffer.length > 0) {
+              filteredBatchData.push(bufferObjects[j]);
+            }
+          }
+
+          if (filteredBatchData.length) {
+            const processedBatch = processData({
+              instrument,
+              requestedTimeframe: timeframe,
+              bufferObjects: filteredBatchData,
+              priceType,
+              volumes,
+              ignoreFlats
+            });
+
+            await batchStreamWriter.writeBatch(processedBatch);
+          }
+
+          if (isLastBatch) {
+            await batchStreamWriter.closeBatchFile();
+          }
         }
       });
 
       await bufferFetcher.fetch_optimized(urls);
-
-      // const bufferredData = await bufferFetcher.fetch(urls);
-
-      // if (bufferredData.length) {
-      //   const processedData = processData({
-      //     instrument,
-      //     requestedTimeframe: timeframe,
-      //     bufferObjects: bufferredData,
-      //     priceType,
-      //     volumes,
-      //     ignoreFlats
-      //   });
-
-      //   const [startDateMs, endDateMs] = [+startDate, +endDate];
-
-      //   const filteredData = processedData.filter(
-      //     ([timestamp]) => timestamp && timestamp >= startDateMs && timestamp < endDateMs
-      //   );
-
-      //   debug(`${DEBUG_NAMESPACE}:data`)(
-      //     `Generated ${filteredData.length} ${
-      //       timeframe === Timeframe.tick ? 'ticks' : 'OHLC candles'
-      //     }`
-      //   );
-
-      //   await ensureDir(folderPath);
-
-      //   await writeStream(filteredData, timeframe, format, filePath, inline);
-      // }
-
-      // if (!isDebugActive) {
-      //   progressBar.stop();
-      // }
-
-      // const relativeFilePath = join(dir, fileName);
-      // await ensureFile(filePath);
-      // const { size } = await stat(filePath);
-      // printSuccess(`√ File saved: ${chalk.bold(relativeFilePath)} (${formatBytes(size)})`);
     } else {
       printErrors(
         'Search config invalid:',
@@ -202,5 +174,4 @@ if (isDebugActive) {
     printErrors('\nSomething went wrong:', JSON.stringify(err));
     process.exit(0);
   }
-  tracker.stop();
 })();
