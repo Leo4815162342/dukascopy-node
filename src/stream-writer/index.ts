@@ -158,7 +158,7 @@ export class BatchStreamWriter {
           body += `[${arrayBody}]`;
         }
 
-        body += (!isLastItem ? ',' : '') + (!this.isInline ? '\n' : '');
+        body += (!isLastItem ? ',' : '') + (!isLastItem && !this.isInline ? '\n' : '');
       }
 
       if (!body) {
@@ -181,8 +181,9 @@ export class BatchStreamWriter {
   }
 
   public async closeBatchFile() {
-    if (this.format === Format.json && !this.isFileEmpty) {
-      const ableToWrite = this.fileWriteStream.write(']');
+    if ((this.format === Format.json || this.format === Format.array) && !this.isFileEmpty) {
+      const body = this.isInline ? ']' : '\n]';
+      const ableToWrite = this.fileWriteStream.write(body);
       if (!ableToWrite) {
         await new Promise(resolve => {
           this.fileWriteStream.once('drain', resolve);
