@@ -191,5 +191,7 @@ export class BatchStreamWriter {
       }
     }
     this.fileWriteStream.end();
+
+    return true as const;
   }
 }
