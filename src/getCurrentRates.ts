@@ -6,7 +6,7 @@ import { instrumentMetaData } from './config/instruments-metadata';
 import { PriceType } from './config/price-types';
 import { TimeframeType } from './config/timeframes';
 import { formatOutput } from './output-formatter';
-import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
+import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick } from './output-formatter/types';
 
 export type CurrentRatesConfigBase = {
   instrument: InstrumentType;
