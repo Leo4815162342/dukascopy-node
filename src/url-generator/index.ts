@@ -49,19 +49,20 @@ function getConstructor(instrument: InstrumentType, priceType: PriceType, endDat
       tempStartDate = getStartOfUtc(tempStartDate, rangetype, 1);
     }
 
-    const result = dates.reduce((all: string[], date, i, arr) => {
-      const isLastItem = i === arr.length - 1;
+    const result = [];
+
+    for (let i = 0; i < dates.length; i++) {
+      const date = dates[i];
+      const isLastItem = i === dates.length - 1;
 
       if (isLastItem && isCurrentRange(rangetype, date)) {
         const lowerRangeData = construct(getLowerRange(rangetype), date);
-        all.push(...lowerRangeData);
+        result.push(...lowerRangeData);
       } else {
         const url = getUrl(instrument, date, rangetype, priceType);
-        all.push(url);
+        result.push(url);
       }
-
-      return all;
-    }, []);
+    }
 
     return result;
   };

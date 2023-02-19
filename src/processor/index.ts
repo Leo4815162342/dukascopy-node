@@ -13,7 +13,11 @@ function processData({
   volumes,
   ignoreFlats
 }: ProcessDataInput): ProcessDataOutput {
-  const result = bufferObjects.map(({ url, buffer }) => {
+  const result: ProcessDataOutput = [];
+
+  for (let i = 0, n = bufferObjects.length; i < n; i++) {
+    const { url, buffer } = bufferObjects[i];
+
     const startDate = getDateFromUrl(url);
     const urlTimeframe = getTimeframeFromUrl(url);
 
@@ -36,10 +40,12 @@ function processData({
       volumes
     });
 
-    return aggregatedData;
-  });
+    for (let j = 0, m = aggregatedData.length; j < m; j++) {
+      result.push(aggregatedData[j]);
+    }
+  }
 
-  return ([] as ProcessDataOutput).concat(...result);
+  return result;
 }
 
 export { processData };

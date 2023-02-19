@@ -5,12 +5,11 @@ export interface BufferObject {
   buffer: Buffer;
 }
 
-export type NotifyFn = (url: string, buffer: Buffer, isCacheHit: boolean) => void;
-
 export interface BufferFetcherInput {
   batchSize?: number;
-  pauseBetweenBatchesMs?: number; // TODO: use exponential backoff
-  notifyOnItemFetchFn?: NotifyFn;
+  pauseBetweenBatchesMs?: number;
+  onItemFetch?: (url: string, buffer: Buffer, isCacheHit: boolean) => void;
+  onBatchFetch?: (bufferObjects: BufferObject[], isLastBatch: boolean) => Promise<unknown>;
   fetcherFn?: (url: string) => Promise<Buffer>;
   cacheManager?: CacheManagerBase;
   retryCount?: number;

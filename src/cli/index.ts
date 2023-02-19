@@ -3,6 +3,7 @@
 import { resolve, join } from 'path';
 import os from 'os';
 import { progressBar } from './progress';
+import { createWriteStream } from 'fs';
 import { ensureDir, ensureFile, stat } from 'fs-extra';
 import { isValid, validationErrors, input } from './config';
 import { normaliseDates } from '../dates-normaliser';
@@ -16,10 +17,9 @@ import { formatBytes } from '../utils/formatBytes';
 import chalk from 'chalk';
 import debug from 'debug';
 
-import { Timeframe } from '../config/timeframes';
 import { version } from '../../package.json';
 import { getDateString } from '../utils/date';
-import { writeStream } from '../stream-writer';
+import { BatchStreamWriter } from '../stream-writer';
 
 const DEBUG_NAMESPACE = 'dukascopy-node:cli';
 
@@ -85,70 +85,83 @@ if (isDebugActive) {
       }
 
       const urls = generateUrls({ instrument, timeframe, priceType, startDate, endDate });
-
       debug(`${DEBUG_NAMESPACE}:urls`)(`Generated ${urls.length} urls`);
       debug(`${DEBUG_NAMESPACE}:urls`)(`%O`, urls);
 
-      let val = 0;
+      let step = 0;
 
       if (!isDebugActive) {
-        progressBar.start(urls.length, val);
+        progressBar.start(urls.length, step);
       }
+
+      await ensureDir(folderPath);
+
+      const fileWriteStream = createWriteStream(filePath, { flags: 'w+' });
+
+      fileWriteStream.on('finish', async () => {
+        if (!isDebugActive) {
+          progressBar.stop();
+        }
+        const relativeFilePath = join(dir, fileName);
+        await ensureFile(filePath);
+        const { size } = await stat(filePath);
+        printSuccess(`√ File saved: ${chalk.bold(relativeFilePath)} (${formatBytes(size)})`);
+      });
+
+      const batchStreamWriter = new BatchStreamWriter({
+        fileWriteStream,
+        timeframe,
+        format,
+        isInline: inline,
+        volumes,
+        startDateTs: +startDate,
+        endDateTs: +endDate
+      });
 
       const bufferFetcher = new BufferFetcher({
         batchSize,
         pauseBetweenBatchesMs,
         cacheManager: useCache ? new CacheManager({ cacheFolderPath }) : undefined,
-        notifyOnItemFetchFn: (url, buffer, isCacheHit): void => {
+        onItemFetch: (url, buffer, isCacheHit): void => {
           debug(`${DEBUG_NAMESPACE}:fetcher`)(
             url,
             `| ${formatBytes(buffer.length)} |`,
             `${isCacheHit ? 'cache' : 'network'}`
           );
           if (!isDebugActive) {
-            val += 1;
-            progressBar.update(val);
+            step += 1;
+            progressBar.update(step);
+          }
+        },
+        onBatchFetch: async (bufferObjects, isLastBatch) => {
+          const filteredBatchData = [];
+
+          for (let j = 0, m = bufferObjects.length; j < m; j++) {
+            if (bufferObjects[j].buffer.length > 0) {
+              filteredBatchData.push(bufferObjects[j]);
+            }
+          }
+
+          if (filteredBatchData.length) {
+            const processedBatch = processData({
+              instrument,
+              requestedTimeframe: timeframe,
+              bufferObjects: filteredBatchData,
+              priceType,
+              volumes,
+              ignoreFlats
+            });
+
+            await batchStreamWriter.writeBatch(processedBatch);
+          }
+
+          if (isLastBatch) {
+            await batchStreamWriter.closeBatchFile();
           }
         }
       });
 
-      const bufferredData = await bufferFetcher.fetch(urls);
-
-      if (bufferredData.length) {
-        const processedData = processData({
-          instrument,
-          requestedTimeframe: timeframe,
-          bufferObjects: bufferredData,
-          priceType,
-          volumes,
-          ignoreFlats
-        });
-
-        const [startDateMs, endDateMs] = [+startDate, +endDate];
-
-        const filteredData = processedData.filter(
-          ([timestamp]) => timestamp && timestamp >= startDateMs && timestamp < endDateMs
-        );
-
-        debug(`${DEBUG_NAMESPACE}:data`)(
-          `Generated ${filteredData.length} ${
-            timeframe === Timeframe.tick ? 'ticks' : 'OHLC candles'
-          }`
-        );
-
-        await ensureDir(folderPath);
-
-        await writeStream(filteredData, timeframe, format, filePath, inline);
-      }
-
-      if (!isDebugActive) {
-        progressBar.stop();
-      }
-
-      const relativeFilePath = join(dir, fileName);
-      await ensureFile(filePath);
-      const { size } = await stat(filePath);
-      printSuccess(`√ File saved: ${chalk.bold(relativeFilePath)} (${formatBytes(size)})`);
+      await bufferFetcher.fetch_optimized(urls);
     } else {
       printErrors(
         'Search config invalid:',

@@ -17,7 +17,7 @@ import { CacheManager } from './cache-manager';
 import { formatBytes } from './utils/formatBytes';
 import { Timeframe } from './config/timeframes';
 import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
-import { NotifyFn } from './buffer-fetcher/types';
+import { BufferFetcherInput } from './buffer-fetcher/types';
 
 import { version } from '../package.json';
 
@@ -86,7 +86,7 @@ export async function getHistoricalRates(config: Config): Promise<Output> {
   debug(`${DEBUG_NAMESPACE}:urls`)(`Generated ${urls.length} urls`);
   debug(`${DEBUG_NAMESPACE}:urls`)(`%O`, urls);
 
-  const notifyOnItemFetchFn: NotifyFn | undefined = process.env.DEBUG
+  const onItemFetch: BufferFetcherInput['onItemFetch'] = process.env.DEBUG
     ? (url, buffer, isCacheHit) => {
         debug(`${DEBUG_NAMESPACE}:fetcher`)(
           url,
@@ -102,7 +102,7 @@ export async function getHistoricalRates(config: Config): Promise<Output> {
     cacheManager: useCache ? new CacheManager({ cacheFolderPath }) : undefined,
     retryCount,
     pauseBetweenRetriesMs,
-    notifyOnItemFetchFn
+    onItemFetch
   });
 
   const bufferredData = await bufferFetcher.fetch(urls);
