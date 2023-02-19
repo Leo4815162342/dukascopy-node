@@ -18,6 +18,7 @@
 		"coverage": "vitest run --coverage",
 		"format": "prettier --config .prettierrc 'src/**/*.ts' --write",
 		"lint": "eslint ./src --ext ts --ext js",
+		"type-check": "tsc --noEmit --skipLibCheck",
 		"gen:meta": "tsx src/utils/instrument-meta-data/generate-data.ts",
 		"gen:instruments-md": "tsx src/utils/instrument-meta-data/generate-instrument-md.ts",
 		"release": "standard-version && git push --follow-tags origin master && pnpm build && npm publish"

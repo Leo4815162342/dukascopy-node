@@ -19,5 +19,7 @@ jobs:
         with:
           version: 7.0.0-rc.7
           run_install: true
+      - run: pnpm lint
+      - run: pnpm type-check
       - run: pnpm test
       - run: pnpm build
