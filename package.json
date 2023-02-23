@@ -18,9 +18,11 @@
 		"coverage": "vitest run --coverage",
 		"format": "prettier --config .prettierrc 'src/**/*.ts' --write",
 		"lint": "eslint ./src --ext ts --ext js",
+		"type-check": "tsc --noEmit --skipLibCheck",
 		"gen:meta": "tsx src/utils/instrument-meta-data/generate-data.ts",
 		"gen:instruments-md": "tsx src/utils/instrument-meta-data/generate-instrument-md.ts",
-		"release": "standard-version && git push --follow-tags origin master && pnpm build && npm publish"
+		"release": "standard-version && git push --follow-tags origin master && pnpm build && npm publish",
+		"release:beta": "pnpm build && npm publish --tag beta"
 	},
 	"author": {
 		"name": "Leonid Pyrlia",
@@ -68,12 +70,14 @@
 		"eslint": "8.13.0",
 		"eslint-config-prettier": "8.5.0",
 		"eslint-plugin-prettier": "4.0.0",
+		"msw": "1.0.1",
 		"prettier": "2.6.2",
 		"standard-version": "9.3.2",
 		"tsup": "5.12.5",
 		"tsx": "3.12.2",
 		"typescript": "4.6.3",
-		"vitest": "0.9.3"
+		"vite": "4.1.4",
+		"vitest": "0.28.5"
 	},
 	"engines": {
 		"node": ">=12"

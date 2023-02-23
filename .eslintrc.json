@@ -15,6 +15,7 @@
     "no-console": 1,
     "prettier/prettier": 2,
     "prefer-const": 0,
-    "@typescript-eslint/no-loss-of-precision": 0
+    "@typescript-eslint/no-loss-of-precision": 0,
+    "@typescript-eslint/ban-ts-comment": 0
   }
 }

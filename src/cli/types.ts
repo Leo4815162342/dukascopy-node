@@ -1,6 +1,6 @@
-import { Config } from '../config';
+import { ConfigBase } from '../config';
 
-export interface CliConfig extends Required<Config> {
+export interface CliConfig extends Required<ConfigBase> {
   dir: string;
   silent: boolean;
 }

@@ -19,6 +19,7 @@ async function getTestCases<T>(folder: string): Promise<
     modulePaths.map(async path => {
       return {
         path,
+        //@ts-expect-error
         content: (await import(path)) as T
       };
     })

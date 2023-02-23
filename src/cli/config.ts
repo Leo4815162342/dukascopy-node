@@ -7,9 +7,16 @@ import { Format } from '../config/format';
 import { Price } from '../config/price-types';
 import { Timeframe } from '../config/timeframes';
 
+export interface CliConfig extends ConfigBase {
+  dir: string;
+  silent: boolean;
+  debug: boolean;
+  inline: boolean;
+}
+
 const now = 'now';
 
-program
+const commanderSchema = program
   .option('-d, --debug', 'Output extra debugging', false)
   .option('-s, --silent', 'Hides the search config in the CLI output', false)
   .requiredOption('-i, --instrument <value>', 'Trading instrument')
@@ -17,7 +24,7 @@ program
   .option('-to, --date-to <value>', `To date (yyyy-mm-dd or '${now}')`, now)
   .option(
     '-t, --timeframe <value>',
-    'Timeframe aggregation (tick, m1, m5, m15, m30, h1, h4, d1, mn1)',
+    'Timeframe aggregation (tick, s1, m1, m5, m15, m30, h1, h4, d1, mn1)',
     Timeframe.d1
   )
   .option('-p, --price-type <value>', 'Price type: (bid, ask)', Price.bid)
@@ -38,55 +45,48 @@ program
     false
   );
 
-program.parse(process.argv);
+export function getConfigFromCliArgs(argv: NodeJS.Process['argv']) {
+  const options = commanderSchema.parse(argv).opts();
 
-const options = program.opts();
-
-// Parse "now" date parameter and convert
-// it to current time.
-if (options.dateTo === now) {
-  options.dateTo = new Date();
-}
-
-export interface CliConfig extends ConfigBase {
-  dir: string;
-  silent: boolean;
-  debug: boolean;
-  inline: boolean;
-}
-
-const cliConfig: CliConfig = {
-  instrument: options.instrument,
-  dates: {
-    from: options.dateFrom,
-    to: options.dateTo
-  },
-  timeframe: options.timeframe,
-  priceType: options.priceType,
-  utcOffset: options.utcOffset,
-  volumes: options.volumes,
-  ignoreFlats: !options.flats,
-  dir: options.directory,
-  silent: options.silent,
-  format: options.format,
-  batchSize: options.batchSize,
-  pauseBetweenBatchesMs: options.batchPause,
-  useCache: options.cache,
-  cacheFolderPath: options.cachePath,
-  retryCount: options.retries,
-  pauseBetweenRetriesMs: options.retryPause,
-  debug: options.debug,
-  inline: options.inline
-};
-
-const cliSchema: InputSchema<CliConfig> = {
-  ...schema,
-  ...{
-    dir: { type: 'string', required: true } as RuleString,
-    silent: { type: 'boolean', required: false } as RuleBoolean,
-    debug: { type: 'boolean', required: false } as RuleBoolean,
-    inline: { type: 'boolean', required: false } as RuleBoolean
+  // Parse "now" date parameter and convert
+  // it to current time.
+  if (options.dateTo === now) {
+    options.dateTo = new Date();
   }
-};
 
-export const { input, isValid, validationErrors } = validateConfig(cliConfig, cliSchema);
+  const cliConfig: CliConfig = {
+    instrument: options.instrument,
+    dates: {
+      from: options.dateFrom,
+      to: options.dateTo
+    },
+    timeframe: options.timeframe,
+    priceType: options.priceType,
+    utcOffset: options.utcOffset,
+    volumes: options.volumes,
+    ignoreFlats: !options.flats,
+    dir: options.directory,
+    silent: options.silent,
+    format: options.format,
+    batchSize: options.batchSize,
+    pauseBetweenBatchesMs: options.batchPause,
+    useCache: options.cache,
+    cacheFolderPath: options.cachePath,
+    retryCount: options.retries,
+    pauseBetweenRetriesMs: options.retryPause,
+    debug: options.debug,
+    inline: options.inline
+  };
+
+  const cliSchema: InputSchema<CliConfig> = {
+    ...schema,
+    ...{
+      dir: { type: 'string', required: true } as RuleString,
+      silent: { type: 'boolean', required: false } as RuleBoolean,
+      debug: { type: 'boolean', required: false } as RuleBoolean,
+      inline: { type: 'boolean', required: false } as RuleBoolean
+    }
+  };
+
+  return validateConfig(cliConfig, cliSchema);
+}
