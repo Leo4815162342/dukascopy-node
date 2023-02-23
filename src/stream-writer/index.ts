@@ -119,7 +119,8 @@ export class BatchStreamWriter {
 
     for (let j = 0; j < batch.length; j++) {
       const item = batch[j];
-      const isItemInRange = item[0] >= this.startDateTs && item[0] < this.endDateTs;
+      const isItemInRange =
+        item.length > 0 && item[0] >= this.startDateTs && item[0] < this.endDateTs;
 
       if (isItemInRange) {
         batchWithinRange.push(item);
@@ -127,7 +128,8 @@ export class BatchStreamWriter {
     }
 
     for (let i = 0; i < batchWithinRange.length; i++) {
-      const item = batch[i];
+      const item = batchWithinRange[i];
+
       const isFirstItem = i === 0;
       const isLastItem = i === batchWithinRange.length - 1;
       const shouldOpen = isFirstItem && this.isFileEmpty;

@@ -38,7 +38,6 @@ export class BufferFetcher {
       urls.map(async url => {
         let buffer: Buffer;
         let isCacheHit = false;
-
         if (this.cacheManager) {
           const bufferFromCache = await this.cacheManager.readItemFromCache(url);
           if (bufferFromCache) {
@@ -50,7 +49,6 @@ export class BufferFetcher {
         } else {
           buffer = await this.fetchBuffer(url);
         }
-
         this.onItemFetch && this.onItemFetch(url, buffer, isCacheHit);
 
         return { url, buffer };
@@ -61,7 +59,7 @@ export class BufferFetcher {
   /**
    * @experimental
    */
-  public async fetch_optimized(urls: string[]): Promise<void> {
+  public async fetch_optimized(urls: string[]) {
     const batches = splitArrayInChunks(urls, this.batchSize);
     for (let i = 0, n = batches.length; i < n; i++) {
       const isLastBatch = i === n - 1;
@@ -75,10 +73,12 @@ export class BufferFetcher {
         await this.onBatchFetch(batchData, isLastBatch);
       }
 
-      if (n > 1 && !isLastBatch) {
+      if (n > 1 && !isLastBatch && this.pauseBetweenBatchesMs) {
         await wait(this.pauseBetweenBatchesMs);
       }
     }
+
+    return true as const;
   }
 
   public async fetch(urls: string[]): Promise<BufferObject[]> {
