@@ -142,7 +142,7 @@ export class BatchStreamWriter {
           body += `${csvHeaders}\n`;
         }
 
-        body += item.join(',') + (!isLastItem ? '\n' : '');
+        body += item.join(',') + '\n';
       } else {
         if (shouldOpen) {
           body += '[' + (!this.isInline ? '\n' : '');
