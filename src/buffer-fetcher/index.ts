@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+import fetch, { Response } from 'node-fetch';
 import { CacheManagerBase } from '../cache-manager';
 import { splitArrayInChunks, wait } from '../utils/general';
 import { BufferFetcherInput, BufferObject } from './types';
@@ -110,21 +110,40 @@ export class BufferFetcher {
     if (this.fetcherFn) {
       return this.fetcherFn(url);
     }
+    console.log(url);
 
-    let data = await fetch(url);
+    let data = new Response();
 
-    if (this.retryCount && data.status !== 200) {
+    const shouldUseRetry = this.retryCount > 0;
+    console.log({ shouldUseRetry });
+
+    if (shouldUseRetry) {
       let retries = 0;
-      let isRetrySuccess = false;
-      while (retries < this.retryCount && !isRetrySuccess) {
-        data = await fetch(url);
-        isRetrySuccess = data.status === 200;
+      let isTrySuccess = false;
+      let errorMsg = '';
+      while (retries < this.retryCount && !isTrySuccess) {
+        let isCallSuccess = true;
+        try {
+          data = await fetch(url);
+        } catch (e) {
+          isCallSuccess = false;
+          errorMsg = e instanceof Error ? e.message : JSON.stringify(e);
+        }
+
+        const isStatusOk = data.status === 200;
+        isTrySuccess = isCallSuccess && isStatusOk;
+        console.log(url, retries, isTrySuccess);
         retries++;
         const isLastRetry = retries === this.retryCount;
-        if (!isRetrySuccess && !isLastRetry) {
+        if (!isTrySuccess && !isLastRetry) {
           await wait(this.pauseBetweenRetriesMs);
         }
+        if (isLastRetry && !isTrySuccess && errorMsg) {
+          throw Error(errorMsg);
+        }
       }
+    } else {
+      data = await fetch(url);
     }
 
     return data.status === 200 ? data.buffer() : Buffer.from('', 'utf8');
