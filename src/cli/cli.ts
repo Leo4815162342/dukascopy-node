@@ -6,7 +6,7 @@ import { ensureDir, ensureFile, stat } from 'fs-extra';
 import { getConfigFromCliArgs } from './config';
 import { normaliseDates } from '../dates-normaliser';
 import { generateUrls } from '../url-generator';
-import { printDivider, printHeader, printSuccess, printErrors } from './printer';
+import { printDivider, printHeader, printSuccess, printErrors, printGeneral } from './printer';
 import { Format } from '../config/format';
 import { BufferFetcher } from '../buffer-fetcher';
 import { CacheManager } from '../cache-manager';
@@ -19,6 +19,7 @@ import { version } from '../../package.json';
 import { getDateString } from '../utils/date';
 import { BatchStreamWriter } from '../stream-writer';
 import { BufferObject } from '../buffer-fetcher/types';
+import { formatTimeDuration } from '../utils/formatTimeDuration';
 
 const DEBUG_NAMESPACE = 'dukascopy-node:cli';
 
@@ -52,6 +53,8 @@ export async function run(argv: NodeJS.Process['argv']) {
       debug.enable(process.env.DEBUG);
     }
   }
+
+  const downloadStartTs = Date.now();
 
   try {
     debug(`${DEBUG_NAMESPACE}:version`)(version);
@@ -99,6 +102,7 @@ export async function run(argv: NodeJS.Process['argv']) {
       const fileWriteStream = createWriteStream(filePath, { flags: 'w+' });
 
       fileWriteStream.on('finish', async () => {
+        const downloadEndTs = Date.now();
         if (!isDebugActive) {
           progressBar.stop();
         }
@@ -106,6 +110,7 @@ export async function run(argv: NodeJS.Process['argv']) {
         await ensureFile(filePath);
         const { size } = await stat(filePath);
         printSuccess(`√ File saved: ${chalk.bold(relativeFilePath)} (${formatBytes(size)})`);
+        printGeneral(`Download time: ${formatTimeDuration(downloadEndTs - downloadStartTs)}`);
       });
 
       const batchStreamWriter = new BatchStreamWriter({
@@ -169,8 +174,9 @@ export async function run(argv: NodeJS.Process['argv']) {
       );
       process.exit(0);
     }
-  } catch (err) {
-    printErrors('\nSomething went wrong:', JSON.stringify(err));
+  } catch (err: unknown) {
+    const errorMsg = err instanceof Error ? err.message : JSON.stringify(err);
+    printErrors('\nSomething went wrong:', errorMsg);
     process.exit(0);
   }
 }

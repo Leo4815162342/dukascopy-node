@@ -34,7 +34,7 @@ export class BufferFetcher {
   }
 
   private async fetchBatch(urls: string[]): Promise<BufferObject[]> {
-    return await Promise.all(
+    return Promise.all(
       urls.map(async url => {
         let buffer: Buffer;
         let isCacheHit = false;
