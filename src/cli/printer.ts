@@ -63,3 +63,8 @@ export function printWarning(text: string): void {
   log(chalk.yellowBright(text));
   printSpacer();
 }
+
+export function printGeneral(text: string): void {
+  log(text);
+  printSpacer();
+}
