@@ -87,10 +87,11 @@ export class BufferFetcher {
     const batches = splitArrayInChunks(urls, this.batchSize);
 
     for (let i = 0, n = batches.length; i < n; i++) {
+      const isLastBatch = i === n - 1;
       const data = await this.fetchBatch(batches[i]);
       fetchedObjects.push(data);
 
-      if (n > 1) {
+      if (n > 1 && !isLastBatch && this.pauseBetweenBatchesMs) {
         await wait(this.pauseBetweenBatchesMs);
       }
     }
@@ -110,12 +111,10 @@ export class BufferFetcher {
     if (this.fetcherFn) {
       return this.fetcherFn(url);
     }
-    console.log(url);
 
     let data = new Response();
 
     const shouldUseRetry = this.retryCount > 0;
-    console.log({ shouldUseRetry });
 
     if (shouldUseRetry) {
       let retries = 0;
@@ -138,8 +137,8 @@ export class BufferFetcher {
         if (!isTrySuccess && !isLastRetry) {
           await wait(this.pauseBetweenRetriesMs);
         }
-        if (isLastRetry && !isTrySuccess && errorMsg) {
-          throw Error(errorMsg);
+        if (isLastRetry && !isTrySuccess) {
+          throw Error(errorMsg || 'Unknown error');
         }
       }
     } else {
