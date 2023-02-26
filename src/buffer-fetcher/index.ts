@@ -120,7 +120,8 @@ export class BufferFetcher {
       let retries = 0;
       let isTrySuccess = false;
       let errorMsg = '';
-      while (retries < this.retryCount && !isTrySuccess) {
+      while (retries <= this.retryCount && !isTrySuccess) {
+        const isLastRetry = retries === this.retryCount;
         let isCallSuccess = true;
         try {
           data = await fetch(url);
@@ -131,9 +132,7 @@ export class BufferFetcher {
 
         const isStatusOk = data.status === 200;
         isTrySuccess = isCallSuccess && isStatusOk;
-        console.log(url, retries, isTrySuccess);
         retries++;
-        const isLastRetry = retries === this.retryCount;
         if (!isTrySuccess && !isLastRetry) {
           await wait(this.pauseBetweenRetriesMs);
         }
