@@ -6,6 +6,7 @@ import { InputSchema, schema } from '../config-validator/schema';
 import { Format } from '../config/format';
 import { Price } from '../config/price-types';
 import { Timeframe } from '../config/timeframes';
+import { VolumeUnit } from '../config/volume-unit';
 
 export interface CliConfig extends ConfigBase {
   dir: string;
@@ -30,6 +31,7 @@ const commanderSchema = program
   .option('-p, --price-type <value>', 'Price type: (bid, ask)', Price.bid)
   .option('-utc, --utc-offset <value>', 'UTC offset in minutes', Number, 0)
   .option('-v, --volumes', 'Include volumes', false)
+  .option('-vu, --volume-unit', 'Volume units (unit, thousand, million)', VolumeUnit.million)
   .option('-fl, --flats', 'Include flats (0 volumes)', false)
   .option('-f, --format <value>', 'Output format (csv, json, array)', Format.json)
   .option('-dir, --directory <value>', 'Download directory', './download')

@@ -56,6 +56,7 @@ export async function getHistoricalRates(config: Config): Promise<Output> {
     timeframe,
     priceType,
     volumes,
+    volumeUnit,
     utcOffset,
     ignoreFlats,
     format,
@@ -113,6 +114,7 @@ export async function getHistoricalRates(config: Config): Promise<Output> {
     bufferObjects: bufferredData,
     priceType,
     volumes,
+    volumeUnit,
     ignoreFlats
   });
 

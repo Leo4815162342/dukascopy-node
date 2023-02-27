@@ -11,6 +11,7 @@ function processData({
   bufferObjects,
   priceType,
   volumes,
+  volumeUnit,
   ignoreFlats
 }: ProcessDataInput): ProcessDataOutput {
   const result: ProcessDataOutput = [];
@@ -27,7 +28,8 @@ function processData({
       timeframe: urlTimeframe,
       startTs: +startDate,
       instrument,
-      volumes
+      volumes,
+      volumeUnit
     });
 
     const aggregatedData = aggregate({

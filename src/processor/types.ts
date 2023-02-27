@@ -2,6 +2,7 @@ import { InstrumentType } from './../config/instruments';
 import { BufferObject } from '../buffer-fetcher/types';
 import { TimeframeType } from '../config/timeframes';
 import { PriceType } from '../config/price-types';
+import { VolumeUnitType } from '../config/volume-unit';
 
 export interface ProcessDataInput {
   instrument: InstrumentType;
@@ -9,6 +10,7 @@ export interface ProcessDataInput {
   bufferObjects: BufferObject[];
   priceType: PriceType;
   volumes: boolean;
+  volumeUnit: VolumeUnitType;
   ignoreFlats: boolean;
 }
 

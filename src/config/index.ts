@@ -2,6 +2,7 @@ import { PriceType, Price } from './price-types';
 import { TimeframeType, Timeframe } from './timeframes';
 import { FormatType, Format } from './format';
 import { InstrumentType } from './instruments';
+import { VolumeUnitType } from './volume-unit';
 
 type OptionalKeys<T> = {
   // eslint-disable-next-line @typescript-eslint/ban-types
@@ -20,7 +21,7 @@ export interface ConfigBase {
   priceType?: PriceType;
   utcOffset?: number;
   volumes?: boolean;
-  volumeUnit?: 'unit' | 'thousand' | 'million';
+  volumeUnit?: VolumeUnitType;
   ignoreFlats?: boolean;
   format?: FormatType;
   batchSize?: number;

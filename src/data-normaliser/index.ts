@@ -4,7 +4,7 @@ import { NormaliseInput } from './types';
 import { Timeframe } from '../config/timeframes';
 
 export function normalise(input: NormaliseInput): number[][] {
-  const { data, timeframe, startTs, instrument, volumes } = input;
+  const { data, timeframe, startTs, instrument, volumes, volumeUnit } = input;
 
   const { decimalFactor } = instrumentMetaData[instrument];
 
