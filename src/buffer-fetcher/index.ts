@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+import fetch, { Response } from 'node-fetch';
 import { CacheManagerBase } from '../cache-manager';
 import { splitArrayInChunks, wait } from '../utils/general';
 import { BufferFetcherInput, BufferObject } from './types';
@@ -87,10 +87,11 @@ export class BufferFetcher {
     const batches = splitArrayInChunks(urls, this.batchSize);
 
     for (let i = 0, n = batches.length; i < n; i++) {
+      const isLastBatch = i === n - 1;
       const data = await this.fetchBatch(batches[i]);
       fetchedObjects.push(data);
 
-      if (n > 1) {
+      if (n > 1 && !isLastBatch && this.pauseBetweenBatchesMs) {
         await wait(this.pauseBetweenBatchesMs);
       }
     }
@@ -111,20 +112,36 @@ export class BufferFetcher {
       return this.fetcherFn(url);
     }
 
-    let data = await fetch(url);
+    let data = new Response();
 
-    if (this.retryCount && data.status !== 200) {
+    const shouldUseRetry = this.retryCount > 0;
+
+    if (shouldUseRetry) {
       let retries = 0;
-      let isRetrySuccess = false;
-      while (retries < this.retryCount && !isRetrySuccess) {
-        data = await fetch(url);
-        isRetrySuccess = data.status === 200;
-        retries++;
+      let isTrySuccess = false;
+      let errorMsg = '';
+      while (retries <= this.retryCount && !isTrySuccess) {
         const isLastRetry = retries === this.retryCount;
-        if (!isRetrySuccess && !isLastRetry) {
+        let isCallSuccess = true;
+        try {
+          data = await fetch(url);
+        } catch (e) {
+          isCallSuccess = false;
+          errorMsg = e instanceof Error ? e.message : JSON.stringify(e);
+        }
+
+        const isStatusOk = data.status === 200;
+        isTrySuccess = isCallSuccess && isStatusOk;
+        retries++;
+        if (!isTrySuccess && !isLastRetry) {
           await wait(this.pauseBetweenRetriesMs);
         }
+        if (isLastRetry && !isTrySuccess) {
+          throw Error(errorMsg || 'Unknown error');
+        }
       }
+    } else {
+      data = await fetch(url);
     }
 
     return data.status === 200 ? data.buffer() : Buffer.from('', 'utf8');
