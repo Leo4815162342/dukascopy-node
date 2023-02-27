@@ -1,7 +1,7 @@
 import { instrumentMetaData } from '../config/instruments-metadata';
-import { roundNum } from './../utils/general';
 import { NormaliseInput } from './types';
 import { Timeframe } from '../config/timeframes';
+import { formatVolume } from '../utils/formatVolume';
 
 export function normalise(input: NormaliseInput): number[][] {
   const { data, timeframe, startTs, instrument, volumes, volumeUnit } = input;
@@ -21,7 +21,7 @@ export function normalise(input: NormaliseInput): number[][] {
         ms + startTs,
         ask / decimalFactor,
         bid / decimalFactor,
-        ...(volumes ? [askVolume, bidVolume].map(a => roundNum(a)) : [])
+        ...(volumes ? [askVolume, bidVolume].map(vol => formatVolume(vol, volumeUnit)) : [])
       ];
     } else {
       const [sec, open, close, low, high, volume] = values;
@@ -32,7 +32,7 @@ export function normalise(input: NormaliseInput): number[][] {
         high / decimalFactor,
         low / decimalFactor,
         close / decimalFactor,
-        ...(volumes ? [roundNum(volume)] : [])
+        ...(volumes ? [formatVolume(volume, volumeUnit)] : [])
       ];
     }
 

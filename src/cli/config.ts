@@ -66,6 +66,7 @@ export function getConfigFromCliArgs(argv: NodeJS.Process['argv']) {
     priceType: options.priceType,
     utcOffset: options.utcOffset,
     volumes: options.volumes,
+    volumeUnit: options.volumeUnit,
     ignoreFlats: !options.flats,
     dir: options.directory,
     silent: options.silent,
