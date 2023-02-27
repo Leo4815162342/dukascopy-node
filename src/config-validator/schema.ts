@@ -44,6 +44,7 @@ export const schema: InputSchema<Config> = {
     default: defaultConfig.utcOffset
   } as RuleNumber,
   volumes: { type: 'boolean', optional: true, default: defaultConfig.volumes } as RuleBoolean,
+  volumeUnit: { type: 'string', optional: true, default: defaultConfig.volumeUnit } as RuleString,
   ignoreFlats: {
     type: 'boolean',
     optional: true,
