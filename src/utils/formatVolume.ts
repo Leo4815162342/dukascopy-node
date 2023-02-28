@@ -1,9 +1,9 @@
-import { VolumeUnitType } from '../config/volume-unit';
+import { VolumeUnit, VolumeUnitType } from '../config/volume-unit';
 
 export function formatVolume(volume: number, volumeUnit: VolumeUnitType) {
-  if (volumeUnit === 'million') {
+  if (volumeUnit === VolumeUnit.million) {
     return volume;
-  } else if (volumeUnit === 'thousand') {
+  } else if (volumeUnit === VolumeUnit.thousand) {
     return volume * 1000;
   } else {
     return volume * 1000000;

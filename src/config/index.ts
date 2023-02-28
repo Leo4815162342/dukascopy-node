@@ -2,7 +2,7 @@ import { PriceType, Price } from './price-types';
 import { TimeframeType, Timeframe } from './timeframes';
 import { FormatType, Format } from './format';
 import { InstrumentType } from './instruments';
-import { VolumeUnitType } from './volume-unit';
+import { VolumeUnit, VolumeUnitType } from './volume-unit';
 
 type OptionalKeys<T> = {
   // eslint-disable-next-line @typescript-eslint/ban-types
@@ -39,7 +39,7 @@ export const defaultConfig: DefaultConfig = {
   priceType: Price.bid,
   utcOffset: 0,
   volumes: true,
-  volumeUnit: 'million',
+  volumeUnit: VolumeUnit.million,
   ignoreFlats: true,
   format: Format.array,
   batchSize: 10,
