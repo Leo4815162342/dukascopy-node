@@ -31,7 +31,11 @@ const commanderSchema = program
   .option('-p, --price-type <value>', 'Price type: (bid, ask)', Price.bid)
   .option('-utc, --utc-offset <value>', 'UTC offset in minutes', Number, 0)
   .option('-v, --volumes', 'Include volumes', false)
-  .option('-vu, --volume-unit', 'Volume units (unit, thousand, million)', VolumeUnit.million)
+  .option(
+    '-vu, --volume-unit  <value>',
+    'Volume units (unit, thousand, million)',
+    VolumeUnit.million
+  )
   .option('-fl, --flats', 'Include flats (0 volumes)', false)
   .option('-f, --format <value>', 'Output format (csv, json, array)', Format.json)
   .option('-dir, --directory <value>', 'Download directory', './download')
@@ -49,7 +53,6 @@ const commanderSchema = program
 
 export function getConfigFromCliArgs(argv: NodeJS.Process['argv']) {
   const options = commanderSchema.parse(argv).opts();
-
   // Parse "now" date parameter and convert
   // it to current time.
   if (options.dateTo === now) {
