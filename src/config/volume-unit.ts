@@ -4,7 +4,7 @@ export const VolumeUnit = {
    */
   units: 'units',
   /**
-   * A  thousand units of a currency, commodity, or security.
+   * A thousand units of a currency, commodity, or security.
    */
   thousands: 'thousands',
   /**
