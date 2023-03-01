@@ -38,7 +38,9 @@ export function printHeader(
     'To date:       ',
     chalk.bold(chalk.yellow(getFormattedDate(adjustedEndDate, dateTimeFormatOptions)))
   );
-  log('Price type:    ', chalk.bold(chalk.yellow(priceType)));
+  if (timeframe !== 'tick') {
+    log('Price type:    ', chalk.bold(chalk.yellow(priceType)));
+  }
   log('Volumes:       ', chalk.bold(chalk.yellow(volumes)));
   log('UTC Offset:    ', chalk.bold(chalk.yellow(utcOffset)));
   log('Include flats: ', chalk.bold(chalk.yellow(!ignoreFlats)));

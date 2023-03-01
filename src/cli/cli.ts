@@ -33,6 +33,7 @@ export async function run(argv: NodeJS.Process['argv']) {
     priceType,
     utcOffset,
     volumes,
+    volumeUnits,
     ignoreFlats,
     format,
     batchSize,
@@ -158,6 +159,7 @@ export async function run(argv: NodeJS.Process['argv']) {
               bufferObjects: filteredBatchData,
               priceType,
               volumes,
+              volumeUnits,
               ignoreFlats
             });
 

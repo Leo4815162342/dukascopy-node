@@ -1,4 +1,6 @@
-const input = {
+import { NormaliseInput } from '../../types';
+
+const input: NormaliseInput = {
   data: [
     [0, 100000, 200000, 300000, 400000],
     [100, 110000, 220000, 330000, 440000],
@@ -7,7 +9,8 @@ const input = {
   timeframe: 'tick',
   startTs: 1,
   instrument: 'btcusd',
-  volumes: false
+  volumes: false,
+  volumeUnits: 'millions'
 };
 
 const expectedOutput = [

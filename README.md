@@ -63,6 +63,7 @@ Options:
   -p, --price-type <value>       Price type: (bid, ask) (default: "bid")
   -utc, --utc-offset <value>     UTC offset in minutes (default: 0)
   -v, --volumes                  Include volumes (default: false)
+  -vu, --volume-units  <value>   Volume units (millions, thousands, units) (default: "millions")
   -fl, --flats                   Include flats (0 volumes) (default: false)
   -f, --format <value>           Output format (csv, json, array) (default: "json")
   -dir, --directory <value>      Download directory (default: "./download")
@@ -123,6 +124,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |`format`|`String`|`array`|Format of the generated output. Supported values:<ul><li>`array`</li><li>`json`</li><li>`csv`</li></ul>|
 |`utcOffset`|`Number`|`0`|UTC offset in minutes.|
 |`volumes`|`Boolean`|`true`|A flag indicating whether the output should contain volume data|
+|`volumeUnits`|`String`|`millions`|Volume units. Supported values:<ul><li>`millions`</li><li>`thousands`</li><li>`units`</li></ul>|
 |`ignoreFlats`|`Boolean`|`true`|A flag indicating whether the output should contain timeframe entries with 0 (flat) volume. Those mainly come from non-trading days, such as weekends or bank holidays.|
 |`batchSize`|`Number`|`10`|Number of requests sent to data storage per batch. We don't want to send bunch of requests at the same time, we want to split them in groups (batches) and fetch them one by one with pause in between (see `pauseBetweenBatchesMs`). Main purpose - not to fall under rate limiting restrictions.|
 |`pauseBetweenBatchesMs`|`Number`|`1000`|Pause between downloading batches (in milliseconds).|
@@ -148,6 +150,7 @@ const { getHistoricalRates } = require('dukascopy-node');
   format: 'json',
   utcOffset: 0,
   volumes: true,
+  volumeUnits: 'millions',
   ignoreFlats: true,
   batchSize: 10,
   pauseBetweenBatchesMs: 1000,

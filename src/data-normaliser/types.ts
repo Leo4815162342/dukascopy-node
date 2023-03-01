@@ -1,5 +1,6 @@
 import { TimeframeType } from '../config/timeframes';
 import { InstrumentType } from '../config/instruments';
+import { VolumeUnitType } from '../config/volume-unit';
 
 export interface NormaliseInput {
   data: number[][];
@@ -7,4 +8,5 @@ export interface NormaliseInput {
   startTs: number;
   instrument: InstrumentType;
   volumes: boolean;
+  volumeUnits: VolumeUnitType;
 }
