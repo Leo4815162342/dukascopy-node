@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.32.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.31.3...v1.32.0) (2023-03-01)
+
+
+### Features
+
+* **cli:** download time ([#125](https://github.com/Leo4815162342/dukascopy-node/issues/125)) ([e891bf2](https://github.com/Leo4815162342/dukascopy-node/commit/e891bf2c08a076a719595f911c7619c607dec9ee))
+* retry artifact download on server error ([#126](https://github.com/Leo4815162342/dukascopy-node/issues/126)) ([2e12810](https://github.com/Leo4815162342/dukascopy-node/commit/2e12810cd876f3647c972e0e6d8287232f616553))
+
 ### [1.31.3](https://github.com/Leo4815162342/dukascopy-node/compare/v1.31.2...v1.31.3) (2023-02-23)
 
 
