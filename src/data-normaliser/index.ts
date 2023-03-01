@@ -4,7 +4,7 @@ import { Timeframe } from '../config/timeframes';
 import { formatVolume } from '../utils/formatVolume';
 
 export function normalise(input: NormaliseInput): number[][] {
-  const { data, timeframe, startTs, instrument, volumes, volumeUnit } = input;
+  const { data, timeframe, startTs, instrument, volumes, volumeUnits } = input;
 
   const { decimalFactor } = instrumentMetaData[instrument];
 
@@ -21,7 +21,7 @@ export function normalise(input: NormaliseInput): number[][] {
         ms + startTs,
         ask / decimalFactor,
         bid / decimalFactor,
-        ...(volumes ? [askVolume, bidVolume].map(vol => formatVolume(vol, volumeUnit)) : [])
+        ...(volumes ? [askVolume, bidVolume].map(vol => formatVolume(vol, volumeUnits)) : [])
       ];
     } else {
       const [sec, open, close, low, high, volume] = values;
@@ -32,7 +32,7 @@ export function normalise(input: NormaliseInput): number[][] {
         high / decimalFactor,
         low / decimalFactor,
         close / decimalFactor,
-        ...(volumes ? [formatVolume(volume, volumeUnit)] : [])
+        ...(volumes ? [formatVolume(volume, volumeUnits)] : [])
       ];
     }
 

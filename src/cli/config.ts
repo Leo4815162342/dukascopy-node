@@ -32,9 +32,9 @@ const commanderSchema = program
   .option('-utc, --utc-offset <value>', 'UTC offset in minutes', Number, 0)
   .option('-v, --volumes', 'Include volumes', false)
   .option(
-    '-vu, --volume-unit  <value>',
+    '-vu, --volume-units  <value>',
     'Volume units (unit, thousand, million)',
-    VolumeUnit.million
+    VolumeUnit.millions
   )
   .option('-fl, --flats', 'Include flats (0 volumes)', false)
   .option('-f, --format <value>', 'Output format (csv, json, array)', Format.json)
@@ -69,7 +69,7 @@ export function getConfigFromCliArgs(argv: NodeJS.Process['argv']) {
     priceType: options.priceType,
     utcOffset: options.utcOffset,
     volumes: options.volumes,
-    volumeUnit: options.volumeUnit,
+    volumeUnits: options.volumeUnits,
     ignoreFlats: !options.flats,
     dir: options.directory,
     silent: options.silent,

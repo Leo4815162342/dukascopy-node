@@ -10,7 +10,7 @@ export interface ProcessDataInput {
   bufferObjects: BufferObject[];
   priceType: PriceType;
   volumes: boolean;
-  volumeUnit: VolumeUnitType;
+  volumeUnits: VolumeUnitType;
   ignoreFlats: boolean;
 }
 

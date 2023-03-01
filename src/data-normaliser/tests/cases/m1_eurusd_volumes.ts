@@ -10,7 +10,7 @@ const input: NormaliseInput = {
   startTs: 1,
   instrument: 'eurusd',
   volumes: true,
-  volumeUnit: 'million'
+  volumeUnits: 'millions'
 };
 
 const expectedOutput = [

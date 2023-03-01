@@ -2,15 +2,15 @@ export const VolumeUnit = {
   /**
    * A single unit of a currency, commodity, or security.
    */
-  unit: 'unit',
+  units: 'units',
   /**
    * A  thousand units of a currency, commodity, or security.
    */
-  thousand: 'thousand',
+  thousands: 'thousands',
   /**
    * A million units of a currency, commodity, or security.
    */
-  million: 'million'
+  millions: 'millions'
 } as const;
 
 export type VolumeUnitType = keyof typeof VolumeUnit;

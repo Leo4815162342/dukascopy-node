@@ -8,5 +8,5 @@ export interface NormaliseInput {
   startTs: number;
   instrument: InstrumentType;
   volumes: boolean;
-  volumeUnit: VolumeUnitType;
+  volumeUnits: VolumeUnitType;
 }
