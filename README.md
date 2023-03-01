@@ -63,6 +63,7 @@ Options:
   -p, --price-type <value>       Price type: (bid, ask) (default: "bid")
   -utc, --utc-offset <value>     UTC offset in minutes (default: 0)
   -v, --volumes                  Include volumes (default: false)
+  -vu, --volume-units  <value>   Volume units (millions, thousands, units) (default: "millions")
   -fl, --flats                   Include flats (0 volumes) (default: false)
   -f, --format <value>           Output format (csv, json, array) (default: "json")
   -dir, --directory <value>      Download directory (default: "./download")

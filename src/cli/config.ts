@@ -32,8 +32,8 @@ const commanderSchema = program
   .option('-utc, --utc-offset <value>', 'UTC offset in minutes', Number, 0)
   .option('-v, --volumes', 'Include volumes', false)
   .option(
-    '-vu, --volume-units  <value>',
-    'Volume units (unit, thousand, million)',
+    '-vu, --volume-units <value>',
+    'Volume units (millions, thousands, units)',
     VolumeUnit.millions
   )
   .option('-fl, --flats', 'Include flats (0 volumes)', false)
