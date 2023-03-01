@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.33.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.32.0...v1.33.0) (2023-03-01)
+
+
+### Features
+
+* volume units ([#127](https://github.com/Leo4815162342/dukascopy-node/issues/127)) ([4ce98ec](https://github.com/Leo4815162342/dukascopy-node/commit/4ce98ecfa7802725114e006755007b3e0c9b4d4e))
+
 ## [1.32.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.31.3...v1.32.0) (2023-03-01)
 
 
