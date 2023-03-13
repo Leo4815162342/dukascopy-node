@@ -51,7 +51,7 @@ export class BufferFetcher {
         }
         this.onItemFetch && this.onItemFetch(url, buffer, isCacheHit);
 
-        return { url, buffer };
+        return { url, buffer, isCacheHit };
       })
     );
   }
@@ -65,7 +65,20 @@ export class BufferFetcher {
       const isLastBatch = i === n - 1;
       const batchData = await this.fetchBatch(batches[i]);
 
+      let shouldSkipBatchWait = false;
+
       if (this.cacheManager) {
+        let wholeBatchExistsInCache = true;
+
+        for (let j = 0, m = batchData.length; j < m; j++) {
+          if (!batchData[j].isCacheHit) {
+            wholeBatchExistsInCache = false;
+            break;
+          }
+        }
+
+        shouldSkipBatchWait = wholeBatchExistsInCache;
+
         await this.cacheManager.writeItemsToCache(batchData);
       }
 
@@ -73,7 +86,10 @@ export class BufferFetcher {
         await this.onBatchFetch(batchData, isLastBatch);
       }
 
-      if (n > 1 && !isLastBatch && this.pauseBetweenBatchesMs) {
+      const shouldWait =
+        n > 1 && !isLastBatch && !shouldSkipBatchWait && this.pauseBetweenBatchesMs;
+
+      if (shouldWait) {
         await wait(this.pauseBetweenBatchesMs);
       }
     }
@@ -90,8 +106,25 @@ export class BufferFetcher {
       const isLastBatch = i === n - 1;
       const data = await this.fetchBatch(batches[i]);
       fetchedObjects.push(data);
+      let shouldSkipBatchWait = false;
 
-      if (n > 1 && !isLastBatch && this.pauseBetweenBatchesMs) {
+      if (this.cacheManager) {
+        let wholeBatchExistsInCache = true;
+
+        for (let j = 0, m = data.length; j < m; j++) {
+          if (!data[j].isCacheHit) {
+            wholeBatchExistsInCache = false;
+            break;
+          }
+        }
+
+        shouldSkipBatchWait = wholeBatchExistsInCache;
+      }
+
+      const shouldWait =
+        n > 1 && !isLastBatch && !shouldSkipBatchWait && this.pauseBetweenBatchesMs;
+
+      if (shouldWait) {
         await wait(this.pauseBetweenBatchesMs);
       }
     }
