@@ -3,6 +3,7 @@ import { CacheManagerBase } from '../cache-manager';
 export interface BufferObject {
   url: string;
   buffer: Buffer;
+  isCacheHit?: boolean;
 }
 
 export interface BufferFetcherInput {
