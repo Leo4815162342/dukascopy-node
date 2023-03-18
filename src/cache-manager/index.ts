@@ -39,11 +39,15 @@ export class CacheManager implements CacheManagerBase {
 
   public async readItemFromCache(key: string): Promise<Buffer | null> {
     const cacheKey = this.cacheKeyFormatter(key);
-    const cacheKeyEncoded = encodeURIComponent(cacheKey);
-
     const itemExistsInCache = this.cacheManifest.has(cacheKey);
+
+    if (!itemExistsInCache) {
+      return null;
+    }
+
+    const cacheKeyEncoded = encodeURIComponent(cacheKey);
     const cacheItemPath = resolve(this.cacheFolderPath, cacheKeyEncoded);
-    return itemExistsInCache ? readFile(cacheItemPath) : null;
+    return readFile(cacheItemPath);
   }
 
   public async writeItemsToCache(items: BufferObject[]) {
@@ -51,6 +55,8 @@ export class CacheManager implements CacheManagerBase {
       items.map(({ buffer, url }) => {
         const cacheKey = this.cacheKeyFormatter(url);
         const isItemInCache = this.cacheManifest.has(cacheKey);
+        // TODO?: don't write empty buffers to the cache
+        // const isEmptyBuffer = buffer.length === 0;
 
         if (isItemInCache) {
           return Promise.resolve();
