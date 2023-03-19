@@ -59,6 +59,14 @@ describe('Cache manager', () => {
     expect(buffer2!.toString('utf8')).toEqual('File 2 content');
   });
 
+  it('Returns null if the item is not in the cache', async () => {
+    const buffer = await cacheManager.readItemFromCache(
+      'https://datafeed.dukascopy.com/datafeed/EURUSD/2019/05/23/BID_candles_min_1.bi5'
+    );
+
+    expect(buffer).toEqual(null);
+  });
+
   it('Cleans out the cache', async () => {
     await cacheManager.purgeCache();
     expect(await pathExists(cacheFolderPath)).toEqual(false);
