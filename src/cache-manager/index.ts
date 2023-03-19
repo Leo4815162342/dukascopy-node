@@ -32,7 +32,7 @@ export class CacheManager implements CacheManagerBase {
     ensureDirSync(this.cacheFolderPath);
     const cacheKeys = readdirSync(this.cacheFolderPath)
       .filter(item => item.endsWith('.bi5'))
-      .map(item => decodeURIComponent(item));
+      .map(item => item.replace(/-/g, '/'));
     this.cacheManifest = new Set(cacheKeys);
     this.cacheKeyFormatter = cacheKeyFormatter || this.getCacheKeyFromUrl;
   }
@@ -45,7 +45,7 @@ export class CacheManager implements CacheManagerBase {
       return null;
     }
 
-    const cacheKeyEncoded = encodeURIComponent(cacheKey);
+    const cacheKeyEncoded = cacheKey.replace(/\//g, '-');
     const cacheItemPath = resolve(this.cacheFolderPath, cacheKeyEncoded);
     return readFile(cacheItemPath);
   }
@@ -62,7 +62,7 @@ export class CacheManager implements CacheManagerBase {
           return Promise.resolve();
         }
 
-        const cacheKeyEncoded = encodeURIComponent(cacheKey);
+        const cacheKeyEncoded = cacheKey.replace(/\//g, '-');
         const cacheItemPath = resolve(this.cacheFolderPath, cacheKeyEncoded);
         this.cacheManifest.add(cacheKey);
         return outputFile(cacheItemPath, buffer);

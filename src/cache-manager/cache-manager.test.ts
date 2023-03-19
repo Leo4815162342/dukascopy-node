@@ -27,21 +27,15 @@ describe('Cache manager', () => {
       }
     ]);
     expect(await readdir(cacheFolderPath)).toEqual([
-      'EURUSD%2F2019%2F05%2F21%2FBID_candles_min_1.bi5',
-      'EURUSD%2F2019%2F05%2F22%2FBID_candles_min_1.bi5'
+      'EURUSD-2019-05-21-BID_candles_min_1.bi5',
+      'EURUSD-2019-05-22-BID_candles_min_1.bi5'
     ]);
 
     expect(
-      await readFile(
-        resolve(cacheFolderPath, 'EURUSD%2F2019%2F05%2F21%2FBID_candles_min_1.bi5'),
-        'utf8'
-      )
+      await readFile(resolve(cacheFolderPath, 'EURUSD-2019-05-21-BID_candles_min_1.bi5'), 'utf8')
     ).toEqual('File 1 content');
     expect(
-      await readFile(
-        resolve(cacheFolderPath, 'EURUSD%2F2019%2F05%2F22%2FBID_candles_min_1.bi5'),
-        'utf8'
-      )
+      await readFile(resolve(cacheFolderPath, 'EURUSD-2019-05-22-BID_candles_min_1.bi5'), 'utf8')
     ).toEqual('File 2 content');
   });
 
