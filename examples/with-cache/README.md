@@ -8,8 +8,6 @@ All the binary artifacts (which are downloaded from the dukascopy servers) will 
 
 ---
 
-### Example: [with-cache.js](https://github.com/Leo4815162342/dukascopy-node/blob/master/examples/with-cache/with-cache.js)
-
 ```bash
 npx dukascopy-node -i eurusd -from 2021-02-01 -to 2021-03-01 -t d1 -f json --cache
 ```
@@ -40,8 +38,6 @@ const { getHistoricalRates } = require('dukascopy-node');
 ```
 
 After running, you can see that `dukascopy-node` has created the cache folder called `.dukascopy-cache` and stored the downloaded artifacts there.
-
-![dukascopy-node default cache folder](https://raw.githubusercontent.com/Leo4815162342/dukascopy-node/master/examples/with-cache/with-cache.png "dukascopy-node default cache folder")
 
 If you run the same code again, then you will notice that it's faster, since the data comes from your local disk rather than from network.
 
