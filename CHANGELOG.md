@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.34.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.33.0...v1.34.0) (2023-03-30)
+
+
+### Features
+
+* skip waiting if batch cache hit ([#128](https://github.com/Leo4815162342/dukascopy-node/issues/128)) ([3dca755](https://github.com/Leo4815162342/dukascopy-node/commit/3dca755a35eeda137eacacff1df4c8afc3aae64a))
+
 ## [1.33.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.32.0...v1.33.0) (2023-03-01)
 
 
