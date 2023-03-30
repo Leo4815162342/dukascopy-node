@@ -1,49 +1,64 @@
-import { readdir, remove, readFile, readJSON, pathExists } from 'fs-extra';
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+import { readdir, remove, readFile, pathExists } from 'fs-extra';
 import { resolve } from 'path';
 import { afterAll, describe, it, expect } from 'vitest';
-import { CacheManager, DEFAULT_MANIFEST_FILE } from '.';
+import { CacheManager } from '.';
 
 const cacheFolderPath = resolve(process.cwd(), 'test-cache-folder');
 
-afterAll(async () => remove(cacheFolderPath));
+afterAll(async () => {
+  await remove(cacheFolderPath);
+});
+
+const cacheManager = new CacheManager({
+  cacheFolderPath
+});
 
 describe('Cache manager', () => {
-  const cacheManager = new CacheManager({
-    cacheFolderPath,
-    cacheKeyFormatter: item => item
-  });
-
-  it('Creates a cache folder and manifest', async () => {
-    const folderContent = await readdir(cacheFolderPath);
-    expect(folderContent).toEqual([DEFAULT_MANIFEST_FILE]);
-  });
-
-  it('Writes data to the disk with correct folder structure', async () => {
+  it('Writes cache data to the disk', async () => {
     await cacheManager.writeItemsToCache([
       {
-        url: 'ITEM_1/A/B/file_1.txt',
+        url: 'https://datafeed.dukascopy.com/datafeed/EURUSD/2019/05/21/BID_candles_min_1.bi5',
         buffer: Buffer.from('File 1 content', 'utf-8')
+      },
+      {
+        url: 'https://datafeed.dukascopy.com/datafeed/EURUSD/2019/05/22/BID_candles_min_1.bi5',
+        buffer: Buffer.from('File 2 content', 'utf-8')
       }
     ]);
-    expect(await readdir(cacheFolderPath)).toEqual(['ITEM_1', DEFAULT_MANIFEST_FILE]);
-    expect(await readdir(resolve(cacheFolderPath, 'ITEM_1'))).toEqual(['A']);
-    expect(await readdir(resolve(cacheFolderPath, 'ITEM_1', 'A'))).toEqual(['B']);
-    expect(await readdir(resolve(cacheFolderPath, 'ITEM_1', 'A', 'B'))).toEqual(['file_1.txt']);
-    expect(
-      await readFile(resolve(cacheFolderPath, 'ITEM_1', 'A', 'B', 'file_1.txt'), 'utf8')
-    ).toEqual('File 1 content');
-  });
+    expect(await readdir(cacheFolderPath)).toEqual([
+      'EURUSD-2019-05-21-BID_candles_min_1.bi5',
+      'EURUSD-2019-05-22-BID_candles_min_1.bi5'
+    ]);
 
-  it('Correctly updates the manifest', async () => {
-    const manifest = await readJSON(resolve(cacheFolderPath, DEFAULT_MANIFEST_FILE));
-    expect(manifest).toEqual({ 'ITEM_1/A/B/file_1.txt': true });
+    expect(
+      await readFile(resolve(cacheFolderPath, 'EURUSD-2019-05-21-BID_candles_min_1.bi5'), 'utf8')
+    ).toEqual('File 1 content');
+    expect(
+      await readFile(resolve(cacheFolderPath, 'EURUSD-2019-05-22-BID_candles_min_1.bi5'), 'utf8')
+    ).toEqual('File 2 content');
   });
 
   it('Reads data from the cache', async () => {
-    const buffer = await cacheManager.readItemFromCache('ITEM_1/A/B/file_1.txt');
+    const buffer = await cacheManager.readItemFromCache(
+      'https://datafeed.dukascopy.com/datafeed/EURUSD/2019/05/21/BID_candles_min_1.bi5'
+    );
 
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     expect(buffer!.toString('utf8')).toEqual('File 1 content');
+
+    const buffer2 = await cacheManager.readItemFromCache(
+      'https://datafeed.dukascopy.com/datafeed/EURUSD/2019/05/22/BID_candles_min_1.bi5'
+    );
+
+    expect(buffer2!.toString('utf8')).toEqual('File 2 content');
+  });
+
+  it('Returns null if the item is not in the cache', async () => {
+    const buffer = await cacheManager.readItemFromCache(
+      'https://datafeed.dukascopy.com/datafeed/EURUSD/2019/05/23/BID_candles_min_1.bi5'
+    );
+
+    expect(buffer).toEqual(null);
   });
 
   it('Cleans out the cache', async () => {

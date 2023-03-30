@@ -1,28 +1,24 @@
 import { resolve } from 'path';
 import { URL_ROOT } from '../url-generator';
-import { outputFile, outputJSON, remove, readFile, ensureFileSync, readJSONSync } from 'fs-extra';
+import { outputFile, remove, readFile, readdirSync, ensureDirSync } from 'fs-extra';
 import { BufferObject } from '../buffer-fetcher/types';
 
-export type CacheManifest = Record<string, true>;
-
-export type CacheItem = { cacheKey: string; buffer: Buffer };
+export type CacheManifest = Set<string>;
 
 export type CacheKeyFormatter = (input: string) => string;
 
 export const DEFAULT_CACHE_FOLDER = '.dukascopy-cache';
-export const DEFAULT_MANIFEST_FILE = 'manifest.json';
 
 export interface CacheManagerBase {
   readItemFromCache(item: string): Promise<Buffer | null>;
-  writeItemsToCache(items: BufferObject[]): Promise<void[]>;
+  writeItemsToCache(items: BufferObject[]): Promise<PromiseSettledResult<void>[]>;
   purgeCache(): Promise<void>;
   getCacheKeyFromUrl: CacheKeyFormatter;
 }
 
 export class CacheManager implements CacheManagerBase {
-  cacheManifest: CacheManifest;
-  cacheManifestPath: string;
-  cacheFolderPath: string;
+  private cacheManifest: CacheManifest;
+  private cacheFolderPath: string;
   cacheKeyFormatter: CacheKeyFormatter;
 
   constructor({
@@ -33,50 +29,52 @@ export class CacheManager implements CacheManagerBase {
     cacheKeyFormatter?: CacheKeyFormatter;
   }) {
     this.cacheFolderPath = cacheFolderPath || resolve(process.cwd(), DEFAULT_CACHE_FOLDER);
-    this.cacheManifestPath = resolve(this.cacheFolderPath, DEFAULT_MANIFEST_FILE);
+    ensureDirSync(this.cacheFolderPath);
+    const cacheKeys = readdirSync(this.cacheFolderPath)
+      .filter(item => item.endsWith('.bi5'))
+      .map(item => item.replace(/-/g, '/'));
+    this.cacheManifest = new Set(cacheKeys);
     this.cacheKeyFormatter = cacheKeyFormatter || this.getCacheKeyFromUrl;
-    ensureFileSync(this.cacheManifestPath);
-    const manifestData =
-      (readJSONSync(this.cacheManifestPath, { throws: false }) as CacheManifest) || {};
-    this.cacheManifest = manifestData;
   }
 
-  public async readItemFromCache(url: string): Promise<Buffer | null> {
-    const cacheKey = this.cacheKeyFormatter(url);
-    const itemExistsInCache = Boolean(this.cacheManifest?.[cacheKey]);
-    const cacheItemPath = resolve(this.cacheFolderPath, ...cacheKey.split('/'));
-    return itemExistsInCache ? readFile(cacheItemPath) : null;
-  }
+  public async readItemFromCache(key: string): Promise<Buffer | null> {
+    const cacheKey = this.cacheKeyFormatter(key);
+    const itemExistsInCache = this.cacheManifest.has(cacheKey);
 
-  public async writeItemsToCache(items: BufferObject[]): Promise<void[]> {
-    let newManifest: CacheManifest = {};
-    const itemsToCache: CacheItem[] = [];
-
-    for (const item of items) {
-      const cacheKey = this.cacheKeyFormatter(item.url);
-      const itemExistsInCache = Boolean(this.cacheManifest?.[cacheKey]);
-      if (!itemExistsInCache) {
-        newManifest[cacheKey] = true;
-        itemsToCache.push({ cacheKey, buffer: item.buffer });
-      }
+    if (!itemExistsInCache) {
+      return null;
     }
 
-    this.cacheManifest = { ...this.cacheManifest, ...newManifest };
+    const cacheKeyEncoded = cacheKey.replace(/\//g, '-');
+    const cacheItemPath = resolve(this.cacheFolderPath, cacheKeyEncoded);
+    return readFile(cacheItemPath);
+  }
 
-    return Promise.all([
-      outputJSON(this.cacheManifestPath, this.cacheManifest),
-      ...itemsToCache.map(({ buffer, cacheKey }) => {
-        const cacheItemPath = resolve(this.cacheFolderPath, ...cacheKey.split('/'));
+  public async writeItemsToCache(items: BufferObject[]) {
+    return Promise.allSettled(
+      items.map(({ buffer, url }) => {
+        const cacheKey = this.cacheKeyFormatter(url);
+        const isItemInCache = this.cacheManifest.has(cacheKey);
+        // TODO?: don't write empty buffers to the cache
+        // const isEmptyBuffer = buffer.length === 0;
+
+        if (isItemInCache) {
+          return Promise.resolve();
+        }
+
+        const cacheKeyEncoded = cacheKey.replace(/\//g, '-');
+        const cacheItemPath = resolve(this.cacheFolderPath, cacheKeyEncoded);
+        this.cacheManifest.add(cacheKey);
         return outputFile(cacheItemPath, buffer);
       })
-    ]);
+    );
   }
 
   public async purgeCache(cacheFolderPath = this.cacheFolderPath): Promise<void> {
     return remove(cacheFolderPath);
   }
 
-  public getCacheKeyFromUrl(url: string): string {
-    return url.replace(`${URL_ROOT}/`, '');
+  public getCacheKeyFromUrl(key: string): string {
+    return key.replace(`${URL_ROOT}/`, '');
   }
 }
