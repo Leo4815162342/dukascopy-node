@@ -167,11 +167,11 @@ export class BufferFetcher {
         }
 
         const isStatusOk = response.status === 200;
-        const isEmptyResponse = Number(response?.headers?.get('content-length') || 0) === 0;
+        const isResponseWithData = Number(response?.headers?.get('content-length') || 0) > 0;
         isTrySuccess = isCallSuccess && isStatusOk;
 
         if (this.retryOnEmpty) {
-          isTrySuccess = isTrySuccess && isEmptyResponse;
+          isTrySuccess = isTrySuccess && isResponseWithData;
         }
 
         retries++;
