@@ -45,6 +45,7 @@ const commanderSchema = program
   .option('-chpath, --cache-path <value>', 'Folder path for cache data', './.dukascopy-cache')
   .option('-r, --retries <value>', 'Number of retries for a failed artifact download', Number, 0)
   .option('-rp, --retry-pause <value>', 'Pause between retries in milliseconds', Number, 500)
+  .option('-re, --retry-on-empty', 'Retry on empty response', false)
   .option(
     '-in, --inline',
     'Makes files smaller in size by removing new lines in the output (works only with json and array formats)',
@@ -79,6 +80,7 @@ export function getConfigFromCliArgs(argv: NodeJS.Process['argv']) {
     useCache: options.cache,
     cacheFolderPath: options.cachePath,
     retryCount: options.retries,
+    retryOnEmpty: options.retryOnEmpty,
     pauseBetweenRetriesMs: options.retryPause,
     debug: options.debug,
     inline: options.inline
