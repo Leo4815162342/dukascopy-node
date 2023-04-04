@@ -45,7 +45,11 @@ const commanderSchema = program
   .option('-chpath, --cache-path <value>', 'Folder path for cache data', './.dukascopy-cache')
   .option('-r, --retries <value>', 'Number of retries for a failed artifact download', Number, 0)
   .option('-rp, --retry-pause <value>', 'Pause between retries in milliseconds', Number, 500)
-  .option('-re, --retry-on-empty', 'Retry on empty response', false)
+  .option(
+    '-re, --retry-on-empty',
+    'A flag indicating whether requests with successful but empty (0 Bytes) responses should be retried. If `retries` is `0` this parameter will be ignored',
+    false
+  )
   .option(
     '-in, --inline',
     'Makes files smaller in size by removing new lines in the output (works only with json and array formats)',
