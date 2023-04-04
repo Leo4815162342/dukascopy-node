@@ -148,7 +148,7 @@ export class BufferFetcher {
       return this.fetcherFn(url);
     }
 
-    let data = new Response();
+    let response = new Response();
 
     const shouldUseRetry = this.retryCount > 0;
 
@@ -160,14 +160,14 @@ export class BufferFetcher {
         const isLastRetry = retries === this.retryCount;
         let isCallSuccess = true;
         try {
-          data = await fetch(url);
+          response = await fetch(url);
         } catch (e) {
           isCallSuccess = false;
           errorMsg = e instanceof Error ? e.message : JSON.stringify(e);
         }
 
-        const isStatusOk = data.status === 200;
-        const isEmptyResponse = Number(data?.headers?.get('content-length') || 0) === 0;
+        const isStatusOk = response.status === 200;
+        const isEmptyResponse = Number(response?.headers?.get('content-length') || 0) === 0;
         isTrySuccess = isCallSuccess && isStatusOk;
 
         if (this.retryOnEmpty) {
@@ -183,9 +183,9 @@ export class BufferFetcher {
         }
       }
     } else {
-      data = await fetch(url);
+      response = await fetch(url);
     }
 
-    return data.status === 200 ? data.buffer() : Buffer.from('', 'utf8');
+    return response.status === 200 ? response.buffer() : Buffer.from('', 'utf8');
   }
 }
