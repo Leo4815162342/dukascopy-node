@@ -29,6 +29,7 @@ export interface ConfigBase {
   useCache?: boolean;
   cacheFolderPath?: string;
   retryCount?: number;
+  retryOnEmpty?: boolean;
   pauseBetweenRetriesMs?: number;
 }
 
@@ -47,6 +48,7 @@ export const defaultConfig: DefaultConfig = {
   useCache: false,
   cacheFolderPath: '',
   retryCount: 0,
+  retryOnEmpty: false,
   pauseBetweenRetriesMs: 500
 };
 

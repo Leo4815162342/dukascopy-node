@@ -10,6 +10,7 @@ export class BufferFetcher {
   onBatchFetch?: BufferFetcherInput['onBatchFetch'];
   fetcherFn;
   retryCount: number;
+  retryOnEmpty: boolean;
   pauseBetweenRetriesMs: number;
   cacheManager?: CacheManagerBase;
 
@@ -20,6 +21,7 @@ export class BufferFetcher {
     onBatchFetch,
     fetcherFn,
     retryCount,
+    retryOnEmpty,
     pauseBetweenRetriesMs,
     cacheManager
   }: BufferFetcherInput) {
@@ -30,6 +32,7 @@ export class BufferFetcher {
     this.fetcherFn = fetcherFn;
     this.cacheManager = cacheManager;
     this.retryCount = retryCount || 0;
+    this.retryOnEmpty = retryOnEmpty || false;
     this.pauseBetweenRetriesMs = pauseBetweenRetriesMs || 500;
   }
 
@@ -164,7 +167,13 @@ export class BufferFetcher {
         }
 
         const isStatusOk = data.status === 200;
+        const isEmptyResponse = Number(data?.headers?.get('content-length') || 0) > 0;
         isTrySuccess = isCallSuccess && isStatusOk;
+
+        if (this.retryOnEmpty) {
+          isTrySuccess = isTrySuccess && !isEmptyResponse;
+        }
+
         retries++;
         if (!isTrySuccess && !isLastRetry) {
           await wait(this.pauseBetweenRetriesMs);
