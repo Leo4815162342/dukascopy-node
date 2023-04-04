@@ -80,6 +80,11 @@ export const schema: InputSchema<Config> = {
     optional: true,
     default: defaultConfig.retryCount
   } as RuleNumber,
+  retryOnEmpty: {
+    type: 'boolean',
+    optional: true,
+    default: defaultConfig.useCache
+  } as RuleBoolean,
   pauseBetweenRetriesMs: {
     type: 'number',
     integer: true,
