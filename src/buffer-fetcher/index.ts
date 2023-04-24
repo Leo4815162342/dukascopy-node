@@ -12,6 +12,7 @@ export class BufferFetcher {
   retryCount: number;
   retryOnEmpty: boolean;
   pauseBetweenRetriesMs: number;
+  failAfterRetries: BufferFetcherInput['failAfterRetries'];
   cacheManager?: CacheManagerBase;
 
   constructor({
@@ -20,9 +21,10 @@ export class BufferFetcher {
     onItemFetch,
     onBatchFetch,
     fetcherFn,
-    retryCount,
-    retryOnEmpty,
-    pauseBetweenRetriesMs,
+    retryCount = 0,
+    retryOnEmpty = false,
+    failAfterRetries = true,
+    pauseBetweenRetriesMs = 500,
     cacheManager
   }: BufferFetcherInput) {
     this.batchSize = batchSize;
@@ -31,9 +33,10 @@ export class BufferFetcher {
     this.onBatchFetch = onBatchFetch;
     this.fetcherFn = fetcherFn;
     this.cacheManager = cacheManager;
-    this.retryCount = retryCount || 0;
-    this.retryOnEmpty = retryOnEmpty || false;
-    this.pauseBetweenRetriesMs = pauseBetweenRetriesMs || 500;
+    this.retryCount = retryCount;
+    this.retryOnEmpty = retryOnEmpty;
+    this.failAfterRetries = failAfterRetries;
+    this.pauseBetweenRetriesMs = pauseBetweenRetriesMs;
   }
 
   private async fetchBatch(urls: string[]): Promise<BufferObject[]> {
@@ -167,7 +170,8 @@ export class BufferFetcher {
         }
 
         const isStatusOk = response.status === 200;
-        const isResponseWithData = Number(response?.headers?.get('content-length') || 0) > 0;
+        const contentLength = Number(response?.headers?.get('content-length') || 0);
+        const isResponseWithData = contentLength > 0;
         isTrySuccess = isCallSuccess && isStatusOk;
 
         if (this.retryOnEmpty) {
@@ -178,7 +182,7 @@ export class BufferFetcher {
         if (!isTrySuccess && !isLastRetry) {
           await wait(this.pauseBetweenRetriesMs);
         }
-        if (isLastRetry && !isTrySuccess) {
+        if (isLastRetry && !isTrySuccess && this.failAfterRetries) {
           throw Error(errorMsg || 'Unknown error');
         }
       }

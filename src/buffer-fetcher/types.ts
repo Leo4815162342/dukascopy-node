@@ -15,5 +15,6 @@ export interface BufferFetcherInput {
   cacheManager?: CacheManagerBase;
   retryCount?: number;
   retryOnEmpty?: boolean;
+  failAfterRetries?: boolean;
   pauseBetweenRetriesMs?: number;
 }
