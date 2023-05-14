@@ -51,7 +51,7 @@ const commanderSchema = program
     false
   )
   .option(
-    '-nfr, --no-fail-after-retries',
+    '-fr, --no-fail-after-retries',
     'A flag indicating whether the process should fail after all retries have been exhausted. If `retries` is `0` this parameter will be ignored'
   )
   .option(

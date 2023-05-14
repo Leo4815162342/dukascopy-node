@@ -73,8 +73,9 @@ Options:
   -chpath, --cache-path <value>  Folder path for cache data (default: "./.dukascopy-cache")
   -r, --retries <value>          Number of retries for a failed artifact download (default: 0)
   -rp, --retry-pause <value>     Pause between retries in milliseconds (default: 500)
-  -re, --retry-on-empty          A flag indicating whether requests with successful but empty (0 Bytes) responses should be retried. If `retries` is `0`
-                                 this parameter will be ignored (default: false)
+  -re, --retry-on-empty          A flag indicating whether requests with successful but empty (0 Bytes) responses should be retried. If `retries` is `0` this parameter will be
+                                 ignored (default: false)
+  -fr, --no-fail-after-retries   A flag indicating whether the process should fail after all retries have been exhausted. If `retries` is `0` this parameter will be ignored
   -in, --inline                  Makes files smaller in size by removing new lines in the output (works only with json and array formats) (default: false)
   -h, --help                     display help for command
 ```
@@ -161,6 +162,7 @@ const { getHistoricalRates } = require('dukascopy-node');
   cacheFolderPath: '.dukascopy-cache',
   retryCount: 5,
   retryOnEmpty: false,
+  failAfterRetryCount: true,
   pauseBetweenRetriesMs: 250
 }
 ```
