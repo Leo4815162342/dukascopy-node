@@ -46,6 +46,15 @@ const commanderSchema = program
   .option('-r, --retries <value>', 'Number of retries for a failed artifact download', Number, 0)
   .option('-rp, --retry-pause <value>', 'Pause between retries in milliseconds', Number, 500)
   .option(
+    '-re, --retry-on-empty',
+    'A flag indicating whether requests with successful but empty (0 Bytes) responses should be retried. If `retries` is `0` this parameter will be ignored',
+    false
+  )
+  .option(
+    '-fr, --no-fail-after-retries',
+    'A flag indicating whether the process should fail after all retries have been exhausted. If `retries` is `0` this parameter will be ignored'
+  )
+  .option(
     '-in, --inline',
     'Makes files smaller in size by removing new lines in the output (works only with json and array formats)',
     false
@@ -79,6 +88,8 @@ export function getConfigFromCliArgs(argv: NodeJS.Process['argv']) {
     useCache: options.cache,
     cacheFolderPath: options.cachePath,
     retryCount: options.retries,
+    failAfterRetryCount: options.failAfterRetries,
+    retryOnEmpty: options.retryOnEmpty,
     pauseBetweenRetriesMs: options.retryPause,
     debug: options.debug,
     inline: options.inline

@@ -10,7 +10,9 @@ export class BufferFetcher {
   onBatchFetch?: BufferFetcherInput['onBatchFetch'];
   fetcherFn;
   retryCount: number;
+  retryOnEmpty: boolean;
   pauseBetweenRetriesMs: number;
+  failAfterRetryCount: BufferFetcherInput['failAfterRetryCount'];
   cacheManager?: CacheManagerBase;
 
   constructor({
@@ -19,8 +21,10 @@ export class BufferFetcher {
     onItemFetch,
     onBatchFetch,
     fetcherFn,
-    retryCount,
-    pauseBetweenRetriesMs,
+    retryCount = 0,
+    retryOnEmpty = false,
+    failAfterRetryCount = true,
+    pauseBetweenRetriesMs = 500,
     cacheManager
   }: BufferFetcherInput) {
     this.batchSize = batchSize;
@@ -29,8 +33,10 @@ export class BufferFetcher {
     this.onBatchFetch = onBatchFetch;
     this.fetcherFn = fetcherFn;
     this.cacheManager = cacheManager;
-    this.retryCount = retryCount || 0;
-    this.pauseBetweenRetriesMs = pauseBetweenRetriesMs || 500;
+    this.retryCount = retryCount;
+    this.retryOnEmpty = retryOnEmpty;
+    this.failAfterRetryCount = failAfterRetryCount;
+    this.pauseBetweenRetriesMs = pauseBetweenRetriesMs;
   }
 
   private async fetchBatch(urls: string[]): Promise<BufferObject[]> {
@@ -145,7 +151,7 @@ export class BufferFetcher {
       return this.fetcherFn(url);
     }
 
-    let data = new Response();
+    let response = new Response();
 
     const shouldUseRetry = this.retryCount > 0;
 
@@ -157,26 +163,33 @@ export class BufferFetcher {
         const isLastRetry = retries === this.retryCount;
         let isCallSuccess = true;
         try {
-          data = await fetch(url);
+          response = await fetch(url);
         } catch (e) {
           isCallSuccess = false;
           errorMsg = e instanceof Error ? e.message : JSON.stringify(e);
         }
 
-        const isStatusOk = data.status === 200;
+        const isStatusOk = response.status === 200;
+        const contentLength = Number(response?.headers?.get('content-length') || 0);
+        const isResponseWithData = contentLength > 0;
         isTrySuccess = isCallSuccess && isStatusOk;
+
+        if (this.retryOnEmpty) {
+          isTrySuccess = isTrySuccess && isResponseWithData;
+        }
+
         retries++;
         if (!isTrySuccess && !isLastRetry) {
           await wait(this.pauseBetweenRetriesMs);
         }
-        if (isLastRetry && !isTrySuccess) {
+        if (isLastRetry && !isTrySuccess && this.failAfterRetryCount) {
           throw Error(errorMsg || 'Unknown error');
         }
       }
     } else {
-      data = await fetch(url);
+      response = await fetch(url);
     }
 
-    return data.status === 200 ? data.buffer() : Buffer.from('', 'utf8');
+    return response.status === 200 ? response.buffer() : Buffer.from('', 'utf8');
   }
 }

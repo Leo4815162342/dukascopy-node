@@ -14,5 +14,7 @@ export interface BufferFetcherInput {
   fetcherFn?: (url: string) => Promise<Buffer>;
   cacheManager?: CacheManagerBase;
   retryCount?: number;
+  retryOnEmpty?: boolean;
+  failAfterRetryCount?: boolean;
   pauseBetweenRetriesMs?: number;
 }

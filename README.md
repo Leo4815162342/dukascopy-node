@@ -63,7 +63,7 @@ Options:
   -p, --price-type <value>       Price type: (bid, ask) (default: "bid")
   -utc, --utc-offset <value>     UTC offset in minutes (default: 0)
   -v, --volumes                  Include volumes (default: false)
-  -vu, --volume-units  <value>   Volume units (millions, thousands, units) (default: "millions")
+  -vu, --volume-units <value>    Volume units (millions, thousands, units) (default: "millions")
   -fl, --flats                   Include flats (0 volumes) (default: false)
   -f, --format <value>           Output format (csv, json, array) (default: "json")
   -dir, --directory <value>      Download directory (default: "./download")
@@ -73,6 +73,9 @@ Options:
   -chpath, --cache-path <value>  Folder path for cache data (default: "./.dukascopy-cache")
   -r, --retries <value>          Number of retries for a failed artifact download (default: 0)
   -rp, --retry-pause <value>     Pause between retries in milliseconds (default: 500)
+  -re, --retry-on-empty          A flag indicating whether requests with successful but empty (0 Bytes) responses should be retried. If `retries` is `0` this parameter will be
+                                 ignored (default: false)
+  -fr, --no-fail-after-retries   A flag indicating whether the process should fail after all retries have been exhausted. If `retries` is `0` this parameter will be ignored
   -in, --inline                  Makes files smaller in size by removing new lines in the output (works only with json and array formats) (default: false)
   -h, --help                     display help for command
 ```
@@ -131,6 +134,8 @@ const { getHistoricalRates } = require('dukascopy-node');
 |`useCache`|`Boolean`|`false`|A flag indicating whether a file-system cache is going to be used to store response artifacts for subsequent lookups. When set to `true`, it significantly speeds up calls when requesting overlapping or similar data|
 |`cacheFolderPath`|`String`|`./.dukascopy-cache`|Folder path where all cache artifacts (binary data) will be stored|
 |`retryCount`|`Number`|`0`|Number of retries for a failed artifact download. If `0` no retries will happen even for failed requests.|
+|`retryOnEmpty`|`Boolean`|`false`|A flag indicating whether requests with successful but empty (0 Bytes) responses should be retried. If `retryCount` is `0` this parameter will be ignored|
+|`failAfterRetryCount`|`Boolean`|`true`|A flag indicating whether the process should fail after all retries have been exhausted. If `retries` is `0` this parameter will be ignored.|
 |`pauseBetweenRetriesMs`|`Number`|`500`|Pause between retries. If `retryCount` is `0` this parameter will be ignored|
 
 ***
@@ -157,6 +162,8 @@ const { getHistoricalRates } = require('dukascopy-node');
   useCache: true,
   cacheFolderPath: '.dukascopy-cache',
   retryCount: 5,
+  retryOnEmpty: false,
+  failAfterRetryCount: true,
   pauseBetweenRetriesMs: 250
 }
 ```
