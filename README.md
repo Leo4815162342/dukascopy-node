@@ -135,6 +135,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |`cacheFolderPath`|`String`|`./.dukascopy-cache`|Folder path where all cache artifacts (binary data) will be stored|
 |`retryCount`|`Number`|`0`|Number of retries for a failed artifact download. If `0` no retries will happen even for failed requests.|
 |`retryOnEmpty`|`Boolean`|`false`|A flag indicating whether requests with successful but empty (0 Bytes) responses should be retried. If `retryCount` is `0` this parameter will be ignored|
+|`failAfterRetryCount`|`Boolean`|`true`|A flag indicating whether the process should fail after all retries have been exhausted. If `retries` is `0` this parameter will be ignored.|
 |`pauseBetweenRetriesMs`|`Number`|`500`|Pause between retries. If `retryCount` is `0` this parameter will be ignored|
 
 ***
