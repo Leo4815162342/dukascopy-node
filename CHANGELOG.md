@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.35.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.34.0...v1.35.0) (2023-05-14)
+
+
+### Features
+
+* retry on empty response ([#134](https://github.com/Leo4815162342/dukascopy-node/issues/134)) ([5ac13ba](https://github.com/Leo4815162342/dukascopy-node/commit/5ac13ba1833a42c18d43bba532cb601d2f802dbf))
+
 ## [1.34.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.33.0...v1.34.0) (2023-03-30)
 
 
