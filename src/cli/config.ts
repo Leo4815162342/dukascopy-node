@@ -51,6 +51,10 @@ const commanderSchema = program
     false
   )
   .option(
+    '-nfr, --no-fail-after-retries',
+    'A flag indicating whether the process should fail after all retries have been exhausted. If `retries` is `0` this parameter will be ignored'
+  )
+  .option(
     '-in, --inline',
     'Makes files smaller in size by removing new lines in the output (works only with json and array formats)',
     false
@@ -84,6 +88,7 @@ export function getConfigFromCliArgs(argv: NodeJS.Process['argv']) {
     useCache: options.cache,
     cacheFolderPath: options.cachePath,
     retryCount: options.retries,
+    failAfterRetryCount: options.failAfterRetries,
     retryOnEmpty: options.retryOnEmpty,
     pauseBetweenRetriesMs: options.retryPause,
     debug: options.debug,

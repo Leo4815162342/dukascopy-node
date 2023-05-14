@@ -12,7 +12,7 @@ export class BufferFetcher {
   retryCount: number;
   retryOnEmpty: boolean;
   pauseBetweenRetriesMs: number;
-  failAfterRetries: BufferFetcherInput['failAfterRetries'];
+  failAfterRetryCount: BufferFetcherInput['failAfterRetryCount'];
   cacheManager?: CacheManagerBase;
 
   constructor({
@@ -23,7 +23,7 @@ export class BufferFetcher {
     fetcherFn,
     retryCount = 0,
     retryOnEmpty = false,
-    failAfterRetries = true,
+    failAfterRetryCount = true,
     pauseBetweenRetriesMs = 500,
     cacheManager
   }: BufferFetcherInput) {
@@ -35,7 +35,7 @@ export class BufferFetcher {
     this.cacheManager = cacheManager;
     this.retryCount = retryCount;
     this.retryOnEmpty = retryOnEmpty;
-    this.failAfterRetries = failAfterRetries;
+    this.failAfterRetryCount = failAfterRetryCount;
     this.pauseBetweenRetriesMs = pauseBetweenRetriesMs;
   }
 
@@ -182,7 +182,7 @@ export class BufferFetcher {
         if (!isTrySuccess && !isLastRetry) {
           await wait(this.pauseBetweenRetriesMs);
         }
-        if (isLastRetry && !isTrySuccess && this.failAfterRetries) {
+        if (isLastRetry && !isTrySuccess && this.failAfterRetryCount) {
           throw Error(errorMsg || 'Unknown error');
         }
       }

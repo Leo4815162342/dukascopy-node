@@ -45,6 +45,7 @@ export async function run(argv: NodeJS.Process['argv']) {
     debug: isDebugActive,
     inline,
     retryCount,
+    failAfterRetryCount,
     retryOnEmpty,
     pauseBetweenRetriesMs
   } = input;
@@ -133,6 +134,7 @@ export async function run(argv: NodeJS.Process['argv']) {
         cacheManager: useCache ? new CacheManager({ cacheFolderPath }) : undefined,
         retryCount,
         retryOnEmpty,
+        failAfterRetryCount,
         pauseBetweenRetriesMs,
         onItemFetch: (url, buffer, isCacheHit): void => {
           debug(`${DEBUG_NAMESPACE}:fetcher`)(
