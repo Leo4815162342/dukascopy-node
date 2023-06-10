@@ -105,13 +105,14 @@ const { getHistoricalRates } = require('dukascopy-node');
 })();
 ```
 
-## 📖 Detailed examples
-* [Basic usage of `dukascopy-node`](https://github.com/Leo4815162342/dukascopy-node/wiki/Basic-usage-of-dukascopy-node)
-* [Downloading tick data](https://github.com/Leo4815162342/dukascopy-node/wiki/Downloading-tick-data)
-* [Downloading data with cache](https://github.com/Leo4815162342/dukascopy-node/wiki/Downloading-data-with-cache)
-* [Downloading data with custom batching](https://github.com/Leo4815162342/dukascopy-node/wiki/Downloading-data-with-custom-batching)
-* [Usage with typescript](https://github.com/Leo4815162342/dukascopy-node/wiki/Usage-with-typescript)
-* [Debugging](https://github.com/Leo4815162342/dukascopy-node/wiki/Debugging)
+## 📖 Quick start
+* [Basic usage of `dukascopy-node`](https://www.dukascopy-node.app/output-formats)
+* [Downloading tick data](https://www.dukascopy-node.app/downloading-tick-data)
+* [Dealing with empty data and errors](https://www.dukascopy-node.app/errors-and-empty-data)
+* [Downloading data with cache](https://www.dukascopy-node.app/using-cache)
+* [Downloading data with custom batching](https://www.dukascopy-node.app/custom-batching)
+* [Usage with typescript](https://www.dukascopy-node.app/with-typescript)
+* [Debugging](https://www.dukascopy-node.app/debugging)
 
 
 ## ⚙️ Config object
