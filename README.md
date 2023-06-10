@@ -20,7 +20,6 @@
 
 ## 🚀 Installation
 
-
 <table>
     <thead>
         <tr>
@@ -47,39 +46,9 @@ npx dukascopy-node -i btcusd -from 2019-01-13 -to 2019-01-14 -t tick -f csv
 ![dukascopy-node-1080p](https://user-images.githubusercontent.com/12486774/210557823-63ba12f1-ab77-42ae-ad27-6c199b0c1fdb.gif)
 
 
-<details>
-<summary>View CLI full specification</summary>
+[🛠️ View full CLI specification](https://www.dukascopy-node.app/config/cli)
 
-```
-Usage: dukascopy-node [options]
-
-Options:
-  -d, --debug                    Output extra debugging (default: false)
-  -s, --silent                   Hides the search config in the CLI output (default: false)
-  -i, --instrument <value>       Trading instrument
-  -from, --date-from <value>     From date (yyyy-mm-dd)
-  -to, --date-to <value>         To date (yyyy-mm-dd or 'now') (default: "now")
-  -t, --timeframe <value>        Timeframe aggregation (tick, s1, m1, m5, m15, m30, h1, h4, d1, mn1) (default: "d1")
-  -p, --price-type <value>       Price type: (bid, ask) (default: "bid")
-  -utc, --utc-offset <value>     UTC offset in minutes (default: 0)
-  -v, --volumes                  Include volumes (default: false)
-  -vu, --volume-units <value>    Volume units (millions, thousands, units) (default: "millions")
-  -fl, --flats                   Include flats (0 volumes) (default: false)
-  -f, --format <value>           Output format (csv, json, array) (default: "json")
-  -dir, --directory <value>      Download directory (default: "./download")
-  -bs, --batch-size <value>      Batch size of downloaded artifacts (default: 10)
-  -bp, --batch-pause <value>     Pause between batches in ms (default: 1000)
-  -ch, --cache                   Use cache (default: false)
-  -chpath, --cache-path <value>  Folder path for cache data (default: "./.dukascopy-cache")
-  -r, --retries <value>          Number of retries for a failed artifact download (default: 0)
-  -rp, --retry-pause <value>     Pause between retries in milliseconds (default: 500)
-  -re, --retry-on-empty          A flag indicating whether requests with successful but empty (0 Bytes) responses should be retried. If `retries` is `0` this parameter will be
-                                 ignored (default: false)
-  -fr, --no-fail-after-retries   A flag indicating whether the process should fail after all retries have been exhausted. If `retries` is `0` this parameter will be ignored
-  -in, --inline                  Makes files smaller in size by removing new lines in the output (works only with json and array formats) (default: false)
-  -h, --help                     display help for command
-```
-</details>
+---
 
 ## ✨ Usage via Node.js ([try it live](https://runkit.com/embed/of4ho2xv8rvv))
 
@@ -105,6 +74,10 @@ const { getHistoricalRates } = require('dukascopy-node');
 })();
 ```
 
+[🛠️ View full Node.js specification](https://www.dukascopy-node.app/config/node)
+
+---
+
 ## 📖 Quick start
 * [Basic usage of `dukascopy-node`](https://www.dukascopy-node.app/output-formats)
 * [Downloading tick data](https://www.dukascopy-node.app/downloading-tick-data)
@@ -114,61 +87,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 * [Usage with typescript](https://www.dukascopy-node.app/with-typescript)
 * [Debugging](https://www.dukascopy-node.app/debugging)
 
-
-## ⚙️ Config object
-
-|Name|Type|Default|Description|
-|-|-|-|-|
-|`instrument`|`String`||An id of the trading instrument. Supported values: [see list](#-instruments)|
-|`dates`|`Object`||An object with a date range|
-|`dates.from`|<p>`Date`</p><p>`String`</p><p>`Number`</p>||Date representing the start of the time range. Can be of Date type, string (e.g. `2021-03-04` or `2021-03-04T00:00:00.000Z`), or timestamp integer (e.g. `1614816000000`)|
-|`dates.to`|<p>`Date`</p><p>`String`</p><p>`Number`</p>||Date representing the end of the time range Can be of Date type, string (e.g. `2021-03-04` or `2021-03-04T00:00:00.000Z`), or timestamp integer (e.g.   `1614816000000`)|
-|`timeframe`|`String`|`d1`|Granularity of aggregation of OHLC (open, high, low, close) data. Supported values:<ul><li>`tick` (every single tick/price change)</li><li>`s1` (1 second)</li><li>`m1` (1 minute)</li><li>`m5` (5 minutes)</li><li>`m15` (15 minutes)</li><li>`m30` (30 minutes)</li><li>`h1` (1 hour)</li><li>`h4` (4 hours)</li><li>`d1` (1 day)</li><li>`mn1` (1 month)</li></ul>|
-|`priceType`|`String`|`bid`|Type of price (offer side). Supported values:<ul><li>`bid`</li><li>`ask`</li></ul>|
-|`format`|`String`|`array`|Format of the generated output. Supported values:<ul><li>`array`</li><li>`json`</li><li>`csv`</li></ul>|
-|`utcOffset`|`Number`|`0`|UTC offset in minutes.|
-|`volumes`|`Boolean`|`true`|A flag indicating whether the output should contain volume data|
-|`volumeUnits`|`String`|`millions`|Volume units. Supported values:<ul><li>`millions`</li><li>`thousands`</li><li>`units`</li></ul>|
-|`ignoreFlats`|`Boolean`|`true`|A flag indicating whether the output should contain timeframe entries with 0 (flat) volume. Those mainly come from non-trading days, such as weekends or bank holidays.|
-|`batchSize`|`Number`|`10`|Number of requests sent to data storage per batch. We don't want to send bunch of requests at the same time, we want to split them in groups (batches) and fetch them one by one with pause in between (see `pauseBetweenBatchesMs`). Main purpose - not to fall under rate limiting restrictions.|
-|`pauseBetweenBatchesMs`|`Number`|`1000`|Pause between downloading batches (in milliseconds).|
-|`useCache`|`Boolean`|`false`|A flag indicating whether a file-system cache is going to be used to store response artifacts for subsequent lookups. When set to `true`, it significantly speeds up calls when requesting overlapping or similar data|
-|`cacheFolderPath`|`String`|`./.dukascopy-cache`|Folder path where all cache artifacts (binary data) will be stored|
-|`retryCount`|`Number`|`0`|Number of retries for a failed artifact download. If `0` no retries will happen even for failed requests.|
-|`retryOnEmpty`|`Boolean`|`false`|A flag indicating whether requests with successful but empty (0 Bytes) responses should be retried. If `retryCount` is `0` this parameter will be ignored|
-|`failAfterRetryCount`|`Boolean`|`true`|A flag indicating whether the process should fail after all retries have been exhausted. If `retries` is `0` this parameter will be ignored.|
-|`pauseBetweenRetriesMs`|`Number`|`500`|Pause between retries. If `retryCount` is `0` this parameter will be ignored|
-
-***
-
-#### Example of a full config object
-
-
-```javascript
-{
-  instrument: 'btcusd',
-  dates: {
-    from: '2018-01-01', // or 2018-01-01T00:00:00.000Z
-    to: '2019-01-01', // or 2019-01-01T00:00:00.000Z
-  },
-  timeframe: 'd1',
-  priceType: 'ask',
-  format: 'json',
-  utcOffset: 0,
-  volumes: true,
-  volumeUnits: 'millions',
-  ignoreFlats: true,
-  batchSize: 10,
-  pauseBetweenBatchesMs: 1000,
-  useCache: true,
-  cacheFolderPath: '.dukascopy-cache',
-  retryCount: 5,
-  retryOnEmpty: false,
-  failAfterRetryCount: true,
-  pauseBetweenRetriesMs: 250
-}
-```
-***
+---
 
 ## 📂 Instruments
 
