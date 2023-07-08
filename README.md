@@ -1515,3 +1515,9 @@ const { getHistoricalRates } = require('dukascopy-node');
 |[Zoom Video Communications (A Class)](https://www.dukascopy-node.app/instrument/zmususd)|`zmususd`|Sep 30, 2020|
 |[ZSCALER INC](https://www.dukascopy-node.app/instrument/zsususd)|`zsususd`|May 13, 2022|
 |[ZOETIS INC](https://www.dukascopy-node.app/instrument/ztsususd)|`ztsususd`|May 16, 2022|
+
+---
+
+#### ⚖️ Legal Disclaimer
+
+`dukascopy-node` is not affiliated, endorsed, or vetted by Dukascopy Bank SA. It's an open-source tool that uses Dukascopy's publicly available APIs, and is intended for research and educational purposes.
