@@ -55,7 +55,7 @@
 		"debug": "4.3.4",
 		"fastest-validator": "1.10.0",
 		"fs-extra": "10.1.0",
-		"lzma-purejs": "https://github.com/Leo4815162342/lzma-purejs",
+		"lzma-purejs-requirejs": "1.0.0",
 		"node-fetch": "2.6.7",
 		"python-struct": "1.1.3"
 	},

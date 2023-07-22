@@ -2,7 +2,7 @@ import { StructFormat, DecompressInput } from './types';
 import { TimeframeType, Timeframe } from '../config/timeframes';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const lzmajs = require('lzma-purejs');
+const lzmajs = require('lzma-purejs-requirejs');
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const struct = require('python-struct');
 
