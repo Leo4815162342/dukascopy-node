@@ -23,9 +23,9 @@
 <table>
     <thead>
         <tr>
-            <th><img width="16" src="https://static.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png" alt="dukascopy-node via npm"> npm</th>
-            <th><img width="16" src="https://yarnpkg.com/favicon-32x32.png" alt="dukascopy-node via yarn"> yarn</th>
-            <th><img width="16" src="https://pnpm.io/img/favicon.png" alt="dukascopy-node via pnpm"> pnpm</th>
+            <th><img width="16" src="https://www.dukascopy-node.app/npm.png" alt="dukascopy-node via npm"> npm</th>
+            <th><img width="16" src="https://www.dukascopy-node.app/yarn.png" alt="dukascopy-node via yarn"> yarn</th>
+            <th><img width="16" src="https://www.dukascopy-node.app/pnpm.png" alt="dukascopy-node via pnpm"> pnpm</th>
         </tr>
     </thead>
     <tbody>
