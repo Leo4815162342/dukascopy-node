@@ -47,7 +47,8 @@ export async function run(argv: NodeJS.Process['argv']) {
     retryCount,
     failAfterRetryCount,
     retryOnEmpty,
-    pauseBetweenRetriesMs
+    pauseBetweenRetriesMs,
+    fileName: customFileName
   } = input;
 
   if (isDebugActive) {
@@ -80,11 +81,11 @@ export async function run(argv: NodeJS.Process['argv']) {
         utcOffset
       });
 
-      const fileName = `${instrument}-${timeframe}${
-        timeframe === 'tick' ? '' : '-' + priceType
-      }-${getDateString(startDate)}-${getDateString(endDate)}.${
-        format === Format.csv ? Format.csv : Format.json
-      }`;
+      const fileName =
+        customFileName ||
+        `${instrument}-${timeframe}${timeframe === 'tick' ? '' : '-' + priceType}-${getDateString(
+          startDate
+        )}-${getDateString(endDate)}.${format === Format.csv ? Format.csv : Format.json}`;
       const folderPath = resolve(process.cwd(), dir);
       const filePath = resolve(folderPath, fileName);
 
