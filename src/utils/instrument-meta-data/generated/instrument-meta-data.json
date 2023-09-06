@@ -1919,7 +1919,7 @@
   "batusd": {
     "name": "BAT/USD",
     "description": "Basic Attention Token vs US Dollar",
-    "decimalFactor": 1000,
+    "decimalFactor": 100000,
     "startHourForTicks": "2019-08-05T00:00:02.214Z",
     "startDayForMinuteCandles": "2019-08-05T00:00:00.000Z",
     "startMonthForHourlyCandles": "2019-08-05T00:00:00.000Z",
