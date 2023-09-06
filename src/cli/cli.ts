@@ -81,11 +81,13 @@ export async function run(argv: NodeJS.Process['argv']) {
         utcOffset
       });
 
-      const fileName =
-        customFileName ||
-        `${instrument}-${timeframe}${timeframe === 'tick' ? '' : '-' + priceType}-${getDateString(
-          startDate
-        )}-${getDateString(endDate)}.${format === Format.csv ? Format.csv : Format.json}`;
+      const fileExtension = format === Format.csv ? Format.csv : Format.json;
+
+      const fileName = customFileName
+        ? `${customFileName}.${fileExtension}`
+        : `${instrument}-${timeframe}${timeframe === 'tick' ? '' : '-' + priceType}-${getDateString(
+            startDate
+          )}-${getDateString(endDate)}.${fileExtension}`;
       const folderPath = resolve(process.cwd(), dir);
       const filePath = resolve(folderPath, fileName);
 
