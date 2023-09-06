@@ -13,6 +13,7 @@ export interface CliConfig extends ConfigBase {
   silent: boolean;
   debug: boolean;
   inline: boolean;
+  fileName: string;
 }
 
 const now = 'now';
@@ -54,6 +55,7 @@ const commanderSchema = program
     '-fr, --no-fail-after-retries',
     'A flag indicating whether the process should fail after all retries have been exhausted. If `retries` is `0` this parameter will be ignored'
   )
+  .option('-fn, --file-name <value>', 'Custom file name for the generated file', '')
   .option(
     '-in, --inline',
     'Makes files smaller in size by removing new lines in the output (works only with json and array formats)',
@@ -92,7 +94,8 @@ export function getConfigFromCliArgs(argv: NodeJS.Process['argv']) {
     retryOnEmpty: options.retryOnEmpty,
     pauseBetweenRetriesMs: options.retryPause,
     debug: options.debug,
-    inline: options.inline
+    inline: options.inline,
+    fileName: options.fileName
   };
 
   const cliSchema: InputSchema<CliConfig> = {
@@ -101,7 +104,8 @@ export function getConfigFromCliArgs(argv: NodeJS.Process['argv']) {
       dir: { type: 'string', required: true } as RuleString,
       silent: { type: 'boolean', required: false } as RuleBoolean,
       debug: { type: 'boolean', required: false } as RuleBoolean,
-      inline: { type: 'boolean', required: false } as RuleBoolean
+      inline: { type: 'boolean', required: false } as RuleBoolean,
+      fileName: { type: 'string', required: false } as RuleString
     }
   };
 
