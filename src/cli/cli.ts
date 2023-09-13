@@ -82,27 +82,29 @@ export async function run(argv: NodeJS.Process['argv']) {
 
       const fileExtension = format === Format.csv ? Format.csv : Format.json;
 
-      const dateRange = [startDate, endDate].map(date => {
-        let cutoff = 10;
-        const hasHours = date.getUTCHours() !== 0;
-        const hasMinutes = date.getUTCMinutes() !== 0;
+      const dateRangeStr = [startDate, endDate]
+        .map(date => {
+          let cutoff = 10;
+          const hasHours = date.getUTCHours() !== 0;
+          const hasMinutes = date.getUTCMinutes() !== 0;
 
-        if (hasHours) {
-          cutoff = 13;
-        }
+          if (hasHours) {
+            cutoff = 13;
+          }
 
-        if (hasMinutes) {
-          cutoff = 16;
-        }
+          if (hasMinutes) {
+            cutoff = 16;
+          }
 
-        return date.toISOString().slice(0, cutoff);
-      });
+          return date.toISOString().slice(0, cutoff);
+        })
+        .join('-');
 
       const fileName = customFileName
         ? `${customFileName}.${fileExtension}`
         : `${instrument}-${timeframe}${
             timeframe === 'tick' ? '' : '-' + priceType
-          }-${dateRange}.${fileExtension}`;
+          }-${dateRangeStr}.${fileExtension}`;
       const folderPath = resolve(process.cwd(), dir);
       const filePath = resolve(folderPath, fileName);
 
