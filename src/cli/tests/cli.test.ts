@@ -8,12 +8,12 @@ const testCases = [
   {
     timeframe: 'tick',
     options: '-i btcusd -from 2023-02-20T12:00:00.000Z -to 2023-02-20T13:00:00.000Z -t tick',
-    fileName: 'btcusd-tick-2023-02-20-2023-02-20.json'
+    fileName: 'btcusd-tick-2023-02-20T12-2023-02-20T13.json'
   },
   {
     timeframe: 's1',
     options: '-i btcusd -from 2023-02-20T12:00:00.000Z -to 2023-02-20T13:00:00.000Z -t s1',
-    fileName: 'btcusd-s1-bid-2023-02-20-2023-02-20.json'
+    fileName: 'btcusd-s1-bid-2023-02-20T12-2023-02-20T13.json'
   },
   {
     timeframe: 'm1',
