@@ -16,7 +16,6 @@ import chalk from 'chalk';
 import debug from 'debug';
 
 import { version } from '../../package.json';
-import { getDateString } from '../utils/date';
 import { BatchStreamWriter } from '../stream-writer';
 import { BufferObject } from '../buffer-fetcher/types';
 import { formatTimeDuration } from '../utils/formatTimeDuration';
@@ -83,11 +82,29 @@ export async function run(argv: NodeJS.Process['argv']) {
 
       const fileExtension = format === Format.csv ? Format.csv : Format.json;
 
+      const dateRangeStr = [startDate, endDate]
+        .map(date => {
+          let cutoff = 10;
+          const hasHours = date.getUTCHours() !== 0;
+          const hasMinutes = date.getUTCMinutes() !== 0;
+
+          if (hasHours) {
+            cutoff = 13;
+          }
+
+          if (hasMinutes) {
+            cutoff = 16;
+          }
+
+          return date.toISOString().slice(0, cutoff);
+        })
+        .join('-');
+
       const fileName = customFileName
         ? `${customFileName}.${fileExtension}`
-        : `${instrument}-${timeframe}${timeframe === 'tick' ? '' : '-' + priceType}-${getDateString(
-            startDate
-          )}-${getDateString(endDate)}.${fileExtension}`;
+        : `${instrument}-${timeframe}${
+            timeframe === 'tick' ? '' : '-' + priceType
+          }-${dateRangeStr}.${fileExtension}`;
       const folderPath = resolve(process.cwd(), dir);
       const filePath = resolve(folderPath, fileName);
 
