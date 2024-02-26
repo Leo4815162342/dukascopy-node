@@ -19,7 +19,7 @@ import { version } from '../../package.json';
 import { BatchStreamWriter } from '../stream-writer';
 import { BufferObject } from '../buffer-fetcher/types';
 import { formatTimeDuration } from '../utils/formatTimeDuration';
-
+// test
 const DEBUG_NAMESPACE = 'dukascopy-node:cli';
 
 export async function run(argv: NodeJS.Process['argv']) {
