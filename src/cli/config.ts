@@ -45,7 +45,7 @@ const commanderSchema = program
   .option('-bp, --batch-pause <value>', 'Pause between batches in ms', Number, 1000)
   .option('-ch, --cache', 'Use cache', false)
   .option('-chpath, --cache-path <value>', 'Folder path for cache data', './.dukascopy-cache')
-  .option('-df, --date-format <value>', 'Date format', './.dukascopy-cache')
+  .option('-df, --date-format <value>', 'Date format', '')
   .option('-r, --retries <value>', 'Number of retries for a failed artifact download', Number, 0)
   .option('-rp, --retry-pause <value>', 'Pause between retries in milliseconds', Number, 500)
   .option(
