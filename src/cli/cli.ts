@@ -194,7 +194,13 @@ export async function run(argv: NodeJS.Process['argv']) {
 
             await batchStreamWriter.writeBatch(
               processedBatch,
-              dateFormat ? timeStamp => dayjs(timeStamp).utc().format(dateFormat) : undefined
+              dateFormat
+                ? timeStamp => {
+                    return dateFormat === 'iso'
+                      ? new Date(timeStamp).toISOString()
+                      : dayjs(timeStamp).utc().format(dateFormat);
+                  }
+                : undefined
             );
           }
 
