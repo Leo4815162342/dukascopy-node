@@ -14,6 +14,7 @@ export interface CliConfig extends ConfigBase {
   debug: boolean;
   inline: boolean;
   fileName: string;
+  dateFormat: string;
 }
 
 const now = 'now';
@@ -44,6 +45,7 @@ const commanderSchema = program
   .option('-bp, --batch-pause <value>', 'Pause between batches in ms', Number, 1000)
   .option('-ch, --cache', 'Use cache', false)
   .option('-chpath, --cache-path <value>', 'Folder path for cache data', './.dukascopy-cache')
+  .option('-df, --date-format <value>', 'Date format', './.dukascopy-cache')
   .option('-r, --retries <value>', 'Number of retries for a failed artifact download', Number, 0)
   .option('-rp, --retry-pause <value>', 'Pause between retries in milliseconds', Number, 500)
   .option(
@@ -95,7 +97,8 @@ export function getConfigFromCliArgs(argv: NodeJS.Process['argv']) {
     pauseBetweenRetriesMs: options.retryPause,
     debug: options.debug,
     inline: options.inline,
-    fileName: options.fileName
+    fileName: options.fileName,
+    dateFormat: options.dateFormat
   };
 
   const cliSchema: InputSchema<CliConfig> = {
@@ -105,7 +108,8 @@ export function getConfigFromCliArgs(argv: NodeJS.Process['argv']) {
       silent: { type: 'boolean', required: false } as RuleBoolean,
       debug: { type: 'boolean', required: false } as RuleBoolean,
       inline: { type: 'boolean', required: false } as RuleBoolean,
-      fileName: { type: 'string', required: false } as RuleString
+      fileName: { type: 'string', required: false } as RuleString,
+      dateFormat: { type: 'string', required: false } as RuleString
     }
   };
 

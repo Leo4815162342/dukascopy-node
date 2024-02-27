@@ -14,11 +14,15 @@ import { processData } from '../processor';
 import { formatBytes } from '../utils/formatBytes';
 import chalk from 'chalk';
 import debug from 'debug';
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
 
 import { version } from '../../package.json';
 import { BatchStreamWriter } from '../stream-writer';
 import { BufferObject } from '../buffer-fetcher/types';
 import { formatTimeDuration } from '../utils/formatTimeDuration';
+
+dayjs.extend(utc);
 
 const DEBUG_NAMESPACE = 'dukascopy-node:cli';
 
@@ -47,7 +51,8 @@ export async function run(argv: NodeJS.Process['argv']) {
     failAfterRetryCount,
     retryOnEmpty,
     pauseBetweenRetriesMs,
-    fileName: customFileName
+    fileName: customFileName,
+    dateFormat
   } = input;
 
   if (isDebugActive) {
@@ -187,7 +192,10 @@ export async function run(argv: NodeJS.Process['argv']) {
               ignoreFlats
             });
 
-            await batchStreamWriter.writeBatch(processedBatch);
+            await batchStreamWriter.writeBatch(
+              processedBatch,
+              dateFormat ? timeStamp => dayjs(timeStamp).utc().format(dateFormat) : undefined
+            );
           }
 
           if (isLastBatch) {
