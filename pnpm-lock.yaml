@@ -11,6 +11,7 @@ specifiers:
   chalk: 3.0.0
   cli-progress: 3.10.0
   commander: 5.0.0
+  dayjs: 1.11.10
   debug: 4.3.4
   eslint: 8.13.0
   eslint-config-prettier: 8.5.0
@@ -33,6 +34,7 @@ dependencies:
   chalk: 3.0.0
   cli-progress: 3.10.0
   commander: 5.0.0
+  dayjs: 1.11.10
   debug: 4.3.4
   fastest-validator: 1.10.0
   fs-extra: 10.1.0
@@ -1245,6 +1247,10 @@ packages:
   /dateformat/3.0.3:
     resolution: {integrity: sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==}
     dev: true
+
+  /dayjs/1.11.10:
+    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
+    dev: false
 
   /debug/4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
