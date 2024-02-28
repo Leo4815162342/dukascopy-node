@@ -15,6 +15,7 @@ export interface CliConfig extends ConfigBase {
   inline: boolean;
   fileName: string;
   dateFormat: string;
+  timeZone: string;
 }
 
 const now = 'now';
@@ -46,6 +47,7 @@ const commanderSchema = program
   .option('-ch, --cache', 'Use cache', false)
   .option('-chpath, --cache-path <value>', 'Folder path for cache data', './.dukascopy-cache')
   .option('-df, --date-format <value>', 'Date format', '')
+  .option('-tz, --time-zone <value>', 'Timezone', '')
   .option('-r, --retries <value>', 'Number of retries for a failed artifact download', Number, 0)
   .option('-rp, --retry-pause <value>', 'Pause between retries in milliseconds', Number, 500)
   .option(
@@ -98,7 +100,8 @@ export function getConfigFromCliArgs(argv: NodeJS.Process['argv']) {
     debug: options.debug,
     inline: options.inline,
     fileName: options.fileName,
-    dateFormat: options.dateFormat
+    dateFormat: options.dateFormat,
+    timeZone: options.timeZone
   };
 
   const cliSchema: InputSchema<CliConfig> = {
@@ -109,7 +112,8 @@ export function getConfigFromCliArgs(argv: NodeJS.Process['argv']) {
       debug: { type: 'boolean', required: false } as RuleBoolean,
       inline: { type: 'boolean', required: false } as RuleBoolean,
       fileName: { type: 'string', required: false } as RuleString,
-      dateFormat: { type: 'string', required: false } as RuleString
+      dateFormat: { type: 'string', required: false } as RuleString,
+      timeZone: { type: 'string', required: false } as RuleString
     }
   };
 

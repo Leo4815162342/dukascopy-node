@@ -16,6 +16,7 @@ import chalk from 'chalk';
 import debug from 'debug';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
+import tz from 'dayjs/plugin/timezone';
 
 import { version } from '../../package.json';
 import { BatchStreamWriter } from '../stream-writer';
@@ -23,6 +24,7 @@ import { BufferObject } from '../buffer-fetcher/types';
 import { formatTimeDuration } from '../utils/formatTimeDuration';
 
 dayjs.extend(utc);
+dayjs.extend(tz);
 
 const DEBUG_NAMESPACE = 'dukascopy-node:cli';
 
@@ -52,7 +54,8 @@ export async function run(argv: NodeJS.Process['argv']) {
     retryOnEmpty,
     pauseBetweenRetriesMs,
     fileName: customFileName,
-    dateFormat
+    dateFormat,
+    timeZone
   } = input;
 
   if (isDebugActive) {
@@ -196,9 +199,15 @@ export async function run(argv: NodeJS.Process['argv']) {
               processedBatch,
               dateFormat
                 ? timeStamp => {
-                    return dateFormat === 'iso'
-                      ? new Date(timeStamp).toISOString()
-                      : dayjs(timeStamp).utc().format(dateFormat);
+                    if (dateFormat === 'iso') {
+                      return new Date(timeStamp).toISOString();
+                    }
+
+                    if (timeZone) {
+                      return dayjs(timeStamp).tz(timeZone).format(dateFormat);
+                    }
+
+                    return dayjs(timeStamp).utc().format(dateFormat);
                   }
                 : undefined
             );
