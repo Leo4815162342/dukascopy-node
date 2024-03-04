@@ -101,7 +101,7 @@ export class BatchStreamWriter {
   private initHeaders() {
     const bodyHeaders =
       this.timeframe === Timeframe.tick
-        ? ['timestamp', 'askPrice', 'bidPrice', 'askVolume', 'bidVolume']
+        ? ['timestamp', 'askPrice', 'bidPrice', 'askVolume', 'bidVolume'] // TODO: add custom header names as cli options
         : ['timestamp', 'open', 'high', 'low', 'close', 'volume'];
 
     if (!this.volumes) {
@@ -114,8 +114,8 @@ export class BatchStreamWriter {
     return bodyHeaders;
   }
 
-  public async writeBatch(batch: number[][]) {
-    const batchWithinRange: number[][] = [];
+  public async writeBatch(batch: number[][], dateFormatter?: (timestamp: number) => string) {
+    const batchWithinRange: (number | string)[][] = [];
 
     for (let j = 0; j < batch.length; j++) {
       const item = batch[j];
@@ -123,12 +123,16 @@ export class BatchStreamWriter {
         item.length > 0 && item[0] >= this.startDateTs && item[0] < this.endDateTs;
 
       if (isItemInRange) {
+        if (dateFormatter) {
+          //@ts-expect-error TODO: fix this
+          item[0] = dateFormatter(item[0]);
+        }
         batchWithinRange.push(item);
       }
     }
 
     for (let i = 0; i < batchWithinRange.length; i++) {
-      const item = batchWithinRange[i];
+      let item = batchWithinRange[i];
 
       const isFirstItem = i === 0;
       const isLastItem = i === batchWithinRange.length - 1;
@@ -150,6 +154,10 @@ export class BatchStreamWriter {
 
         if (isFirstItem && !this.isFileEmpty) {
           body += ',' + (!this.isInline ? '\n' : '');
+        }
+
+        if (dateFormatter && (this.format === Format.json || this.format === Format.array)) {
+          item[0] = `"${item[0]}"`;
         }
 
         if (this.format === Format.json) {
