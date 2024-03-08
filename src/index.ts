@@ -19,6 +19,8 @@ export { Timeframe, TimeframeType } from './config/timeframes';
 export { Format, FormatType } from './config/format';
 export { Price, PriceType } from './config/price-types';
 
+import { instrumentMetaData as InstrumentMetaData } from './config/instruments-metadata';
+
 export { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick, Output } from './output-formatter/types';
 
 export { RuleDate, RuleBoolean, RuleNumber, RuleString, RuleObject } from 'fastest-validator';
