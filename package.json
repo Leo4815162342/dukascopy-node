@@ -1,6 +1,6 @@
 {
-	"name": "dukascopy-node",
-	"version": "1.37.0",
+	"name": "dukascopy-node-next",
+	"version": "1.0.0",
 	"description": "Node.js library for downloading historical market tick data for for Crypto, Stocks, ETFs, CFDs, Forex",
 	"main": "dist/index.js",
 	"module": "dist/esm/index.js",
@@ -31,7 +31,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Leo4815162342/dukascopy-node"
+		"url": "https://github.com/kyo06/dukascopy-node"
 	},
 	"homepage": "https://www.dukascopy-node.app",
 	"keywords": [
