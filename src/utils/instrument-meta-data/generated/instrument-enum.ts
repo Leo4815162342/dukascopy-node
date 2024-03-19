@@ -1333,6 +1333,24 @@ export enum Instrument {
     bciteur='bciteur',
 
     /**
+     * ### Bitcoin Cash vs Swiss Franc
+     * *BCH/CHF*
+     */
+    bchchf='bchchf',
+
+    /**
+     * ### Bitcoin Cash vs Euro
+     * *BCH/EUR*
+     */
+    bcheur='bcheur',
+
+    /**
+     * ### Bitcoin Cash vs Pound Sterling
+     * *BCH/GBP*
+     */
+    bchgbp='bchgbp',
+
+    /**
      * ### Bitcoin Cash vs US dollar
      * *BCH/USD*
      */
@@ -1571,6 +1589,24 @@ export enum Instrument {
      * *BT.GB/GBX*
      */
     btgbgbx='btgbgbx',
+
+    /**
+     * ### Bitcoin vs Swiss Frank
+     * *BTC/CHF*
+     */
+    btcchf='btcchf',
+
+    /**
+     * ### Bitcoin vs Euro
+     * *BTC/EUR*
+     */
+    btceur='btceur',
+
+    /**
+     * ### Bitcoin vs Pound Sterling
+     * *BTC/GBP*
+     */
+    btcgbp='btcgbp',
 
     /**
      * ### Bitcoin vs US Dollar
@@ -2711,6 +2747,24 @@ export enum Instrument {
      * *ESTC.US/USD*
      */
     estcususd='estcususd',
+
+    /**
+     * ### Ether vs Swiss Franc
+     * *ETH/CHF*
+     */
+    ethchf='ethchf',
+
+    /**
+     * ### Ether vs Euro
+     * *ETH/EUR*
+     */
+    etheur='etheur',
+
+    /**
+     * ### Ether vs Pound Sterling
+     * *ETH/GBP*
+     */
+    ethgbp='ethgbp',
 
     /**
      * ### Ether vs US Dollar
@@ -4319,6 +4373,24 @@ export enum Instrument {
      * *LSTR.US/USD*
      */
     lstrususd='lstrususd',
+
+    /**
+     * ### Litecoin vs Swiss Franc
+     * *LTC/CHF*
+     */
+    ltcchf='ltcchf',
+
+    /**
+     * ### Litecoin vs Euro
+     * *LTC/EUR*
+     */
+    ltceur='ltceur',
+
+    /**
+     * ### Pound Sterling
+     * *LTC/GBP*
+     */
+    ltcgbp='ltcgbp',
 
     /**
      * ### Litecoin vs US Dollar
@@ -7337,6 +7409,24 @@ export enum Instrument {
      * *XLK.US/USD*
      */
     xlkususd='xlkususd',
+
+    /**
+     * ### Stellar vs Swiss Franc
+     * *XLM/CHF*
+     */
+    xlmchf='xlmchf',
+
+    /**
+     * ### Stellar vs Euro
+     * *XLM/EUR*
+     */
+    xlmeur='xlmeur',
+
+    /**
+     * ### Stellar vs Pound Sterling
+     * *XLM/GBP*
+     */
+    xlmgbp='xlmgbp',
 
     /**
      * ### Stellar vs US Dollar

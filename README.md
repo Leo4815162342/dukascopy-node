@@ -92,7 +92,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 ## 📂 Instruments
 
 * [Bonds 📊 (3)](#bnd_cfd)
-* [Crypto assets ₿ (18)](#vccy)
+* [Crypto assets ₿ (33)](#vccy)
 * [Agricultural commodities ☕ (6)](#cmd_agricultural)
 * [Energy commodities ⚡ (4)](#cmd_energy)
 * [Metals commodities ⚙️ (3)](#cmd_metals)
@@ -141,19 +141,34 @@ const { getHistoricalRates } = require('dukascopy-node');
 |[Cardano vs US Dollar](https://www.dukascopy-node.app/instrument/adausd)|`adausd`|Sep 25, 2021|
 |[Aave vs US Dollar](https://www.dukascopy-node.app/instrument/aveusd)|`aveusd`|Sep 15, 2021|
 |[Basic Attention Token vs US Dollar](https://www.dukascopy-node.app/instrument/batusd)|`batusd`|Aug 5, 2019|
+|[Bitcoin Cash vs Swiss Franc](https://www.dukascopy-node.app/instrument/bchchf)|`bchchf`|Mar 14, 2023|
+|[Bitcoin Cash vs Euro](https://www.dukascopy-node.app/instrument/bcheur)|`bcheur`|Mar 14, 2023|
+|[Bitcoin Cash vs Pound Sterling](https://www.dukascopy-node.app/instrument/bchgbp)|`bchgbp`|Mar 14, 2023|
 |[Bitcoin Cash vs US dollar](https://www.dukascopy-node.app/instrument/bchusd)|`bchusd`|May 17, 2021|
+|[Bitcoin vs Swiss Frank](https://www.dukascopy-node.app/instrument/btcchf)|`btcchf`|Mar 14, 2023|
+|[Bitcoin vs Euro](https://www.dukascopy-node.app/instrument/btceur)|`btceur`|May 15, 2018|
+|[Bitcoin vs Pound Sterling](https://www.dukascopy-node.app/instrument/btcgbp)|`btcgbp`|Mar 14, 2023|
 |[Bitcoin vs US Dollar](https://www.dukascopy-node.app/instrument/btcusd)|`btcusd`|May 7, 2017|
 |[Compound vs US Dollar](https://www.dukascopy-node.app/instrument/cmpusd)|`cmpusd`|Sep 25, 2021|
 |[Dashcoin vs US Dollar](https://www.dukascopy-node.app/instrument/dshusd)|`dshusd`|Aug 4, 2019|
 |[Enjin vs US Dollar](https://www.dukascopy-node.app/instrument/enjusd)|`enjusd`|Sep 25, 2021|
 |[EOS vs US Dollar](https://www.dukascopy-node.app/instrument/eosusd)|`eosusd`|Aug 4, 2019|
+|[Ether vs Swiss Franc](https://www.dukascopy-node.app/instrument/ethchf)|`ethchf`|Mar 14, 2023|
+|[Ether vs Euro](https://www.dukascopy-node.app/instrument/etheur)|`etheur`|Mar 14, 2023|
+|[Ether vs Pound Sterling](https://www.dukascopy-node.app/instrument/ethgbp)|`ethgbp`|Mar 14, 2023|
 |[Ether vs US Dollar](https://www.dukascopy-node.app/instrument/ethusd)|`ethusd`|Dec 11, 2017|
 |[Chainlink vs US Dollar](https://www.dukascopy-node.app/instrument/lnkusd)|`lnkusd`|Sep 25, 2021|
+|[Litecoin vs Swiss Franc](https://www.dukascopy-node.app/instrument/ltcchf)|`ltcchf`|Mar 14, 2023|
+|[Litecoin vs Euro](https://www.dukascopy-node.app/instrument/ltceur)|`ltceur`|Mar 14, 2023|
+|[Pound Sterling](https://www.dukascopy-node.app/instrument/ltcgbp)|`ltcgbp`|Mar 14, 2023|
 |[Litecoin vs US Dollar](https://www.dukascopy-node.app/instrument/ltcusd)|`ltcusd`|Sep 3, 2018|
 |[Polygon vs US Dollar](https://www.dukascopy-node.app/instrument/matusd)|`matusd`|Sep 25, 2021|
 |[Maker vs US Dollar](https://www.dukascopy-node.app/instrument/mkrusd)|`mkrusd`|Sep 25, 2021|
 |[TRON vs US Dollar](https://www.dukascopy-node.app/instrument/trxusd)|`trxusd`|Aug 4, 2019|
 |[Uniswap vs US Dollar](https://www.dukascopy-node.app/instrument/uniusd)|`uniusd`|Oct 1, 2021|
+|[Stellar vs Swiss Franc](https://www.dukascopy-node.app/instrument/xlmchf)|`xlmchf`|Mar 14, 2023|
+|[Stellar vs Euro](https://www.dukascopy-node.app/instrument/xlmeur)|`xlmeur`|Mar 14, 2023|
+|[Stellar vs Pound Sterling](https://www.dukascopy-node.app/instrument/xlmgbp)|`xlmgbp`|Mar 14, 2023|
 |[Stellar vs US Dollar](https://www.dukascopy-node.app/instrument/xlmusd)|`xlmusd`|May 25, 2021|
 |[Yearn.finance vs US Dollar](https://www.dukascopy-node.app/instrument/yfiusd)|`yfiusd`|Sep 25, 2021|
 <h3 id="cmd_agricultural">Agricultural commodities ☕</h3>
