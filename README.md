@@ -81,6 +81,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 ## 📖 Quick start
 * [Basic usage of `dukascopy-node`](https://www.dukascopy-node.app/output-formats)
 * [Downloading tick data](https://www.dukascopy-node.app/downloading-tick-data)
+* [Date formatting and converting timezones](https://www.dukascopy-node.app/custom-date-format-and-timezone-conversion)
 * [Dealing with empty data and errors](https://www.dukascopy-node.app/errors-and-empty-data)
 * [Downloading data with cache](https://www.dukascopy-node.app/using-cache)
 * [Downloading data with custom batching](https://www.dukascopy-node.app/custom-batching)
