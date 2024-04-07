@@ -3,8 +3,8 @@ import { ProcessDataOutput } from '../processor/types';
 import { TimeframeType, Timeframe } from '../config/timeframes';
 import { FormatType, Format } from '../config/format';
 
-const headers = ['timestamp', 'open', 'high', 'low', 'close', 'volume'];
-const tickHeaders = ['timestamp', 'askPrice', 'bidPrice', 'askVolume', 'bidVolume'];
+export const candleHeaders = ['timestamp', 'open', 'high', 'low', 'close', 'volume'];
+export const tickHeaders = ['timestamp', 'askPrice', 'bidPrice', 'askVolume', 'bidVolume'];
 
 export function formatOutput({
   processedData,
@@ -80,7 +80,7 @@ export function formatOutput({
     return [];
   }
 
-  const bodyHeaders = timeframe === Timeframe.tick ? tickHeaders : headers;
+  const bodyHeaders = timeframe === Timeframe.tick ? tickHeaders : candleHeaders;
 
   if (format === Format.json) {
     const data = processedData.map(arr => {

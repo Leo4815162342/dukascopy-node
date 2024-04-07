@@ -146,7 +146,7 @@ export class BufferFetcher {
     return bufferObjects;
   }
 
-  private async fetchBuffer(url: string): Promise<Buffer> {
+  public async fetchBuffer(url: string): Promise<Buffer> {
     if (this.fetcherFn) {
       return this.fetcherFn(url);
     }

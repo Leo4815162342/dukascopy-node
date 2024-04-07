@@ -36,3 +36,5 @@ export {
   CurrentRatesConfigJsonItem,
   CurrentRatesConfigJsonTickItem
 } from './getCurrentRates';
+
+export { getHistoricalRatesToStream } from './getHistoricalRatesToStream';
