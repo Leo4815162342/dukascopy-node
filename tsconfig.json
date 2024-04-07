@@ -5,7 +5,7 @@
     "removeComments": false,
     "sourceMap": true,
     "strict": true,
-    "target": "es2017",
+    "target": "ES2022",
     "esModuleInterop": true,
     "noImplicitAny": true,
     "resolveJsonModule": true
