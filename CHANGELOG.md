@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.38.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.37.0...v1.38.0) (2024-03-19)
+
+
+### Features
+
+* new crypto instruments ([#171](https://github.com/Leo4815162342/dukascopy-node/issues/171)) ([b2e2a77](https://github.com/Leo4815162342/dukascopy-node/commit/b2e2a778b03062e8b9a5f355adfe756f7aa396da))
+
 ## [1.37.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.36.2...v1.37.0) (2024-03-04)
 
 

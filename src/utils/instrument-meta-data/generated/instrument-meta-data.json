@@ -1919,7 +1919,7 @@
   "batusd": {
     "name": "BAT/USD",
     "description": "Basic Attention Token vs US Dollar",
-    "decimalFactor": 100000,
+    "decimalFactor": 1000,
     "startHourForTicks": "2019-08-05T00:00:02.214Z",
     "startDayForMinuteCandles": "2019-08-05T00:00:00.000Z",
     "startMonthForHourlyCandles": "2019-08-05T00:00:00.000Z",
@@ -1996,6 +1996,33 @@
     "startDayForMinuteCandles": "2020-11-02T12:00:00.000Z",
     "startMonthForHourlyCandles": "2020-11-02T12:00:00.000Z",
     "startYearForDailyCandles": "2020-11-02T00:00:00.000Z"
+  },
+  "bchchf": {
+    "name": "BCH/CHF",
+    "description": "Bitcoin Cash vs Swiss Franc",
+    "decimalFactor": 10,
+    "startHourForTicks": "2023-03-14T14:52:58.644Z",
+    "startDayForMinuteCandles": "2023-03-14T14:52:00.000Z",
+    "startMonthForHourlyCandles": "2023-03-14T14:00:00.000Z",
+    "startYearForDailyCandles": "2023-03-14T00:00:00.000Z"
+  },
+  "bcheur": {
+    "name": "BCH/EUR",
+    "description": "Bitcoin Cash vs Euro",
+    "decimalFactor": 10,
+    "startHourForTicks": "2023-03-14T14:53:02.753Z",
+    "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
+    "startMonthForHourlyCandles": "2023-03-14T14:00:00.000Z",
+    "startYearForDailyCandles": "2023-03-14T00:00:00.000Z"
+  },
+  "bchgbp": {
+    "name": "BCH/GBP",
+    "description": "Bitcoin Cash vs Pound Sterling",
+    "decimalFactor": 10,
+    "startHourForTicks": "2023-03-14T14:53:02.089Z",
+    "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
+    "startMonthForHourlyCandles": "2023-03-14T14:00:00.000Z",
+    "startYearForDailyCandles": "2023-03-14T00:00:00.000Z"
   },
   "bchusd": {
     "name": "BCH/USD",
@@ -2356,6 +2383,33 @@
     "startDayForMinuteCandles": "2016-07-07T09:19:00.000Z",
     "startMonthForHourlyCandles": "2011-01-04T08:00:00.000Z",
     "startYearForDailyCandles": "2011-01-04T00:00:00.000Z"
+  },
+  "btcchf": {
+    "name": "BTC/CHF",
+    "description": "Bitcoin vs Swiss Frank",
+    "decimalFactor": 10,
+    "startHourForTicks": "2023-03-14T14:53:06.990Z",
+    "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
+    "startMonthForHourlyCandles": "2023-03-14T14:00:00.000Z",
+    "startYearForDailyCandles": "2023-03-14T00:00:00.000Z"
+  },
+  "btceur": {
+    "name": "BTC/EUR",
+    "description": "Bitcoin vs Euro",
+    "decimalFactor": 10,
+    "startHourForTicks": "2018-05-15T10:25:32.340Z",
+    "startDayForMinuteCandles": "2018-05-15T10:24:00.000Z",
+    "startMonthForHourlyCandles": "2018-05-15T10:00:00.000Z",
+    "startYearForDailyCandles": "2018-05-15T00:00:00.000Z"
+  },
+  "btcgbp": {
+    "name": "BTC/GBP",
+    "description": "Bitcoin vs Pound Sterling",
+    "decimalFactor": 10,
+    "startHourForTicks": "2023-03-14T15:03:45.307Z",
+    "startDayForMinuteCandles": "2023-03-14T15:03:00.000Z",
+    "startMonthForHourlyCandles": "2023-03-14T15:00:00.000Z",
+    "startYearForDailyCandles": "2023-03-14T00:00:00.000Z"
   },
   "btcusd": {
     "name": "BTC/USD",
@@ -4066,6 +4120,33 @@
     "startDayForMinuteCandles": "2022-05-12T13:30:00.000Z",
     "startMonthForHourlyCandles": "2022-05-12T13:00:00.000Z",
     "startYearForDailyCandles": "2022-05-12T00:00:00.000Z"
+  },
+  "ethchf": {
+    "name": "ETH/CHF",
+    "description": "Ether vs Swiss Franc",
+    "decimalFactor": 10,
+    "startHourForTicks": "2023-03-14T14:53:03.726Z",
+    "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
+    "startMonthForHourlyCandles": "2023-03-14T14:00:00.000Z",
+    "startYearForDailyCandles": "2023-03-14T00:00:00.000Z"
+  },
+  "etheur": {
+    "name": "ETH/EUR",
+    "description": "Ether vs Euro",
+    "decimalFactor": 10,
+    "startHourForTicks": "2023-03-14T14:53:03.677Z",
+    "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
+    "startMonthForHourlyCandles": "2023-03-14T14:00:00.000Z",
+    "startYearForDailyCandles": "2023-03-14T00:00:00.000Z"
+  },
+  "ethgbp": {
+    "name": "ETH/GBP",
+    "description": "Ether vs Pound Sterling",
+    "decimalFactor": 10,
+    "startHourForTicks": "2023-03-14T14:53:03.676Z",
+    "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
+    "startMonthForHourlyCandles": "2023-03-14T14:00:00.000Z",
+    "startYearForDailyCandles": "2023-03-14T00:00:00.000Z"
   },
   "ethusd": {
     "name": "ETH/USD",
@@ -6478,6 +6559,33 @@
     "startDayForMinuteCandles": "2022-05-13T13:30:00.000Z",
     "startMonthForHourlyCandles": "2022-05-13T13:00:00.000Z",
     "startYearForDailyCandles": "2022-05-13T00:00:00.000Z"
+  },
+  "ltcchf": {
+    "name": "LTC/CHF",
+    "description": "Litecoin vs Swiss Franc",
+    "decimalFactor": 10,
+    "startHourForTicks": "2023-03-14T14:52:50.061Z",
+    "startDayForMinuteCandles": "2023-03-14T14:52:00.000Z",
+    "startMonthForHourlyCandles": "2023-03-14T14:00:00.000Z",
+    "startYearForDailyCandles": "2023-03-14T00:00:00.000Z"
+  },
+  "ltceur": {
+    "name": "LTC/EUR",
+    "description": "Litecoin vs Euro",
+    "decimalFactor": 10,
+    "startHourForTicks": "2023-03-14T14:55:12.375Z",
+    "startDayForMinuteCandles": "2023-03-14T14:55:00.000Z",
+    "startMonthForHourlyCandles": "2023-03-14T14:00:00.000Z",
+    "startYearForDailyCandles": "2023-03-14T00:00:00.000Z"
+  },
+  "ltcgbp": {
+    "name": "LTC/GBP",
+    "description": "Pound Sterling",
+    "decimalFactor": 10,
+    "startHourForTicks": "2023-03-14T14:52:50.074Z",
+    "startDayForMinuteCandles": "2023-03-14T14:52:00.000Z",
+    "startMonthForHourlyCandles": "2023-03-14T14:00:00.000Z",
+    "startYearForDailyCandles": "2023-03-14T00:00:00.000Z"
   },
   "ltcusd": {
     "name": "LTC/USD",
@@ -11005,6 +11113,33 @@
     "startDayForMinuteCandles": "2017-11-15T16:47:00.000Z",
     "startMonthForHourlyCandles": "2017-11-15T16:00:00.000Z",
     "startYearForDailyCandles": "2017-11-15T00:00:00.000Z"
+  },
+  "xlmchf": {
+    "name": "XLM/CHF",
+    "description": "Stellar vs Swiss Franc",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2023-03-14T14:53:03.870Z",
+    "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
+    "startMonthForHourlyCandles": "2023-03-14T14:00:00.000Z",
+    "startYearForDailyCandles": "2023-03-14T00:00:00.000Z"
+  },
+  "xlmeur": {
+    "name": "XLM/EUR",
+    "description": "Stellar vs Euro",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2023-03-14T14:53:03.820Z",
+    "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
+    "startMonthForHourlyCandles": "2023-03-14T14:00:00.000Z",
+    "startYearForDailyCandles": "2023-03-14T00:00:00.000Z"
+  },
+  "xlmgbp": {
+    "name": "XLM/GBP",
+    "description": "Stellar vs Pound Sterling",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2023-03-14T14:53:03.821Z",
+    "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
+    "startMonthForHourlyCandles": "2023-03-14T14:00:00.000Z",
+    "startYearForDailyCandles": "2023-03-14T00:00:00.000Z"
   },
   "xlmusd": {
     "name": "XLM/USD",
