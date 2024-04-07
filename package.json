@@ -1,6 +1,6 @@
 {
 	"name": "dukascopy-node-plus",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"description": "Node.js library for downloading historical market tick data for for Crypto, Stocks, ETFs, CFDs, Forex",
 	"main": "dist/index.js",
 	"module": "dist/esm/index.js",
@@ -25,8 +25,7 @@
 		"release:beta": "pnpm build && npm publish --tag beta"
 	},
 	"author": {
-		"name": "Leonid Pyrlia",
-		"url": "https://www.linkedin.com/in/leonid-pyrlia/"
+		"name": "Dr. Mohammed REZGUI"
 	},
 	"license": "MIT",
 	"repository": {
