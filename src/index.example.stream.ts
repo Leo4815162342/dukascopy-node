@@ -23,18 +23,19 @@ const printMemory = () => {
       instrument: 'eurusd',
       dates: {
         from: new Date('2021-02-01'),
-        to: new Date('2021-02-03')
+        to: new Date('2021-06-03')
       },
       timeframe: 'm1',
       format: 'csv'
     });
 
-    data.on('data', _chunk => {
-      process.stdout.write(_chunk);
+    data.on('data', chunk => {
+      process.stdout.write(chunk);
     });
 
     data.on('end', () => {
       //console.log('end');
+      console.log();
       printMemory();
     });
   } catch (error) {

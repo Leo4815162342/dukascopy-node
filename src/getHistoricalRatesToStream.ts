@@ -18,6 +18,7 @@ import { Readable, Transform } from 'stream';
 import { pipeline } from 'stream/promises';
 import { Format } from './config/format';
 import { Timeframe } from './config/timeframes';
+import { ProcessDataOutput } from './processor/types';
 
 export function getHistoricalRatesToStream(config: Config): Readable {
   const stream = new Readable({
@@ -98,30 +99,41 @@ export function getHistoricalRatesToStream(config: Config): Readable {
       startDate: startDate,
       endDate: endDate
     });
-    //console.log(urlsforFetchingData);
+    // console.log(urlsforFetchingData);
+
+    const promiseProcessedData = urlsforFetchingData.map(url => {
+      return new Promise<ProcessDataOutput>((resolve, reject) => {
+        bufferFetcher
+          .fetch([url])
+          .then(bufferObjects => {
+            try {
+              const processedData = processData({
+                instrument: input.instrument,
+                requestedTimeframe: input.timeframe,
+                bufferObjects: bufferObjects,
+                priceType: input.priceType,
+                volumes: input.volumes,
+                volumeUnits: input.volumeUnits,
+                ignoreFlats: input.ignoreFlats
+              });
+              resolve(processedData);
+            } catch (err: any) {
+              reject(err);
+            }
+          })
+          .catch((err: any) => {
+            reject(err);
+          });
+      });
+    });
 
     pipeline(
-      Readable.from(urlsforFetchingData),
+      Readable.from(promiseProcessedData),
       new Transform({
         objectMode: true,
-        transform: async (url, _, callback) => {
-          const bufferObject = {
-            url,
-            buffer: await bufferFetcher.fetchBuffer(url),
-            isCacheHit: useCache
-          };
-
+        transform: async (processedDataPr, _, callback) => {
+          const processedData = await processedDataPr;
           try {
-            const processedData = processData({
-              instrument: input.instrument,
-              requestedTimeframe: input.timeframe,
-              bufferObjects: [bufferObject],
-              priceType: input.priceType,
-              volumes: input.volumes,
-              volumeUnits: input.volumeUnits,
-              ignoreFlats: input.ignoreFlats
-            });
-
             //Filter Data
             processedData.forEach((item: number[]) => {
               const [timestamp] = item;
@@ -149,6 +161,7 @@ export function getHistoricalRatesToStream(config: Config): Readable {
             });
 
             if (++urlsProcessed === urlsforFetchingData.length) {
+              //console.log('urlsProcessed', urlsProcessed);
               stream.push(null);
             }
 
@@ -162,7 +175,7 @@ export function getHistoricalRatesToStream(config: Config): Readable {
       stream.emit('error', err);
       stream.push(null);
     });
-  } catch (err: any) {
+  } catch (err) {
     stream.emit('error', err);
     stream.push(null);
   }

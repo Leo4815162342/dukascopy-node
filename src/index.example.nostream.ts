@@ -23,13 +23,14 @@ const printMemory = () => {
       instrument: 'eurusd',
       dates: {
         from: new Date('2021-02-01'),
-        to: new Date('2021-02-03')
+        to: new Date('2021-06-03')
       },
       timeframe: 'm1',
       format: 'csv'
     });
 
     process.stdout.write(data);
+    console.log();
 
     printMemory();
   } catch (error) {
