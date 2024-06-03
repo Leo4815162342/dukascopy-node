@@ -3061,7 +3061,7 @@ export enum Instrument {
     fangususd='fangususd',
 
     /**
-     * ### FACEBOOK INC-A
+     * ### FACEBOOK INC-A / META
      * *FB.US/USD*
      */
     fbususd='fbususd',
@@ -3911,6 +3911,12 @@ export enum Instrument {
      * *IT.US/USD*
      */
     itususd='itususd',
+
+    /**
+     * ### Italy 40 Index
+     * *ITA.IDX/EUR*
+     */
+    itaidxeur='itaidxeur',
 
     /**
      * ### Intertek Group PLC
@@ -6847,6 +6853,12 @@ export enum Instrument {
     usbususd='usbususd',
 
     /**
+     * ### US Dollar vs United Arab Emirates Dirham
+     * *USD/AED*
+     */
+    usdaed='usdaed',
+
+    /**
      * ### US Dollar vs Canadian Dollar
      * *USD/CAD*
      */
@@ -6923,6 +6935,12 @@ export enum Instrument {
      * *USD/RON*
      */
     usdron='usdron',
+
+    /**
+     * ### US Dollar vs Saudi Riyal
+     * *USD/SAR*
+     */
+    usdsar='usdsar',
 
     /**
      * ### US Dollar vs Swedish Krona
