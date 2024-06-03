@@ -101,12 +101,12 @@ const { getHistoricalRates } = require('dukascopy-node');
 * [France ETFs 🇫🇷📈 (3)](#etf_cfd_fr)
 * [Hong Kong ETFs 🇭🇰📈 (4)](#etf_cfd_hk)
 * [United States ETFs 🇺🇸📈 (43)](#etf_cfd_us)
-* [Forex currencies 💱 (52)](#fx_crosses)
+* [Forex currencies 💱 (54)](#fx_crosses)
 * [Forex major currencies 💶 (7)](#fx_majors)
 * [Forex metals 🥇 (2)](#fx_metals)
 * [America 🌎 (6)](#idx_america)
 * [Asia 🌏 (6)](#idx_asia)
-* [Europe 🇪🇺 (8)](#idx_europe)
+* [Europe 🇪🇺 (9)](#idx_europe)
 * [Africa 🌍 (1)](#idx_africa)
 * [Austria 🇦🇹 (3)](#austria)
 * [Belgium 🇧🇪 (7)](#belgium)
@@ -304,6 +304,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |[New Zealand Dollar vs Japanese Yen](https://www.dukascopy-node.app/instrument/nzdjpy)|`nzdjpy`|Oct 1, 1998|
 |[Singapore Dollar vs Japanese Yen](https://www.dukascopy-node.app/instrument/sgdjpy)|`sgdjpy`|May 31, 1999|
 |[Turkish Lira vs Japanese Yen](https://www.dukascopy-node.app/instrument/tryjpy)|`tryjpy`|May 9, 2010|
+|[US Dollar vs United Arab Emirates Dirham](https://www.dukascopy-node.app/instrument/usdaed)|`usdaed`|Mar 22, 2024|
 |[US Dollar vs Offshore Chinese Renminbi](https://www.dukascopy-node.app/instrument/usdcnh)|`usdcnh`|Jan 2, 2012|
 |[US Dollar vs Czech Koruna](https://www.dukascopy-node.app/instrument/usdczk)|`usdczk`|Jan 3, 2016|
 |[US Dollar vs Danish Krone](https://www.dukascopy-node.app/instrument/usddkk)|`usddkk`|Apr 12, 1990|
@@ -314,6 +315,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |[US Dollar vs Norwegian Krone](https://www.dukascopy-node.app/instrument/usdnok)|`usdnok`|Mar 27, 1991|
 |[US Dollar vs Polish Zloty](https://www.dukascopy-node.app/instrument/usdpln)|`usdpln`|Mar 22, 1999|
 |[US Dollar vs Romanian Leu](https://www.dukascopy-node.app/instrument/usdron)|`usdron`|Dec 19, 2016|
+|[US Dollar vs Saudi Riyal](https://www.dukascopy-node.app/instrument/usdsar)|`usdsar`|Mar 25, 2024|
 |[US Dollar vs Swedish Krona](https://www.dukascopy-node.app/instrument/usdsek)|`usdsek`|Jul 16, 1991|
 |[US Dollar vs Singapore Dollar](https://www.dukascopy-node.app/instrument/usdsgd)|`usdsgd`|Jan 21, 1991|
 |[US Dollar vs Thai Baht](https://www.dukascopy-node.app/instrument/usdthb)|`usdthb`|Feb 13, 2017|
@@ -367,6 +369,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |[UK 100 Index](https://www.dukascopy-node.app/instrument/gbridxgbp)|`gbridxgbp`|Apr 5, 1988|
 |[Spain 35 Index](https://www.dukascopy-node.app/instrument/espidxeur)|`espidxeur`|Jun 2, 2014|
 |[Switzerland 20 Index](https://www.dukascopy-node.app/instrument/cheidxchf)|`cheidxchf`|Jan 3, 1992|
+|[Italy 40 Index](https://www.dukascopy-node.app/instrument/itaidxeur)|`itaidxeur`|Jun 2, 2014|
 |[Netherlands 25 Index](https://www.dukascopy-node.app/instrument/nldidxeur)|`nldidxeur`|Dec 1, 2017|
 |[Poland 20 Index](https://www.dukascopy-node.app/instrument/plnidxpln)|`plnidxpln`|Dec 1, 2017|
 <h3 id="idx_africa">Africa 🌍</h3>
@@ -1132,7 +1135,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |[EXTRA SPACE STORAGE INC](https://www.dukascopy-node.app/instrument/exrususd)|`exrususd`|May 12, 2022|
 |[FORD MOTOR CO](https://www.dukascopy-node.app/instrument/fususd)|`fususd`|Nov 2, 2017|
 |[DIAMONDBACK ENERGY INC](https://www.dukascopy-node.app/instrument/fangususd)|`fangususd`|May 12, 2022|
-|[FACEBOOK INC-A](https://www.dukascopy-node.app/instrument/fbususd)|`fbususd`|Jan 26, 2017|
+|[FACEBOOK INC-A / META](https://www.dukascopy-node.app/instrument/fbususd)|`fbususd`|Jan 26, 2017|
 |[FORTUNE BRANDS HOME & SECURI](https://www.dukascopy-node.app/instrument/fbhsususd)|`fbhsususd`|May 12, 2022|
 |[FIRST CITIZENS BCSHS -CL A](https://www.dukascopy-node.app/instrument/fcncaususd)|`fcncaususd`|May 12, 2022|
 |[FREEPORT-MCMORAN INC](https://www.dukascopy-node.app/instrument/fcxususd)|`fcxususd`|Nov 2, 2017|
