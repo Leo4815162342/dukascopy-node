@@ -183,6 +183,7 @@
       "nzdjpy",
       "sgdjpy",
       "tryjpy",
+      "usdaed",
       "usdcnh",
       "usdczk",
       "usddkk",
@@ -193,6 +194,7 @@
       "usdnok",
       "usdpln",
       "usdron",
+      "usdsar",
       "usdsek",
       "usdsgd",
       "usdthb",
@@ -251,6 +253,7 @@
       "gbridxgbp",
       "espidxeur",
       "cheidxchf",
+      "itaidxeur",
       "nldidxeur",
       "plnidxpln"
     ]
