@@ -1919,7 +1919,7 @@
   "batusd": {
     "name": "BAT/USD",
     "description": "Basic Attention Token vs US Dollar",
-    "decimalFactor": 1000,
+    "decimalFactor": 100000,
     "startHourForTicks": "2019-08-05T00:00:02.214Z",
     "startDayForMinuteCandles": "2019-08-05T00:00:00.000Z",
     "startMonthForHourlyCandles": "2019-08-05T00:00:00.000Z",
@@ -5871,10 +5871,10 @@
     "name": "ITA.IDX/EUR",
     "description": "Italy 40 Index",
     "decimalFactor": 1000,
-    "startHourForTicks": "2014-06-02T07:00:33.102Z",
-    "startDayForMinuteCandles": "2014-06-02T07:00:00.000Z",
-    "startMonthForHourlyCandles": "2014-06-02T07:00:00.000Z",
-    "startYearForDailyCandles": "2014-06-02T00:00:00.000Z"
+    "startHourForTicks": "2016-07-29T07:00:27.002Z",
+    "startDayForMinuteCandles": "2016-07-29T07:00:00.000Z",
+    "startMonthForHourlyCandles": "2016-07-29T07:00:00.000Z",
+    "startYearForDailyCandles": "2016-07-29T00:00:00.000Z"
   },
   "itrkgbgbx": {
     "name": "ITRK.GB/GBX",
@@ -6473,7 +6473,7 @@
   "lnkusd": {
     "name": "LNK/USD",
     "description": "Chainlink vs US Dollar",
-    "decimalFactor": 100,
+    "decimalFactor": 1000,
     "startHourForTicks": "2000-01-01T00:00:00.000Z",
     "startDayForMinuteCandles": "2021-09-25T17:49:00.000Z",
     "startMonthForHourlyCandles": "2021-09-25T17:00:00.000Z",
@@ -10226,7 +10226,7 @@
   "uniusd": {
     "name": "UNI/USD",
     "description": "Uniswap vs US Dollar",
-    "decimalFactor": 100,
+    "decimalFactor": 1000,
     "startHourForTicks": "2000-01-01T00:00:00.000Z",
     "startDayForMinuteCandles": "2021-10-01T00:00:00.000Z",
     "startMonthForHourlyCandles": "2021-10-01T00:00:00.000Z",
@@ -10766,7 +10766,7 @@
   "ualususd": {
     "name": "VTRS.US/USD",
     "description": "VIATRIS INC",
-    "decimalFactor": 1000,
+    "decimalFactor": 5000,
     "startHourForTicks": "2022-05-13T13:30:03.085Z",
     "startDayForMinuteCandles": "2022-05-13T13:30:00.000Z",
     "startMonthForHourlyCandles": "2022-05-13T13:00:00.000Z",

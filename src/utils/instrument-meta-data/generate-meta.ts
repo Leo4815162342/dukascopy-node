@@ -15,6 +15,15 @@ export interface InstrumentMetaData {
   startYearForDailyCandles: string;
 }
 
+// original source for instrument metadata has some incorrect values
+// These overrides are used to correct them:
+// more info: https://github.com/Leo4815162342/dukascopy-node/issues/178
+const decimalFactorOverride: Record<string, number> = {
+  batusd: 100000,
+  uniusd: 1000,
+  lnkusd: 1000
+};
+
 export function generateMeta(
   instruments: MetaDataResponse['instruments'],
   actualStartDates: ActualStartDates,
@@ -41,7 +50,7 @@ export function generateMeta(
     all[cleanName] = {
       name,
       description,
-      decimalFactor: 10 / pipValue,
+      decimalFactor: decimalFactorOverride[cleanName] || 10 / pipValue,
       startHourForTicks: hasActualStartDates
         ? new Date(actualStartDates[cleanNameUC]['0'] * 1000).toISOString()
         : new Date(Number(history_start_tick)).toISOString(),
