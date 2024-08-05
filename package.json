@@ -14,7 +14,6 @@
 	},
 	"scripts": {
 		"build": "rm -rf dist && tsup-node src/index.ts src/cli/index.ts --format esm,cjs --dts --legacy-output",
-		"prepare": "npm run build",
 		"test": "vitest run",
 		"coverage": "vitest run --coverage",
 		"format": "prettier --config .prettierrc 'src/**/*.ts' --write",
