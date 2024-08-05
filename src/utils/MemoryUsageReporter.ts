@@ -48,6 +48,6 @@ export class MemoryUsageReporter {
     console.log('Stopping memory usage tracker', reason);
     clearInterval(this.interval);
     this.interval = null;
-    process.exit(67);
+    process.exit(1);
   }
 }
