@@ -225,11 +225,11 @@ export async function run(argv: NodeJS.Process['argv']) {
         'Search config invalid:',
         validationErrors.map(err => err?.message || '')
       );
-      process.exit(0);
+      process.exit(1);
     }
   } catch (err: unknown) {
     const errorMsg = err instanceof Error ? err.message : JSON.stringify(err);
     printErrors('\nSomething went wrong:', errorMsg);
-    process.exit(0);
+    process.exit(1);
   }
 }
