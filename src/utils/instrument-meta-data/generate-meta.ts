@@ -24,12 +24,18 @@ const decimalFactorOverride: Record<string, number> = {
   lnkusd: 1000
 };
 
+type InstrumentMetaDataMap = Record<string, InstrumentMetaData>;
+
 export function generateMeta(
   instruments: MetaDataResponse['instruments'],
   actualStartDates: ActualStartDates,
   path: string
 ): Promise<void> {
-  const data = Object.keys(instruments).reduce<Record<string, InstrumentMetaData>>((all, inst) => {
+
+  const currentValueFromFile = fs.readFileSync(path, 'utf8');
+  const currentValue = JSON.parse(currentValueFromFile) as InstrumentMetaDataMap;
+
+  const data = Object.keys(instruments).reduce((all, inst) => {
     const {
       name,
       description,
@@ -66,7 +72,7 @@ export function generateMeta(
     };
 
     return all;
-  }, {});
+  }, currentValue);
 
   return saveFile(path, JSON.stringify(data, null, 2)).then(() => {
     console.log('Meta data generated!', path);

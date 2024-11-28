@@ -11401,5 +11401,149 @@
     "startDayForMinuteCandles": "2015-08-07T07:00:00.000Z",
     "startMonthForHourlyCandles": "2011-01-03T08:00:00.000Z",
     "startYearForDailyCandles": "2011-01-03T00:00:00.000Z"
+  },
+  "arkiususd": {
+    "name": "ARKI.US/USD",
+    "description": "ARK 21Shares Active Bitcoin Ethereum Strategy ETF Fund",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-10-21T10:44:45.696Z",
+    "startDayForMinuteCandles": "2024-10-21T10:44:00.000Z",
+    "startMonthForHourlyCandles": "2024-10-21T10:00:00.000Z",
+    "startYearForDailyCandles": "2024-04-25T00:00:00.000Z"
+  },
+  "bugggbgbx": {
+    "name": "BUGG.GB/GBP",
+    "description": "Global X Cybersecurity UCITS ETF Fund",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-10-21T10:43:59.072Z",
+    "startDayForMinuteCandles": "2024-10-21T10:43:00.000Z",
+    "startMonthForHourlyCandles": "2024-10-21T10:00:00.000Z",
+    "startYearForDailyCandles": "1970-01-01T00:00:00.000Z"
+  },
+  "csh2gbgbx": {
+    "name": "CSH2.GB/GBX",
+    "description": "Lyxor Smart Overnight Return - UCITS ETF C-GBP",
+    "decimalFactor": 10,
+    "startHourForTicks": "2024-01-02T11:00:03.000Z",
+    "startDayForMinuteCandles": "2024-01-02T11:00:00.000Z",
+    "startMonthForHourlyCandles": "2024-01-02T11:00:00.000Z",
+    "startYearForDailyCandles": "2024-01-02T00:00:00.000Z"
+  },
+  "cysegbgbx": {
+    "name": "CYSE.GB/GBX",
+    "description": "WisdomTree Cybersecurity UCITS ETF Fund",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-10-22T08:11:39.095Z",
+    "startDayForMinuteCandles": "2024-10-22T08:11:00.000Z",
+    "startMonthForHourlyCandles": "2024-10-22T08:00:00.000Z",
+    "startYearForDailyCandles": "2024-01-02T00:00:00.000Z"
+  },
+  "esihgbgbx": {
+    "name": "ESIH.GB/GBP",
+    "description": "iShares MSCI Europe Health Care Sector UCITS ETF Fund",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-10-24T07:00:22.912Z",
+    "startDayForMinuteCandles": "2024-10-24T07:00:00.000Z",
+    "startMonthForHourlyCandles": "2024-10-24T07:00:00.000Z",
+    "startYearForDailyCandles": "1970-01-01T00:00:00.000Z"
+  },
+  "iglnususd": {
+    "name": "IGLN.US/USD",
+    "description": "iShares Physical Gold ETC Fund",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-10-21T10:43:07.016Z",
+    "startDayForMinuteCandles": "2024-10-21T10:43:00.000Z",
+    "startMonthForHourlyCandles": "2024-10-21T10:00:00.000Z",
+    "startYearForDailyCandles": "2023-04-03T00:00:00.000Z"
+  },
+  "iufsususd": {
+    "name": "IUFS.US/USD",
+    "description": "iShares S&P 500 Financials Sector UCITS ETF",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-10-21T10:44:01.029Z",
+    "startDayForMinuteCandles": "2024-10-21T10:44:00.000Z",
+    "startMonthForHourlyCandles": "2024-10-21T10:00:00.000Z",
+    "startYearForDailyCandles": "2024-01-02T00:00:00.000Z"
+  },
+  "semigbgbx": {
+    "name": "SEMI.GB/GBP",
+    "description": "iShares MSCI Global Semiconductors UCITS ETF",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-10-21T10:43:10.623Z",
+    "startDayForMinuteCandles": "2024-10-21T10:43:00.000Z",
+    "startMonthForHourlyCandles": "2024-10-21T10:00:00.000Z",
+    "startYearForDailyCandles": "1970-01-01T00:00:00.000Z"
+  },
+  "sgldususd": {
+    "name": "SGLD.US/USD",
+    "description": "Invesco Physical Gold ETC Fund",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-10-21T10:43:09.127Z",
+    "startDayForMinuteCandles": "2024-10-21T10:43:00.000Z",
+    "startMonthForHourlyCandles": "2024-10-21T10:00:00.000Z",
+    "startYearForDailyCandles": "2024-01-02T00:00:00.000Z"
+  },
+  "smhususd": {
+    "name": "SMH.US/USD",
+    "description": "VanEck Semiconductor ETF Fund",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-10-21T10:43:06.916Z",
+    "startDayForMinuteCandles": "2024-10-21T10:43:00.000Z",
+    "startMonthForHourlyCandles": "2024-10-21T10:00:00.000Z",
+    "startYearForDailyCandles": "2024-01-02T00:00:00.000Z"
+  },
+  "smtcususd": {
+    "name": "SMTC.US/USD",
+    "description": "Lyxor Smart Overnight Return - UCITS ETF C-USD",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2023-11-21T08:00:02.000Z",
+    "startDayForMinuteCandles": "2023-11-21T08:00:00.000Z",
+    "startMonthForHourlyCandles": "2023-11-21T07:00:00.000Z",
+    "startYearForDailyCandles": "2023-11-21T00:00:00.000Z"
+  },
+  "wtaiususd": {
+    "name": "WTAI.US/USD",
+    "description": "Wisdomtree Artificial Intelligence And Innovation Fund",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-10-22T07:11:41.608Z",
+    "startDayForMinuteCandles": "2024-10-22T07:11:00.000Z",
+    "startMonthForHourlyCandles": "2024-10-22T07:00:00.000Z",
+    "startYearForDailyCandles": "2024-01-02T00:00:00.000Z"
+  },
+  "xdergbgbx": {
+    "name": "XDER.GB/GBX",
+    "description": "Xtrackers FTSE Developed Europe Real Estate UCITS ETF",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-10-22T08:10:11.503Z",
+    "startDayForMinuteCandles": "2024-10-22T08:10:00.000Z",
+    "startMonthForHourlyCandles": "2024-10-22T08:00:00.000Z",
+    "startYearForDailyCandles": "2024-01-02T00:00:00.000Z"
+  },
+  "xdwhususd": {
+    "name": "XDWH.US/USD",
+    "description": "Xtrackers MSCI World Health Care UCITS ETF Fund",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-10-21T10:43:27.261Z",
+    "startDayForMinuteCandles": "2024-10-21T10:43:00.000Z",
+    "startMonthForHourlyCandles": "2024-10-21T10:00:00.000Z",
+    "startYearForDailyCandles": "2024-01-02T00:00:00.000Z"
+  },
+  "xdwtususd": {
+    "name": "XDWT.US/USD",
+    "description": "Xtrackers MSCI World Information Technology UCITS ETF",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-10-24T13:36:55.714Z",
+    "startDayForMinuteCandles": "2024-10-24T13:36:00.000Z",
+    "startMonthForHourlyCandles": "2024-10-24T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-01-02T00:00:00.000Z"
+  },
+  "xresususd": {
+    "name": "XRES.US/USD",
+    "description": "Invesco Real Estate S&P US Select Sector UCITS ETF",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-10-24T13:32:02.406Z",
+    "startDayForMinuteCandles": "2024-10-24T13:32:00.000Z",
+    "startMonthForHourlyCandles": "2024-10-24T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-01-02T00:00:00.000Z"
   }
 }

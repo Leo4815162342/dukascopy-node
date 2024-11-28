@@ -7601,5 +7601,101 @@ export enum Instrument {
      * *ZURN.CH/CHF*
      */
     zurnchchf='zurnchchf',
+
+    /**
+     * ### ARK 21Shares Active Bitcoin Ethereum Strategy ETF Fund
+     * *ARKI.US/USD*
+     */
+    arkiususd='arkiususd',
+
+    /**
+     * ### Global X Cybersecurity UCITS ETF Fund
+     * *BUGG.GB/GBP*
+     */
+    bugggbgbx='bugggbgbx',
+
+    /**
+     * ### Lyxor Smart Overnight Return - UCITS ETF C-GBP
+     * *CSH2.GB/GBX*
+     */
+    csh2gbgbx='csh2gbgbx',
+
+    /**
+     * ### WisdomTree Cybersecurity UCITS ETF Fund
+     * *CYSE.GB/GBX*
+     */
+    cysegbgbx='cysegbgbx',
+
+    /**
+     * ### iShares MSCI Europe Health Care Sector UCITS ETF Fund
+     * *ESIH.GB/GBP*
+     */
+    esihgbgbx='esihgbgbx',
+
+    /**
+     * ### iShares Physical Gold ETC Fund
+     * *IGLN.US/USD*
+     */
+    iglnususd='iglnususd',
+
+    /**
+     * ### iShares S&P 500 Financials Sector UCITS ETF
+     * *IUFS.US/USD*
+     */
+    iufsususd='iufsususd',
+
+    /**
+     * ### iShares MSCI Global Semiconductors UCITS ETF
+     * *SEMI.GB/GBP*
+     */
+    semigbgbx='semigbgbx',
+
+    /**
+     * ### Invesco Physical Gold ETC Fund
+     * *SGLD.US/USD*
+     */
+    sgldususd='sgldususd',
+
+    /**
+     * ### VanEck Semiconductor ETF Fund
+     * *SMH.US/USD*
+     */
+    smhususd='smhususd',
+
+    /**
+     * ### Lyxor Smart Overnight Return - UCITS ETF C-USD
+     * *SMTC.US/USD*
+     */
+    smtcususd='smtcususd',
+
+    /**
+     * ### Wisdomtree Artificial Intelligence And Innovation Fund
+     * *WTAI.US/USD*
+     */
+    wtaiususd='wtaiususd',
+
+    /**
+     * ### Xtrackers FTSE Developed Europe Real Estate UCITS ETF
+     * *XDER.GB/GBX*
+     */
+    xdergbgbx='xdergbgbx',
+
+    /**
+     * ### Xtrackers MSCI World Health Care UCITS ETF Fund
+     * *XDWH.US/USD*
+     */
+    xdwhususd='xdwhususd',
+
+    /**
+     * ### Xtrackers MSCI World Information Technology UCITS ETF
+     * *XDWT.US/USD*
+     */
+    xdwtususd='xdwtususd',
+
+    /**
+     * ### Invesco Real Estate S&P US Select Sector UCITS ETF
+     * *XRES.US/USD*
+     */
+    xresususd='xresususd',
 }
 export type InstrumentType = keyof typeof Instrument;
