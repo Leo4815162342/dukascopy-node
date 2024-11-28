@@ -1,13 +1,10 @@
+/* eslint-disable no-console */
 import fs from 'fs';
 import { promisify } from 'util';
 import { InstrumentMetaDataMap } from './generate-meta';
 const saveFile = promisify(fs.writeFile);
 
-export function generateInstrumentEnum(
-  fromPath: string,
-  toPath: string
-): Promise<void> {
-
+export function generateInstrumentEnum(fromPath: string, toPath: string): Promise<void> {
   const instrumentsmetaData = fs.readFileSync(fromPath, 'utf8');
   const instrumentsMetaData = JSON.parse(instrumentsmetaData) as InstrumentMetaDataMap;
 

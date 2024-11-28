@@ -24,14 +24,13 @@ const decimalFactorOverride: Record<string, number> = {
   lnkusd: 1000
 };
 
-type InstrumentMetaDataMap = Record<string, InstrumentMetaData>;
+export type InstrumentMetaDataMap = Record<string, InstrumentMetaData>;
 
 export function generateMeta(
   instruments: MetaDataResponse['instruments'],
   actualStartDates: ActualStartDates,
   path: string
 ): Promise<void> {
-
   const currentValueFromFile = fs.readFileSync(path, 'utf8');
   const currentValue = JSON.parse(currentValueFromFile) as InstrumentMetaDataMap;
 

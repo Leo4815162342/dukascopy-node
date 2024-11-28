@@ -11,32 +11,11 @@ const saveFile = promisify(fs.writeFile);
 
 const OUTPUT_FOLDER = path.resolve(__dirname, 'generated');
 
-// Promise.all([getActualStartDates(), getRawMetaData()])
-//   .then(([actualStartDates, rawMetaData]) => {
-//     return Promise.all([
-// saveFile(
-//   path.resolve(OUTPUT_FOLDER, `raw-meta-data-${new Date().toISOString().slice(0, 10)}.json`),
-//   JSON.stringify(rawMetaData, null, 2)
-// ),
-// generateMeta(
-//   rawMetaData.instruments,
-//   actualStartDates,
-//   path.resolve(OUTPUT_FOLDER, 'instrument-meta-data.json')
-// ),
-// generateInstrumentEnum(
-//   rawMetaData.instruments,
-//   path.resolve(OUTPUT_FOLDER, 'instrument-enum.ts')
-// ),
-
-// ]);
-// })
-// .then(() => {
-//   console.log('Done');
-// });
-
-
 async function run() {
-  const [actualStartDates, rawMetaData] = await Promise.all([getActualStartDates(), getRawMetaData()]);
+  const [actualStartDates, rawMetaData] = await Promise.all([
+    getActualStartDates(),
+    getRawMetaData()
+  ]);
   await saveFile(
     path.resolve(OUTPUT_FOLDER, `raw-meta-data-${new Date().toISOString().slice(0, 10)}.json`),
     JSON.stringify(rawMetaData, null, 2)
@@ -44,17 +23,9 @@ async function run() {
 
   const metaDataFilePath = path.resolve(OUTPUT_FOLDER, 'instrument-meta-data.json');
 
-  await generateMeta(
-    rawMetaData.instruments,
-    actualStartDates,
-    metaDataFilePath
-  );
+  await generateMeta(rawMetaData.instruments, actualStartDates, metaDataFilePath);
 
-  await generateInstrumentEnum(
-    metaDataFilePath,
-    path.resolve(OUTPUT_FOLDER, 'instrument-enum.ts')
-  );
-
+  await generateInstrumentEnum(metaDataFilePath, path.resolve(OUTPUT_FOLDER, 'instrument-enum.ts'));
 
   await generateInstrumentGroupData(
     rawMetaData,
@@ -62,7 +33,6 @@ async function run() {
   );
 
   console.log('Done');
-
 }
 
 run();

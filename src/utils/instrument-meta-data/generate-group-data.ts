@@ -14,8 +14,6 @@ export function generateInstrumentGroupData(
   metadata: MetaDataResponse,
   path: string
 ): Promise<void> {
-
-
   const currentGroupDataRaw = fs.readFileSync(path, 'utf8');
   const currentGroupData = JSON.parse(currentGroupDataRaw) as GroupData[];
 
@@ -58,8 +56,8 @@ export function generateInstrumentGroupData(
     return {
       id: item.id,
       instruments: Array.from(new Set(item.instruments))
-    }
-  })
+    };
+  });
 
   return saveFile(path, JSON.stringify(dedupedGroups, null, 2)).then(() => {
     console.log('instrument groups generated!', path);
