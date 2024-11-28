@@ -127,6 +127,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 * [Switzerland 🇨🇭 (28)](#switzerland)
 * [United Kingdom 🇬🇧 (102)](#uk)
 * [United States 🇺🇸 (608)](#us)
+* [ETFs 📈 (16)](#etf_cfd)
 <hr>
 <h3 id="bnd_cfd">Bonds 📊</h3>
 
@@ -369,7 +370,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 |[UK 100 Index](https://www.dukascopy-node.app/instrument/gbridxgbp)|`gbridxgbp`|Apr 5, 1988|
 |[Spain 35 Index](https://www.dukascopy-node.app/instrument/espidxeur)|`espidxeur`|Jun 2, 2014|
 |[Switzerland 20 Index](https://www.dukascopy-node.app/instrument/cheidxchf)|`cheidxchf`|Jan 3, 1992|
-|[Italy 40 Index](https://www.dukascopy-node.app/instrument/itaidxeur)|`itaidxeur`|Jun 2, 2014|
+|[Italy 40 Index](https://www.dukascopy-node.app/instrument/itaidxeur)|`itaidxeur`|Jul 29, 2016|
 |[Netherlands 25 Index](https://www.dukascopy-node.app/instrument/nldidxeur)|`nldidxeur`|Dec 1, 2017|
 |[Poland 20 Index](https://www.dukascopy-node.app/instrument/plnidxpln)|`plnidxpln`|Dec 1, 2017|
 <h3 id="idx_africa">Africa 🌍</h3>
@@ -1534,6 +1535,27 @@ const { getHistoricalRates } = require('dukascopy-node');
 |[Zoom Video Communications (A Class)](https://www.dukascopy-node.app/instrument/zmususd)|`zmususd`|Sep 30, 2020|
 |[ZSCALER INC](https://www.dukascopy-node.app/instrument/zsususd)|`zsususd`|May 13, 2022|
 |[ZOETIS INC](https://www.dukascopy-node.app/instrument/ztsususd)|`ztsususd`|May 16, 2022|
+<h3 id="etf_cfd">ETFs 📈</h3>
+
+|Instrument|id|Earliest data (UTC)|
+|-|-|-|
+|[ARK 21Shares Active Bitcoin Ethereum Strategy ETF Fund](https://www.dukascopy-node.app/instrument/arkiususd)|`arkiususd`|Apr 25, 2024|
+|[Global X Cybersecurity UCITS ETF Fund](https://www.dukascopy-node.app/instrument/bugggbgbx)|`bugggbgbx`|Oct 21, 2024|
+|[Lyxor Smart Overnight Return - UCITS ETF C-GBP](https://www.dukascopy-node.app/instrument/csh2gbgbx)|`csh2gbgbx`|Jan 2, 2024|
+|[WisdomTree Cybersecurity UCITS ETF Fund](https://www.dukascopy-node.app/instrument/cysegbgbx)|`cysegbgbx`|Jan 2, 2024|
+|[iShares MSCI Europe Health Care Sector UCITS ETF Fund](https://www.dukascopy-node.app/instrument/esihgbgbx)|`esihgbgbx`|Oct 24, 2024|
+|[iShares Physical Gold ETC Fund](https://www.dukascopy-node.app/instrument/iglnususd)|`iglnususd`|Apr 3, 2023|
+|[iShares S&P 500 Financials Sector UCITS ETF](https://www.dukascopy-node.app/instrument/iufsususd)|`iufsususd`|Jan 2, 2024|
+|[iShares MSCI Global Semiconductors UCITS ETF](https://www.dukascopy-node.app/instrument/semigbgbx)|`semigbgbx`|Oct 21, 2024|
+|[Invesco Physical Gold ETC Fund](https://www.dukascopy-node.app/instrument/sgldususd)|`sgldususd`|Jan 2, 2024|
+|[VanEck Semiconductor ETF Fund](https://www.dukascopy-node.app/instrument/smhususd)|`smhususd`|Jan 2, 2024|
+|[Lyxor Smart Overnight Return - UCITS ETF C-USD](https://www.dukascopy-node.app/instrument/smtcususd)|`smtcususd`|Nov 21, 2023|
+|[Wisdomtree Artificial Intelligence And Innovation Fund](https://www.dukascopy-node.app/instrument/wtaiususd)|`wtaiususd`|Jan 2, 2024|
+|[Xtrackers FTSE Developed Europe Real Estate UCITS ETF](https://www.dukascopy-node.app/instrument/xdergbgbx)|`xdergbgbx`|Jan 2, 2024|
+|[Xtrackers MSCI World Health Care UCITS ETF Fund](https://www.dukascopy-node.app/instrument/xdwhususd)|`xdwhususd`|Jan 2, 2024|
+|[Xtrackers MSCI World Information Technology UCITS ETF](https://www.dukascopy-node.app/instrument/xdwtususd)|`xdwtususd`|Jan 2, 2024|
+|[Invesco Real Estate S&P US Select Sector UCITS ETF](https://www.dukascopy-node.app/instrument/xresususd)|`xresususd`|Jan 2, 2024|
+
 
 ---
 

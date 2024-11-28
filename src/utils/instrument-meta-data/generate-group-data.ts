@@ -14,6 +14,9 @@ export function generateInstrumentGroupData(
   metadata: MetaDataResponse,
   path: string
 ): Promise<void> {
+  const currentGroupDataRaw = fs.readFileSync(path, 'utf8');
+  const currentGroupData = JSON.parse(currentGroupDataRaw) as GroupData[];
+
   const data = Object.keys(metadata.groups).reduce<GroupData[]>((all, group) => {
     const hasInstruments = metadata.groups[group]?.instruments?.length;
     if (!hasInstruments) {
@@ -27,17 +30,36 @@ export function generateInstrumentGroupData(
       return all;
     }
 
-    all.push({
-      id: group.toLowerCase().replace(/\s/g, '-'),
-      instruments: metadata.groups[group].instruments
-        .filter(inst => !!metadata.instruments[inst])
-        .map(inst => generateIdName(metadata.instruments[inst].historical_filename, inst))
-    });
+    const id = group.toLowerCase().replace(/\s/g, '-');
+
+    const matchedGroup = currentGroupData.find(item => item.id === id);
+
+    if (matchedGroup) {
+      matchedGroup.instruments = matchedGroup.instruments.concat(
+        metadata.groups[group].instruments
+          .filter(inst => !!metadata.instruments[inst])
+          .map(inst => generateIdName(metadata.instruments[inst].historical_filename, inst))
+      );
+    } else {
+      all.push({
+        id,
+        instruments: metadata.groups[group].instruments
+          .filter(inst => !!metadata.instruments[inst])
+          .map(inst => generateIdName(metadata.instruments[inst].historical_filename, inst))
+      });
+    }
 
     return all;
-  }, []);
+  }, currentGroupData);
 
-  return saveFile(path, JSON.stringify(data, null, 2)).then(() => {
+  const dedupedGroups = data.map<GroupData>(item => {
+    return {
+      id: item.id,
+      instruments: Array.from(new Set(item.instruments))
+    };
+  });
+
+  return saveFile(path, JSON.stringify(dedupedGroups, null, 2)).then(() => {
     console.log('instrument groups generated!', path);
   });
 }

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-console */
 import fs from 'fs';
 import path from 'path';
@@ -18,6 +19,7 @@ const titleMap: Record<string, { emoji: string; title: string }> = {
   cmd_agricultural: { emoji: '☕', title: 'Agricultural commodities' },
   cmd_energy: { emoji: '⚡', title: 'Energy commodities' },
   cmd_metals: { emoji: '⚙️', title: 'Metals commodities' },
+  etf_cfd: { emoji: '📈', title: 'ETFs' },
   etf_cfd_us: { emoji: '🇺🇸📈', title: 'United States ETFs' },
   etf_cfd_de: { emoji: '🇩🇪📈', title: 'Germany ETFs' },
   etf_cfd_fr: { emoji: '🇫🇷📈', title: 'France ETFs' },
@@ -74,9 +76,8 @@ const titleMap: Record<string, { emoji: string; title: string }> = {
 
     const instrumentTable = instrumentGroups
       .map(({ id, instruments }) => {
-        const groupTitle = `<h3 id="${id}">${titleMap[id].title} ${
-          titleMap[id].emoji || ''
-        }</h3>\n`;
+        const groupTitle = `<h3 id="${id}">${titleMap[id].title} ${titleMap[id].emoji || ''
+          }</h3>\n`;
 
         const listBody = instruments
           .map(instrumentId => {
@@ -87,7 +88,7 @@ const titleMap: Record<string, { emoji: string; title: string }> = {
               startMonthForHourlyCandles,
               startYearForDailyCandles
             } = instrumentMetaData[
-              instrumentId as keyof typeof instrumentMetaData
+            instrumentId as keyof typeof instrumentMetaData
             ] as InstrumentMetaData;
 
             const dates = [

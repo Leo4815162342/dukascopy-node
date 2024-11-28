@@ -1439,5 +1439,26 @@
       "zsususd",
       "ztsususd"
     ]
+  },
+  {
+    "id": "etf_cfd",
+    "instruments": [
+      "arkiususd",
+      "bugggbgbx",
+      "csh2gbgbx",
+      "cysegbgbx",
+      "esihgbgbx",
+      "iglnususd",
+      "iufsususd",
+      "semigbgbx",
+      "sgldususd",
+      "smhususd",
+      "smtcususd",
+      "wtaiususd",
+      "xdergbgbx",
+      "xdwhususd",
+      "xdwtususd",
+      "xresususd"
+    ]
   }
 ]

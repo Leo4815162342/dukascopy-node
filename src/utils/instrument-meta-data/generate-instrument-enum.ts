@@ -1,18 +1,16 @@
 /* eslint-disable no-console */
 import fs from 'fs';
 import { promisify } from 'util';
-import { MetaDataResponse } from './generate-data.types';
-import { generateIdName } from './generate-id-name';
+import { InstrumentMetaDataMap } from './generate-meta';
 const saveFile = promisify(fs.writeFile);
 
-export function generateInstrumentEnum(
-  instruments: MetaDataResponse['instruments'],
-  path: string
-): Promise<void> {
-  const enumKeys = Object.keys(instruments).map(inst => {
-    const { name, description, historical_filename } = instruments[inst];
+export function generateInstrumentEnum(fromPath: string, toPath: string): Promise<void> {
+  const instrumentsmetaData = fs.readFileSync(fromPath, 'utf8');
+  const instrumentsMetaData = JSON.parse(instrumentsmetaData) as InstrumentMetaDataMap;
 
-    const cleanName = generateIdName(historical_filename, inst);
+  const enumKeys = Object.entries(instrumentsMetaData).map(([cleanName, inst]) => {
+    const { name, description } = inst;
+
     const key = /^\d/.test(cleanName) ? `'${cleanName}'` : cleanName;
 
     const line = `
@@ -31,7 +29,7 @@ export function generateInstrumentEnum(
     'export type InstrumentType = keyof typeof Instrument;'
   ].join('\n');
 
-  return saveFile(path, strings).then(() => {
-    console.log('instruments enum generated!', path);
+  return saveFile(toPath, strings).then(() => {
+    console.log('instruments enum generated!', toPath);
   });
 }
