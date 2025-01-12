@@ -8,7 +8,7 @@
 * [Germany ETFs 🇩🇪📈 (1)](#etf_cfd_de)
 * [France ETFs 🇫🇷📈 (3)](#etf_cfd_fr)
 * [Hong Kong ETFs 🇭🇰📈 (4)](#etf_cfd_hk)
-* [United States ETFs 🇺🇸📈 (43)](#etf_cfd_us)
+* [United States ETFs 🇺🇸📈 (62)](#etf_cfd_us)
 * [Forex currencies 💱 (54)](#fx_crosses)
 * [Forex major currencies 💶 (7)](#fx_majors)
 * [Forex metals 🥇 (2)](#fx_metals)
@@ -35,7 +35,7 @@
 * [Switzerland 🇨🇭 (28)](#switzerland)
 * [United Kingdom 🇬🇧 (102)](#uk)
 * [United States 🇺🇸 (608)](#us)
-* [ETFs 📈 (16)](#etf_cfd)
+* [ETFs 📈 (17)](#etf_cfd)
 <hr>
 <h3 id="bnd_cfd">Bonds 📊</h3>
 
@@ -159,7 +159,7 @@
 |[iShares Silver Trust ETF](https://www.dukascopy-node.app/instrument/slvususd)|`slvususd`|Feb 1, 2018|
 |[SPDR S&P 500 ETF](https://www.dukascopy-node.app/instrument/spyususd)|`spyususd`|Feb 16, 2017|
 |[iShares 20+ Year Treasury Bond ETF](https://www.dukascopy-node.app/instrument/tltususd)|`tltususd`|Jan 26, 2017|
-|[United States Oil](https://www.dukascopy-node.app/instrument/usoususd)|`usoususd`|Jan 26, 2017|
+|[United States Oil Fund](https://www.dukascopy-node.app/instrument/usoususd)|`usoususd`|Jan 26, 2017|
 |[Vanguard FTSE Developed Markets ETF](https://www.dukascopy-node.app/instrument/veaususd)|`veaususd`|Nov 15, 2017|
 |[Vanguard FTSE Europe ETF](https://www.dukascopy-node.app/instrument/vgkususd)|`vgkususd`|Feb 1, 2018|
 |[Vanguard REIT ETF](https://www.dukascopy-node.app/instrument/vnqususd)|`vnqususd`|Nov 15, 2017|
@@ -173,6 +173,25 @@
 |[Health Care Select Sector SPDR Fund](https://www.dukascopy-node.app/instrument/xlvususd)|`xlvususd`|Nov 15, 2017|
 |[Consumer Discretionary Select Sector SPDR Fund](https://www.dukascopy-node.app/instrument/xlyususd)|`xlyususd`|Nov 15, 2017|
 |[SPDR S&P Oil & Gas Explor & Prodtn ETF](https://www.dukascopy-node.app/instrument/xopususd)|`xopususd`|Jan 26, 2017|
+|[ARK Autonomous Technology & Robotics ETF](https://www.dukascopy-node.app/instrument/arkqususd)|`arkqususd`|Jan 2, 2024|
+|[ARK Space Exporation & Innovation ETF](https://www.dukascopy-node.app/instrument/arkxususd)|`arkxususd`|Jan 2, 2024|
+|[Amplify Travel Tech ETF](https://www.dukascopy-node.app/instrument/awayususd)|`awayususd`|Jan 2, 2024|
+|[ProShares Bitcoin ETF](https://www.dukascopy-node.app/instrument/bitoususd)|`bitoususd`|Jan 2, 2024|
+|[Valkyrie Bitcoin and Ether Strategy ETF](https://www.dukascopy-node.app/instrument/btfususd)|`btfususd`|Jan 2, 2024|
+|[VanEck Video Gaming and eSports ETF](https://www.dukascopy-node.app/instrument/espoususd)|`espoususd`|Jan 2, 2024|
+|[Global X FinTech ETF](https://www.dukascopy-node.app/instrument/finxususd)|`finxususd`|Jan 2, 2024|
+|[First Trust Nasdaq Food & Beverage ETF](https://www.dukascopy-node.app/instrument/ftxgususd)|`ftxgususd`|Jan 2, 2024|
+|[iShares US Insurance ETF](https://www.dukascopy-node.app/instrument/iakususd)|`iakususd`|Jan 2, 2024|
+|[iShares US Aerospace & Defense ETF](https://www.dukascopy-node.app/instrument/itaususd)|`itaususd`|Jan 2, 2024|
+|[US Global Jets ETF](https://www.dukascopy-node.app/instrument/jetsususd)|`jetsususd`|Jan 2, 2024|
+|[SPDR S&P Insurance ETF](https://www.dukascopy-node.app/instrument/kieususd)|`kieususd`|Jan 2, 2024|
+|[SPDR S&P Regional Banking ETF](https://www.dukascopy-node.app/instrument/kreususd)|`kreususd`|Jan 2, 2024|
+|[Invesco Food & Beverage ETF](https://www.dukascopy-node.app/instrument/pbjususd)|`pbjususd`|Jan 2, 2024|
+|[Invesco Leisure & Entertainment ETF](https://www.dukascopy-node.app/instrument/pejususd)|`pejususd`|Jan 2, 2024|
+|[Invesco Aerospace & Defense ETF](https://www.dukascopy-node.app/instrument/ppaususd)|`ppaususd`|Jan 2, 2024|
+|[ROBO Global Robotics & Automation Index ETF](https://www.dukascopy-node.app/instrument/roboususd)|`roboususd`|Jan 2, 2024|
+|[Vanguard Energy ETF](https://www.dukascopy-node.app/instrument/vdeususd)|`vdeususd`|Jan 2, 2024|
+|[Invesco Real Estate S&P US Select Sector UCITS ETF Acc](https://www.dukascopy-node.app/instrument/xresususd)|`xresususd`|Jan 2, 2024|
 <h3 id="fx_crosses">Forex currencies 💱</h3>
 
 |Instrument|id|Earliest data (UTC)|
@@ -1462,4 +1481,5 @@
 |[Xtrackers FTSE Developed Europe Real Estate UCITS ETF](https://www.dukascopy-node.app/instrument/xdergbgbx)|`xdergbgbx`|Jan 2, 2024|
 |[Xtrackers MSCI World Health Care UCITS ETF Fund](https://www.dukascopy-node.app/instrument/xdwhususd)|`xdwhususd`|Jan 2, 2024|
 |[Xtrackers MSCI World Information Technology UCITS ETF](https://www.dukascopy-node.app/instrument/xdwtususd)|`xdwtususd`|Jan 2, 2024|
-|[Invesco Real Estate S&P US Select Sector UCITS ETF](https://www.dukascopy-node.app/instrument/xresususd)|`xresususd`|Jan 2, 2024|
+|[Invesco Real Estate S&P US Select Sector UCITS ETF Acc](https://www.dukascopy-node.app/instrument/xresususd)|`xresususd`|Jan 2, 2024|
+|[Lyxor Smart Overnight Return - UCITS ETF C-EUR](https://www.dukascopy-node.app/instrument/csh2freur)|`csh2freur`|Aug 1, 2023|
