@@ -6979,7 +6979,7 @@ export enum Instrument {
     usfdususd='usfdususd',
 
     /**
-     * ### United States Oil
+     * ### United States Oil Fund
      * *USO.US/USD*
      */
     usoususd='usoususd',
@@ -7693,9 +7693,123 @@ export enum Instrument {
     xdwtususd='xdwtususd',
 
     /**
-     * ### Invesco Real Estate S&P US Select Sector UCITS ETF
+     * ### Invesco Real Estate S&P US Select Sector UCITS ETF Acc
      * *XRES.US/USD*
      */
     xresususd='xresususd',
+
+    /**
+     * ### ARK Autonomous Technology & Robotics ETF
+     * *ARKQ.US/USD*
+     */
+    arkqususd='arkqususd',
+
+    /**
+     * ### ARK Space Exporation & Innovation ETF
+     * *ARKX.US/USD*
+     */
+    arkxususd='arkxususd',
+
+    /**
+     * ### Amplify Travel Tech ETF
+     * *AWAY.US/USD*
+     */
+    awayususd='awayususd',
+
+    /**
+     * ### ProShares Bitcoin ETF
+     * *BITO.US/USD*
+     */
+    bitoususd='bitoususd',
+
+    /**
+     * ### Valkyrie Bitcoin and Ether Strategy ETF
+     * *BTF.US/USD*
+     */
+    btfususd='btfususd',
+
+    /**
+     * ### Lyxor Smart Overnight Return - UCITS ETF C-EUR
+     * *CSH2.FR/EUR*
+     */
+    csh2freur='csh2freur',
+
+    /**
+     * ### VanEck Video Gaming and eSports ETF
+     * *ESPO.US/USD*
+     */
+    espoususd='espoususd',
+
+    /**
+     * ### Global X FinTech ETF
+     * *FINX.US/USD*
+     */
+    finxususd='finxususd',
+
+    /**
+     * ### First Trust Nasdaq Food & Beverage ETF
+     * *FTXG.US/USD*
+     */
+    ftxgususd='ftxgususd',
+
+    /**
+     * ### iShares US Insurance ETF
+     * *IAK.US/USD*
+     */
+    iakususd='iakususd',
+
+    /**
+     * ### iShares US Aerospace & Defense ETF
+     * *ITA.US/USD*
+     */
+    itaususd='itaususd',
+
+    /**
+     * ### US Global Jets ETF
+     * *JETS.US/USD*
+     */
+    jetsususd='jetsususd',
+
+    /**
+     * ### SPDR S&P Insurance ETF
+     * *KIE.US/USD*
+     */
+    kieususd='kieususd',
+
+    /**
+     * ### SPDR S&P Regional Banking ETF
+     * *KRE.US/USD*
+     */
+    kreususd='kreususd',
+
+    /**
+     * ### Invesco Food & Beverage ETF
+     * *PBJ.US/USD*
+     */
+    pbjususd='pbjususd',
+
+    /**
+     * ### Invesco Leisure & Entertainment ETF
+     * *PEJ.US/USD*
+     */
+    pejususd='pejususd',
+
+    /**
+     * ### Invesco Aerospace & Defense ETF
+     * *PPA.US/USD*
+     */
+    ppaususd='ppaususd',
+
+    /**
+     * ### ROBO Global Robotics & Automation Index ETF
+     * *ROBO.US/USD*
+     */
+    roboususd='roboususd',
+
+    /**
+     * ### Vanguard Energy ETF
+     * *VDE.US/USD*
+     */
+    vdeususd='vdeususd',
 }
 export type InstrumentType = keyof typeof Instrument;
