@@ -1999,7 +1999,7 @@
   },
   "bchchf": {
     "name": "BCH/CHF",
-    "description": "Bitcoin Cash vs Swiss Franc",
+    "description": "Bitcoin Cash vs. Swiss franc",
     "decimalFactor": 10,
     "startHourForTicks": "2023-03-14T14:52:58.644Z",
     "startDayForMinuteCandles": "2023-03-14T14:52:00.000Z",
@@ -2008,7 +2008,7 @@
   },
   "bcheur": {
     "name": "BCH/EUR",
-    "description": "Bitcoin Cash vs Euro",
+    "description": "Bitcoin Cash vs. Euro",
     "decimalFactor": 10,
     "startHourForTicks": "2023-03-14T14:53:02.753Z",
     "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
@@ -2017,7 +2017,7 @@
   },
   "bchgbp": {
     "name": "BCH/GBP",
-    "description": "Bitcoin Cash vs Pound Sterling",
+    "description": "Bitcoin Cash vs. Pound sterling",
     "decimalFactor": 10,
     "startHourForTicks": "2023-03-14T14:53:02.089Z",
     "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
@@ -2386,7 +2386,7 @@
   },
   "btcchf": {
     "name": "BTC/CHF",
-    "description": "Bitcoin vs Swiss Frank",
+    "description": "Bitcoin vs. Swiss franc",
     "decimalFactor": 10,
     "startHourForTicks": "2023-03-14T14:53:06.990Z",
     "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
@@ -2395,7 +2395,7 @@
   },
   "btceur": {
     "name": "BTC/EUR",
-    "description": "Bitcoin vs Euro",
+    "description": "Bitcoin vs. Euro",
     "decimalFactor": 10,
     "startHourForTicks": "2018-05-15T10:25:32.340Z",
     "startDayForMinuteCandles": "2018-05-15T10:24:00.000Z",
@@ -2404,7 +2404,7 @@
   },
   "btcgbp": {
     "name": "BTC/GBP",
-    "description": "Bitcoin vs Pound Sterling",
+    "description": "Bitcoin vs. Pound sterling",
     "decimalFactor": 10,
     "startHourForTicks": "2023-03-14T15:03:45.307Z",
     "startDayForMinuteCandles": "2023-03-14T15:03:00.000Z",
@@ -4123,7 +4123,7 @@
   },
   "ethchf": {
     "name": "ETH/CHF",
-    "description": "Ether vs Swiss Franc",
+    "description": "Ethereum vs. Swiss franc",
     "decimalFactor": 10,
     "startHourForTicks": "2023-03-14T14:53:03.726Z",
     "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
@@ -4132,7 +4132,7 @@
   },
   "etheur": {
     "name": "ETH/EUR",
-    "description": "Ether vs Euro",
+    "description": "Ethereum vs. Euro",
     "decimalFactor": 10,
     "startHourForTicks": "2023-03-14T14:53:03.677Z",
     "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
@@ -4141,7 +4141,7 @@
   },
   "ethgbp": {
     "name": "ETH/GBP",
-    "description": "Ether vs Pound Sterling",
+    "description": "Ethereum vs. Pound sterling",
     "decimalFactor": 10,
     "startHourForTicks": "2023-03-14T14:53:03.676Z",
     "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
@@ -6571,7 +6571,7 @@
   },
   "ltcchf": {
     "name": "LTC/CHF",
-    "description": "Litecoin vs Swiss Franc",
+    "description": "Litecoin vs. Swiss franc",
     "decimalFactor": 10,
     "startHourForTicks": "2023-03-14T14:52:50.061Z",
     "startDayForMinuteCandles": "2023-03-14T14:52:00.000Z",
@@ -6580,7 +6580,7 @@
   },
   "ltceur": {
     "name": "LTC/EUR",
-    "description": "Litecoin vs Euro",
+    "description": "Litecoin vs. Euro",
     "decimalFactor": 10,
     "startHourForTicks": "2023-03-14T14:55:12.375Z",
     "startDayForMinuteCandles": "2023-03-14T14:55:00.000Z",
@@ -6589,7 +6589,7 @@
   },
   "ltcgbp": {
     "name": "LTC/GBP",
-    "description": "Pound Sterling",
+    "description": "Litecoin vs. Pound sterling",
     "decimalFactor": 10,
     "startHourForTicks": "2023-03-14T14:52:50.074Z",
     "startDayForMinuteCandles": "2023-03-14T14:52:00.000Z",
@@ -11143,7 +11143,7 @@
   },
   "xlmchf": {
     "name": "XLM/CHF",
-    "description": "Stellar vs Swiss Franc",
+    "description": "Stellar vs. Swiss franc",
     "decimalFactor": 100000,
     "startHourForTicks": "2023-03-14T14:53:03.870Z",
     "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
@@ -11152,7 +11152,7 @@
   },
   "xlmeur": {
     "name": "XLM/EUR",
-    "description": "Stellar vs Euro",
+    "description": "Stellar vs. Euro",
     "decimalFactor": 100000,
     "startHourForTicks": "2023-03-14T14:53:03.820Z",
     "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
@@ -11161,7 +11161,7 @@
   },
   "xlmgbp": {
     "name": "XLM/GBP",
-    "description": "Stellar vs Pound Sterling",
+    "description": "Stellar vs. Pound sterling",
     "decimalFactor": 100000,
     "startHourForTicks": "2023-03-14T14:53:03.821Z",
     "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
@@ -11716,5 +11716,2750 @@
     "startDayForMinuteCandles": "2024-11-29T14:29:00.000Z",
     "startMonthForHourlyCandles": "2024-11-29T14:00:00.000Z",
     "startYearForDailyCandles": "2020-03-23T00:00:00.000Z"
+  },
+  "aedcnh": {
+    "name": "AED/CNH",
+    "description": "United Arab Emirates dirham vs. Renminbi (offshore)",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:32.510Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "aedczk": {
+    "name": "AED/CZK",
+    "description": "United Arab Emirates dirham vs. Czech koruna",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-09-16T13:38:37.744Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "aedhkd": {
+    "name": "AED/HKD",
+    "description": "United Arab Emirates dirham vs. Hong Kong dollar",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:48.181Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "aedhuf": {
+    "name": "AED/HUF",
+    "description": "United Arab Emirates dirham vs. Hungarian forint",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:42.501Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-16T00:00:00.000Z"
+  },
+  "aedjpy": {
+    "name": "AED/JPY",
+    "description": "United Arab Emirates dirham vs. Japanese yen",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-16T13:38:37.163Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "aedmxn": {
+    "name": "AED/MXN",
+    "description": "United Arab Emirates dirham vs. Mexican peso",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:37.156Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "aedron": {
+    "name": "AED/RON",
+    "description": "United Arab Emirates dirham vs. Romanian leu",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T12:38:33.997Z",
+    "startDayForMinuteCandles": "2024-09-16T12:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T12:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "aedsar": {
+    "name": "AED/SAR",
+    "description": "United Arab Emirates dirham vs. Saudi riyal",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T14:12:39.208Z",
+    "startDayForMinuteCandles": "2024-09-16T14:12:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "aedthb": {
+    "name": "AED/THB",
+    "description": "United Arab Emirates dirham vs. Thai baht",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-16T13:38:36.476Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "aedtry": {
+    "name": "AED/TRY",
+    "description": "United Arab Emirates dirham vs. Turkish lira",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:40.433Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "aedzar": {
+    "name": "AED/ZAR",
+    "description": "United Arab Emirates dirham vs. South African rand",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:36.143Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "agesgbgbx": {
+    "name": "AGES.GB/GBX",
+    "description": "iShares Ageing Population UCITS ETF USD (Acc)",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2025-02-26T11:03:58.298Z",
+    "startDayForMinuteCandles": "2025-02-26T11:03:00.000Z",
+    "startMonthForHourlyCandles": "2025-02-26T11:00:00.000Z",
+    "startYearForDailyCandles": "2020-03-20T00:00:00.000Z"
+  },
+  "aiaigbusd": {
+    "name": "AIAI.GB/USD",
+    "description": "L&G Artificial Intelligence UCITS ETF",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2025-02-26T10:58:52.466Z",
+    "startDayForMinuteCandles": "2025-02-26T10:58:00.000Z",
+    "startMonthForHourlyCandles": "2025-02-26T10:00:00.000Z",
+    "startYearForDailyCandles": "2020-02-28T00:00:00.000Z"
+  },
+  "audaed": {
+    "name": "AUD/AED",
+    "description": "Australian dollar vs. United Arab Emirates dirham",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:38.657Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "audcnh": {
+    "name": "AUD/CNH",
+    "description": "Australian dollar vs. Renminbi (offshore)",
+    "decimalFactor": 999999.9999999999,
+    "startHourForTicks": "2023-04-17T12:07:12.799Z",
+    "startDayForMinuteCandles": "2023-04-17T12:07:00.000Z",
+    "startMonthForHourlyCandles": "2023-04-17T12:00:00.000Z",
+    "startYearForDailyCandles": "2023-12-19T00:00:00.000Z"
+  },
+  "audczk": {
+    "name": "AUD/CZK",
+    "description": "Australian dollar vs. Czech koruna",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2023-12-19T07:57:15.000Z",
+    "startDayForMinuteCandles": "2023-12-19T07:57:00.000Z",
+    "startMonthForHourlyCandles": "2023-12-19T07:00:00.000Z",
+    "startYearForDailyCandles": "2023-12-19T00:00:00.000Z"
+  },
+  "auddkk": {
+    "name": "AUD/DKK",
+    "description": "Australian dollar vs. Danish krone",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2023-12-19T07:58:19.752Z",
+    "startDayForMinuteCandles": "2023-12-19T07:58:00.000Z",
+    "startMonthForHourlyCandles": "2023-12-19T07:00:00.000Z",
+    "startYearForDailyCandles": "2023-12-19T00:00:00.000Z"
+  },
+  "audhkd": {
+    "name": "AUD/HKD",
+    "description": "Australian dollar vs. Hong Kong dollar",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2023-12-19T07:59:07.523Z",
+    "startDayForMinuteCandles": "2023-12-19T07:59:00.000Z",
+    "startMonthForHourlyCandles": "2023-12-19T07:00:00.000Z",
+    "startYearForDailyCandles": "2023-12-19T00:00:00.000Z"
+  },
+  "audhuf": {
+    "name": "AUD/HUF",
+    "description": "Australian dollar vs. Hungarian forint",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-04-23T15:23:01.343Z",
+    "startDayForMinuteCandles": "2024-04-23T15:23:00.000Z",
+    "startMonthForHourlyCandles": "2024-04-23T15:00:00.000Z",
+    "startYearForDailyCandles": "2024-04-23T00:00:00.000Z"
+  },
+  "audils": {
+    "name": "AUD/ILS",
+    "description": "Australian dollar vs. Israeli new shekel",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:38.358Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "audmxn": {
+    "name": "AUD/MXN",
+    "description": "Australian dollar vs. Mexican peso",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2023-12-19T08:00:15.839Z",
+    "startDayForMinuteCandles": "2023-12-19T08:00:00.000Z",
+    "startMonthForHourlyCandles": "2023-12-19T08:00:00.000Z",
+    "startYearForDailyCandles": "2023-12-19T00:00:00.000Z"
+  },
+  "audnok": {
+    "name": "AUD/NOK",
+    "description": "Australian dollar vs. Norwegian krone",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2023-12-19T08:08:00.567Z",
+    "startDayForMinuteCandles": "2023-12-19T08:08:00.000Z",
+    "startMonthForHourlyCandles": "2023-12-19T08:00:00.000Z",
+    "startYearForDailyCandles": "2023-12-19T00:00:00.000Z"
+  },
+  "audpln": {
+    "name": "AUD/PLN",
+    "description": "Australian dollar vs. Polish zÅ‚oty",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2012-03-30T10:29:54.308Z",
+    "startDayForMinuteCandles": "2012-03-30T10:29:00.000Z",
+    "startMonthForHourlyCandles": "2012-03-30T10:00:00.000Z",
+    "startYearForDailyCandles": "1990-01-02T00:00:00.000Z"
+  },
+  "audron": {
+    "name": "AUD/RON",
+    "description": "Australian dollar vs. Romanian leu",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:38.663Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "audsar": {
+    "name": "AUD/SAR",
+    "description": "Australian dollar vs. Saudi riyal",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:38.690Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "audsek": {
+    "name": "AUD/SEK",
+    "description": "Australian dollar vs. Swedish krona",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2023-12-19T08:02:32.670Z",
+    "startDayForMinuteCandles": "2023-12-19T08:02:00.000Z",
+    "startMonthForHourlyCandles": "2023-12-19T08:00:00.000Z",
+    "startYearForDailyCandles": "2023-12-19T00:00:00.000Z"
+  },
+  "audthb": {
+    "name": "AUD/THB",
+    "description": "Australian dollar vs. Thai baht",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-16T13:38:37.144Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "audtry": {
+    "name": "AUD/TRY",
+    "description": "Australian dollar vs. Turkish lira",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2023-12-19T08:02:56.433Z",
+    "startDayForMinuteCandles": "2023-12-19T08:02:00.000Z",
+    "startMonthForHourlyCandles": "2023-12-19T08:00:00.000Z",
+    "startYearForDailyCandles": "2023-12-19T00:00:00.000Z"
+  },
+  "audzar": {
+    "name": "AUD/ZAR",
+    "description": "Australian dollar vs. South African rand",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-04-24T15:05:02.497Z",
+    "startDayForMinuteCandles": "2024-04-24T15:05:00.000Z",
+    "startMonthForHourlyCandles": "2024-04-24T15:00:00.000Z",
+    "startYearForDailyCandles": "2024-04-24T00:00:00.000Z"
+  },
+  "cadaed": {
+    "name": "CAD/AED",
+    "description": "Canadian dollar vs. United Arab Emirates dirham",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:36.559Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "cadcnh": {
+    "name": "CAD/CNH",
+    "description": "Canadian dollar vs. Renminbi (offshore)",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:36.998Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "cadczk": {
+    "name": "CAD/CZK",
+    "description": "Canadian dollar vs. Czech koruna",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-05-15T09:03:43.619Z",
+    "startDayForMinuteCandles": "2024-05-15T09:03:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "caddkk": {
+    "name": "CAD/DKK",
+    "description": "Canadian dollar vs. Danish krone",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:03:45.723Z",
+    "startDayForMinuteCandles": "2024-05-15T09:03:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "cadhuf": {
+    "name": "CAD/HUF",
+    "description": "Canadian dollar vs. Hungarian forint",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:03:45.728Z",
+    "startDayForMinuteCandles": "2024-05-15T09:03:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "cadils": {
+    "name": "CAD/ILS",
+    "description": "Canadian dollar vs. Israeli new shekel",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:36.573Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "cadmxn": {
+    "name": "CAD/MXN",
+    "description": "Canadian dollar vs. Mexican peso",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:03:44.970Z",
+    "startDayForMinuteCandles": "2024-05-15T09:03:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "cadnok": {
+    "name": "CAD/NOK",
+    "description": "Canadian dollar vs. Norwegian krone",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:03:45.056Z",
+    "startDayForMinuteCandles": "2024-05-15T09:03:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "cadpln": {
+    "name": "CAD/PLN",
+    "description": "Canadian dollar vs. Polish zÅ‚oty",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2012-03-30T11:00:49.166Z",
+    "startDayForMinuteCandles": "2012-03-30T11:00:00.000Z",
+    "startMonthForHourlyCandles": "2012-03-30T11:00:00.000Z",
+    "startYearForDailyCandles": "1999-11-10T00:00:00.000Z"
+  },
+  "cadron": {
+    "name": "CAD/RON",
+    "description": "Canadian dollar vs. Romanian leu",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:36.556Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "cadsar": {
+    "name": "CAD/SAR",
+    "description": "Canadian dollar vs. Saudi riyal",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:36.550Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "cadsek": {
+    "name": "CAD/SEK",
+    "description": "Canadian dollar vs. Swedish krona",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:03:45.306Z",
+    "startDayForMinuteCandles": "2024-05-15T09:03:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "cadsgd": {
+    "name": "CAD/SGD",
+    "description": "Canadian dollar vs. Singapore dollar",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:03:45.724Z",
+    "startDayForMinuteCandles": "2024-05-15T09:03:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "cadthb": {
+    "name": "CAD/THB",
+    "description": "Canadian dollar vs. Thai baht",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-16T13:38:37.151Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "cadtry": {
+    "name": "CAD/TRY",
+    "description": "Canadian dollar vs. Turkish lira",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:03:43.572Z",
+    "startDayForMinuteCandles": "2024-05-15T09:03:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "cadzar": {
+    "name": "CAD/ZAR",
+    "description": "Canadian dollar vs. South African rand",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:03:44.672Z",
+    "startDayForMinuteCandles": "2024-05-15T09:03:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "chfaed": {
+    "name": "CHF/AED",
+    "description": "Swiss franc vs. United Arab Emirates dirham",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T09:39:43.642Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "chfcnh": {
+    "name": "CHF/CNH",
+    "description": "Swiss franc vs. Renminbi (offshore)",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:37.000Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "chfczk": {
+    "name": "CHF/CZK",
+    "description": "Swiss franc vs. Czech koruna",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-05-15T09:04:30.713Z",
+    "startDayForMinuteCandles": "2024-05-15T09:04:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "chfdkk": {
+    "name": "CHF/DKK",
+    "description": "Swiss franc vs. Danish krone",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:04:38.332Z",
+    "startDayForMinuteCandles": "2024-05-15T09:04:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "chfhkd": {
+    "name": "CHF/HKD",
+    "description": "Swiss franc vs. Hong Kong dollar",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:04:39.092Z",
+    "startDayForMinuteCandles": "2024-05-15T09:04:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "chfhuf": {
+    "name": "CHF/HUF",
+    "description": "Swiss franc vs. Hungarian forint",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:04:38.281Z",
+    "startDayForMinuteCandles": "2024-05-15T09:04:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "chfils": {
+    "name": "CHF/ILS",
+    "description": "Swiss franc vs. Israeli new shekel",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:36.607Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "chfmxn": {
+    "name": "CHF/MXN",
+    "description": "Swiss franc vs. Mexican peso",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:04:27.389Z",
+    "startDayForMinuteCandles": "2024-05-15T09:04:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "chfnok": {
+    "name": "CHF/NOK",
+    "description": "Swiss franc vs. Norwegian krone",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:04:28.743Z",
+    "startDayForMinuteCandles": "2024-05-15T09:04:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "chfpln": {
+    "name": "CHF/PLN",
+    "description": "Swiss franc vs. Polish zÅ‚oty",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2007-03-14T02:00:05.222Z",
+    "startDayForMinuteCandles": "2007-03-13T04:01:00.000Z",
+    "startMonthForHourlyCandles": "2007-03-13T04:00:00.000Z",
+    "startYearForDailyCandles": "2004-10-04T00:00:00.000Z"
+  },
+  "chfron": {
+    "name": "CHF/RON",
+    "description": "Swiss franc vs. Romanian leu",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:36.640Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "chfsar": {
+    "name": "CHF/SAR",
+    "description": "Swiss franc vs. Saudi riyal",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:36.592Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "chfsek": {
+    "name": "CHF/SEK",
+    "description": "Swiss franc vs. Swedish krona",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:04:30.474Z",
+    "startDayForMinuteCandles": "2024-05-15T09:04:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "chfthb": {
+    "name": "CHF/THB",
+    "description": "Swiss franc vs. Thai baht",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-16T13:38:37.185Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "chftry": {
+    "name": "CHF/TRY",
+    "description": "Swiss franc vs. Turkish lira",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:04:30.422Z",
+    "startDayForMinuteCandles": "2024-05-15T09:04:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "chfzar": {
+    "name": "CHF/ZAR",
+    "description": "Swiss franc vs. South African rand",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:04:28.807Z",
+    "startDayForMinuteCandles": "2024-05-15T09:04:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "cndxgbusd": {
+    "name": "CNDX.GB/USD",
+    "description": "iShares NASDAQ 100 UCITS ETF USD (Acc)",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2025-02-26T10:58:24.508Z",
+    "startDayForMinuteCandles": "2025-02-26T10:58:00.000Z",
+    "startMonthForHourlyCandles": "2025-02-26T10:00:00.000Z",
+    "startYearForDailyCandles": "2020-02-28T00:00:00.000Z"
+  },
+  "cnhczk": {
+    "name": "CNH/CZK",
+    "description": "Renminbi (offshore) vs. Czech koruna",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-09-16T13:38:37.747Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "cnhhkd": {
+    "name": "CNH/HKD",
+    "description": "Renminbi (offshore) vs. Hong Kong dollar",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:36.595Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "cnhhuf": {
+    "name": "CNH/HUF",
+    "description": "Renminbi (offshore) vs. Hungarian forint",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-16T13:38:38.394Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "cnhjpy": {
+    "name": "CNH/JPY",
+    "description": "Renminbi (offshore) vs. Japanese yen",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:04:28.304Z",
+    "startDayForMinuteCandles": "2024-05-15T09:04:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "cnhmxn": {
+    "name": "CNH/MXN",
+    "description": "Renminbi (offshore) vs. Mexican peso",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:37.167Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "cnhthb": {
+    "name": "CNH/THB",
+    "description": "Renminbi (offshore) vs. Thai baht",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-16T13:38:56.294Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "cnhtry": {
+    "name": "CNH/TRY",
+    "description": "Renminbi (offshore) vs. Turkish lira",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:37.001Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "cnhzar": {
+    "name": "CNH/ZAR",
+    "description": "Renminbi (offshore) vs. South African rand",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:37.014Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "czkhuf": {
+    "name": "CZK/HUF",
+    "description": "Czech koruna vs. Hungarian forint",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-05-15T09:05:17.980Z",
+    "startDayForMinuteCandles": "2024-05-15T09:05:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "czkjpy": {
+    "name": "CZK/JPY",
+    "description": "Czech koruna vs. Japanese yen",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-05-15T09:05:16.672Z",
+    "startDayForMinuteCandles": "2024-05-15T09:05:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "czkthb": {
+    "name": "CZK/THB",
+    "description": "Czech koruna vs. Thai baht",
+    "decimalFactor": 999999.9999999999,
+    "startHourForTicks": "2024-09-16T13:38:37.161Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "czktry": {
+    "name": "CZK/TRY",
+    "description": "Czech koruna vs. Turkish lira",
+    "decimalFactor": 999999.9999999999,
+    "startHourForTicks": "2024-05-15T09:05:16.596Z",
+    "startDayForMinuteCandles": "2024-05-15T09:05:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "dfnggbgbp": {
+    "name": "DFNG.GB/GBP",
+    "description": "VanEck Defense ETF A USD Acc (GBP)",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2025-02-26T10:58:25.780Z",
+    "startDayForMinuteCandles": "2025-02-26T10:58:00.000Z",
+    "startMonthForHourlyCandles": "2025-02-26T10:00:00.000Z",
+    "startYearForDailyCandles": "2023-04-11T00:00:00.000Z"
+  },
+  "dkkaed": {
+    "name": "DKK/AED",
+    "description": "Danish krone vs. United Arab Emirates dirham",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:42.503Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "dkkcnh": {
+    "name": "DKK/CNH",
+    "description": "Danish krone vs. Renminbi (offshore)",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:36.096Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "dkkczk": {
+    "name": "DKK/CZK",
+    "description": "Danish krone vs. Czech koruna",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-05-15T09:05:49.725Z",
+    "startDayForMinuteCandles": "2024-05-15T09:05:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "dkkhkd": {
+    "name": "DKK/HKD",
+    "description": "Danish krone vs. Hong Kong dollar",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:05:50.892Z",
+    "startDayForMinuteCandles": "2024-05-15T09:05:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "dkkhuf": {
+    "name": "DKK/HUF",
+    "description": "Danish krone vs. Hungarian forint",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:05:50.125Z",
+    "startDayForMinuteCandles": "2024-05-15T09:05:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "dkkils": {
+    "name": "DKK/ILS",
+    "description": "Danish krone vs. Israeli new shekel",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:37.531Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "dkkjpy": {
+    "name": "DKK/JPY",
+    "description": "Danish krone vs. Japanese yen",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:05:48.389Z",
+    "startDayForMinuteCandles": "2024-05-15T09:05:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "dkkmxn": {
+    "name": "DKK/MXN",
+    "description": "Danish krone vs. Mexican peso",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:05:50.791Z",
+    "startDayForMinuteCandles": "2024-05-15T09:05:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "dkkron": {
+    "name": "DKK/RON",
+    "description": "Danish krone vs. Romanian leu",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:42.512Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "dkksar": {
+    "name": "DKK/SAR",
+    "description": "Danish krone vs. Saudi riyal",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:42.503Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "dkkthb": {
+    "name": "DKK/THB",
+    "description": "Danish krone vs. Thai baht",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-16T13:38:37.146Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "dkktry": {
+    "name": "DKK/TRY",
+    "description": "Danish krone vs. Turkish lira",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:05:50.900Z",
+    "startDayForMinuteCandles": "2024-05-15T09:05:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "dkkzar": {
+    "name": "DKK/ZAR",
+    "description": "Danish krone vs. South African rand",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:05:48.171Z",
+    "startDayForMinuteCandles": "2024-05-15T09:05:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "ecargbusd": {
+    "name": "ECAR.GB/USD",
+    "description": "iShares Electric Vehicles and Driving Technology UCITS ETF USD (Acc)",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2025-02-26T10:59:28.499Z",
+    "startDayForMinuteCandles": "2025-02-26T10:59:00.000Z",
+    "startMonthForHourlyCandles": "2025-02-26T10:00:00.000Z",
+    "startYearForDailyCandles": "2020-03-25T00:00:00.000Z"
+  },
+  "euraed": {
+    "name": "EUR/AED",
+    "description": "Euro vs. United Arab Emirates dirham",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:42.506Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "eurcnh": {
+    "name": "EUR/CNH",
+    "description": "Euro vs. Renminbi (offshore)",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:06:59.288Z",
+    "startDayForMinuteCandles": "2024-05-15T09:06:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "eurils": {
+    "name": "EUR/ILS",
+    "description": "Euro vs. Israeli new shekel",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:38.363Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "eurmxn": {
+    "name": "EUR/MXN",
+    "description": "Euro vs. Mexican peso",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2007-03-13T19:15:12.351Z",
+    "startDayForMinuteCandles": "2007-03-13T19:15:00.000Z",
+    "startMonthForHourlyCandles": "2007-03-13T19:00:00.000Z",
+    "startYearForDailyCandles": "1999-03-22T00:00:00.000Z"
+  },
+  "eurron": {
+    "name": "EUR/RON",
+    "description": "Euro vs. Romanian leu",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:42.506Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "eursar": {
+    "name": "EUR/SAR",
+    "description": "Euro vs. Saudi riyal",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:42.493Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "eurthb": {
+    "name": "EUR/THB",
+    "description": "Euro vs. Thai baht",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-16T13:38:37.159Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "eurzar": {
+    "name": "EUR/ZAR",
+    "description": "Euro vs. South African rand",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2007-03-13T05:41:02.006Z",
+    "startDayForMinuteCandles": "2007-03-13T05:41:00.000Z",
+    "startMonthForHourlyCandles": "2007-03-13T05:00:00.000Z",
+    "startYearForDailyCandles": "1999-06-07T00:00:00.000Z"
+  },
+  "gbpaed": {
+    "name": "GBP/AED",
+    "description": "Pound sterling vs. United Arab Emirates dirham",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:37.185Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "gbpcnh": {
+    "name": "GBP/CNH",
+    "description": "Pound sterling vs. Renminbi (offshore)",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:07:34.151Z",
+    "startDayForMinuteCandles": "2024-05-15T09:07:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "gbpczk": {
+    "name": "GBP/CZK",
+    "description": "Pound sterling vs. Czech koruna",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-05-15T09:07:34.340Z",
+    "startDayForMinuteCandles": "2024-05-15T09:07:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "gbpdkk": {
+    "name": "GBP/DKK",
+    "description": "Pound sterling vs. Danish krone",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:07:34.653Z",
+    "startDayForMinuteCandles": "2024-05-15T09:07:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "gbphkd": {
+    "name": "GBP/HKD",
+    "description": "Pound sterling vs. Hong Kong dollar",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:07:35.135Z",
+    "startDayForMinuteCandles": "2024-05-15T09:07:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "gbphuf": {
+    "name": "GBP/HUF",
+    "description": "Pound sterling vs. Hungarian forint",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:07:35.138Z",
+    "startDayForMinuteCandles": "2024-05-15T09:07:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "gbpils": {
+    "name": "GBP/ILS",
+    "description": "Pound sterling vs. Israeli new shekel",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:37.256Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "gbpmxn": {
+    "name": "GBP/MXN",
+    "description": "Pound sterling vs. Mexican peso",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:07:35.174Z",
+    "startDayForMinuteCandles": "2024-05-15T09:07:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "gbpnok": {
+    "name": "GBP/NOK",
+    "description": "Pound sterling vs. Norwegian krone",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:07:34.652Z",
+    "startDayForMinuteCandles": "2024-05-15T09:07:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "gbppln": {
+    "name": "GBP/PLN",
+    "description": "Pound sterling vs. Polish zÅ‚oty",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2012-03-30T10:31:41.692Z",
+    "startDayForMinuteCandles": "2012-03-30T10:31:00.000Z",
+    "startMonthForHourlyCandles": "2012-03-30T10:00:00.000Z",
+    "startYearForDailyCandles": "1990-08-22T00:00:00.000Z"
+  },
+  "gbpron": {
+    "name": "GBP/RON",
+    "description": "Pound sterling vs. Romanian leu",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T13:38:37.263Z",
+    "startDayForMinuteCandles": "2024-09-16T13:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T13:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "gbpsar": {
+    "name": "GBP/SAR",
+    "description": "Pound sterling vs. Saudi riyal",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:32.831Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "gbpsek": {
+    "name": "GBP/SEK",
+    "description": "Pound sterling vs. Swedish krona",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:07:34.649Z",
+    "startDayForMinuteCandles": "2024-05-15T09:07:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "gbpsgd": {
+    "name": "GBP/SGD",
+    "description": "Pound sterling vs. Singapore dollar",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:07:34.977Z",
+    "startDayForMinuteCandles": "2024-05-15T09:07:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "gbpthb": {
+    "name": "GBP/THB",
+    "description": "Pound sterling vs. Thai baht",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T06:39:35.418Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "gbptry": {
+    "name": "GBP/TRY",
+    "description": "Pound sterling vs. Turkish lira",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:07:35.128Z",
+    "startDayForMinuteCandles": "2024-05-15T09:07:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "gbpzar": {
+    "name": "GBP/ZAR",
+    "description": "Pound sterling vs. South African rand",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:07:35.186Z",
+    "startDayForMinuteCandles": "2024-05-15T09:07:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "glgggbgbx": {
+    "name": "GLGG.GB/GBX",
+    "description": "L&G Clean Water UCITS ETF",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2025-02-26T10:58:25.628Z",
+    "startDayForMinuteCandles": "2025-02-26T10:58:00.000Z",
+    "startMonthForHourlyCandles": "2025-02-26T10:00:00.000Z",
+    "startYearForDailyCandles": "2020-03-03T00:00:00.000Z"
+  },
+  "hkdczk": {
+    "name": "HKD/CZK",
+    "description": "Hong Kong dollar vs. Czech koruna",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-05-15T09:10:46.032Z",
+    "startDayForMinuteCandles": "2024-05-15T09:10:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "hkdhuf": {
+    "name": "HKD/HUF",
+    "description": "Hong Kong dollar vs. Hungarian forint",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:10:45.327Z",
+    "startDayForMinuteCandles": "2024-05-15T09:10:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "hkdmxn": {
+    "name": "HKD/MXN",
+    "description": "Hong Kong dollar vs. Mexican peso",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:10:44.683Z",
+    "startDayForMinuteCandles": "2024-05-15T09:10:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "hkdthb": {
+    "name": "HKD/THB",
+    "description": "Hong Kong dollar vs. Thai baht",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T06:41:08.140Z",
+    "startDayForMinuteCandles": "2024-09-17T06:41:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "hkdtry": {
+    "name": "HKD/TRY",
+    "description": "Hong Kong dollar vs. Turkish lira",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:10:43.776Z",
+    "startDayForMinuteCandles": "2024-05-15T09:10:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "hkdzar": {
+    "name": "HKD/ZAR",
+    "description": "Hong Kong dollar vs. South African rand",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:10:45.787Z",
+    "startDayForMinuteCandles": "2024-05-15T09:10:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "ilsaed": {
+    "name": "ILS/AED",
+    "description": "Israeli new shekel vs. United Arab Emirates dirham",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:40.408Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "ilscnh": {
+    "name": "ILS/CNH",
+    "description": "Israeli new shekel vs. Renminbi (offshore)",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:32.487Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "ilsczk": {
+    "name": "ILS/CZK",
+    "description": "Israeli new shekel vs. Czech koruna",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-09-17T06:39:32.663Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "ilshkd": {
+    "name": "ILS/HKD",
+    "description": "Israeli new shekel vs. Hong Kong dollar",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:40.402Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "ilshuf": {
+    "name": "ILS/HUF",
+    "description": "Israeli new shekel vs. Hungarian forint",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T06:39:33.293Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "ilsjpy": {
+    "name": "ILS/JPY",
+    "description": "Israeli new shekel vs. Japanese yen",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T06:39:32.562Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "ilsmxn": {
+    "name": "ILS/MXN",
+    "description": "Israeli new shekel vs. Mexican peso",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:32.848Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "ilsron": {
+    "name": "ILS/RON",
+    "description": "Israeli new shekel vs. Romanian leu",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:40.403Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "ilssar": {
+    "name": "ILS/SAR",
+    "description": "Israeli new shekel vs. Saudi riyal",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:40.410Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "ilsthb": {
+    "name": "ILS/THB",
+    "description": "Israeli new shekel vs. Thai baht",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T06:39:37.796Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "ilstry": {
+    "name": "ILS/TRY",
+    "description": "Israeli new shekel vs. Turkish lira",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:40.403Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "ilszar": {
+    "name": "ILS/ZAR",
+    "description": "Israeli new shekel vs. South African rand",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:39.607Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "intlgbgbx": {
+    "name": "INTL.GB/GBX",
+    "description": "WisdomTree Artificial Intelligence UCITS ETF - USD Acc",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2025-02-26T10:58:23.825Z",
+    "startDayForMinuteCandles": "2025-02-26T10:58:00.000Z",
+    "startMonthForHourlyCandles": "2025-02-26T10:00:00.000Z",
+    "startYearForDailyCandles": "2020-01-02T00:00:00.000Z"
+  },
+  "ispygbgbx": {
+    "name": "ISPY.GB/GBX",
+    "description": "L&G Cyber Security UCITS ETF",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2025-02-26T10:58:29.133Z",
+    "startDayForMinuteCandles": "2025-02-26T10:58:00.000Z",
+    "startMonthForHourlyCandles": "2025-02-26T10:00:00.000Z",
+    "startYearForDailyCandles": "2020-02-28T00:00:00.000Z"
+  },
+  "jpyhuf": {
+    "name": "JPY/HUF",
+    "description": "Japanese yen vs. Hungarian forint",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T11:43:00.433Z",
+    "startDayForMinuteCandles": "2024-09-17T11:43:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T11:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "mxnczk": {
+    "name": "MXN/CZK",
+    "description": "Mexican peso vs. Czech koruna",
+    "decimalFactor": 999999.9999999999,
+    "startHourForTicks": "2024-05-15T09:11:19.661Z",
+    "startDayForMinuteCandles": "2024-05-15T09:11:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "mxnhuf": {
+    "name": "MXN/HUF",
+    "description": "Mexican peso vs. Hungarian forint",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-05-15T09:11:22.210Z",
+    "startDayForMinuteCandles": "2024-05-15T09:11:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "mxnjpy": {
+    "name": "MXN/JPY",
+    "description": "Mexican peso vs. Japanese yen",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2007-06-04T11:25:08.175Z",
+    "startDayForMinuteCandles": "2007-06-04T11:25:00.000Z",
+    "startMonthForHourlyCandles": "2007-06-04T11:00:00.000Z",
+    "startYearForDailyCandles": "1998-07-23T00:00:00.000Z"
+  },
+  "mxnthb": {
+    "name": "MXN/THB",
+    "description": "Mexican peso vs. Thai baht",
+    "decimalFactor": 999999.9999999999,
+    "startHourForTicks": "2024-09-17T06:39:32.813Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "mxntry": {
+    "name": "MXN/TRY",
+    "description": "Mexican peso vs. Turkish lira",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:11:22.218Z",
+    "startDayForMinuteCandles": "2024-05-15T09:11:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "nokaed": {
+    "name": "NOK/AED",
+    "description": "Norwegian krone vs. United Arab Emirates dirham",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:32.763Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "nokcnh": {
+    "name": "NOK/CNH",
+    "description": "Norwegian krone vs. Renminbi (offshore)",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:32.774Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "nokczk": {
+    "name": "NOK/CZK",
+    "description": "Norwegian krone vs. Czech koruna",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-05-15T09:12:41.215Z",
+    "startDayForMinuteCandles": "2024-05-15T09:12:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "nokdkk": {
+    "name": "NOK/DKK",
+    "description": "Norwegian krone vs. Danish krone",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:12:42.621Z",
+    "startDayForMinuteCandles": "2024-05-15T09:12:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "nokhkd": {
+    "name": "NOK/HKD",
+    "description": "Norwegian krone vs. Hong Kong dollar",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:12:41.215Z",
+    "startDayForMinuteCandles": "2024-05-15T09:12:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "nokhuf": {
+    "name": "NOK/HUF",
+    "description": "Norwegian krone vs. Hungarian forint",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:12:41.219Z",
+    "startDayForMinuteCandles": "2024-05-15T09:12:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "nokils": {
+    "name": "NOK/ILS",
+    "description": "Norwegian krone vs. Israeli new shekel",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:32.669Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "nokjpy": {
+    "name": "NOK/JPY",
+    "description": "Norwegian krone vs. Japanese yen",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:12:41.215Z",
+    "startDayForMinuteCandles": "2024-05-15T09:12:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "nokmxn": {
+    "name": "NOK/MXN",
+    "description": "Norwegian krone vs. Mexican peso",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-26T21:10:30.547Z",
+    "startDayForMinuteCandles": "2024-05-26T21:10:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-26T21:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-26T00:00:00.000Z"
+  },
+  "nokron": {
+    "name": "NOK/RON",
+    "description": "Norwegian krone vs. Romanian leu",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:32.656Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "noksar": {
+    "name": "NOK/SAR",
+    "description": "Norwegian krone vs. Saudi riyal",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:32.682Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "noksek": {
+    "name": "NOK/SEK",
+    "description": "Norwegian krone vs. Swedish krona",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:12:40.819Z",
+    "startDayForMinuteCandles": "2024-05-15T09:12:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "nokthb": {
+    "name": "NOK/THB",
+    "description": "Norwegian krone vs. Thai baht",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T06:39:52.040Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "noktry": {
+    "name": "NOK/TRY",
+    "description": "Norwegian krone vs. Turkish lira",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:12:42.623Z",
+    "startDayForMinuteCandles": "2024-05-15T09:12:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "nokzar": {
+    "name": "NOK/ZAR",
+    "description": "Norwegian krone vs. South African rand",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:12:40.762Z",
+    "startDayForMinuteCandles": "2024-05-15T09:12:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "nzdaed": {
+    "name": "NZD/AED",
+    "description": "New Zealand dollar vs. United Arab Emirates dirham",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:32.562Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "nzdcnh": {
+    "name": "NZD/CNH",
+    "description": "New Zealand dollar vs. Renminbi (offshore)",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:14:14.082Z",
+    "startDayForMinuteCandles": "2024-05-15T09:14:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "nzdczk": {
+    "name": "NZD/CZK",
+    "description": "New Zealand dollar vs. Czech koruna",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-05-15T09:14:23.146Z",
+    "startDayForMinuteCandles": "2024-05-15T09:14:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "nzddkk": {
+    "name": "NZD/DKK",
+    "description": "New Zealand dollar vs. Danish krone",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:14:14.939Z",
+    "startDayForMinuteCandles": "2024-05-15T09:14:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "nzdhkd": {
+    "name": "NZD/HKD",
+    "description": "New Zealand dollar vs. Hong Kong dollar",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:14:25.802Z",
+    "startDayForMinuteCandles": "2024-05-15T09:14:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "nzdhuf": {
+    "name": "NZD/HUF",
+    "description": "New Zealand dollar vs. Hungarian forint",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:14:14.134Z",
+    "startDayForMinuteCandles": "2024-05-15T09:14:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "nzdils": {
+    "name": "NZD/ILS",
+    "description": "New Zealand dollar vs. Israeli new shekel",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:32.570Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "nzdmxn": {
+    "name": "NZD/MXN",
+    "description": "New Zealand dollar vs. Mexican peso",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:14:15.287Z",
+    "startDayForMinuteCandles": "2024-05-15T09:14:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "nzdnok": {
+    "name": "NZD/NOK",
+    "description": "New Zealand dollar vs. Norwegian krone",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:14:19.647Z",
+    "startDayForMinuteCandles": "2024-05-15T09:14:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "nzdpln": {
+    "name": "NZD/PLN",
+    "description": "New Zealand dollar vs. Polish zÅ‚oty",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2012-03-30T10:52:31.404Z",
+    "startDayForMinuteCandles": "2012-03-30T10:52:00.000Z",
+    "startMonthForHourlyCandles": "2012-03-30T10:00:00.000Z",
+    "startYearForDailyCandles": "2001-05-04T00:00:00.000Z"
+  },
+  "nzdron": {
+    "name": "NZD/RON",
+    "description": "New Zealand dollar vs. Romanian leu",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:32.566Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "nzdsar": {
+    "name": "NZD/SAR",
+    "description": "New Zealand dollar vs. Saudi riyal",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:32.562Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "nzdsek": {
+    "name": "NZD/SEK",
+    "description": "New Zealand dollar vs. Swedish krona",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:14:14.533Z",
+    "startDayForMinuteCandles": "2024-05-15T09:14:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "nzdsgd": {
+    "name": "NZD/SGD",
+    "description": "New Zealand dollar vs. Singapore dollar",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2007-03-13T04:44:20.605Z",
+    "startDayForMinuteCandles": "2007-03-13T04:44:00.000Z",
+    "startMonthForHourlyCandles": "2007-03-13T04:00:00.000Z",
+    "startYearForDailyCandles": "1999-06-03T00:00:00.000Z"
+  },
+  "nzdthb": {
+    "name": "NZD/THB",
+    "description": "New Zealand dollar vs. Thai baht",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T06:39:32.573Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "nzdtry": {
+    "name": "NZD/TRY",
+    "description": "New Zealand dollar vs. Turkish lira",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:14:15.642Z",
+    "startDayForMinuteCandles": "2024-05-15T09:14:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "nzdzar": {
+    "name": "NZD/ZAR",
+    "description": "New Zealand dollar vs. South African rand",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:14:16.294Z",
+    "startDayForMinuteCandles": "2024-05-15T09:14:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "plnaed": {
+    "name": "PLN/AED",
+    "description": "Polish zÅ‚oty vs. United Arab Emirates dirham",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:33.324Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "plncnh": {
+    "name": "PLN/CNH",
+    "description": "Polish zÅ‚oty vs. Renminbi (offshore)",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:33.029Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "plnczk": {
+    "name": "PLN/CZK",
+    "description": "Polish zÅ‚oty vs. Czech koruna",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-05-15T09:15:57.803Z",
+    "startDayForMinuteCandles": "2024-05-15T09:15:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "plndkk": {
+    "name": "PLN/DKK",
+    "description": "Polish zÅ‚oty vs. Danish krone",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2012-03-30T10:52:41.552Z",
+    "startDayForMinuteCandles": "2012-03-30T10:52:00.000Z",
+    "startMonthForHourlyCandles": "2012-03-30T10:00:00.000Z",
+    "startYearForDailyCandles": "2001-12-28T00:00:00.000Z"
+  },
+  "plnhkd": {
+    "name": "PLN/HKD",
+    "description": "Polish zÅ‚oty vs. Hong Kong dollar",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:15:59.519Z",
+    "startDayForMinuteCandles": "2024-05-15T09:15:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "plnhuf": {
+    "name": "PLN/HUF",
+    "description": "Polish zÅ‚oty vs. Hungarian forint",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:15:58.722Z",
+    "startDayForMinuteCandles": "2024-05-15T09:15:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "plnils": {
+    "name": "PLN/ILS",
+    "description": "Polish zÅ‚oty vs. Israeli new shekel",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:33.298Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "plnjpy": {
+    "name": "PLN/JPY",
+    "description": "Polish zÅ‚oty vs. Japanese yen",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:15:56.650Z",
+    "startDayForMinuteCandles": "2024-05-15T09:15:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "plnmxn": {
+    "name": "PLN/MXN",
+    "description": "Polish zÅ‚oty vs. Mexican peso",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:15:56.918Z",
+    "startDayForMinuteCandles": "2024-05-15T09:15:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "plnnok": {
+    "name": "PLN/NOK",
+    "description": "Polish zÅ‚oty vs. Norwegian krone",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:15:57.656Z",
+    "startDayForMinuteCandles": "2024-05-15T09:15:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "plnron": {
+    "name": "PLN/RON",
+    "description": "Polish zÅ‚oty vs. Romanian leu",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:33.328Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "plnsar": {
+    "name": "PLN/SAR",
+    "description": "Polish zÅ‚oty vs. Saudi riyal",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:33.297Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "plnsek": {
+    "name": "PLN/SEK",
+    "description": "Polish zÅ‚oty vs. Swedish krona",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:15:57.353Z",
+    "startDayForMinuteCandles": "2024-05-15T09:15:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "plnthb": {
+    "name": "PLN/THB",
+    "description": "Polish zÅ‚oty vs. Thai baht",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:33.336Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "plntry": {
+    "name": "PLN/TRY",
+    "description": "Polish zÅ‚oty vs. Turkish lira",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:15:59.521Z",
+    "startDayForMinuteCandles": "2024-05-15T09:15:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "plnzar": {
+    "name": "PLN/ZAR",
+    "description": "Polish zÅ‚oty vs. South African rand",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:15:57.602Z",
+    "startDayForMinuteCandles": "2024-05-15T09:15:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "roncnh": {
+    "name": "RON/CNH",
+    "description": "Romanian leu vs. Renminbi (offshore)",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:32.623Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "ronczk": {
+    "name": "RON/CZK",
+    "description": "Romanian leu vs. Czech koruna",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-09-17T06:39:32.663Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "ronhkd": {
+    "name": "RON/HKD",
+    "description": "Romanian leu vs. Hong Kong dollar",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:47.720Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "ronhuf": {
+    "name": "RON/HUF",
+    "description": "Romanian leu vs. Hungarian forint",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T08:39:39.742Z",
+    "startDayForMinuteCandles": "2024-09-17T08:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T08:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "ronjpy": {
+    "name": "RON/JPY",
+    "description": "Romanian leu vs. Japanese yen",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T06:39:33.070Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "ronmxn": {
+    "name": "RON/MXN",
+    "description": "Romanian leu vs. Mexican peso",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T06:39:32.833Z",
+    "startDayForMinuteCandles": "2024-09-17T06:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T06:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "ronthb": {
+    "name": "RON/THB",
+    "description": "Romanian leu vs. Thai baht",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T08:39:43.045Z",
+    "startDayForMinuteCandles": "2024-09-17T08:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T08:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "rontry": {
+    "name": "RON/TRY",
+    "description": "Romanian leu vs. Turkish lira",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T08:39:39.727Z",
+    "startDayForMinuteCandles": "2024-09-17T08:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T08:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "ronzar": {
+    "name": "RON/ZAR",
+    "description": "Romanian leu vs. South African rand",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T08:39:39.735Z",
+    "startDayForMinuteCandles": "2024-09-17T08:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T08:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sarcnh": {
+    "name": "SAR/CNH",
+    "description": "Saudi riyal vs. Renminbi (offshore)",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T08:39:39.700Z",
+    "startDayForMinuteCandles": "2024-09-17T08:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T08:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sarczk": {
+    "name": "SAR/CZK",
+    "description": "Saudi riyal vs. Czech koruna",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-09-17T08:39:39.734Z",
+    "startDayForMinuteCandles": "2024-09-17T08:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T08:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sarhkd": {
+    "name": "SAR/HKD",
+    "description": "Saudi riyal vs. Hong Kong dollar",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T08:40:32.380Z",
+    "startDayForMinuteCandles": "2024-09-17T08:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T08:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sarhuf": {
+    "name": "SAR/HUF",
+    "description": "Saudi riyal vs. Hungarian forint",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T08:39:39.646Z",
+    "startDayForMinuteCandles": "2024-09-17T08:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T08:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sarjpy": {
+    "name": "SAR/JPY",
+    "description": "Saudi riyal vs. Japanese yen",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T08:39:38.850Z",
+    "startDayForMinuteCandles": "2024-09-17T08:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T08:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sarmxn": {
+    "name": "SAR/MXN",
+    "description": "Saudi riyal vs. Mexican peso",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T12:15:29.704Z",
+    "startDayForMinuteCandles": "2024-09-17T12:15:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T12:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sarron": {
+    "name": "SAR/RON",
+    "description": "Saudi riyal vs. Romanian leu",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T08:39:39.728Z",
+    "startDayForMinuteCandles": "2024-09-17T08:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T08:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sarthb": {
+    "name": "SAR/THB",
+    "description": "Saudi riyal vs. Thai baht",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T08:42:52.116Z",
+    "startDayForMinuteCandles": "2024-09-17T08:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T08:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sartry": {
+    "name": "SAR/TRY",
+    "description": "Saudi riyal vs. Turkish lira",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T08:40:00.351Z",
+    "startDayForMinuteCandles": "2024-09-17T08:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T08:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sarzar": {
+    "name": "SAR/ZAR",
+    "description": "Saudi riyal vs. South African rand",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T09:39:49.925Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sekaed": {
+    "name": "SEK/AED",
+    "description": "Swedish krona vs. United Arab Emirates dirham",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T09:39:43.803Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sekcnh": {
+    "name": "SEK/CNH",
+    "description": "Swedish krona vs. Renminbi (offshore)",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T09:39:43.643Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sekczk": {
+    "name": "SEK/CZK",
+    "description": "Swedish krona vs. Czech koruna",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-05-15T09:16:29.135Z",
+    "startDayForMinuteCandles": "2024-05-15T09:16:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "sekdkk": {
+    "name": "SEK/DKK",
+    "description": "Swedish krona vs. Danish krone",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:16:29.141Z",
+    "startDayForMinuteCandles": "2024-05-15T09:16:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "sekhkd": {
+    "name": "SEK/HKD",
+    "description": "Swedish krona vs. Hong Kong dollar",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:16:28.140Z",
+    "startDayForMinuteCandles": "2024-05-15T09:16:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "sekhuf": {
+    "name": "SEK/HUF",
+    "description": "Swedish krona vs. Hungarian forint",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:16:29.184Z",
+    "startDayForMinuteCandles": "2024-05-15T09:16:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "sekils": {
+    "name": "SEK/ILS",
+    "description": "Swedish krona vs. Israeli new shekel",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T09:39:43.636Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sekjpy": {
+    "name": "SEK/JPY",
+    "description": "Swedish krona vs. Japanese yen",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:16:29.191Z",
+    "startDayForMinuteCandles": "2024-05-15T09:16:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "sekmxn": {
+    "name": "SEK/MXN",
+    "description": "Swedish krona vs. Mexican peso",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:16:29.235Z",
+    "startDayForMinuteCandles": "2024-05-15T09:16:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "sekron": {
+    "name": "SEK/RON",
+    "description": "Swedish krona vs. Romanian leu",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T09:39:43.639Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "seksar": {
+    "name": "SEK/SAR",
+    "description": "Swedish krona vs. Saudi riyal",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T09:39:43.640Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sekthb": {
+    "name": "SEK/THB",
+    "description": "Swedish krona vs. Thai baht",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T09:39:47.827Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sektry": {
+    "name": "SEK/TRY",
+    "description": "Swedish krona vs. Turkish lira",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:16:28.231Z",
+    "startDayForMinuteCandles": "2024-05-15T09:16:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "sekzar": {
+    "name": "SEK/ZAR",
+    "description": "Swedish krona vs. South African rand",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:16:29.190Z",
+    "startDayForMinuteCandles": "2024-05-15T09:16:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "sgdaed": {
+    "name": "SGD/AED",
+    "description": "Singapore dollar vs. United Arab Emirates dirham",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T09:39:43.657Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sgdcnh": {
+    "name": "SGD/CNH",
+    "description": "Singapore dollar vs. Renminbi (offshore)",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T09:39:43.661Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sgdczk": {
+    "name": "SGD/CZK",
+    "description": "Singapore dollar vs. Czech koruna",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-05-15T09:16:31.941Z",
+    "startDayForMinuteCandles": "2024-05-15T09:16:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "sgddkk": {
+    "name": "SGD/DKK",
+    "description": "Singapore dollar vs. Danish krone",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:16:32.343Z",
+    "startDayForMinuteCandles": "2024-05-15T09:16:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "sgdhkd": {
+    "name": "SGD/HKD",
+    "description": "Singapore dollar vs. Hong Kong dollar",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:16:29.635Z",
+    "startDayForMinuteCandles": "2024-05-15T09:16:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "sgdhuf": {
+    "name": "SGD/HUF",
+    "description": "Singapore dollar vs. Hungarian forint",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:16:32.655Z",
+    "startDayForMinuteCandles": "2024-05-15T09:16:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "sgdils": {
+    "name": "SGD/ILS",
+    "description": "Singapore dollar vs. Israeli new shekel",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T09:39:43.646Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sgdmxn": {
+    "name": "SGD/MXN",
+    "description": "Singapore dollar vs. Mexican peso",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:16:31.190Z",
+    "startDayForMinuteCandles": "2024-05-15T09:16:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "sgdnok": {
+    "name": "SGD/NOK",
+    "description": "Singapore dollar vs. Norwegian krone",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:16:31.448Z",
+    "startDayForMinuteCandles": "2024-05-15T09:16:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "sgdpln": {
+    "name": "SGD/PLN",
+    "description": "Singapore dollar vs. Polish zÅ‚oty",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:16:30.837Z",
+    "startDayForMinuteCandles": "2024-05-15T09:16:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "sgdron": {
+    "name": "SGD/RON",
+    "description": "Singapore dollar vs. Romanian leu",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T09:39:43.641Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sgdsar": {
+    "name": "SGD/SAR",
+    "description": "Singapore dollar vs. Saudi riyal",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T09:39:43.656Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sgdsek": {
+    "name": "SGD/SEK",
+    "description": "Singapore dollar vs. Swedish krona",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:16:29.241Z",
+    "startDayForMinuteCandles": "2024-05-15T09:16:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "sgdthb": {
+    "name": "SGD/THB",
+    "description": "Singapore dollar vs. Thai baht",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T09:39:43.644Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "sgdtry": {
+    "name": "SGD/TRY",
+    "description": "Singapore dollar vs. Turkish lira",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:16:30.847Z",
+    "startDayForMinuteCandles": "2024-05-15T09:16:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "sgdzar": {
+    "name": "SGD/ZAR",
+    "description": "Singapore dollar vs. South African rand",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:16:30.738Z",
+    "startDayForMinuteCandles": "2024-05-15T09:16:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "suasgbusd": {
+    "name": "SUAS.GB/USD",
+    "description": "iShares MSCI USA SRI UCITS ETF",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2025-02-26T10:58:43.941Z",
+    "startDayForMinuteCandles": "2025-02-26T10:58:00.000Z",
+    "startMonthForHourlyCandles": "2025-02-26T10:00:00.000Z",
+    "startYearForDailyCandles": "2020-02-28T00:00:00.000Z"
+  },
+  "susmgbusd": {
+    "name": "SUSM.GB/USD",
+    "description": "iShares MSCI EM SRI UCITS ETF USD (Acc)",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2025-02-26T11:00:54.533Z",
+    "startDayForMinuteCandles": "2025-02-26T11:00:00.000Z",
+    "startMonthForHourlyCandles": "2025-02-26T11:00:00.000Z",
+    "startYearForDailyCandles": "2020-02-28T00:00:00.000Z"
+  },
+  "suusgbgbx": {
+    "name": "SUUS.GB/GBX",
+    "description": "iShares MSCI USA SRI UCITS ETF USD (Acc)",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2025-02-26T10:58:43.936Z",
+    "startDayForMinuteCandles": "2025-02-26T10:58:00.000Z",
+    "startMonthForHourlyCandles": "2025-02-26T10:00:00.000Z",
+    "startYearForDailyCandles": "2020-02-28T00:00:00.000Z"
+  },
+  "sxlugbusd": {
+    "name": "SXLU.GB/USD",
+    "description": "SPDR S&P U.S. Utilities Select Sector UCITS ETF",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2025-02-26T10:58:59.076Z",
+    "startDayForMinuteCandles": "2025-02-26T10:58:00.000Z",
+    "startMonthForHourlyCandles": "2025-02-26T10:00:00.000Z",
+    "startYearForDailyCandles": "2020-01-02T00:00:00.000Z"
+  },
+  "thbhuf": {
+    "name": "THB/HUF",
+    "description": "Thai baht vs. Hungarian forint",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T09:39:43.693Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "thbjpy": {
+    "name": "THB/JPY",
+    "description": "Thai baht vs. Japanese yen",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T09:39:42.153Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "tryhuf": {
+    "name": "TRY/HUF",
+    "description": "Turkish lira vs. Hungarian forint",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:18:42.386Z",
+    "startDayForMinuteCandles": "2024-05-15T09:18:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "trythb": {
+    "name": "TRY/THB",
+    "description": "Turkish lira vs. Thai baht",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-16T12:38:37.010Z",
+    "startDayForMinuteCandles": "2024-09-16T12:38:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-16T12:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "vukggbgbp": {
+    "name": "VUKG.GB/GBP",
+    "description": "Vanguard FTSE 100 UCITS ETF GBP Acc",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2025-02-26T10:58:24.427Z",
+    "startDayForMinuteCandles": "2025-02-26T10:58:00.000Z",
+    "startMonthForHourlyCandles": "2025-02-26T10:00:00.000Z",
+    "startYearForDailyCandles": "2020-02-28T00:00:00.000Z"
+  },
+  "vwrpgbgbp": {
+    "name": "VWRP.GB/GBP",
+    "description": "VWRP VANGUARD FTSE ALL-WORLD UCITS ETF",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2025-02-26T10:58:28.632Z",
+    "startDayForMinuteCandles": "2025-02-26T10:58:00.000Z",
+    "startMonthForHourlyCandles": "2025-02-26T10:00:00.000Z",
+    "startYearForDailyCandles": "2020-02-28T00:00:00.000Z"
+  },
+  "wsmlgbusd": {
+    "name": "WSML.GB/USD",
+    "description": "iShares MSCI World Small Cap UCITS ETF USD (Acc)",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2025-02-26T10:58:51.966Z",
+    "startDayForMinuteCandles": "2025-02-26T10:58:00.000Z",
+    "startMonthForHourlyCandles": "2025-02-26T10:00:00.000Z",
+    "startYearForDailyCandles": "2020-02-28T00:00:00.000Z"
+  },
+  "xagaed": {
+    "name": "XAG/AED",
+    "description": "Silver (troy oz) vs. United Arab Emirates dirham",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T12:18:10.129Z",
+    "startDayForMinuteCandles": "2024-09-17T12:18:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T12:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "xagaud": {
+    "name": "XAG/AUD",
+    "description": "Silver (troy oz) vs. Australian dollar",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2011-09-19T02:06:28.535Z",
+    "startDayForMinuteCandles": "2013-09-30T15:13:00.000Z",
+    "startMonthForHourlyCandles": "2013-09-30T14:00:00.000Z",
+    "startYearForDailyCandles": "2013-09-30T00:00:00.000Z"
+  },
+  "xagcad": {
+    "name": "XAG/CAD",
+    "description": "Silver (troy oz) vs. Canadian dollar",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:22:31.289Z",
+    "startDayForMinuteCandles": "2024-05-15T09:22:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "xagchf": {
+    "name": "XAG/CHF",
+    "description": "Silver (troy oz) vs. Swiss franc",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2023-03-14T14:53:03.393Z",
+    "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
+    "startMonthForHourlyCandles": "2023-03-14T14:00:00.000Z",
+    "startYearForDailyCandles": "2023-03-14T00:00:00.000Z"
+  },
+  "xagcnh": {
+    "name": "XAG/CNH",
+    "description": "Silver (troy oz) vs. Renminbi (offshore)",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T09:39:43.656Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "xagczk": {
+    "name": "XAG/CZK",
+    "description": "Silver (troy oz) vs. Czech koruna",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:22:32.939Z",
+    "startDayForMinuteCandles": "2024-05-15T09:22:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "xagdkk": {
+    "name": "XAG/DKK",
+    "description": "Silver (troy oz) vs. Danish krone",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2011-09-19T13:30:01.900Z",
+    "startDayForMinuteCandles": "2013-09-30T15:13:00.000Z",
+    "startMonthForHourlyCandles": "2013-09-30T14:00:00.000Z",
+    "startYearForDailyCandles": "2013-09-30T00:00:00.000Z"
+  },
+  "xageur": {
+    "name": "XAG/EUR",
+    "description": "Silver (troy oz) vs. Euro",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2011-09-19T13:30:20.254Z",
+    "startDayForMinuteCandles": "2011-09-19T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2011-09-18T21:00:00.000Z",
+    "startYearForDailyCandles": "1985-01-02T00:00:00.000Z"
+  },
+  "xaggbp": {
+    "name": "XAG/GBP",
+    "description": "Silver (troy oz) vs. Pound sterling",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2011-09-19T07:34:22.808Z",
+    "startDayForMinuteCandles": "2011-09-19T07:34:00.000Z",
+    "startMonthForHourlyCandles": "2011-09-18T21:00:00.000Z",
+    "startYearForDailyCandles": "1986-10-01T00:00:00.000Z"
+  },
+  "xaghkd": {
+    "name": "XAG/HKD",
+    "description": "Silver (troy oz) vs. Hong Kong dollar",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2011-09-19T02:06:28.340Z",
+    "startDayForMinuteCandles": "2011-09-19T02:06:00.000Z",
+    "startMonthForHourlyCandles": "2011-09-18T21:00:00.000Z",
+    "startYearForDailyCandles": "1990-01-02T00:00:00.000Z"
+  },
+  "xaghuf": {
+    "name": "XAG/HUF",
+    "description": "Silver (troy oz) vs. Hungarian forint",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:22:32.951Z",
+    "startDayForMinuteCandles": "2024-05-15T09:22:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "xagils": {
+    "name": "XAG/ILS",
+    "description": "Silver (troy oz) vs. Israeli new shekel",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T09:39:43.248Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "xagjpy": {
+    "name": "XAG/JPY",
+    "description": "Silver (troy oz) vs. Japanese yen",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T09:39:43.257Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "xagmxn": {
+    "name": "XAG/MXN",
+    "description": "Silver (troy oz) vs. Mexican peso",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2011-09-19T13:30:20.255Z",
+    "startDayForMinuteCandles": "2011-09-19T13:30:00.000Z",
+    "startMonthForHourlyCandles": "2011-09-18T21:00:00.000Z",
+    "startYearForDailyCandles": "1990-11-07T00:00:00.000Z"
+  },
+  "xagnok": {
+    "name": "XAG/NOK",
+    "description": "Silver (troy oz) vs. Norwegian krone",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:22:32.991Z",
+    "startDayForMinuteCandles": "2024-05-15T09:22:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "xagnzd": {
+    "name": "XAG/NZD",
+    "description": "Silver (troy oz) vs. New Zealand dollar",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2011-09-19T07:32:47.007Z",
+    "startDayForMinuteCandles": "2011-09-19T07:32:00.000Z",
+    "startMonthForHourlyCandles": "2011-09-18T21:00:00.000Z",
+    "startYearForDailyCandles": "2003-01-09T00:00:00.000Z"
+  },
+  "xagpln": {
+    "name": "XAG/PLN",
+    "description": "Silver (troy oz) vs. Polish zÅ‚oty",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:22:32.940Z",
+    "startDayForMinuteCandles": "2024-05-15T09:22:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "xagron": {
+    "name": "XAG/RON",
+    "description": "Silver (troy oz) vs. Romanian leu",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T09:39:43.658Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "xagsar": {
+    "name": "XAG/SAR",
+    "description": "Silver (troy oz) vs. Saudi riyal",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T09:39:43.238Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "xagsek": {
+    "name": "XAG/SEK",
+    "description": "Silver (troy oz) vs. Swedish krona",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2011-09-18T22:08:31.139Z",
+    "startDayForMinuteCandles": "2011-09-18T22:08:00.000Z",
+    "startMonthForHourlyCandles": "2011-09-18T21:00:00.000Z",
+    "startYearForDailyCandles": "1977-04-01T00:00:00.000Z"
+  },
+  "xagsgd": {
+    "name": "XAG/SGD",
+    "description": "Silver (troy oz) vs. Singapore dollar",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2011-09-19T06:31:38.701Z",
+    "startDayForMinuteCandles": "2011-09-19T06:31:00.000Z",
+    "startMonthForHourlyCandles": "2011-09-18T21:00:00.000Z",
+    "startYearForDailyCandles": "1980-01-02T00:00:00.000Z"
+  },
+  "xagthb": {
+    "name": "XAG/THB",
+    "description": "Silver (troy oz) vs. Thai baht",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T09:39:43.246Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "xagtry": {
+    "name": "XAG/TRY",
+    "description": "Silver (troy oz) vs. Turkish lira",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2011-09-19T02:06:28.630Z",
+    "startDayForMinuteCandles": "2011-09-19T02:06:00.000Z",
+    "startMonthForHourlyCandles": "2011-09-18T21:00:00.000Z",
+    "startYearForDailyCandles": "1987-12-31T00:00:00.000Z"
+  },
+  "xagzar": {
+    "name": "XAG/ZAR",
+    "description": "Silver(troy oz) vs. South African rand",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T09:39:43.248Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "xauaed": {
+    "name": "XAU/AED",
+    "description": "Gold (troy oz) vs. United Arab Emirates dirham",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T09:39:43.255Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "xauaud": {
+    "name": "XAU/AUD",
+    "description": "Gold (troy oz) vs. Australian dollar",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:22:31.991Z",
+    "startDayForMinuteCandles": "2024-05-15T09:22:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "xaucad": {
+    "name": "XAU/CAD",
+    "description": "Gold (troy oz) vs. Canadian dollar",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:22:31.284Z",
+    "startDayForMinuteCandles": "2024-05-15T09:22:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "xauchf": {
+    "name": "XAU/CHF",
+    "description": "Gold (troy oz) vs. Swiss franc",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2023-03-14T14:53:03.831Z",
+    "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
+    "startMonthForHourlyCandles": "2023-03-14T14:00:00.000Z",
+    "startYearForDailyCandles": "2023-03-14T00:00:00.000Z"
+  },
+  "xaucnh": {
+    "name": "XAU/CNH",
+    "description": "Gold (troy oz) vs. Renminbi (offshore)",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T09:39:43.668Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "xauczk": {
+    "name": "XAU/CZK",
+    "description": "Gold (troy oz) vs. Czech koruna",
+    "decimalFactor": 10,
+    "startHourForTicks": "2024-05-15T09:22:34.595Z",
+    "startDayForMinuteCandles": "2024-05-15T09:22:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "xaudkk": {
+    "name": "XAU/DKK",
+    "description": "Gold (troy oz) vs. Danish krone",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:22:34.604Z",
+    "startDayForMinuteCandles": "2024-05-15T09:22:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "xaueur": {
+    "name": "XAU/EUR",
+    "description": "Gold (troy oz) vs. Euro",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2023-03-14T14:53:03.885Z",
+    "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
+    "startMonthForHourlyCandles": "2023-03-14T14:00:00.000Z",
+    "startYearForDailyCandles": "2023-03-14T00:00:00.000Z"
+  },
+  "xaugbp": {
+    "name": "XAU/GBP",
+    "description": "Gold (troy oz) vs. Pound sterling",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2023-03-14T14:53:03.742Z",
+    "startDayForMinuteCandles": "2023-03-14T14:53:00.000Z",
+    "startMonthForHourlyCandles": "2023-03-14T14:00:00.000Z",
+    "startYearForDailyCandles": "2023-03-14T00:00:00.000Z"
+  },
+  "xauhkd": {
+    "name": "XAU/HKD",
+    "description": "Gold (troy oz) vs. Hong Kong dollar",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:22:34.593Z",
+    "startDayForMinuteCandles": "2024-05-15T09:22:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "xauhuf": {
+    "name": "XAU/HUF",
+    "description": "Gold (troy oz) vs. Hungarian forint",
+    "decimalFactor": 10,
+    "startHourForTicks": "2024-05-15T09:22:34.554Z",
+    "startDayForMinuteCandles": "2024-05-15T09:22:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "xauils": {
+    "name": "XAU/ILS",
+    "description": "Gold (troy oz) vs. Israeli new shekel",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T09:39:43.258Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "xaujpy": {
+    "name": "XAU/JPY",
+    "description": "Gold (troy oz) vs. Japanese yen",
+    "decimalFactor": 10,
+    "startHourForTicks": "2024-09-17T09:39:43.252Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "xaumxn": {
+    "name": "XAU/MXN",
+    "description": "Gold (troy oz) vs. Mexican peso",
+    "decimalFactor": 10,
+    "startHourForTicks": "2024-05-15T09:22:34.605Z",
+    "startDayForMinuteCandles": "2024-05-15T09:22:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "xaunok": {
+    "name": "XAU/NOK",
+    "description": "Gold (troy oz) vs. Norwegian krone",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:22:34.597Z",
+    "startDayForMinuteCandles": "2024-05-15T09:22:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "xaunzd": {
+    "name": "XAU/NZD",
+    "description": "Gold (troy oz) vs. New Zealand dollar",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:22:31.985Z",
+    "startDayForMinuteCandles": "2024-05-15T09:22:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "xaupln": {
+    "name": "XAU/PLN",
+    "description": "Gold (troy oz) vs. Polish zÅ‚oty",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:22:31.998Z",
+    "startDayForMinuteCandles": "2024-05-15T09:22:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "xauron": {
+    "name": "XAU/RON",
+    "description": "Gold (troy oz) vs. Romanian leu",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T09:39:43.661Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "xausar": {
+    "name": "XAU/SAR",
+    "description": "Gold (troy oz) vs. Saudi riyal",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T09:39:43.255Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "xausek": {
+    "name": "XAU/SEK",
+    "description": "Gold (troy oz) vs. Swedish krona",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:22:34.605Z",
+    "startDayForMinuteCandles": "2024-05-15T09:22:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "xausgd": {
+    "name": "XAU/SGD",
+    "description": "Gold (troy oz) vs. Singapore dollar",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:22:31.998Z",
+    "startDayForMinuteCandles": "2024-05-15T09:22:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "xauthb": {
+    "name": "XAU/THB",
+    "description": "Gold (troy oz) vs. Thai baht",
+    "decimalFactor": 10,
+    "startHourForTicks": "2024-09-17T09:39:43.256Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "xautry": {
+    "name": "XAU/TRY",
+    "description": "Gold (troy oz) vs. Turkish lira",
+    "decimalFactor": 10,
+    "startHourForTicks": "2024-05-15T09:22:34.596Z",
+    "startDayForMinuteCandles": "2024-05-15T09:22:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "xauxag": {
+    "name": "XAU/XAG",
+    "description": "Gold (troy oz) vs. Silver (troy oz)",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-09-17T09:39:43.256Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "xauzar": {
+    "name": "XAU/ZAR",
+    "description": "Gold (troy oz) vs. South African rand",
+    "decimalFactor": 10,
+    "startHourForTicks": "2024-09-17T09:39:43.252Z",
+    "startDayForMinuteCandles": "2024-09-17T09:39:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "xnaqgbgbp": {
+    "name": "XNAQ.GB/GBP",
+    "description": "Xtrackers NASDAQ 100 UCITS ETF 1C (GBP)",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2025-02-26T10:58:24.378Z",
+    "startDayForMinuteCandles": "2025-02-26T10:58:00.000Z",
+    "startMonthForHourlyCandles": "2025-02-26T10:00:00.000Z",
+    "startYearForDailyCandles": "2021-02-16T00:00:00.000Z"
+  },
+  "xs6rgbgbx": {
+    "name": "XS6R.GB/GBX",
+    "description": "Xtrackers MSCI Europe Utilities Screened UCITS ETF 1C",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2025-02-26T10:58:58.486Z",
+    "startDayForMinuteCandles": "2025-02-26T10:58:00.000Z",
+    "startMonthForHourlyCandles": "2025-02-26T10:00:00.000Z",
+    "startYearForDailyCandles": "2020-02-03T00:00:00.000Z"
+  },
+  "zarczk": {
+    "name": "ZAR/CZK",
+    "description": "South African rand vs. Czech koruna",
+    "decimalFactor": 10000,
+    "startHourForTicks": "2024-05-15T09:27:54.022Z",
+    "startDayForMinuteCandles": "2024-05-15T09:27:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "zarhuf": {
+    "name": "ZAR/HUF",
+    "description": "South African rand vs. Hungarian forint",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-05-15T09:27:54.238Z",
+    "startDayForMinuteCandles": "2024-05-15T09:27:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "zarmxn": {
+    "name": "ZAR/MXN",
+    "description": "South African rand vs. Mexican peso",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:27:52.723Z",
+    "startDayForMinuteCandles": "2024-05-15T09:27:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
+  },
+  "zarthb": {
+    "name": "ZAR/THB",
+    "description": "South African rand vs. Thai baht",
+    "decimalFactor": 1000,
+    "startHourForTicks": "2024-09-17T09:40:27.208Z",
+    "startDayForMinuteCandles": "2024-09-17T09:40:00.000Z",
+    "startMonthForHourlyCandles": "2024-09-17T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-09-17T00:00:00.000Z"
+  },
+  "zartry": {
+    "name": "ZAR/TRY",
+    "description": "South African rand vs. Turkish lira",
+    "decimalFactor": 100000,
+    "startHourForTicks": "2024-05-15T09:27:55.443Z",
+    "startDayForMinuteCandles": "2024-05-15T09:27:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
   }
 }

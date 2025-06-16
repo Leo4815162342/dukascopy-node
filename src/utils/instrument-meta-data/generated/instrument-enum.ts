@@ -1333,19 +1333,19 @@ export enum Instrument {
     bciteur='bciteur',
 
     /**
-     * ### Bitcoin Cash vs Swiss Franc
+     * ### Bitcoin Cash vs. Swiss franc
      * *BCH/CHF*
      */
     bchchf='bchchf',
 
     /**
-     * ### Bitcoin Cash vs Euro
+     * ### Bitcoin Cash vs. Euro
      * *BCH/EUR*
      */
     bcheur='bcheur',
 
     /**
-     * ### Bitcoin Cash vs Pound Sterling
+     * ### Bitcoin Cash vs. Pound sterling
      * *BCH/GBP*
      */
     bchgbp='bchgbp',
@@ -1591,19 +1591,19 @@ export enum Instrument {
     btgbgbx='btgbgbx',
 
     /**
-     * ### Bitcoin vs Swiss Frank
+     * ### Bitcoin vs. Swiss franc
      * *BTC/CHF*
      */
     btcchf='btcchf',
 
     /**
-     * ### Bitcoin vs Euro
+     * ### Bitcoin vs. Euro
      * *BTC/EUR*
      */
     btceur='btceur',
 
     /**
-     * ### Bitcoin vs Pound Sterling
+     * ### Bitcoin vs. Pound sterling
      * *BTC/GBP*
      */
     btcgbp='btcgbp',
@@ -2749,19 +2749,19 @@ export enum Instrument {
     estcususd='estcususd',
 
     /**
-     * ### Ether vs Swiss Franc
+     * ### Ethereum vs. Swiss franc
      * *ETH/CHF*
      */
     ethchf='ethchf',
 
     /**
-     * ### Ether vs Euro
+     * ### Ethereum vs. Euro
      * *ETH/EUR*
      */
     etheur='etheur',
 
     /**
-     * ### Ether vs Pound Sterling
+     * ### Ethereum vs. Pound sterling
      * *ETH/GBP*
      */
     ethgbp='ethgbp',
@@ -4381,19 +4381,19 @@ export enum Instrument {
     lstrususd='lstrususd',
 
     /**
-     * ### Litecoin vs Swiss Franc
+     * ### Litecoin vs. Swiss franc
      * *LTC/CHF*
      */
     ltcchf='ltcchf',
 
     /**
-     * ### Litecoin vs Euro
+     * ### Litecoin vs. Euro
      * *LTC/EUR*
      */
     ltceur='ltceur',
 
     /**
-     * ### Pound Sterling
+     * ### Litecoin vs. Pound sterling
      * *LTC/GBP*
      */
     ltcgbp='ltcgbp',
@@ -7429,19 +7429,19 @@ export enum Instrument {
     xlkususd='xlkususd',
 
     /**
-     * ### Stellar vs Swiss Franc
+     * ### Stellar vs. Swiss franc
      * *XLM/CHF*
      */
     xlmchf='xlmchf',
 
     /**
-     * ### Stellar vs Euro
+     * ### Stellar vs. Euro
      * *XLM/EUR*
      */
     xlmeur='xlmeur',
 
     /**
-     * ### Stellar vs Pound Sterling
+     * ### Stellar vs. Pound sterling
      * *XLM/GBP*
      */
     xlmgbp='xlmgbp',
@@ -7811,5 +7811,1835 @@ export enum Instrument {
      * *VDE.US/USD*
      */
     vdeususd='vdeususd',
+
+    /**
+     * ### United Arab Emirates dirham vs. Renminbi (offshore)
+     * *AED/CNH*
+     */
+    aedcnh='aedcnh',
+
+    /**
+     * ### United Arab Emirates dirham vs. Czech koruna
+     * *AED/CZK*
+     */
+    aedczk='aedczk',
+
+    /**
+     * ### United Arab Emirates dirham vs. Hong Kong dollar
+     * *AED/HKD*
+     */
+    aedhkd='aedhkd',
+
+    /**
+     * ### United Arab Emirates dirham vs. Hungarian forint
+     * *AED/HUF*
+     */
+    aedhuf='aedhuf',
+
+    /**
+     * ### United Arab Emirates dirham vs. Japanese yen
+     * *AED/JPY*
+     */
+    aedjpy='aedjpy',
+
+    /**
+     * ### United Arab Emirates dirham vs. Mexican peso
+     * *AED/MXN*
+     */
+    aedmxn='aedmxn',
+
+    /**
+     * ### United Arab Emirates dirham vs. Romanian leu
+     * *AED/RON*
+     */
+    aedron='aedron',
+
+    /**
+     * ### United Arab Emirates dirham vs. Saudi riyal
+     * *AED/SAR*
+     */
+    aedsar='aedsar',
+
+    /**
+     * ### United Arab Emirates dirham vs. Thai baht
+     * *AED/THB*
+     */
+    aedthb='aedthb',
+
+    /**
+     * ### United Arab Emirates dirham vs. Turkish lira
+     * *AED/TRY*
+     */
+    aedtry='aedtry',
+
+    /**
+     * ### United Arab Emirates dirham vs. South African rand
+     * *AED/ZAR*
+     */
+    aedzar='aedzar',
+
+    /**
+     * ### iShares Ageing Population UCITS ETF USD (Acc)
+     * *AGES.GB/GBX*
+     */
+    agesgbgbx='agesgbgbx',
+
+    /**
+     * ### L&G Artificial Intelligence UCITS ETF
+     * *AIAI.GB/USD*
+     */
+    aiaigbusd='aiaigbusd',
+
+    /**
+     * ### Australian dollar vs. United Arab Emirates dirham
+     * *AUD/AED*
+     */
+    audaed='audaed',
+
+    /**
+     * ### Australian dollar vs. Renminbi (offshore)
+     * *AUD/CNH*
+     */
+    audcnh='audcnh',
+
+    /**
+     * ### Australian dollar vs. Czech koruna
+     * *AUD/CZK*
+     */
+    audczk='audczk',
+
+    /**
+     * ### Australian dollar vs. Danish krone
+     * *AUD/DKK*
+     */
+    auddkk='auddkk',
+
+    /**
+     * ### Australian dollar vs. Hong Kong dollar
+     * *AUD/HKD*
+     */
+    audhkd='audhkd',
+
+    /**
+     * ### Australian dollar vs. Hungarian forint
+     * *AUD/HUF*
+     */
+    audhuf='audhuf',
+
+    /**
+     * ### Australian dollar vs. Israeli new shekel
+     * *AUD/ILS*
+     */
+    audils='audils',
+
+    /**
+     * ### Australian dollar vs. Mexican peso
+     * *AUD/MXN*
+     */
+    audmxn='audmxn',
+
+    /**
+     * ### Australian dollar vs. Norwegian krone
+     * *AUD/NOK*
+     */
+    audnok='audnok',
+
+    /**
+     * ### Australian dollar vs. Polish zÅ‚oty
+     * *AUD/PLN*
+     */
+    audpln='audpln',
+
+    /**
+     * ### Australian dollar vs. Romanian leu
+     * *AUD/RON*
+     */
+    audron='audron',
+
+    /**
+     * ### Australian dollar vs. Saudi riyal
+     * *AUD/SAR*
+     */
+    audsar='audsar',
+
+    /**
+     * ### Australian dollar vs. Swedish krona
+     * *AUD/SEK*
+     */
+    audsek='audsek',
+
+    /**
+     * ### Australian dollar vs. Thai baht
+     * *AUD/THB*
+     */
+    audthb='audthb',
+
+    /**
+     * ### Australian dollar vs. Turkish lira
+     * *AUD/TRY*
+     */
+    audtry='audtry',
+
+    /**
+     * ### Australian dollar vs. South African rand
+     * *AUD/ZAR*
+     */
+    audzar='audzar',
+
+    /**
+     * ### Canadian dollar vs. United Arab Emirates dirham
+     * *CAD/AED*
+     */
+    cadaed='cadaed',
+
+    /**
+     * ### Canadian dollar vs. Renminbi (offshore)
+     * *CAD/CNH*
+     */
+    cadcnh='cadcnh',
+
+    /**
+     * ### Canadian dollar vs. Czech koruna
+     * *CAD/CZK*
+     */
+    cadczk='cadczk',
+
+    /**
+     * ### Canadian dollar vs. Danish krone
+     * *CAD/DKK*
+     */
+    caddkk='caddkk',
+
+    /**
+     * ### Canadian dollar vs. Hungarian forint
+     * *CAD/HUF*
+     */
+    cadhuf='cadhuf',
+
+    /**
+     * ### Canadian dollar vs. Israeli new shekel
+     * *CAD/ILS*
+     */
+    cadils='cadils',
+
+    /**
+     * ### Canadian dollar vs. Mexican peso
+     * *CAD/MXN*
+     */
+    cadmxn='cadmxn',
+
+    /**
+     * ### Canadian dollar vs. Norwegian krone
+     * *CAD/NOK*
+     */
+    cadnok='cadnok',
+
+    /**
+     * ### Canadian dollar vs. Polish zÅ‚oty
+     * *CAD/PLN*
+     */
+    cadpln='cadpln',
+
+    /**
+     * ### Canadian dollar vs. Romanian leu
+     * *CAD/RON*
+     */
+    cadron='cadron',
+
+    /**
+     * ### Canadian dollar vs. Saudi riyal
+     * *CAD/SAR*
+     */
+    cadsar='cadsar',
+
+    /**
+     * ### Canadian dollar vs. Swedish krona
+     * *CAD/SEK*
+     */
+    cadsek='cadsek',
+
+    /**
+     * ### Canadian dollar vs. Singapore dollar
+     * *CAD/SGD*
+     */
+    cadsgd='cadsgd',
+
+    /**
+     * ### Canadian dollar vs. Thai baht
+     * *CAD/THB*
+     */
+    cadthb='cadthb',
+
+    /**
+     * ### Canadian dollar vs. Turkish lira
+     * *CAD/TRY*
+     */
+    cadtry='cadtry',
+
+    /**
+     * ### Canadian dollar vs. South African rand
+     * *CAD/ZAR*
+     */
+    cadzar='cadzar',
+
+    /**
+     * ### Swiss franc vs. United Arab Emirates dirham
+     * *CHF/AED*
+     */
+    chfaed='chfaed',
+
+    /**
+     * ### Swiss franc vs. Renminbi (offshore)
+     * *CHF/CNH*
+     */
+    chfcnh='chfcnh',
+
+    /**
+     * ### Swiss franc vs. Czech koruna
+     * *CHF/CZK*
+     */
+    chfczk='chfczk',
+
+    /**
+     * ### Swiss franc vs. Danish krone
+     * *CHF/DKK*
+     */
+    chfdkk='chfdkk',
+
+    /**
+     * ### Swiss franc vs. Hong Kong dollar
+     * *CHF/HKD*
+     */
+    chfhkd='chfhkd',
+
+    /**
+     * ### Swiss franc vs. Hungarian forint
+     * *CHF/HUF*
+     */
+    chfhuf='chfhuf',
+
+    /**
+     * ### Swiss franc vs. Israeli new shekel
+     * *CHF/ILS*
+     */
+    chfils='chfils',
+
+    /**
+     * ### Swiss franc vs. Mexican peso
+     * *CHF/MXN*
+     */
+    chfmxn='chfmxn',
+
+    /**
+     * ### Swiss franc vs. Norwegian krone
+     * *CHF/NOK*
+     */
+    chfnok='chfnok',
+
+    /**
+     * ### Swiss franc vs. Polish zÅ‚oty
+     * *CHF/PLN*
+     */
+    chfpln='chfpln',
+
+    /**
+     * ### Swiss franc vs. Romanian leu
+     * *CHF/RON*
+     */
+    chfron='chfron',
+
+    /**
+     * ### Swiss franc vs. Saudi riyal
+     * *CHF/SAR*
+     */
+    chfsar='chfsar',
+
+    /**
+     * ### Swiss franc vs. Swedish krona
+     * *CHF/SEK*
+     */
+    chfsek='chfsek',
+
+    /**
+     * ### Swiss franc vs. Thai baht
+     * *CHF/THB*
+     */
+    chfthb='chfthb',
+
+    /**
+     * ### Swiss franc vs. Turkish lira
+     * *CHF/TRY*
+     */
+    chftry='chftry',
+
+    /**
+     * ### Swiss franc vs. South African rand
+     * *CHF/ZAR*
+     */
+    chfzar='chfzar',
+
+    /**
+     * ### iShares NASDAQ 100 UCITS ETF USD (Acc)
+     * *CNDX.GB/USD*
+     */
+    cndxgbusd='cndxgbusd',
+
+    /**
+     * ### Renminbi (offshore) vs. Czech koruna
+     * *CNH/CZK*
+     */
+    cnhczk='cnhczk',
+
+    /**
+     * ### Renminbi (offshore) vs. Hong Kong dollar
+     * *CNH/HKD*
+     */
+    cnhhkd='cnhhkd',
+
+    /**
+     * ### Renminbi (offshore) vs. Hungarian forint
+     * *CNH/HUF*
+     */
+    cnhhuf='cnhhuf',
+
+    /**
+     * ### Renminbi (offshore) vs. Japanese yen
+     * *CNH/JPY*
+     */
+    cnhjpy='cnhjpy',
+
+    /**
+     * ### Renminbi (offshore) vs. Mexican peso
+     * *CNH/MXN*
+     */
+    cnhmxn='cnhmxn',
+
+    /**
+     * ### Renminbi (offshore) vs. Thai baht
+     * *CNH/THB*
+     */
+    cnhthb='cnhthb',
+
+    /**
+     * ### Renminbi (offshore) vs. Turkish lira
+     * *CNH/TRY*
+     */
+    cnhtry='cnhtry',
+
+    /**
+     * ### Renminbi (offshore) vs. South African rand
+     * *CNH/ZAR*
+     */
+    cnhzar='cnhzar',
+
+    /**
+     * ### Czech koruna vs. Hungarian forint
+     * *CZK/HUF*
+     */
+    czkhuf='czkhuf',
+
+    /**
+     * ### Czech koruna vs. Japanese yen
+     * *CZK/JPY*
+     */
+    czkjpy='czkjpy',
+
+    /**
+     * ### Czech koruna vs. Thai baht
+     * *CZK/THB*
+     */
+    czkthb='czkthb',
+
+    /**
+     * ### Czech koruna vs. Turkish lira
+     * *CZK/TRY*
+     */
+    czktry='czktry',
+
+    /**
+     * ### VanEck Defense ETF A USD Acc (GBP)
+     * *DFNG.GB/GBP*
+     */
+    dfnggbgbp='dfnggbgbp',
+
+    /**
+     * ### Danish krone vs. United Arab Emirates dirham
+     * *DKK/AED*
+     */
+    dkkaed='dkkaed',
+
+    /**
+     * ### Danish krone vs. Renminbi (offshore)
+     * *DKK/CNH*
+     */
+    dkkcnh='dkkcnh',
+
+    /**
+     * ### Danish krone vs. Czech koruna
+     * *DKK/CZK*
+     */
+    dkkczk='dkkczk',
+
+    /**
+     * ### Danish krone vs. Hong Kong dollar
+     * *DKK/HKD*
+     */
+    dkkhkd='dkkhkd',
+
+    /**
+     * ### Danish krone vs. Hungarian forint
+     * *DKK/HUF*
+     */
+    dkkhuf='dkkhuf',
+
+    /**
+     * ### Danish krone vs. Israeli new shekel
+     * *DKK/ILS*
+     */
+    dkkils='dkkils',
+
+    /**
+     * ### Danish krone vs. Japanese yen
+     * *DKK/JPY*
+     */
+    dkkjpy='dkkjpy',
+
+    /**
+     * ### Danish krone vs. Mexican peso
+     * *DKK/MXN*
+     */
+    dkkmxn='dkkmxn',
+
+    /**
+     * ### Danish krone vs. Romanian leu
+     * *DKK/RON*
+     */
+    dkkron='dkkron',
+
+    /**
+     * ### Danish krone vs. Saudi riyal
+     * *DKK/SAR*
+     */
+    dkksar='dkksar',
+
+    /**
+     * ### Danish krone vs. Thai baht
+     * *DKK/THB*
+     */
+    dkkthb='dkkthb',
+
+    /**
+     * ### Danish krone vs. Turkish lira
+     * *DKK/TRY*
+     */
+    dkktry='dkktry',
+
+    /**
+     * ### Danish krone vs. South African rand
+     * *DKK/ZAR*
+     */
+    dkkzar='dkkzar',
+
+    /**
+     * ### iShares Electric Vehicles and Driving Technology UCITS ETF USD (Acc)
+     * *ECAR.GB/USD*
+     */
+    ecargbusd='ecargbusd',
+
+    /**
+     * ### Euro vs. United Arab Emirates dirham
+     * *EUR/AED*
+     */
+    euraed='euraed',
+
+    /**
+     * ### Euro vs. Renminbi (offshore)
+     * *EUR/CNH*
+     */
+    eurcnh='eurcnh',
+
+    /**
+     * ### Euro vs. Israeli new shekel
+     * *EUR/ILS*
+     */
+    eurils='eurils',
+
+    /**
+     * ### Euro vs. Mexican peso
+     * *EUR/MXN*
+     */
+    eurmxn='eurmxn',
+
+    /**
+     * ### Euro vs. Romanian leu
+     * *EUR/RON*
+     */
+    eurron='eurron',
+
+    /**
+     * ### Euro vs. Saudi riyal
+     * *EUR/SAR*
+     */
+    eursar='eursar',
+
+    /**
+     * ### Euro vs. Thai baht
+     * *EUR/THB*
+     */
+    eurthb='eurthb',
+
+    /**
+     * ### Euro vs. South African rand
+     * *EUR/ZAR*
+     */
+    eurzar='eurzar',
+
+    /**
+     * ### Pound sterling vs. United Arab Emirates dirham
+     * *GBP/AED*
+     */
+    gbpaed='gbpaed',
+
+    /**
+     * ### Pound sterling vs. Renminbi (offshore)
+     * *GBP/CNH*
+     */
+    gbpcnh='gbpcnh',
+
+    /**
+     * ### Pound sterling vs. Czech koruna
+     * *GBP/CZK*
+     */
+    gbpczk='gbpczk',
+
+    /**
+     * ### Pound sterling vs. Danish krone
+     * *GBP/DKK*
+     */
+    gbpdkk='gbpdkk',
+
+    /**
+     * ### Pound sterling vs. Hong Kong dollar
+     * *GBP/HKD*
+     */
+    gbphkd='gbphkd',
+
+    /**
+     * ### Pound sterling vs. Hungarian forint
+     * *GBP/HUF*
+     */
+    gbphuf='gbphuf',
+
+    /**
+     * ### Pound sterling vs. Israeli new shekel
+     * *GBP/ILS*
+     */
+    gbpils='gbpils',
+
+    /**
+     * ### Pound sterling vs. Mexican peso
+     * *GBP/MXN*
+     */
+    gbpmxn='gbpmxn',
+
+    /**
+     * ### Pound sterling vs. Norwegian krone
+     * *GBP/NOK*
+     */
+    gbpnok='gbpnok',
+
+    /**
+     * ### Pound sterling vs. Polish zÅ‚oty
+     * *GBP/PLN*
+     */
+    gbppln='gbppln',
+
+    /**
+     * ### Pound sterling vs. Romanian leu
+     * *GBP/RON*
+     */
+    gbpron='gbpron',
+
+    /**
+     * ### Pound sterling vs. Saudi riyal
+     * *GBP/SAR*
+     */
+    gbpsar='gbpsar',
+
+    /**
+     * ### Pound sterling vs. Swedish krona
+     * *GBP/SEK*
+     */
+    gbpsek='gbpsek',
+
+    /**
+     * ### Pound sterling vs. Singapore dollar
+     * *GBP/SGD*
+     */
+    gbpsgd='gbpsgd',
+
+    /**
+     * ### Pound sterling vs. Thai baht
+     * *GBP/THB*
+     */
+    gbpthb='gbpthb',
+
+    /**
+     * ### Pound sterling vs. Turkish lira
+     * *GBP/TRY*
+     */
+    gbptry='gbptry',
+
+    /**
+     * ### Pound sterling vs. South African rand
+     * *GBP/ZAR*
+     */
+    gbpzar='gbpzar',
+
+    /**
+     * ### L&G Clean Water UCITS ETF
+     * *GLGG.GB/GBX*
+     */
+    glgggbgbx='glgggbgbx',
+
+    /**
+     * ### Hong Kong dollar vs. Czech koruna
+     * *HKD/CZK*
+     */
+    hkdczk='hkdczk',
+
+    /**
+     * ### Hong Kong dollar vs. Hungarian forint
+     * *HKD/HUF*
+     */
+    hkdhuf='hkdhuf',
+
+    /**
+     * ### Hong Kong dollar vs. Mexican peso
+     * *HKD/MXN*
+     */
+    hkdmxn='hkdmxn',
+
+    /**
+     * ### Hong Kong dollar vs. Thai baht
+     * *HKD/THB*
+     */
+    hkdthb='hkdthb',
+
+    /**
+     * ### Hong Kong dollar vs. Turkish lira
+     * *HKD/TRY*
+     */
+    hkdtry='hkdtry',
+
+    /**
+     * ### Hong Kong dollar vs. South African rand
+     * *HKD/ZAR*
+     */
+    hkdzar='hkdzar',
+
+    /**
+     * ### Israeli new shekel vs. United Arab Emirates dirham
+     * *ILS/AED*
+     */
+    ilsaed='ilsaed',
+
+    /**
+     * ### Israeli new shekel vs. Renminbi (offshore)
+     * *ILS/CNH*
+     */
+    ilscnh='ilscnh',
+
+    /**
+     * ### Israeli new shekel vs. Czech koruna
+     * *ILS/CZK*
+     */
+    ilsczk='ilsczk',
+
+    /**
+     * ### Israeli new shekel vs. Hong Kong dollar
+     * *ILS/HKD*
+     */
+    ilshkd='ilshkd',
+
+    /**
+     * ### Israeli new shekel vs. Hungarian forint
+     * *ILS/HUF*
+     */
+    ilshuf='ilshuf',
+
+    /**
+     * ### Israeli new shekel vs. Japanese yen
+     * *ILS/JPY*
+     */
+    ilsjpy='ilsjpy',
+
+    /**
+     * ### Israeli new shekel vs. Mexican peso
+     * *ILS/MXN*
+     */
+    ilsmxn='ilsmxn',
+
+    /**
+     * ### Israeli new shekel vs. Romanian leu
+     * *ILS/RON*
+     */
+    ilsron='ilsron',
+
+    /**
+     * ### Israeli new shekel vs. Saudi riyal
+     * *ILS/SAR*
+     */
+    ilssar='ilssar',
+
+    /**
+     * ### Israeli new shekel vs. Thai baht
+     * *ILS/THB*
+     */
+    ilsthb='ilsthb',
+
+    /**
+     * ### Israeli new shekel vs. Turkish lira
+     * *ILS/TRY*
+     */
+    ilstry='ilstry',
+
+    /**
+     * ### Israeli new shekel vs. South African rand
+     * *ILS/ZAR*
+     */
+    ilszar='ilszar',
+
+    /**
+     * ### WisdomTree Artificial Intelligence UCITS ETF - USD Acc
+     * *INTL.GB/GBX*
+     */
+    intlgbgbx='intlgbgbx',
+
+    /**
+     * ### L&G Cyber Security UCITS ETF
+     * *ISPY.GB/GBX*
+     */
+    ispygbgbx='ispygbgbx',
+
+    /**
+     * ### Japanese yen vs. Hungarian forint
+     * *JPY/HUF*
+     */
+    jpyhuf='jpyhuf',
+
+    /**
+     * ### Mexican peso vs. Czech koruna
+     * *MXN/CZK*
+     */
+    mxnczk='mxnczk',
+
+    /**
+     * ### Mexican peso vs. Hungarian forint
+     * *MXN/HUF*
+     */
+    mxnhuf='mxnhuf',
+
+    /**
+     * ### Mexican peso vs. Japanese yen
+     * *MXN/JPY*
+     */
+    mxnjpy='mxnjpy',
+
+    /**
+     * ### Mexican peso vs. Thai baht
+     * *MXN/THB*
+     */
+    mxnthb='mxnthb',
+
+    /**
+     * ### Mexican peso vs. Turkish lira
+     * *MXN/TRY*
+     */
+    mxntry='mxntry',
+
+    /**
+     * ### Norwegian krone vs. United Arab Emirates dirham
+     * *NOK/AED*
+     */
+    nokaed='nokaed',
+
+    /**
+     * ### Norwegian krone vs. Renminbi (offshore)
+     * *NOK/CNH*
+     */
+    nokcnh='nokcnh',
+
+    /**
+     * ### Norwegian krone vs. Czech koruna
+     * *NOK/CZK*
+     */
+    nokczk='nokczk',
+
+    /**
+     * ### Norwegian krone vs. Danish krone
+     * *NOK/DKK*
+     */
+    nokdkk='nokdkk',
+
+    /**
+     * ### Norwegian krone vs. Hong Kong dollar
+     * *NOK/HKD*
+     */
+    nokhkd='nokhkd',
+
+    /**
+     * ### Norwegian krone vs. Hungarian forint
+     * *NOK/HUF*
+     */
+    nokhuf='nokhuf',
+
+    /**
+     * ### Norwegian krone vs. Israeli new shekel
+     * *NOK/ILS*
+     */
+    nokils='nokils',
+
+    /**
+     * ### Norwegian krone vs. Japanese yen
+     * *NOK/JPY*
+     */
+    nokjpy='nokjpy',
+
+    /**
+     * ### Norwegian krone vs. Mexican peso
+     * *NOK/MXN*
+     */
+    nokmxn='nokmxn',
+
+    /**
+     * ### Norwegian krone vs. Romanian leu
+     * *NOK/RON*
+     */
+    nokron='nokron',
+
+    /**
+     * ### Norwegian krone vs. Saudi riyal
+     * *NOK/SAR*
+     */
+    noksar='noksar',
+
+    /**
+     * ### Norwegian krone vs. Swedish krona
+     * *NOK/SEK*
+     */
+    noksek='noksek',
+
+    /**
+     * ### Norwegian krone vs. Thai baht
+     * *NOK/THB*
+     */
+    nokthb='nokthb',
+
+    /**
+     * ### Norwegian krone vs. Turkish lira
+     * *NOK/TRY*
+     */
+    noktry='noktry',
+
+    /**
+     * ### Norwegian krone vs. South African rand
+     * *NOK/ZAR*
+     */
+    nokzar='nokzar',
+
+    /**
+     * ### New Zealand dollar vs. United Arab Emirates dirham
+     * *NZD/AED*
+     */
+    nzdaed='nzdaed',
+
+    /**
+     * ### New Zealand dollar vs. Renminbi (offshore)
+     * *NZD/CNH*
+     */
+    nzdcnh='nzdcnh',
+
+    /**
+     * ### New Zealand dollar vs. Czech koruna
+     * *NZD/CZK*
+     */
+    nzdczk='nzdczk',
+
+    /**
+     * ### New Zealand dollar vs. Danish krone
+     * *NZD/DKK*
+     */
+    nzddkk='nzddkk',
+
+    /**
+     * ### New Zealand dollar vs. Hong Kong dollar
+     * *NZD/HKD*
+     */
+    nzdhkd='nzdhkd',
+
+    /**
+     * ### New Zealand dollar vs. Hungarian forint
+     * *NZD/HUF*
+     */
+    nzdhuf='nzdhuf',
+
+    /**
+     * ### New Zealand dollar vs. Israeli new shekel
+     * *NZD/ILS*
+     */
+    nzdils='nzdils',
+
+    /**
+     * ### New Zealand dollar vs. Mexican peso
+     * *NZD/MXN*
+     */
+    nzdmxn='nzdmxn',
+
+    /**
+     * ### New Zealand dollar vs. Norwegian krone
+     * *NZD/NOK*
+     */
+    nzdnok='nzdnok',
+
+    /**
+     * ### New Zealand dollar vs. Polish zÅ‚oty
+     * *NZD/PLN*
+     */
+    nzdpln='nzdpln',
+
+    /**
+     * ### New Zealand dollar vs. Romanian leu
+     * *NZD/RON*
+     */
+    nzdron='nzdron',
+
+    /**
+     * ### New Zealand dollar vs. Saudi riyal
+     * *NZD/SAR*
+     */
+    nzdsar='nzdsar',
+
+    /**
+     * ### New Zealand dollar vs. Swedish krona
+     * *NZD/SEK*
+     */
+    nzdsek='nzdsek',
+
+    /**
+     * ### New Zealand dollar vs. Singapore dollar
+     * *NZD/SGD*
+     */
+    nzdsgd='nzdsgd',
+
+    /**
+     * ### New Zealand dollar vs. Thai baht
+     * *NZD/THB*
+     */
+    nzdthb='nzdthb',
+
+    /**
+     * ### New Zealand dollar vs. Turkish lira
+     * *NZD/TRY*
+     */
+    nzdtry='nzdtry',
+
+    /**
+     * ### New Zealand dollar vs. South African rand
+     * *NZD/ZAR*
+     */
+    nzdzar='nzdzar',
+
+    /**
+     * ### Polish zÅ‚oty vs. United Arab Emirates dirham
+     * *PLN/AED*
+     */
+    plnaed='plnaed',
+
+    /**
+     * ### Polish zÅ‚oty vs. Renminbi (offshore)
+     * *PLN/CNH*
+     */
+    plncnh='plncnh',
+
+    /**
+     * ### Polish zÅ‚oty vs. Czech koruna
+     * *PLN/CZK*
+     */
+    plnczk='plnczk',
+
+    /**
+     * ### Polish zÅ‚oty vs. Danish krone
+     * *PLN/DKK*
+     */
+    plndkk='plndkk',
+
+    /**
+     * ### Polish zÅ‚oty vs. Hong Kong dollar
+     * *PLN/HKD*
+     */
+    plnhkd='plnhkd',
+
+    /**
+     * ### Polish zÅ‚oty vs. Hungarian forint
+     * *PLN/HUF*
+     */
+    plnhuf='plnhuf',
+
+    /**
+     * ### Polish zÅ‚oty vs. Israeli new shekel
+     * *PLN/ILS*
+     */
+    plnils='plnils',
+
+    /**
+     * ### Polish zÅ‚oty vs. Japanese yen
+     * *PLN/JPY*
+     */
+    plnjpy='plnjpy',
+
+    /**
+     * ### Polish zÅ‚oty vs. Mexican peso
+     * *PLN/MXN*
+     */
+    plnmxn='plnmxn',
+
+    /**
+     * ### Polish zÅ‚oty vs. Norwegian krone
+     * *PLN/NOK*
+     */
+    plnnok='plnnok',
+
+    /**
+     * ### Polish zÅ‚oty vs. Romanian leu
+     * *PLN/RON*
+     */
+    plnron='plnron',
+
+    /**
+     * ### Polish zÅ‚oty vs. Saudi riyal
+     * *PLN/SAR*
+     */
+    plnsar='plnsar',
+
+    /**
+     * ### Polish zÅ‚oty vs. Swedish krona
+     * *PLN/SEK*
+     */
+    plnsek='plnsek',
+
+    /**
+     * ### Polish zÅ‚oty vs. Thai baht
+     * *PLN/THB*
+     */
+    plnthb='plnthb',
+
+    /**
+     * ### Polish zÅ‚oty vs. Turkish lira
+     * *PLN/TRY*
+     */
+    plntry='plntry',
+
+    /**
+     * ### Polish zÅ‚oty vs. South African rand
+     * *PLN/ZAR*
+     */
+    plnzar='plnzar',
+
+    /**
+     * ### Romanian leu vs. Renminbi (offshore)
+     * *RON/CNH*
+     */
+    roncnh='roncnh',
+
+    /**
+     * ### Romanian leu vs. Czech koruna
+     * *RON/CZK*
+     */
+    ronczk='ronczk',
+
+    /**
+     * ### Romanian leu vs. Hong Kong dollar
+     * *RON/HKD*
+     */
+    ronhkd='ronhkd',
+
+    /**
+     * ### Romanian leu vs. Hungarian forint
+     * *RON/HUF*
+     */
+    ronhuf='ronhuf',
+
+    /**
+     * ### Romanian leu vs. Japanese yen
+     * *RON/JPY*
+     */
+    ronjpy='ronjpy',
+
+    /**
+     * ### Romanian leu vs. Mexican peso
+     * *RON/MXN*
+     */
+    ronmxn='ronmxn',
+
+    /**
+     * ### Romanian leu vs. Thai baht
+     * *RON/THB*
+     */
+    ronthb='ronthb',
+
+    /**
+     * ### Romanian leu vs. Turkish lira
+     * *RON/TRY*
+     */
+    rontry='rontry',
+
+    /**
+     * ### Romanian leu vs. South African rand
+     * *RON/ZAR*
+     */
+    ronzar='ronzar',
+
+    /**
+     * ### Saudi riyal vs. Renminbi (offshore)
+     * *SAR/CNH*
+     */
+    sarcnh='sarcnh',
+
+    /**
+     * ### Saudi riyal vs. Czech koruna
+     * *SAR/CZK*
+     */
+    sarczk='sarczk',
+
+    /**
+     * ### Saudi riyal vs. Hong Kong dollar
+     * *SAR/HKD*
+     */
+    sarhkd='sarhkd',
+
+    /**
+     * ### Saudi riyal vs. Hungarian forint
+     * *SAR/HUF*
+     */
+    sarhuf='sarhuf',
+
+    /**
+     * ### Saudi riyal vs. Japanese yen
+     * *SAR/JPY*
+     */
+    sarjpy='sarjpy',
+
+    /**
+     * ### Saudi riyal vs. Mexican peso
+     * *SAR/MXN*
+     */
+    sarmxn='sarmxn',
+
+    /**
+     * ### Saudi riyal vs. Romanian leu
+     * *SAR/RON*
+     */
+    sarron='sarron',
+
+    /**
+     * ### Saudi riyal vs. Thai baht
+     * *SAR/THB*
+     */
+    sarthb='sarthb',
+
+    /**
+     * ### Saudi riyal vs. Turkish lira
+     * *SAR/TRY*
+     */
+    sartry='sartry',
+
+    /**
+     * ### Saudi riyal vs. South African rand
+     * *SAR/ZAR*
+     */
+    sarzar='sarzar',
+
+    /**
+     * ### Swedish krona vs. United Arab Emirates dirham
+     * *SEK/AED*
+     */
+    sekaed='sekaed',
+
+    /**
+     * ### Swedish krona vs. Renminbi (offshore)
+     * *SEK/CNH*
+     */
+    sekcnh='sekcnh',
+
+    /**
+     * ### Swedish krona vs. Czech koruna
+     * *SEK/CZK*
+     */
+    sekczk='sekczk',
+
+    /**
+     * ### Swedish krona vs. Danish krone
+     * *SEK/DKK*
+     */
+    sekdkk='sekdkk',
+
+    /**
+     * ### Swedish krona vs. Hong Kong dollar
+     * *SEK/HKD*
+     */
+    sekhkd='sekhkd',
+
+    /**
+     * ### Swedish krona vs. Hungarian forint
+     * *SEK/HUF*
+     */
+    sekhuf='sekhuf',
+
+    /**
+     * ### Swedish krona vs. Israeli new shekel
+     * *SEK/ILS*
+     */
+    sekils='sekils',
+
+    /**
+     * ### Swedish krona vs. Japanese yen
+     * *SEK/JPY*
+     */
+    sekjpy='sekjpy',
+
+    /**
+     * ### Swedish krona vs. Mexican peso
+     * *SEK/MXN*
+     */
+    sekmxn='sekmxn',
+
+    /**
+     * ### Swedish krona vs. Romanian leu
+     * *SEK/RON*
+     */
+    sekron='sekron',
+
+    /**
+     * ### Swedish krona vs. Saudi riyal
+     * *SEK/SAR*
+     */
+    seksar='seksar',
+
+    /**
+     * ### Swedish krona vs. Thai baht
+     * *SEK/THB*
+     */
+    sekthb='sekthb',
+
+    /**
+     * ### Swedish krona vs. Turkish lira
+     * *SEK/TRY*
+     */
+    sektry='sektry',
+
+    /**
+     * ### Swedish krona vs. South African rand
+     * *SEK/ZAR*
+     */
+    sekzar='sekzar',
+
+    /**
+     * ### Singapore dollar vs. United Arab Emirates dirham
+     * *SGD/AED*
+     */
+    sgdaed='sgdaed',
+
+    /**
+     * ### Singapore dollar vs. Renminbi (offshore)
+     * *SGD/CNH*
+     */
+    sgdcnh='sgdcnh',
+
+    /**
+     * ### Singapore dollar vs. Czech koruna
+     * *SGD/CZK*
+     */
+    sgdczk='sgdczk',
+
+    /**
+     * ### Singapore dollar vs. Danish krone
+     * *SGD/DKK*
+     */
+    sgddkk='sgddkk',
+
+    /**
+     * ### Singapore dollar vs. Hong Kong dollar
+     * *SGD/HKD*
+     */
+    sgdhkd='sgdhkd',
+
+    /**
+     * ### Singapore dollar vs. Hungarian forint
+     * *SGD/HUF*
+     */
+    sgdhuf='sgdhuf',
+
+    /**
+     * ### Singapore dollar vs. Israeli new shekel
+     * *SGD/ILS*
+     */
+    sgdils='sgdils',
+
+    /**
+     * ### Singapore dollar vs. Mexican peso
+     * *SGD/MXN*
+     */
+    sgdmxn='sgdmxn',
+
+    /**
+     * ### Singapore dollar vs. Norwegian krone
+     * *SGD/NOK*
+     */
+    sgdnok='sgdnok',
+
+    /**
+     * ### Singapore dollar vs. Polish zÅ‚oty
+     * *SGD/PLN*
+     */
+    sgdpln='sgdpln',
+
+    /**
+     * ### Singapore dollar vs. Romanian leu
+     * *SGD/RON*
+     */
+    sgdron='sgdron',
+
+    /**
+     * ### Singapore dollar vs. Saudi riyal
+     * *SGD/SAR*
+     */
+    sgdsar='sgdsar',
+
+    /**
+     * ### Singapore dollar vs. Swedish krona
+     * *SGD/SEK*
+     */
+    sgdsek='sgdsek',
+
+    /**
+     * ### Singapore dollar vs. Thai baht
+     * *SGD/THB*
+     */
+    sgdthb='sgdthb',
+
+    /**
+     * ### Singapore dollar vs. Turkish lira
+     * *SGD/TRY*
+     */
+    sgdtry='sgdtry',
+
+    /**
+     * ### Singapore dollar vs. South African rand
+     * *SGD/ZAR*
+     */
+    sgdzar='sgdzar',
+
+    /**
+     * ### iShares MSCI USA SRI UCITS ETF
+     * *SUAS.GB/USD*
+     */
+    suasgbusd='suasgbusd',
+
+    /**
+     * ### iShares MSCI EM SRI UCITS ETF USD (Acc)
+     * *SUSM.GB/USD*
+     */
+    susmgbusd='susmgbusd',
+
+    /**
+     * ### iShares MSCI USA SRI UCITS ETF USD (Acc)
+     * *SUUS.GB/GBX*
+     */
+    suusgbgbx='suusgbgbx',
+
+    /**
+     * ### SPDR S&P U.S. Utilities Select Sector UCITS ETF
+     * *SXLU.GB/USD*
+     */
+    sxlugbusd='sxlugbusd',
+
+    /**
+     * ### Thai baht vs. Hungarian forint
+     * *THB/HUF*
+     */
+    thbhuf='thbhuf',
+
+    /**
+     * ### Thai baht vs. Japanese yen
+     * *THB/JPY*
+     */
+    thbjpy='thbjpy',
+
+    /**
+     * ### Turkish lira vs. Hungarian forint
+     * *TRY/HUF*
+     */
+    tryhuf='tryhuf',
+
+    /**
+     * ### Turkish lira vs. Thai baht
+     * *TRY/THB*
+     */
+    trythb='trythb',
+
+    /**
+     * ### Vanguard FTSE 100 UCITS ETF GBP Acc
+     * *VUKG.GB/GBP*
+     */
+    vukggbgbp='vukggbgbp',
+
+    /**
+     * ### VWRP VANGUARD FTSE ALL-WORLD UCITS ETF
+     * *VWRP.GB/GBP*
+     */
+    vwrpgbgbp='vwrpgbgbp',
+
+    /**
+     * ### iShares MSCI World Small Cap UCITS ETF USD (Acc)
+     * *WSML.GB/USD*
+     */
+    wsmlgbusd='wsmlgbusd',
+
+    /**
+     * ### Silver (troy oz) vs. United Arab Emirates dirham
+     * *XAG/AED*
+     */
+    xagaed='xagaed',
+
+    /**
+     * ### Silver (troy oz) vs. Australian dollar
+     * *XAG/AUD*
+     */
+    xagaud='xagaud',
+
+    /**
+     * ### Silver (troy oz) vs. Canadian dollar
+     * *XAG/CAD*
+     */
+    xagcad='xagcad',
+
+    /**
+     * ### Silver (troy oz) vs. Swiss franc
+     * *XAG/CHF*
+     */
+    xagchf='xagchf',
+
+    /**
+     * ### Silver (troy oz) vs. Renminbi (offshore)
+     * *XAG/CNH*
+     */
+    xagcnh='xagcnh',
+
+    /**
+     * ### Silver (troy oz) vs. Czech koruna
+     * *XAG/CZK*
+     */
+    xagczk='xagczk',
+
+    /**
+     * ### Silver (troy oz) vs. Danish krone
+     * *XAG/DKK*
+     */
+    xagdkk='xagdkk',
+
+    /**
+     * ### Silver (troy oz) vs. Euro
+     * *XAG/EUR*
+     */
+    xageur='xageur',
+
+    /**
+     * ### Silver (troy oz) vs. Pound sterling
+     * *XAG/GBP*
+     */
+    xaggbp='xaggbp',
+
+    /**
+     * ### Silver (troy oz) vs. Hong Kong dollar
+     * *XAG/HKD*
+     */
+    xaghkd='xaghkd',
+
+    /**
+     * ### Silver (troy oz) vs. Hungarian forint
+     * *XAG/HUF*
+     */
+    xaghuf='xaghuf',
+
+    /**
+     * ### Silver (troy oz) vs. Israeli new shekel
+     * *XAG/ILS*
+     */
+    xagils='xagils',
+
+    /**
+     * ### Silver (troy oz) vs. Japanese yen
+     * *XAG/JPY*
+     */
+    xagjpy='xagjpy',
+
+    /**
+     * ### Silver (troy oz) vs. Mexican peso
+     * *XAG/MXN*
+     */
+    xagmxn='xagmxn',
+
+    /**
+     * ### Silver (troy oz) vs. Norwegian krone
+     * *XAG/NOK*
+     */
+    xagnok='xagnok',
+
+    /**
+     * ### Silver (troy oz) vs. New Zealand dollar
+     * *XAG/NZD*
+     */
+    xagnzd='xagnzd',
+
+    /**
+     * ### Silver (troy oz) vs. Polish zÅ‚oty
+     * *XAG/PLN*
+     */
+    xagpln='xagpln',
+
+    /**
+     * ### Silver (troy oz) vs. Romanian leu
+     * *XAG/RON*
+     */
+    xagron='xagron',
+
+    /**
+     * ### Silver (troy oz) vs. Saudi riyal
+     * *XAG/SAR*
+     */
+    xagsar='xagsar',
+
+    /**
+     * ### Silver (troy oz) vs. Swedish krona
+     * *XAG/SEK*
+     */
+    xagsek='xagsek',
+
+    /**
+     * ### Silver (troy oz) vs. Singapore dollar
+     * *XAG/SGD*
+     */
+    xagsgd='xagsgd',
+
+    /**
+     * ### Silver (troy oz) vs. Thai baht
+     * *XAG/THB*
+     */
+    xagthb='xagthb',
+
+    /**
+     * ### Silver (troy oz) vs. Turkish lira
+     * *XAG/TRY*
+     */
+    xagtry='xagtry',
+
+    /**
+     * ### Silver(troy oz) vs. South African rand
+     * *XAG/ZAR*
+     */
+    xagzar='xagzar',
+
+    /**
+     * ### Gold (troy oz) vs. United Arab Emirates dirham
+     * *XAU/AED*
+     */
+    xauaed='xauaed',
+
+    /**
+     * ### Gold (troy oz) vs. Australian dollar
+     * *XAU/AUD*
+     */
+    xauaud='xauaud',
+
+    /**
+     * ### Gold (troy oz) vs. Canadian dollar
+     * *XAU/CAD*
+     */
+    xaucad='xaucad',
+
+    /**
+     * ### Gold (troy oz) vs. Swiss franc
+     * *XAU/CHF*
+     */
+    xauchf='xauchf',
+
+    /**
+     * ### Gold (troy oz) vs. Renminbi (offshore)
+     * *XAU/CNH*
+     */
+    xaucnh='xaucnh',
+
+    /**
+     * ### Gold (troy oz) vs. Czech koruna
+     * *XAU/CZK*
+     */
+    xauczk='xauczk',
+
+    /**
+     * ### Gold (troy oz) vs. Danish krone
+     * *XAU/DKK*
+     */
+    xaudkk='xaudkk',
+
+    /**
+     * ### Gold (troy oz) vs. Euro
+     * *XAU/EUR*
+     */
+    xaueur='xaueur',
+
+    /**
+     * ### Gold (troy oz) vs. Pound sterling
+     * *XAU/GBP*
+     */
+    xaugbp='xaugbp',
+
+    /**
+     * ### Gold (troy oz) vs. Hong Kong dollar
+     * *XAU/HKD*
+     */
+    xauhkd='xauhkd',
+
+    /**
+     * ### Gold (troy oz) vs. Hungarian forint
+     * *XAU/HUF*
+     */
+    xauhuf='xauhuf',
+
+    /**
+     * ### Gold (troy oz) vs. Israeli new shekel
+     * *XAU/ILS*
+     */
+    xauils='xauils',
+
+    /**
+     * ### Gold (troy oz) vs. Japanese yen
+     * *XAU/JPY*
+     */
+    xaujpy='xaujpy',
+
+    /**
+     * ### Gold (troy oz) vs. Mexican peso
+     * *XAU/MXN*
+     */
+    xaumxn='xaumxn',
+
+    /**
+     * ### Gold (troy oz) vs. Norwegian krone
+     * *XAU/NOK*
+     */
+    xaunok='xaunok',
+
+    /**
+     * ### Gold (troy oz) vs. New Zealand dollar
+     * *XAU/NZD*
+     */
+    xaunzd='xaunzd',
+
+    /**
+     * ### Gold (troy oz) vs. Polish zÅ‚oty
+     * *XAU/PLN*
+     */
+    xaupln='xaupln',
+
+    /**
+     * ### Gold (troy oz) vs. Romanian leu
+     * *XAU/RON*
+     */
+    xauron='xauron',
+
+    /**
+     * ### Gold (troy oz) vs. Saudi riyal
+     * *XAU/SAR*
+     */
+    xausar='xausar',
+
+    /**
+     * ### Gold (troy oz) vs. Swedish krona
+     * *XAU/SEK*
+     */
+    xausek='xausek',
+
+    /**
+     * ### Gold (troy oz) vs. Singapore dollar
+     * *XAU/SGD*
+     */
+    xausgd='xausgd',
+
+    /**
+     * ### Gold (troy oz) vs. Thai baht
+     * *XAU/THB*
+     */
+    xauthb='xauthb',
+
+    /**
+     * ### Gold (troy oz) vs. Turkish lira
+     * *XAU/TRY*
+     */
+    xautry='xautry',
+
+    /**
+     * ### Gold (troy oz) vs. Silver (troy oz)
+     * *XAU/XAG*
+     */
+    xauxag='xauxag',
+
+    /**
+     * ### Gold (troy oz) vs. South African rand
+     * *XAU/ZAR*
+     */
+    xauzar='xauzar',
+
+    /**
+     * ### Xtrackers NASDAQ 100 UCITS ETF 1C (GBP)
+     * *XNAQ.GB/GBP*
+     */
+    xnaqgbgbp='xnaqgbgbp',
+
+    /**
+     * ### Xtrackers MSCI Europe Utilities Screened UCITS ETF 1C
+     * *XS6R.GB/GBX*
+     */
+    xs6rgbgbx='xs6rgbgbx',
+
+    /**
+     * ### South African rand vs. Czech koruna
+     * *ZAR/CZK*
+     */
+    zarczk='zarczk',
+
+    /**
+     * ### South African rand vs. Hungarian forint
+     * *ZAR/HUF*
+     */
+    zarhuf='zarhuf',
+
+    /**
+     * ### South African rand vs. Mexican peso
+     * *ZAR/MXN*
+     */
+    zarmxn='zarmxn',
+
+    /**
+     * ### South African rand vs. Thai baht
+     * *ZAR/THB*
+     */
+    zarthb='zarthb',
+
+    /**
+     * ### South African rand vs. Turkish lira
+     * *ZAR/TRY*
+     */
+    zartry='zartry',
 }
 export type InstrumentType = keyof typeof Instrument;
