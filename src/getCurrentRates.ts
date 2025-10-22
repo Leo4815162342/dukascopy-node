@@ -155,6 +155,7 @@ export async function getCurrentRates({
       } else {
         shouldFetch = false;
       }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err: unknown) {
       // TODO: handle silent failure
       shouldFetch = false;

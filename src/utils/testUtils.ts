@@ -19,7 +19,8 @@ async function getTestCases<T>(folder: string): Promise<
     modulePaths.map(async path => {
       return {
         path,
-        //@ts-expect-error
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        //@ts-ignore
         content: (await import(path)) as T
       };
     })

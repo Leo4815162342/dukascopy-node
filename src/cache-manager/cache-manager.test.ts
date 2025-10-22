@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { readdir, remove, readFile, pathExists } from 'fs-extra';
 import { resolve } from 'path';
 import { afterAll, describe, it, expect } from 'vitest';

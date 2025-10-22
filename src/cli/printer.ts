@@ -1,7 +1,7 @@
 import { instrumentMetaData } from '../config/instruments-metadata';
 import { getDateTimeFormatOptions, getFormattedDate } from '../utils/date';
 import { CliConfig } from './config';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+
 const chalk = require('chalk');
 
 // eslint-disable-next-line no-console

@@ -55,7 +55,9 @@ export class BufferFetcher {
         } else {
           buffer = await this.fetchBuffer(url);
         }
-        this.onItemFetch && this.onItemFetch(url, buffer, isCacheHit);
+        if (this.onItemFetch) {
+          this.onItemFetch(url, buffer, isCacheHit);
+        }
 
         return { url, buffer, isCacheHit };
       })

@@ -28,7 +28,6 @@ export async function generateMockHandlers() {
       const buffer = await readFile(file);
       const route = file.replace('src/__mocks__', 'https://datafeed.dukascopy.com/datafeed');
       return http.get(route, () => {
-        // eslint-disable-next-line no-console
         // console.info(`Responding with mock data for ${route}`);
         return new HttpResponse(buffer, { status: 200 });
       });

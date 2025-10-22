@@ -1,7 +1,6 @@
 import { DecompressInput } from './types';
 import { TimeframeType, Timeframe } from '../config/timeframes';
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const lzmajs = require('lzma-purejs-requirejs');
 
 function getStructSize(timeframe: TimeframeType): number {

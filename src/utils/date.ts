@@ -89,7 +89,8 @@ function getFormattedDate(
 
   try {
     formatted = new Intl.DateTimeFormat('en-US', opts).format(date);
-    // eslint-disable-next-line no-empty
+
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (err) {}
 
   return formatted;

@@ -4,6 +4,7 @@ dist/
 download
 .cache/
 .dukascopy-cache
+notes.md
 ### Node ###
 # Logs
 logs
