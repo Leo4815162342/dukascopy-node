@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.44.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.43.0...v1.44.0) (2025-10-22)
+
+
+### Features
+
+* deps update, cleanup, ktlo ([#216](https://github.com/Leo4815162342/dukascopy-node/issues/216)) ([916e017](https://github.com/Leo4815162342/dukascopy-node/commit/916e017fc002f3be97c0d72781d12835d305c7fd))
+
 ## [1.43.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.42.1...v1.43.0) (2025-06-16)
 
 
