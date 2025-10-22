@@ -1,7 +1,7 @@
 import { readdirSync, statSync } from 'fs';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
-import { rest } from 'msw';
+import { http, HttpResponse } from 'msw';
 
 function getFiles(dir: string): string[] {
   let results: string[] = [];
@@ -27,7 +27,11 @@ export async function generateMockHandlers() {
     files.map(async file => {
       const buffer = await readFile(file);
       const route = file.replace('src/__mocks__', 'https://datafeed.dukascopy.com/datafeed');
-      return rest.get(route, (_, res, ctx) => res(ctx.body(buffer)));
+      return http.get(route, () => {
+        // eslint-disable-next-line no-console
+        // console.info(`Responding with mock data for ${route}`);
+        return new HttpResponse(buffer, { status: 200 });
+      });
     })
   );
 

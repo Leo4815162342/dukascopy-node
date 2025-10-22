@@ -4,10 +4,6 @@ import { TimeframeType, Timeframe } from '../config/timeframes';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const lzmajs = require('lzma-purejs-requirejs');
 
-// function getStructFormat(timeframe: TimeframeType): StructFormat {
-//   return timeframe === Timeframe.tick ? '>3i2f' : '>5i1f';
-// }
-
 function getStructSize(timeframe: TimeframeType): number {
   // i (integer) = 4 bytes, f (float) = 4 bytes
   // tick: 3i2f = 3*4 + 2*4 = 20 bytes
