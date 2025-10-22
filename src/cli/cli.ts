@@ -129,21 +129,30 @@ export async function run(argv: NodeJS.Process['argv']) {
       if (!isDebugActive) {
         progressBar.start(urls.length, step);
       }
-
       await ensureDir(folderPath);
 
       const fileWriteStream = createWriteStream(filePath, { flags: 'w+' });
 
-      fileWriteStream.on('finish', async () => {
-        const downloadEndTs = Date.now();
-        if (!isDebugActive) {
-          progressBar.stop();
-        }
-        const relativeFilePath = join(dir, fileName);
-        await ensureFile(filePath);
-        const { size } = await stat(filePath);
-        printSuccess(`√ File saved: ${chalk.bold(relativeFilePath)} (${formatBytes(size)})`);
-        printGeneral(`Download time: ${formatTimeDuration(downloadEndTs - downloadStartTs)}`);
+      // Create a promise to track when the stream is fully finished
+      const streamFinishPromise = new Promise<void>((resolve, reject) => {
+        fileWriteStream.on('finish', async () => {
+          try {
+            const downloadEndTs = Date.now();
+            if (!isDebugActive) {
+              progressBar.stop();
+            }
+            const relativeFilePath = join(dir, fileName);
+            await ensureFile(filePath);
+            const { size } = await stat(filePath);
+            printSuccess(`√ File saved: ${chalk.bold(relativeFilePath)} (${formatBytes(size)})`);
+            printGeneral(`Download time: ${formatTimeDuration(downloadEndTs - downloadStartTs)}`);
+            resolve();
+          } catch (error) {
+            reject(error);
+          }
+        });
+
+        fileWriteStream.on('error', reject);
       });
 
       const batchStreamWriter = new BatchStreamWriter({
@@ -219,7 +228,16 @@ export async function run(argv: NodeJS.Process['argv']) {
         }
       });
 
-      await bufferFetcher.fetch_optimized(urls);
+      try {
+        await bufferFetcher.fetch_optimized(urls);
+
+        // Wait for the stream to fully finish before returning
+        await streamFinishPromise;
+      } catch (fetchError) {
+        // If fetch fails, close the stream to prevent hanging finish events
+        fileWriteStream.destroy();
+        throw fetchError;
+      }
     } else {
       printErrors(
         'Search config invalid:',

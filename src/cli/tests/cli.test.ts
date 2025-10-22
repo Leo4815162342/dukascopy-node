@@ -78,17 +78,16 @@ describe('CLI (default values)', async () => {
 
       expect(existsSync(`./download/${fileName}`)).toBe(true);
 
-      const [fileContents, expectedFileContents] = await Promise.all(
+      const [fetchedFileContents, expectedFileContents] = await Promise.all(
         [`./download/${fileName}`, `./src/cli/tests/expected-outputs/${fileName}`].map(file =>
-          readFile(file)
+          readFile(file, 'utf-8')
         )
       );
-
-      expect(fileContents.equals(expectedFileContents)).toBe(true);
-    }, 10000);
+      expect(fetchedFileContents).toBe(expectedFileContents);
+    });
   }
 });
 
 function getArgv(options: string) {
-  return ['node', 'cli.test.ts', ...options.split(' ')];
+  return ['node', './src/cli/index.ts', ...options.split(' ')];
 }
