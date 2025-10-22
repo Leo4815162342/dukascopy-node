@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 /* eslint-disable no-console */
 import fs from 'fs';
 import path from 'path';
@@ -76,8 +75,9 @@ const titleMap: Record<string, { emoji: string; title: string }> = {
 
     const instrumentTable = instrumentGroups
       .map(({ id, instruments }) => {
-        const groupTitle = `<h3 id="${id}">${titleMap[id].title} ${titleMap[id].emoji || ''
-          }</h3>\n`;
+        const groupTitle = `<h3 id="${id}">${titleMap[id].title} ${
+          titleMap[id].emoji || ''
+        }</h3>\n`;
 
         const listBody = instruments
           .map(instrumentId => {
@@ -88,7 +88,7 @@ const titleMap: Record<string, { emoji: string; title: string }> = {
               startMonthForHourlyCandles,
               startYearForDailyCandles
             } = instrumentMetaData[
-            instrumentId as keyof typeof instrumentMetaData
+              instrumentId as keyof typeof instrumentMetaData
             ] as InstrumentMetaData;
 
             const dates = [
