@@ -117,6 +117,7 @@ export async function run(argv: NodeJS.Process['argv']) {
       const filePath = resolve(folderPath, fileName);
 
       if (!isDebugActive) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         silent ? printDivider() : printHeader(input, startDate, endDate);
       }
 

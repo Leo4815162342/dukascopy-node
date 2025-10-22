@@ -38,7 +38,6 @@ async function run() {
 run();
 
 async function getActualStartDates(): Promise<ActualStartDates> {
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const rawResponse = await fetch(process.env.START_DATES_URL!);
 
   const startDates = (await rawResponse.json()) as ActualStartDates;

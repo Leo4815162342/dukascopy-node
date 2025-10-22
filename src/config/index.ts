@@ -5,7 +5,7 @@ import { InstrumentType } from './instruments';
 import { VolumeUnit, VolumeUnitType } from './volume-unit';
 
 type OptionalKeys<T> = {
-  // eslint-disable-next-line @typescript-eslint/ban-types
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
   [K in keyof T]-?: {} extends Pick<T, K> ? K : never;
 }[keyof T];
 

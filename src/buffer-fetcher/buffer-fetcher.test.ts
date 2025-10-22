@@ -41,7 +41,6 @@ describe('Buffer fetcher', () => {
     pauseBetweenBatchesMs: 0
   });
 
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore
   const fetchBatchSpy = vi.spyOn(bufferFetcher, 'fetchBatch');
 
@@ -85,7 +84,6 @@ describe('Buffer fetcher with file cache', () => {
     cacheManager
   });
 
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore
   const fetchSpy = vi.spyOn(buffetFetcher, 'fetchBuffer');
 
