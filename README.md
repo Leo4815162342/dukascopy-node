@@ -37,6 +37,9 @@
     </tbody>
 </table>
 
+> [!IMPORTANT]  
+> Node.js 18 or higher is required.
+
 ## ✨ Download Historical Data via CLI
 
 ```bash
