@@ -3,7 +3,7 @@
 <p align="center"><img width="150" src="https://github.com/Leo4815162342/dukascopy-node/blob/master/dukascopy-node.png?raw=true" alt="dukascopy-node"></p>
 
 <p align="center">
-    <b>✨ Download free historical market price tick data ✨</b> <br>Stocks • Crypto • Commodities • Bonds • Currencies • CFDs • ETFs  <br> via Node.js and CLI
+    <b>✨ Download free historical and real-time market price tick data ✨</b> <br>Stocks • Crypto • Commodities • Bonds • Currencies • CFDs • ETFs  <br> via Node.js and CLI
 </p>
 
 <p align="center">
@@ -37,7 +37,10 @@
     </tbody>
 </table>
 
-## ✨ Usage via CLI
+> [!IMPORTANT]  
+> Node.js 18 or higher is required.
+
+## ✨ Download Historical Price Data via CLI
 
 ```bash
 npx dukascopy-node -i btcusd -from 2019-01-13 -to 2019-01-14 -t tick -f csv
@@ -50,7 +53,7 @@ npx dukascopy-node -i btcusd -from 2019-01-13 -to 2019-01-14 -t tick -f csv
 
 ---
 
-## ✨ Usage via Node.js ([try it live](https://runkit.com/embed/of4ho2xv8rvv))
+## ✨ Download Historical Price Data via Node.js
 
 ```javascript
 const { getHistoricalRates } = require('dukascopy-node');
@@ -75,6 +78,28 @@ const { getHistoricalRates } = require('dukascopy-node');
 ```
 
 [🛠️ View full Node.js specification](https://www.dukascopy-node.app/config/node)
+
+## Download Real-Time Price Data via Node.js 
+
+```javascript
+const { getRealTimeRates } = require('dukascopy-node');
+
+(async () => {
+  try {
+    const data = await getRealTimeRates({
+      instrument: 'eurusd',
+      timeframe: 'tick',
+      format: 'json'
+    });
+
+    console.log(data);
+  } catch (error) {
+    console.log('error', error);
+  }
+})();
+```
+
+[ℹ️ More Information](https://www.dukascopy-node.app/downloading-real-time-data)
 
 ---
 

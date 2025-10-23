@@ -36,10 +36,11 @@ export { getHistoricRates, getHistoricalRates } from './getHistoricalRates';
 
 export {
   getCurrentRates,
-  CurrentRatesConfig,
-  CurrentRatesConfigArrayItem,
-  CurrentRatesConfigArrayTickItem,
-  CurrentRatesConfigCsv,
-  CurrentRatesConfigJsonItem,
-  CurrentRatesConfigJsonTickItem
-} from './getCurrentRates';
+  getRealTimeRates,
+  RealTimeRatesConfig,
+  RealTimeRatesConfigArrayItem,
+  RealTimeRatesConfigArrayTickItem,
+  RealTimeRatesConfigCsv,
+  RealTimeRatesConfigJsonItem,
+  RealTimeRatesConfigJsonTickItem
+} from './getRealTimeRates';
