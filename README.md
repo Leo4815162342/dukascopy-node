@@ -40,7 +40,7 @@
 > [!IMPORTANT]  
 > Node.js 18 or higher is required.
 
-## ✨ Download Historical Data via CLI
+## ✨ Download Historical Price Data via CLI
 
 ```bash
 npx dukascopy-node -i btcusd -from 2019-01-13 -to 2019-01-14 -t tick -f csv
@@ -53,7 +53,7 @@ npx dukascopy-node -i btcusd -from 2019-01-13 -to 2019-01-14 -t tick -f csv
 
 ---
 
-## ✨ Download Historical Data via Node.js
+## ✨ Download Historical Price Data via Node.js
 
 ```javascript
 const { getHistoricalRates } = require('dukascopy-node');
@@ -79,7 +79,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 
 [🛠️ View full Node.js specification](https://www.dukascopy-node.app/config/node)
 
-## Download Real-Time Data via Node.js 
+## Download Real-Time Price Data via Node.js 
 
 ```javascript
 const { getRealTimeRates } = require('dukascopy-node');
@@ -98,6 +98,8 @@ const { getRealTimeRates } = require('dukascopy-node');
   }
 })();
 ```
+
+[ℹ️ More Information](https://www.dukascopy-node.app/downloading-real-time-data)
 
 ---
 
