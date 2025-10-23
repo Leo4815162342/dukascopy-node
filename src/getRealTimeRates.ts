@@ -1,4 +1,3 @@
-import fetch from 'node-fetch';
 import { DateInput } from './config';
 import { FormatType } from './config/format';
 import { InstrumentType } from './config/instruments';
@@ -8,14 +7,14 @@ import { TimeframeType } from './config/timeframes';
 import { formatOutput } from './output-formatter';
 import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick } from './output-formatter/types';
 
-export type CurrentRatesConfigBase = {
+export type RealTimeRatesConfigBase = {
   instrument: InstrumentType;
   timeframe?: TimeframeType;
   dates?: {
     from: DateInput;
     to?: DateInput;
   };
-  limit?: number;
+  last?: number;
   volumes?: boolean;
   format?: FormatType;
   priceType?: PriceType;
@@ -34,62 +33,61 @@ const timeframeMap: Record<TimeframeType, string> = {
   mn1: '1MONTH'
 };
 
-export type CurrentRatesConfigArrayItem = CurrentRatesConfigBase & {
+export type RealTimeRatesConfigArrayItem = RealTimeRatesConfigBase & {
   timeframe?: Exclude<TimeframeType, 'tick'>;
   format?: 'array';
 };
 
-export type CurrentRatesConfigArrayTickItem = CurrentRatesConfigBase & {
+export type RealTimeRatesConfigArrayTickItem = RealTimeRatesConfigBase & {
   timeframe?: 'tick';
   format?: 'array';
 };
 
-export type CurrentRatesConfigJsonItem = CurrentRatesConfigBase & {
+export type RealTimeRatesConfigJsonItem = RealTimeRatesConfigBase & {
   timeframe?: Exclude<TimeframeType, 'tick'>;
   format?: 'json';
 };
 
-export type CurrentRatesConfigJsonTickItem = CurrentRatesConfigBase & {
+export type RealTimeRatesConfigJsonTickItem = RealTimeRatesConfigBase & {
   timeframe?: 'tick';
   format?: 'json';
 };
 
-export type CurrentRatesConfigCsv = CurrentRatesConfigBase & {
+export type RealTimeRatesConfigCsv = RealTimeRatesConfigBase & {
   timeframe?: TimeframeType;
   format?: 'csv';
 };
 
-export type CurrentRatesConfig =
-  | CurrentRatesConfigArrayItem
-  | CurrentRatesConfigArrayTickItem
-  | CurrentRatesConfigJsonItem
-  | CurrentRatesConfigJsonTickItem
-  | CurrentRatesConfigCsv;
+export type RealTimeRatesConfig =
+  | RealTimeRatesConfigArrayItem
+  | RealTimeRatesConfigArrayTickItem
+  | RealTimeRatesConfigJsonItem
+  | RealTimeRatesConfigJsonTickItem
+  | RealTimeRatesConfigCsv;
 
-export async function getCurrentRates(config: CurrentRatesConfigArrayItem): Promise<ArrayItem[]>;
-export async function getCurrentRates(
-  config: CurrentRatesConfigArrayTickItem
+export async function getRealTimeRates(config: RealTimeRatesConfigArrayItem): Promise<ArrayItem[]>;
+export async function getRealTimeRates(
+  config: RealTimeRatesConfigArrayTickItem
 ): Promise<ArrayTickItem[]>;
-export async function getCurrentRates(config: CurrentRatesConfigJsonItem): Promise<JsonItem[]>;
-export async function getCurrentRates(
-  config: CurrentRatesConfigJsonTickItem
+export async function getRealTimeRates(config: RealTimeRatesConfigJsonItem): Promise<JsonItem[]>;
+export async function getRealTimeRates(
+  config: RealTimeRatesConfigJsonTickItem
 ): Promise<JsonItemTick[]>;
-export async function getCurrentRates(config: CurrentRatesConfigCsv): Promise<string>;
+export async function getRealTimeRates(config: RealTimeRatesConfigCsv): Promise<string>;
 
 /**
  * Get realtime rates for a given instrument.
- *
  * @experimental This function is experimental and may change in the future.
  */
-export async function getCurrentRates({
+export async function getRealTimeRates({
   instrument,
   priceType = 'bid',
   timeframe = 'd1',
   volumes = true,
   format = 'array',
   dates,
-  limit
-}: CurrentRatesConfig) {
+  last = 10
+}: RealTimeRatesConfig) {
   const mappedTimeframe = timeframeMap[timeframe];
   const instrumentName = instrumentMetaData[instrument].name;
   const offerSide = priceType === 'bid' ? 'B' : 'A';
@@ -106,7 +104,7 @@ export async function getCurrentRates({
     fromDate = typeof from === 'string' || typeof from === 'number' ? new Date(from) : from;
     toDate = typeof to === 'string' || typeof to === 'number' ? new Date(to) : to;
   } else {
-    fromDate = getTimeframeLimit(timeframe, now, limit || 10);
+    fromDate = getTimeframeLimit(timeframe, now, last || 10);
     toDate = now;
   }
 
@@ -162,11 +160,11 @@ export async function getCurrentRates({
     }
   }
 
-  const shouldSlice = !dates && (typeof limit === 'undefined' || typeof limit === 'number');
+  const shouldSlice = !dates && (typeof last === 'undefined' || typeof last === 'number');
 
   // TODO: handle perf issues for low-volume low-timeframe requests
   let filteredRates = shouldSlice
-    ? rates.slice((limit || 10) * -1)
+    ? rates.slice((last || 10) * -1)
     : rates.filter(function (item) {
         let key = item[0];
 
@@ -223,3 +221,5 @@ function getTimeframeLimit(timeframe: TimeframeType, now: Date, limit: number) {
 
   return new Date(nowTimestamp - limit * bufferMultiplier * timeframeLimits[timeframe]);
 }
+
+export const getCurrentRates = getRealTimeRates;
