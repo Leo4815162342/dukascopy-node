@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.45.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.44.0...v1.45.0) (2025-10-23)
+
+
+### Features
+
+* real time rates ([#219](https://github.com/Leo4815162342/dukascopy-node/issues/219)) ([de35121](https://github.com/Leo4815162342/dukascopy-node/commit/de35121b7756236910a495dc82c55d65eb978b15))
+
 ## [1.44.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.43.0...v1.44.0) (2025-10-22)
 
 
