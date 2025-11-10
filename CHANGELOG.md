@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.45.1](https://github.com/Leo4815162342/dukascopy-node/compare/v1.45.0...v1.45.1) (2025-11-10)
+
+
+### Bug Fixes
+
+* Replace colons in filename timestamps for Windows/macOS compatibility ([#221](https://github.com/Leo4815162342/dukascopy-node/issues/221)) ([e6ba612](https://github.com/Leo4815162342/dukascopy-node/commit/e6ba612f0215062e80969bfa5beb5cf451dfd3cd))
+
 ## [1.45.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.44.0...v1.45.0) (2025-10-23)
 
 
