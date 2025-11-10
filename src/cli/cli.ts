@@ -104,7 +104,7 @@ export async function run(argv: NodeJS.Process['argv']) {
             cutoff = 16;
           }
 
-          return date.toISOString().slice(0, cutoff);
+          return date.toISOString().slice(0, cutoff).replace(/:/g, '-');
         })
         .join('-');
 
