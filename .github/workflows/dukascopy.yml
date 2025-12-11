@@ -15,9 +15,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-
-      - name: Install deps
-        run: npm install googleapis
+        
       - name: Install upload deps
         run: cd tools/upload && npm install
 
@@ -32,7 +30,7 @@ jobs:
             -to 2021-02-01 \
             -t tick \
             -f csv \
-            -fn oneMonthUSDHKD.csv
+            -fn oneMonthUSDHKD
 
       - name: Upload to Google Drive
         env:
