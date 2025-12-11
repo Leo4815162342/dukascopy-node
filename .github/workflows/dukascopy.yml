@@ -17,7 +17,7 @@ jobs:
           node-version: 20
 
       - name: Install deps
-        run: npm install googleapis
+        run: npm install googleapis --no-save
 
       - name: Run dukascopy-node
         run: |
