@@ -30,7 +30,7 @@ jobs:
             -to 2021-02-01 \
             -t tick \
             -f csv \
-            -fn oneMonthUSDHKD
+            -fn oneMonthUSDHKD.csv
 
       - name: Upload to Google Drive
         env:
