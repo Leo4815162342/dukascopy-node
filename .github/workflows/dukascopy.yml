@@ -19,6 +19,9 @@ jobs:
       - name: Install upload deps
         run: cd tools/upload && npm install
 
+      - name: Install dukascopy-node
+        run: npm install dukascopy-node --global
+
       - name: Run dukascopy-node
         run: |
           npx dukascopy-node \
