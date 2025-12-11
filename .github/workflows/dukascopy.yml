@@ -26,8 +26,8 @@ jobs:
         run: |
           npx dukascopy-node \
             -i usdhkd \
-            -from 2021-01-01 \
-            -to 2021-02-01 \
+            -from 2020-01-01 \
+            -to 2020-01-07 \
             -t tick \
             -f csv \
             -fn oneMonthUSDHKD.csv
