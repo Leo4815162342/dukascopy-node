@@ -29,8 +29,9 @@ jobs:
             -from 2020-01-01 \
             -to 2020-01-07 \
             -t tick \
+            -dir . \
             -f csv \
-            -fn oneMonthUSDHKD.csv
+            -fn oneMonthUSDHKD
 
       - name: Upload to Google Drive
         env:
