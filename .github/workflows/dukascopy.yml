@@ -37,4 +37,4 @@ jobs:
           GOOGLE_SERVICE_ACCOUNT_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_KEY }}
           FILE_TO_UPLOAD: oneMonthUSDHKD.csv
           GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
-        run: node tools/upload/upload-to-drive.js
+        run: node ${{ github.workspace }}/tools/upload/upload-to-drive.js
