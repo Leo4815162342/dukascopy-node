@@ -25,17 +25,17 @@ jobs:
       - name: Run dukascopy-node
         run: |
           npx dukascopy-node \
-            -i usdhkd \
-            -from 2020-01-01 \
-            -to 2020-01-07 \
+            -i usdjpy \
+            -from 2025-01-01 \
+            -to 2025-01-07 \
             -t tick \
             -dir . \
             -f csv \
-            -fn oneMonthUSDHKD
+            -fn shorttest
 
       - name: Upload to Google Drive
         env:
           GOOGLE_SERVICE_ACCOUNT_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_KEY }}
-          FILE_TO_UPLOAD: oneMonthUSDHKD.csv
+          FILE_TO_UPLOAD: shorttest.csv
           GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
         run: node ${{ github.workspace }}/tools/upload/upload-to-drive.js
