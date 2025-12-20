@@ -44,3 +44,5 @@ export {
   RealTimeRatesConfigJsonItem,
   RealTimeRatesConfigJsonTickItem
 } from './getRealTimeRates';
+
+export { instrumentMetaData } from './config/instruments-metadata';
