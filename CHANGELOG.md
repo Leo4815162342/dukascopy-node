@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.46.1](https://github.com/Leo4815162342/dukascopy-node/compare/v1.46.0...v1.46.1) (2025-12-20)
+
 ## [1.46.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.45.1...v1.46.0) (2025-12-20)
 
 
