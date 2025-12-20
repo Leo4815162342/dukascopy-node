@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.46.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.45.1...v1.46.0) (2025-12-20)
+
+
+### Features
+
+* expose instrumentMetaData ([#227](https://github.com/Leo4815162342/dukascopy-node/issues/227)) ([bf31e6a](https://github.com/Leo4815162342/dukascopy-node/commit/bf31e6a620c88c6377a8f18bd74a91a482d03d8e))
+
 ### [1.45.1](https://github.com/Leo4815162342/dukascopy-node/compare/v1.45.0...v1.45.1) (2025-11-10)
 
 
