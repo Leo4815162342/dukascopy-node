@@ -2,7 +2,6 @@
 import path from 'path';
 import fs from 'fs';
 import { promisify } from 'util';
-import fetch from 'node-fetch';
 import { generateInstrumentGroupData } from './generate-group-data';
 import { generateMeta } from './generate-meta';
 import { generateInstrumentEnum } from './generate-instrument-enum';
