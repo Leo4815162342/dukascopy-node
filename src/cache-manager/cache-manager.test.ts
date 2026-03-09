@@ -40,8 +40,12 @@ describe('Cache manager', () => {
 
     expect(await readdir(cacheFolderPath)).toEqual([firstFileName, secondFileName]);
 
-    expect(await readFile(resolve(cacheFolderPath, firstFileName), 'utf8')).toEqual('File 1 content');
-    expect(await readFile(resolve(cacheFolderPath, secondFileName), 'utf8')).toEqual('File 2 content');
+    expect(await readFile(resolve(cacheFolderPath, firstFileName), 'utf8')).toEqual(
+      'File 1 content'
+    );
+    expect(await readFile(resolve(cacheFolderPath, secondFileName), 'utf8')).toEqual(
+      'File 2 content'
+    );
   });
 
   it('Reads data from the cache', async () => {
