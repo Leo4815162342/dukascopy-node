@@ -12675,10 +12675,10 @@
     "name": "GBP/PLN",
     "description": "Pound sterling vs. Polish zÅ‚oty",
     "decimalFactor": 100000,
-    "startHourForTicks": "2012-03-30T10:31:41.692Z",
-    "startDayForMinuteCandles": "2012-03-30T10:31:00.000Z",
-    "startMonthForHourlyCandles": "2012-03-30T10:00:00.000Z",
-    "startYearForDailyCandles": "1990-08-22T00:00:00.000Z"
+    "startHourForTicks": "2024-05-15T09:07:35.143Z",
+    "startDayForMinuteCandles": "2024-05-15T09:07:00.000Z",
+    "startMonthForHourlyCandles": "2024-05-15T09:00:00.000Z",
+    "startYearForDailyCandles": "2024-05-15T00:00:00.000Z"
   },
   "gbpron": {
     "name": "GBP/RON",

@@ -79,7 +79,7 @@ const { getHistoricalRates } = require('dukascopy-node');
 
 [🛠️ View full Node.js specification](https://www.dukascopy-node.app/config/node)
 
-## Download Real-Time Price Data via Node.js 
+## ✨ Download Real-Time Price Data via Node.js 
 
 ```javascript
 const { getRealTimeRates } = require('dukascopy-node');
@@ -468,7 +468,7 @@ const { getRealTimeRates } = require('dukascopy-node');
 |[Pound sterling vs. Israeli new shekel](https://www.dukascopy-node.app/instrument/gbpils)|`gbpils`|Sep 16, 2024|
 |[Pound sterling vs. Mexican peso](https://www.dukascopy-node.app/instrument/gbpmxn)|`gbpmxn`|May 15, 2024|
 |[Pound sterling vs. Norwegian krone](https://www.dukascopy-node.app/instrument/gbpnok)|`gbpnok`|May 15, 2024|
-|[Pound sterling vs. Polish zÅ‚oty](https://www.dukascopy-node.app/instrument/gbppln)|`gbppln`|Aug 22, 1990|
+|[Pound sterling vs. Polish zÅ‚oty](https://www.dukascopy-node.app/instrument/gbppln)|`gbppln`|May 15, 2024|
 |[Pound sterling vs. Romanian leu](https://www.dukascopy-node.app/instrument/gbpron)|`gbpron`|Sep 16, 2024|
 |[Pound sterling vs. Saudi riyal](https://www.dukascopy-node.app/instrument/gbpsar)|`gbpsar`|Sep 17, 2024|
 |[Pound sterling vs. Swedish krona](https://www.dukascopy-node.app/instrument/gbpsek)|`gbpsek`|May 15, 2024|
