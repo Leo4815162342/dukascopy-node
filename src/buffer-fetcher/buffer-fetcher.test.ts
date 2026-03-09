@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { expect, it, beforeEach, afterAll, describe, vi } from 'vitest';
+import { expect, it, beforeAll, beforeEach, afterAll, describe, vi } from 'vitest';
 import { resolve } from 'path';
 import { remove } from 'fs-extra';
 import { BufferObject } from './types';
@@ -19,14 +19,10 @@ const urls = [
   'https://datafeed.dukascopy.com/datafeed/EURUSD/2019/01/13/BID_candles_min_1.bi5'
 ];
 
-const cacheFolderPath = resolve(process.cwd(), 'test-cache-folder');
+const cacheFolderPath = resolve(process.cwd(), 'test-cache-folder-buffer-fetcher');
 
 const fileSystemFetcherFn = vi.fn(function (url: string): Promise<Buffer> {
   return Promise.resolve(Buffer.from(url, 'utf-8'));
-});
-
-beforeEach(() => {
-  fileSystemFetcherFn.mockClear();
 });
 
 afterAll(async () => remove(cacheFolderPath));
@@ -46,8 +42,14 @@ describe('Buffer fetcher', () => {
 
   let data: BufferObject[];
 
-  it('Performs correct amount of calls', async () => {
+  beforeAll(async () => {
+    fileSystemFetcherFn.mockClear();
+    notifyFn.mockClear();
+    fetchBatchSpy.mockClear();
     data = await bufferFetcher.fetch(urls);
+  });
+
+  it('Performs correct amount of calls', async () => {
     expect(fileSystemFetcherFn).toHaveBeenCalledTimes(10);
   });
 
@@ -70,57 +72,71 @@ describe('Buffer fetcher', () => {
 });
 
 describe('Buffer fetcher with file cache', () => {
-  const cacheManager = new CacheManager({
-    cacheFolderPath,
-    cacheKeyFormatter: item => item
+  beforeEach(async () => {
+    await remove(cacheFolderPath);
+    fileSystemFetcherFn.mockClear();
   });
 
-  const readSpy = vi.spyOn(cacheManager, 'readItemFromCache');
-  const writeSpy = vi.spyOn(cacheManager, 'writeItemsToCache');
+  function createCachedFetcher() {
+    const cacheManager = new CacheManager({
+      cacheFolderPath,
+      cacheKeyFormatter: item => item
+    });
+    const readSpy = vi.spyOn(cacheManager, 'readItemFromCache');
+    const writeSpy = vi.spyOn(cacheManager, 'writeItemsToCache');
+    const bufferFetcher = new BufferFetcher({
+      fetcherFn: fileSystemFetcherFn,
+      pauseBetweenBatchesMs: 0,
+      cacheManager
+    });
 
-  const buffetFetcher = new BufferFetcher({
-    fetcherFn: fileSystemFetcherFn,
-    pauseBetweenBatchesMs: 0,
-    cacheManager
-  });
+    //@ts-ignore
+    const fetchSpy = vi.spyOn(bufferFetcher, 'fetchBuffer');
 
-  //@ts-ignore
-  const fetchSpy = vi.spyOn(buffetFetcher, 'fetchBuffer');
+    return {
+      bufferFetcher,
+      readSpy,
+      writeSpy,
+      fetchSpy
+    };
+  }
 
-  it('Makes correct number of network calls', async () => {
-    await buffetFetcher.fetch(urls);
+  it('Makes correct number of network calls and writes the first fetch to cache', async () => {
+    const { bufferFetcher, readSpy, writeSpy, fetchSpy } = createCachedFetcher();
+
+    await bufferFetcher.fetch(urls);
     expect(fetchSpy).toHaveBeenCalledTimes(10);
-    fetchSpy.mockClear();
-  });
 
-  it('Tries to check if data exists in cache', async () => {
     const cacheData = await Promise.all(readSpy.mock.results.map(item => item.value));
-
     expect(cacheData.every(result => result === null)).toEqual(true);
-
     expect(readSpy).toHaveBeenCalledTimes(10);
-    readSpy.mockClear();
-  });
-
-  it('Writes correct number of entries to cache once ', () => {
     expect(writeSpy.mock.calls[0][0]).toHaveLength(10);
     expect(writeSpy).toHaveBeenCalledTimes(1);
   });
 
   it('Upon same request, it does not make any network calls', async () => {
-    await buffetFetcher.fetch(urls);
-    expect(fetchSpy).toHaveBeenCalledTimes(0);
-    fetchSpy.mockClear();
-  });
+    const { bufferFetcher, readSpy, fetchSpy } = createCachedFetcher();
 
-  it('Retrieves data from cache', async () => {
+    await bufferFetcher.fetch(urls);
+    readSpy.mockClear();
+    fetchSpy.mockClear();
+
+    await bufferFetcher.fetch(urls);
+
+    expect(fetchSpy).toHaveBeenCalledTimes(0);
+
     const cacheData = await Promise.all(readSpy.mock.results.map(item => item.value));
     expect(cacheData.every(result => result !== null)).toEqual(true);
     expect(readSpy).toHaveBeenCalledTimes(10);
   });
 
   it('Makes network calls only for new items', async () => {
-    await buffetFetcher.fetch([
+    const { bufferFetcher, fetchSpy } = createCachedFetcher();
+
+    await bufferFetcher.fetch(urls);
+    fetchSpy.mockClear();
+
+    await bufferFetcher.fetch([
       ...urls,
       'https://datafeed.dukascopy.com/datafeed/EURUSD/2019/01/14/BID_candles_min_1.bi5'
     ]);

@@ -1,6 +1,6 @@
 import { resolve } from 'path';
 import { URL_ROOT } from '../url-generator';
-import { outputFile, remove, readFile, readdirSync, ensureDirSync } from 'fs-extra';
+import { outputFile, remove, readFile, readdirSync, ensureDirSync, pathExists } from 'fs-extra';
 import { BufferObject } from '../buffer-fetcher/types';
 
 export type CacheManifest = Set<string>;
@@ -47,23 +47,37 @@ export class CacheManager implements CacheManagerBase {
 
     const cacheKeyEncoded = cacheKey.replace(/\//g, '-');
     const cacheItemPath = resolve(this.cacheFolderPath, cacheKeyEncoded);
-    return readFile(cacheItemPath);
+    try {
+      return await readFile(cacheItemPath);
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
+        this.cacheManifest.delete(cacheKey);
+        return null;
+      }
+
+      throw error;
+    }
   }
 
   public async writeItemsToCache(items: BufferObject[]) {
     return Promise.allSettled(
-      items.map(({ buffer, url }) => {
+      items.map(async ({ buffer, url }) => {
         const cacheKey = this.cacheKeyFormatter(url);
         const isItemInCache = this.cacheManifest.has(cacheKey);
         // TODO?: don't write empty buffers to the cache
         // const isEmptyBuffer = buffer.length === 0;
 
-        if (isItemInCache) {
-          return Promise.resolve();
-        }
-
         const cacheKeyEncoded = cacheKey.replace(/\//g, '-');
         const cacheItemPath = resolve(this.cacheFolderPath, cacheKeyEncoded);
+
+        if (isItemInCache) {
+          if (await pathExists(cacheItemPath)) {
+            return;
+          }
+
+          this.cacheManifest.delete(cacheKey);
+        }
+
         this.cacheManifest.add(cacheKey);
         return outputFile(cacheItemPath, buffer);
       })
@@ -71,6 +85,10 @@ export class CacheManager implements CacheManagerBase {
   }
 
   public async purgeCache(cacheFolderPath = this.cacheFolderPath): Promise<void> {
+    if (cacheFolderPath === this.cacheFolderPath) {
+      this.cacheManifest.clear();
+    }
+
     return remove(cacheFolderPath);
   }
 
