@@ -1,6 +1,6 @@
 {
   "name": "dukascopy-node",
-  "version": "1.46.3",
+  "version": "1.46.4",
   "description": "Node.js library for downloading historical market tick data for for Crypto, Stocks, ETFs, CFDs, Forex",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
@@ -21,7 +21,7 @@
     "type-check": "tsc --noEmit --skipLibCheck",
     "gen:meta": "tsx src/utils/instrument-meta-data/generate-data.ts",
     "gen:instruments-md": "tsx src/utils/instrument-meta-data/generate-instrument-md.ts",
-    "release": "standard-version && git push --follow-tags origin master && pnpm build && npm publish",
+    "release": "standard-version && git push --follow-tags origin master && pnpm build",
     "release:beta": "pnpm build && npm publish --tag beta"
   },
   "author": {

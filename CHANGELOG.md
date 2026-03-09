@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.46.4](https://github.com/Leo4815162342/dukascopy-node/compare/v1.46.3...v1.46.4) (2026-03-09)
+
+
+### Bug Fixes
+
+* flaky tests ([#237](https://github.com/Leo4815162342/dukascopy-node/issues/237)) ([1a60804](https://github.com/Leo4815162342/dukascopy-node/commit/1a6080409b04b9095877dcab06e4e8e8961ab2f0))
+* replace node-fetch@2 with native fetch API (fixes Node 22 ESM crash) ([#235](https://github.com/Leo4815162342/dukascopy-node/issues/235)) ([90efc9c](https://github.com/Leo4815162342/dukascopy-node/commit/90efc9ca1f47301eb7adeb8720bb73efd55b76a9))
+* start dates ([#238](https://github.com/Leo4815162342/dukascopy-node/issues/238)) ([e682228](https://github.com/Leo4815162342/dukascopy-node/commit/e6822288de961aff9c17fb3bb9522d9a946c5e19))
+
 ### [1.46.3](https://github.com/Leo4815162342/dukascopy-node/compare/v1.46.2...v1.46.3) (2025-12-20)
 
 ### [1.46.2](https://github.com/Leo4815162342/dukascopy-node/compare/v1.46.1...v1.46.2) (2025-12-20)
