@@ -69,7 +69,11 @@ export enum Format {
    * `
    * ```
    */
-  csv = 'csv'
+  csv = 'csv',
+  /**
+   * Data will be returned as a **Parquet** file (when using CLI or BatchStreamWriter).
+   */
+  parquet = 'parquet'
 }
 
 export type FormatType = keyof typeof Format;
