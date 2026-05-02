@@ -13,7 +13,7 @@
     "dukascopy-node": "./dist/cli/index.js"
   },
   "scripts": {
-    "build": "rm -rf dist && tsup-node src/index.ts src/cli/index.ts --format esm,cjs --dts --legacy-output",
+    "build": "tsup-node src/index.ts src/cli/index.ts --format esm,cjs --dts --legacy-output --clean",
     "test": "vitest run",
     "coverage": "vitest run --coverage",
     "format": "prettier --config .prettierrc.json 'src/**/*.ts' --write",
@@ -64,18 +64,18 @@
     "@types/debug": "4.1.7",
     "@types/fs-extra": "9.0.13",
     "@types/node": "18.17.0",
-    "@typescript-eslint/eslint-plugin": "8.46.2",
-    "@typescript-eslint/parser": "8.46.2",
-    "eslint": "9.37.0",
+    "@typescript-eslint/eslint-plugin": "8.59.1",
+    "@typescript-eslint/parser": "8.59.1",
+    "eslint": "10.3.0",
     "eslint-config-prettier": "10.1.8",
-    "eslint-plugin-prettier": "5.5.4",
+    "eslint-plugin-prettier": "5.5.5",
     "msw": "2.11.6",
-    "prettier": "2.6.2",
+    "prettier": "3.8.3",
     "standard-version": "9.3.2",
-    "tsup": "5.12.5",
+    "tsup": "8.5.1",
     "tsx": "4.20.6",
-    "typescript": "5.9.3",
-    "vitest": "3.2.4"
+    "typescript": "6.0.3",
+    "vitest": "4.1.5"
   },
   "engines": {
     "node": ">=18"

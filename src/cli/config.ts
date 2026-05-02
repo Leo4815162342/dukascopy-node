@@ -40,7 +40,7 @@ const commanderSchema = program
     VolumeUnit.millions
   )
   .option('-fl, --flats', 'Include flats (0 volumes)', false)
-  .option('-f, --format <value>', 'Output format (csv, json, array)', Format.json)
+  .option('-f, --format <value>', 'Output format (csv, json, array, parquet)', Format.json)
   .option('-dir, --directory <value>', 'Download directory', './download')
   .option('-bs, --batch-size <value>', 'Batch size of downloaded artifacts', Number, 10)
   .option('-bp, --batch-pause <value>', 'Pause between batches in ms', Number, 1000)
