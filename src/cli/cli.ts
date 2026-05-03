@@ -88,7 +88,12 @@ export async function run(argv: NodeJS.Process['argv']) {
         utcOffset
       });
 
-      const fileExtension = format === Format.csv ? Format.csv : Format.json;
+      let fileExtension = Format.json;
+      if (format === Format.csv) {
+        fileExtension = Format.csv;
+      } else if (format === Format.parquet) {
+        fileExtension = Format.parquet;
+      }
 
       const dateRangeStr = [startDate, endDate]
         .map(date => {

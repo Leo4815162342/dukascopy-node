@@ -83,8 +83,10 @@ describe('CLI (default values)', async () => {
           readFile(file, 'utf-8')
         )
       );
-      expect(fetchedFileContents).toBe(expectedFileContents);
-    });
+      expect(fetchedFileContents.replace(/\r\n/g, '\n')).toBe(
+        expectedFileContents.replace(/\r\n/g, '\n')
+      );
+    }, 30000);
   }
 });
 

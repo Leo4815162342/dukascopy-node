@@ -154,41 +154,44 @@ export class BufferFetcher {
 
     let response = new Response();
 
-    const shouldUseRetry = this.retryCount > 0;
+    let retries = 0;
+    let isTrySuccess = false;
+    let errorMsg = '';
 
-    if (shouldUseRetry) {
-      let retries = 0;
-      let isTrySuccess = false;
-      let errorMsg = '';
-      while (retries <= this.retryCount && !isTrySuccess) {
-        const isLastRetry = retries === this.retryCount;
-        let isCallSuccess = true;
-        try {
-          response = await fetch(url);
-        } catch (e) {
-          isCallSuccess = false;
-          errorMsg = e instanceof Error ? e.message : JSON.stringify(e);
-        }
+    while (retries <= this.retryCount && !isTrySuccess) {
+      const isLastRetry = retries === this.retryCount;
+      let isCallSuccess = true;
+      try {
+        response = await fetch(url);
+      } catch (e) {
+        isCallSuccess = false;
+        errorMsg = e instanceof Error ? e.message : JSON.stringify(e);
+      }
 
-        const isStatusOk = response.status === 200;
-        const contentLength = Number(response?.headers?.get('content-length') || 0);
-        const isResponseWithData = contentLength > 0;
-        isTrySuccess = isCallSuccess && isStatusOk;
+      const isStatusOk = response.status === 200;
 
-        if (this.retryOnEmpty) {
-          isTrySuccess = isTrySuccess && isResponseWithData;
-        }
+      if (isCallSuccess && !isStatusOk) {
+        errorMsg = `Status ${response.status}`;
+      }
 
-        retries++;
-        if (!isTrySuccess && !isLastRetry) {
-          await wait(this.pauseBetweenRetriesMs);
-        }
-        if (isLastRetry && !isTrySuccess && this.failAfterRetryCount) {
-          throw Error(errorMsg || 'Unknown error');
+      const contentLength = Number(response?.headers?.get('content-length') || 0);
+      const isResponseWithData = contentLength > 0;
+      isTrySuccess = isCallSuccess && isStatusOk;
+
+      if (this.retryOnEmpty) {
+        isTrySuccess = isTrySuccess && isResponseWithData;
+        if (isTrySuccess && !isResponseWithData) {
+          errorMsg = 'Empty response';
         }
       }
-    } else {
-      response = await fetch(url);
+
+      retries++;
+      if (!isTrySuccess && !isLastRetry) {
+        await wait(this.pauseBetweenRetriesMs);
+      }
+      if (isLastRetry && !isTrySuccess && this.failAfterRetryCount) {
+        throw Error(`${errorMsg || 'Unknown error'} (${url})`);
+      }
     }
 
     return response.status === 200

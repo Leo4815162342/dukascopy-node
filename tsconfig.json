@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
+    "ignoreDeprecations": "6.0",
     "noUnusedParameters": true,
     "removeComments": false,
     "sourceMap": true,

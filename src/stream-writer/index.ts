@@ -1,4 +1,6 @@
 import fs, { WriteStream } from 'fs';
+// @ts-expect-error parquetjs-lite does not have typescript definitions
+import { ParquetSchema, ParquetWriter } from 'parquetjs-lite';
 import { Format, FormatType } from '../config/format';
 import { Timeframe, TimeframeType } from '../config/timeframes';
 
@@ -16,6 +18,28 @@ export async function writeStream(
 
   const bodyHeaders = timeframe === Timeframe.tick ? tickHeaders : headers;
   const existingBodyHeaders = bodyHeaders.filter((_, i) => payload[0][i] !== undefined);
+
+  if (format === Format.parquet) {
+    const schemaObj: Record<string, { type: string }> = {};
+    for (const h of existingBodyHeaders) {
+      schemaObj[h] = { type: h === 'timestamp' ? 'INT64' : 'DOUBLE' };
+    }
+    const schema = new ParquetSchema(schemaObj);
+    const writer = await ParquetWriter.openStream(schema, fileWriteStream);
+
+    for (let i = 0; i < payload.length; i++) {
+      const item = payload[i];
+      const row: Record<string, number | bigint> = {};
+      for (let j = 0; j < existingBodyHeaders.length; j++) {
+        const val = item[j];
+        row[existingBodyHeaders[j]] = existingBodyHeaders[j] === 'timestamp' ? BigInt(val) : val;
+      }
+      await writer.appendRow(row);
+    }
+
+    await writer.close();
+    return true;
+  }
 
   for (let i = 0; i < payload.length; i++) {
     const item = payload[i];
@@ -86,6 +110,8 @@ export class BatchStreamWriter {
   private bodyHeaders: string[];
   private startDateTs: number;
   private endDateTs: number;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private parquetWriter?: any;
 
   constructor(options: BatchStreamWriterOptions) {
     this.fileWriteStream = options.fileWriteStream;
@@ -114,7 +140,22 @@ export class BatchStreamWriter {
     return bodyHeaders;
   }
 
+  private async initParquetWriter() {
+    if (!this.parquetWriter && this.format === Format.parquet) {
+      const schemaObj: Record<string, { type: string }> = {};
+      for (const h of this.bodyHeaders) {
+        schemaObj[h] = { type: h === 'timestamp' ? 'INT64' : 'DOUBLE' };
+      }
+      const schema = new ParquetSchema(schemaObj);
+      this.parquetWriter = await ParquetWriter.openStream(schema, this.fileWriteStream);
+    }
+  }
+
   public async writeBatch(batch: number[][], dateFormatter?: (timestamp: number) => string) {
+    if (this.format === Format.parquet && !this.parquetWriter) {
+      await this.initParquetWriter();
+    }
+
     const batchWithinRange: (number | string)[][] = [];
 
     for (let j = 0; j < batch.length; j++) {
@@ -123,7 +164,7 @@ export class BatchStreamWriter {
         item.length > 0 && item[0] >= this.startDateTs && item[0] < this.endDateTs;
 
       if (isItemInRange) {
-        if (dateFormatter) {
+        if (dateFormatter && this.format !== Format.parquet) {
           //@ts-expect-error TODO: fix this
           item[0] = dateFormatter(item[0]);
         }
@@ -137,6 +178,17 @@ export class BatchStreamWriter {
       const isFirstItem = i === 0;
       const isLastItem = i === batchWithinRange.length - 1;
       const shouldOpen = isFirstItem && this.isFileEmpty;
+
+      if (this.format === Format.parquet) {
+        const row: Record<string, number | string | bigint> = {};
+        for (let j = 0; j < this.bodyHeaders.length; j++) {
+          const val = item[j];
+          row[this.bodyHeaders[j]] = this.bodyHeaders[j] === 'timestamp' ? BigInt(val) : val;
+        }
+        await this.parquetWriter.appendRow(row);
+        this.isFileEmpty = false;
+        continue;
+      }
 
       let body = '';
 
@@ -191,6 +243,11 @@ export class BatchStreamWriter {
   }
 
   public async closeBatchFile() {
+    if (this.format === Format.parquet && this.parquetWriter) {
+      await this.parquetWriter.close();
+      return true as const;
+    }
+
     if ((this.format === Format.json || this.format === Format.array) && !this.isFileEmpty) {
       const body = this.isInline ? ']' : '\n]';
       const ableToWrite = this.fileWriteStream.write(body);
