@@ -73,24 +73,20 @@ describe('CLI (default values)', async () => {
   afterEach(() => mockServer.resetHandlers());
 
   for (const { timeframe, options, fileName } of testCases) {
-    test(
-      `should download "${timeframe}" data and save to file`,
-      async () => {
-        await run(getArgv(options + ' --batch-pause 0'));
+    test(`should download "${timeframe}" data and save to file`, async () => {
+      await run(getArgv(options + ' --batch-pause 0'));
 
-        expect(existsSync(`./download/${fileName}`)).toBe(true);
+      expect(existsSync(`./download/${fileName}`)).toBe(true);
 
-        const [fetchedFileContents, expectedFileContents] = await Promise.all(
-          [`./download/${fileName}`, `./src/cli/tests/expected-outputs/${fileName}`].map(file =>
-            readFile(file, 'utf-8')
-          )
-        );
-        expect(fetchedFileContents.replace(/\r\n/g, '\n')).toBe(
-          expectedFileContents.replace(/\r\n/g, '\n')
-        );
-      },
-      30000
-    );
+      const [fetchedFileContents, expectedFileContents] = await Promise.all(
+        [`./download/${fileName}`, `./src/cli/tests/expected-outputs/${fileName}`].map(file =>
+          readFile(file, 'utf-8')
+        )
+      );
+      expect(fetchedFileContents.replace(/\r\n/g, '\n')).toBe(
+        expectedFileContents.replace(/\r\n/g, '\n')
+      );
+    }, 30000);
   }
 });
 
