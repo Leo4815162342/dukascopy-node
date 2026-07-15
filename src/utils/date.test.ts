@@ -1,48 +1,19 @@
-import { expect, describe, it } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { getDateFromUrl } from './date';
-
-const urls = [
-  {
-    url: 'https://datafeed.dukascopy.com/datafeed/EURUSD/2018/BID_candles_day_1.bi5',
-    isoString: '2018-01-01T00:00:00.000Z'
-  },
-  {
-    url: 'https://datafeed.dukascopy.com/datafeed/EURUSD/2018/01/BID_candles_hour_1.bi5',
-    isoString: '2018-02-01T00:00:00.000Z'
-  },
-  {
-    url: 'https://datafeed.dukascopy.com/datafeed/EURUSD/2018/01/01/BID_candles_min_1.bi5',
-    isoString: '2018-02-01T00:00:00.000Z'
-  },
-  {
-    url: 'https://datafeed.dukascopy.com/datafeed/EURUSD/2018/01/01/01h_ticks.bi5',
-    isoString: '2018-02-01T01:00:00.000Z'
-  },
-  {
-    url: 'https://datafeed.dukascopy.com/datafeed/EURUSD/2016/BID_candles_day_1.bi5',
-    isoString: '2016-01-01T00:00:00.000Z'
-  },
-  {
-    url: 'https://datafeed.dukascopy.com/datafeed/EURUSD/2016/08/BID_candles_hour_1.bi5',
-    isoString: '2016-09-01T00:00:00.000Z'
-  },
-  {
-    url: 'https://datafeed.dukascopy.com/datafeed/EURUSD/2016/01/28/BID_candles_min_1.bi5',
-    isoString: '2016-02-28T00:00:00.000Z'
-  },
-  {
-    url: 'https://datafeed.dukascopy.com/datafeed/EURUSD/2016/11/31/00h_ticks.bi5',
-    isoString: '2016-12-31T00:00:00.000Z'
-  }
-];
+import { URL_ROOT } from '../url-generator';
 
 describe('Date utils', () => {
-  describe(getDateFromUrl.name, () => {
-    urls.forEach(({ url, isoString }) => {
-      it(`Generates proper date from URL: ${url}`, () => {
-        const date = getDateFromUrl(url);
-        expect(date.toISOString()).toEqual(isoString);
-      });
+  const cases = [
+    [`${URL_ROOT}/candles/day/EUR-USD/BID/2018`, '2018-01-01T00:00:00.000Z'],
+    [`${URL_ROOT}/candles/hour/EUR-USD/BID/2018/1`, '2018-01-01T00:00:00.000Z'],
+    [`${URL_ROOT}/candles/minute/EUR-USD/BID/2018/12/31`, '2018-12-31T00:00:00.000Z'],
+    [`${URL_ROOT}/ticks/EUR-USD/2018/1/2/3`, '2018-01-02T03:00:00.000Z'],
+    [`${URL_ROOT}/candles/minute/EUR-USD/BID?from=1562889600000`, '2019-07-12T00:00:00.000Z']
+  ] as const;
+
+  cases.forEach(([url, isoDate]) => {
+    it(`extracts ${isoDate}`, () => {
+      expect(getDateFromUrl(url).toISOString()).toBe(isoDate);
     });
   });
 });

@@ -1,34 +1,22 @@
-import { expect, describe, it } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { getTimeframeFromUrl } from './range';
+import { URL_ROOT } from '../url-generator';
 
-const TEST_NAMESPACE = 'Range utils';
+describe('Range utils', () => {
+  const cases = [
+    [`${URL_ROOT}/candles/day/EUR-USD/BID/2018`, 'd1'],
+    [`${URL_ROOT}/candles/hour/EUR-USD/BID/2018/1`, 'h1'],
+    [`${URL_ROOT}/candles/minute/EUR-USD/BID/2018/1/1`, 'm1'],
+    [`${URL_ROOT}/ticks/EUR-USD/2018/1/1/1`, 'tick']
+  ] as const;
 
-const urls = [
-  {
-    url: 'https://datafeed.dukascopy.com/datafeed/EURUSD/2018/BID_candles_day_1.bi5',
-    timeframe: 'd1'
-  },
-  {
-    url: 'https://datafeed.dukascopy.com/datafeed/EURUSD/2018/01/BID_candles_hour_1.bi5',
-    timeframe: 'h1'
-  },
-  {
-    url: 'https://datafeed.dukascopy.com/datafeed/EURUSD/2018/01/01/BID_candles_min_1.bi5',
-    timeframe: 'm1'
-  },
-  {
-    url: 'https://datafeed.dukascopy.com/datafeed/EURUSD/2018/01/01/01h_ticks.bi5',
-    timeframe: 'tick'
-  }
-];
-
-describe(TEST_NAMESPACE, () => {
-  describe(getTimeframeFromUrl.name, () => {
-    urls.forEach(({ url, timeframe }) => {
-      it(`Generates proper timeframe from URL: ${url}`, () => {
-        const tf = getTimeframeFromUrl(url);
-        expect(tf).toEqual(timeframe);
-      });
+  cases.forEach(([url, timeframe]) => {
+    it(`infers ${timeframe} from ${url}`, () => {
+      expect(getTimeframeFromUrl(url)).toBe(timeframe);
     });
+  });
+
+  it('rejects unsupported URLs', () => {
+    expect(() => getTimeframeFromUrl('https://example.com/data')).toThrow('Unsupported data URL');
   });
 });

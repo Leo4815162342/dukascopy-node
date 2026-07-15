@@ -52,7 +52,7 @@ const commanderSchema = program
   .option('-rp, --retry-pause <value>', 'Pause between retries in milliseconds', Number, 500)
   .option(
     '-re, --retry-on-empty',
-    'A flag indicating whether requests with successful but empty (0 Bytes) responses should be retried. If `retries` is `0` this parameter will be ignored',
+    'A flag indicating whether successful responses with empty JSON datasets should be retried. If `retries` is `0` this parameter will be ignored',
     false
   )
   .option(

@@ -1,8 +1,9 @@
 /* eslint-disable no-console */
 import fs from 'fs';
 import { promisify } from 'util';
-import { MetaDataResponse } from './generate-data.types';
+import { InstrumentsResponse } from './generate-data.types';
 import { generateIdName } from './generate-id-name';
+
 const saveFile = promisify(fs.writeFile);
 
 interface GroupData {
@@ -10,56 +11,35 @@ interface GroupData {
   instruments: string[];
 }
 
-export function generateInstrumentGroupData(
-  metadata: MetaDataResponse,
+export function buildInstrumentGroupData(metadata: InstrumentsResponse): GroupData[] {
+  const groupCodes = new Map(
+    metadata.groups.map(group => [group.id, group.code.toLowerCase().replace(/\s+/g, '-')])
+  );
+  const groups = new Map<string, string[]>(
+    metadata.groups.map(group => [group.code.toLowerCase().replace(/\s+/g, '-'), []])
+  );
+
+  for (const instrument of metadata.instruments) {
+    const groupId =
+      (instrument.groupId === null ? undefined : groupCodes.get(instrument.groupId)) ||
+      instrument.platformGroupId?.toLowerCase() ||
+      'ungrouped';
+    const instruments = groups.get(groupId) || [];
+    instruments.push(generateIdName(instrument.code, instrument.code));
+    groups.set(groupId, instruments);
+  }
+
+  return Array.from(groups, ([id, instruments]) => ({
+    id,
+    instruments: instruments.sort()
+  })).filter(group => group.instruments.length > 0);
+}
+
+export async function generateInstrumentGroupData(
+  metadata: InstrumentsResponse,
   path: string
 ): Promise<void> {
-  const currentGroupDataRaw = fs.readFileSync(path, 'utf8');
-  const currentGroupData = JSON.parse(currentGroupDataRaw) as GroupData[];
-
-  const data = Object.keys(metadata.groups).reduce<GroupData[]>((all, group) => {
-    const hasInstruments = metadata.groups[group]?.instruments?.length;
-    if (!hasInstruments) {
-      return all;
-    }
-
-    const containsItemsInList =
-      metadata.groups[group].instruments.filter(inst => !!metadata.instruments[inst]).length > 0;
-
-    if (!containsItemsInList) {
-      return all;
-    }
-
-    const id = group.toLowerCase().replace(/\s/g, '-');
-
-    const matchedGroup = currentGroupData.find(item => item.id === id);
-
-    if (matchedGroup) {
-      matchedGroup.instruments = matchedGroup.instruments.concat(
-        metadata.groups[group].instruments
-          .filter(inst => !!metadata.instruments[inst])
-          .map(inst => generateIdName(metadata.instruments[inst].historical_filename, inst))
-      );
-    } else {
-      all.push({
-        id,
-        instruments: metadata.groups[group].instruments
-          .filter(inst => !!metadata.instruments[inst])
-          .map(inst => generateIdName(metadata.instruments[inst].historical_filename, inst))
-      });
-    }
-
-    return all;
-  }, currentGroupData);
-
-  const dedupedGroups = data.map<GroupData>(item => {
-    return {
-      id: item.id,
-      instruments: Array.from(new Set(item.instruments))
-    };
-  });
-
-  return saveFile(path, JSON.stringify(dedupedGroups, null, 2)).then(() => {
-    console.log('instrument groups generated!', path);
-  });
+  const data = buildInstrumentGroupData(metadata);
+  await saveFile(path, JSON.stringify(data, null, 2));
+  console.log('Instrument groups generated!', path);
 }

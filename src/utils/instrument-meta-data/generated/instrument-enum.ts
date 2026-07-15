@@ -1,25 +1,25 @@
 export enum Instrument {
 
     /**
-     * ### HSBC Holdings
+     * ### HSBC Holdings Plc
      * *0005.HK/HKD*
      */
     '0005hkhkd'='0005hkhkd',
 
     /**
-     * ### Galaxy Entertainment Group
+     * ### Galaxy Entertainment Group Ltd
      * *0027.HK/HKD*
      */
     '0027hkhkd'='0027hkhkd',
 
     /**
-     * ### Geely Automobile Holdings
+     * ### Geely Automobile Holdings Ltd
      * *0175.HK/HKD*
      */
     '0175hkhkd'='0175hkhkd',
 
     /**
-     * ### China Resources Beer Holdings
+     * ### China Resources Beer Holdings Co Ltd
      * *0291.HK/HKD*
      */
     '0291hkhkd'='0291hkhkd',
@@ -31,73 +31,73 @@ export enum Instrument {
     '0386hkhkd'='0386hkhkd',
 
     /**
-     * ### HK Exchanges & Clearing
+     * ### HK Exchanges & Clearing Ltd
      * *0388.HK/HKD*
      */
     '0388hkhkd'='0388hkhkd',
 
     /**
-     * ### Tencent Holdings
+     * ### Tencent Holdings Ltd
      * *0700.HK/HKD*
      */
     '0700hkhkd'='0700hkhkd',
 
     /**
-     * ### PetroChina
+     * ### PetroChina Co Ltd
      * *0857.HK/HKD*
      */
     '0857hkhkd'='0857hkhkd',
 
     /**
-     * ### China National Offshore Oil Corporation
+     * ### China National Offshore Oil Corporation Ltd
      * *0883.HK/HKD*
      */
     '0883hkhkd'='0883hkhkd',
 
     /**
-     * ### China Construction Bank
+     * ### China Construction Bank Corp
      * *0939.HK/HKD*
      */
     '0939hkhkd'='0939hkhkd',
 
     /**
-     * ### China Mobile
+     * ### China Mobile Ltd
      * *0941.HK/HKD*
      */
     '0941hkhkd'='0941hkhkd',
 
     /**
-     * ### CITIC Bank International
+     * ### CITIC Bank International Corp Ltd
      * *0998.HK/HKD*
      */
     '0998hkhkd'='0998hkhkd',
 
     /**
-     * ### CSPC Pharmaceutical Group
+     * ### CSPC Pharmaceutical Group Ltd
      * *1093.HK/HKD*
      */
     '1093hkhkd'='1093hkhkd',
 
     /**
-     * ### Sino Biopharmeceutical
+     * ### Sino Biopharmeceutical Ltd
      * *1177.HK/HKD*
      */
     '1177hkhkd'='1177hkhkd',
 
     /**
-     * ### Agricultural Bank of China
+     * ### Agricultural Bank of China Ltd
      * *1288.HK/HKD*
      */
     '1288hkhkd'='1288hkhkd',
 
     /**
-     * ### AIA
+     * ### AIA Group Ltd
      * *1299.HK/HKD*
      */
     '1299hkhkd'='1299hkhkd',
 
     /**
-     * ### Industrial and Commercial Bank of China
+     * ### Industrial and Commercial Bank of China Ltd
      * *1398.HK/HKD*
      */
     '1398hkhkd'='1398hkhkd',
@@ -109,55 +109,55 @@ export enum Instrument {
     '1810hkhkd'='1810hkhkd',
 
     /**
-     * ### Sunac China Holdings
+     * ### Sunac China Holdings Ltd
      * *1918.HK/HKD*
      */
     '1918hkhkd'='1918hkhkd',
 
     /**
-     * ### Country Garden Holdings
+     * ### Country Garden Holdings Ltd
      * *2007.HK/HKD*
      */
     '2007hkhkd'='2007hkhkd',
 
     /**
-     * ### AAC Technologies Holdings
+     * ### AAC Technologies Holdings Inc
      * *2018.HK/HKD*
      */
     '2018hkhkd'='2018hkhkd',
 
     /**
-     * ### Ping An Insurance
+     * ### Ping An Insurance Ltd
      * *2318.HK/HKD*
      */
     '2318hkhkd'='2318hkhkd',
 
     /**
-     * ### BOC Hong Kong (Holdings)
+     * ### BOC Hong Kong (Holdings) Ltd
      * *2388.HK/HKD*
      */
     '2388hkhkd'='2388hkhkd',
 
     /**
-     * ### Asahi Group Holdings
+     * ### Asahi Group Holdings Ltd
      * *2502.JP/JPY*
      */
     '2502jpjpy'='2502jpjpy',
 
     /**
-     * ### Kirin Brewery Co
+     * ### Kirin Brewery Co Ltd
      * *2503.JP/JPY*
      */
     '2503jpjpy'='2503jpjpy',
 
     /**
-     * ### China Life Insurance Company
+     * ### China Life Insurance Company Ltd
      * *2628.HK/HKD*
      */
     '2628hkhkd'='2628hkhkd',
 
     /**
-     * ### CSOP FTSE China A50 ETF
+     * ### 2822 CSOP FTSE China A50 ETF
      * *2822.HK/HKD*
      */
     '2822hkhkd'='2822hkhkd',
@@ -175,7 +175,7 @@ export enum Instrument {
     '2836hkhkd'='2836hkhkd',
 
     /**
-     * ### Japan Tobacco
+     * ### Japan Tobacco Inc
      * *2914.JP/JPY*
      */
     '2914jpjpy'='2914jpjpy',
@@ -187,13 +187,7 @@ export enum Instrument {
     '3188hkhkd'='3188hkhkd',
 
     /**
-     * ### China Evergrande Group
-     * *3333.HK/HKD*
-     */
-    '3333hkhkd'='3333hkhkd',
-
-    /**
-     * ### Seven and I Holdings
+     * ### Seven and I Holdings Co Ltd
      * *3382.JP/JPY*
      */
     '3382jpjpy'='3382jpjpy',
@@ -205,31 +199,31 @@ export enum Instrument {
     '3436jpjpy'='3436jpjpy',
 
     /**
-     * ### China Merchants Bank
+     * ### China Merchants Bank Co Ltd
      * *3968.HK/HKD*
      */
     '3968hkhkd'='3968hkhkd',
 
     /**
-     * ### Bank of China
+     * ### Bank of China Ltd
      * *3988.HK/HKD*
      */
     '3988hkhkd'='3988hkhkd',
 
     /**
-     * ### Showa Denko
+     * ### Showa Denko KK
      * *4004.JP/JPY*
      */
     '4004jpjpy'='4004jpjpy',
 
     /**
-     * ### Sumitomo Chemical
+     * ### Sumitomo Chemical Co Ltd
      * *4005.JP/JPY*
      */
     '4005jpjpy'='4005jpjpy',
 
     /**
-     * ### Shin-Etsu Chemical
+     * ### Shin-Etsu Chemical Co Ltd
      * *4063.JP/JPY*
      */
     '4063jpjpy'='4063jpjpy',
@@ -241,25 +235,25 @@ export enum Instrument {
     '4452jpjpy'='4452jpjpy',
 
     /**
-     * ### Takeda
+     * ### Takeda Pharmaceutical Co Ltd
      * *4502.JP/JPY*
      */
     '4502jpjpy'='4502jpjpy',
 
     /**
-     * ### Astellas Pharma
+     * ### Astellas Pharma Inc
      * *4503.JP/JPY*
      */
     '4503jpjpy'='4503jpjpy',
 
     /**
-     * ### Shionogi
+     * ### Shionogi & Co Ltd
      * *4507.JP/JPY*
      */
     '4507jpjpy'='4507jpjpy',
 
     /**
-     * ### Eisai
+     * ### Eisai Co Ltd
      * *4523.JP/JPY*
      */
     '4523jpjpy'='4523jpjpy',
@@ -271,13 +265,13 @@ export enum Instrument {
     '4543jpjpy'='4543jpjpy',
 
     /**
-     * ### Yahoo Japan Corp
+     * ### Z Holdings Corp
      * *4689.JP/JPY*
      */
     '4689jpjpy'='4689jpjpy',
 
     /**
-     * ### Shiseido
+     * ### Shiseido Co Ltd
      * *4911.JP/JPY*
      */
     '4911jpjpy'='4911jpjpy',
@@ -289,7 +283,7 @@ export enum Instrument {
     '5108jpjpy'='5108jpjpy',
 
     /**
-     * ### Tokai Carbon
+     * ### Tokai Carbon Co Ltd
      * *5301.JP/JPY*
      */
     '5301jpjpy'='5301jpjpy',
@@ -307,28 +301,16 @@ export enum Instrument {
     '6098jpjpy'='6098jpjpy',
 
     /**
-     * ### Komatsu
+     * ### Komatsu Ltd
      * *6301.JP/JPY*
      */
     '6301jpjpy'='6301jpjpy',
 
     /**
-     * ### Daikin Industries
+     * ### Daikin Industries Ltd
      * *6367.JP/JPY*
      */
     '6367jpjpy'='6367jpjpy',
-
-    /**
-     * ### Hitachi
-     * *6501.JP/JPY*
-     */
-    '6501jpjpy'='6501jpjpy',
-
-    /**
-     * ### Toshiba Corp
-     * *6502.JP/JPY*
-     */
-    '6502jpjpy'='6502jpjpy',
 
     /**
      * ### Mitsubishi Electric Corp
@@ -343,7 +325,7 @@ export enum Instrument {
     '6506jpjpy'='6506jpjpy',
 
     /**
-     * ### Fujitsu
+     * ### Fujitsu Ltd
      * *6702.JP/JPY*
      */
     '6702jpjpy'='6702jpjpy',
@@ -355,7 +337,7 @@ export enum Instrument {
     '6752jpjpy'='6752jpjpy',
 
     /**
-     * ### Sony Corp Japan
+     * ### Sony Corp
      * *6758.JP/JPY*
      */
     '6758jpjpy'='6758jpjpy',
@@ -373,19 +355,19 @@ export enum Instrument {
     '6902jpjpy'='6902jpjpy',
 
     /**
-     * ### Fanuc
+     * ### FANUC Corp
      * *6954.JP/JPY*
      */
     '6954jpjpy'='6954jpjpy',
 
     /**
-     * ### Kyocera
+     * ### Kyocera Corp
      * *6971.JP/JPY*
      */
     '6971jpjpy'='6971jpjpy',
 
     /**
-     * ### Nissan Motor Co
+     * ### Nissan Motor Co Ltd
      * *7201.JP/JPY*
      */
     '7201jpjpy'='7201jpjpy',
@@ -397,13 +379,13 @@ export enum Instrument {
     '7203jpjpy'='7203jpjpy',
 
     /**
-     * ### Mazda Motor
+     * ### Mazda Motor Corp
      * *7261.JP/JPY*
      */
     '7261jpjpy'='7261jpjpy',
 
     /**
-     * ### Honda Motor Company
+     * ### Honda Motor Co Ltd
      * *7267.JP/JPY*
      */
     '7267jpjpy'='7267jpjpy',
@@ -415,13 +397,13 @@ export enum Instrument {
     '7269jpjpy'='7269jpjpy',
 
     /**
-     * ### Subaru Corporation
+     * ### Subaru Corp
      * *7270.JP/JPY*
      */
     '7270jpjpy'='7270jpjpy',
 
     /**
-     * ### Canon
+     * ### Canon Inc
      * *7751.JP/JPY*
      */
     '7751jpjpy'='7751jpjpy',
@@ -433,61 +415,61 @@ export enum Instrument {
     '7974jpjpy'='7974jpjpy',
 
     /**
-     * ### Mitsui and Company
+     * ### Mitsui & Co Ltd
      * *8031.JP/JPY*
      */
     '8031jpjpy'='8031jpjpy',
 
     /**
-     * ### Tokyo Electron
+     * ### Tokyo Electron Ltd
      * *8035.JP/JPY*
      */
     '8035jpjpy'='8035jpjpy',
 
     /**
-     * ### Mitsubishi UFJ Financial Group
+     * ### Mitsubishi UFJ Financial Group Inc
      * *8306.JP/JPY*
      */
     '8306jpjpy'='8306jpjpy',
 
     /**
-     * ### Sumitomo Mitsui Financial Group
+     * ### Sumitomo Mitsui Financial Group Inc
      * *8316.JP/JPY*
      */
     '8316jpjpy'='8316jpjpy',
 
     /**
-     * ### Mizuho Financial Group
+     * ### Mizuho Financial Group Inc
      * *8411.JP/JPY*
      */
     '8411jpjpy'='8411jpjpy',
 
     /**
-     * ### Tokio Marine Holdings
+     * ### Tokio Marine Holdings Inc
      * *8766.JP/JPY*
      */
     '8766jpjpy'='8766jpjpy',
 
     /**
-     * ### Mitsui Fudosan Company
+     * ### Mitsui Fudosan Co Ltd
      * *8801.JP/JPY*
      */
     '8801jpjpy'='8801jpjpy',
 
     /**
-     * ### Mitsubishi Estate Company
+     * ### Mitsubishi Estate Co Ltd
      * *8802.JP/JPY*
      */
     '8802jpjpy'='8802jpjpy',
 
     /**
-     * ### East Japan Railway Company
+     * ### East Japan Railway Co
      * *9020.JP/JPY*
      */
     '9020jpjpy'='9020jpjpy',
 
     /**
-     * ### Nippon Telegraph and Tel
+     * ### Nippon Telegraph & Tel Corp
      * *9432.JP/JPY*
      */
     '9432jpjpy'='9432jpjpy',
@@ -499,13 +481,13 @@ export enum Instrument {
     '9433jpjpy'='9433jpjpy',
 
     /**
-     * ### Tokyo Electric Power Company
+     * ### Tokyo Electric Power Co Holdings Inc
      * *9501.JP/JPY*
      */
     '9501jpjpy'='9501jpjpy',
 
     /**
-     * ### Fast Retailing
+     * ### Fast Retailing Co Ltd
      * *9983.JP/JPY*
      */
     '9983jpjpy'='9983jpjpy',
@@ -566,21 +548,9 @@ export enum Instrument {
 
     /**
      * ### ABB Ltd
-     * *ABB.SE/SEK*
-     */
-    abbsesek='abbsesek',
-
-    /**
-     * ### ABB Ltd
      * *ABBN.CH/CHF*
      */
     abbnchchf='abbnchchf',
-
-    /**
-     * ### AMERISOURCEBERGEN CORP
-     * *ABC.US/USD*
-     */
-    abcususd='abcususd',
 
     /**
      * ### Ambev S.A.
@@ -599,12 +569,6 @@ export enum Instrument {
      * *ABI.BE/EUR*
      */
     abibeeur='abibeeur',
-
-    /**
-     * ### ABIOMED INC
-     * *ABMD.US/USD*
-     */
-    abmdususd='abmdususd',
 
     /**
      * ### ABBOTT LABORATORIES
@@ -685,12 +649,6 @@ export enum Instrument {
     admgbgbx='admgbgbx',
 
     /**
-     * ### AUTOMATIC DATA PROCESSING
-     * *ADP.US/USD*
-     */
-    adpususd='adpususd',
-
-    /**
      * ### Adidas AG
      * *ADS.DE/EUR*
      */
@@ -701,6 +659,72 @@ export enum Instrument {
      * *ADSK.US/USD*
      */
     adskususd='adskususd',
+
+    /**
+     * ### UAE Dirham vs Chinese Yuan
+     * *AED/CNH*
+     */
+    aedcnh='aedcnh',
+
+    /**
+     * ### UAE Dirham vs Czech Koruna
+     * *AED/CZK*
+     */
+    aedczk='aedczk',
+
+    /**
+     * ### UAE Dirham vs Hong Kong Dollar
+     * *AED/HKD*
+     */
+    aedhkd='aedhkd',
+
+    /**
+     * ### UAE Dirham vs Hungarian Forint
+     * *AED/HUF*
+     */
+    aedhuf='aedhuf',
+
+    /**
+     * ### UAE Dirham vs Yen
+     * *AED/JPY*
+     */
+    aedjpy='aedjpy',
+
+    /**
+     * ### UAE Dirham vs Mexican Peso
+     * *AED/MXN*
+     */
+    aedmxn='aedmxn',
+
+    /**
+     * ### UAE Dirham vs Romanian Leu
+     * *AED/RON*
+     */
+    aedron='aedron',
+
+    /**
+     * ### UAE Dirham vs Saudi Riyal
+     * *AED/SAR*
+     */
+    aedsar='aedsar',
+
+    /**
+     * ### UAE Dirham vs Thai Baht
+     * *AED/THB*
+     */
+    aedthb='aedthb',
+
+    /**
+     * ### UAE Dirham vs Turkish Lira
+     * *AED/TRY*
+     */
+    aedtry='aedtry',
+
+    /**
+     * ### UAE Dirham vs Rand
+     * *AED/ZAR*
+     */
+    aedzar='aedzar',
 
     /**
      * ### Aena SA
@@ -727,16 +751,10 @@ export enum Instrument {
     afgususd='afgususd',
 
     /**
-     * ### Aggreko PLC
-     * *AGK.GB/GBX*
+     * ### iShares Ageing Population
+     * *AGES.GB/GBX*
      */
-    agkgbgbx='agkgbgbx',
-
-    /**
-     * ### Autogrill Spa
-     * *AGL.IT/EUR*
-     */
-    agliteur='agliteur',
+    agesgbgbx='agesgbgbx',
 
     /**
      * ### Aegon NV
@@ -773,6 +791,12 @@ export enum Instrument {
      * *AI.FR/EUR*
      */
     aifreur='aifreur',
+
+    /**
+     * ### L&G Artificial Intelligence
+     * *AIAI.GB/USD*
+     */
+    aiaigbusd='aiaigbusd',
 
     /**
      * ### AMERICAN INTERNATIONAL GROUP
@@ -853,12 +877,6 @@ export enum Instrument {
     allyususd='allyususd',
 
     /**
-     * ### ALNYLAM PHARMACEUTICALS INC
-     * *ALNY.US/USD*
-     */
-    alnyususd='alnyususd',
-
-    /**
      * ### Alstom SA
      * *ALO.FR/EUR*
      */
@@ -875,12 +893,6 @@ export enum Instrument {
      * *ALV.DE/EUR*
      */
     alvdeeur='alvdeeur',
-
-    /**
-     * ### ALEXION PHARMACEUTICALS INC
-     * *ALXN.US/USD*
-     */
-    alxnususd='alxnususd',
 
     /**
      * ### APPLIED MATERIALS INC
@@ -937,7 +949,7 @@ export enum Instrument {
     amtususd='amtususd',
 
     /**
-     * ### American Well Corp Class A
+     * ### American Well Corp. (Class A)
      * *AMWL.US/USD*
      */
     amwlususd='amwlususd',
@@ -953,24 +965,6 @@ export enum Instrument {
      * *AMZN.US/USD*
      */
     amznususd='amznususd',
-
-    /**
-     * ### ARISTA NETWORKS INC
-     * *ANET.US/USD*
-     */
-    anetususd='anetususd',
-
-    /**
-     * ### ANSYS INC
-     * *ANSS.US/USD*
-     */
-    anssususd='anssususd',
-
-    /**
-     * ### ANTHEM INC
-     * *ANTM.US/USD*
-     */
-    antmususd='antmususd',
 
     /**
      * ### Antofagasta PLC
@@ -1003,18 +997,6 @@ export enum Instrument {
     apdususd='apdususd',
 
     /**
-     * ### Applus Services
-     * *APP.ES/EUR*
-     */
-    appeseur='appeseur',
-
-    /**
-     * ### APTIV PLC
-     * *APTV.US/USD*
-     */
-    aptvususd='aptvususd',
-
-    /**
      * ### ANTERO RESOURCES CORP
      * *AR.US/USD*
      */
@@ -1031,6 +1013,24 @@ export enum Instrument {
      * *ARE.US/USD*
      */
     areususd='areususd',
+
+    /**
+     * ### ARK Artificial Intelligence & Robotics UCITS ETF
+     * *ARKI.US/USD*
+     */
+    arkiususd='arkiususd',
+
+    /**
+     * ### ARK Atunonomous Technology & Robotics
+     * *ARKQ.US/USD*
+     */
+    arkqususd='arkqususd',
+
+    /**
+     * ### ARK Space exporation & INNO
+     * *ARKX.US/USD*
+     */
+    arkxususd='arkxususd',
 
     /**
      * ### ARAMARK
@@ -1063,28 +1063,16 @@ export enum Instrument {
     atcoasesek='atcoasesek',
 
     /**
-     * ### Atlantia Spa
-     * *ATL.IT/EUR*
-     */
-    atliteur='atliteur',
-
-    /**
-     * ### ATOS SE
-     * *ATO.FR/EUR*
-     */
-    atofreur='atofreur',
-
-    /**
      * ### ATMOS ENERGY CORP
      * *ATO.US/USD*
      */
     atoususd='atoususd',
 
     /**
-     * ### ACTIVISION BLIZZARD INC
-     * *ATVI.US/USD*
+     * ### Australian Dollar vs UAE Dirham
+     * *AUD/AED*
      */
-    atviususd='atviususd',
+    audaed='audaed',
 
     /**
      * ### Australian Dollar vs Canadian Dollar
@@ -1099,10 +1087,58 @@ export enum Instrument {
     audchf='audchf',
 
     /**
-     * ### Australian Dollar vs Japanese Yen
+     * ### Australian Dollar vs Chinese Yuan
+     * *AUD/CNH*
+     */
+    audcnh='audcnh',
+
+    /**
+     * ### Australian Dollar vs Czech Koruna
+     * *AUD/CZK*
+     */
+    audczk='audczk',
+
+    /**
+     * ### Australian Dollar vs Danish Krone
+     * *AUD/DKK*
+     */
+    auddkk='auddkk',
+
+    /**
+     * ### Australian Dollar vs Hong Kong Dollar
+     * *AUD/HKD*
+     */
+    audhkd='audhkd',
+
+    /**
+     * ### Australian Dollar vs Hungarian Forint
+     * *AUD/HUF*
+     */
+    audhuf='audhuf',
+
+    /**
+     * ### Australian Dollar vs Israeli Shekel
+     * *AUD/ILS*
+     */
+    audils='audils',
+
+    /**
+     * ### Australian Dollar vs Yen
      * *AUD/JPY*
      */
     audjpy='audjpy',
+
+    /**
+     * ### Australian Dollar vs Mexican Peso
+     * *AUD/MXN*
+     */
+    audmxn='audmxn',
+
+    /**
+     * ### Australian Dollar vs Norwegian Krone
+     * *AUD/NOK*
+     */
+    audnok='audnok',
 
     /**
      * ### Australian Dollar vs New Zealand Dollar
@@ -1111,16 +1147,58 @@ export enum Instrument {
     audnzd='audnzd',
 
     /**
+     * ### Australian Dollar vs Zloty
+     * *AUD/PLN*
+     */
+    audpln='audpln',
+
+    /**
+     * ### Australian Dollar vs Saudi Riyal
+     * *AUD/SAR*
+     */
+    audsar='audsar',
+
+    /**
+     * ### Australian Dollar vs Swedish Krona
+     * *AUD/SEK*
+     */
+    audsek='audsek',
+
+    /**
      * ### Australian Dollar vs Singapore Dollar
      * *AUD/SGD*
      */
     audsgd='audsgd',
 
     /**
+     * ### Australian Dollar vs Thai Baht
+     * *AUD/THB*
+     */
+    audthb='audthb',
+
+    /**
+     * ### Australian Dollar vs Turkish Lira
+     * *AUD/TRY*
+     */
+    audtry='audtry',
+
+    /**
      * ### Australian Dollar vs US Dollar
      * *AUD/USD*
      */
     audusd='audusd',
+
+    /**
+     * ### Australian Dollar vs Rand
+     * *AUD/ZAR*
+     */
+    audzar='audzar',
+
+    /**
+     * ### Australia 200 Index
+     * *AUS.IDX/AUD*
+     */
+    ausidxaud='ausidxaud',
 
     /**
      * ### Aviva PLC
@@ -1147,22 +1225,16 @@ export enum Instrument {
     avgoususd='avgoususd',
 
     /**
-     * ### AVALARA INC
-     * *AVLR.US/USD*
-     */
-    avlrususd='avlrususd',
-
-    /**
      * ### AVANTOR INC
      * *AVTR.US/USD*
      */
     avtrususd='avtrususd',
 
     /**
-     * ### AVEVA GROUP PLC
-     * *AVV.GB/GBX*
+     * ### Amplify Travel TECH ETF
+     * *AWAY.US/USD*
      */
-    avvgbgbx='avvgbgbx',
+    awayususd='awayususd',
 
     /**
      * ### AMERICAN WATER WORKS CO INC
@@ -1183,12 +1255,6 @@ export enum Instrument {
     axtaususd='axtaususd',
 
     /**
-     * ### ALTERYX INC - CLASS A
-     * *AYX.US/USD*
-     */
-    ayxususd='ayxususd',
-
-    /**
      * ### Azimut Holding Spa
      * *AZM.IT/EUR*
      */
@@ -1205,18 +1271,6 @@ export enum Instrument {
      * *AZN.US/USD*
      */
     aznususd='aznususd',
-
-    /**
-     * ### AUTOZONE INC
-     * *AZO.US/USD*
-     */
-    azoususd='azoususd',
-
-    /**
-     * ### ASPEN TECHNOLOGY INC
-     * *AZPN.US/USD*
-     */
-    azpnususd='azpnususd',
 
     /**
      * ### BAE Systems PLC
@@ -1279,7 +1333,7 @@ export enum Instrument {
     basdeeur='basdeeur',
 
     /**
-     * ### Basic Attention Token vs US Dollar
+     * ### Basic Attnetion Token vs US Dollar
      * *BAT/USD*
      */
     batusd='batusd',
@@ -1333,25 +1387,25 @@ export enum Instrument {
     bciteur='bciteur',
 
     /**
-     * ### Bitcoin Cash vs. Swiss franc
+     * ### Bitcoin Cash vs Swiss Franc
      * *BCH/CHF*
      */
     bchchf='bchchf',
 
     /**
-     * ### Bitcoin Cash vs. Euro
+     * ### Bitcoin Cash vs Euro
      * *BCH/EUR*
      */
     bcheur='bcheur',
 
     /**
-     * ### Bitcoin Cash vs. Pound sterling
+     * ### Bitcoin Cash vs Pound Sterling
      * *BCH/GBP*
      */
     bchgbp='bchgbp',
 
     /**
-     * ### Bitcoin Cash vs US dollar
+     * ### Bitcoin Cash vs US Dollar
      * *BCH/USD*
      */
     bchusd='bchusd',
@@ -1361,12 +1415,6 @@ export enum Instrument {
      * *BDEV.GB/GBX*
      */
     bdevgbgbx='bdevgbgbx',
-
-    /**
-     * ### BECTON DICKINSON AND CO
-     * *BDX.US/USD*
-     */
-    bdxususd='bdxususd',
 
     /**
      * ### Beiersdorf AG
@@ -1381,19 +1429,7 @@ export enum Instrument {
     belgbeeur='belgbeeur',
 
     /**
-     * ### BERRY GLOBAL GROUP INC
-     * *BERY.US/USD*
-     */
-    beryususd='beryususd',
-
-    /**
-     * ### BUNGE LTD
-     * *BG.US/USD*
-     */
-    bgususd='bgususd',
-
-    /**
-     * ### BAIDU INC
+     * ### BAIDU INC - SPON ADR
      * *BIDU.US/USD*
      */
     biduususd='biduususd',
@@ -1417,28 +1453,22 @@ export enum Instrument {
     birgieeur='birgieeur',
 
     /**
+     * ### ProShares Bitcoin Strategy ETF
+     * *BITO.US/USD*
+     */
+    bitoususd='bitoususd',
+
+    /**
      * ### BANK OF NEW YORK MELLON CORP
      * *BK.US/USD*
      */
     bkususd='bkususd',
 
     /**
-     * ### BLACK KNIGHT INC
-     * *BKI.US/USD*
-     */
-    bkiususd='bkiususd',
-
-    /**
      * ### BAKER HUGHES CO
      * *BKR.US/USD*
      */
     bkrususd='bkrususd',
-
-    /**
-     * ### BLACKROCK INC
-     * *BLK.US/USD*
-     */
-    blkususd='blkususd',
 
     /**
      * ### British Land Co PLC
@@ -1451,12 +1481,6 @@ export enum Instrument {
      * *BLT.GB/GBX*
      */
     bltgbgbx='bltgbgbx',
-
-    /**
-     * ### Banca Monte dei Paschi di Siena Spa
-     * *BMPS.IT/EUR*
-     */
-    bmpsiteur='bmpsiteur',
 
     /**
      * ### BIOMARIN PHARMACEUTICAL INC
@@ -1513,12 +1537,6 @@ export enum Instrument {
     bossdeeur='bossdeeur',
 
     /**
-     * ### BP PLC
-     * *BP.GB/GBX*
-     */
-    bpgbgbx='bpgbgbx',
-
-    /**
      * ### BP p.l.c.
      * *BP.US/USD*
      */
@@ -1553,6 +1571,12 @@ export enum Instrument {
      * *BRE.IT/EUR*
      */
     breiteur='breiteur',
+
+    /**
+     * ### Brent Crude Oil
+     * *BRENT.CMD/USD*
+     */
+    brentcmdusd='brentcmdusd',
 
     /**
      * ### BERKSHIRE HATHAWAY INC-CL B
@@ -1591,19 +1615,19 @@ export enum Instrument {
     btgbgbx='btgbgbx',
 
     /**
-     * ### Bitcoin vs. Swiss franc
+     * ### Bitcoin vs Swiss Franc
      * *BTC/CHF*
      */
     btcchf='btcchf',
 
     /**
-     * ### Bitcoin vs. Euro
+     * ### Bitcoin vs Euro
      * *BTC/EUR*
      */
     btceur='btceur',
 
     /**
-     * ### Bitcoin vs. Pound sterling
+     * ### Bitcoin vs Pound Sterling
      * *BTC/GBP*
      */
     btcgbp='btcgbp',
@@ -1613,6 +1637,18 @@ export enum Instrument {
      * *BTC/USD*
      */
     btcusd='btcusd',
+
+    /**
+     * ### Valkyrie Bitcoin Strategy ETF
+     * *BTF.US/USD*
+     */
+    btfususd='btfususd',
+
+    /**
+     * ### Global X Cybersecurity Ucits ETF
+     * *BUGG.GB/GBP*
+     */
+    bugggbgbp='bugggbgbp',
 
     /**
      * ### Euro Bund
@@ -1675,10 +1711,34 @@ export enum Instrument {
     caciususd='caciususd',
 
     /**
+     * ### Canadian Dollar vs UAE Dirham
+     * *CAD/AED*
+     */
+    cadaed='cadaed',
+
+    /**
      * ### Canadian Dollar vs Swiss Franc
      * *CAD/CHF*
      */
     cadchf='cadchf',
+
+    /**
+     * ### Canadian Dollar vs Chinese Yuan
+     * *CAD/CNH*
+     */
+    cadcnh='cadcnh',
+
+    /**
+     * ### Canadian Dollar vs Czech Koruna
+     * *CAD/CZK*
+     */
+    cadczk='cadczk',
+
+    /**
+     * ### Canadian Dollar vs Danish Krone
+     * *CAD/DKK*
+     */
+    caddkk='caddkk',
 
     /**
      * ### Canadian Dollar vs Hong Kong Dollar
@@ -1687,10 +1747,82 @@ export enum Instrument {
     cadhkd='cadhkd',
 
     /**
-     * ### Canadian Dollar vs Japanese Yen
+     * ### Canadian Dollar vs Hungarian Forint
+     * *CAD/HUF*
+     */
+    cadhuf='cadhuf',
+
+    /**
+     * ### Canadian Dollar vs Israeli Shekel
+     * *CAD/ILS*
+     */
+    cadils='cadils',
+
+    /**
+     * ### Canadian Dollar vs Yen
      * *CAD/JPY*
      */
     cadjpy='cadjpy',
+
+    /**
+     * ### Canadian Dollar vs Mexican Peso
+     * *CAD/MXN*
+     */
+    cadmxn='cadmxn',
+
+    /**
+     * ### Canadian Dollar vs Norwegian Krone
+     * *CAD/NOK*
+     */
+    cadnok='cadnok',
+
+    /**
+     * ### Canadian Dollar vs Zloty
+     * *CAD/PLN*
+     */
+    cadpln='cadpln',
+
+    /**
+     * ### Canadian Dollar vs Romanian Leu
+     * *CAD/RON*
+     */
+    cadron='cadron',
+
+    /**
+     * ### Canadian Dollar vs Saudi Riyal
+     * *CAD/SAR*
+     */
+    cadsar='cadsar',
+
+    /**
+     * ### Canadian Dollar vs Swedish Krona
+     * *CAD/SEK*
+     */
+    cadsek='cadsek',
+
+    /**
+     * ### Canadian Dollar vs Singapore Dollar
+     * *CAD/SGD*
+     */
+    cadsgd='cadsgd',
+
+    /**
+     * ### Canadian Dollar vs Thai Baht
+     * *CAD/THB*
+     */
+    cadthb='cadthb',
+
+    /**
+     * ### Canadian Dollar vs Turkish Lira
+     * *CAD/TRY*
+     */
+    cadtry='cadtry',
+
+    /**
+     * ### Canadian Dollar vs Rand
+     * *CAD/ZAR*
+     */
+    cadzar='cadzar',
 
     /**
      * ### CONAGRA FOODS INC
@@ -1721,12 +1853,6 @@ export enum Instrument {
      * *CARR.US/USD*
      */
     carrususd='carrususd',
-
-    /**
-     * ### Cattolica Ass Coop A
-     * *CASS.IT/EUR*
-     */
-    cassiteur='cassiteur',
 
     /**
      * ### CASEY'S GENERAL STORES INC
@@ -1789,16 +1915,10 @@ export enum Instrument {
     cdayususd='cdayususd',
 
     /**
-     * ### CENTENNIAL RESOURCE DEVELO-A
+     * ### CENTENNIAL RESOURCE DEVELO-A / Permian Resources Corp
      * *CDEV.US/USD*
      */
     cdevususd='cdevususd',
-
-    /**
-     * ### CDK GLOBAL INC
-     * *CDK.US/USD*
-     */
-    cdkususd='cdkususd',
 
     /**
      * ### CADENCE DESIGN SYS INC
@@ -1823,18 +1943,6 @@ export enum Instrument {
      * *CEMEXCPO.MX/MXN*
      */
     cemexcpomxmxn='cemexcpomxmxn',
-
-    /**
-     * ### CERNER CORP
-     * *CERN.US/USD*
-     */
-    cernususd='cernususd',
-
-    /**
-     * ### Cerved Information Solutions SPA
-     * *CERV.IT/EUR*
-     */
-    cerviteur='cerviteur',
 
     /**
      * ### CF INDUSTRIES HOLDINGS INC
@@ -1873,10 +1981,94 @@ export enum Instrument {
     chdususd='chdususd',
 
     /**
-     * ### Swiss Franc vs Japanese Yen
+     * ### Switzerland 20 Index
+     * *CHE.IDX/CHF*
+     */
+    cheidxchf='cheidxchf',
+
+    /**
+     * ### Swiss Franc vs UAE Dirham
+     * *CHF/AED*
+     */
+    chfaed='chfaed',
+
+    /**
+     * ### Swiss Franc vs Chinese Yuan
+     * *CHF/CNH*
+     */
+    chfcnh='chfcnh',
+
+    /**
+     * ### Swiss Franc vs Czech Koruna
+     * *CHF/CZK*
+     */
+    chfczk='chfczk',
+
+    /**
+     * ### Swiss Franc vs Danish Krone
+     * *CHF/DKK*
+     */
+    chfdkk='chfdkk',
+
+    /**
+     * ### Swiss Franc vs Hong Kong Dollar
+     * *CHF/HKD*
+     */
+    chfhkd='chfhkd',
+
+    /**
+     * ### Swiss Franc vs Hungarian Forint
+     * *CHF/HUF*
+     */
+    chfhuf='chfhuf',
+
+    /**
+     * ### Swiss Franc vs Israeli Shekel
+     * *CHF/ILS*
+     */
+    chfils='chfils',
+
+    /**
+     * ### Swiss Franc vs Yen
      * *CHF/JPY*
      */
     chfjpy='chfjpy',
+
+    /**
+     * ### Swiss Franc vs Mexican Peso
+     * *CHF/MXN*
+     */
+    chfmxn='chfmxn',
+
+    /**
+     * ### Swiss Franc vs Norwegian Krone
+     * *CHF/NOK*
+     */
+    chfnok='chfnok',
+
+    /**
+     * ### Swiss Franc vs Zloty
+     * *CHF/PLN*
+     */
+    chfpln='chfpln',
+
+    /**
+     * ### Swiss Franc vs Romanian Leu
+     * *CHF/RON*
+     */
+    chfron='chfron',
+
+    /**
+     * ### Swiss Franc vs Saudi Riyal
+     * *CHF/SAR*
+     */
+    chfsar='chfsar',
+
+    /**
+     * ### Swiss Franc vs Swedish Krona
+     * *CHF/SEK*
+     */
+    chfsek='chfsek',
 
     /**
      * ### Swiss Franc vs Singapore Dollar
@@ -1885,16 +2077,28 @@ export enum Instrument {
     chfsgd='chfsgd',
 
     /**
+     * ### Swiss Franc vs Thai Baht
+     * *CHF/THB*
+     */
+    chfthb='chfthb',
+
+    /**
+     * ### Swiss Franc vs Turkish Lira
+     * *CHF/TRY*
+     */
+    chftry='chftry',
+
+    /**
+     * ### Swiss Franc vs Rand
+     * *CHF/ZAR*
+     */
+    chfzar='chfzar',
+
+    /**
      * ### China A50 Index
      * *CHI.IDX/USD*
      */
     chiidxusd='chiidxusd',
-
-    /**
-     * ### CHANGE HEALTHCARE INC
-     * *CHNG.US/USD*
-     */
-    chngususd='chngususd',
 
     /**
      * ### CIGNA CORP
@@ -1915,12 +2119,6 @@ export enum Instrument {
     clnchchf='clnchchf',
 
     /**
-     * ### CONTINENTAL RESOURCES INC/OK
-     * *CLR.US/USD*
-     */
-    clrususd='clrususd',
-
-    /**
      * ### COMCAST CORP-CLASS A
      * *CMCSA.US/USD*
      */
@@ -1937,12 +2135,6 @@ export enum Instrument {
      * *CMG.US/USD*
      */
     cmgususd='cmgususd',
-
-    /**
-     * ### CUMMINS INC
-     * *CMI.US/USD*
-     */
-    cmiususd='cmiususd',
 
     /**
      * ### Compound vs US Dollar
@@ -1963,28 +2155,70 @@ export enum Instrument {
     cncususd='cncususd',
 
     /**
-     * ### NY Cocoa
+     * ### iShares NASDAQ 100 UCITS ETF
+     * *CNDX.GB/USD*
+     */
+    cndxgbusd='cndxgbusd',
+
+    /**
+     * ### Chinese Yuan vs Czech Koruna
+     * *CNH/CZK*
+     */
+    cnhczk='cnhczk',
+
+    /**
+     * ### Chinese Yuan vs Hong Kong Dollar
+     * *CNH/HKD*
+     */
+    cnhhkd='cnhhkd',
+
+    /**
+     * ### Chinese Yuan vs Hungarian Forint
+     * *CNH/HUF*
+     */
+    cnhhuf='cnhhuf',
+
+    /**
+     * ### Chinese Yuan vs Yen
+     * *CNH/JPY*
+     */
+    cnhjpy='cnhjpy',
+
+    /**
+     * ### Chinese Yuan vs Mexican Peso
+     * *CNH/MXN*
+     */
+    cnhmxn='cnhmxn',
+
+    /**
+     * ### Chinese Yuan vs Thai Baht
+     * *CNH/THB*
+     */
+    cnhthb='cnhthb',
+
+    /**
+     * ### Chinese Yuan vs Turkish Lira
+     * *CNH/TRY*
+     */
+    cnhtry='cnhtry',
+
+    /**
+     * ### Chinese Yuan vs Rand
+     * *CNH/ZAR*
+     */
+    cnhzar='cnhzar',
+
+    /**
+     * ### US Cocoa
      * *COCOA.CMD/USD*
      */
     cocoacmdusd='cocoacmdusd',
-
-    /**
-     * ### CAPITAL ONE FINANCIAL CORP
-     * *COF.US/USD*
-     */
-    cofususd='cofususd',
 
     /**
      * ### Coffee Arabica
      * *COFFEE.CMD/USX*
      */
     coffeecmdusx='coffeecmdusx',
-
-    /**
-     * ### COHERENT INC
-     * *COHR.US/USD*
-     */
-    cohrususd='cohrususd',
 
     /**
      * ### AMERICOLD REALTY TRUST
@@ -2035,12 +2269,6 @@ export enum Instrument {
     cottoncmdusx='cottoncmdusx',
 
     /**
-     * ### COUPA SOFTWARE INC
-     * *COUP.US/USD*
-     */
-    coupususd='coupususd',
-
-    /**
      * ### Covestro AG
      * *COV.DE/EUR*
      */
@@ -2089,12 +2317,6 @@ export enum Instrument {
     crdagbgbx='crdagbgbx',
 
     /**
-     * ### CRH Plc
-     * *CRG.IE/EUR*
-     */
-    crgieeur='crgieeur',
-
-    /**
      * ### CRH PLC
      * *CRH.GB/GBX*
      */
@@ -2119,28 +2341,28 @@ export enum Instrument {
     csfreur='csfreur',
 
     /**
-     * ### Credit Suisse Group AG
-     * *CS.US/USD*
-     */
-    csususd='csususd',
-
-    /**
      * ### CISCO SYSTEMS INC
      * *CSCO.US/USD*
      */
     cscoususd='cscoususd',
 
     /**
-     * ### Credit Suisse Group AG
-     * *CSGN.CH/CHF*
-     */
-    csgnchchf='csgnchchf',
-
-    /**
      * ### COSTAR GROUP INC
      * *CSGP.US/USD*
      */
     csgpususd='csgpususd',
+
+    /**
+     * ### EUR Deposit Interest Rates vs Euro
+     * *CSH2.FR/EUR*
+     */
+    csh2freur='csh2freur',
+
+    /**
+     * ### GBP Deposit Interest Rates vs
+     * *CSH2.GB/GBX*
+     */
+    csh2gbgbx='csh2gbgbx',
 
     /**
      * ### CARLISLE COS INC
@@ -2161,12 +2383,6 @@ export enum Instrument {
     ctlususd='ctlususd',
 
     /**
-     * ### CATALENT INC
-     * *CTLT.US/USD*
-     */
-    ctltususd='ctltususd',
-
-    /**
      * ### COGNIZANT TECH SOLUTIONS-A
      * *CTSH.US/USD*
      */
@@ -2179,22 +2395,10 @@ export enum Instrument {
     ctvaususd='ctvaususd',
 
     /**
-     * ### CITRIX SYSTEMS INC
-     * *CTXS.US/USD*
-     */
-    ctxsususd='ctxsususd',
-
-    /**
      * ### CUBESMART
      * *CUBE.US/USD*
      */
     cubeususd='cubeususd',
-
-    /**
-     * ### Credito Valtellinese Spa
-     * *CVAL.IT/EUR*
-     */
-    cvaliteur='cvaliteur',
 
     /**
      * ### CARVANA CO
@@ -2213,6 +2417,36 @@ export enum Instrument {
      * *CVX.US/USD*
      */
     cvxususd='cvxususd',
+
+    /**
+     * ### WisdomTree Cybersecurity UCITS ETF USD
+     * *CYSE.GB/GBX*
+     */
+    cysegbgbx='cysegbgbx',
+
+    /**
+     * ### Czech Koruna vs Hungarian Forint
+     * *CZK/HUF*
+     */
+    czkhuf='czkhuf',
+
+    /**
+     * ### Czech Koruna vs Yen
+     * *CZK/JPY*
+     */
+    czkjpy='czkjpy',
+
+    /**
+     * ### Czech Koruna vs Thai Baht
+     * *CZK/THB*
+     */
+    czkthb='czkthb',
+
+    /**
+     * ### Czech Koruna vs Turkish Lira
+     * *CZK/TRY*
+     */
+    czktry='czktry',
 
     /**
      * ### CAESARS ENTERTAINMENT INC
@@ -2239,7 +2473,7 @@ export enum Instrument {
     dalususd='dalususd',
 
     /**
-     * ### Danieli & Co Spa
+     * ### Danieli & C. Officine Meccaniche S.p.A.
      * *DAN.IT/EUR*
      */
     daniteur='daniteur',
@@ -2287,10 +2521,16 @@ export enum Instrument {
     dellususd='dellususd',
 
     /**
-     * ### DISCOVER FINANCIAL SERVICES
-     * *DFS.US/USD*
+     * ### Germany 40 Index
+     * *DEU.IDX/EUR*
      */
-    dfsususd='dfsususd',
+    deuidxeur='deuidxeur',
+
+    /**
+     * ### VanECK Defense
+     * *DFNG.GB/GBP*
+     */
+    dfnggbgbp='dfnggbgbp',
 
     /**
      * ### Vinci SA
@@ -2329,25 +2569,19 @@ export enum Instrument {
     dhrususd='dhrususd',
 
     /**
-     * ### Distribuidora Internacional de Alimentacion SA
-     * *DIA.ES/EUR*
-     */
-    diaeseur='diaeseur',
-
-    /**
      * ### Diasorin Spa
      * *DIA.IT/EUR*
      */
     diaiteur='diaiteur',
 
     /**
-     * ### SPDR Dow Jones® Industrial Average ETF
+     * ### SPDR Dow Jones Industrial Average ETF
      * *DIA.US/USD*
      */
     diaususd='diaususd',
 
     /**
-     * ### Gas oil
+     * ### Gasoil
      * *DIESEL.CMD/USD*
      */
     dieselcmdusd='dieselcmdusd',
@@ -2357,6 +2591,84 @@ export enum Instrument {
      * *DIS.US/USD*
      */
     disususd='disususd',
+
+    /**
+     * ### Danish Krone vs UAE Dirham
+     * *DKK/AED*
+     */
+    dkkaed='dkkaed',
+
+    /**
+     * ### Danish Krone vs Chinese Yuan
+     * *DKK/CNH*
+     */
+    dkkcnh='dkkcnh',
+
+    /**
+     * ### Danish Krone vs Czech Koruna
+     * *DKK/CZK*
+     */
+    dkkczk='dkkczk',
+
+    /**
+     * ### Danish Krone vs Hong Kong Dollar
+     * *DKK/HKD*
+     */
+    dkkhkd='dkkhkd',
+
+    /**
+     * ### Danish Krone vs Hungarian Forint
+     * *DKK/HUF*
+     */
+    dkkhuf='dkkhuf',
+
+    /**
+     * ### Danish Krone vs Israeli Shekel
+     * *DKK/ILS*
+     */
+    dkkils='dkkils',
+
+    /**
+     * ### Danish Krone vs Yen
+     * *DKK/JPY*
+     */
+    dkkjpy='dkkjpy',
+
+    /**
+     * ### Danish Krone vs Mexican Peso
+     * *DKK/MXN*
+     */
+    dkkmxn='dkkmxn',
+
+    /**
+     * ### Danish Krone vs Romanian Leu
+     * *DKK/RON*
+     */
+    dkkron='dkkron',
+
+    /**
+     * ### Danish Krone vs Saudi Riyal
+     * *DKK/SAR*
+     */
+    dkksar='dkksar',
+
+    /**
+     * ### Danish Krone vs Thai Baht
+     * *DKK/THB*
+     */
+    dkkthb='dkkthb',
+
+    /**
+     * ### Danish Krone vs Turkish Lira
+     * *DKK/TRY*
+     */
+    dkktry='dkktry',
+
+    /**
+     * ### Danish Krone vs Rand
+     * *DKK/ZAR*
+     */
+    dkkzar='dkkzar',
 
     /**
      * ### DICK'S SPORTING GOODS INC
@@ -2377,12 +2689,6 @@ export enum Instrument {
     dltrususd='dltrususd',
 
     /**
-     * ### DNB ASA
-     * *DNB.NO/NOK*
-     */
-    dnbnonok='dnbnonok',
-
-    /**
      * ### DOCUSIGN INC
      * *DOCU.US/USD*
      */
@@ -2401,13 +2707,7 @@ export enum Instrument {
     doxususd='doxususd',
 
     /**
-     * ### DECHRA PHARMACEUTICALS PLC
-     * *DPH.GB/GBX*
-     */
-    dphgbgbx='dphgbgbx',
-
-    /**
-     * ### Deutsche Post AG
+     * ### DHL Group
      * *DPW.DE/EUR*
      */
     dpwdeeur='dpwdeeur',
@@ -2417,12 +2717,6 @@ export enum Instrument {
      * *DPZ.US/USD*
      */
     dpzususd='dpzususd',
-
-    /**
-     * ### DUKE REALTY CORP
-     * *DRE.US/USD*
-     */
-    dreususd='dreususd',
 
     /**
      * ### LYXOR ETF Daily X2 Short Bund
@@ -2459,12 +2753,6 @@ export enum Instrument {
      * *DTE.DE/EUR*
      */
     dtedeeur='dtedeeur',
-
-    /**
-     * ### Dukascoin vs Euro
-     * *DUK+/EUR*
-     */
-    dukeur='dukeur',
 
     /**
      * ### DUKE ENERGY CORP
@@ -2527,16 +2815,16 @@ export enum Instrument {
     ebsateur='ebsateur',
 
     /**
+     * ### iShares Electric Vehicles and Driving Technology UCITS ETF
+     * *ECAR.GB/USD*
+     */
+    ecargbusd='ecargbusd',
+
+    /**
      * ### ELECTROCOMPONENTS PLC
      * *ECM.GB/GBX*
      */
     ecmgbgbx='ecmgbgbx',
-
-    /**
-     * ### Electricite de France SA
-     * *EDF.FR/EUR*
-     */
-    edffreur='edffreur',
 
     /**
      * ### EDP - Energias de Portugal SA
@@ -2599,12 +2887,6 @@ export enum Instrument {
     eleeseur='eleeseur',
 
     /**
-     * ### Grupo Elektra SAB DE CV
-     * *ELEKTRA.MX/MXN*
-     */
-    elektramxmxn='elektramxmxn',
-
-    /**
      * ### Elisa OYJ
      * *ELI1V.FI/EUR*
      */
@@ -2665,12 +2947,6 @@ export enum Instrument {
     eniiteur='eniiteur',
 
     /**
-     * ### Enjin vs US Dollar
-     * *ENJ/USD*
-     */
-    enjusd='enjusd',
-
-    /**
      * ### ENPHASE ENERGY INC
      * *ENPH.US/USD*
      */
@@ -2693,12 +2969,6 @@ export enum Instrument {
      * *EOG.US/USD*
      */
     eogususd='eogususd',
-
-    /**
-     * ### EOS vs US Dollar
-     * *EOS/USD*
-     */
-    eosusd='eosusd',
 
     /**
      * ### EPAM SYSTEMS INC
@@ -2737,6 +3007,24 @@ export enum Instrument {
     esususd='esususd',
 
     /**
+     * ### iShares MSCI Europe Health Care Sector UCITS ETF
+     * *ESIH.GB/GBP*
+     */
+    esihgbgbp='esihgbgbp',
+
+    /**
+     * ### Spain 35 Index
+     * *ESP.IDX/EUR*
+     */
+    espidxeur='espidxeur',
+
+    /**
+     * ### Vaneck Video Game Esport ETF
+     * *ESPO.US/USD*
+     */
+    espoususd='espoususd',
+
+    /**
      * ### ESSEX PROPERTY TRUST INC
      * *ESS.US/USD*
      */
@@ -2749,19 +3037,19 @@ export enum Instrument {
     estcususd='estcususd',
 
     /**
-     * ### Ethereum vs. Swiss franc
+     * ### Ether vs Swiss Franc
      * *ETH/CHF*
      */
     ethchf='ethchf',
 
     /**
-     * ### Ethereum vs. Euro
+     * ### Ether vs Euro
      * *ETH/EUR*
      */
     etheur='etheur',
 
     /**
-     * ### Ethereum vs. Pound sterling
+     * ### Ether vs Pound Sterling
      * *ETH/GBP*
      */
     ethgbp='ethgbp',
@@ -2785,6 +3073,18 @@ export enum Instrument {
     etsyususd='etsyususd',
 
     /**
+     * ### EUR Coin vs Euro
+     * *EUC/EUR*
+     */
+    euceur='euceur',
+
+    /**
+     * ### Euro vs UAE Dirham
+     * *EUR/AED*
+     */
+    euraed='euraed',
+
+    /**
      * ### Euro vs Australian Dollar
      * *EUR/AUD*
      */
@@ -2801,6 +3101,12 @@ export enum Instrument {
      * *EUR/CHF*
      */
     eurchf='eurchf',
+
+    /**
+     * ### Euro vs Chinese Yuan
+     * *EUR/CNH*
+     */
+    eurcnh='eurcnh',
 
     /**
      * ### Euro vs Czech Koruna
@@ -2833,10 +3139,22 @@ export enum Instrument {
     eurhuf='eurhuf',
 
     /**
-     * ### Euro vs Japanese Yen
+     * ### Euro vs Israeli Shekel
+     * *EUR/ILS*
+     */
+    eurils='eurils',
+
+    /**
+     * ### Euro vs Yen
      * *EUR/JPY*
      */
     eurjpy='eurjpy',
+
+    /**
+     * ### Euro vs Mexican Peso
+     * *EUR/MXN*
+     */
+    eurmxn='eurmxn',
 
     /**
      * ### Euro vs Norwegian Krone
@@ -2851,10 +3169,22 @@ export enum Instrument {
     eurnzd='eurnzd',
 
     /**
-     * ### Euro vs Polish Zloty
+     * ### Euro vs Zloty
      * *EUR/PLN*
      */
     eurpln='eurpln',
+
+    /**
+     * ### Euro vs Romanian Leu
+     * *EUR/RON*
+     */
+    eurron='eurron',
+
+    /**
+     * ### Euro vs Saudi Riyal
+     * *EUR/SAR*
+     */
+    eursar='eursar',
 
     /**
      * ### Euro vs Swedish Krona
@@ -2869,6 +3199,12 @@ export enum Instrument {
     eursgd='eursgd',
 
     /**
+     * ### Euro vs Thai Baht
+     * *EUR/THB*
+     */
+    eurthb='eurthb',
+
+    /**
      * ### Euro vs Turkish Lira
      * *EUR/TRY*
      */
@@ -2879,6 +3215,18 @@ export enum Instrument {
      * *EUR/USD*
      */
     eurusd='eurusd',
+
+    /**
+     * ### Euro vs Rand
+     * *EUR/ZAR*
+     */
+    eurzar='eurzar',
+
+    /**
+     * ### EU Stocks 50 Index
+     * *EUS.IDX/EUR*
+     */
+    eusidxeur='eusidxeur',
 
     /**
      * ### EVERGY INC
@@ -2911,13 +3259,13 @@ export enum Instrument {
     ewjususd='ewjususd',
 
     /**
-     * ### iShares MSCI Mexico Capped
+     * ### iShares MSCI Mexico Capped ETF
      * *EWW.US/USD*
      */
     ewwususd='ewwususd',
 
     /**
-     * ### iShares MSCI Brazil Capped
+     * ### iShares MSCI Brazil Capped isin
      * *EWZ.US/USD*
      */
     ewzususd='ewzususd',
@@ -2965,90 +3313,6 @@ export enum Instrument {
     ezuususd='ezuususd',
 
     /**
-     * ### US Brent Crude Oil
-     * *BRENT.CMD/USD*
-     */
-    brentcmdusd='brentcmdusd',
-
-    /**
-     * ### France 40 Index
-     * *FRA.IDX/EUR*
-     */
-    fraidxeur='fraidxeur',
-
-    /**
-     * ### USA 30 Index
-     * *USA30.IDX/USD*
-     */
-    usa30idxusd='usa30idxusd',
-
-    /**
-     * ### Germany 40 Index
-     * *DEU.IDX/EUR*
-     */
-    deuidxeur='deuidxeur',
-
-    /**
-     * ### Europe 50 Index
-     * *EUS.IDX/EUR*
-     */
-    eusidxeur='eusidxeur',
-
-    /**
-     * ### UK 100 Index
-     * *GBR.IDX/GBP*
-     */
-    gbridxgbp='gbridxgbp',
-
-    /**
-     * ### Hong Kong 40 Index
-     * *HKG.IDX/HKD*
-     */
-    hkgidxhkd='hkgidxhkd',
-
-    /**
-     * ### Spain 35 Index
-     * *ESP.IDX/EUR*
-     */
-    espidxeur='espidxeur',
-
-    /**
-     * ### US Light Crude Oil
-     * *LIGHT.CMD/USD*
-     */
-    lightcmdusd='lightcmdusd',
-
-    /**
-     * ### Japan 225
-     * *JPN.IDX/JPY*
-     */
-    jpnidxjpy='jpnidxjpy',
-
-    /**
-     * ### USA 100 Technical Index
-     * *USATECH.IDX/USD*
-     */
-    usatechidxusd='usatechidxusd',
-
-    /**
-     * ### USA 500 Index
-     * *USA500.IDX/USD*
-     */
-    usa500idxusd='usa500idxusd',
-
-    /**
-     * ### Switzerland 20 Index
-     * *CHE.IDX/CHF*
-     */
-    cheidxchf='cheidxchf',
-
-    /**
-     * ### Australia 200 Index
-     * *AUS.IDX/AUD*
-     */
-    ausidxaud='ausidxaud',
-
-    /**
      * ### FORD MOTOR CO
      * *F.US/USD*
      */
@@ -3061,16 +3325,10 @@ export enum Instrument {
     fangususd='fangususd',
 
     /**
-     * ### FACEBOOK INC-A / META
+     * ### FACEBOOK INC-A / Meta
      * *FB.US/USD*
      */
     fbususd='fbususd',
-
-    /**
-     * ### FORTUNE BRANDS HOME & SECURI
-     * *FBHS.US/USD*
-     */
-    fbhsususd='fbhsususd',
 
     /**
      * ### FinecoBank Banca Fineco Spa
@@ -3085,13 +3343,7 @@ export enum Instrument {
     fcaiteur='fcaiteur',
 
     /**
-     * ### Fomento de Construcciones y Contratas SA
-     * *FCC.ES/EUR*
-     */
-    fcceseur='fcceseur',
-
-    /**
-     * ### FIRST CITIZENS BCSHS -CL A
+     * ### FIRST CITIZENS BCSHS  -CL A
      * *FCNCA.US/USD*
      */
     fcncaususd='fcncaususd',
@@ -3139,6 +3391,12 @@ export enum Instrument {
     ficoususd='ficoususd',
 
     /**
+     * ### Global X Fintech ETF
+     * *FINX.US/USD*
+     */
+    finxususd='finxususd',
+
+    /**
      * ### FIFTH THIRD BANCORP
      * *FITB.US/USD*
      */
@@ -3149,12 +3407,6 @@ export enum Instrument {
      * *FIVE.US/USD*
      */
     fiveususd='fiveususd',
-
-    /**
-     * ### FOOT LOCKER INC
-     * *FL.US/USD*
-     */
-    flususd='flususd',
 
     /**
      * ### FLEETCOR TECHNOLOGIES INC
@@ -3199,10 +3451,10 @@ export enum Instrument {
     frfreur='frfreur',
 
     /**
-     * ### FIRST REPUBLIC BANK/CA
-     * *FRC.US/USD*
+     * ### France 40 Index
+     * *FRA.IDX/EUR*
      */
-    frcususd='frcususd',
+    fraidxeur='fraidxeur',
 
     /**
      * ### Fresenius SE & Co KGaA
@@ -3235,6 +3487,12 @@ export enum Instrument {
     ftvususd='ftvususd',
 
     /**
+     * ### First Trust Nasdaq Food & BE
+     * *FTXG.US/USD*
+     */
+    ftxgususd='ftxgususd',
+
+    /**
      * ### iShares China Large-Cap ETF
      * *FXI.US/USD*
      */
@@ -3242,7 +3500,7 @@ export enum Instrument {
 
     /**
      * ### Assicurazioni Generali Spa
-     * *DLG.IT/EUR*
+     * *G.IT/EUR*
      */
     giteur='giteur',
 
@@ -3257,12 +3515,6 @@ export enum Instrument {
      * *GALP.PT/EUR*
      */
     galppteur='galppteur',
-
-    /**
-     * ### Gamesa Corporacion Tecnologica SA
-     * *GAM.ES/EUR*
-     */
-    gameseur='gameseur',
 
     /**
      * ### Grupo Aeroportuario del Pacific Sab CV
@@ -3283,6 +3535,12 @@ export enum Instrument {
     gaseseur='gaseseur',
 
     /**
+     * ### Pound Sterling vs UAE Dirham
+     * *GBP/AED*
+     */
+    gbpaed='gbpaed',
+
+    /**
      * ### Pound Sterling vs Australian Dollar
      * *GBP/AUD*
      */
@@ -3301,10 +3559,58 @@ export enum Instrument {
     gbpchf='gbpchf',
 
     /**
-     * ### Pound Sterling vs Japanese Yen
+     * ### Pound Sterling vs Chinese Yuan
+     * *GBP/CNH*
+     */
+    gbpcnh='gbpcnh',
+
+    /**
+     * ### Pound Sterling vs Czech Koruna
+     * *GBP/CZK*
+     */
+    gbpczk='gbpczk',
+
+    /**
+     * ### Pound Sterling vs Danish Krone
+     * *GBP/DKK*
+     */
+    gbpdkk='gbpdkk',
+
+    /**
+     * ### Pound Sterling vs Hong Kong Dollar
+     * *GBP/HKD*
+     */
+    gbphkd='gbphkd',
+
+    /**
+     * ### Pound Sterling vs Hungarian Forint
+     * *GBP/HUF*
+     */
+    gbphuf='gbphuf',
+
+    /**
+     * ### Pound Sterling vs Israeli Shekel
+     * *GBP/ILS*
+     */
+    gbpils='gbpils',
+
+    /**
+     * ### Pound Sterling vs Yen
      * *GBP/JPY*
      */
     gbpjpy='gbpjpy',
+
+    /**
+     * ### Pound Sterling vs Mexican Peso
+     * *GBP/MXN*
+     */
+    gbpmxn='gbpmxn',
+
+    /**
+     * ### Pound Sterling vs Norwegian Krone
+     * *GBP/NOK*
+     */
+    gbpnok='gbpnok',
 
     /**
      * ### Pound Sterling vs New Zealand Dollar
@@ -3313,10 +3619,64 @@ export enum Instrument {
     gbpnzd='gbpnzd',
 
     /**
+     * ### Pound Sterling vs Zloty
+     * *GBP/PLN*
+     */
+    gbppln='gbppln',
+
+    /**
+     * ### Pound Sterling vs Romanian Leu
+     * *GBP/RON*
+     */
+    gbpron='gbpron',
+
+    /**
+     * ### Pound Sterling vs Saudi Riyal
+     * *GBP/SAR*
+     */
+    gbpsar='gbpsar',
+
+    /**
+     * ### Pound Sterling vs Swedish Krona
+     * *GBP/SEK*
+     */
+    gbpsek='gbpsek',
+
+    /**
+     * ### Pound Sterling vs Singapore Dollar
+     * *GBP/SGD*
+     */
+    gbpsgd='gbpsgd',
+
+    /**
+     * ### Pound Sterling vs Thai Baht
+     * *GBP/THB*
+     */
+    gbpthb='gbpthb',
+
+    /**
+     * ### Pound Sterling vs Turkish Lira
+     * *GBP/TRY*
+     */
+    gbptry='gbptry',
+
+    /**
      * ### Pound Sterling vs US Dollar
      * *GBP/USD*
      */
     gbpusd='gbpusd',
+
+    /**
+     * ### Pound Sterling vs Rand
+     * *GBP/ZAR*
+     */
+    gbpzar='gbpzar',
+
+    /**
+     * ### FTSE 100 Index
+     * *GBR.IDX/GBP*
+     */
+    gbridxgbp='gbridxgbp',
 
     /**
      * ### Grupo Carso Sab De CV
@@ -3373,12 +3733,6 @@ export enum Instrument {
     gfnorteomxmxn='gfnorteomxmxn',
 
     /**
-     * ### G4S PLC
-     * *GFS.GB/GBX*
-     */
-    gfsgbgbx='gfsgbgbx',
-
-    /**
      * ### GRACO INC
      * *GGG.US/USD*
      */
@@ -3431,6 +3785,12 @@ export enum Instrument {
      * *GLEN.GB/GBX*
      */
     glengbgbx='glengbgbx',
+
+    /**
+     * ### L&G Clean Water
+     * *GLGG.GB/GBX*
+     */
+    glgggbgbx='glgggbgbx',
 
     /**
      * ### GAMING AND LEISURE PROPERTIE
@@ -3511,12 +3871,6 @@ export enum Instrument {
     gskgbgbx='gskgbgbx',
 
     /**
-     * ### WW GRAINGER INC
-     * *GWW.US/USD*
-     */
-    gwwususd='gwwususd',
-
-    /**
      * ### HYATT HOTELS CORP - CL A
      * *H.US/USD*
      */
@@ -3577,12 +3931,6 @@ export enum Instrument {
     hen3deeur='hen3deeur',
 
     /**
-     * ### HESS CORP
-     * *HES.US/USD*
-     */
-    hesususd='hesususd',
-
-    /**
      * ### HELLOFRESH SE
      * *HFG.DE/EUR*
      */
@@ -3601,10 +3949,52 @@ export enum Instrument {
     hikgbgbx='hikgbgbx',
 
     /**
-     * ### Hong Kong Dollar vs Japanese Yen
+     * ### Hong Kong Dollar vs Czech Koruna
+     * *HKD/CZK*
+     */
+    hkdczk='hkdczk',
+
+    /**
+     * ### Hong Kong Dollar vs Hungarian Forint
+     * *HKD/HUF*
+     */
+    hkdhuf='hkdhuf',
+
+    /**
+     * ### Hong Kong Dollar vs Yen
      * *HKD/JPY*
      */
     hkdjpy='hkdjpy',
+
+    /**
+     * ### Hong Kong Dollar vs Mexican Peso
+     * *HKD/MXN*
+     */
+    hkdmxn='hkdmxn',
+
+    /**
+     * ### Hong Kong Dollar vs Thai Baht
+     * *HKD/THB*
+     */
+    hkdthb='hkdthb',
+
+    /**
+     * ### Hong Kong Dollar vs Turkish Lira
+     * *HKD/TRY*
+     */
+    hkdtry='hkdtry',
+
+    /**
+     * ### Hong Kong Dollar vs Rand
+     * *HKD/ZAR*
+     */
+    hkdzar='hkdzar',
+
+    /**
+     * ### Hong Kong Index
+     * *HKG.IDX/HKD*
+     */
+    hkgidxhkd='hkgidxhkd',
 
     /**
      * ### HALMA PLC
@@ -3703,12 +4093,6 @@ export enum Instrument {
     hwmususd='hwmususd',
 
     /**
-     * ### HORIZON THERAPEUTICS PLC
-     * *HZNP.US/USD*
-     */
-    hznpususd='hznpususd',
-
-    /**
      * ### International Consolidated Airlines Grou
      * *IAG.GB/GBX*
      */
@@ -3757,6 +4141,60 @@ export enum Instrument {
     idxxususd='idxxususd',
 
     /**
+     * ### BlackRock ICS Euro Liquidity Fund vs Euro
+     * *IE0005023803.FN/EUR*
+     */
+    ie0005023803fneur='ie0005023803fneur',
+
+    /**
+     * ### Goldman Sachs Euro Government Liquid Reserves Fund Institutional Accumulation (T) Class vs Euro
+     * *IE000P6XLJ75.FN/EUR*
+     */
+    ie000p6xlj75fneur='ie000p6xlj75fneur',
+
+    /**
+     * ### BlackRock ICS Sterling Government Liquidity Fund vs Pound Sterling
+     * *IE00B40G6S53.FN/GBP*
+     */
+    ie00b40g6s53fngbp='ie00b40g6s53fngbp',
+
+    /**
+     * ### Goldman Sachs Euro Liquid Reserves Fund Institutional Accumulation (T) Class vs Euro
+     * *IE00B96CNN65.FN/EUR*
+     */
+    ie00b96cnn65fneur='ie00b96cnn65fneur',
+
+    /**
+     * ### Goldman Sachs US$ Liquid Reserves Fund Institutional Accumulation (T) Class vs US Dollar
+     * *IE00BHC9JR32.FN/USD*
+     */
+    ie00bhc9jr32fnusd='ie00bhc9jr32fnusd',
+
+    /**
+     * ### BlackRock ICS US Dollar Liquidity Fund vs US Dollar
+     * *IE00BHRWWY54.FN/USD*
+     */
+    ie00bhrwwy54fnusd='ie00bhrwwy54fnusd',
+
+    /**
+     * ### Goldman Sachs Sterling Government Liquid Reserves Fund Institutional Accumulation (T) Class vs Pound Sterling
+     * *IE00BKV42047.FN/GBP*
+     */
+    ie00bkv42047fngbp='ie00bkv42047fngbp',
+
+    /**
+     * ### Goldman Sachs Sterling Liquid Reserves Fund Institutional Accumulation (T) Class vs Pound Sterling
+     * *IE00BL0BL405.FN/GBP*
+     */
+    ie00bl0bl405fngbp='ie00bl0bl405fngbp',
+
+    /**
+     * ### Goldman Sachs US$ Treasury Liquid Reserves Fund Institutional Accumulation (T) Class vs US Dollar
+     * *IE00BL0BL736.FN/USD*
+     */
+    ie00bl0bl736fnusd='ie00bl0bl736fnusd',
+
+    /**
      * ### iShares 7-10 Year Treasury Bond ETF
      * *IEF.US/USD*
      */
@@ -3779,6 +4217,12 @@ export enum Instrument {
      * *IG.IT/EUR*
      */
     igiteur='igiteur',
+
+    /**
+     * ### iShares Physical Gold ETC - IGLN
+     * *IGLN.US/USD*
+     */
+    iglnususd='iglnususd',
 
     /**
      * ### InterContinental Hotels Group PLC
@@ -3811,7 +4255,79 @@ export enum Instrument {
     ilmnususd='ilmnususd',
 
     /**
-     * ### Imperial Brands Plc
+     * ### Israeli Shekel vs UAE Dirham
+     * *ILS/AED*
+     */
+    ilsaed='ilsaed',
+
+    /**
+     * ### Israeli Shekel vs Chinese Yuan
+     * *ILS/CNH*
+     */
+    ilscnh='ilscnh',
+
+    /**
+     * ### Israeli Shekel vs Czech Koruna
+     * *ILS/CZK*
+     */
+    ilsczk='ilsczk',
+
+    /**
+     * ### Israeli Shekel vs Hong Kong Dollar
+     * *ILS/HKD*
+     */
+    ilshkd='ilshkd',
+
+    /**
+     * ### Israeli Shekel vs Hungarian Forint
+     * *ILS/HUF*
+     */
+    ilshuf='ilshuf',
+
+    /**
+     * ### Israeli Shekel vs Yen
+     * *ILS/JPY*
+     */
+    ilsjpy='ilsjpy',
+
+    /**
+     * ### Israeli Shekel vs Mexican Peso
+     * *ILS/MXN*
+     */
+    ilsmxn='ilsmxn',
+
+    /**
+     * ### Israeli Shekel vs Romanian Leu
+     * *ILS/RON*
+     */
+    ilsron='ilsron',
+
+    /**
+     * ### Israeli Shekel vs Saudi Riyal
+     * *ILS/SAR*
+     */
+    ilssar='ilssar',
+
+    /**
+     * ### Israeli Shekel vs Thai Baht
+     * *ILS/THB*
+     */
+    ilsthb='ilsthb',
+
+    /**
+     * ### Israeli Shekel vs Turkish Lira
+     * *ILS/TRY*
+     */
+    ilstry='ilstry',
+
+    /**
+     * ### Israeli Shekel vs Rand
+     * *ILS/ZAR*
+     */
+    ilszar='ilszar',
+
+    /**
+     * ### Imperial Brands PLC
      * *IMT.GB/GBX*
      */
     imtgbgbx='imtgbgbx',
@@ -3821,12 +4337,6 @@ export enum Instrument {
      * *INCY.US/USD*
      */
     incyususd='incyususd',
-
-    /**
-     * ### India 50 Index
-     * *IND.IDX/USD*
-     */
-    indidxusd='indidxusd',
 
     /**
      * ### ING Groep NV
@@ -3839,6 +4349,12 @@ export enum Instrument {
      * *INTC.US/USD*
      */
     intcususd='intcususd',
+
+    /**
+     * ### WisdomTree Artificial Intelligence UCITS ETF
+     * *INTL.GB/GBX*
+     */
+    intlgbgbx='intlgbgbx',
 
     /**
      * ### INTUIT INC
@@ -3925,7 +4441,7 @@ export enum Instrument {
     itrkgbgbx='itrkgbgbx',
 
     /**
-     * ### Itau Unibanco Holding S.A.
+     * ### Itau Unibanco Holding S.A. isin=US4655621062
      * *ITUB.US/USD*
      */
     itubususd='itubususd',
@@ -3947,6 +4463,12 @@ export enum Instrument {
      * *ITX.ES/EUR*
      */
     itxeseur='itxeseur',
+
+    /**
+     * ### iShares S&P 500 Financial Sector UCITS ETF (LSE)
+     * *IUFS.US/USD*
+     */
+    iufsususd='iufsususd',
 
     /**
      * ### iShares S&P 500 Value ETF
@@ -4015,6 +4537,12 @@ export enum Instrument {
     jefususd='jefususd',
 
     /**
+     * ### US Global Jets ETF
+     * *JETS.US/USD*
+     */
+    jetsususd='jetsususd',
+
+    /**
      * ### JACK HENRY & ASSOCIATES INC
      * *JKHY.US/USD*
      */
@@ -4045,16 +4573,22 @@ export enum Instrument {
     jpmususd='jpmususd',
 
     /**
+     * ### Japan 200+ Index
+     * *JPN.IDX/JPY*
+     */
+    jpnidxjpy='jpnidxjpy',
+
+    /**
+     * ### Yen vs Hungarian Forint
+     * *JPY/HUF*
+     */
+    jpyhuf='jpyhuf',
+
+    /**
      * ### Juventus Football Club Spa
      * *JUVE.IT/EUR*
      */
     juveiteur='juveiteur',
-
-    /**
-     * ### NORDSTROM INC
-     * *JWN.US/USD*
-     */
-    jwnususd='jwnususd',
 
     /**
      * ### KELLOGG CO
@@ -4097,6 +4631,12 @@ export enum Instrument {
      * *KHC.US/USD*
      */
     khcususd='khcususd',
+
+    /**
+     * ### SPDR S&P Insureance ETF
+     * *KIE.US/USD*
+     */
+    kieususd='kieususd',
 
     /**
      * ### Kimberly Clark DE Mexico A
@@ -4163,6 +4703,12 @@ export enum Instrument {
      * *KRC.US/USD*
      */
     krcususd='krcususd',
+
+    /**
+     * ### SPDR S&P Regional Banking
+     * *KRE.US/USD*
+     */
+    kreususd='kreususd',
 
     /**
      * ### Kingspan Group Plc
@@ -4261,10 +4807,10 @@ export enum Instrument {
     lifreur='lifreur',
 
     /**
-     * ### Linde AG
-     * *LIN.DE/EUR*
+     * ### Light Sweet Crude Oil
+     * *LIGHT.CMD/USD*
      */
-    lindeeur='lindeeur',
+    lightcmdusd='lightcmdusd',
 
     /**
      * ### Chocoladefabriken Lindt & Sprungli
@@ -4369,31 +4915,25 @@ export enum Instrument {
     lsegbgbx='lsegbgbx',
 
     /**
-     * ### LIFE STORAGE INC
-     * *LSI.US/USD*
-     */
-    lsiususd='lsiususd',
-
-    /**
      * ### LANDSTAR SYSTEM INC
      * *LSTR.US/USD*
      */
     lstrususd='lstrususd',
 
     /**
-     * ### Litecoin vs. Swiss franc
+     * ### Litecoin vs Swiss Franc
      * *LTC/CHF*
      */
     ltcchf='ltcchf',
 
     /**
-     * ### Litecoin vs. Euro
+     * ### Litecoin vs Euro
      * *LTC/EUR*
      */
     ltceur='ltceur',
 
     /**
-     * ### Litecoin vs. Pound sterling
+     * ### Litecoin vs Pound Sterling
      * *LTC/GBP*
      */
     ltcgbp='ltcgbp',
@@ -4519,22 +5059,10 @@ export enum Instrument {
     matususd='matususd',
 
     /**
-     * ### Polygon vs US Dollar
-     * *MAT/USD*
-     */
-    matusd='matusd',
-
-    /**
      * ### Mediobanca Spa
      * *MB.IT/EUR*
      */
     mbiteur='mbiteur',
-
-    /**
-     * ### Meyer Burger
-     * *MBTN.CH/CHF*
-     */
-    mbtnchchf='mbtnchchf',
 
     /**
      * ### LVMH Moet Hennessy Louis Vuitton SA
@@ -4591,12 +5119,6 @@ export enum Instrument {
     metususd='metususd',
 
     /**
-     * ### Meggitt PLC
-     * *MGGT.GB/GBX*
-     */
-    mggtgbgbx='mggtgbgbx',
-
-    /**
      * ### MGM RESORTS INTERNATIONAL
      * *MGM.US/USD*
      */
@@ -4625,12 +5147,6 @@ export enum Instrument {
      * *MKL.US/USD*
      */
     mklususd='mklususd',
-
-    /**
-     * ### Maker vs US Dollar
-     * *MKR/USD*
-     */
-    mkrusd='mkrusd',
 
     /**
      * ### Marks & Spencer Group PLC
@@ -4673,12 +5189,6 @@ export enum Instrument {
      * *MNDI.GB/GBX*
      */
     mndigbgbx='mndigbgbx',
-
-    /**
-     * ### MANDIANT INC
-     * *MNDT.US/USD*
-     */
-    mndtususd='mndtususd',
 
     /**
      * ### M&G PLC
@@ -4735,28 +5245,16 @@ export enum Instrument {
     mrkususd='mrkususd',
 
     /**
-     * ### Moderna
+     * ### Moderna Inc
      * *MRNA.US/USD*
      */
     mrnaususd='mrnaususd',
-
-    /**
-     * ### MARATHON OIL CORP
-     * *MRO.US/USD*
-     */
-    mroususd='mroususd',
 
     /**
      * ### MARVELL TECHNOLOGY INC
      * *MRVL.US/USD*
      */
     mrvlususd='mrvlususd',
-
-    /**
-     * ### WM Morrison Supermarkets PLC
-     * *MRW.GB/GBX*
-     */
-    mrwgbgbx='mrwgbgbx',
 
     /**
      * ### Mediaset Spa
@@ -4823,6 +5321,36 @@ export enum Instrument {
      * *MUV2.DE/EUR*
      */
     muv2deeur='muv2deeur',
+
+    /**
+     * ### Mexican Peso vs Czech Koruna
+     * *MXN/CZK*
+     */
+    mxnczk='mxnczk',
+
+    /**
+     * ### Mexican Peso vs Hungarian Forint
+     * *MXN/HUF*
+     */
+    mxnhuf='mxnhuf',
+
+    /**
+     * ### Mexican Peso vs Yen
+     * *MXN/JPY*
+     */
+    mxnjpy='mxnjpy',
+
+    /**
+     * ### Mexican Peso vs Thai Baht
+     * *MXN/THB*
+     */
+    mxnthb='mxnthb',
+
+    /**
+     * ### Mexican Peso vs Turkish Lira
+     * *MXN/TRY*
+     */
+    mxntry='mxntry',
 
     /**
      * ### NEUROCRINE BIOSCIENCES INC
@@ -4897,7 +5425,7 @@ export enum Instrument {
     nioususd='nioususd',
 
     /**
-     * ### NIKE INC
+     * ### NIKE INC -CL B
      * *NKE.US/USD*
      */
     nkeususd='nkeususd',
@@ -4909,16 +5437,10 @@ export enum Instrument {
     nldidxeur='nldidxeur',
 
     /**
-     * ### NORTONLIFELOCK INC
+     * ### Gen Digital Inc / NORTONLIFELOCK INC
      * *NLOK.US/USD*
      */
     nlokususd='nlokususd',
-
-    /**
-     * ### NIELSEN HOLDINGS PLC
-     * *NLSN.US/USD*
-     */
-    nlsnususd='nlsnususd',
 
     /**
      * ### ANNALY CAPITAL MANAGEMENT IN
@@ -4931,6 +5453,96 @@ export enum Instrument {
      * *NOC.US/USD*
      */
     nocususd='nocususd',
+
+    /**
+     * ### Norwegian Krone vs UAE Dirham
+     * *NOK/AED*
+     */
+    nokaed='nokaed',
+
+    /**
+     * ### Norwegian Krone vs Chinese Yuan
+     * *NOK/CNH*
+     */
+    nokcnh='nokcnh',
+
+    /**
+     * ### Norwegian Krone vs Czech Koruna
+     * *NOK/CZK*
+     */
+    nokczk='nokczk',
+
+    /**
+     * ### Norwegian Krone vs Danish Krone
+     * *NOK/DKK*
+     */
+    nokdkk='nokdkk',
+
+    /**
+     * ### Norwegian Krone vs Hong Kong Dollar
+     * *NOK/HKD*
+     */
+    nokhkd='nokhkd',
+
+    /**
+     * ### Norwegian Krone vs Hungarian Forint
+     * *NOK/HUF*
+     */
+    nokhuf='nokhuf',
+
+    /**
+     * ### Norwegian Krone vs Israeli Shekel
+     * *NOK/ILS*
+     */
+    nokils='nokils',
+
+    /**
+     * ### Norwegian Krone vs Yen
+     * *NOK/JPY*
+     */
+    nokjpy='nokjpy',
+
+    /**
+     * ### Norwegian Krone vs Mexican Peso
+     * *NOK/MXN*
+     */
+    nokmxn='nokmxn',
+
+    /**
+     * ### Norwegian Krone vs Romanian Leu
+     * *NOK/RON*
+     */
+    nokron='nokron',
+
+    /**
+     * ### Norwegian Krone vs Saudi Riyal
+     * *NOK/SAR*
+     */
+    noksar='noksar',
+
+    /**
+     * ### Norwegian Krone vs Swedish Krona
+     * *NOK/SEK*
+     */
+    noksek='noksek',
+
+    /**
+     * ### Norwegian Krone vs Thai Baht
+     * *NOK/THB*
+     */
+    nokthb='nokthb',
+
+    /**
+     * ### Norwegian Krone vs Turkish Lira
+     * *NOK/TRY*
+     */
+    noktry='noktry',
+
+    /**
+     * ### Norwegian Krone vs Rand
+     * *NOK/ZAR*
+     */
+    nokzar='nokzar',
 
     /**
      * ### Novartis AG
@@ -4981,12 +5593,6 @@ export enum Instrument {
     nvdaususd='nvdaususd',
 
     /**
-     * ### NVR INC
-     * *NVR.US/USD*
-     */
-    nvrususd='nvrususd',
-
-    /**
      * ### NEWELL BRANDS INC
      * *NWL.US/USD*
      */
@@ -5017,6 +5623,12 @@ export enum Instrument {
     nytususd='nytususd',
 
     /**
+     * ### New Zealand Dollar vs UAE Dirham
+     * *NZD/AED*
+     */
+    nzdaed='nzdaed',
+
+    /**
      * ### New Zealand Dollar vs Canadian Dollar
      * *NZD/CAD*
      */
@@ -5029,16 +5641,112 @@ export enum Instrument {
     nzdchf='nzdchf',
 
     /**
-     * ### New Zealand Dollar vs Japanese Yen
+     * ### New Zealand Dollar vs Chinese Yuan
+     * *NZD/CNH*
+     */
+    nzdcnh='nzdcnh',
+
+    /**
+     * ### New Zealand Dollar vs Czech Koruna
+     * *NZD/CZK*
+     */
+    nzdczk='nzdczk',
+
+    /**
+     * ### New Zealand Dollar vs Danish Krone
+     * *NZD/DKK*
+     */
+    nzddkk='nzddkk',
+
+    /**
+     * ### New Zealand Dollar vs Hong Kong Dollar
+     * *NZD/HKD*
+     */
+    nzdhkd='nzdhkd',
+
+    /**
+     * ### New Zealand Dollar vs Hungarian Forint
+     * *NZD/HUF*
+     */
+    nzdhuf='nzdhuf',
+
+    /**
+     * ### New Zealand Dollar vs Israeli Shekel
+     * *NZD/ILS*
+     */
+    nzdils='nzdils',
+
+    /**
+     * ### New Zealand Dollar vs Yen
      * *NZD/JPY*
      */
     nzdjpy='nzdjpy',
+
+    /**
+     * ### New Zealand Dollar vs Mexican Peso
+     * *NZD/MXN*
+     */
+    nzdmxn='nzdmxn',
+
+    /**
+     * ### New Zealand Dollar vs Norwegian Krone
+     * *NZD/NOK*
+     */
+    nzdnok='nzdnok',
+
+    /**
+     * ### New Zealand Dollar vs Zloty
+     * *NZD/PLN*
+     */
+    nzdpln='nzdpln',
+
+    /**
+     * ### New Zealand Dollar vs Romanian Leu
+     * *NZD/RON*
+     */
+    nzdron='nzdron',
+
+    /**
+     * ### New Zealand Dollar vs Saudi Riyal
+     * *NZD/SAR*
+     */
+    nzdsar='nzdsar',
+
+    /**
+     * ### New Zealand Dollar vs Swedish Krona
+     * *NZD/SEK*
+     */
+    nzdsek='nzdsek',
+
+    /**
+     * ### New Zealand Dollar vs Singapore Dollar
+     * *NZD/SGD*
+     */
+    nzdsgd='nzdsgd',
+
+    /**
+     * ### New Zealand Dollar vs Thai Baht
+     * *NZD/THB*
+     */
+    nzdthb='nzdthb',
+
+    /**
+     * ### New Zealand Dollar vs Turkish Lira
+     * *NZD/TRY*
+     */
+    nzdtry='nzdtry',
 
     /**
      * ### New Zealand Dollar vs US Dollar
      * *NZD/USD*
      */
     nzdusd='nzdusd',
+
+    /**
+     * ### New Zealand Dollar vs Rand
+     * *NZD/ZAR*
+     */
+    nzdzar='nzdzar',
 
     /**
      * ### Novozymes A/S
@@ -5227,12 +5935,6 @@ export enum Instrument {
     panwususd='panwususd',
 
     /**
-     * ### PARAMOUNT GLOBAL-CLASS B
-     * *PARA.US/USD*
-     */
-    paraususd='paraususd',
-
-    /**
      * ### PAYCOM SOFTWARE INC
      * *PAYC.US/USD*
      */
@@ -5249,6 +5951,12 @@ export enum Instrument {
      * *PBF.US/USD*
      */
     pbfususd='pbfususd',
+
+    /**
+     * ### Invesco Food & Beverage ETF
+     * *PBJ.US/USD*
+     */
+    pbjususd='pbjususd',
 
     /**
      * ### Petroleo Brasileiro S.A.
@@ -5287,6 +5995,12 @@ export enum Instrument {
     peakususd='peakususd',
 
     /**
+     * ### Invesco LEISURE & ENTERTAINMENT
+     * *PEJ.US/USD*
+     */
+    pejususd='pejususd',
+
+    /**
      * ### PENN NATIONAL GAMING INC
      * *PENN.US/USD*
      */
@@ -5303,12 +6017,6 @@ export enum Instrument {
      * *PEP.US/USD*
      */
     pepususd='pepususd',
-
-    /**
-     * ### Petrofac Ltd
-     * *PFC.GB/GBX*
-     */
-    pfcgbgbx='pfcgbgbx',
 
     /**
      * ### PFIZER INC
@@ -5371,16 +6079,106 @@ export enum Instrument {
     pkgususd='pkgususd',
 
     /**
-     * ### ANAPLAN INC
-     * *PLAN.US/USD*
-     */
-    planususd='planususd',
-
-    /**
      * ### Poland 20 Index
      * *PLN.IDX/PLN*
      */
     plnidxpln='plnidxpln',
+
+    /**
+     * ### Zloty vs UAE Dirham
+     * *PLN/AED*
+     */
+    plnaed='plnaed',
+
+    /**
+     * ### Zloty vs Chinese Yuan
+     * *PLN/CNH*
+     */
+    plncnh='plncnh',
+
+    /**
+     * ### Zloty vs Czech Koruna
+     * *PLN/CZK*
+     */
+    plnczk='plnczk',
+
+    /**
+     * ### Zloty vs Danish Krone
+     * *PLN/DKK*
+     */
+    plndkk='plndkk',
+
+    /**
+     * ### Zloty vs Hong Kong Dollar
+     * *PLN/HKD*
+     */
+    plnhkd='plnhkd',
+
+    /**
+     * ### Zloty vs Hungarian Forint
+     * *PLN/HUF*
+     */
+    plnhuf='plnhuf',
+
+    /**
+     * ### Zloty vs Israeli Shekel
+     * *PLN/ILS*
+     */
+    plnils='plnils',
+
+    /**
+     * ### Zloty vs Yen
+     * *PLN/JPY*
+     */
+    plnjpy='plnjpy',
+
+    /**
+     * ### Zloty vs Mexican Peso
+     * *PLN/MXN*
+     */
+    plnmxn='plnmxn',
+
+    /**
+     * ### Zloty vs Norwegian Krone
+     * *PLN/NOK*
+     */
+    plnnok='plnnok',
+
+    /**
+     * ### Zloty vs Romanian Leu
+     * *PLN/RON*
+     */
+    plnron='plnron',
+
+    /**
+     * ### Zloty vs Saudi Riyal
+     * *PLN/SAR*
+     */
+    plnsar='plnsar',
+
+    /**
+     * ### Zloty vs Swedish Krona
+     * *PLN/SEK*
+     */
+    plnsek='plnsek',
+
+    /**
+     * ### Zloty vs Thai Baht
+     * *PLN/THB*
+     */
+    plnthb='plnthb',
+
+    /**
+     * ### Zloty vs Turkish Lira
+     * *PLN/TRY*
+     */
+    plntry='plntry',
+
+    /**
+     * ### Zloty vs Rand
+     * *PLN/ZAR*
+     */
+    plnzar='plnzar',
 
     /**
      * ### PLANET FITNESS INC - CL A
@@ -5389,7 +6187,7 @@ export enum Instrument {
     plntususd='plntususd',
 
     /**
-     * ### Palantir Tech Inc A
+     * ### Palantir Technologies Inc. (Class A)
      * *PLTR.US/USD*
      */
     pltrususd='pltrususd',
@@ -5437,10 +6235,10 @@ export enum Instrument {
     poolususd='poolususd',
 
     /**
-     * ### PPG INDUSTRIES INC
-     * *PPG.US/USD*
+     * ### Invesco Aerospace & Defense
+     * *PPA.US/USD*
      */
-    ppgususd='ppgususd',
+    ppaususd='ppaususd',
 
     /**
      * ### PERRIGO CO PLC
@@ -5497,12 +6295,6 @@ export enum Instrument {
     pstgususd='pstgususd',
 
     /**
-     * ### PHILLIPS 66
-     * *PSX.US/USD*
-     */
-    psxususd='psxususd',
-
-    /**
      * ### PTC INC
      * *PTC.US/USD*
      */
@@ -5537,12 +6329,6 @@ export enum Instrument {
      * *PVH.US/USD*
      */
     pvhususd='pvhususd',
-
-    /**
-     * ### PIONEER NATURAL RESOURCES CO
-     * *PXD.US/USD*
-     */
-    pxdususd='pxdususd',
 
     /**
      * ### PAYPAL HOLDINGS INC
@@ -5641,16 +6427,10 @@ export enum Instrument {
     reususd='reususd',
 
     /**
-     * ### Recordati Industria Chimica e Farma Spa
+     * ### Salvatore Ferragamo S.p.A.
      * *REC.IT/EUR*
      */
     reciteur='reciteur',
-
-    /**
-     * ### Red Electrica Corp SA
-     * *REE.ES/EUR*
-     */
-    reeeseur='reeeseur',
 
     /**
      * ### REGENCY CENTERS CORP
@@ -5665,16 +6445,10 @@ export enum Instrument {
     regnususd='regnususd',
 
     /**
-     * ### Reed Elsevier PLC
+     * ### RELX PLC
      * *REL.GB/GBX*
      */
     relgbgbx='relgbgbx',
-
-    /**
-     * ### RELX NV
-     * *REN.NL/EUR*
-     */
-    rennleur='rennleur',
 
     /**
      * ### Repsol SA
@@ -5725,12 +6499,6 @@ export enum Instrument {
     rmdususd='rmdususd',
 
     /**
-     * ### Royal Mail PLC
-     * *RMG.GB/GBX*
-     */
-    rmggbgbx='rmggbgbx',
-
-    /**
      * ### HERMES INTERNATIONAL
      * *RMS.FR/EUR*
      */
@@ -5761,6 +6529,12 @@ export enum Instrument {
     rnrususd='rnrususd',
 
     /**
+     * ### ROBO Global Robotics and Automation Index ETF
+     * *ROBO.US/USD*
+     */
+    roboususd='roboususd',
+
+    /**
      * ### Roche Holding AG
      * *ROG.CH/CHF*
      */
@@ -5777,6 +6551,60 @@ export enum Instrument {
      * *ROL.US/USD*
      */
     rolususd='rolususd',
+
+    /**
+     * ### Romanian Leu vs Chinese Yuan
+     * *RON/CNH*
+     */
+    roncnh='roncnh',
+
+    /**
+     * ### Romanian Leu vs Czech Koruna
+     * *RON/CZK*
+     */
+    ronczk='ronczk',
+
+    /**
+     * ### Romanian Leu vs Hong Kong Dollar
+     * *RON/HKD*
+     */
+    ronhkd='ronhkd',
+
+    /**
+     * ### Romanian Leu vs Hungarian Forint
+     * *RON/HUF*
+     */
+    ronhuf='ronhuf',
+
+    /**
+     * ### Romanian Leu vs Yen
+     * *RON/JPY*
+     */
+    ronjpy='ronjpy',
+
+    /**
+     * ### Romanian Leu vs Mexican Peso
+     * *RON/MXN*
+     */
+    ronmxn='ronmxn',
+
+    /**
+     * ### Romanian Leu vs Thai Baht
+     * *RON/THB*
+     */
+    ronthb='ronthb',
+
+    /**
+     * ### Romanian Leu vs Turkish Lira
+     * *RON/TRY*
+     */
+    rontry='rontry',
+
+    /**
+     * ### Romanian Leu vs Rand
+     * *RON/ZAR*
+     */
+    ronzar='ronzar',
 
     /**
      * ### ROSS STORES INC
@@ -5813,12 +6641,6 @@ export enum Instrument {
      * *RS.US/USD*
      */
     rsususd='rsususd',
-
-    /**
-     * ### RSA Insurance Group PLC
-     * *RSA.GB/GBX*
-     */
-    rsagbgbx='rsagbgbx',
 
     /**
      * ### RENTOKIL INITIAL PLC
@@ -5881,10 +6703,64 @@ export enum Instrument {
     sapdeeur='sapdeeur',
 
     /**
-     * ### SIGNATURE BANK
-     * *SBNY.US/USD*
+     * ### Saudi Riyal vs Chinese Yuan
+     * *SAR/CNH*
      */
-    sbnyususd='sbnyususd',
+    sarcnh='sarcnh',
+
+    /**
+     * ### Saudi Riyal vs Czech Koruna
+     * *SAR/CZK*
+     */
+    sarczk='sarczk',
+
+    /**
+     * ### Saudi Riyal vs Hong Kong Dollar
+     * *SAR/HKD*
+     */
+    sarhkd='sarhkd',
+
+    /**
+     * ### Saudi Riyal vs Hungarian Forint
+     * *SAR/HUF*
+     */
+    sarhuf='sarhuf',
+
+    /**
+     * ### Saudi Riyal vs Yen
+     * *SAR/JPY*
+     */
+    sarjpy='sarjpy',
+
+    /**
+     * ### Saudi Riyal vs Mexican Peso
+     * *SAR/MXN*
+     */
+    sarmxn='sarmxn',
+
+    /**
+     * ### Saudi Riyal vs Romanian Leu
+     * *SAR/RON*
+     */
+    sarron='sarron',
+
+    /**
+     * ### Saudi Riyal vs Thai Baht
+     * *SAR/THB*
+     */
+    sarthb='sarthb',
+
+    /**
+     * ### Saudi Riyal vs Turkish Lira
+     * *SAR/TRY*
+     */
+    sartry='sartry',
+
+    /**
+     * ### Saudi Riyal vs Rand
+     * *SAR/ZAR*
+     */
+    sarzar='sarzar',
 
     /**
      * ### J Sainsbury PLC
@@ -5965,7 +6841,97 @@ export enum Instrument {
     seicususd='seicususd',
 
     /**
-     * ### Salvat Ferragamo Spa
+     * ### Swedish Krona vs UAE Dirham
+     * *SEK/AED*
+     */
+    sekaed='sekaed',
+
+    /**
+     * ### Swedish Krona vs Chinese Yuan
+     * *SEK/CNH*
+     */
+    sekcnh='sekcnh',
+
+    /**
+     * ### Swedish Krona vs Czech Koruna
+     * *SEK/CZK*
+     */
+    sekczk='sekczk',
+
+    /**
+     * ### Swedish Krona vs Danish Krone
+     * *SEK/DKK*
+     */
+    sekdkk='sekdkk',
+
+    /**
+     * ### Swedish Krona vs Hong Kong Dollar
+     * *SEK/HKD*
+     */
+    sekhkd='sekhkd',
+
+    /**
+     * ### Swedish Krona vs Hungarian Forint
+     * *SEK/HUF*
+     */
+    sekhuf='sekhuf',
+
+    /**
+     * ### Swedish Krona vs Israeli Shekel
+     * *SEK/ILS*
+     */
+    sekils='sekils',
+
+    /**
+     * ### Swedish Krona vs Yen
+     * *SEK/JPY*
+     */
+    sekjpy='sekjpy',
+
+    /**
+     * ### Swedish Krona vs Mexican Peso
+     * *SEK/MXN*
+     */
+    sekmxn='sekmxn',
+
+    /**
+     * ### Swedish Krona vs Romanian Leu
+     * *SEK/RON*
+     */
+    sekron='sekron',
+
+    /**
+     * ### Swedish Krona vs Saudi Riyal
+     * *SEK/SAR*
+     */
+    seksar='seksar',
+
+    /**
+     * ### Swedish Krona vs Thai Baht
+     * *SEK/THB*
+     */
+    sekthb='sekthb',
+
+    /**
+     * ### Swedish Krona vs Turkish Lira
+     * *SEK/TRY*
+     */
+    sektry='sektry',
+
+    /**
+     * ### Swedish Krona vs Rand
+     * *SEK/ZAR*
+     */
+    sekzar='sekzar',
+
+    /**
+     * ### iShares MSCI Global Semiconductors UCITS ETF (London)
+     * *SEMI.GB/GBP*
+     */
+    semigbgbp='semigbgbp',
+
+    /**
+     * ### Salvatore Ferragamo S.p.A.
      * *SFER.IT/EUR*
      */
     sferiteur='sferiteur',
@@ -5983,10 +6949,106 @@ export enum Instrument {
     sgdidxsgd='sgdidxsgd',
 
     /**
-     * ### Singapore Dollar vs Japanese Yen
+     * ### Singapore Dollar vs UAE Dirham
+     * *SGD/AED*
+     */
+    sgdaed='sgdaed',
+
+    /**
+     * ### Singapore Dollar vs Chinese Yuan
+     * *SGD/CNH*
+     */
+    sgdcnh='sgdcnh',
+
+    /**
+     * ### Singapore Dollar vs Czech Koruna
+     * *SGD/CZK*
+     */
+    sgdczk='sgdczk',
+
+    /**
+     * ### Singapore Dollar vs Danish Krone
+     * *SGD/DKK*
+     */
+    sgddkk='sgddkk',
+
+    /**
+     * ### Singapore Dollar vs Hong Kong Dollar
+     * *SGD/HKD*
+     */
+    sgdhkd='sgdhkd',
+
+    /**
+     * ### Singapore Dollar vs Hungarian Forint
+     * *SGD/HUF*
+     */
+    sgdhuf='sgdhuf',
+
+    /**
+     * ### Singapore Dollar vs Israeli Shekel
+     * *SGD/ILS*
+     */
+    sgdils='sgdils',
+
+    /**
+     * ### Singapore Dollar vs Yen
      * *SGD/JPY*
      */
     sgdjpy='sgdjpy',
+
+    /**
+     * ### Singapore Dollar vs Mexican Peso
+     * *SGD/MXN*
+     */
+    sgdmxn='sgdmxn',
+
+    /**
+     * ### Singapore Dollar vs Norwegian Krone
+     * *SGD/NOK*
+     */
+    sgdnok='sgdnok',
+
+    /**
+     * ### Singapore Dollar vs Zloty
+     * *SGD/PLN*
+     */
+    sgdpln='sgdpln',
+
+    /**
+     * ### Singapore Dollar vs Romanian Leu
+     * *SGD/RON*
+     */
+    sgdron='sgdron',
+
+    /**
+     * ### Singapore Dollar vs Saudi Riyal
+     * *SGD/SAR*
+     */
+    sgdsar='sgdsar',
+
+    /**
+     * ### Singapore Dollar vs Swedish Krona
+     * *SGD/SEK*
+     */
+    sgdsek='sgdsek',
+
+    /**
+     * ### Singapore Dollar vs Thai Baht
+     * *SGD/THB*
+     */
+    sgdthb='sgdthb',
+
+    /**
+     * ### Singapore Dollar vs Turkish Lira
+     * *SGD/TRY*
+     */
+    sgdtry='sgdtry',
+
+    /**
+     * ### Singapore Dollar vs Rand
+     * *SGD/ZAR*
+     */
+    sgdzar='sgdzar',
 
     /**
      * ### Sage Group PLC/The
@@ -5995,10 +7057,10 @@ export enum Instrument {
     sgegbgbx='sgegbgbx',
 
     /**
-     * ### SEAGEN INC
-     * *SGEN.US/USD*
+     * ### Invesco Physical Gold ETC
+     * *SGLD.US/USD*
      */
-    sgenususd='sgenususd',
+    sgldususd='sgldususd',
 
     /**
      * ### Cie de St-Gobain
@@ -6019,7 +7081,7 @@ export enum Instrument {
     sgsnchchf='sgsnchchf',
 
     /**
-     * ### SHERWIN-WILLIAMS COMPANY
+     * ### SHERWIN-WILLIAMS CO/THE
      * *SHW.US/USD*
      */
     shwususd='shwususd',
@@ -6031,13 +7093,7 @@ export enum Instrument {
     siedeeur='siedeeur',
 
     /**
-     * ### SVB FINANCIAL GROUP
-     * *SIVB.US/USD*
-     */
-    sivbususd='sivbususd',
-
-    /**
-     * ### JM SMUCKER COMPANY
+     * ### JM SMUCKER CO/THE
      * *SJM.US/USD*
      */
     sjmususd='sjmususd',
@@ -6053,12 +7109,6 @@ export enum Instrument {
      * *SKFB.SE/SEK*
      */
     skfbsesek='skfbsesek',
-
-    /**
-     * ### Sky Plc
-     * *SKY.GB/GBP*
-     */
-    skygbgbx='skygbgbx',
 
     /**
      * ### Standard Life Aberdeen Plc
@@ -6091,10 +7141,10 @@ export enum Instrument {
     slvususd='slvususd',
 
     /**
-     * ### DS SMITH PLC
-     * *SMDS.GB/GBX*
+     * ### VanEck Semiconductors UCITS ETF
+     * *SMH.US/USD*
      */
-    smdsgbgbx='smdsgbgbx',
+    smhususd='smhususd',
 
     /**
      * ### Smiths Group PLC
@@ -6109,19 +7159,25 @@ export enum Instrument {
     smtgbgbx='smtgbgbx',
 
     /**
+     * ### USD Deposit Interest Rates vs US Dollar
+     * *SMTC.US/USD*
+     */
+    smtcususd='smtcususd',
+
+    /**
      * ### Smith & Nephew PLC
      * *SN.GB/GBX*
      */
     sngbgbx='sngbgbx',
 
     /**
-     * ### SNAP Inc
+     * ### SNAP Inc.
      * *SNAP.US/USD*
      */
     snapususd='snapususd',
 
     /**
-     * ### Snowflake Inc Class A
+     * ### Snowflake Inc. (Class A)
      * *SNOW.US/USD*
      */
     snowususd='snowususd',
@@ -6173,12 +7229,6 @@ export enum Instrument {
      * *SPGI.US/USD*
      */
     spgiususd='spgiususd',
-
-    /**
-     * ### SPLUNK INC
-     * *SPLK.US/USD*
-     */
-    splkususd='splkususd',
 
     /**
      * ### SAIPEM Spa
@@ -6235,13 +7285,7 @@ export enum Instrument {
     srptususd='srptususd',
 
     /**
-     * ### Saras Spa
-     * *SRS.IT/EUR*
-     */
-    srsiteur='srsiteur',
-
-    /**
-     * ### Sartorius AG - Vorzug
+     * ### Sartorius AG
      * *SRT.DE/EUR*
      */
     srtdeeur='srtdeeur',
@@ -6313,7 +7357,13 @@ export enum Instrument {
     sufreur='sufreur',
 
     /**
-     * ### London Sugar No.5
+     * ### iShares Sust MSCI USA SRI
+     * *SUAS.GB/USD*
+     */
+    suasgbusd='suasgbusd',
+
+    /**
+     * ### Sugar White
      * *SUGAR.CMD/USD*
      */
     sugarcmdusd='sugarcmdusd',
@@ -6323,6 +7373,18 @@ export enum Instrument {
      * *SUI.US/USD*
      */
     suiususd='suiususd',
+
+    /**
+     * ### iShares MSCI EM SRI UCITS ETF
+     * *SUSM.GB/USD*
+     */
+    susmgbusd='susmgbusd',
+
+    /**
+     * ### iShares MSCI USA SRI UCITS ETF
+     * *SUUS.GB/GBX*
+     */
+    suusgbgbx='suusgbgbx',
 
     /**
      * ### Severn Trent PLC
@@ -6353,12 +7415,6 @@ export enum Instrument {
      * *SWKS.US/USD*
      */
     swksususd='swksususd',
-
-    /**
-     * ### Swedish Match AB
-     * *SWMA.SE/SEK*
-     */
-    swmasesek='swmasesek',
 
     /**
      * ### SYMRISE AG
@@ -6493,10 +7549,16 @@ export enum Instrument {
     tgtususd='tgtususd',
 
     /**
-     * ### Tiscali Spa
-     * *TIS.IT/EUR*
+     * ### Thai Baht vs Hungarian Forint
+     * *THB/HUF*
      */
-    tisiteur='tisiteur',
+    thbhuf='thbhuf',
+
+    /**
+     * ### Thai Baht vs Yen
+     * *THB/JPY*
+     */
+    thbjpy='thbjpy',
 
     /**
      * ### Telecom Italia Spa
@@ -6551,12 +7613,6 @@ export enum Instrument {
      * *TMUS.US/USD*
      */
     tmusususd='tmusususd',
-
-    /**
-     * ### Tods Spa
-     * *TOD.IT/EUR*
-     */
-    toditeur='toditeur',
 
     /**
      * ### TOLL BROTHERS INC
@@ -6625,10 +7681,22 @@ export enum Instrument {
     trxusd='trxusd',
 
     /**
-     * ### Turkish Lira vs Japanese Yen
+     * ### Turkish Lira vs Hungarian Forint
+     * *TRY/HUF*
+     */
+    tryhuf='tryhuf',
+
+    /**
+     * ### Turkish Lira vs Yen
      * *TRY/JPY*
      */
     tryjpy='tryjpy',
+
+    /**
+     * ### Turkish Lira vs Thai Baht
+     * *TRY/THB*
+     */
+    trythb='trythb',
 
     /**
      * ### Tesco PLC
@@ -6691,12 +7759,6 @@ export enum Instrument {
     twloususd='twloususd',
 
     /**
-     * ### TWITTER INC
-     * *TWTR.US/USD*
-     */
-    twtrususd='twtrususd',
-
-    /**
      * ### TEXAS INSTRUMENTS INC
      * *TXN.US/USD*
      */
@@ -6721,7 +7783,13 @@ export enum Instrument {
     uaaususd='uaaususd',
 
     /**
-     * ### Uber Inc
+     * ### UNITED AIRLINES HOLDINGS INC
+     * *UAL.US/USD*
+     */
+    ualususd='ualususd',
+
+    /**
+     * ### Uber Technologies Inc.
      * *UBER.US/USD*
      */
     uberususd='uberususd',
@@ -6749,12 +7817,6 @@ export enum Instrument {
      * *UDR.US/USD*
      */
     udrususd='udrususd',
-
-    /**
-     * ### Peugeot SA
-     * *UG.FR/EUR*
-     */
-    ugfreur='ugfreur',
 
     /**
      * ### UGI CORP
@@ -6805,12 +7867,6 @@ export enum Instrument {
     umibeeur='umibeeur',
 
     /**
-     * ### Unilever NV
-     * *UNA.NL/EUR*
-     */
-    unanleur='unanleur',
-
-    /**
      * ### UNITEDHEALTH GROUP INC
      * *UNH.US/USD*
      */
@@ -6841,10 +7897,22 @@ export enum Instrument {
     uriususd='uriususd',
 
     /**
-     * ### Unipolsai Assicurazioni Spa
-     * *US.IT/EUR*
+     * ### US 30 Index
+     * *USA30.IDX/USD*
      */
-    usiteur='usiteur',
+    usa30idxusd='usa30idxusd',
+
+    /**
+     * ### US 500 Index
+     * *USA500.IDX/USD*
+     */
+    usa500idxusd='usa500idxusd',
+
+    /**
+     * ### US 100 Tech Index
+     * *USATECH.IDX/USD*
+     */
+    usatechidxusd='usatechidxusd',
 
     /**
      * ### US BANCORP
@@ -6853,10 +7921,10 @@ export enum Instrument {
     usbususd='usbususd',
 
     /**
-     * ### US Dollar vs United Arab Emirates Dirham
-     * *USD/AED*
+     * ### USC/USD
+     * *USC/USD*
      */
-    usdaed='usdaed',
+    uscusd='uscusd',
 
     /**
      * ### US Dollar vs Canadian Dollar
@@ -6871,7 +7939,7 @@ export enum Instrument {
     usdchf='usdchf',
 
     /**
-     * ### US Dollar vs Offshore Chinese Renminbi
+     * ### US Dollar vs Chinese Yuan
      * *USD/CNH*
      */
     usdcnh='usdcnh',
@@ -6907,7 +7975,7 @@ export enum Instrument {
     usdils='usdils',
 
     /**
-     * ### US Dollar vs Japanese Yen
+     * ### US Dollar vs Yen
      * *USD/JPY*
      */
     usdjpy='usdjpy',
@@ -6925,7 +7993,7 @@ export enum Instrument {
     usdnok='usdnok',
 
     /**
-     * ### US Dollar vs Polish Zloty
+     * ### US Dollar vs Zloty
      * *USD/PLN*
      */
     usdpln='usdpln',
@@ -6935,12 +8003,6 @@ export enum Instrument {
      * *USD/RON*
      */
     usdron='usdron',
-
-    /**
-     * ### US Dollar vs Saudi Riyal
-     * *USD/SAR*
-     */
-    usdsar='usdsar',
 
     /**
      * ### US Dollar vs Swedish Krona
@@ -6967,7 +8029,7 @@ export enum Instrument {
     usdtry='usdtry',
 
     /**
-     * ### US Dollar vs South African Rand
+     * ### US Dollar vs Rand
      * *USD/ZAR*
      */
     usdzar='usdzar',
@@ -6979,7 +8041,7 @@ export enum Instrument {
     usfdususd='usfdususd',
 
     /**
-     * ### United States Oil Fund
+     * ### United States Oil
      * *USO.US/USD*
      */
     usoususd='usoususd',
@@ -7021,6 +8083,12 @@ export enum Instrument {
     valeususd='valeususd',
 
     /**
+     * ### Vanguard Energy ETF
+     * *VDE.US/USD*
+     */
+    vdeususd='vdeususd',
+
+    /**
      * ### Vanguard FTSE Developed Markets ETF
      * *VEA.US/USD*
      */
@@ -7057,12 +8125,6 @@ export enum Instrument {
     viefreur='viefreur',
 
     /**
-     * ### Vifor Pharma
-     * *VIFN.CH/CHF*
-     */
-    vifnchchf='vifnchchf',
-
-    /**
      * ### VIRTU FINANCIAL INC-CLASS A
      * *VIRT.US/USD*
      */
@@ -7091,18 +8153,6 @@ export enum Instrument {
      * *VLO.US/USD*
      */
     vloususd='vloususd',
-
-    /**
-     * ### VULCAN MATERIALS CO
-     * *VMC.US/USD*
-     */
-    vmcususd='vmcususd',
-
-    /**
-     * ### VMWARE INC-CLASS A
-     * *VMW.US/USD*
-     */
-    vmwususd='vmwususd',
 
     /**
      * ### Vonovia SE
@@ -7153,12 +8203,6 @@ export enum Instrument {
     vow3deeur='vow3deeur',
 
     /**
-     * ### VOYA FINANCIAL INC
-     * *VOYA.US/USD*
-     */
-    voyaususd='voyaususd',
-
-    /**
      * ### Koninklijke Vopak NV
      * *VPK.NL/EUR*
      */
@@ -7180,7 +8224,19 @@ export enum Instrument {
      * ### VIATRIS INC
      * *VTRS.US/USD*
      */
-    ualususd='ualususd',
+    vtrsususd='vtrsususd',
+
+    /**
+     * ### Vanguard FTSE 1000 UCITS ETF
+     * *VUKG.GB/GBP*
+     */
+    vukggbgbp='vukggbgbp',
+
+    /**
+     * ### Vanguard FTSE All-World UCITS ETF
+     * *VWRP.GB/GBP*
+     */
+    vwrpgbgbp='vwrpgbgbp',
 
     /**
      * ### Vestas Wind Systems A/S
@@ -7189,7 +8245,7 @@ export enum Instrument {
     vwsdkdkk='vwsdkdkk',
 
     /**
-     * ### iPath S&P 500 VIX ST Futures ETN
+     * ### iPath S&P 500 VIX B SERIES CFD
      * *VXX.US/USD*
      */
     vxxususd='vxxususd',
@@ -7223,12 +8279,6 @@ export enum Instrument {
      * *WALMEX.MX/MXN*
      */
     walmexmxmxn='walmexmxmxn',
-
-    /**
-     * ### WALGREENS BOOTS ALLIANCE INC
-     * *WBA.US/USD*
-     */
-    wbaususd='wbaususd',
 
     /**
      * ### WeBuild Spa
@@ -7333,16 +8383,16 @@ export enum Instrument {
     wrbususd='wrbususd',
 
     /**
-     * ### WESTROCK CO
-     * *WRK.US/USD*
-     */
-    wrkususd='wrkususd',
-
-    /**
      * ### WILLIAMS-SONOMA INC
      * *WSM.US/USD*
      */
     wsmususd='wsmususd',
+
+    /**
+     * ### Ishares III PLC - Ishares Msci World Small Cap UCITS ETF
+     * *WSML.GB/USD*
+     */
+    wsmlgbusd='wsmlgbusd',
 
     /**
      * ### WATSCO INC
@@ -7355,6 +8405,12 @@ export enum Instrument {
      * *WST.US/USD*
      */
     wstususd='wstususd',
+
+    /**
+     * ### WisdomTree Artificial Intelligence UCITS ETF - USD Acc
+     * *WTAI.US/USD*
+     */
+    wtaiususd='wtaiususd',
 
     /**
      * ### Whitbread PLC
@@ -7387,22 +8443,328 @@ export enum Instrument {
     wynnususd='wynnususd',
 
     /**
-     * ### UNITED STATES STEEL CORP
-     * *X.US/USD*
+     * ### Silver vs UAE Dirham
+     * *XAG/AED*
      */
-    xususd='xususd',
+    xagaed='xagaed',
 
     /**
-     * ### Spot silver
+     * ### Silver vs Australian Dollar
+     * *XAG/AUD*
+     */
+    xagaud='xagaud',
+
+    /**
+     * ### Silver vs Canadian Dollar
+     * *XAG/CAD*
+     */
+    xagcad='xagcad',
+
+    /**
+     * ### Silver vs Swiss Franc
+     * *XAG/CHF*
+     */
+    xagchf='xagchf',
+
+    /**
+     * ### Silver vs Chinese Yuan
+     * *XAG/CNH*
+     */
+    xagcnh='xagcnh',
+
+    /**
+     * ### Silver vs Czech Koruna
+     * *XAG/CZK*
+     */
+    xagczk='xagczk',
+
+    /**
+     * ### Silver vs Danish Krone
+     * *XAG/DKK*
+     */
+    xagdkk='xagdkk',
+
+    /**
+     * ### Silver vs Euro
+     * *XAG/EUR*
+     */
+    xageur='xageur',
+
+    /**
+     * ### Silver vs Pound Sterling
+     * *XAG/GBP*
+     */
+    xaggbp='xaggbp',
+
+    /**
+     * ### Silver vs Hong Kong Dollar
+     * *XAG/HKD*
+     */
+    xaghkd='xaghkd',
+
+    /**
+     * ### Silver vs Hungarian Forint
+     * *XAG/HUF*
+     */
+    xaghuf='xaghuf',
+
+    /**
+     * ### Silver vs Israeli Shekel
+     * *XAG/ILS*
+     */
+    xagils='xagils',
+
+    /**
+     * ### Silver vs Yen
+     * *XAG/JPY*
+     */
+    xagjpy='xagjpy',
+
+    /**
+     * ### Silver vs Mexican Peso
+     * *XAG/MXN*
+     */
+    xagmxn='xagmxn',
+
+    /**
+     * ### Silver vs Norwegian Krone
+     * *XAG/NOK*
+     */
+    xagnok='xagnok',
+
+    /**
+     * ### Silver vs New Zealand Dollar
+     * *XAG/NZD*
+     */
+    xagnzd='xagnzd',
+
+    /**
+     * ### Silver vs Zloty
+     * *XAG/PLN*
+     */
+    xagpln='xagpln',
+
+    /**
+     * ### Silver vs Romanian Leu
+     * *XAG/RON*
+     */
+    xagron='xagron',
+
+    /**
+     * ### Silver vs Saudi Riyal
+     * *XAG/SAR*
+     */
+    xagsar='xagsar',
+
+    /**
+     * ### Silver vs Swedish Krona
+     * *XAG/SEK*
+     */
+    xagsek='xagsek',
+
+    /**
+     * ### Silver vs Singapore Dollar
+     * *XAG/SGD*
+     */
+    xagsgd='xagsgd',
+
+    /**
+     * ### Silver vs Thai Baht
+     * *XAG/THB*
+     */
+    xagthb='xagthb',
+
+    /**
+     * ### Silver vs Turkish Lira
+     * *XAG/TRY*
+     */
+    xagtry='xagtry',
+
+    /**
+     * ### Silver vs US Dollar
      * *XAG/USD*
      */
     xagusd='xagusd',
 
     /**
-     * ### Spot gold
+     * ### Silver vs Rand
+     * *XAG/ZAR*
+     */
+    xagzar='xagzar',
+
+    /**
+     * ### Gold vs UAE Dirham
+     * *XAU/AED*
+     */
+    xauaed='xauaed',
+
+    /**
+     * ### Gold vs Australian Dollar
+     * *XAU/AUD*
+     */
+    xauaud='xauaud',
+
+    /**
+     * ### Gold vs Canadian Dollar
+     * *XAU/CAD*
+     */
+    xaucad='xaucad',
+
+    /**
+     * ### Gold vs Swiss Franc
+     * *XAU/CHF*
+     */
+    xauchf='xauchf',
+
+    /**
+     * ### Gold vs Chinese Yuan
+     * *XAU/CNH*
+     */
+    xaucnh='xaucnh',
+
+    /**
+     * ### Gold vs Czech Koruna
+     * *XAU/CZK*
+     */
+    xauczk='xauczk',
+
+    /**
+     * ### Gold vs Danish Krone
+     * *XAU/DKK*
+     */
+    xaudkk='xaudkk',
+
+    /**
+     * ### Gold vs Euro
+     * *XAU/EUR*
+     */
+    xaueur='xaueur',
+
+    /**
+     * ### Gold vs Pound Sterling
+     * *XAU/GBP*
+     */
+    xaugbp='xaugbp',
+
+    /**
+     * ### Gold vs Hong Kong Dollar
+     * *XAU/HKD*
+     */
+    xauhkd='xauhkd',
+
+    /**
+     * ### Gold vs Hungarian Forint
+     * *XAU/HUF*
+     */
+    xauhuf='xauhuf',
+
+    /**
+     * ### Gold vs Israeli Shekel
+     * *XAU/ILS*
+     */
+    xauils='xauils',
+
+    /**
+     * ### Gold vs Yen
+     * *XAU/JPY*
+     */
+    xaujpy='xaujpy',
+
+    /**
+     * ### Gold vs Mexican Peso
+     * *XAU/MXN*
+     */
+    xaumxn='xaumxn',
+
+    /**
+     * ### Gold vs Norwegian Krone
+     * *XAU/NOK*
+     */
+    xaunok='xaunok',
+
+    /**
+     * ### Gold vs New Zealand Dollar
+     * *XAU/NZD*
+     */
+    xaunzd='xaunzd',
+
+    /**
+     * ### Gold vs Zloty
+     * *XAU/PLN*
+     */
+    xaupln='xaupln',
+
+    /**
+     * ### Gold vs Romanian Leu
+     * *XAU/RON*
+     */
+    xauron='xauron',
+
+    /**
+     * ### Gold vs Saudi Riyal
+     * *XAU/SAR*
+     */
+    xausar='xausar',
+
+    /**
+     * ### Gold vs Swedish Krona
+     * *XAU/SEK*
+     */
+    xausek='xausek',
+
+    /**
+     * ### Gold vs Singapore Dollar
+     * *XAU/SGD*
+     */
+    xausgd='xausgd',
+
+    /**
+     * ### Gold vs Thai Baht
+     * *XAU/THB*
+     */
+    xauthb='xauthb',
+
+    /**
+     * ### Gold vs Turkish Lira
+     * *XAU/TRY*
+     */
+    xautry='xautry',
+
+    /**
+     * ### Gold vs US Dollar
      * *XAU/USD*
      */
     xauusd='xauusd',
+
+    /**
+     * ### Gold vs Silver
+     * *XAU/XAG*
+     */
+    xauxag='xauxag',
+
+    /**
+     * ### Gold vs Rand
+     * *XAU/ZAR*
+     */
+    xauzar='xauzar',
+
+    /**
+     * ### Xtrackers FTSE Developed Europe Real Estate UCITS
+     * *XDER.GB/GBX*
+     */
+    xdergbgbx='xdergbgbx',
+
+    /**
+     * ### Xtrackers MSCI World Health Care UCITS ETF 1C
+     * *XDWH.US/USD*
+     */
+    xdwhususd='xdwhususd',
+
+    /**
+     * ### Xtrackers MSCI World Information Technology UCITS ETF 1C
+     * *XDWT.US/USD*
+     */
+    xdwtususd='xdwtususd',
 
     /**
      * ### Energy Select Sector SPDR Fund
@@ -7429,34 +8791,28 @@ export enum Instrument {
     xlkususd='xlkususd',
 
     /**
-     * ### Stellar vs. Swiss franc
+     * ### XLM - Stellar vs Swiss Franc
      * *XLM/CHF*
      */
     xlmchf='xlmchf',
 
     /**
-     * ### Stellar vs. Euro
+     * ### XLM - Stellar vs Euro
      * *XLM/EUR*
      */
     xlmeur='xlmeur',
 
     /**
-     * ### Stellar vs. Pound sterling
+     * ### XLM - Stellar vs Pound Sterling
      * *XLM/GBP*
      */
     xlmgbp='xlmgbp',
 
     /**
-     * ### Stellar vs US Dollar
+     * ### XLM - Stellar vs US Dollar
      * *XLM/USD*
      */
     xlmusd='xlmusd',
-
-    /**
-     * ### XILINX INC
-     * *XLNX.US/USD*
-     */
-    xlnxususd='xlnxususd',
 
     /**
      * ### Consumer Staples Select Sector SPDR Fund
@@ -7481,6 +8837,12 @@ export enum Instrument {
      * *XLY.US/USD*
      */
     xlyususd='xlyususd',
+
+    /**
+     * ### Xtrackers Nasdaq 100
+     * *XNAQ.GB/GBP*
+     */
+    xnaqgbgbp='xnaqgbgbp',
 
     /**
      * ### EXXON MOBIL CORP
@@ -7519,19 +8881,25 @@ export enum Instrument {
     xptcmdusd='xptcmdusd',
 
     /**
+     * ### Invesco Real Estate S&P Select Sector UCITS ETF
+     * *XRES.US/USD*
+     */
+    xresususd='xresususd',
+
+    /**
+     * ### Xtrackers MSCI Europe Utilities Screened
+     * *XS6R.GB/GBX*
+     */
+    xs6rgbgbx='xs6rgbgbx',
+
+    /**
      * ### XYLEM INC
      * *XYL.US/USD*
      */
     xylususd='xylususd',
 
     /**
-     * ### ALLEGHANY CORP
-     * *Y.US/USD*
-     */
-    yususd='yususd',
-
-    /**
-     * ### Yearn.finance vs US Dollar
+     * ### Yearn Finance vs US Dollar
      * *YFI/USD*
      */
     yfiusd='yfiusd',
@@ -7555,10 +8923,40 @@ export enum Instrument {
     zususd='zususd',
 
     /**
-     * ### South African Rand vs Japanese Yen
+     * ### Rand vs Czech Koruna
+     * *ZAR/CZK*
+     */
+    zarczk='zarczk',
+
+    /**
+     * ### Rand vs Hungarian Forint
+     * *ZAR/HUF*
+     */
+    zarhuf='zarhuf',
+
+    /**
+     * ### Rand vs Yen
      * *ZAR/JPY*
      */
     zarjpy='zarjpy',
+
+    /**
+     * ### Rand vs Mexican Peso
+     * *ZAR/MXN*
+     */
+    zarmxn='zarmxn',
+
+    /**
+     * ### Rand vs Thai Baht
+     * *ZAR/THB*
+     */
+    zarthb='zarthb',
+
+    /**
+     * ### Rand vs Turkish Lira
+     * *ZAR/TRY*
+     */
+    zartry='zartry',
 
     /**
      * ### ZIMMER BIOMET HOLDINGS INC
@@ -7573,13 +8971,7 @@ export enum Instrument {
     zbraususd='zbraususd',
 
     /**
-     * ### ZEN.US/USD
-     * *ZEN.US/USD*
-     */
-    zenususd='zenususd',
-
-    /**
-     * ### Zoom Video Communications (A Class)
+     * ### Zoom Video Communications Inc. (Class A)
      * *ZM.US/USD*
      */
     zmususd='zmususd',
@@ -7601,2045 +8993,5 @@ export enum Instrument {
      * *ZURN.CH/CHF*
      */
     zurnchchf='zurnchchf',
-
-    /**
-     * ### ARK 21Shares Active Bitcoin Ethereum Strategy ETF Fund
-     * *ARKI.US/USD*
-     */
-    arkiususd='arkiususd',
-
-    /**
-     * ### Global X Cybersecurity UCITS ETF Fund
-     * *BUGG.GB/GBP*
-     */
-    bugggbgbx='bugggbgbx',
-
-    /**
-     * ### Lyxor Smart Overnight Return - UCITS ETF C-GBP
-     * *CSH2.GB/GBX*
-     */
-    csh2gbgbx='csh2gbgbx',
-
-    /**
-     * ### WisdomTree Cybersecurity UCITS ETF Fund
-     * *CYSE.GB/GBX*
-     */
-    cysegbgbx='cysegbgbx',
-
-    /**
-     * ### iShares MSCI Europe Health Care Sector UCITS ETF Fund
-     * *ESIH.GB/GBP*
-     */
-    esihgbgbx='esihgbgbx',
-
-    /**
-     * ### iShares Physical Gold ETC Fund
-     * *IGLN.US/USD*
-     */
-    iglnususd='iglnususd',
-
-    /**
-     * ### iShares S&P 500 Financials Sector UCITS ETF
-     * *IUFS.US/USD*
-     */
-    iufsususd='iufsususd',
-
-    /**
-     * ### iShares MSCI Global Semiconductors UCITS ETF
-     * *SEMI.GB/GBP*
-     */
-    semigbgbx='semigbgbx',
-
-    /**
-     * ### Invesco Physical Gold ETC Fund
-     * *SGLD.US/USD*
-     */
-    sgldususd='sgldususd',
-
-    /**
-     * ### VanEck Semiconductor ETF Fund
-     * *SMH.US/USD*
-     */
-    smhususd='smhususd',
-
-    /**
-     * ### Lyxor Smart Overnight Return - UCITS ETF C-USD
-     * *SMTC.US/USD*
-     */
-    smtcususd='smtcususd',
-
-    /**
-     * ### Wisdomtree Artificial Intelligence And Innovation Fund
-     * *WTAI.US/USD*
-     */
-    wtaiususd='wtaiususd',
-
-    /**
-     * ### Xtrackers FTSE Developed Europe Real Estate UCITS ETF
-     * *XDER.GB/GBX*
-     */
-    xdergbgbx='xdergbgbx',
-
-    /**
-     * ### Xtrackers MSCI World Health Care UCITS ETF Fund
-     * *XDWH.US/USD*
-     */
-    xdwhususd='xdwhususd',
-
-    /**
-     * ### Xtrackers MSCI World Information Technology UCITS ETF
-     * *XDWT.US/USD*
-     */
-    xdwtususd='xdwtususd',
-
-    /**
-     * ### Invesco Real Estate S&P US Select Sector UCITS ETF Acc
-     * *XRES.US/USD*
-     */
-    xresususd='xresususd',
-
-    /**
-     * ### ARK Autonomous Technology & Robotics ETF
-     * *ARKQ.US/USD*
-     */
-    arkqususd='arkqususd',
-
-    /**
-     * ### ARK Space Exporation & Innovation ETF
-     * *ARKX.US/USD*
-     */
-    arkxususd='arkxususd',
-
-    /**
-     * ### Amplify Travel Tech ETF
-     * *AWAY.US/USD*
-     */
-    awayususd='awayususd',
-
-    /**
-     * ### ProShares Bitcoin ETF
-     * *BITO.US/USD*
-     */
-    bitoususd='bitoususd',
-
-    /**
-     * ### Valkyrie Bitcoin and Ether Strategy ETF
-     * *BTF.US/USD*
-     */
-    btfususd='btfususd',
-
-    /**
-     * ### Lyxor Smart Overnight Return - UCITS ETF C-EUR
-     * *CSH2.FR/EUR*
-     */
-    csh2freur='csh2freur',
-
-    /**
-     * ### VanEck Video Gaming and eSports ETF
-     * *ESPO.US/USD*
-     */
-    espoususd='espoususd',
-
-    /**
-     * ### Global X FinTech ETF
-     * *FINX.US/USD*
-     */
-    finxususd='finxususd',
-
-    /**
-     * ### First Trust Nasdaq Food & Beverage ETF
-     * *FTXG.US/USD*
-     */
-    ftxgususd='ftxgususd',
-
-    /**
-     * ### iShares US Insurance ETF
-     * *IAK.US/USD*
-     */
-    iakususd='iakususd',
-
-    /**
-     * ### iShares US Aerospace & Defense ETF
-     * *ITA.US/USD*
-     */
-    itaususd='itaususd',
-
-    /**
-     * ### US Global Jets ETF
-     * *JETS.US/USD*
-     */
-    jetsususd='jetsususd',
-
-    /**
-     * ### SPDR S&P Insurance ETF
-     * *KIE.US/USD*
-     */
-    kieususd='kieususd',
-
-    /**
-     * ### SPDR S&P Regional Banking ETF
-     * *KRE.US/USD*
-     */
-    kreususd='kreususd',
-
-    /**
-     * ### Invesco Food & Beverage ETF
-     * *PBJ.US/USD*
-     */
-    pbjususd='pbjususd',
-
-    /**
-     * ### Invesco Leisure & Entertainment ETF
-     * *PEJ.US/USD*
-     */
-    pejususd='pejususd',
-
-    /**
-     * ### Invesco Aerospace & Defense ETF
-     * *PPA.US/USD*
-     */
-    ppaususd='ppaususd',
-
-    /**
-     * ### ROBO Global Robotics & Automation Index ETF
-     * *ROBO.US/USD*
-     */
-    roboususd='roboususd',
-
-    /**
-     * ### Vanguard Energy ETF
-     * *VDE.US/USD*
-     */
-    vdeususd='vdeususd',
-
-    /**
-     * ### United Arab Emirates dirham vs. Renminbi (offshore)
-     * *AED/CNH*
-     */
-    aedcnh='aedcnh',
-
-    /**
-     * ### United Arab Emirates dirham vs. Czech koruna
-     * *AED/CZK*
-     */
-    aedczk='aedczk',
-
-    /**
-     * ### United Arab Emirates dirham vs. Hong Kong dollar
-     * *AED/HKD*
-     */
-    aedhkd='aedhkd',
-
-    /**
-     * ### United Arab Emirates dirham vs. Hungarian forint
-     * *AED/HUF*
-     */
-    aedhuf='aedhuf',
-
-    /**
-     * ### United Arab Emirates dirham vs. Japanese yen
-     * *AED/JPY*
-     */
-    aedjpy='aedjpy',
-
-    /**
-     * ### United Arab Emirates dirham vs. Mexican peso
-     * *AED/MXN*
-     */
-    aedmxn='aedmxn',
-
-    /**
-     * ### United Arab Emirates dirham vs. Romanian leu
-     * *AED/RON*
-     */
-    aedron='aedron',
-
-    /**
-     * ### United Arab Emirates dirham vs. Saudi riyal
-     * *AED/SAR*
-     */
-    aedsar='aedsar',
-
-    /**
-     * ### United Arab Emirates dirham vs. Thai baht
-     * *AED/THB*
-     */
-    aedthb='aedthb',
-
-    /**
-     * ### United Arab Emirates dirham vs. Turkish lira
-     * *AED/TRY*
-     */
-    aedtry='aedtry',
-
-    /**
-     * ### United Arab Emirates dirham vs. South African rand
-     * *AED/ZAR*
-     */
-    aedzar='aedzar',
-
-    /**
-     * ### iShares Ageing Population UCITS ETF USD (Acc)
-     * *AGES.GB/GBX*
-     */
-    agesgbgbx='agesgbgbx',
-
-    /**
-     * ### L&G Artificial Intelligence UCITS ETF
-     * *AIAI.GB/USD*
-     */
-    aiaigbusd='aiaigbusd',
-
-    /**
-     * ### Australian dollar vs. United Arab Emirates dirham
-     * *AUD/AED*
-     */
-    audaed='audaed',
-
-    /**
-     * ### Australian dollar vs. Renminbi (offshore)
-     * *AUD/CNH*
-     */
-    audcnh='audcnh',
-
-    /**
-     * ### Australian dollar vs. Czech koruna
-     * *AUD/CZK*
-     */
-    audczk='audczk',
-
-    /**
-     * ### Australian dollar vs. Danish krone
-     * *AUD/DKK*
-     */
-    auddkk='auddkk',
-
-    /**
-     * ### Australian dollar vs. Hong Kong dollar
-     * *AUD/HKD*
-     */
-    audhkd='audhkd',
-
-    /**
-     * ### Australian dollar vs. Hungarian forint
-     * *AUD/HUF*
-     */
-    audhuf='audhuf',
-
-    /**
-     * ### Australian dollar vs. Israeli new shekel
-     * *AUD/ILS*
-     */
-    audils='audils',
-
-    /**
-     * ### Australian dollar vs. Mexican peso
-     * *AUD/MXN*
-     */
-    audmxn='audmxn',
-
-    /**
-     * ### Australian dollar vs. Norwegian krone
-     * *AUD/NOK*
-     */
-    audnok='audnok',
-
-    /**
-     * ### Australian dollar vs. Polish zÅ‚oty
-     * *AUD/PLN*
-     */
-    audpln='audpln',
-
-    /**
-     * ### Australian dollar vs. Romanian leu
-     * *AUD/RON*
-     */
-    audron='audron',
-
-    /**
-     * ### Australian dollar vs. Saudi riyal
-     * *AUD/SAR*
-     */
-    audsar='audsar',
-
-    /**
-     * ### Australian dollar vs. Swedish krona
-     * *AUD/SEK*
-     */
-    audsek='audsek',
-
-    /**
-     * ### Australian dollar vs. Thai baht
-     * *AUD/THB*
-     */
-    audthb='audthb',
-
-    /**
-     * ### Australian dollar vs. Turkish lira
-     * *AUD/TRY*
-     */
-    audtry='audtry',
-
-    /**
-     * ### Australian dollar vs. South African rand
-     * *AUD/ZAR*
-     */
-    audzar='audzar',
-
-    /**
-     * ### Canadian dollar vs. United Arab Emirates dirham
-     * *CAD/AED*
-     */
-    cadaed='cadaed',
-
-    /**
-     * ### Canadian dollar vs. Renminbi (offshore)
-     * *CAD/CNH*
-     */
-    cadcnh='cadcnh',
-
-    /**
-     * ### Canadian dollar vs. Czech koruna
-     * *CAD/CZK*
-     */
-    cadczk='cadczk',
-
-    /**
-     * ### Canadian dollar vs. Danish krone
-     * *CAD/DKK*
-     */
-    caddkk='caddkk',
-
-    /**
-     * ### Canadian dollar vs. Hungarian forint
-     * *CAD/HUF*
-     */
-    cadhuf='cadhuf',
-
-    /**
-     * ### Canadian dollar vs. Israeli new shekel
-     * *CAD/ILS*
-     */
-    cadils='cadils',
-
-    /**
-     * ### Canadian dollar vs. Mexican peso
-     * *CAD/MXN*
-     */
-    cadmxn='cadmxn',
-
-    /**
-     * ### Canadian dollar vs. Norwegian krone
-     * *CAD/NOK*
-     */
-    cadnok='cadnok',
-
-    /**
-     * ### Canadian dollar vs. Polish zÅ‚oty
-     * *CAD/PLN*
-     */
-    cadpln='cadpln',
-
-    /**
-     * ### Canadian dollar vs. Romanian leu
-     * *CAD/RON*
-     */
-    cadron='cadron',
-
-    /**
-     * ### Canadian dollar vs. Saudi riyal
-     * *CAD/SAR*
-     */
-    cadsar='cadsar',
-
-    /**
-     * ### Canadian dollar vs. Swedish krona
-     * *CAD/SEK*
-     */
-    cadsek='cadsek',
-
-    /**
-     * ### Canadian dollar vs. Singapore dollar
-     * *CAD/SGD*
-     */
-    cadsgd='cadsgd',
-
-    /**
-     * ### Canadian dollar vs. Thai baht
-     * *CAD/THB*
-     */
-    cadthb='cadthb',
-
-    /**
-     * ### Canadian dollar vs. Turkish lira
-     * *CAD/TRY*
-     */
-    cadtry='cadtry',
-
-    /**
-     * ### Canadian dollar vs. South African rand
-     * *CAD/ZAR*
-     */
-    cadzar='cadzar',
-
-    /**
-     * ### Swiss franc vs. United Arab Emirates dirham
-     * *CHF/AED*
-     */
-    chfaed='chfaed',
-
-    /**
-     * ### Swiss franc vs. Renminbi (offshore)
-     * *CHF/CNH*
-     */
-    chfcnh='chfcnh',
-
-    /**
-     * ### Swiss franc vs. Czech koruna
-     * *CHF/CZK*
-     */
-    chfczk='chfczk',
-
-    /**
-     * ### Swiss franc vs. Danish krone
-     * *CHF/DKK*
-     */
-    chfdkk='chfdkk',
-
-    /**
-     * ### Swiss franc vs. Hong Kong dollar
-     * *CHF/HKD*
-     */
-    chfhkd='chfhkd',
-
-    /**
-     * ### Swiss franc vs. Hungarian forint
-     * *CHF/HUF*
-     */
-    chfhuf='chfhuf',
-
-    /**
-     * ### Swiss franc vs. Israeli new shekel
-     * *CHF/ILS*
-     */
-    chfils='chfils',
-
-    /**
-     * ### Swiss franc vs. Mexican peso
-     * *CHF/MXN*
-     */
-    chfmxn='chfmxn',
-
-    /**
-     * ### Swiss franc vs. Norwegian krone
-     * *CHF/NOK*
-     */
-    chfnok='chfnok',
-
-    /**
-     * ### Swiss franc vs. Polish zÅ‚oty
-     * *CHF/PLN*
-     */
-    chfpln='chfpln',
-
-    /**
-     * ### Swiss franc vs. Romanian leu
-     * *CHF/RON*
-     */
-    chfron='chfron',
-
-    /**
-     * ### Swiss franc vs. Saudi riyal
-     * *CHF/SAR*
-     */
-    chfsar='chfsar',
-
-    /**
-     * ### Swiss franc vs. Swedish krona
-     * *CHF/SEK*
-     */
-    chfsek='chfsek',
-
-    /**
-     * ### Swiss franc vs. Thai baht
-     * *CHF/THB*
-     */
-    chfthb='chfthb',
-
-    /**
-     * ### Swiss franc vs. Turkish lira
-     * *CHF/TRY*
-     */
-    chftry='chftry',
-
-    /**
-     * ### Swiss franc vs. South African rand
-     * *CHF/ZAR*
-     */
-    chfzar='chfzar',
-
-    /**
-     * ### iShares NASDAQ 100 UCITS ETF USD (Acc)
-     * *CNDX.GB/USD*
-     */
-    cndxgbusd='cndxgbusd',
-
-    /**
-     * ### Renminbi (offshore) vs. Czech koruna
-     * *CNH/CZK*
-     */
-    cnhczk='cnhczk',
-
-    /**
-     * ### Renminbi (offshore) vs. Hong Kong dollar
-     * *CNH/HKD*
-     */
-    cnhhkd='cnhhkd',
-
-    /**
-     * ### Renminbi (offshore) vs. Hungarian forint
-     * *CNH/HUF*
-     */
-    cnhhuf='cnhhuf',
-
-    /**
-     * ### Renminbi (offshore) vs. Japanese yen
-     * *CNH/JPY*
-     */
-    cnhjpy='cnhjpy',
-
-    /**
-     * ### Renminbi (offshore) vs. Mexican peso
-     * *CNH/MXN*
-     */
-    cnhmxn='cnhmxn',
-
-    /**
-     * ### Renminbi (offshore) vs. Thai baht
-     * *CNH/THB*
-     */
-    cnhthb='cnhthb',
-
-    /**
-     * ### Renminbi (offshore) vs. Turkish lira
-     * *CNH/TRY*
-     */
-    cnhtry='cnhtry',
-
-    /**
-     * ### Renminbi (offshore) vs. South African rand
-     * *CNH/ZAR*
-     */
-    cnhzar='cnhzar',
-
-    /**
-     * ### Czech koruna vs. Hungarian forint
-     * *CZK/HUF*
-     */
-    czkhuf='czkhuf',
-
-    /**
-     * ### Czech koruna vs. Japanese yen
-     * *CZK/JPY*
-     */
-    czkjpy='czkjpy',
-
-    /**
-     * ### Czech koruna vs. Thai baht
-     * *CZK/THB*
-     */
-    czkthb='czkthb',
-
-    /**
-     * ### Czech koruna vs. Turkish lira
-     * *CZK/TRY*
-     */
-    czktry='czktry',
-
-    /**
-     * ### VanEck Defense ETF A USD Acc (GBP)
-     * *DFNG.GB/GBP*
-     */
-    dfnggbgbp='dfnggbgbp',
-
-    /**
-     * ### Danish krone vs. United Arab Emirates dirham
-     * *DKK/AED*
-     */
-    dkkaed='dkkaed',
-
-    /**
-     * ### Danish krone vs. Renminbi (offshore)
-     * *DKK/CNH*
-     */
-    dkkcnh='dkkcnh',
-
-    /**
-     * ### Danish krone vs. Czech koruna
-     * *DKK/CZK*
-     */
-    dkkczk='dkkczk',
-
-    /**
-     * ### Danish krone vs. Hong Kong dollar
-     * *DKK/HKD*
-     */
-    dkkhkd='dkkhkd',
-
-    /**
-     * ### Danish krone vs. Hungarian forint
-     * *DKK/HUF*
-     */
-    dkkhuf='dkkhuf',
-
-    /**
-     * ### Danish krone vs. Israeli new shekel
-     * *DKK/ILS*
-     */
-    dkkils='dkkils',
-
-    /**
-     * ### Danish krone vs. Japanese yen
-     * *DKK/JPY*
-     */
-    dkkjpy='dkkjpy',
-
-    /**
-     * ### Danish krone vs. Mexican peso
-     * *DKK/MXN*
-     */
-    dkkmxn='dkkmxn',
-
-    /**
-     * ### Danish krone vs. Romanian leu
-     * *DKK/RON*
-     */
-    dkkron='dkkron',
-
-    /**
-     * ### Danish krone vs. Saudi riyal
-     * *DKK/SAR*
-     */
-    dkksar='dkksar',
-
-    /**
-     * ### Danish krone vs. Thai baht
-     * *DKK/THB*
-     */
-    dkkthb='dkkthb',
-
-    /**
-     * ### Danish krone vs. Turkish lira
-     * *DKK/TRY*
-     */
-    dkktry='dkktry',
-
-    /**
-     * ### Danish krone vs. South African rand
-     * *DKK/ZAR*
-     */
-    dkkzar='dkkzar',
-
-    /**
-     * ### iShares Electric Vehicles and Driving Technology UCITS ETF USD (Acc)
-     * *ECAR.GB/USD*
-     */
-    ecargbusd='ecargbusd',
-
-    /**
-     * ### Euro vs. United Arab Emirates dirham
-     * *EUR/AED*
-     */
-    euraed='euraed',
-
-    /**
-     * ### Euro vs. Renminbi (offshore)
-     * *EUR/CNH*
-     */
-    eurcnh='eurcnh',
-
-    /**
-     * ### Euro vs. Israeli new shekel
-     * *EUR/ILS*
-     */
-    eurils='eurils',
-
-    /**
-     * ### Euro vs. Mexican peso
-     * *EUR/MXN*
-     */
-    eurmxn='eurmxn',
-
-    /**
-     * ### Euro vs. Romanian leu
-     * *EUR/RON*
-     */
-    eurron='eurron',
-
-    /**
-     * ### Euro vs. Saudi riyal
-     * *EUR/SAR*
-     */
-    eursar='eursar',
-
-    /**
-     * ### Euro vs. Thai baht
-     * *EUR/THB*
-     */
-    eurthb='eurthb',
-
-    /**
-     * ### Euro vs. South African rand
-     * *EUR/ZAR*
-     */
-    eurzar='eurzar',
-
-    /**
-     * ### Pound sterling vs. United Arab Emirates dirham
-     * *GBP/AED*
-     */
-    gbpaed='gbpaed',
-
-    /**
-     * ### Pound sterling vs. Renminbi (offshore)
-     * *GBP/CNH*
-     */
-    gbpcnh='gbpcnh',
-
-    /**
-     * ### Pound sterling vs. Czech koruna
-     * *GBP/CZK*
-     */
-    gbpczk='gbpczk',
-
-    /**
-     * ### Pound sterling vs. Danish krone
-     * *GBP/DKK*
-     */
-    gbpdkk='gbpdkk',
-
-    /**
-     * ### Pound sterling vs. Hong Kong dollar
-     * *GBP/HKD*
-     */
-    gbphkd='gbphkd',
-
-    /**
-     * ### Pound sterling vs. Hungarian forint
-     * *GBP/HUF*
-     */
-    gbphuf='gbphuf',
-
-    /**
-     * ### Pound sterling vs. Israeli new shekel
-     * *GBP/ILS*
-     */
-    gbpils='gbpils',
-
-    /**
-     * ### Pound sterling vs. Mexican peso
-     * *GBP/MXN*
-     */
-    gbpmxn='gbpmxn',
-
-    /**
-     * ### Pound sterling vs. Norwegian krone
-     * *GBP/NOK*
-     */
-    gbpnok='gbpnok',
-
-    /**
-     * ### Pound sterling vs. Polish zÅ‚oty
-     * *GBP/PLN*
-     */
-    gbppln='gbppln',
-
-    /**
-     * ### Pound sterling vs. Romanian leu
-     * *GBP/RON*
-     */
-    gbpron='gbpron',
-
-    /**
-     * ### Pound sterling vs. Saudi riyal
-     * *GBP/SAR*
-     */
-    gbpsar='gbpsar',
-
-    /**
-     * ### Pound sterling vs. Swedish krona
-     * *GBP/SEK*
-     */
-    gbpsek='gbpsek',
-
-    /**
-     * ### Pound sterling vs. Singapore dollar
-     * *GBP/SGD*
-     */
-    gbpsgd='gbpsgd',
-
-    /**
-     * ### Pound sterling vs. Thai baht
-     * *GBP/THB*
-     */
-    gbpthb='gbpthb',
-
-    /**
-     * ### Pound sterling vs. Turkish lira
-     * *GBP/TRY*
-     */
-    gbptry='gbptry',
-
-    /**
-     * ### Pound sterling vs. South African rand
-     * *GBP/ZAR*
-     */
-    gbpzar='gbpzar',
-
-    /**
-     * ### L&G Clean Water UCITS ETF
-     * *GLGG.GB/GBX*
-     */
-    glgggbgbx='glgggbgbx',
-
-    /**
-     * ### Hong Kong dollar vs. Czech koruna
-     * *HKD/CZK*
-     */
-    hkdczk='hkdczk',
-
-    /**
-     * ### Hong Kong dollar vs. Hungarian forint
-     * *HKD/HUF*
-     */
-    hkdhuf='hkdhuf',
-
-    /**
-     * ### Hong Kong dollar vs. Mexican peso
-     * *HKD/MXN*
-     */
-    hkdmxn='hkdmxn',
-
-    /**
-     * ### Hong Kong dollar vs. Thai baht
-     * *HKD/THB*
-     */
-    hkdthb='hkdthb',
-
-    /**
-     * ### Hong Kong dollar vs. Turkish lira
-     * *HKD/TRY*
-     */
-    hkdtry='hkdtry',
-
-    /**
-     * ### Hong Kong dollar vs. South African rand
-     * *HKD/ZAR*
-     */
-    hkdzar='hkdzar',
-
-    /**
-     * ### Israeli new shekel vs. United Arab Emirates dirham
-     * *ILS/AED*
-     */
-    ilsaed='ilsaed',
-
-    /**
-     * ### Israeli new shekel vs. Renminbi (offshore)
-     * *ILS/CNH*
-     */
-    ilscnh='ilscnh',
-
-    /**
-     * ### Israeli new shekel vs. Czech koruna
-     * *ILS/CZK*
-     */
-    ilsczk='ilsczk',
-
-    /**
-     * ### Israeli new shekel vs. Hong Kong dollar
-     * *ILS/HKD*
-     */
-    ilshkd='ilshkd',
-
-    /**
-     * ### Israeli new shekel vs. Hungarian forint
-     * *ILS/HUF*
-     */
-    ilshuf='ilshuf',
-
-    /**
-     * ### Israeli new shekel vs. Japanese yen
-     * *ILS/JPY*
-     */
-    ilsjpy='ilsjpy',
-
-    /**
-     * ### Israeli new shekel vs. Mexican peso
-     * *ILS/MXN*
-     */
-    ilsmxn='ilsmxn',
-
-    /**
-     * ### Israeli new shekel vs. Romanian leu
-     * *ILS/RON*
-     */
-    ilsron='ilsron',
-
-    /**
-     * ### Israeli new shekel vs. Saudi riyal
-     * *ILS/SAR*
-     */
-    ilssar='ilssar',
-
-    /**
-     * ### Israeli new shekel vs. Thai baht
-     * *ILS/THB*
-     */
-    ilsthb='ilsthb',
-
-    /**
-     * ### Israeli new shekel vs. Turkish lira
-     * *ILS/TRY*
-     */
-    ilstry='ilstry',
-
-    /**
-     * ### Israeli new shekel vs. South African rand
-     * *ILS/ZAR*
-     */
-    ilszar='ilszar',
-
-    /**
-     * ### WisdomTree Artificial Intelligence UCITS ETF - USD Acc
-     * *INTL.GB/GBX*
-     */
-    intlgbgbx='intlgbgbx',
-
-    /**
-     * ### L&G Cyber Security UCITS ETF
-     * *ISPY.GB/GBX*
-     */
-    ispygbgbx='ispygbgbx',
-
-    /**
-     * ### Japanese yen vs. Hungarian forint
-     * *JPY/HUF*
-     */
-    jpyhuf='jpyhuf',
-
-    /**
-     * ### Mexican peso vs. Czech koruna
-     * *MXN/CZK*
-     */
-    mxnczk='mxnczk',
-
-    /**
-     * ### Mexican peso vs. Hungarian forint
-     * *MXN/HUF*
-     */
-    mxnhuf='mxnhuf',
-
-    /**
-     * ### Mexican peso vs. Japanese yen
-     * *MXN/JPY*
-     */
-    mxnjpy='mxnjpy',
-
-    /**
-     * ### Mexican peso vs. Thai baht
-     * *MXN/THB*
-     */
-    mxnthb='mxnthb',
-
-    /**
-     * ### Mexican peso vs. Turkish lira
-     * *MXN/TRY*
-     */
-    mxntry='mxntry',
-
-    /**
-     * ### Norwegian krone vs. United Arab Emirates dirham
-     * *NOK/AED*
-     */
-    nokaed='nokaed',
-
-    /**
-     * ### Norwegian krone vs. Renminbi (offshore)
-     * *NOK/CNH*
-     */
-    nokcnh='nokcnh',
-
-    /**
-     * ### Norwegian krone vs. Czech koruna
-     * *NOK/CZK*
-     */
-    nokczk='nokczk',
-
-    /**
-     * ### Norwegian krone vs. Danish krone
-     * *NOK/DKK*
-     */
-    nokdkk='nokdkk',
-
-    /**
-     * ### Norwegian krone vs. Hong Kong dollar
-     * *NOK/HKD*
-     */
-    nokhkd='nokhkd',
-
-    /**
-     * ### Norwegian krone vs. Hungarian forint
-     * *NOK/HUF*
-     */
-    nokhuf='nokhuf',
-
-    /**
-     * ### Norwegian krone vs. Israeli new shekel
-     * *NOK/ILS*
-     */
-    nokils='nokils',
-
-    /**
-     * ### Norwegian krone vs. Japanese yen
-     * *NOK/JPY*
-     */
-    nokjpy='nokjpy',
-
-    /**
-     * ### Norwegian krone vs. Mexican peso
-     * *NOK/MXN*
-     */
-    nokmxn='nokmxn',
-
-    /**
-     * ### Norwegian krone vs. Romanian leu
-     * *NOK/RON*
-     */
-    nokron='nokron',
-
-    /**
-     * ### Norwegian krone vs. Saudi riyal
-     * *NOK/SAR*
-     */
-    noksar='noksar',
-
-    /**
-     * ### Norwegian krone vs. Swedish krona
-     * *NOK/SEK*
-     */
-    noksek='noksek',
-
-    /**
-     * ### Norwegian krone vs. Thai baht
-     * *NOK/THB*
-     */
-    nokthb='nokthb',
-
-    /**
-     * ### Norwegian krone vs. Turkish lira
-     * *NOK/TRY*
-     */
-    noktry='noktry',
-
-    /**
-     * ### Norwegian krone vs. South African rand
-     * *NOK/ZAR*
-     */
-    nokzar='nokzar',
-
-    /**
-     * ### New Zealand dollar vs. United Arab Emirates dirham
-     * *NZD/AED*
-     */
-    nzdaed='nzdaed',
-
-    /**
-     * ### New Zealand dollar vs. Renminbi (offshore)
-     * *NZD/CNH*
-     */
-    nzdcnh='nzdcnh',
-
-    /**
-     * ### New Zealand dollar vs. Czech koruna
-     * *NZD/CZK*
-     */
-    nzdczk='nzdczk',
-
-    /**
-     * ### New Zealand dollar vs. Danish krone
-     * *NZD/DKK*
-     */
-    nzddkk='nzddkk',
-
-    /**
-     * ### New Zealand dollar vs. Hong Kong dollar
-     * *NZD/HKD*
-     */
-    nzdhkd='nzdhkd',
-
-    /**
-     * ### New Zealand dollar vs. Hungarian forint
-     * *NZD/HUF*
-     */
-    nzdhuf='nzdhuf',
-
-    /**
-     * ### New Zealand dollar vs. Israeli new shekel
-     * *NZD/ILS*
-     */
-    nzdils='nzdils',
-
-    /**
-     * ### New Zealand dollar vs. Mexican peso
-     * *NZD/MXN*
-     */
-    nzdmxn='nzdmxn',
-
-    /**
-     * ### New Zealand dollar vs. Norwegian krone
-     * *NZD/NOK*
-     */
-    nzdnok='nzdnok',
-
-    /**
-     * ### New Zealand dollar vs. Polish zÅ‚oty
-     * *NZD/PLN*
-     */
-    nzdpln='nzdpln',
-
-    /**
-     * ### New Zealand dollar vs. Romanian leu
-     * *NZD/RON*
-     */
-    nzdron='nzdron',
-
-    /**
-     * ### New Zealand dollar vs. Saudi riyal
-     * *NZD/SAR*
-     */
-    nzdsar='nzdsar',
-
-    /**
-     * ### New Zealand dollar vs. Swedish krona
-     * *NZD/SEK*
-     */
-    nzdsek='nzdsek',
-
-    /**
-     * ### New Zealand dollar vs. Singapore dollar
-     * *NZD/SGD*
-     */
-    nzdsgd='nzdsgd',
-
-    /**
-     * ### New Zealand dollar vs. Thai baht
-     * *NZD/THB*
-     */
-    nzdthb='nzdthb',
-
-    /**
-     * ### New Zealand dollar vs. Turkish lira
-     * *NZD/TRY*
-     */
-    nzdtry='nzdtry',
-
-    /**
-     * ### New Zealand dollar vs. South African rand
-     * *NZD/ZAR*
-     */
-    nzdzar='nzdzar',
-
-    /**
-     * ### Polish zÅ‚oty vs. United Arab Emirates dirham
-     * *PLN/AED*
-     */
-    plnaed='plnaed',
-
-    /**
-     * ### Polish zÅ‚oty vs. Renminbi (offshore)
-     * *PLN/CNH*
-     */
-    plncnh='plncnh',
-
-    /**
-     * ### Polish zÅ‚oty vs. Czech koruna
-     * *PLN/CZK*
-     */
-    plnczk='plnczk',
-
-    /**
-     * ### Polish zÅ‚oty vs. Danish krone
-     * *PLN/DKK*
-     */
-    plndkk='plndkk',
-
-    /**
-     * ### Polish zÅ‚oty vs. Hong Kong dollar
-     * *PLN/HKD*
-     */
-    plnhkd='plnhkd',
-
-    /**
-     * ### Polish zÅ‚oty vs. Hungarian forint
-     * *PLN/HUF*
-     */
-    plnhuf='plnhuf',
-
-    /**
-     * ### Polish zÅ‚oty vs. Israeli new shekel
-     * *PLN/ILS*
-     */
-    plnils='plnils',
-
-    /**
-     * ### Polish zÅ‚oty vs. Japanese yen
-     * *PLN/JPY*
-     */
-    plnjpy='plnjpy',
-
-    /**
-     * ### Polish zÅ‚oty vs. Mexican peso
-     * *PLN/MXN*
-     */
-    plnmxn='plnmxn',
-
-    /**
-     * ### Polish zÅ‚oty vs. Norwegian krone
-     * *PLN/NOK*
-     */
-    plnnok='plnnok',
-
-    /**
-     * ### Polish zÅ‚oty vs. Romanian leu
-     * *PLN/RON*
-     */
-    plnron='plnron',
-
-    /**
-     * ### Polish zÅ‚oty vs. Saudi riyal
-     * *PLN/SAR*
-     */
-    plnsar='plnsar',
-
-    /**
-     * ### Polish zÅ‚oty vs. Swedish krona
-     * *PLN/SEK*
-     */
-    plnsek='plnsek',
-
-    /**
-     * ### Polish zÅ‚oty vs. Thai baht
-     * *PLN/THB*
-     */
-    plnthb='plnthb',
-
-    /**
-     * ### Polish zÅ‚oty vs. Turkish lira
-     * *PLN/TRY*
-     */
-    plntry='plntry',
-
-    /**
-     * ### Polish zÅ‚oty vs. South African rand
-     * *PLN/ZAR*
-     */
-    plnzar='plnzar',
-
-    /**
-     * ### Romanian leu vs. Renminbi (offshore)
-     * *RON/CNH*
-     */
-    roncnh='roncnh',
-
-    /**
-     * ### Romanian leu vs. Czech koruna
-     * *RON/CZK*
-     */
-    ronczk='ronczk',
-
-    /**
-     * ### Romanian leu vs. Hong Kong dollar
-     * *RON/HKD*
-     */
-    ronhkd='ronhkd',
-
-    /**
-     * ### Romanian leu vs. Hungarian forint
-     * *RON/HUF*
-     */
-    ronhuf='ronhuf',
-
-    /**
-     * ### Romanian leu vs. Japanese yen
-     * *RON/JPY*
-     */
-    ronjpy='ronjpy',
-
-    /**
-     * ### Romanian leu vs. Mexican peso
-     * *RON/MXN*
-     */
-    ronmxn='ronmxn',
-
-    /**
-     * ### Romanian leu vs. Thai baht
-     * *RON/THB*
-     */
-    ronthb='ronthb',
-
-    /**
-     * ### Romanian leu vs. Turkish lira
-     * *RON/TRY*
-     */
-    rontry='rontry',
-
-    /**
-     * ### Romanian leu vs. South African rand
-     * *RON/ZAR*
-     */
-    ronzar='ronzar',
-
-    /**
-     * ### Saudi riyal vs. Renminbi (offshore)
-     * *SAR/CNH*
-     */
-    sarcnh='sarcnh',
-
-    /**
-     * ### Saudi riyal vs. Czech koruna
-     * *SAR/CZK*
-     */
-    sarczk='sarczk',
-
-    /**
-     * ### Saudi riyal vs. Hong Kong dollar
-     * *SAR/HKD*
-     */
-    sarhkd='sarhkd',
-
-    /**
-     * ### Saudi riyal vs. Hungarian forint
-     * *SAR/HUF*
-     */
-    sarhuf='sarhuf',
-
-    /**
-     * ### Saudi riyal vs. Japanese yen
-     * *SAR/JPY*
-     */
-    sarjpy='sarjpy',
-
-    /**
-     * ### Saudi riyal vs. Mexican peso
-     * *SAR/MXN*
-     */
-    sarmxn='sarmxn',
-
-    /**
-     * ### Saudi riyal vs. Romanian leu
-     * *SAR/RON*
-     */
-    sarron='sarron',
-
-    /**
-     * ### Saudi riyal vs. Thai baht
-     * *SAR/THB*
-     */
-    sarthb='sarthb',
-
-    /**
-     * ### Saudi riyal vs. Turkish lira
-     * *SAR/TRY*
-     */
-    sartry='sartry',
-
-    /**
-     * ### Saudi riyal vs. South African rand
-     * *SAR/ZAR*
-     */
-    sarzar='sarzar',
-
-    /**
-     * ### Swedish krona vs. United Arab Emirates dirham
-     * *SEK/AED*
-     */
-    sekaed='sekaed',
-
-    /**
-     * ### Swedish krona vs. Renminbi (offshore)
-     * *SEK/CNH*
-     */
-    sekcnh='sekcnh',
-
-    /**
-     * ### Swedish krona vs. Czech koruna
-     * *SEK/CZK*
-     */
-    sekczk='sekczk',
-
-    /**
-     * ### Swedish krona vs. Danish krone
-     * *SEK/DKK*
-     */
-    sekdkk='sekdkk',
-
-    /**
-     * ### Swedish krona vs. Hong Kong dollar
-     * *SEK/HKD*
-     */
-    sekhkd='sekhkd',
-
-    /**
-     * ### Swedish krona vs. Hungarian forint
-     * *SEK/HUF*
-     */
-    sekhuf='sekhuf',
-
-    /**
-     * ### Swedish krona vs. Israeli new shekel
-     * *SEK/ILS*
-     */
-    sekils='sekils',
-
-    /**
-     * ### Swedish krona vs. Japanese yen
-     * *SEK/JPY*
-     */
-    sekjpy='sekjpy',
-
-    /**
-     * ### Swedish krona vs. Mexican peso
-     * *SEK/MXN*
-     */
-    sekmxn='sekmxn',
-
-    /**
-     * ### Swedish krona vs. Romanian leu
-     * *SEK/RON*
-     */
-    sekron='sekron',
-
-    /**
-     * ### Swedish krona vs. Saudi riyal
-     * *SEK/SAR*
-     */
-    seksar='seksar',
-
-    /**
-     * ### Swedish krona vs. Thai baht
-     * *SEK/THB*
-     */
-    sekthb='sekthb',
-
-    /**
-     * ### Swedish krona vs. Turkish lira
-     * *SEK/TRY*
-     */
-    sektry='sektry',
-
-    /**
-     * ### Swedish krona vs. South African rand
-     * *SEK/ZAR*
-     */
-    sekzar='sekzar',
-
-    /**
-     * ### Singapore dollar vs. United Arab Emirates dirham
-     * *SGD/AED*
-     */
-    sgdaed='sgdaed',
-
-    /**
-     * ### Singapore dollar vs. Renminbi (offshore)
-     * *SGD/CNH*
-     */
-    sgdcnh='sgdcnh',
-
-    /**
-     * ### Singapore dollar vs. Czech koruna
-     * *SGD/CZK*
-     */
-    sgdczk='sgdczk',
-
-    /**
-     * ### Singapore dollar vs. Danish krone
-     * *SGD/DKK*
-     */
-    sgddkk='sgddkk',
-
-    /**
-     * ### Singapore dollar vs. Hong Kong dollar
-     * *SGD/HKD*
-     */
-    sgdhkd='sgdhkd',
-
-    /**
-     * ### Singapore dollar vs. Hungarian forint
-     * *SGD/HUF*
-     */
-    sgdhuf='sgdhuf',
-
-    /**
-     * ### Singapore dollar vs. Israeli new shekel
-     * *SGD/ILS*
-     */
-    sgdils='sgdils',
-
-    /**
-     * ### Singapore dollar vs. Mexican peso
-     * *SGD/MXN*
-     */
-    sgdmxn='sgdmxn',
-
-    /**
-     * ### Singapore dollar vs. Norwegian krone
-     * *SGD/NOK*
-     */
-    sgdnok='sgdnok',
-
-    /**
-     * ### Singapore dollar vs. Polish zÅ‚oty
-     * *SGD/PLN*
-     */
-    sgdpln='sgdpln',
-
-    /**
-     * ### Singapore dollar vs. Romanian leu
-     * *SGD/RON*
-     */
-    sgdron='sgdron',
-
-    /**
-     * ### Singapore dollar vs. Saudi riyal
-     * *SGD/SAR*
-     */
-    sgdsar='sgdsar',
-
-    /**
-     * ### Singapore dollar vs. Swedish krona
-     * *SGD/SEK*
-     */
-    sgdsek='sgdsek',
-
-    /**
-     * ### Singapore dollar vs. Thai baht
-     * *SGD/THB*
-     */
-    sgdthb='sgdthb',
-
-    /**
-     * ### Singapore dollar vs. Turkish lira
-     * *SGD/TRY*
-     */
-    sgdtry='sgdtry',
-
-    /**
-     * ### Singapore dollar vs. South African rand
-     * *SGD/ZAR*
-     */
-    sgdzar='sgdzar',
-
-    /**
-     * ### iShares MSCI USA SRI UCITS ETF
-     * *SUAS.GB/USD*
-     */
-    suasgbusd='suasgbusd',
-
-    /**
-     * ### iShares MSCI EM SRI UCITS ETF USD (Acc)
-     * *SUSM.GB/USD*
-     */
-    susmgbusd='susmgbusd',
-
-    /**
-     * ### iShares MSCI USA SRI UCITS ETF USD (Acc)
-     * *SUUS.GB/GBX*
-     */
-    suusgbgbx='suusgbgbx',
-
-    /**
-     * ### SPDR S&P U.S. Utilities Select Sector UCITS ETF
-     * *SXLU.GB/USD*
-     */
-    sxlugbusd='sxlugbusd',
-
-    /**
-     * ### Thai baht vs. Hungarian forint
-     * *THB/HUF*
-     */
-    thbhuf='thbhuf',
-
-    /**
-     * ### Thai baht vs. Japanese yen
-     * *THB/JPY*
-     */
-    thbjpy='thbjpy',
-
-    /**
-     * ### Turkish lira vs. Hungarian forint
-     * *TRY/HUF*
-     */
-    tryhuf='tryhuf',
-
-    /**
-     * ### Turkish lira vs. Thai baht
-     * *TRY/THB*
-     */
-    trythb='trythb',
-
-    /**
-     * ### Vanguard FTSE 100 UCITS ETF GBP Acc
-     * *VUKG.GB/GBP*
-     */
-    vukggbgbp='vukggbgbp',
-
-    /**
-     * ### VWRP VANGUARD FTSE ALL-WORLD UCITS ETF
-     * *VWRP.GB/GBP*
-     */
-    vwrpgbgbp='vwrpgbgbp',
-
-    /**
-     * ### iShares MSCI World Small Cap UCITS ETF USD (Acc)
-     * *WSML.GB/USD*
-     */
-    wsmlgbusd='wsmlgbusd',
-
-    /**
-     * ### Silver (troy oz) vs. United Arab Emirates dirham
-     * *XAG/AED*
-     */
-    xagaed='xagaed',
-
-    /**
-     * ### Silver (troy oz) vs. Australian dollar
-     * *XAG/AUD*
-     */
-    xagaud='xagaud',
-
-    /**
-     * ### Silver (troy oz) vs. Canadian dollar
-     * *XAG/CAD*
-     */
-    xagcad='xagcad',
-
-    /**
-     * ### Silver (troy oz) vs. Swiss franc
-     * *XAG/CHF*
-     */
-    xagchf='xagchf',
-
-    /**
-     * ### Silver (troy oz) vs. Renminbi (offshore)
-     * *XAG/CNH*
-     */
-    xagcnh='xagcnh',
-
-    /**
-     * ### Silver (troy oz) vs. Czech koruna
-     * *XAG/CZK*
-     */
-    xagczk='xagczk',
-
-    /**
-     * ### Silver (troy oz) vs. Danish krone
-     * *XAG/DKK*
-     */
-    xagdkk='xagdkk',
-
-    /**
-     * ### Silver (troy oz) vs. Euro
-     * *XAG/EUR*
-     */
-    xageur='xageur',
-
-    /**
-     * ### Silver (troy oz) vs. Pound sterling
-     * *XAG/GBP*
-     */
-    xaggbp='xaggbp',
-
-    /**
-     * ### Silver (troy oz) vs. Hong Kong dollar
-     * *XAG/HKD*
-     */
-    xaghkd='xaghkd',
-
-    /**
-     * ### Silver (troy oz) vs. Hungarian forint
-     * *XAG/HUF*
-     */
-    xaghuf='xaghuf',
-
-    /**
-     * ### Silver (troy oz) vs. Israeli new shekel
-     * *XAG/ILS*
-     */
-    xagils='xagils',
-
-    /**
-     * ### Silver (troy oz) vs. Japanese yen
-     * *XAG/JPY*
-     */
-    xagjpy='xagjpy',
-
-    /**
-     * ### Silver (troy oz) vs. Mexican peso
-     * *XAG/MXN*
-     */
-    xagmxn='xagmxn',
-
-    /**
-     * ### Silver (troy oz) vs. Norwegian krone
-     * *XAG/NOK*
-     */
-    xagnok='xagnok',
-
-    /**
-     * ### Silver (troy oz) vs. New Zealand dollar
-     * *XAG/NZD*
-     */
-    xagnzd='xagnzd',
-
-    /**
-     * ### Silver (troy oz) vs. Polish zÅ‚oty
-     * *XAG/PLN*
-     */
-    xagpln='xagpln',
-
-    /**
-     * ### Silver (troy oz) vs. Romanian leu
-     * *XAG/RON*
-     */
-    xagron='xagron',
-
-    /**
-     * ### Silver (troy oz) vs. Saudi riyal
-     * *XAG/SAR*
-     */
-    xagsar='xagsar',
-
-    /**
-     * ### Silver (troy oz) vs. Swedish krona
-     * *XAG/SEK*
-     */
-    xagsek='xagsek',
-
-    /**
-     * ### Silver (troy oz) vs. Singapore dollar
-     * *XAG/SGD*
-     */
-    xagsgd='xagsgd',
-
-    /**
-     * ### Silver (troy oz) vs. Thai baht
-     * *XAG/THB*
-     */
-    xagthb='xagthb',
-
-    /**
-     * ### Silver (troy oz) vs. Turkish lira
-     * *XAG/TRY*
-     */
-    xagtry='xagtry',
-
-    /**
-     * ### Silver(troy oz) vs. South African rand
-     * *XAG/ZAR*
-     */
-    xagzar='xagzar',
-
-    /**
-     * ### Gold (troy oz) vs. United Arab Emirates dirham
-     * *XAU/AED*
-     */
-    xauaed='xauaed',
-
-    /**
-     * ### Gold (troy oz) vs. Australian dollar
-     * *XAU/AUD*
-     */
-    xauaud='xauaud',
-
-    /**
-     * ### Gold (troy oz) vs. Canadian dollar
-     * *XAU/CAD*
-     */
-    xaucad='xaucad',
-
-    /**
-     * ### Gold (troy oz) vs. Swiss franc
-     * *XAU/CHF*
-     */
-    xauchf='xauchf',
-
-    /**
-     * ### Gold (troy oz) vs. Renminbi (offshore)
-     * *XAU/CNH*
-     */
-    xaucnh='xaucnh',
-
-    /**
-     * ### Gold (troy oz) vs. Czech koruna
-     * *XAU/CZK*
-     */
-    xauczk='xauczk',
-
-    /**
-     * ### Gold (troy oz) vs. Danish krone
-     * *XAU/DKK*
-     */
-    xaudkk='xaudkk',
-
-    /**
-     * ### Gold (troy oz) vs. Euro
-     * *XAU/EUR*
-     */
-    xaueur='xaueur',
-
-    /**
-     * ### Gold (troy oz) vs. Pound sterling
-     * *XAU/GBP*
-     */
-    xaugbp='xaugbp',
-
-    /**
-     * ### Gold (troy oz) vs. Hong Kong dollar
-     * *XAU/HKD*
-     */
-    xauhkd='xauhkd',
-
-    /**
-     * ### Gold (troy oz) vs. Hungarian forint
-     * *XAU/HUF*
-     */
-    xauhuf='xauhuf',
-
-    /**
-     * ### Gold (troy oz) vs. Israeli new shekel
-     * *XAU/ILS*
-     */
-    xauils='xauils',
-
-    /**
-     * ### Gold (troy oz) vs. Japanese yen
-     * *XAU/JPY*
-     */
-    xaujpy='xaujpy',
-
-    /**
-     * ### Gold (troy oz) vs. Mexican peso
-     * *XAU/MXN*
-     */
-    xaumxn='xaumxn',
-
-    /**
-     * ### Gold (troy oz) vs. Norwegian krone
-     * *XAU/NOK*
-     */
-    xaunok='xaunok',
-
-    /**
-     * ### Gold (troy oz) vs. New Zealand dollar
-     * *XAU/NZD*
-     */
-    xaunzd='xaunzd',
-
-    /**
-     * ### Gold (troy oz) vs. Polish zÅ‚oty
-     * *XAU/PLN*
-     */
-    xaupln='xaupln',
-
-    /**
-     * ### Gold (troy oz) vs. Romanian leu
-     * *XAU/RON*
-     */
-    xauron='xauron',
-
-    /**
-     * ### Gold (troy oz) vs. Saudi riyal
-     * *XAU/SAR*
-     */
-    xausar='xausar',
-
-    /**
-     * ### Gold (troy oz) vs. Swedish krona
-     * *XAU/SEK*
-     */
-    xausek='xausek',
-
-    /**
-     * ### Gold (troy oz) vs. Singapore dollar
-     * *XAU/SGD*
-     */
-    xausgd='xausgd',
-
-    /**
-     * ### Gold (troy oz) vs. Thai baht
-     * *XAU/THB*
-     */
-    xauthb='xauthb',
-
-    /**
-     * ### Gold (troy oz) vs. Turkish lira
-     * *XAU/TRY*
-     */
-    xautry='xautry',
-
-    /**
-     * ### Gold (troy oz) vs. Silver (troy oz)
-     * *XAU/XAG*
-     */
-    xauxag='xauxag',
-
-    /**
-     * ### Gold (troy oz) vs. South African rand
-     * *XAU/ZAR*
-     */
-    xauzar='xauzar',
-
-    /**
-     * ### Xtrackers NASDAQ 100 UCITS ETF 1C (GBP)
-     * *XNAQ.GB/GBP*
-     */
-    xnaqgbgbp='xnaqgbgbp',
-
-    /**
-     * ### Xtrackers MSCI Europe Utilities Screened UCITS ETF 1C
-     * *XS6R.GB/GBX*
-     */
-    xs6rgbgbx='xs6rgbgbx',
-
-    /**
-     * ### South African rand vs. Czech koruna
-     * *ZAR/CZK*
-     */
-    zarczk='zarczk',
-
-    /**
-     * ### South African rand vs. Hungarian forint
-     * *ZAR/HUF*
-     */
-    zarhuf='zarhuf',
-
-    /**
-     * ### South African rand vs. Mexican peso
-     * *ZAR/MXN*
-     */
-    zarmxn='zarmxn',
-
-    /**
-     * ### South African rand vs. Thai baht
-     * *ZAR/THB*
-     */
-    zarthb='zarthb',
-
-    /**
-     * ### South African rand vs. Turkish lira
-     * *ZAR/TRY*
-     */
-    zartry='zartry',
 }
 export type InstrumentType = keyof typeof Instrument;

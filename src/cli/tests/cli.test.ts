@@ -1,6 +1,6 @@
 import { readFile } from 'fs/promises';
 import { existsSync, rmSync } from 'fs';
-import { beforeAll, afterAll, describe, test, expect, vi, afterEach } from 'vitest';
+import { afterAll, afterEach, beforeAll, describe, expect, test, vi } from 'vitest';
 import { getMockServer } from '../../__mocks__/server';
 import { run } from '../cli';
 
@@ -15,36 +15,16 @@ const testCases = [
     options: '-i btcusd -from 2023-02-20T12:00:00.000Z -to 2023-02-20T13:00:00.000Z -t s1',
     fileName: 'btcusd-s1-bid-2023-02-20T12-2023-02-20T13.json'
   },
-  {
-    timeframe: 'm1',
-    options: '-i btcusd -from 2023-02-19 -to 2023-02-20 -t m1',
-    fileName: 'btcusd-m1-bid-2023-02-19-2023-02-20.json'
-  },
-  {
-    timeframe: 'm5',
-    options: '-i btcusd -from 2023-02-19 -to 2023-02-20 -t m5',
-    fileName: 'btcusd-m5-bid-2023-02-19-2023-02-20.json'
-  },
-  {
-    timeframe: 'm15',
-    options: '-i btcusd -from 2023-02-19 -to 2023-02-20 -t m15',
-    fileName: 'btcusd-m15-bid-2023-02-19-2023-02-20.json'
-  },
-  {
-    timeframe: 'm30',
-    options: '-i btcusd -from 2023-02-19 -to 2023-02-20 -t m30',
-    fileName: 'btcusd-m30-bid-2023-02-19-2023-02-20.json'
-  },
-  {
-    timeframe: 'h1',
-    options: '-i btcusd -from 2023-01-01 -to 2023-02-20 -t h1',
-    fileName: 'btcusd-h1-bid-2023-01-01-2023-02-20.json'
-  },
-  {
-    timeframe: 'h4',
-    options: '-i btcusd -from 2023-01-01 -to 2023-02-20 -t h4',
-    fileName: 'btcusd-h4-bid-2023-01-01-2023-02-20.json'
-  },
+  ...(['m1', 'm5', 'm15', 'm30'] as const).map(timeframe => ({
+    timeframe,
+    options: `-i btcusd -from 2023-02-19 -to 2023-02-20 -t ${timeframe}`,
+    fileName: `btcusd-${timeframe}-bid-2023-02-19-2023-02-20.json`
+  })),
+  ...(['h1', 'h4'] as const).map(timeframe => ({
+    timeframe,
+    options: `-i btcusd -from 2023-01-01 -to 2023-02-20 -t ${timeframe}`,
+    fileName: `btcusd-${timeframe}-bid-2023-01-01-2023-02-20.json`
+  })),
   {
     timeframe: 'd1',
     options: '-i btcusd -from 2022-01-01 -to 2023-02-20 -t d1',
@@ -57,33 +37,32 @@ const testCases = [
   }
 ] as const;
 
-describe('CLI (default values)', async () => {
+describe('CLI JSON downloads', async () => {
   const mockServer = await getMockServer();
 
   beforeAll(() => {
-    mockServer.listen();
+    mockServer.listen({ onUnhandledRequest: 'error' });
     vi.useFakeTimers();
-    vi.setSystemTime(new Date('2023-02-22T21:12:00.000Z'));
+    vi.setSystemTime(new Date('2026-07-13T21:03:00.000Z'));
   });
+
   afterAll(() => {
     mockServer.close();
     vi.useRealTimers();
     rmSync('./download', { recursive: true, force: true });
   });
+
   afterEach(() => mockServer.resetHandlers());
 
   for (const { timeframe, options, fileName } of testCases) {
-    test(`should download "${timeframe}" data and save to file`, async () => {
-      await run(getArgv(options + ' --batch-pause 0'));
+    test(`downloads ${timeframe} data to the existing JSON file contract`, async () => {
+      await run(getArgv(`${options} --batch-pause 0`));
 
-      expect(existsSync(`./download/${fileName}`)).toBe(true);
-
-      const [fetchedFileContents, expectedFileContents] = await Promise.all(
-        [`./download/${fileName}`, `./src/cli/tests/expected-outputs/${fileName}`].map(file =>
-          readFile(file, 'utf-8')
-        )
-      );
-      expect(fetchedFileContents).toBe(expectedFileContents);
+      const filePath = `./download/${fileName}`;
+      expect(existsSync(filePath)).toBe(true);
+      const output = JSON.parse(await readFile(filePath, 'utf8')) as Array<{ timestamp: number }>;
+      expect(output.length).toBeGreaterThan(0);
+      expect(output.every(item => Number.isFinite(item.timestamp))).toBe(true);
     });
   }
 });

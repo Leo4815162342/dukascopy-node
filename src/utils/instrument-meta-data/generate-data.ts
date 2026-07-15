@@ -2,62 +2,140 @@
 import path from 'path';
 import fs from 'fs';
 import { promisify } from 'util';
+import { wait } from '../general';
+import { DATA_API_ROOT } from '../../config/data-api';
 import { generateInstrumentGroupData } from './generate-group-data';
 import { generateMeta } from './generate-meta';
 import { generateInstrumentEnum } from './generate-instrument-enum';
-import { ActualStartDates, MetaDataResponse } from './generate-data.types';
+import { generateInstrumentMarkdown } from './generate-instrument-md';
+import { ApiInstrumentDetail, InstrumentsResponse } from './generate-data.types';
+
 const saveFile = promisify(fs.writeFile);
-
 const OUTPUT_FOLDER = path.resolve(__dirname, 'generated');
+const DETAIL_REQUEST_PAUSE_MS = 100;
+const RETRY_DELAYS_MS = [1000, 2000, 4000];
 
-async function run() {
-  const [actualStartDates, rawMetaData] = await Promise.all([
-    getActualStartDates(),
-    getRawMetaData()
-  ]);
-  await saveFile(
-    path.resolve(OUTPUT_FOLDER, `raw-meta-data-${new Date().toISOString().slice(0, 10)}.json`),
-    JSON.stringify(rawMetaData, null, 2)
-  );
+class ApiRequestError extends Error {
+  retryable: boolean;
 
-  const metaDataFilePath = path.resolve(OUTPUT_FOLDER, 'instrument-meta-data.json');
-
-  await generateMeta(rawMetaData.instruments, actualStartDates, metaDataFilePath);
-
-  await generateInstrumentEnum(metaDataFilePath, path.resolve(OUTPUT_FOLDER, 'instrument-enum.ts'));
-
-  await generateInstrumentGroupData(
-    rawMetaData,
-    path.resolve(OUTPUT_FOLDER, 'instrument-groups.json')
-  );
-
-  console.log('Done');
+  constructor(message: string, retryable: boolean) {
+    super(message);
+    this.retryable = retryable;
+  }
 }
 
-run();
+async function fetchJsonWithRetry<T>(url: string): Promise<T> {
+  let lastError: unknown;
 
-async function getActualStartDates(): Promise<ActualStartDates> {
-  const rawResponse = await fetch(process.env.START_DATES_URL!);
+  for (let attempt = 0; attempt <= RETRY_DELAYS_MS.length; attempt++) {
+    try {
+      const response = await fetch(url);
 
-  const startDates = (await rawResponse.json()) as ActualStartDates;
-  return startDates;
-}
+      if (!response.ok) {
+        const isTransient =
+          response.status === 408 || response.status === 429 || response.status >= 500;
+        throw new ApiRequestError(
+          `Request failed with status ${response.status}: ${url}`,
+          isTransient
+        );
+      }
 
-async function getRawMetaData(): Promise<MetaDataResponse> {
-  const rawResponse = await fetch(
-    'https://freeserv.dukascopy.com/2.0/index.php?path=common%2Finstruments',
-    {
-      headers: {
-        referer: 'https://freeserv.dukascopy.com/'
+      return (await response.json()) as T;
+    } catch (error) {
+      lastError = error;
+
+      if (error instanceof ApiRequestError && !error.retryable) {
+        throw error;
+      }
+
+      if (attempt < RETRY_DELAYS_MS.length) {
+        await wait(RETRY_DELAYS_MS[attempt]);
       }
     }
-  );
+  }
 
-  const text = await rawResponse.text();
-
-  const objStr = text.slice(0, -1).replace('jsonp(', '');
-
-  const metaDataResponse = JSON.parse(objStr) as MetaDataResponse;
-
-  return metaDataResponse;
+  throw lastError;
 }
+
+async function getInstrumentDetails(metadata: InstrumentsResponse): Promise<ApiInstrumentDetail[]> {
+  const details: ApiInstrumentDetail[] = [];
+
+  for (let index = 0; index < metadata.instruments.length; index++) {
+    const instrument = metadata.instruments[index];
+    console.log(`[${index + 1}/${metadata.instruments.length}] ${instrument.code}`);
+    details.push(
+      await fetchJsonWithRetry<ApiInstrumentDetail>(
+        `${DATA_API_ROOT}/instruments/${encodeURIComponent(instrument.code)}`
+      )
+    );
+
+    if (index < metadata.instruments.length - 1) {
+      await wait(DETAIL_REQUEST_PAUSE_MS);
+    }
+  }
+
+  return details;
+}
+
+async function run(): Promise<void> {
+  const metadata = await fetchJsonWithRetry<InstrumentsResponse>(`${DATA_API_ROOT}/instruments`);
+  const instrumentDetails = await getInstrumentDetails(metadata);
+  const artifactNames = [
+    `raw-meta-data-${new Date().toISOString().slice(0, 10)}.json`,
+    'instrument-meta-data.json',
+    'instrument-enum.ts',
+    'instrument-groups.json',
+    'instruments.md'
+  ] as const;
+  const generatedParentFolder = path.dirname(OUTPUT_FOLDER);
+  const generationId = `${process.pid}-${Date.now()}`;
+  const stagingFolder = path.resolve(generatedParentFolder, `.generated-staging-${generationId}`);
+  const backupFolder = path.resolve(generatedParentFolder, `.generated-backup-${generationId}`);
+  const [rawName, metadataName, enumName, groupsName, documentationName] = artifactNames;
+  const rawMetadataPath = path.resolve(stagingFolder, rawName);
+  const metadataPath = path.resolve(stagingFolder, metadataName);
+  const enumPath = path.resolve(stagingFolder, enumName);
+  const groupsPath = path.resolve(stagingFolder, groupsName);
+  const documentationPath = path.resolve(stagingFolder, documentationName);
+
+  await fs.promises.mkdir(stagingFolder, { recursive: true });
+
+  try {
+    await saveFile(rawMetadataPath, JSON.stringify(metadata, null, 2));
+    await generateMeta(instrumentDetails, metadataPath);
+    await generateInstrumentEnum(metadataPath, enumPath);
+    await generateInstrumentGroupData(metadata, groupsPath);
+    await generateInstrumentMarkdown({
+      groupsPath,
+      metadataPath,
+      outputPath: documentationPath
+    });
+
+    await Promise.all(
+      artifactNames.map(name => fs.promises.access(path.resolve(stagingFolder, name)))
+    );
+
+    await fs.promises.rename(OUTPUT_FOLDER, backupFolder);
+
+    try {
+      await fs.promises.rename(stagingFolder, OUTPUT_FOLDER);
+    } catch (error) {
+      await fs.promises.rename(backupFolder, OUTPUT_FOLDER);
+      throw error;
+    }
+
+    await fs.promises.rm(backupFolder, { recursive: true, force: true });
+    console.log('Done');
+  } finally {
+    await fs.promises.rm(stagingFolder, { recursive: true, force: true });
+  }
+}
+
+if (require.main === module) {
+  run().catch(error => {
+    console.error(error);
+    process.exitCode = 1;
+  });
+}
+
+export { fetchJsonWithRetry, getInstrumentDetails, run };
