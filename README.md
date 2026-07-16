@@ -13,6 +13,7 @@
     <a href="https://github.com/Leo4815162342/dukascopy-node"><img src="https://badgen.net/github/stars/Leo4815162342/dukascopy-node?cache=600" alt="dukascopy-node github stars"></a>
 </p>
 <p align="center"><a href="https://www.dukascopy-node.app/">📚 Documentation</a></p>
+<p align="center"><a href="https://context7.com/leo4815162342/dukascopy-node"><img width="12" src="https://context7.com/favicon.ico" alt="dukascopy-node via pnpm"/> MCP Docs (via Context7 MCP)</a></p>
 
 
 
