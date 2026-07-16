@@ -4,7 +4,7 @@ By default, caching is disabled.
 
 In order to enable them, set `useCache` flag to `true` and optionally specify the `cacheFolderPath` (default is `.dukascopy-cache`).
 
-Completed-period JSON responses are stored on disk, so subsequent requests for the same instrument and date range can be served from the file system. Mutable `?from=` responses for the active hour, day, month, or year are never cached.
+Completed-period JSON responses are stored on disk, so subsequent requests for the same instrument and date range can be served from the file system.
 
 ---
 

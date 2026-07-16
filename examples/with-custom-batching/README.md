@@ -2,7 +2,9 @@
 
 To download historical prices, `dukascopy-node` generates Dukascopy JSON API URLs, downloads them in batches, expands the compact JSON columns, and aggregates them to the requested timeframe.
 
-For example, fetching minutely `eurusd` data for June 2019:
+In some cases such list of URLs can be huge. Since we do not want to overwhelm Dukascopy servers with a lot of requests at the same time, and in order not to fall under the rate-limiting restrictions, we need to break this list down into groups (a.k.a. batches) and download them one-by-one with a pause in between.
+
+For example - fetching historical price data for `eurusd` for the whole month of June in 2019, with minutely aggregation (`m1` timeframe):
 
 ```javascript
 const { getHistoricalRates } = require('dukascopy-node');
@@ -47,7 +49,7 @@ This can also be expressed as a sequence of the following steps:
 1) Download URLs in group 1 (items 1-10)
 2) Wait 1000 ms
 3) Download URLs in group 2 (items 11-20)
-4) Wait 1000 ms
+4) Wait 1000 msf
 5) Download URLs in group 3 (items 21-30)
 ```
 
