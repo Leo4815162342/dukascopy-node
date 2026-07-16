@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.47.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.46.4...v1.47.0) (2026-07-16)
+
+
+### Features
+
+* engine rewrite via json api ([#257](https://github.com/Leo4815162342/dukascopy-node/issues/257)) ([a567c90](https://github.com/Leo4815162342/dukascopy-node/commit/a567c90a7f916702ad39e0bd0a0d86e4410a3eb2))
+
+
+### Bug Fixes
+
+* release process ([#239](https://github.com/Leo4815162342/dukascopy-node/issues/239)) ([5d1b3f1](https://github.com/Leo4815162342/dukascopy-node/commit/5d1b3f15d100444cdf81e1d34bea92bdf9f3fde8))
+
 ### [1.46.4](https://github.com/Leo4815162342/dukascopy-node/compare/v1.46.3...v1.46.4) (2026-03-09)
 
 
