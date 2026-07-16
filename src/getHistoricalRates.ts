@@ -66,7 +66,8 @@ export async function getHistoricalRates(config: Config): Promise<Output> {
     cacheFolderPath,
     retryCount,
     pauseBetweenRetriesMs,
-    retryOnEmpty
+    retryOnEmpty,
+    failAfterRetryCount
   } = input;
 
   const [startDate, endDate] = normaliseDates({
@@ -105,7 +106,8 @@ export async function getHistoricalRates(config: Config): Promise<Output> {
     retryCount,
     pauseBetweenRetriesMs,
     onItemFetch,
-    retryOnEmpty
+    retryOnEmpty,
+    failAfterRetryCount
   });
 
   const bufferredData = await bufferFetcher.fetch(urls);

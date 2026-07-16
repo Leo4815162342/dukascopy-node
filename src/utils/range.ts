@@ -47,16 +47,21 @@ type TimeframeFromUrl = {
 };
 
 const timeFromUrl: TimeframeFromUrl = {
-  day_1: Timeframe.d1,
-  hour_1: Timeframe.h1,
-  min_1: Timeframe.m1,
+  day: Timeframe.d1,
+  hour: Timeframe.h1,
+  minute: Timeframe.m1,
   ticks: Timeframe.tick
 };
 
 function getTimeframeFromUrl(url: string): TimeframeType {
-  const [, match] = url.match(/_(day_1|hour_1|min_1|ticks).bi5$/) || [];
+  const source =
+    url.match(/\/v1\/candles\/(day|hour|minute)\//)?.[1] || url.match(/\/v1\/(ticks)\//)?.[1];
 
-  return timeFromUrl[match];
+  if (!source || !timeFromUrl[source]) {
+    throw new Error(`Unsupported data URL: ${url}`);
+  }
+
+  return timeFromUrl[source];
 }
 
 export { getLowerRange, getClosestAvailableRange, isCurrentRange, getTimeframeFromUrl };

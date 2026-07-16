@@ -1,110 +1,64 @@
-import { readdir, remove, readFile, pathExists } from 'fs-extra';
+import { afterAll, beforeEach, describe, expect, it } from 'vitest';
+import { readFileSync } from 'fs';
 import { resolve } from 'path';
-import { afterAll, beforeEach, describe, it, expect } from 'vitest';
+import { pathExists, remove } from 'fs-extra';
 import { CacheManager } from '.';
+import { URL_ROOT } from '../url-generator';
 
-const cacheFolderPath = resolve(process.cwd(), 'test-cache-folder-cache-manager');
-const firstUrl = 'https://datafeed.dukascopy.com/datafeed/EURUSD/2019/05/21/BID_candles_min_1.bi5';
-const secondUrl = 'https://datafeed.dukascopy.com/datafeed/EURUSD/2019/05/22/BID_candles_min_1.bi5';
-const firstFileName = 'EURUSD-2019-05-21-BID_candles_min_1.bi5';
-const secondFileName = 'EURUSD-2019-05-22-BID_candles_min_1.bi5';
-
-const fixtureItems = [
-  {
-    url: firstUrl,
-    buffer: Buffer.from('File 1 content', 'utf-8')
-  },
-  {
-    url: secondUrl,
-    buffer: Buffer.from('File 2 content', 'utf-8')
-  }
+const cacheFolderPath = resolve(process.cwd(), 'test-cache-folder');
+const firstUrl = `${URL_ROOT}/candles/minute/EUR-USD/BID/2019/5/21`;
+const secondUrl = `${URL_ROOT}/candles/minute/EUR-USD/BID/2019/5/22`;
+const fixtureFolderPath = resolve(__dirname, '../__mocks__/fixtures');
+const firstFixture = readFileSync(
+  resolve(fixtureFolderPath, 'candles-minute-EUR-USD-BID-2026-7-11-empty.json')
+);
+const secondFixture = readFileSync(resolve(fixtureFolderPath, 'candles-day-BTC-USD-BID-2018.json'));
+const items = [
+  { url: firstUrl, buffer: firstFixture },
+  { url: secondUrl, buffer: secondFixture }
 ];
 
-afterAll(async () => {
-  await remove(cacheFolderPath);
-});
-
-beforeEach(async () => {
-  await remove(cacheFolderPath);
-});
-
-async function seedCache(cacheManager: CacheManager) {
-  await cacheManager.writeItemsToCache(fixtureItems);
-}
+afterAll(() => remove(cacheFolderPath));
 
 describe('Cache manager', () => {
-  it('Writes cache data to the disk', async () => {
-    const cacheManager = new CacheManager({ cacheFolderPath });
+  beforeEach(() => remove(cacheFolderPath));
 
-    await seedCache(cacheManager);
+  it('writes and reads JSON response buffers', async () => {
+    const manager = new CacheManager({ cacheFolderPath });
+    await manager.writeItemsToCache(items);
 
-    expect(await readdir(cacheFolderPath)).toEqual([firstFileName, secondFileName]);
-
-    expect(await readFile(resolve(cacheFolderPath, firstFileName), 'utf8')).toEqual(
-      'File 1 content'
-    );
-    expect(await readFile(resolve(cacheFolderPath, secondFileName), 'utf8')).toEqual(
-      'File 2 content'
-    );
+    expect(await manager.readItemFromCache(firstUrl)).toEqual(firstFixture);
+    expect(await manager.readItemFromCache(secondUrl)).toEqual(secondFixture);
   });
 
-  it('Reads data from the cache', async () => {
-    const cacheManager = new CacheManager({ cacheFolderPath });
+  it('rebuilds its manifest from safely encoded JSON cache files', async () => {
+    await new CacheManager({ cacheFolderPath }).writeItemsToCache(items);
+    const manager = new CacheManager({ cacheFolderPath });
 
-    await seedCache(cacheManager);
-
-    const buffer = await cacheManager.readItemFromCache(firstUrl);
-
-    expect(buffer!.toString('utf8')).toEqual('File 1 content');
-
-    const buffer2 = await cacheManager.readItemFromCache(secondUrl);
-
-    expect(buffer2!.toString('utf8')).toEqual('File 2 content');
+    expect(await manager.readItemFromCache(firstUrl)).not.toBeNull();
+    expect(
+      await pathExists(
+        resolve(
+          cacheFolderPath,
+          `${encodeURIComponent('candles/minute/EUR-USD/BID/2019/5/21')}.json`
+        )
+      )
+    ).toBe(true);
   });
 
-  it('Returns null if the item is not in the cache', async () => {
-    const cacheManager = new CacheManager({ cacheFolderPath });
-    const buffer = await cacheManager.readItemFromCache(
-      'https://datafeed.dukascopy.com/datafeed/EURUSD/2019/05/23/BID_candles_min_1.bi5'
-    );
-
-    expect(buffer).toEqual(null);
+  it('returns null for missing items', async () => {
+    const manager = new CacheManager({ cacheFolderPath });
+    expect(
+      await manager.readItemFromCache(`${URL_ROOT}/candles/minute/EUR-USD/BID/2019/5/23`)
+    ).toBeNull();
   });
 
-  it('Returns null when the manifest points to a deleted file', async () => {
-    const cacheManager = new CacheManager({ cacheFolderPath });
+  it('purges the cache directory and in-memory manifest', async () => {
+    const manager = new CacheManager({ cacheFolderPath });
+    await manager.writeItemsToCache(items);
+    await manager.purgeCache();
 
-    await seedCache(cacheManager);
-    await remove(resolve(cacheFolderPath, firstFileName));
-
-    const buffer = await cacheManager.readItemFromCache(firstUrl);
-
-    expect(buffer).toEqual(null);
-  });
-
-  it('Rewrites an item when the cache file was deleted externally', async () => {
-    const cacheManager = new CacheManager({ cacheFolderPath });
-
-    await seedCache(cacheManager);
-    await remove(resolve(cacheFolderPath, firstFileName));
-
-    await cacheManager.writeItemsToCache([
-      {
-        url: firstUrl,
-        buffer: Buffer.from('File 1 replacement', 'utf-8')
-      }
-    ]);
-
-    expect(await readFile(resolve(cacheFolderPath, firstFileName), 'utf8')).toEqual(
-      'File 1 replacement'
-    );
-  });
-
-  it('Cleans out the cache', async () => {
-    const cacheManager = new CacheManager({ cacheFolderPath });
-
-    await seedCache(cacheManager);
-    await cacheManager.purgeCache();
-    expect(await pathExists(cacheFolderPath)).toEqual(false);
+    expect(await pathExists(cacheFolderPath)).toBe(false);
+    expect(await manager.readItemFromCache(firstUrl)).toBeNull();
   });
 });

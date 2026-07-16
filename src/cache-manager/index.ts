@@ -31,8 +31,8 @@ export class CacheManager implements CacheManagerBase {
     this.cacheFolderPath = cacheFolderPath || resolve(process.cwd(), DEFAULT_CACHE_FOLDER);
     ensureDirSync(this.cacheFolderPath);
     const cacheKeys = readdirSync(this.cacheFolderPath)
-      .filter(item => item.endsWith('.bi5'))
-      .map(item => item.replace(/-/g, '/'));
+      .filter(item => item.endsWith('.json'))
+      .map(item => decodeURIComponent(item.slice(0, -'.json'.length)));
     this.cacheManifest = new Set(cacheKeys);
     this.cacheKeyFormatter = cacheKeyFormatter || this.getCacheKeyFromUrl;
   }
@@ -45,7 +45,7 @@ export class CacheManager implements CacheManagerBase {
       return null;
     }
 
-    const cacheKeyEncoded = cacheKey.replace(/\//g, '-');
+    const cacheKeyEncoded = `${encodeURIComponent(cacheKey)}.json`;
     const cacheItemPath = resolve(this.cacheFolderPath, cacheKeyEncoded);
     try {
       return await readFile(cacheItemPath);
@@ -67,7 +67,7 @@ export class CacheManager implements CacheManagerBase {
         // TODO?: don't write empty buffers to the cache
         // const isEmptyBuffer = buffer.length === 0;
 
-        const cacheKeyEncoded = cacheKey.replace(/\//g, '-');
+        const cacheKeyEncoded = `${encodeURIComponent(cacheKey)}.json`;
         const cacheItemPath = resolve(this.cacheFolderPath, cacheKeyEncoded);
 
         if (isItemInCache) {

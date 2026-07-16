@@ -3,14 +3,17 @@ import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
 import { getFormattedDate } from '../date';
-import { InstrumentMetaData } from './generate-meta';
-
-import instrumentGroups from './generated/instrument-groups.json';
-import instrumentMetaData from './generated/instrument-meta-data.json';
+import { InstrumentMetaData, InstrumentMetaDataMap } from './generate-meta';
 
 const saveFile = promisify(fs.writeFile);
+const generatedFolder = path.resolve(__dirname, 'generated');
+const filePath = path.resolve(generatedFolder, 'instruments.md');
 
-const filePath = path.resolve(__dirname, 'generated', 'instruments.md');
+interface GenerateInstrumentMarkdownInput {
+  groupsPath?: string;
+  metadataPath?: string;
+  outputPath?: string;
+}
 
 const titleMap: Record<string, { emoji: string; title: string }> = {
   bnd_cfd: { emoji: '📊', title: 'Bonds' },
@@ -51,74 +54,77 @@ const titleMap: Record<string, { emoji: string; title: string }> = {
   us: { emoji: '🇺🇸', title: 'United States' }
 };
 
-(async () => {
-  try {
-    const contentListHeader = '## Instruments\n';
-    const contentList = instrumentGroups
-      .map(
-        ({ id, instruments }) =>
-          `* [${titleMap[id].title} ${titleMap[id].emoji} (${instruments.length})](#${id})`
-      )
-      .join('\n');
+interface InstrumentGroup {
+  id: string;
+  instruments: string[];
+}
 
-    const contentBody = [contentListHeader, contentList, '<hr>'].join('\n');
+function getTitle(id: string): { emoji: string; title: string } {
+  return (
+    titleMap[id] || {
+      emoji: '',
+      title: id
+        .split('_')
+        .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+        .join(' ')
+    }
+  );
+}
 
-    const headers = [
-      'Instrument',
-      // 'Name',
-      'id',
-      'Earliest data (UTC)'
-    ];
+async function run({
+  groupsPath = path.resolve(generatedFolder, 'instrument-groups.json'),
+  metadataPath = path.resolve(generatedFolder, 'instrument-meta-data.json'),
+  outputPath = filePath
+}: GenerateInstrumentMarkdownInput = {}): Promise<void> {
+  const instrumentGroups = JSON.parse(fs.readFileSync(groupsPath, 'utf8')) as InstrumentGroup[];
+  const instrumentMetaData = JSON.parse(
+    fs.readFileSync(metadataPath, 'utf8')
+  ) as InstrumentMetaDataMap;
+  const contentListHeader = '## Instruments\n';
+  const contentList = instrumentGroups
+    .map(({ id, instruments }) => {
+      const { title, emoji } = getTitle(id);
+      return `* [${title} ${emoji} (${instruments.length})](#${id})`;
+    })
+    .join('\n');
+  const contentBody = [contentListHeader, contentList, '<hr>'].join('\n');
+  const header = '|Instrument|id|Earliest data (UTC)|';
+  const divider = '|-|-|-|';
+  const instrumentTable = instrumentGroups
+    .map(({ id, instruments }) => {
+      const { title, emoji } = getTitle(id);
+      const groupTitle = `<h3 id="${id}">${title} ${emoji}</h3>\n`;
+      const listBody = instruments
+        .map(instrumentId => {
+          const metadata = instrumentMetaData[instrumentId] as InstrumentMetaData;
+          const dates = [
+            metadata.startHourForTicks,
+            metadata.startDayForMinuteCandles,
+            metadata.startMonthForHourlyCandles,
+            metadata.startYearForDailyCandles
+          ].map(item => new Date(item));
+          const minDate = Math.min(...dates.map(date => date.getTime()));
+          return `|[${
+            metadata.description
+          }](https://www.dukascopy-node.app/instrument/${instrumentId})|\`${instrumentId}\`|${getFormattedDate(
+            minDate
+          )}|`;
+        })
+        .join('\n');
 
-    const header = headers.map((h, i) => `${!i ? '|' : ''}${h}|`).join('');
-    const divider = headers.map((_, i) => `${!i ? '|' : ''}-|`).join('');
+      return [groupTitle, header, divider, listBody].join('\n');
+    })
+    .join('\n');
 
-    const instrumentTable = instrumentGroups
-      .map(({ id, instruments }) => {
-        const groupTitle = `<h3 id="${id}">${titleMap[id].title} ${
-          titleMap[id].emoji || ''
-        }</h3>\n`;
+  await saveFile(outputPath, [contentBody, instrumentTable].join('\n'));
+  console.log('Instrument documentation generated!', outputPath);
+}
 
-        const listBody = instruments
-          .map(instrumentId => {
-            const {
-              description,
-              startHourForTicks,
-              startDayForMinuteCandles,
-              startMonthForHourlyCandles,
-              startYearForDailyCandles
-            } = instrumentMetaData[
-              instrumentId as keyof typeof instrumentMetaData
-            ] as InstrumentMetaData;
+if (require.main === module) {
+  run().catch(error => {
+    console.error(error);
+    process.exitCode = 1;
+  });
+}
 
-            const dates = [
-              startHourForTicks,
-              startDayForMinuteCandles,
-              startMonthForHourlyCandles,
-              startYearForDailyCandles
-            ]
-              .filter(d => d !== '1970-01-01T00:00:00.000Z' && d !== '2000-01-01T00:00:00.000Z')
-              .map(item => new Date(item));
-
-            const minDate = Math.min(...dates.map(d => d.getTime()));
-
-            const line = [
-              `[${description}](https://www.dukascopy-node.app/instrument/${instrumentId})`,
-              `\`${instrumentId}\``,
-              getFormattedDate(minDate)
-            ].join('|');
-
-            return `|${line}|`;
-          })
-          .join('\n');
-
-        return [groupTitle, header, divider, listBody].join('\n');
-      })
-      .join('\n');
-
-    await saveFile(filePath, [contentBody, instrumentTable].join('\n'));
-    console.log('Created file');
-  } catch (err) {
-    console.log(err);
-  }
-})();
+export { run as generateInstrumentMarkdown };

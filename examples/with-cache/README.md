@@ -1,10 +1,10 @@
 ## With cache
 
-Be default caching capabilities are disabled.
+By default, caching is disabled.
 
 In order to enable them, set `useCache` flag to `true` and optionally specify the `cacheFolderPath` (default is `.dukascopy-cache`).
 
-All the binary artifacts (which are downloaded from the dukascopy servers) will be stored on disk, and all the subsequent requests with similar instruments and date ranges will no longer be downloaded from those servers, and will be fetched from the file system instead.
+Completed-period JSON responses are stored on disk, so subsequent requests for the same instrument and date range can be served from the file system.
 
 ---
 
@@ -50,5 +50,3 @@ If you run the same code again, then you will notice that it's faster, since the
 #### Second run (using cache) - download time - 163ms
 
 <img width="586" alt="Screenshot 2023-03-30 at 10 46 44" src="https://user-images.githubusercontent.com/12486774/228782316-93f787e2-20e9-47b9-b726-fb36a1466d43.png">
-
-

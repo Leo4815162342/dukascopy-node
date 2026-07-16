@@ -1,12 +1,10 @@
-import { getDateFromUrl } from '../utils/date';
 import { getTimeframeFromUrl } from '../utils/range';
-import { decompress } from '../decompressor';
 import { normalise } from '../data-normaliser';
+import { DataResponse } from '../data-normaliser/types';
 import { aggregate } from '../aggregator';
 import { ProcessDataInput, ProcessDataOutput } from './types';
 
 function processData({
-  instrument,
   requestedTimeframe,
   bufferObjects,
   priceType,
@@ -19,15 +17,11 @@ function processData({
   for (let i = 0, n = bufferObjects.length; i < n; i++) {
     const { url, buffer } = bufferObjects[i];
 
-    const startDate = getDateFromUrl(url);
     const urlTimeframe = getTimeframeFromUrl(url);
-
-    const decompressedData = decompress({ buffer, timeframe: urlTimeframe });
+    const responseData = JSON.parse(buffer.toString('utf8')) as DataResponse;
     const normalisedData = normalise({
-      data: decompressedData,
+      data: responseData,
       timeframe: urlTimeframe,
-      startTs: +startDate,
-      instrument,
       volumes,
       volumeUnits
     });
@@ -38,7 +32,7 @@ function processData({
       toTimeframe: requestedTimeframe,
       priceType,
       ignoreFlats,
-      startTs: +startDate,
+      startTs: responseData.timestamp,
       volumes
     });
 

@@ -1,3 +1,6 @@
+allowBuilds:
+  esbuild: false
+  msw: false
 ignoredBuiltDependencies:
   - esbuild
   - msw

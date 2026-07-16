@@ -1,6 +1,29 @@
 import { CacheManagerBase } from '../cache-manager';
 import { splitArrayInChunks, wait } from '../utils/general';
 import { BufferFetcherInput, BufferObject } from './types';
+import { URL_ROOT } from '../url-generator';
+
+function isMutableDataUrl(url: string): boolean {
+  try {
+    const parsedUrl = new URL(url);
+    return url.startsWith(URL_ROOT) && parsedUrl.searchParams.has('from');
+  } catch {
+    return false;
+  }
+}
+
+function isEmptyDataBuffer(buffer: Buffer): boolean {
+  if (buffer.length === 0) {
+    return true;
+  }
+
+  try {
+    const data = JSON.parse(buffer.toString('utf8')) as { times?: unknown[] };
+    return Array.isArray(data.times) && data.times.length === 0;
+  } catch {
+    return false;
+  }
+}
 
 export class BufferFetcher {
   batchSize: number;
@@ -43,7 +66,7 @@ export class BufferFetcher {
       urls.map(async url => {
         let buffer: Buffer;
         let isCacheHit = false;
-        if (this.cacheManager) {
+        if (this.cacheManager && !isMutableDataUrl(url)) {
           const bufferFromCache = await this.cacheManager.readItemFromCache(url);
           if (bufferFromCache) {
             isCacheHit = true;
@@ -86,7 +109,9 @@ export class BufferFetcher {
 
         shouldSkipBatchWait = wholeBatchExistsInCache;
 
-        await this.cacheManager.writeItemsToCache(batchData);
+        await this.cacheManager.writeItemsToCache(
+          batchData.filter(({ url }) => !isMutableDataUrl(url))
+        );
       }
 
       if (this.onBatchFetch) {
@@ -141,7 +166,9 @@ export class BufferFetcher {
       .filter(({ buffer }) => buffer.length > 0);
 
     if (this.cacheManager) {
-      await this.cacheManager.writeItemsToCache(bufferObjects);
+      await this.cacheManager.writeItemsToCache(
+        bufferObjects.filter(({ url }) => !isMutableDataUrl(url))
+      );
     }
 
     return bufferObjects;
@@ -152,47 +179,48 @@ export class BufferFetcher {
       return this.fetcherFn(url);
     }
 
-    let response = new Response();
+    let lastBuffer = Buffer.from('', 'utf8');
+    let errorMessage = '';
 
-    const shouldUseRetry = this.retryCount > 0;
+    for (let attempt = 0; attempt <= this.retryCount; attempt++) {
+      const isLastAttempt = attempt === this.retryCount;
 
-    if (shouldUseRetry) {
-      let retries = 0;
-      let isTrySuccess = false;
-      let errorMsg = '';
-      while (retries <= this.retryCount && !isTrySuccess) {
-        const isLastRetry = retries === this.retryCount;
-        let isCallSuccess = true;
-        try {
-          response = await fetch(url);
-        } catch (e) {
-          isCallSuccess = false;
-          errorMsg = e instanceof Error ? e.message : JSON.stringify(e);
+      try {
+        const response = await fetch(url);
+        lastBuffer =
+          response.status === 200
+            ? Buffer.from(await response.arrayBuffer())
+            : Buffer.from('', 'utf8');
+
+        const isSuccessful =
+          response.status === 200 && (!this.retryOnEmpty || !isEmptyDataBuffer(lastBuffer));
+
+        if (isSuccessful) {
+          return lastBuffer;
         }
 
-        const isStatusOk = response.status === 200;
-        const contentLength = Number(response?.headers?.get('content-length') || 0);
-        const isResponseWithData = contentLength > 0;
-        isTrySuccess = isCallSuccess && isStatusOk;
-
-        if (this.retryOnEmpty) {
-          isTrySuccess = isTrySuccess && isResponseWithData;
+        if (response.status !== 200) {
+          errorMessage = `Request failed with status ${response.status}`;
+        } else if (this.retryOnEmpty) {
+          errorMessage = 'Request returned an empty dataset';
         }
+      } catch (error) {
+        errorMessage = error instanceof Error ? error.message : JSON.stringify(error);
 
-        retries++;
-        if (!isTrySuccess && !isLastRetry) {
-          await wait(this.pauseBetweenRetriesMs);
-        }
-        if (isLastRetry && !isTrySuccess && this.failAfterRetryCount) {
-          throw Error(errorMsg || 'Unknown error');
+        if (this.retryCount === 0) {
+          throw error;
         }
       }
-    } else {
-      response = await fetch(url);
+
+      if (!isLastAttempt) {
+        await wait(this.pauseBetweenRetriesMs);
+      } else if (this.retryCount > 0 && this.failAfterRetryCount) {
+        throw new Error(errorMessage || 'Unknown error');
+      }
     }
 
-    return response.status === 200
-      ? Buffer.from(await response.arrayBuffer())
-      : Buffer.from('', 'utf8');
+    return lastBuffer;
   }
 }
+
+export { isEmptyDataBuffer, isMutableDataUrl };

@@ -56,13 +56,31 @@ function getIsCurrentObj(date: Date): {
 }
 
 function getDateFromUrl(url: string): Date {
-  const [, year, month, day, hour] = (
-    url.match(/(\d{4})\/(\d{2})?\/?(\d{2})?\/?(\d{2})?/) || []
-  ).map(n => Number(n) || 0);
+  const parsedUrl = new URL(url);
+  const from = parsedUrl.searchParams.get('from');
 
-  const utcDate = new Date(Date.UTC(year, month, day || 1, hour));
+  if (from) {
+    return new Date(Number(from));
+  }
 
-  return utcDate;
+  const parts = parsedUrl.pathname.split('/').filter(Boolean);
+  const ticksIndex = parts.indexOf('ticks');
+  const candlesIndex = parts.indexOf('candles');
+  let dateParts: string[] = [];
+
+  if (ticksIndex >= 0) {
+    dateParts = parts.slice(ticksIndex + 2);
+  } else if (candlesIndex >= 0) {
+    dateParts = parts.slice(candlesIndex + 4);
+  }
+
+  const [year, month = 1, day = 1, hour = 0] = dateParts.map(Number);
+
+  if (!year) {
+    throw new Error(`Unsupported data URL: ${url}`);
+  }
+
+  return new Date(Date.UTC(year, month - 1, day, hour));
 }
 
 function getFormattedDate(
