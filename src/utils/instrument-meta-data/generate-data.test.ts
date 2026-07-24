@@ -53,7 +53,6 @@ describe('Instrument metadata generation with downloaded responses', () => {
         name: 'EUR/USD',
         code: 'EUR-USD',
         description: 'Euro vs US Dollar',
-        decimalFactor: 100000,
         startHourForTicks: '2003-05-04T19:00:00.048Z',
         startDayForMinuteCandles: '2003-05-04T19:00:00.000Z',
         startMonthForHourlyCandles: '2003-05-04T19:00:00.000Z',
