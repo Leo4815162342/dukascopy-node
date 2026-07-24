@@ -2,6 +2,9 @@ import { resolve } from 'path';
 import { URL_ROOT } from '../url-generator';
 import { outputFile, remove, readFile, readdirSync, ensureDirSync, pathExists } from 'fs-extra';
 import { BufferObject } from '../buffer-fetcher/types';
+import debug from 'debug';
+
+const cacheDebug = debug('dukascopy-node:cache');
 
 export type CacheManifest = Set<string>;
 
@@ -60,7 +63,7 @@ export class CacheManager implements CacheManagerBase {
   }
 
   public async writeItemsToCache(items: BufferObject[]) {
-    return Promise.allSettled(
+    const results = await Promise.allSettled(
       items.map(async ({ buffer, url }) => {
         const cacheKey = this.cacheKeyFormatter(url);
         const isItemInCache = this.cacheManifest.has(cacheKey);
@@ -78,10 +81,18 @@ export class CacheManager implements CacheManagerBase {
           this.cacheManifest.delete(cacheKey);
         }
 
+        await outputFile(cacheItemPath, buffer);
         this.cacheManifest.add(cacheKey);
-        return outputFile(cacheItemPath, buffer);
       })
     );
+
+    results.forEach((result, index) => {
+      if (result.status === 'rejected') {
+        cacheDebug('Failed to write cache item %s: %O', items[index].url, result.reason);
+      }
+    });
+
+    return results;
   }
 
   public async purgeCache(cacheFolderPath = this.cacheFolderPath): Promise<void> {
