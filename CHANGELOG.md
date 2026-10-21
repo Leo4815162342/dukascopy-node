@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.51.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.50.0...v1.51.0) (2026-10-21)
+
+
+### Features
+
+* update fetcher ([#262](https://github.com/Leo4815162342/dukascopy-node/issues/262)) ([b03d85c](https://github.com/Leo4815162342/dukascopy-node/commit/b03d85cc249bdef32542b4849ac9a8b09a29a42e))
+
 ## [1.50.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.46.4...v1.50.0) (2026-07-24)
 
 
