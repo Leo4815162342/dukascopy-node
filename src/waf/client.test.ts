@@ -29,6 +29,27 @@ function setup() {
 }
 
 describe('Headless WAF prototype transport', () => {
+  it('tracks token usage per response when tokenless requests finish after a refresh', async () => {
+    const { client, fetchFn } = setup();
+    let releaseLateResponse!: (response: Response) => void;
+    fetchFn
+      .mockReturnValueOnce(
+        new Promise(resolve => {
+          releaseLateResponse = resolve;
+        })
+      )
+      .mockResolvedValueOnce(challenge());
+
+    const pending = client.fetchResponse(url);
+    const refreshed = await client.fetchResponse(url);
+    releaseLateResponse(json());
+    const late = await pending;
+
+    expect(client.wasTokenUsed(late)).toBe(false);
+    expect(client.wasTokenUsed(refreshed)).toBe(true);
+    expect(fetchFn).toHaveBeenCalledTimes(3);
+  });
+
   it('shares initial acquisition and reuses only the WAF cookie for Node downloads', async () => {
     const { client, acquireSession, fetchFn } = setup();
     const buffers = await Promise.all([client.fetchBuffer(url), client.fetchBuffer(url)]);

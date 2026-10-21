@@ -32,6 +32,7 @@ export function createHeadlessWafFetcher(options: WafFetcherOptions = {}) {
   let acquiring: Promise<void> | undefined;
   let loading: Promise<void> | undefined;
   const stats = { tokenAcquisitions: 0, httpRequests: 0 };
+  const responseTokenUsage = new WeakMap<Response, boolean>();
 
   function loadCachedToken(): Promise<void> {
     if (!loading) {
@@ -97,8 +98,11 @@ export function createHeadlessWafFetcher(options: WafFetcherOptions = {}) {
         redirect: 'error',
         signal: AbortSignal.timeout(requestTimeoutMs)
       });
+      responseTokenUsage.set(response, Boolean(tokenUsed));
       const action = response.headers.get('x-amzn-waf-action');
-      log('HTTP %d %s (WAF token: %s)', response.status, url, tokenUsed ? 'yes' : 'no');
+      if (response.status !== 200 || action === 'challenge' || action === 'captcha') {
+        log('HTTP %d %s (WAF token: %s)', response.status, url, tokenUsed ? 'yes' : 'no');
+      }
 
       if (action === 'challenge' || action === 'captcha') {
         await response.body?.cancel();
@@ -146,5 +150,11 @@ export function createHeadlessWafFetcher(options: WafFetcherOptions = {}) {
     return buffer;
   }
 
-  return { fetchResponse, fetchBuffer, refreshToken, stats };
+  return {
+    fetchResponse,
+    fetchBuffer,
+    refreshToken,
+    stats,
+    wasTokenUsed: (response: Response) => responseTokenUsage.get(response)
+  };
 }

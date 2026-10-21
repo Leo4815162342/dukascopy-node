@@ -79,7 +79,9 @@ export async function run(argv: NodeJS.Process['argv']) {
   } = input;
 
   if (isDebugActive) {
-    debug.enable(`${DEBUG_NAMESPACE}:*,dukascopy-node:waf,dukascopy-node:rate-limit`);
+    debug.enable(
+      `${DEBUG_NAMESPACE}:*,dukascopy-node:cache,dukascopy-node:waf,dukascopy-node:rate-limit`
+    );
   } else {
     if (process.env.DEBUG) {
       isDebugActive = true;
@@ -206,11 +208,13 @@ export async function run(argv: NodeJS.Process['argv']) {
         wafTimeoutMs,
         wafTokenCache,
         wafTokenCachePath,
-        onItemFetch: (url, buffer, isCacheHit): void => {
+        onItemFetch: (url, buffer, isCacheHit, wafTokenUsed): void => {
           debug(`${DEBUG_NAMESPACE}:fetcher`)(
             url,
             `| ${formatBytes(buffer.length)} |`,
-            `${isCacheHit ? 'cache' : 'network'}`
+            `${isCacheHit ? 'cache' : 'network'}${
+              wafTokenUsed === undefined ? '' : ` (WAF token: ${wafTokenUsed ? 'yes' : 'no'})`
+            }`
           );
           if (!isDebugActive) {
             step += 1;

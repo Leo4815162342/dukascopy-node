@@ -12,7 +12,7 @@ export interface BufferFetcherInput {
   pauseBetweenBatchesMs?: number;
   requestIntervalMs?: number;
   rateLimitRetryCount?: number;
-  onItemFetch?: (url: string, buffer: Buffer, isCacheHit: boolean) => void;
+  onItemFetch?: (url: string, buffer: Buffer, isCacheHit: boolean, wafTokenUsed?: boolean) => void;
   onBatchFetch?: (bufferObjects: BufferObject[], isLastBatch: boolean) => Promise<unknown>;
   fetcherFn?: (url: string) => Promise<Buffer>;
   cacheManager?: CacheManagerBase;

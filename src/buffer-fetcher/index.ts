@@ -1,3 +1,4 @@
+import debug from 'debug';
 import { CacheManagerBase } from '../cache-manager';
 import { splitArrayInChunks, wait } from '../utils/general';
 import { BufferFetcherInput, BufferObject } from './types';
@@ -5,6 +6,15 @@ import { URL_ROOT } from '../url-generator';
 import { createHeadlessWafFetcher, WafChallengeError, WafTokenError } from '../waf';
 import { decodeData } from '../waf/data';
 import { createRateLimitedRequester, RateLimitError } from './rate-limit';
+
+function logCacheSummary(fileCount: number, cacheHits: number): void {
+  debug('dukascopy-node:cache')(
+    'Cache hits: %d/%d files; files requiring fetch: %d.',
+    cacheHits,
+    fileCount,
+    fileCount - cacheHits
+  );
+}
 
 function isMutableDataUrl(url: string): boolean {
   try {
@@ -40,6 +50,8 @@ export class BufferFetcher {
   failAfterRetryCount: BufferFetcherInput['failAfterRetryCount'];
   cacheManager?: CacheManagerBase;
   private readonly request: (url: string) => Promise<Response>;
+  private readonly wasTokenUsed: (response: Response) => boolean | undefined;
+  private readonly bufferTokenUsage = new WeakMap<Buffer, boolean>();
 
   constructor({
     batchSize = 10,
@@ -81,6 +93,7 @@ export class BufferFetcher {
       requestIntervalMs,
       rateLimitRetryCount
     });
+    this.wasTokenUsed = transport.wasTokenUsed;
   }
 
   private async fetchBatch(urls: string[]): Promise<BufferObject[]> {
@@ -100,7 +113,12 @@ export class BufferFetcher {
           buffer = await this.fetchBuffer(url);
         }
         if (this.onItemFetch) {
-          this.onItemFetch(url, buffer, isCacheHit);
+          this.onItemFetch(
+            url,
+            buffer,
+            isCacheHit,
+            isCacheHit ? undefined : this.bufferTokenUsage.get(buffer)
+          );
         }
 
         return { url, buffer, isCacheHit };
@@ -112,10 +130,12 @@ export class BufferFetcher {
    * @experimental
    */
   public async fetch_optimized(urls: string[]) {
+    let cacheHits = 0;
     const batches = splitArrayInChunks(urls, this.batchSize);
     for (let i = 0, n = batches.length; i < n; i++) {
       const isLastBatch = i === n - 1;
       const batchData = await this.fetchBatch(batches[i]);
+      cacheHits += batchData.filter(({ isCacheHit }) => isCacheHit).length;
 
       let shouldSkipBatchWait = false;
 
@@ -148,10 +168,12 @@ export class BufferFetcher {
       }
     }
 
+    logCacheSummary(urls.length, cacheHits);
     return true as const;
   }
 
   public async fetch(urls: string[]): Promise<BufferObject[]> {
+    let cacheHits = 0;
     const fetchedObjects: BufferObject[][] = [];
 
     const batches = splitArrayInChunks(urls, this.batchSize);
@@ -159,6 +181,7 @@ export class BufferFetcher {
     for (let i = 0, n = batches.length; i < n; i++) {
       const isLastBatch = i === n - 1;
       const data = await this.fetchBatch(batches[i]);
+      cacheHits += data.filter(({ isCacheHit }) => isCacheHit).length;
       fetchedObjects.push(data);
       let shouldSkipBatchWait = false;
 
@@ -193,6 +216,7 @@ export class BufferFetcher {
       );
     }
 
+    logCacheSummary(urls.length, cacheHits);
     return bufferObjects;
   }
 
@@ -220,6 +244,10 @@ export class BufferFetcher {
           throw new Error(`Expected Dukascopy JSON for ${url}`);
         }
         const buffer = Buffer.from(await response.arrayBuffer());
+        const wafTokenUsed = this.wasTokenUsed(response);
+        if (wafTokenUsed !== undefined) {
+          this.bufferTokenUsage.set(buffer, wafTokenUsed);
+        }
         decodeData(url, buffer);
         lastBuffer = buffer;
 
