@@ -68,6 +68,22 @@ export const schema: InputSchema<Config> = {
     optional: true,
     default: defaultConfig.pauseBetweenBatchesMs
   } as RuleNumber,
+  requestIntervalMs: {
+    type: 'number',
+    integer: true,
+    min: 0,
+    max: 2_147_483_647,
+    optional: true,
+    default: defaultConfig.requestIntervalMs
+  } as RuleNumber,
+  rateLimitRetryCount: {
+    type: 'number',
+    integer: true,
+    min: 0,
+    max: 2_147_483_647,
+    optional: true,
+    default: defaultConfig.rateLimitRetryCount
+  } as RuleNumber,
   useCache: { type: 'boolean', optional: true, default: defaultConfig.useCache } as RuleBoolean,
   cacheFolderPath: {
     type: 'string',
@@ -77,13 +93,14 @@ export const schema: InputSchema<Config> = {
   retryCount: {
     type: 'number',
     integer: true,
+    min: 0,
     optional: true,
     default: defaultConfig.retryCount
   } as RuleNumber,
   retryOnEmpty: {
     type: 'boolean',
     optional: true,
-    default: defaultConfig.useCache
+    default: defaultConfig.retryOnEmpty
   } as RuleBoolean,
   failAfterRetryCount: {
     type: 'boolean',
@@ -95,5 +112,33 @@ export const schema: InputSchema<Config> = {
     integer: true,
     optional: true,
     default: defaultConfig.pauseBetweenRetriesMs
-  } as RuleNumber
+  } as RuleNumber,
+  wafMode: {
+    type: 'string',
+    enum: ['auto', 'off'],
+    optional: true,
+    default: defaultConfig.wafMode
+  } as RuleString,
+  chromePath: {
+    type: 'string',
+    optional: true,
+    default: defaultConfig.chromePath
+  } as RuleString,
+  wafTimeoutMs: {
+    type: 'number',
+    integer: true,
+    min: 1,
+    optional: true,
+    default: defaultConfig.wafTimeoutMs
+  } as RuleNumber,
+  wafTokenCache: {
+    type: 'boolean',
+    optional: true,
+    default: defaultConfig.wafTokenCache
+  } as RuleBoolean,
+  wafTokenCachePath: {
+    type: 'string',
+    optional: true,
+    default: defaultConfig.wafTokenCachePath
+  } as RuleString
 };

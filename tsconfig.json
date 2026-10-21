@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "module": "esnext",
     "moduleResolution": "node",
     "noUnusedParameters": true,
     "removeComments": false,

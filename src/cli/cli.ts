@@ -2,7 +2,8 @@ import { resolve, join } from 'path';
 import os from 'os';
 import { progressBar } from './progress';
 import { createWriteStream } from 'fs';
-import { ensureDir, ensureFile, stat } from 'fs-extra';
+import { randomUUID } from 'crypto';
+import fsExtra from 'fs-extra';
 import { getConfigFromCliArgs } from './config';
 import { normaliseDates } from '../dates-normaliser';
 import { generateUrls } from '../url-generator';
@@ -15,13 +16,16 @@ import { formatBytes } from '../utils/formatBytes';
 import chalk from 'chalk';
 import debug from 'debug';
 import dayjs from 'dayjs';
-import utc from 'dayjs/plugin/utc';
-import tz from 'dayjs/plugin/timezone';
+import utc from 'dayjs/plugin/utc.js';
+import tz from 'dayjs/plugin/timezone.js';
 
 import { version } from '../../package.json';
 import { BatchStreamWriter } from '../stream-writer';
 import { BufferObject } from '../buffer-fetcher/types';
 import { formatTimeDuration } from '../utils/formatTimeDuration';
+import { runBrowserInstall } from './install-browser';
+
+const { ensureDir, ensureFile, stat, rename, remove } = fsExtra;
 
 dayjs.extend(utc);
 dayjs.extend(tz);
@@ -29,6 +33,15 @@ dayjs.extend(tz);
 const DEBUG_NAMESPACE = 'dukascopy-node:cli';
 
 export async function run(argv: NodeJS.Process['argv']) {
+  if (argv.slice(2).includes('--install-browser')) {
+    try {
+      await runBrowserInstall(argv);
+    } catch (error) {
+      printErrors('Browser setup failed:', error instanceof Error ? error.message : String(error));
+      process.exit(1);
+    }
+    return;
+  }
   const { input, isValid, validationErrors } = getConfigFromCliArgs(argv);
 
   let {
@@ -43,6 +56,8 @@ export async function run(argv: NodeJS.Process['argv']) {
     format,
     batchSize,
     pauseBetweenBatchesMs,
+    requestIntervalMs,
+    rateLimitRetryCount,
     useCache,
     cacheFolderPath,
     dir,
@@ -55,11 +70,16 @@ export async function run(argv: NodeJS.Process['argv']) {
     pauseBetweenRetriesMs,
     fileName: customFileName,
     dateFormat,
-    timeZone
+    timeZone,
+    wafMode,
+    chromePath,
+    wafTimeoutMs,
+    wafTokenCache,
+    wafTokenCachePath
   } = input;
 
   if (isDebugActive) {
-    debug.enable(`${DEBUG_NAMESPACE}:*`);
+    debug.enable(`${DEBUG_NAMESPACE}:*,dukascopy-node:waf,dukascopy-node:rate-limit`);
   } else {
     if (process.env.DEBUG) {
       isDebugActive = true;
@@ -132,7 +152,8 @@ export async function run(argv: NodeJS.Process['argv']) {
       }
       await ensureDir(folderPath);
 
-      const fileWriteStream = createWriteStream(filePath, { flags: 'w+' });
+      const temporaryFilePath = `${filePath}.${randomUUID()}.part`;
+      const fileWriteStream = createWriteStream(temporaryFilePath, { flags: 'wx' });
 
       // Create a promise to track when the stream is fully finished
       const streamFinishPromise = new Promise<void>((resolve, reject) => {
@@ -143,6 +164,7 @@ export async function run(argv: NodeJS.Process['argv']) {
               progressBar.stop();
             }
             const relativeFilePath = join(dir, fileName);
+            await rename(temporaryFilePath, filePath);
             await ensureFile(filePath);
             const { size } = await stat(filePath);
             printSuccess(`√ File saved: ${chalk.bold(relativeFilePath)} (${formatBytes(size)})`);
@@ -155,6 +177,9 @@ export async function run(argv: NodeJS.Process['argv']) {
 
         fileWriteStream.on('error', reject);
       });
+      // A write can fail while a network request is still pending. Await the original
+      // promise below, but handle early rejections immediately to avoid unhandled errors.
+      void streamFinishPromise.catch(() => {});
 
       const batchStreamWriter = new BatchStreamWriter({
         fileWriteStream,
@@ -169,11 +194,18 @@ export async function run(argv: NodeJS.Process['argv']) {
       const bufferFetcher = new BufferFetcher({
         batchSize,
         pauseBetweenBatchesMs,
+        requestIntervalMs,
+        rateLimitRetryCount,
         cacheManager: useCache ? new CacheManager({ cacheFolderPath }) : undefined,
         retryCount,
         retryOnEmpty,
         failAfterRetryCount,
         pauseBetweenRetriesMs,
+        wafMode,
+        chromePath,
+        wafTimeoutMs,
+        wafTokenCache,
+        wafTokenCachePath,
         onItemFetch: (url, buffer, isCacheHit): void => {
           debug(`${DEBUG_NAMESPACE}:fetcher`)(
             url,
@@ -235,8 +267,15 @@ export async function run(argv: NodeJS.Process['argv']) {
         // Wait for the stream to fully finish before returning
         await streamFinishPromise;
       } catch (fetchError) {
-        // If fetch fails, close the stream to prevent hanging finish events
+        const closed = fileWriteStream.closed
+          ? Promise.resolve()
+          : new Promise<void>(resolve => fileWriteStream.once('close', resolve));
         fileWriteStream.destroy();
+        await closed;
+        await remove(temporaryFilePath);
+        if (!isDebugActive) {
+          progressBar.stop();
+        }
         throw fetchError;
       }
     } else {

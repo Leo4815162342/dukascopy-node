@@ -1,6 +1,6 @@
 import { program } from 'commander';
 import { RuleBoolean, RuleString } from 'fastest-validator';
-import { ConfigBase } from '../config';
+import { ConfigBase, defaultConfig } from '../config';
 import { validateConfig } from '../config-validator';
 import { InputSchema, schema } from '../config-validator/schema';
 import { Format } from '../config/format';
@@ -21,6 +21,7 @@ export interface CliConfig extends ConfigBase {
 const now = 'now';
 
 const commanderSchema = program
+  .option('--install-browser', 'Install Chromium for WAF recovery; no download arguments needed')
   .option('-d, --debug', 'Output extra debugging', false)
   .option('-s, --silent', 'Hides the search config in the CLI output', false)
   .requiredOption('-i, --instrument <value>', 'Trading instrument')
@@ -44,20 +45,50 @@ const commanderSchema = program
   .option('-dir, --directory <value>', 'Download directory', './download')
   .option('-bs, --batch-size <value>', 'Batch size of downloaded artifacts', Number, 10)
   .option('-bp, --batch-pause <value>', 'Pause between batches in ms', Number, 1000)
+  .option(
+    '--request-interval <ms>',
+    'Optional per-request pacing in ms; 0 keeps concurrent batches',
+    Number,
+    defaultConfig.requestIntervalMs
+  )
+  .option(
+    '--rate-limit-retries <count>',
+    'Retries on HTTP 429, independent of --retries',
+    Number,
+    defaultConfig.rateLimitRetryCount
+  )
   .option('-ch, --cache', 'Use cache', false)
   .option('-chpath, --cache-path <value>', 'Folder path for cache data', './.dukascopy-cache')
   .option('-df, --date-format <value>', 'Date format', '')
   .option('-tz, --time-zone <value>', 'Timezone', '')
+  .option(
+    '--waf-mode <value>',
+    'AWS WAF recovery: auto (headless browser) or off',
+    defaultConfig.wafMode
+  )
+  .option('--chrome-path <value>', 'Custom Chrome/Chromium executable for WAF recovery', '')
+  .option('--no-waf-token-cache', 'Disable reading and writing the local WAF token cache')
+  .option(
+    '--waf-token-cache-path <path>',
+    'WAF token cache file (default: ~/.dukascopy-node/waf-token.json)',
+    ''
+  )
+  .option(
+    '--waf-timeout <ms>',
+    'Headless WAF token acquisition timeout in milliseconds',
+    Number,
+    defaultConfig.wafTimeoutMs
+  )
   .option('-r, --retries <value>', 'Number of retries for a failed artifact download', Number, 0)
   .option('-rp, --retry-pause <value>', 'Pause between retries in milliseconds', Number, 500)
   .option(
     '-re, --retry-on-empty',
-    'A flag indicating whether successful responses with empty JSON datasets should be retried. If `retries` is `0` this parameter will be ignored',
+    'Treat successful responses with empty JSON datasets as unsuccessful attempts',
     false
   )
   .option(
     '-fr, --no-fail-after-retries',
-    'A flag indicating whether the process should fail after all retries have been exhausted. If `retries` is `0` this parameter will be ignored'
+    'Continue past failed downloads after all attempts, including when retries is 0'
   )
   .option('-fn, --file-name <value>', 'Custom file name for the generated file', '')
   .option(
@@ -91,6 +122,8 @@ export function getConfigFromCliArgs(argv: NodeJS.Process['argv']) {
     format: options.format,
     batchSize: options.batchSize,
     pauseBetweenBatchesMs: options.batchPause,
+    requestIntervalMs: options.requestInterval,
+    rateLimitRetryCount: options.rateLimitRetries,
     useCache: options.cache,
     cacheFolderPath: options.cachePath,
     retryCount: options.retries,
@@ -101,7 +134,12 @@ export function getConfigFromCliArgs(argv: NodeJS.Process['argv']) {
     inline: options.inline,
     fileName: options.fileName,
     dateFormat: options.dateFormat,
-    timeZone: options.timeZone
+    timeZone: options.timeZone,
+    wafMode: options.wafMode,
+    chromePath: options.chromePath,
+    wafTimeoutMs: options.wafTimeout,
+    wafTokenCache: options.wafTokenCache,
+    wafTokenCachePath: options.wafTokenCachePath
   };
 
   const cliSchema: InputSchema<CliConfig> = {

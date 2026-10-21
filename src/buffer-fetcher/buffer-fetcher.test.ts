@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { expect, it, beforeAll, beforeEach, afterAll, describe, vi } from 'vitest';
+import { expect, it, beforeAll, beforeEach, afterAll, afterEach, describe, vi } from 'vitest';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import { remove } from 'fs-extra';
@@ -30,6 +30,7 @@ const fileSystemFetcherFn = vi.fn(function (): Promise<Buffer> {
 });
 
 afterAll(async () => remove(cacheFolderPath));
+afterEach(() => vi.unstubAllGlobals());
 
 describe('Buffer fetcher', () => {
   const notifyFn = vi.fn();
@@ -147,6 +148,49 @@ describe('Buffer fetcher with file cache', () => {
 });
 
 describe('JSON response handling', () => {
+  it.each([202, 403, 429, 503])('rejects HTTP %s with zero retries', async status => {
+    const fetchMock = vi.fn(async () => new Response('', { status }));
+    vi.stubGlobal('fetch', fetchMock);
+    await expect(
+      new BufferFetcher({ retryCount: 0, rateLimitRetryCount: 0 }).fetch([urls[0]])
+    ).rejects.toThrow(`status ${status}`);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
+  it.each(['fetch', 'fetch_optimized'] as const)(
+    'does not cache failed requests in %s',
+    async method => {
+      const cacheManager = new CacheManager({ cacheFolderPath });
+      const writeSpy = vi.spyOn(cacheManager, 'writeItemsToCache');
+      vi.stubGlobal(
+        'fetch',
+        vi.fn(async () => new Response('', { status: 503 }))
+      );
+      const fetcher = new BufferFetcher({
+        cacheManager,
+        retryCount: 0,
+        failAfterRetryCount: false
+      });
+      const url = `${URL_ROOT}/candles/minute/EUR-USD/BID/2024/1/6`;
+      await fetcher[method]([url]);
+      expect(writeSpy.mock.calls.flatMap(([items]) => items)).toEqual([]);
+      expect(await cacheManager.readItemFromCache(url)).toBeNull();
+    }
+  );
+
+  it('rejects malformed JSON before it can enter the cache', async () => {
+    const cacheManager = new CacheManager({ cacheFolderPath });
+    const writeSpy = vi.spyOn(cacheManager, 'writeItemsToCache');
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => new Response('{}', { headers: { 'content-type': 'application/json' } }))
+    );
+    await expect(new BufferFetcher({ cacheManager }).fetch([urls[0]])).rejects.toThrow(
+      'Invalid Dukascopy JSON'
+    );
+    expect(writeSpy).not.toHaveBeenCalled();
+  });
+
   it('recognizes empty compact JSON payloads', () => {
     expect(isEmptyDataBuffer(Buffer.from(emptyFixtureBody))).toBe(true);
     expect(isEmptyDataBuffer(populatedFixtureBuffer)).toBe(false);
@@ -172,12 +216,17 @@ describe('JSON response handling', () => {
   it('retries compact JSON responses whose times array is empty', async () => {
     const fetchMock = vi
       .fn()
-      .mockResolvedValueOnce(new Response(emptyFixtureBody))
-      .mockResolvedValueOnce(new Response(populatedFixtureBody));
+      .mockResolvedValueOnce(
+        new Response(emptyFixtureBody, { headers: { 'content-type': 'application/json' } })
+      )
+      .mockResolvedValueOnce(
+        new Response(populatedFixtureBody, { headers: { 'content-type': 'application/json' } })
+      );
     vi.stubGlobal('fetch', fetchMock);
     const fetcher = new BufferFetcher({
       retryCount: 1,
       retryOnEmpty: true,
+      requestIntervalMs: 0,
       pauseBetweenRetriesMs: 0
     });
 
@@ -193,6 +242,7 @@ describe('JSON response handling', () => {
     vi.stubGlobal('fetch', fetchMock);
     const fetcher = new BufferFetcher({
       retryCount: 2,
+      requestIntervalMs: 0,
       pauseBetweenRetriesMs: 0,
       failAfterRetryCount: true
     });

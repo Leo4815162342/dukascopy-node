@@ -39,7 +39,103 @@
 </table>
 
 > [!IMPORTANT]  
-> Node.js 18 or higher is required.
+> Node.js 20 or higher is required for this beta.
+
+### Automatic AWS WAF recovery
+
+When Dukascopy responds with an AWS WAF challenge, the Node API and CLI automatically
+launch **headless Chromium or Chrome**, acquire a fresh token, close the browser,
+and retry using Node's HTTP client. The browser stays invisible. The token and the browser's actual `User-Agent` are saved
+locally and reused by later CLI invocations and Node calls, then refreshed if challenged
+again. Keeping the browser's user agent matters: Dukascopy can return HTTP 429 for
+Node's default user agent even when the token is valid.
+
+Google Chrome is not required. Beta users on Windows, macOS, or Linux can install
+the matching Chromium browser once, then run their usual download:
+
+```sh
+npx dukascopy-node@beta --install-browser
+npx dukascopy-node@beta -i btcusd -from 2024-01-06 -to 2024-01-07 -t m1 -f json
+```
+
+For a local Node project, install `dukascopy-node@beta`, then run
+`npx dukascopy-node --install-browser`. On Linux, add `--with-deps` to install
+required system libraries; this may require administrator access. Repeat browser
+setup after upgrading the package if its Playwright version changes.
+
+`playwright-core` is a required runtime dependency. Browser download happens only
+when the setup command is run, so npm install needs no browser postinstall script.
+Recovery prefers managed Chromium, then an existing Google Chrome installation
+if managed Chromium is absent. `chromePath` overrides both. A missing browser
+produces an error with the setup command. Requests that succeed directly, including
+requests with a cached token, do not launch a browser.
+
+| Node option | CLI option | Default |
+| --- | --- | --- |
+| `wafMode` | `--waf-mode auto\|off` | `auto` |
+| `chromePath` | `--chrome-path <path>` | Managed Chromium, then installed Chrome |
+| `wafTimeoutMs` | `--waf-timeout <ms>` | `60000` |
+| `wafTokenCache` | `--no-waf-token-cache` to disable | `true` |
+| `wafTokenCachePath` | `--waf-token-cache-path <path>` | `~/.dukascopy-node/waf-token.json` |
+
+These Node options work with both `getHistoricalRates` and `getRealTimeRates`.
+The token cache is independent of the market-data cache, so it works without
+`useCache` / `--cache`. Files are written atomically with owner-only permissions
+on macOS/Linux. Missing, corrupt, or inaccessible cache files do not prevent a
+download; tokens remain in memory if saving fails. Token expiry is checked by the
+server, with rejected tokens removed and replaced on successful recovery. The cache
+format is now version 2; older token-only files are ignored and replaced after the
+next successful browser acquisition. This requires one new acquisition after upgrading.
+On Windows, the default token file is `%USERPROFILE%\.dukascopy-node\waf-token.json`.
+
+Use `wafTokenCache: false` / `--no-waf-token-cache` to keep tokens in memory only.
+Use `wafMode: 'off'` / `--waf-mode off` to skip both token caching and browser recovery. Use
+`DEBUG=dukascopy-node:waf` for Node or `--debug` for the CLI to see acquisition and
+HTTP status logs; cookie values are never logged.
+
+Recovery retries each challenged request once, independently of `retryCount`.
+Persistent challenges and CAPTCHA fail with `WafChallengeError`; browser setup or
+acquisition failures produce `WafTokenError`. A valid token does not remove
+Dukascopy's rate limits.
+
+### Request pacing and HTTP 429
+
+The built-in downloader preserves concurrent batching: by default, up to **10
+files download concurrently**, with a **1000 ms pause between batches**. Use
+`batchSize` / `--batch-size` and `pauseBetweenBatchesMs` / `--batch-pause` as before.
+There is no per-request delay by default. The market-data cache and custom
+`BufferFetcher.fetcherFn` do not use the rate-limit wrapper.
+
+HTTP 429 pauses new requests and retries in this download; requests already in
+flight can finish. Each rejected file is retried up to **three times**, independently of `retryCount` / `--retries`. Delays are 5, 10, and 20
+seconds, each with up to one additional second of jitter. If provided, a longer
+`Retry-After` (seconds or HTTP date) takes precedence. A server wait over five
+minutes stops the download with guidance instead of retrying early. HTTP 429
+never triggers token refresh.
+
+| Node option | CLI option | Default |
+| --- | --- | --- |
+| `requestIntervalMs` | `--request-interval <ms>` | `0` (concurrent batches) |
+| `rateLimitRetryCount` | `--rate-limit-retries <count>` | `3` |
+
+These options work with `getHistoricalRates`, `getRealTimeRates`, and
+`BufferFetcher`. Set `rateLimitRetryCount: 0` to disable automatic 429 retries.
+A positive request interval opts into sequential requests with that delay after
+each response. Zero preserves batch concurrency. Concurrent 429 responses share
+the longest cooldown; each rejected file has its own retry budget.
+Pacing is per download, not shared across processes or separate API calls.
+
+After the 429 budget is exhausted, `RateLimitError` stops queued network requests.
+Other HTTP errors still use the existing retry settings. Errors are reported even
+with zero ordinary retries unless `failAfterRetryCount: false` /
+`--no-fail-after-retries` is selected (which can produce incomplete output).
+The CLI publishes its output file only after the download completes successfully.
+
+If 429 persists even at a low request rate, wait before trying again. Dukascopy's
+429 response directs bulk users to its [historical data export instructions](https://www.dukascopy.com/wiki/en/development/data-export/).
+Retries cannot guarantee access to a server that continues to reject requests.
+
+[Runnable examples and local verification](examples/with-headless-waf/README.md)
 
 ## ✨ Download Historical Price Data via CLI
 

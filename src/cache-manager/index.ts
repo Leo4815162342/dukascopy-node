@@ -1,7 +1,9 @@
 import { resolve } from 'path';
 import { URL_ROOT } from '../url-generator';
-import { outputFile, remove, readFile, readdirSync, ensureDirSync, pathExists } from 'fs-extra';
+import fsExtra from 'fs-extra';
 import { BufferObject } from '../buffer-fetcher/types';
+
+const { outputFile, remove, readFile, readdirSync, ensureDirSync, pathExists } = fsExtra;
 
 export type CacheManifest = Set<string>;
 
@@ -48,7 +50,12 @@ export class CacheManager implements CacheManagerBase {
     const cacheKeyEncoded = `${encodeURIComponent(cacheKey)}.json`;
     const cacheItemPath = resolve(this.cacheFolderPath, cacheKeyEncoded);
     try {
-      return await readFile(cacheItemPath);
+      const buffer = await readFile(cacheItemPath);
+      if (buffer.length === 0) {
+        this.cacheManifest.delete(cacheKey);
+        return null;
+      }
+      return buffer;
     } catch (error) {
       if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
         this.cacheManifest.delete(cacheKey);
@@ -62,10 +69,11 @@ export class CacheManager implements CacheManagerBase {
   public async writeItemsToCache(items: BufferObject[]) {
     return Promise.allSettled(
       items.map(async ({ buffer, url }) => {
+        if (buffer.length === 0) {
+          return;
+        }
         const cacheKey = this.cacheKeyFormatter(url);
         const isItemInCache = this.cacheManifest.has(cacheKey);
-        // TODO?: don't write empty buffers to the cache
-        // const isEmptyBuffer = buffer.length === 0;
 
         const cacheKeyEncoded = `${encodeURIComponent(cacheKey)}.json`;
         const cacheItemPath = resolve(this.cacheFolderPath, cacheKeyEncoded);

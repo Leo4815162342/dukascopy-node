@@ -3,12 +3,20 @@ on:
   - push
 jobs:
   test:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: [22]
+        include:
+          - os: ubuntu-latest
+            node: 20
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 22
+          node-version: ${{ matrix.node }}
       - uses: actions/cache@v3
         with:
           path: ~/.pnpm-store
@@ -23,3 +31,9 @@ jobs:
       - run: pnpm type-check
       - run: pnpm test
       - run: pnpm build
+      - name: Install matching Chromium
+        run: node dist/cli/index.js --install-browser ${{ runner.os == 'Linux' && '--with-deps' || '' }}
+      - name: Verify headless browser launch
+        run: node examples/with-headless-waf/browser-smoke.cjs
+      - name: Verify ESM browser setup entry
+        run: node dist/esm/cli/index.js --install-browser

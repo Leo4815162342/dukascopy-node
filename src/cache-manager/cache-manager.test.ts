@@ -1,7 +1,7 @@
 import { afterAll, beforeEach, describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
-import { pathExists, remove } from 'fs-extra';
+import { pathExists, remove, outputFile } from 'fs-extra';
 import { CacheManager } from '.';
 import { URL_ROOT } from '../url-generator';
 
@@ -51,6 +51,22 @@ describe('Cache manager', () => {
     expect(
       await manager.readItemFromCache(`${URL_ROOT}/candles/minute/EUR-USD/BID/2019/5/23`)
     ).toBeNull();
+  });
+
+  it('skips failed zero-byte writes and replaces zero-byte files from older versions', async () => {
+    const manager = new CacheManager({ cacheFolderPath });
+    await manager.writeItemsToCache([{ url: firstUrl, buffer: Buffer.alloc(0) }]);
+    expect(await manager.readItemFromCache(firstUrl)).toBeNull();
+
+    const filePath = resolve(
+      cacheFolderPath,
+      `${encodeURIComponent(manager.getCacheKeyFromUrl(firstUrl))}.json`
+    );
+    await outputFile(filePath, Buffer.alloc(0));
+    const reloaded = new CacheManager({ cacheFolderPath });
+    expect(await reloaded.readItemFromCache(firstUrl)).toBeNull();
+    await reloaded.writeItemsToCache([items[0]]);
+    expect(await reloaded.readItemFromCache(firstUrl)).toEqual(firstFixture);
   });
 
   it('purges the cache directory and in-memory manifest', async () => {

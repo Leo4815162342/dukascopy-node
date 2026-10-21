@@ -62,12 +62,19 @@ export async function getHistoricalRates(config: Config): Promise<Output> {
     format,
     batchSize,
     pauseBetweenBatchesMs,
+    requestIntervalMs,
+    rateLimitRetryCount,
     useCache,
     cacheFolderPath,
     retryCount,
     pauseBetweenRetriesMs,
     retryOnEmpty,
-    failAfterRetryCount
+    failAfterRetryCount,
+    wafMode,
+    chromePath,
+    wafTimeoutMs,
+    wafTokenCache,
+    wafTokenCachePath
   } = input;
 
   const [startDate, endDate] = normaliseDates({
@@ -102,12 +109,19 @@ export async function getHistoricalRates(config: Config): Promise<Output> {
   const bufferFetcher = new BufferFetcher({
     batchSize,
     pauseBetweenBatchesMs,
+    requestIntervalMs,
+    rateLimitRetryCount,
     cacheManager: useCache ? new CacheManager({ cacheFolderPath }) : undefined,
     retryCount,
     pauseBetweenRetriesMs,
     onItemFetch,
     retryOnEmpty,
-    failAfterRetryCount
+    failAfterRetryCount,
+    wafMode,
+    chromePath,
+    wafTimeoutMs,
+    wafTokenCache,
+    wafTokenCachePath
   });
 
   const bufferredData = await bufferFetcher.fetch(urls);
