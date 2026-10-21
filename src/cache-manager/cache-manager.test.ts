@@ -1,7 +1,8 @@
-import { afterAll, beforeEach, describe, expect, it } from 'vitest';
+import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
-import { pathExists, remove, outputFile } from 'fs-extra';
+import { outputFile, pathExists, remove } from 'fs-extra';
+import debug from 'debug';
 import { CacheManager } from '.';
 import { URL_ROOT } from '../url-generator';
 
@@ -67,6 +68,31 @@ describe('Cache manager', () => {
     expect(await reloaded.readItemFromCache(firstUrl)).toBeNull();
     await reloaded.writeItemsToCache([items[0]]);
     expect(await reloaded.readItemFromCache(firstUrl)).toEqual(firstFixture);
+  });
+
+  it('reports failed writes without adding them to the cache manifest', async () => {
+    const manager = new CacheManager({ cacheFolderPath });
+    const previousDebugNamespaces = debug.disable();
+    const debugSpy = vi.spyOn(debug, 'log').mockImplementation(() => undefined);
+    debug.enable('dukascopy-node:cache');
+    await remove(cacheFolderPath);
+    await outputFile(cacheFolderPath, 'not a directory');
+
+    try {
+      const [result] = await manager.writeItemsToCache([items[0]]);
+
+      expect(result.status).toBe('rejected');
+      expect(debugSpy).toHaveBeenCalled();
+      expect(debugSpy.mock.calls.flat().join(' ')).toContain('Failed to write cache item');
+      expect(debugSpy.mock.calls.flat().join(' ')).toContain(firstUrl);
+      await expect(manager.readItemFromCache(firstUrl)).resolves.toBeNull();
+    } finally {
+      debugSpy.mockRestore();
+      debug.disable();
+      if (previousDebugNamespaces) {
+        debug.enable(previousDebugNamespaces);
+      }
+    }
   });
 
   it('purges the cache directory and in-memory manifest', async () => {

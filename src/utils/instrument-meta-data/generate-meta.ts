@@ -10,7 +10,6 @@ export interface InstrumentMetaData {
   name: string;
   code: string;
   description: string;
-  decimalFactor: number;
   startHourForTicks: string;
   startDayForMinuteCandles: string;
   startMonthForHourlyCandles: string;
@@ -43,7 +42,6 @@ export function buildMeta(instruments: ApiInstrumentDetail[]): InstrumentMetaDat
       name: instrument.name,
       code: instrument.code,
       description: instrument.description?.trim() || instrument.name,
-      decimalFactor: 10 ** (instrument.priceScale || 0),
       startHourForTicks: getHistoryStart(instrument, 'TICK'),
       startDayForMinuteCandles: getHistoryStart(instrument, 'MINUTE'),
       startMonthForHourlyCandles: getHistoryStart(instrument, 'HOUR'),

@@ -6,6 +6,10 @@ In order to enable them, set `useCache` flag to `true` and optionally specify th
 
 Completed-period JSON responses are stored on disk, so subsequent requests for the same instrument and date range can be served from the file system.
 
+Buckets containing the current time are not cached because their data is still changing. This applies to the current hour for `tick` and `s1`, the current day for `m1`, `m5`, `m15`, and `m30`, the current month for `h1` and `h4`, and the current year for `d1` and `mn1`. A request for an earlier range inside one of those active buckets is also fetched from the network.
+
+> **Upgrading from 1.46.4 or earlier:** The cache now stores JSON responses under new file names. Existing `.bi5` files in `.dukascopy-cache` are no longer read and can be removed if you do not need to use an older version of `dukascopy-node`.
+
 ---
 
 via CLI:
