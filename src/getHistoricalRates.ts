@@ -62,12 +62,19 @@ export async function getHistoricalRates(config: Config): Promise<Output> {
     format,
     batchSize,
     pauseBetweenBatchesMs,
+    requestIntervalMs,
+    rateLimitRetryCount,
     useCache,
     cacheFolderPath,
     retryCount,
     pauseBetweenRetriesMs,
     retryOnEmpty,
-    failAfterRetryCount
+    failAfterRetryCount,
+    wafMode,
+    chromePath,
+    wafTimeoutMs,
+    wafTokenCache,
+    wafTokenCachePath
   } = input;
 
   const [startDate, endDate] = normaliseDates({
@@ -90,11 +97,13 @@ export async function getHistoricalRates(config: Config): Promise<Output> {
   debug(`${DEBUG_NAMESPACE}:urls`)(`%O`, urls);
 
   const onItemFetch: BufferFetcherInput['onItemFetch'] = process.env.DEBUG
-    ? (url, buffer, isCacheHit) => {
+    ? (url, buffer, isCacheHit, wafTokenUsed) => {
         debug(`${DEBUG_NAMESPACE}:fetcher`)(
           url,
           `| ${formatBytes(buffer.length)} |`,
-          `${isCacheHit ? 'cache' : 'network'}`
+          `${isCacheHit ? 'cache' : 'network'}${
+            wafTokenUsed === undefined ? '' : ` (WAF token: ${wafTokenUsed ? 'yes' : 'no'})`
+          }`
         );
       }
     : undefined;
@@ -102,12 +111,19 @@ export async function getHistoricalRates(config: Config): Promise<Output> {
   const bufferFetcher = new BufferFetcher({
     batchSize,
     pauseBetweenBatchesMs,
+    requestIntervalMs,
+    rateLimitRetryCount,
     cacheManager: useCache ? new CacheManager({ cacheFolderPath }) : undefined,
     retryCount,
     pauseBetweenRetriesMs,
     onItemFetch,
     retryOnEmpty,
-    failAfterRetryCount
+    failAfterRetryCount,
+    wafMode,
+    chromePath,
+    wafTimeoutMs,
+    wafTokenCache,
+    wafTokenCachePath
   });
 
   const bufferredData = await bufferFetcher.fetch(urls);

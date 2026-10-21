@@ -39,7 +39,21 @@
 </table>
 
 > [!IMPORTANT]  
-> Node.js 18 or higher is required.
+> Node.js 20 or higher is required.
+
+### Browser setup
+
+Downloads may require Chromium or Google Chrome. If Chrome is not installed,
+install Chromium once on Windows, macOS, or Linux:
+
+```sh
+npx dukascopy-node --install-browser
+```
+
+For a project with the package already installed, use
+`npx dukascopy-node --install-browser`. On Linux, add `--with-deps` to install
+required system libraries. Run setup again if an upgrade asks for a newer browser.
+The browser runs in the background.
 
 ## ✨ Download Historical Price Data via CLI
 

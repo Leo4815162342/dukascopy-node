@@ -2,7 +2,7 @@ import { instrumentMetaData } from '../config/instruments-metadata';
 import { getDateTimeFormatOptions, getFormattedDate } from '../utils/date';
 import { CliConfig } from './config';
 
-const chalk = require('chalk');
+import chalk from 'chalk';
 
 // eslint-disable-next-line no-console
 const log = console.log;

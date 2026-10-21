@@ -9,9 +9,11 @@ export { InputSchema, schema } from './config-validator/schema';
 export { normaliseDates } from './dates-normaliser';
 export { generateUrls, URL_ROOT } from './url-generator';
 export { BufferFetcher } from './buffer-fetcher';
+export { RateLimitError } from './buffer-fetcher/rate-limit';
 export { processData } from './processor';
 export { formatOutput } from './output-formatter';
 export { CacheManager } from './cache-manager';
+export { WafMode, WafChallengeError, WafTokenError } from './waf';
 
 export {
   Config,

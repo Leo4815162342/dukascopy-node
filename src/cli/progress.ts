@@ -1,6 +1,6 @@
 import { Bar } from 'cli-progress';
 
-const chalk = require('chalk');
+import chalk from 'chalk';
 
 export const progressBar = new Bar({
   format: '|' + chalk.green('{bar}') + '| {percentage}%',

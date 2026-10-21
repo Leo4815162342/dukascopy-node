@@ -54,6 +54,22 @@ describe('Cache manager', () => {
     ).toBeNull();
   });
 
+  it('skips failed zero-byte writes and replaces zero-byte files from older versions', async () => {
+    const manager = new CacheManager({ cacheFolderPath });
+    await manager.writeItemsToCache([{ url: firstUrl, buffer: Buffer.alloc(0) }]);
+    expect(await manager.readItemFromCache(firstUrl)).toBeNull();
+
+    const filePath = resolve(
+      cacheFolderPath,
+      `${encodeURIComponent(manager.getCacheKeyFromUrl(firstUrl))}.json`
+    );
+    await outputFile(filePath, Buffer.alloc(0));
+    const reloaded = new CacheManager({ cacheFolderPath });
+    expect(await reloaded.readItemFromCache(firstUrl)).toBeNull();
+    await reloaded.writeItemsToCache([items[0]]);
+    expect(await reloaded.readItemFromCache(firstUrl)).toEqual(firstFixture);
+  });
+
   it('reports failed writes without adding them to the cache manifest', async () => {
     const manager = new CacheManager({ cacheFolderPath });
     const previousDebugNamespaces = debug.disable();

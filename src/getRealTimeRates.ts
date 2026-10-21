@@ -1,4 +1,4 @@
-import { Config, DateInput } from './config';
+import { Config, ConfigBase, DateInput } from './config';
 import { FormatType } from './config/format';
 import { InstrumentType } from './config/instruments';
 import { PriceType } from './config/price-types';
@@ -7,7 +7,16 @@ import { getHistoricalRates } from './getHistoricalRates';
 import { formatOutput } from './output-formatter';
 import { ArrayItem, ArrayTickItem, JsonItem, JsonItemTick } from './output-formatter/types';
 
-export type RealTimeRatesConfigBase = {
+export type RealTimeRatesConfigBase = Pick<
+  ConfigBase,
+  | 'wafMode'
+  | 'chromePath'
+  | 'wafTimeoutMs'
+  | 'wafTokenCache'
+  | 'wafTokenCachePath'
+  | 'requestIntervalMs'
+  | 'rateLimitRetryCount'
+> & {
   instrument: InstrumentType;
   timeframe?: TimeframeType;
   dates?: {
@@ -73,7 +82,14 @@ export async function getRealTimeRates({
   volumes = true,
   format = 'array',
   dates,
-  last = 10
+  last = 10,
+  wafMode,
+  chromePath,
+  wafTimeoutMs,
+  wafTokenCache,
+  wafTokenCachePath,
+  requestIntervalMs,
+  rateLimitRetryCount
 }: RealTimeRatesConfig) {
   const now = new Date();
   const fromDate = dates ? toDate(dates.from) : getTimeframeLimit(timeframe, now, last || 10);
@@ -88,7 +104,14 @@ export async function getRealTimeRates({
     timeframe,
     priceType,
     volumes,
-    format: 'array'
+    format: 'array',
+    wafMode,
+    chromePath,
+    wafTimeoutMs,
+    wafTokenCache,
+    wafTokenCachePath,
+    requestIntervalMs,
+    rateLimitRetryCount
   } as Config)) as number[][];
 
   const filteredRates = dates ? rates : rates.slice((last || 10) * -1);
