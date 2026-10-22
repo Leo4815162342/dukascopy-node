@@ -48,3 +48,11 @@ export {
 } from './getRealTimeRates';
 
 export { instrumentMetaData } from './config/instruments-metadata';
+export {
+  createFxMacroDataClient,
+  FxMacroDataClient,
+  FxMacroDataClientOptions,
+  FxMacroDataQuery,
+  FxMacroDataQueryValue,
+  GraphQLRequest
+} from './fxmacrodata';
