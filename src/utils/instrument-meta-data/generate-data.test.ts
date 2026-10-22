@@ -16,7 +16,7 @@ function loadJson<T>(path: string): T {
 }
 
 const fixtureFolderPath = resolve(__dirname, '../../__mocks__/fixtures');
-const bulkFixturePath = resolve(__dirname, 'generated/raw-meta-data-2026-07-13.json');
+const bulkFixturePath = resolve(__dirname, 'generated/raw-meta-data-2026-10-21.json');
 const bulkFixtureBody = readFileSync(bulkFixturePath, 'utf8');
 const authoritativeBulk = JSON.parse(bulkFixtureBody) as InstrumentsResponse;
 const detailFixtureBodies = {
@@ -85,9 +85,14 @@ describe('Instrument metadata generation with downloaded responses', () => {
     ]);
   });
 
-  it('uses real platform and ungrouped fallbacks when groupId is absent', () => {
+  it('uses platform and ungrouped fallbacks when groupId is absent', () => {
     expect(
-      buildInstrumentGroupData(withInstruments([getSummary('EUC-EUR'), getSummary('USC-USD')]))
+      buildInstrumentGroupData(
+        withInstruments([
+          getSummary('EUC-EUR'),
+          { ...getSummary('USC-USD'), platformGroupId: null }
+        ])
+      )
     ).toEqual([
       { id: 'crypto_curr', instruments: ['euceur'] },
       { id: 'ungrouped', instruments: ['uscusd'] }
@@ -142,7 +147,7 @@ describe('Instrument metadata generation with downloaded responses', () => {
     await vi.runAllTimersAsync();
     const result = await resultPromise;
 
-    expect(result.instruments).toHaveLength(1499);
+    expect(result.instruments).toHaveLength(1504);
     expect(fetchMock).toHaveBeenCalledTimes(3);
   });
 

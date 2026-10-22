@@ -781,12 +781,6 @@ export enum Instrument {
     ahnleur='ahnleur',
 
     /**
-     * ### Ashtead Group PLC
-     * *AHT.GB/GBX*
-     */
-    ahtgbgbx='ahtgbgbx',
-
-    /**
      * ### Air Liquide SA
      * *AI.FR/EUR*
      */
@@ -1651,6 +1645,12 @@ export enum Instrument {
     bugggbgbp='bugggbgbp',
 
     /**
+     * ### Global X Cybersecurity Ucits ETF
+     * *BUGG.GB/USD*
+     */
+    bugggbusd='bugggbusd',
+
+    /**
      * ### Euro Bund
      * *BUND.TR/EUR*
      */
@@ -1895,12 +1895,6 @@ export enum Instrument {
      * *CCK.US/USD*
      */
     cckususd='cckususd',
-
-    /**
-     * ### Carnival PLC
-     * *CCL.GB/GBX*
-     */
-    cclgbgbx='cclgbgbx',
 
     /**
      * ### CARNIVAL CORP
@@ -2425,6 +2419,12 @@ export enum Instrument {
     cysegbgbx='cysegbgbx',
 
     /**
+     * ### WisdomTree Cybersecurity UCITS ETF USD
+     * *CYSE.GB/USD*
+     */
+    cysegbusd='cysegbusd',
+
+    /**
      * ### Czech Koruna vs Hungarian Forint
      * *CZK/HUF*
      */
@@ -2755,6 +2755,12 @@ export enum Instrument {
     dtedeeur='dtedeeur',
 
     /**
+     * ### Dukascoin vs Euro
+     * *DUK+/EUR*
+     */
+    dukpluseur='dukpluseur',
+
+    /**
      * ### DUKE ENERGY CORP
      * *DUK.US/USD*
      */
@@ -3011,6 +3017,12 @@ export enum Instrument {
      * *ESIH.GB/GBP*
      */
     esihgbgbp='esihgbgbp',
+
+    /**
+     * ### iShares MSCI Europe Health Care Sector UCITS ETF
+     * *ESIH.GB/USD*
+     */
+    esihgbusd='esihgbusd',
 
     /**
      * ### Spain 35 Index
@@ -6931,6 +6943,12 @@ export enum Instrument {
     semigbgbp='semigbgbp',
 
     /**
+     * ### iShares MSCI Global Semiconductors UCITS ETF (London)
+     * *SEMI.GB/USD*
+     */
+    semigbusd='semigbusd',
+
+    /**
      * ### Salvatore Ferragamo S.p.A.
      * *SFER.IT/EUR*
      */
@@ -7195,7 +7213,7 @@ export enum Instrument {
     soususd='soususd',
 
     /**
-     * ### South Africa 40 Index
+     * ### SOA.IDX/ZAR
      * *SOA.IDX/ZAR*
      */
     soaidxzar='soaidxzar',
@@ -7921,7 +7939,7 @@ export enum Instrument {
     usbususd='usbususd',
 
     /**
-     * ### USC/USD
+     * ### USD Coin vs US Dollar
      * *USC/USD*
      */
     uscusd='uscusd',
@@ -8051,6 +8069,12 @@ export enum Instrument {
      * *USSC2000.IDX/USD*
      */
     ussc2000idxusd='ussc2000idxusd',
+
+    /**
+     * ### USD Tether vs US Dollar
+     * *UST/USD*
+     */
+    ustusd='ustusd',
 
     /**
      * ### US T-Bond
@@ -8753,6 +8777,12 @@ export enum Instrument {
      * *XDER.GB/GBX*
      */
     xdergbgbx='xdergbgbx',
+
+    /**
+     * ### Xtrackers FTSE Developed Europe Real Estate UCITS
+     * *XDER.GB/USD*
+     */
+    xdergbusd='xdergbusd',
 
     /**
      * ### Xtrackers MSCI World Health Care UCITS ETF 1C
