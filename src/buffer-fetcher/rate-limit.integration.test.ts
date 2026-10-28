@@ -4,6 +4,7 @@ import { join, resolve } from 'path';
 import { afterAll, afterEach, describe, expect, it, vi } from 'vitest';
 import {
   BufferFetcher,
+  DukascopyAccessDeniedError,
   getHistoricalRates,
   getRealTimeRates,
   RateLimitError,
@@ -34,6 +35,109 @@ afterEach(() => {
 afterAll(() => rmSync(outputDir, { recursive: true, force: true }));
 
 describe('Node and CLI rate-limit integration', () => {
+  it.each(['fetch', 'fetch_optimized'] as const)(
+    'does not ordinarily retry or start paced files after plain 403 in %s',
+    async method => {
+      vi.useFakeTimers();
+      const fetchMock = vi.fn(async () => new Response('Forbidden', { status: 403 }));
+      vi.stubGlobal('fetch', fetchMock);
+      const fetcher = new BufferFetcher({
+        batchSize: 3,
+        requestIntervalMs: 1000,
+        retryCount: 5,
+        wafTokenCache: false
+      });
+      const urls = Array.from(
+        { length: 7 },
+        (_, i) => `https://jetta.dukascopy.com/v1/candles/minute/EUR-USD/BID/2026/7/${i + 1}`
+      );
+      const result = expect(fetcher[method](urls)).rejects.toBeInstanceOf(
+        DukascopyAccessDeniedError
+      );
+      await vi.runAllTimersAsync();
+      await result;
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+      expect(vi.getTimerCount()).toBe(0);
+    }
+  );
+
+  it('does not retry already concurrent files or begin later batches after plain 403', async () => {
+    vi.useFakeTimers();
+    const fetchMock = vi.fn(async () => new Response('Forbidden', { status: 403 }));
+    vi.stubGlobal('fetch', fetchMock);
+    const fetcher = new BufferFetcher({ batchSize: 3, retryCount: 5, wafTokenCache: false });
+    const urls = Array.from(
+      { length: 7 },
+      (_, i) => `https://jetta.dukascopy.com/v1/candles/minute/EUR-USD/BID/2026/7/${i + 1}`
+    );
+    const result = expect(fetcher.fetch(urls)).rejects.toBeInstanceOf(DukascopyAccessDeniedError);
+    await vi.runAllTimersAsync();
+    await result;
+    // The initial batch was already in flight when the first denial arrived.
+    expect(fetchMock).toHaveBeenCalledTimes(3);
+    expect(vi.getTimerCount()).toBe(0);
+  });
+
+  it('preserves opt-in empty results while suppressing further denied requests', async () => {
+    vi.useFakeTimers();
+    const fetchMock = vi.fn(async () => new Response('Forbidden', { status: 403 }));
+    vi.stubGlobal('fetch', fetchMock);
+    const fetcher = new BufferFetcher({
+      batchSize: 2,
+      requestIntervalMs: 1000,
+      retryCount: 5,
+      failAfterRetryCount: false,
+      wafTokenCache: false
+    });
+    const urls = Array.from(
+      { length: 5 },
+      (_, i) => `https://jetta.dukascopy.com/v1/candles/minute/EUR-USD/BID/2026/7/${i + 1}`
+    );
+    const result = fetcher.fetch(urls);
+    await vi.runAllTimersAsync();
+    expect(await result).toEqual([]);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(vi.getTimerCount()).toBe(0);
+  });
+
+  it('exposes access-denied errors through historical and realtime APIs', async () => {
+    const fetchMock = vi.fn(async () => new Response('Forbidden', { status: 403 }));
+    vi.stubGlobal('fetch', fetchMock);
+    await expect(getHistoricalRates({ ...config, retryCount: 5 })).rejects.toMatchObject({
+      name: 'DukascopyAccessDeniedError',
+      code: 'DUKASCOPY_ACCESS_DENIED',
+      status: 403
+    });
+    await expect(getRealTimeRates(config)).rejects.toBeInstanceOf(DukascopyAccessDeniedError);
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
+
+  it('propagates browser access denial and prevents recovery for queued files', async () => {
+    vi.useFakeTimers();
+    const fetchMock = vi.fn(
+      async () => new Response('', { status: 202, headers: { 'x-amzn-waf-action': 'challenge' } })
+    );
+    vi.stubGlobal('fetch', fetchMock);
+    const denied = new DukascopyAccessDeniedError(
+      'https://jetta.dukascopy.com/v1/candles/minute/EUR-USD/BID/2026/7/10'
+    );
+    vi.mocked(acquireChromeSession).mockReset().mockRejectedValueOnce(denied);
+    const result = expect(
+      getHistoricalRates({
+        ...config,
+        dates: { from: '2026-07-10', to: '2026-07-20' },
+        requestIntervalMs: 1000,
+        retryCount: 5
+      })
+    ).rejects.toBe(denied);
+    await vi.runAllTimersAsync();
+    await result;
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(acquireChromeSession).toHaveBeenCalledTimes(1);
+    expect(vi.getTimerCount()).toBe(0);
+    vi.mocked(acquireChromeSession).mockReset();
+  });
+
   it.each(['fetch', 'fetch_optimized'] as const)(
     'restores 10/10/4 concurrent requests and batch pauses in %s',
     async method => {

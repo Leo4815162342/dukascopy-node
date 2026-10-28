@@ -1,11 +1,11 @@
 import { acquireChromeSession, BrowserTokenOptions } from './browser-token';
 import { assertDataUrl, decodeData } from './data';
-import { WafChallengeError, WafTokenError } from './errors';
+import { DukascopyAccessDeniedError, WafChallengeError, WafTokenError } from './errors';
 import { isValidSession, WafSession, WafTokenCache } from './token-cache';
 import debug from 'debug';
 
 export type WafMode = 'auto' | 'off';
-export { WafChallengeError, WafTokenError } from './errors';
+export { DukascopyAccessDeniedError, WafChallengeError, WafTokenError } from './errors';
 const log = debug('dukascopy-node:waf');
 
 interface WafFetcherOptions extends BrowserTokenOptions {
@@ -31,6 +31,7 @@ export function createHeadlessWafFetcher(options: WafFetcherOptions = {}) {
   let tokenGeneration = 0;
   let acquiring: Promise<void> | undefined;
   let loading: Promise<void> | undefined;
+  let accessDenied: DukascopyAccessDeniedError | undefined;
   const stats = { tokenAcquisitions: 0, httpRequests: 0 };
   const responseTokenUsage = new WeakMap<Response, boolean>();
 
@@ -50,7 +51,9 @@ export function createHeadlessWafFetcher(options: WafFetcherOptions = {}) {
   // Share acquisition among concurrent callers, including failures. A later call may retry.
   async function refreshToken(url: string): Promise<void> {
     assertDataUrl(url);
+    if (accessDenied) throw accessDenied;
     await loadCachedToken();
+    if (accessDenied) throw accessDenied;
     if (!acquiring) {
       acquiring = (async () => {
         const previousToken = session?.token;
@@ -58,9 +61,13 @@ export function createHeadlessWafFetcher(options: WafFetcherOptions = {}) {
         if (previousToken) {
           await cache?.invalidate(previousToken);
         }
+        // Another in-flight request can be denied while disk invalidation
+        // yields. Recheck before announcing or launching browser recovery.
+        if (accessDenied) throw accessDenied;
         options.onTokenAcquisition?.();
         log('Acquiring token in a headless browser for %s', url);
         const nextSession = await acquireSession(url);
+        if (accessDenied) throw accessDenied;
         if (!isValidSession(nextSession)) {
           throw new WafTokenError('Browser returned an invalid WAF session');
         }
@@ -69,15 +76,23 @@ export function createHeadlessWafFetcher(options: WafFetcherOptions = {}) {
         stats.tokenAcquisitions++;
         await cache?.write(nextSession);
         log('Token acquired; browser closed. Continuing with Node fetch.');
-      })().finally(() => {
-        acquiring = undefined;
-      });
+      })()
+        .catch(error => {
+          if (error instanceof DukascopyAccessDeniedError) {
+            accessDenied ??= error;
+          }
+          throw accessDenied ?? error;
+        })
+        .finally(() => {
+          acquiring = undefined;
+        });
     }
     await acquiring;
   }
 
   async function fetchResponse(url: string): Promise<Response> {
     assertDataUrl(url);
+    if (accessDenied) throw accessDenied;
     await loadCachedToken();
 
     // One HTTP attempt, plus at most one retry after a challenge-triggered refresh.
@@ -85,6 +100,7 @@ export function createHeadlessWafFetcher(options: WafFetcherOptions = {}) {
       if (acquiring) {
         await acquiring;
       }
+      if (accessDenied) throw accessDenied;
       const generationUsed = tokenGeneration;
       const tokenUsed = session?.token;
       stats.httpRequests++;
@@ -99,6 +115,12 @@ export function createHeadlessWafFetcher(options: WafFetcherOptions = {}) {
         signal: AbortSignal.timeout(requestTimeoutMs)
       });
       responseTokenUsage.set(response, Boolean(tokenUsed));
+      // A late response must not launch another browser or retry after a
+      // concurrent request has already established a terminal access denial.
+      if (accessDenied) {
+        await response.body?.cancel().catch(() => {});
+        throw accessDenied;
+      }
       const action = response.headers.get('x-amzn-waf-action');
       if (response.status !== 200 || action === 'challenge' || action === 'captcha') {
         log('HTTP %d %s (WAF token: %s)', response.status, url, tokenUsed ? 'yes' : 'no');
@@ -120,6 +142,14 @@ export function createHeadlessWafFetcher(options: WafFetcherOptions = {}) {
           await refreshToken(url);
         }
         continue;
+      }
+
+      if (response.status === 403) {
+        // A plain access denial is not evidence that the cached token expired.
+        // Retain the session and stop without another browser or HTTP attempt.
+        accessDenied = new DukascopyAccessDeniedError(url);
+        await response.body?.cancel().catch(() => {});
+        throw accessDenied;
       }
 
       return response;

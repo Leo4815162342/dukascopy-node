@@ -1,5 +1,5 @@
 import debug from 'debug';
-import { WafChallengeError, WafTokenError } from '../waf/errors';
+import { DukascopyAccessDeniedError, WafChallengeError, WafTokenError } from '../waf/errors';
 
 const log = debug('dukascopy-node:rate-limit');
 const MAX_RETRY_WAIT_MS = 5 * 60_000;
@@ -88,8 +88,13 @@ export function createRateLimitedRequester(
       try {
         response = await request(url);
       } catch (error) {
-        // A terminal browser failure must not launch another browser for each queued file.
-        if (error instanceof WafChallengeError || error instanceof WafTokenError) {
+        // Terminal denial/recovery failures must not retry or launch another
+        // browser for each queued file, even with ordinary retries enabled.
+        if (
+          error instanceof WafChallengeError ||
+          error instanceof WafTokenError ||
+          error instanceof DukascopyAccessDeniedError
+        ) {
           stop(error);
         }
         throw error;

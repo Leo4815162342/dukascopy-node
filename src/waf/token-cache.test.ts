@@ -2,7 +2,7 @@ import { mkdtemp, readFile, readdir, rm, stat, writeFile } from 'fs/promises';
 import { homedir, tmpdir } from 'os';
 import { dirname, join } from 'path';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { createHeadlessWafFetcher, WafChallengeError } from '.';
+import { createHeadlessWafFetcher, DukascopyAccessDeniedError, WafChallengeError } from '.';
 import { WafTokenCache } from './token-cache';
 
 const url = 'https://jetta.dukascopy.com/v1/candles/minute/BTC-USD/BID/2024/1/6';
@@ -226,5 +226,75 @@ describe('WAF transport persistence', () => {
     expect((await transport.fetchResponse(url)).status).toBe(429);
     expect(acquireSession).not.toHaveBeenCalled();
     expect(await cache.read()).toEqual(session('cached-token'));
+  });
+
+  it('preserves the disk and in-memory token on a plain HTTP 403 without launching Chrome', async () => {
+    await cache.write(session('cached-token'));
+    const contents = await readFile(path, 'utf8');
+    const { transport, fetchFn, acquireSession } = client();
+    fetchFn.mockResolvedValueOnce(new Response('', { status: 403 }));
+
+    await expect(transport.fetchResponse(url)).rejects.toBeInstanceOf(DukascopyAccessDeniedError);
+    expect(await readFile(path, 'utf8')).toBe(contents);
+    expect(await cache.read()).toEqual(session('cached-token'));
+    expect(acquireSession).not.toHaveBeenCalled();
+
+    // This download stays stopped, while a fresh transport for a later manual
+    // attempt can still reuse the unchanged session from disk.
+    await expect(transport.fetchResponse(url)).rejects.toBeInstanceOf(DukascopyAccessDeniedError);
+    expect(fetchFn).toHaveBeenCalledTimes(1);
+    const next = client();
+    expect((await next.transport.fetchResponse(url)).status).toBe(200);
+    expect(next.fetchFn.mock.calls[0][1]?.headers).toHaveProperty(
+      'cookie',
+      'aws-waf-token=cached-token'
+    );
+    expect(next.acquireSession).not.toHaveBeenCalled();
+  });
+
+  it('does not launch Chrome if access is denied while token invalidation is pending', async () => {
+    await cache.write(session('cached-token'));
+    let invalidationStarted!: () => void;
+    const started = new Promise<void>(resolve => {
+      invalidationStarted = resolve;
+    });
+    let releaseInvalidation!: () => void;
+    const gate = new Promise<void>(resolve => {
+      releaseInvalidation = resolve;
+    });
+    const invalidate = vi
+      .spyOn(WafTokenCache.prototype, 'invalidate')
+      .mockImplementationOnce(() => {
+        invalidationStarted();
+        return gate;
+      });
+    let respondDenied!: (response: Response) => void;
+    const onTokenAcquisition = vi.fn();
+    const { transport, fetchFn, acquireSession } = client({ onTokenAcquisition });
+    fetchFn.mockResolvedValueOnce(challenge()).mockReturnValueOnce(
+      new Promise(resolve => {
+        respondDenied = resolve;
+      })
+    );
+    const challenged = transport.fetchResponse(url);
+    const denied = transport.fetchResponse(url);
+    const results = Promise.allSettled([challenged, denied]);
+    try {
+      await started;
+      expect(fetchFn).toHaveBeenCalledTimes(2);
+      respondDenied(new Response('', { status: 403 }));
+      const error = await denied.catch(error => error);
+      expect(error).toBeInstanceOf(DukascopyAccessDeniedError);
+      releaseInvalidation();
+      expect(await results).toEqual(Array(2).fill({ status: 'rejected', reason: error }));
+      expect(acquireSession).not.toHaveBeenCalled();
+      expect(onTokenAcquisition).not.toHaveBeenCalled();
+      expect(fetchFn).toHaveBeenCalledTimes(2);
+    } finally {
+      releaseInvalidation();
+      respondDenied(new Response('', { status: 403 }));
+      await results;
+      invalidate.mockRestore();
+    }
   });
 });

@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import { describe, expect, it, vi } from 'vitest';
-import { createHeadlessWafFetcher, WafChallengeError } from '.';
+import { createHeadlessWafFetcher, DukascopyAccessDeniedError, WafChallengeError } from '.';
 
 const url = 'https://jetta.dukascopy.com/v1/candles/minute/EUR-USD/BID/2026/7/10';
 const fixtures = resolve(__dirname, '../__mocks__/fixtures');
@@ -137,6 +137,91 @@ describe('Headless WAF prototype transport', () => {
     );
     await expect(client.fetchBuffer(url)).rejects.toBeInstanceOf(WafChallengeError);
     expect(acquireSession).toHaveBeenCalledTimes(1);
+  });
+
+  it.each(['auto', 'off'] as const)(
+    'reports a plain 403 without browser recovery in %s mode and cancels its body',
+    async mode => {
+      const response = new Response('private server denial contents', { status: 403 });
+      const fetchFn = vi.fn<typeof fetch>().mockResolvedValue(response);
+      const acquireSession = vi.fn();
+      const client = createHeadlessWafFetcher({ mode, fetchFn, acquireSession, tokenCache: false });
+
+      const result = client.fetchResponse(url);
+      await expect(result).rejects.toBeInstanceOf(DukascopyAccessDeniedError);
+      await expect(result).rejects.toMatchObject({
+        code: 'DUKASCOPY_ACCESS_DENIED',
+        status: 403,
+        url
+      });
+      await expect(result).rejects.not.toThrow('private server denial contents');
+      expect(fetchFn).toHaveBeenCalledTimes(1);
+      expect(acquireSession).not.toHaveBeenCalled();
+      expect(await response.body!.getReader().read()).toMatchObject({ done: true });
+    }
+  );
+
+  it('preserves an access-denied error when cancelling the body also fails', async () => {
+    const { client, fetchFn, acquireSession } = setup();
+    fetchFn.mockResolvedValueOnce(
+      new Response(
+        new ReadableStream({
+          cancel() {
+            throw new Error('private transport cleanup failure');
+          }
+        }),
+        { status: 403 }
+      )
+    );
+    await expect(client.fetchResponse(url)).rejects.toBeInstanceOf(DukascopyAccessDeniedError);
+    expect(fetchFn).toHaveBeenCalledTimes(1);
+    expect(acquireSession).not.toHaveBeenCalled();
+  });
+
+  it('does not recover a late challenge after another in-flight request was denied', async () => {
+    const { client, fetchFn, acquireSession } = setup();
+    let releaseLate!: (response: Response) => void;
+    fetchFn
+      .mockImplementationOnce(
+        () =>
+          new Promise(resolve => {
+            releaseLate = resolve;
+          })
+      )
+      .mockResolvedValueOnce(new Response('', { status: 403 }));
+    const late = client.fetchResponse(url);
+    await expect(client.fetchResponse(url)).rejects.toBeInstanceOf(DukascopyAccessDeniedError);
+
+    const lateResult = expect(late).rejects.toBeInstanceOf(DukascopyAccessDeniedError);
+    releaseLate(challenge());
+    await lateResult;
+    await expect(client.refreshToken(url)).rejects.toBeInstanceOf(DukascopyAccessDeniedError);
+    await expect(client.fetchResponse(url)).rejects.toBeInstanceOf(DukascopyAccessDeniedError);
+    expect(fetchFn).toHaveBeenCalledTimes(2);
+    expect(acquireSession).not.toHaveBeenCalled();
+  });
+
+  it('latches browser access denial without retrying a later challenge', async () => {
+    const { client, fetchFn, acquireSession } = setup();
+    const denied = new DukascopyAccessDeniedError(url);
+    fetchFn.mockResolvedValueOnce(challenge());
+    acquireSession.mockRejectedValueOnce(denied);
+
+    await expect(client.fetchResponse(url)).rejects.toBe(denied);
+    await expect(client.fetchResponse(url)).rejects.toBe(denied);
+    await expect(client.fetchBuffer(url)).rejects.toBe(denied);
+    expect(fetchFn).toHaveBeenCalledTimes(1);
+    expect(acquireSession).toHaveBeenCalledTimes(1);
+  });
+
+  it('still recovers an explicit WAF challenge even when its HTTP status is 403', async () => {
+    const { client, fetchFn, acquireSession } = setup();
+    fetchFn.mockResolvedValueOnce(
+      new Response('', { status: 403, headers: { 'x-amzn-waf-action': 'challenge' } })
+    );
+    expect((await client.fetchResponse(url)).status).toBe(200);
+    expect(acquireSession).toHaveBeenCalledTimes(1);
+    expect(fetchFn).toHaveBeenCalledTimes(2);
   });
 
   it.each([202, 403, 429, 503])(
