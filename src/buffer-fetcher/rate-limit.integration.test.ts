@@ -112,6 +112,17 @@ describe('Node and CLI rate-limit integration', () => {
     expect(fetchMock).toHaveBeenCalledTimes(2);
   });
 
+  it('stops ordinary retries immediately after a plain 403', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => new Response('Forbidden', { status: 403 }))
+    );
+    // Without the terminal break, this download would wait a minute before failing.
+    await expect(
+      getHistoricalRates({ ...config, retryCount: 1, pauseBetweenRetriesMs: 60_000 })
+    ).rejects.toBeInstanceOf(DukascopyAccessDeniedError);
+  });
+
   it('propagates browser access denial and prevents recovery for queued files', async () => {
     vi.useFakeTimers();
     const fetchMock = vi.fn(

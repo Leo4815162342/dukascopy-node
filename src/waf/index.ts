@@ -3,6 +3,7 @@ import { assertDataUrl, decodeData } from './data';
 import { DukascopyAccessDeniedError, WafChallengeError, WafTokenError } from './errors';
 import { isValidSession, WafSession, WafTokenCache } from './token-cache';
 import debug from 'debug';
+import { DATA_API_REFERER, DATA_API_USER_AGENT } from '../config/data-api';
 
 export type WafMode = 'auto' | 'off';
 export { DukascopyAccessDeniedError, WafChallengeError, WafTokenError } from './errors';
@@ -66,8 +67,9 @@ export function createHeadlessWafFetcher(options: WafFetcherOptions = {}) {
         if (accessDenied) throw accessDenied;
         options.onTokenAcquisition?.();
         log('Acquiring token in a headless browser for %s', url);
+        // Keep a token acquired while another request was denied. Callers still
+        // stop at the access-denied checks before any further HTTP request.
         const nextSession = await acquireSession(url);
-        if (accessDenied) throw accessDenied;
         if (!isValidSession(nextSession)) {
           throw new WafTokenError('Browser returned an invalid WAF session');
         }
@@ -107,20 +109,17 @@ export function createHeadlessWafFetcher(options: WafFetcherOptions = {}) {
       const response = await fetchFn(url, {
         headers: {
           accept: 'application/json',
-          ...(session
-            ? { cookie: `aws-waf-token=${session.token}`, 'user-agent': session.userAgent }
-            : {})
+          referer: DATA_API_REFERER,
+          'user-agent': session?.userAgent ?? DATA_API_USER_AGENT,
+          ...(session ? { cookie: `aws-waf-token=${session.token}` } : {})
         },
         redirect: 'error',
         signal: AbortSignal.timeout(requestTimeoutMs)
       });
       responseTokenUsage.set(response, Boolean(tokenUsed));
-      // A late response must not launch another browser or retry after a
-      // concurrent request has already established a terminal access denial.
-      if (accessDenied) {
-        await response.body?.cancel().catch(() => {});
-        throw accessDenied;
-      }
+      // Responses already in flight when another request is denied complete
+      // normally, so their data is kept. The access-denied checks still stop
+      // them from starting browser recovery or another attempt.
       const action = response.headers.get('x-amzn-waf-action');
       if (response.status !== 200 || action === 'challenge' || action === 'captcha') {
         log('HTTP %d %s (WAF token: %s)', response.status, url, tokenUsed ? 'yes' : 'no');
@@ -147,7 +146,8 @@ export function createHeadlessWafFetcher(options: WafFetcherOptions = {}) {
       if (response.status === 403) {
         // A plain access denial is not evidence that the cached token expired.
         // Retain the session and stop without another browser or HTTP attempt.
-        accessDenied = new DukascopyAccessDeniedError(url);
+        // Concurrent denials report the first one.
+        accessDenied ??= new DukascopyAccessDeniedError(url);
         await response.body?.cancel().catch(() => {});
         throw accessDenied;
       }

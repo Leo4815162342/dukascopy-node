@@ -3,6 +3,7 @@ import { DukascopyAccessDeniedError, WafTokenError } from './errors';
 import { existsSync } from 'fs';
 import debug from 'debug';
 import { WafSession } from './token-cache';
+import { DATA_API_REFERER } from '../config/data-api';
 
 const log = debug('dukascopy-node:waf');
 
@@ -53,7 +54,6 @@ export async function acquireChromeSession(
   let lastStatus: number | undefined;
   let lastAction: string | undefined;
   let timer: ReturnType<typeof setTimeout> | undefined;
-  let failure: Error | undefined;
   try {
     // Bound context/page creation and response-body reads as well as navigation.
     const deadline = new Promise<never>((_, reject) => {
@@ -74,10 +74,19 @@ export async function acquireChromeSession(
           if (response.url() !== url) return;
           lastStatus = response.status();
           lastAction = response.headers()['x-amzn-waf-action'];
+          const challenged = lastAction === 'challenge' || lastAction === 'captcha';
+          if (lastStatus !== 200) {
+            log(
+              'Browser HTTP %d %s (WAF action: %s)',
+              lastStatus,
+              url,
+              challenged ? lastAction : 'none'
+            );
+          }
           // A plain denial is not a request to solve another challenge. Stop
           // immediately, even if navigation or the error body never finishes.
-          if (lastStatus === 403 && lastAction !== 'challenge' && lastAction !== 'captcha') {
-            deny(new DukascopyAccessDeniedError(url));
+          if (lastStatus === 403 && !challenged) {
+            deny(new DukascopyAccessDeniedError(url, 'browser'));
           }
         });
         const [response] = await Promise.all([
@@ -89,7 +98,11 @@ export async function acquireChromeSession(
               (response.headers()['content-type'] || '').toLowerCase().includes('application/json'),
             { timeout: timeoutMs }
           ),
-          page.goto(url, { waitUntil: 'domcontentloaded', timeout: timeoutMs })
+          page.goto(url, {
+            waitUntil: 'domcontentloaded',
+            timeout: timeoutMs,
+            referer: DATA_API_REFERER
+          })
         ]);
 
         decodeData(url, await response.body());
@@ -103,23 +116,16 @@ export async function acquireChromeSession(
       })()
     ]);
   } catch (error) {
+    if (error instanceof DukascopyAccessDeniedError) throw error;
     const action = lastAction === 'challenge' || lastAction === 'captcha' ? lastAction : 'none';
-    failure =
-      error instanceof DukascopyAccessDeniedError || error instanceof WafTokenError
-        ? error
-        : new WafTokenError(
-            `Headless browser could not acquire a WAF token for ${url} ` +
-              `(last HTTP status: ${lastStatus ?? 'none'}, WAF action: ${action})`
-          );
-    throw failure;
+    throw new WafTokenError(
+      `Headless browser could not acquire a WAF token for ${url} ` +
+        `(last HTTP status: ${lastStatus ?? 'none'}, WAF action: ${action})`
+    );
   } finally {
     clearTimeout(timer);
-    try {
-      await browser.close();
-    } catch {
-      // Cleanup must not replace a provider refusal or turn a terminal browser
-      // failure into an ordinary error that the downloader retries repeatedly.
-      if (!failure) throw new WafTokenError('Could not close the headless WAF browser');
-    }
+    // Cleanup must neither discard an acquired token nor replace the original
+    // failure, so a close error is only logged.
+    await browser.close().catch(() => log('Could not close the headless browser'));
   }
 }

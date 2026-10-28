@@ -64,6 +64,11 @@ describe('Headless browser token acquisition', () => {
       timeout: 60_000
     });
     expect(context.cookies).toHaveBeenCalledWith(url);
+    expect(page.goto).toHaveBeenCalledWith(url, {
+      waitUntil: 'domcontentloaded',
+      timeout: 60_000,
+      referer: 'https://widgets.dukascopy.com/en/historical-data-export'
+    });
     expect(browser.close).toHaveBeenCalledTimes(1);
   });
 
@@ -137,7 +142,9 @@ describe('Headless browser token acquisition', () => {
       name: 'DukascopyAccessDeniedError',
       code: 'DUKASCOPY_ACCESS_DENIED',
       status: 403,
-      url
+      url,
+      source: 'browser',
+      message: expect.stringContaining('refused the headless browser')
     });
     expect(browser.close).toHaveBeenCalledTimes(1);
     expect(response.body).not.toHaveBeenCalled();
@@ -216,11 +223,11 @@ describe('Headless browser token acquisition', () => {
     expect(browser.close).toHaveBeenCalledTimes(1);
   });
 
-  it('reports cleanup failures after success as terminal token errors', async () => {
+  it('keeps the acquired session when browser cleanup fails', async () => {
     browser.close.mockRejectedValueOnce(new Error('private cleanup details'));
-    await expect(acquireChromeSession(url)).rejects.toMatchObject({
-      code: 'DUKASCOPY_WAF_TOKEN',
-      message: 'Could not close the headless WAF browser'
+    expect(await acquireChromeSession(url)).toEqual({
+      token: 'test-token',
+      userAgent: 'Actual headless browser user agent'
     });
     expect(browser.close).toHaveBeenCalledTimes(1);
   });

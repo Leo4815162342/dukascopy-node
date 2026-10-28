@@ -58,18 +58,18 @@ The browser runs in the background.
 ### HTTP 403 and browser challenges
 
 An explicit AWS WAF challenge can start browser recovery. A **403 without a
-challenge** stops further provider requests for that download, including ordinary
-retries and new browser recovery. It raises `DukascopyAccessDeniedError`
-(`code: 'DUKASCOPY_ACCESS_DENIED'`, `status: 403`, `url`) with the default
-`failAfterRetryCount: true`. Cached tokens are retained because a plain 403 does
-not establish that the token is invalid. A later, separate download can try again.
+challenge** stops the download: no further requests, ordinary retries, or browser
+recovery start for it. With the default `failAfterRetryCount: true`, it raises
+`DukascopyAccessDeniedError` (`code: 'DUKASCOPY_ACCESS_DENIED'`, `status: 403`,
+`url`, and `source`, which is `'browser'` when the headless browser was refused).
+Cached tokens are kept, because a plain 403 does not show that a token is invalid.
+The next `getHistoricalRates` call or CLI run starts fresh.
 
-If the same URL also returns 403 in a normal browser, reinstalling Chromium or
-deleting the token cache is not a confirmed remedy. The status alone does not
-identify a ban, rate limit, or server configuration problem. This behavior reports
-the refusal promptly; it does not restore access blocked by the provider. See
-[issue #264](https://github.com/Leo4815162342/dukascopy-node/issues/264) and
-[AWS's CloudFront 403 troubleshooting guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/http-403-permission-denied.html).
+If this happens, check that Dukascopy's
+[historical data export page](https://www.dukascopy.com/swiss/english/marketwatch/historical/)
+works in a regular browser, and update dukascopy-node. Reinstalling Chromium or
+deleting the token cache does not help with a plain 403. See
+[issue #264](https://github.com/Leo4815162342/dukascopy-node/issues/264).
 
 ## ✨ Download Historical Price Data via CLI
 
