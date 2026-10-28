@@ -297,4 +297,37 @@ describe('WAF transport persistence', () => {
       invalidate.mockRestore();
     }
   });
+
+  it('keeps a token acquired while another request is denied', async () => {
+    let acquisitionStarted!: () => void;
+    const started = new Promise<void>(resolve => {
+      acquisitionStarted = resolve;
+    });
+    let finishAcquisition!: () => void;
+    const { transport, fetchFn, acquireSession } = client();
+    acquireSession.mockImplementationOnce(
+      () =>
+        new Promise<ReturnType<typeof session>>(resolve => {
+          acquisitionStarted();
+          finishAcquisition = () => resolve(session('fresh-token'));
+        })
+    );
+    let respondDenied!: (response: Response) => void;
+    fetchFn.mockResolvedValueOnce(challenge()).mockReturnValueOnce(
+      new Promise(resolve => {
+        respondDenied = resolve;
+      })
+    );
+    const challenged = transport.fetchResponse(url);
+    const denied = transport.fetchResponse(url);
+    await started;
+    respondDenied(new Response('', { status: 403 }));
+    const error = await denied.catch((error: unknown) => error);
+    expect(error).toBeInstanceOf(DukascopyAccessDeniedError);
+
+    finishAcquisition();
+    await expect(challenged).rejects.toBe(error);
+    expect(await cache.read()).toEqual(session('fresh-token'));
+    expect(fetchFn).toHaveBeenCalledTimes(2);
+  });
 });

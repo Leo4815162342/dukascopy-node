@@ -2,6 +2,7 @@ import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import { describe, expect, it, vi } from 'vitest';
 import { createHeadlessWafFetcher, DukascopyAccessDeniedError, WafChallengeError } from '.';
+import { DATA_API_REFERER, DATA_API_USER_AGENT } from '../config/data-api';
 
 const url = 'https://jetta.dukascopy.com/v1/candles/minute/EUR-USD/BID/2026/7/10';
 const fixtures = resolve(__dirname, '../__mocks__/fixtures');
@@ -60,12 +61,24 @@ describe('Headless WAF prototype transport', () => {
     expect(fetchFn).toHaveBeenCalledWith(url, {
       headers: {
         accept: 'application/json',
+        referer: DATA_API_REFERER,
         cookie: 'aws-waf-token=first-token',
         'user-agent': 'Headless test browser'
       },
       redirect: 'error',
       signal: expect.any(AbortSignal)
     });
+  });
+
+  it('sends the export widget Referer and a browser User-Agent without a token', async () => {
+    const { client, acquireSession, fetchFn } = setup();
+    expect((await client.fetchResponse(url)).status).toBe(200);
+    expect(fetchFn.mock.calls[0][1]?.headers).toEqual({
+      accept: 'application/json',
+      referer: DATA_API_REFERER,
+      'user-agent': DATA_API_USER_AGENT
+    });
+    expect(acquireSession).not.toHaveBeenCalled();
   });
 
   it('refreshes once when a token is challenged and retries with the new token', async () => {
@@ -79,6 +92,7 @@ describe('Headless WAF prototype transport', () => {
     expect(acquireSession).toHaveBeenCalledTimes(2);
     expect(fetchFn.mock.calls[1][1]?.headers).toEqual({
       accept: 'application/json',
+      referer: DATA_API_REFERER,
       cookie: 'aws-waf-token=second-token',
       'user-agent': 'Second browser'
     });
@@ -201,6 +215,47 @@ describe('Headless WAF prototype transport', () => {
     expect(acquireSession).not.toHaveBeenCalled();
   });
 
+  it('keeps a successful response that arrives after another request was denied', async () => {
+    const { client, fetchFn, acquireSession } = setup();
+    let releaseLate!: (response: Response) => void;
+    fetchFn
+      .mockImplementationOnce(
+        () =>
+          new Promise(resolve => {
+            releaseLate = resolve;
+          })
+      )
+      .mockResolvedValueOnce(new Response('', { status: 403 }));
+    const late = client.fetchResponse(url);
+    await expect(client.fetchResponse(url)).rejects.toBeInstanceOf(DukascopyAccessDeniedError);
+
+    releaseLate(json());
+    expect(await (await late).text()).toBe(payload);
+    await expect(client.fetchResponse(url)).rejects.toBeInstanceOf(DukascopyAccessDeniedError);
+    expect(fetchFn).toHaveBeenCalledTimes(2);
+    expect(acquireSession).not.toHaveBeenCalled();
+  });
+
+  it('reports the first denial when concurrent requests are denied', async () => {
+    const { client, fetchFn } = setup();
+    let releaseLate!: (response: Response) => void;
+    fetchFn
+      .mockImplementationOnce(
+        () =>
+          new Promise(resolve => {
+            releaseLate = resolve;
+          })
+      )
+      .mockResolvedValueOnce(new Response('', { status: 403 }));
+    const late = client.fetchResponse(url);
+    const first = await client.fetchResponse(url).catch((error: unknown) => error);
+    expect(first).toBeInstanceOf(DukascopyAccessDeniedError);
+
+    const lateResult = expect(late).rejects.toBe(first);
+    releaseLate(new Response('', { status: 403 }));
+    await lateResult;
+  });
+
   it('latches browser access denial without retrying a later challenge', async () => {
     const { client, fetchFn, acquireSession } = setup();
     const denied = new DukascopyAccessDeniedError(url);
@@ -224,16 +279,21 @@ describe('Headless WAF prototype transport', () => {
     expect(fetchFn).toHaveBeenCalledTimes(2);
   });
 
-  it.each([202, 403, 429, 503])(
-    'rejects HTTP %s without repeatedly acquiring tokens',
-    async status => {
-      const { client, acquireSession, fetchFn } = setup();
-      fetchFn.mockResolvedValueOnce(new Response('', { status }));
-      await expect(client.fetchBuffer(url)).rejects.toThrow(`HTTP ${status}`);
-      expect(acquireSession).toHaveBeenCalledTimes(1);
-      expect(fetchFn).toHaveBeenCalledTimes(1);
-    }
-  );
+  it.each([202, 429, 503])('rejects HTTP %s without repeatedly acquiring tokens', async status => {
+    const { client, acquireSession, fetchFn } = setup();
+    fetchFn.mockResolvedValueOnce(new Response('', { status }));
+    await expect(client.fetchBuffer(url)).rejects.toThrow(`HTTP ${status}`);
+    expect(acquireSession).toHaveBeenCalledTimes(1);
+    expect(fetchFn).toHaveBeenCalledTimes(1);
+  });
+
+  it('rejects a plain 403 with the typed denial without repeatedly acquiring tokens', async () => {
+    const { client, acquireSession, fetchFn } = setup();
+    fetchFn.mockResolvedValueOnce(new Response('', { status: 403 }));
+    await expect(client.fetchBuffer(url)).rejects.toBeInstanceOf(DukascopyAccessDeniedError);
+    expect(acquireSession).toHaveBeenCalledTimes(1);
+    expect(fetchFn).toHaveBeenCalledTimes(1);
+  });
 
   it.each(['', '<html>challenge</html>', '{}', '{"times":[]}'])(
     'rejects malformed or incomplete JSON: %s',

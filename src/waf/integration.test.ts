@@ -44,14 +44,49 @@ afterEach(() => {
 afterAll(() => rmSync(outputDir, { recursive: true, force: true }));
 
 describe('Node and CLI WAF integration', () => {
-  it('keeps successful Node requests browser-free', async () => {
-    vi.stubGlobal(
-      'fetch',
-      vi.fn(async () => json())
-    );
-    expect((await getHistoricalRates({ ...base })).length).toBeGreaterThan(0);
-    expect(acquireChromeSession).not.toHaveBeenCalled();
-  });
+  it.each(['node', 'cli'] as const)(
+    '%s uses the export widget request context without a token or browser',
+    async client => {
+      const fetchMock = vi.fn<typeof fetch>(async (_input, init) => {
+        const headers = new Headers(init?.headers);
+        if (
+          headers.get('referer') !== 'https://widgets.dukascopy.com/en/historical-data-export' ||
+          !/Chrome\/\d+\./.test(headers.get('user-agent') || '')
+        ) {
+          return new Response('', { status: 403 });
+        }
+        return json();
+      });
+      vi.stubGlobal('fetch', fetchMock);
+      if (client === 'node') {
+        expect((await getHistoricalRates({ ...base })).length).toBeGreaterThan(0);
+      } else {
+        await run([
+          'node',
+          'dukascopy-node',
+          '-i',
+          'eurusd',
+          '-from',
+          '2026-07-10',
+          '-to',
+          '2026-07-11',
+          '-t',
+          'm1',
+          '--waf-token-cache-path',
+          join(outputDir, 'unused-widget-token.json'),
+          '--directory',
+          outputDir,
+          '--file-name',
+          'widget-context'
+        ]);
+        const rows = JSON.parse(readFileSync(join(outputDir, 'widget-context.json'), 'utf8'));
+        expect(rows.length).toBeGreaterThan(0);
+      }
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+      expect(fetchMock.mock.calls[0][1]?.headers).not.toHaveProperty('cookie');
+      expect(acquireChromeSession).not.toHaveBeenCalled();
+    }
+  );
 
   it('recovers a challenge with zero retries and reuses the token across Node batches', async () => {
     const fetchMock = vi

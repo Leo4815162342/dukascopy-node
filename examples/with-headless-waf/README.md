@@ -59,15 +59,11 @@ For a browser installed in a custom location, use `chromePath` in Node or
 If the data URL returns a plain **HTTP 403** during browser recovery, acquisition
 stops immediately instead of waiting for its token timeout. The browser closes,
 and the download reports `DukascopyAccessDeniedError` with `status: 403`, the URL,
-and `code: 'DUKASCOPY_ACCESS_DENIED'`. A browser cleanup failure does not replace
-that diagnostic. Further queued requests and late challenges in that download
-cannot start another browser after this denial. A separate manual download uses
-a fresh transport and may retry later.
+`source: 'browser'`, and `code: 'DUKASCOPY_ACCESS_DENIED'`. No later request in
+that download starts another browser. See
+[HTTP 403 and browser challenges](../../README.md#http-403-and-browser-challenges)
+for what to check.
 
-The existing `failAfterRetryCount: false` option still suppresses errors and may
-produce partial or empty results; keep the default `true` to observe the error.
-
-No token-cache deletion, endpoint substitution, or automatic retries are used to
-respond to a plain 403. When an ordinary browser is blocked too, this does not
-establish a client-side remedy or prove that the response is a rate limit. See
-[issue #264](https://github.com/Leo4815162342/dukascopy-node/issues/264).
+With `failAfterRetryCount: false`, the error is suppressed: files after the denial
+come back empty and the download still completes. Keep the default `true` to see
+the error.

@@ -21,12 +21,14 @@ export class DukascopyAccessDeniedError extends Error {
   readonly code = 'DUKASCOPY_ACCESS_DENIED';
   readonly status = 403;
 
-  constructor(readonly url: string) {
+  constructor(readonly url: string, readonly source: 'request' | 'browser' = 'request') {
     super(
-      `Dukascopy refused access (HTTP 403) for ${url} without a WAF challenge. ` +
-        'Download stopped; refreshing a WAF token is not a confirmed remedy for this response. ' +
-        'Try again later or check the same URL in a normal browser. ' +
-        'The HTTP status alone does not identify the reason for the denial.'
+      (source === 'browser'
+        ? `Dukascopy refused the headless browser (HTTP 403) for ${url} during WAF token recovery. `
+        : `Dukascopy refused access (HTTP 403) for ${url}; WAF token recovery does not apply to a plain 403. `) +
+        "Download stopped. Check that Dukascopy's historical data export page " +
+        '(https://www.dukascopy.com/swiss/english/marketwatch/historical/) works in a regular browser, ' +
+        'and update dukascopy-node if a newer version is available.'
     );
     this.name = 'DukascopyAccessDeniedError';
   }
