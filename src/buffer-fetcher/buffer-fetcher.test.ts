@@ -151,9 +151,16 @@ describe('JSON response handling', () => {
   it.each([202, 403, 429, 503])('rejects HTTP %s with zero retries', async status => {
     const fetchMock = vi.fn(async () => new Response('', { status }));
     vi.stubGlobal('fetch', fetchMock);
-    await expect(
-      new BufferFetcher({ retryCount: 0, rateLimitRetryCount: 0 }).fetch([urls[0]])
-    ).rejects.toThrow(`status ${status}`);
+    const result = new BufferFetcher({ retryCount: 0, rateLimitRetryCount: 0 }).fetch([urls[0]]);
+    if (status === 403) {
+      await expect(result).rejects.toMatchObject({
+        code: 'DUKASCOPY_ACCESS_DENIED',
+        status: 403,
+        url: urls[0]
+      });
+    } else {
+      await expect(result).rejects.toThrow(`status ${status}`);
+    }
     expect(fetchMock).toHaveBeenCalledTimes(1);
   });
 

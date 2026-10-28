@@ -1,5 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { createRateLimitedRequester, RateLimitError, retryAfterMs } from './rate-limit';
+import { DukascopyAccessDeniedError } from '../waf/errors';
 
 beforeEach(() => {
   vi.useFakeTimers();
@@ -245,6 +246,39 @@ describe('concurrent requests and optional pacing', () => {
     const result = Promise.allSettled([fetch('a'), fetch('b')]);
     await vi.runAllTimersAsync();
     expect((await result).map(r => r.status)).toEqual(['rejected', 'fulfilled']);
+  });
+
+  it('stops queued requests and later calls immediately after an access denial', async () => {
+    const error = new DukascopyAccessDeniedError('https://jetta.dukascopy.com/denied');
+    const request = vi.fn(async () => {
+      throw error;
+    });
+    const fetch = createRateLimitedRequester(request, { requestIntervalMs: 1000 });
+    const result = await Promise.allSettled([fetch('a'), fetch('b'), fetch('c')]);
+    expect(result).toEqual(Array(3).fill({ status: 'rejected', reason: error }));
+    await expect(fetch('later')).rejects.toBe(error);
+    expect(request).toHaveBeenCalledTimes(1);
+    expect(vi.getTimerCount()).toBe(0);
+  });
+
+  it('wakes concurrent rate-limit cooldowns immediately when access is denied', async () => {
+    let denySlow!: (error: Error) => void;
+    const error = new DukascopyAccessDeniedError('https://jetta.dukascopy.com/denied');
+    const request = vi.fn((url: string) =>
+      url === 'slow'
+        ? new Promise<Response>((_, reject) => {
+            denySlow = reject;
+          })
+        : Promise.resolve(new Response('', { status: 429 }))
+    );
+    const fetch = createRateLimitedRequester(request);
+    const result = Promise.allSettled([fetch('rate-limited'), fetch('slow')]);
+    await vi.advanceTimersByTimeAsync(1000);
+    expect(vi.getTimerCount()).toBe(1);
+    denySlow(error);
+    expect(await result).toEqual(Array(2).fill({ status: 'rejected', reason: error }));
+    expect(vi.getTimerCount()).toBe(0);
+    expect(request).toHaveBeenCalledTimes(2);
   });
 
   it.each([-1, NaN, Infinity, 0.5, 2_147_483_648])('rejects unsafe options: %s', value => {

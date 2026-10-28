@@ -13,7 +13,7 @@ export { RateLimitError } from './buffer-fetcher/rate-limit';
 export { processData } from './processor';
 export { formatOutput } from './output-formatter';
 export { CacheManager } from './cache-manager';
-export { WafMode, WafChallengeError, WafTokenError } from './waf';
+export { WafMode, DukascopyAccessDeniedError, WafChallengeError, WafTokenError } from './waf';
 
 export {
   Config,

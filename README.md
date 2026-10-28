@@ -55,6 +55,22 @@ For a project with the package already installed, use
 required system libraries. Run setup again if an upgrade asks for a newer browser.
 The browser runs in the background.
 
+### HTTP 403 and browser challenges
+
+An explicit AWS WAF challenge can start browser recovery. A **403 without a
+challenge** stops further provider requests for that download, including ordinary
+retries and new browser recovery. It raises `DukascopyAccessDeniedError`
+(`code: 'DUKASCOPY_ACCESS_DENIED'`, `status: 403`, `url`) with the default
+`failAfterRetryCount: true`. Cached tokens are retained because a plain 403 does
+not establish that the token is invalid. A later, separate download can try again.
+
+If the same URL also returns 403 in a normal browser, reinstalling Chromium or
+deleting the token cache is not a confirmed remedy. The status alone does not
+identify a ban, rate limit, or server configuration problem. This behavior reports
+the refusal promptly; it does not restore access blocked by the provider. See
+[issue #264](https://github.com/Leo4815162342/dukascopy-node/issues/264) and
+[AWS's CloudFront 403 troubleshooting guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/http-403-permission-denied.html).
+
 ## ✨ Download Historical Price Data via CLI
 
 ```bash

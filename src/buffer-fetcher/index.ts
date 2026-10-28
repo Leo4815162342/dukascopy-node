@@ -3,7 +3,12 @@ import { CacheManagerBase } from '../cache-manager';
 import { splitArrayInChunks, wait } from '../utils/general';
 import { BufferFetcherInput, BufferObject } from './types';
 import { URL_ROOT } from '../url-generator';
-import { createHeadlessWafFetcher, WafChallengeError, WafTokenError } from '../waf';
+import {
+  createHeadlessWafFetcher,
+  DukascopyAccessDeniedError,
+  WafChallengeError,
+  WafTokenError
+} from '../waf';
 import { decodeData } from '../waf/data';
 import { createRateLimitedRequester, RateLimitError } from './rate-limit';
 
@@ -265,6 +270,7 @@ export class BufferFetcher {
         if (
           error instanceof WafChallengeError ||
           error instanceof WafTokenError ||
+          error instanceof DukascopyAccessDeniedError ||
           error instanceof RateLimitError
         ) {
           break;
