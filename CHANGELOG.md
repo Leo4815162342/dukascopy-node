@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.51.1](https://github.com/Leo4815162342/dukascopy-node/compare/v1.51.0...v1.51.1) (2026-10-28)
+
+
+### Bug Fixes
+
+* send export widget headers and tighten 403 handling ([#266](https://github.com/Leo4815162342/dukascopy-node/issues/266)) ([ab91d07](https://github.com/Leo4815162342/dukascopy-node/commit/ab91d07dc8f48002d7f29b8f9127171c5cdc330e))
+* stop retries and browser recovery after plain HTTP 403 ([#265](https://github.com/Leo4815162342/dukascopy-node/issues/265)) ([ccd76cb](https://github.com/Leo4815162342/dukascopy-node/commit/ccd76cb00d8135616a276ef5225da580b7c8dd0f))
+
 ## [1.51.0](https://github.com/Leo4815162342/dukascopy-node/compare/v1.50.0...v1.51.0) (2026-10-21)
 
 
