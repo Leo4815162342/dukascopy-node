@@ -1169,15 +1169,6 @@
     "startMonthForHourlyCandles": "2011-01-03T08:00:00.000Z",
     "startYearForDailyCandles": "2011-01-03T00:00:00.000Z"
   },
-  "ahtgbgbx": {
-    "name": "AHT.GB/GBX",
-    "code": "AHT.GB-GBX",
-    "description": "Ashtead Group PLC",
-    "startHourForTicks": "2016-09-06T07:00:06.263Z",
-    "startDayForMinuteCandles": "2000-01-01T00:00:00.000Z",
-    "startMonthForHourlyCandles": "2011-01-04T08:00:00.000Z",
-    "startYearForDailyCandles": "2011-01-04T00:00:00.000Z"
-  },
   "aifreur": {
     "name": "AI.FR/EUR",
     "code": "AI.FR-EUR",
@@ -2474,6 +2465,15 @@
     "startMonthForHourlyCandles": "2024-10-21T10:00:00.000Z",
     "startYearForDailyCandles": "2024-01-02T00:00:00.000Z"
   },
+  "bugggbusd": {
+    "name": "BUGG.GB/USD",
+    "code": "BUGG.GB-USD",
+    "description": "Global X Cybersecurity Ucits ETF",
+    "startHourForTicks": "2025-01-29T14:09:36.576Z",
+    "startDayForMinuteCandles": "2025-01-29T14:09:00.000Z",
+    "startMonthForHourlyCandles": "2025-01-29T14:00:00.000Z",
+    "startYearForDailyCandles": "2025-01-29T00:00:00.000Z"
+  },
   "bundtreur": {
     "name": "BUND.TR/EUR",
     "code": "BUND.TR-EUR",
@@ -2842,15 +2842,6 @@
     "startDayForMinuteCandles": "2022-05-13T13:30:00.000Z",
     "startMonthForHourlyCandles": "2022-05-13T13:00:00.000Z",
     "startYearForDailyCandles": "2022-05-13T00:00:00.000Z"
-  },
-  "cclgbgbx": {
-    "name": "CCL.GB/GBX",
-    "code": "CCL.GB-GBX",
-    "description": "Carnival PLC",
-    "startHourForTicks": "2016-07-06T07:08:16.948Z",
-    "startDayForMinuteCandles": "2000-01-01T00:00:00.000Z",
-    "startMonthForHourlyCandles": "2011-01-04T08:00:00.000Z",
-    "startYearForDailyCandles": "2011-01-04T00:00:00.000Z"
   },
   "cclususd": {
     "name": "CCL.US/USD",
@@ -3635,6 +3626,15 @@
     "startMonthForHourlyCandles": "2024-10-22T08:00:00.000Z",
     "startYearForDailyCandles": "2024-01-02T00:00:00.000Z"
   },
+  "cysegbusd": {
+    "name": "CYSE.GB/USD",
+    "code": "CYSE.GB-USD",
+    "description": "WisdomTree Cybersecurity UCITS ETF USD",
+    "startHourForTicks": "2025-01-29T14:11:36.029Z",
+    "startDayForMinuteCandles": "2025-01-29T14:11:00.000Z",
+    "startMonthForHourlyCandles": "2025-01-29T14:00:00.000Z",
+    "startYearForDailyCandles": "2025-01-29T00:00:00.000Z"
+  },
   "czkhuf": {
     "name": "CZK/HUF",
     "code": "CZK-HUF",
@@ -4130,6 +4130,15 @@
     "startMonthForHourlyCandles": "2011-01-03T08:00:00.000Z",
     "startYearForDailyCandles": "2011-01-03T00:00:00.000Z"
   },
+  "dukpluseur": {
+    "name": "DUK+/EUR",
+    "code": "DUKplus-EUR",
+    "description": "Dukascoin vs Euro",
+    "startHourForTicks": "2000-01-01T00:00:00.000Z",
+    "startDayForMinuteCandles": "2019-02-28T13:14:00.000Z",
+    "startMonthForHourlyCandles": "2019-02-28T13:00:00.000Z",
+    "startYearForDailyCandles": "2019-02-28T00:00:00.000Z"
+  },
   "dukususd": {
     "name": "DUK.US/USD",
     "code": "DUK.US-USD",
@@ -4516,6 +4525,15 @@
     "startDayForMinuteCandles": "2024-10-24T07:00:00.000Z",
     "startMonthForHourlyCandles": "2024-10-24T07:00:00.000Z",
     "startYearForDailyCandles": "2024-01-02T00:00:00.000Z"
+  },
+  "esihgbusd": {
+    "name": "ESIH.GB/USD",
+    "code": "ESIH.GB-USD",
+    "description": "iShares MSCI Europe Health Care Sector UCITS ETF",
+    "startHourForTicks": "2025-01-29T14:04:02.744Z",
+    "startDayForMinuteCandles": "2025-01-29T14:04:00.000Z",
+    "startMonthForHourlyCandles": "2025-01-29T14:00:00.000Z",
+    "startYearForDailyCandles": "2025-01-29T00:00:00.000Z"
   },
   "espidxeur": {
     "name": "ESP.IDX/EUR",
@@ -10394,6 +10412,15 @@
     "startMonthForHourlyCandles": "2024-10-21T10:00:00.000Z",
     "startYearForDailyCandles": "2024-01-08T00:00:00.000Z"
   },
+  "semigbusd": {
+    "name": "SEMI.GB/USD",
+    "code": "SEMI.GB-USD",
+    "description": "iShares MSCI Global Semiconductors UCITS ETF (London)",
+    "startHourForTicks": "2025-01-29T14:06:12.550Z",
+    "startDayForMinuteCandles": "2025-01-29T14:06:00.000Z",
+    "startMonthForHourlyCandles": "2025-01-29T14:00:00.000Z",
+    "startYearForDailyCandles": "2025-01-29T00:00:00.000Z"
+  },
   "sferiteur": {
     "name": "SFER.IT/EUR",
     "code": "SFER.IT-EUR",
@@ -10793,7 +10820,7 @@
   "soaidxzar": {
     "name": "SOA.IDX/ZAR",
     "code": "SOA.IDX-ZAR",
-    "description": "South Africa 40 Index",
+    "description": "SOA.IDX/ZAR",
     "startHourForTicks": "2000-01-01T00:00:00.000Z",
     "startDayForMinuteCandles": "2022-10-05T13:16:00.000Z",
     "startMonthForHourlyCandles": "2022-10-05T13:00:00.000Z",
@@ -11882,7 +11909,7 @@
   "uscusd": {
     "name": "USC/USD",
     "code": "USC-USD",
-    "description": "USC/USD",
+    "description": "USD Coin vs US Dollar",
     "startHourForTicks": "2000-01-01T00:00:00.000Z",
     "startDayForMinuteCandles": "2022-05-11T11:23:00.000Z",
     "startMonthForHourlyCandles": "2022-05-11T11:00:00.000Z",
@@ -12076,6 +12103,15 @@
     "startDayForMinuteCandles": "2018-08-08T13:30:00.000Z",
     "startMonthForHourlyCandles": "2018-08-08T13:00:00.000Z",
     "startYearForDailyCandles": "2018-08-08T00:00:00.000Z"
+  },
+  "ustusd": {
+    "name": "UST/USD",
+    "code": "UST-USD",
+    "description": "USD Tether vs US Dollar",
+    "startHourForTicks": "2000-01-01T00:00:00.000Z",
+    "startDayForMinuteCandles": "2020-07-27T09:04:00.000Z",
+    "startMonthForHourlyCandles": "2020-07-27T09:00:00.000Z",
+    "startYearForDailyCandles": "2020-07-27T00:00:00.000Z"
   },
   "ustbondtrusd": {
     "name": "USTBOND.TR/USD",
@@ -13129,6 +13165,15 @@
     "startDayForMinuteCandles": "2024-10-22T08:10:00.000Z",
     "startMonthForHourlyCandles": "2024-10-22T08:00:00.000Z",
     "startYearForDailyCandles": "2024-01-02T00:00:00.000Z"
+  },
+  "xdergbusd": {
+    "name": "XDER.GB/USD",
+    "code": "XDER.GB-USD",
+    "description": "Xtrackers FTSE Developed Europe Real Estate UCITS",
+    "startHourForTicks": "2025-01-29T14:10:19.737Z",
+    "startDayForMinuteCandles": "2025-01-29T14:10:00.000Z",
+    "startMonthForHourlyCandles": "2025-01-29T14:00:00.000Z",
+    "startYearForDailyCandles": "2025-01-29T00:00:00.000Z"
   },
   "xdwhususd": {
     "name": "XDWH.US/USD",

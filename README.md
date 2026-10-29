@@ -150,7 +150,7 @@ const { getRealTimeRates } = require('dukascopy-node');
 
 * [Bonds 📊 (3)](#bnd_cfd)
 * [ETFs 📈 (17)](#etf_cfd)
-* [Crypto assets ₿ (29)](#vccy)
+* [Crypto assets ₿ (30)](#vccy)
 * [Agricultural commodities ☕ (6)](#cmd_agricultural)
 * [Energy commodities ⚡ (4)](#cmd_energy)
 * [Metals commodities ⚙️ (3)](#cmd_metals)
@@ -182,11 +182,12 @@ const { getRealTimeRates } = require('dukascopy-node');
 * [Spain 🇪🇸 (19)](#spain)
 * [Sweden 🇸🇪 (18)](#sweden)
 * [Switzerland 🇨🇭 (25)](#switzerland)
-* [United Kingdom 🇬🇧 (104)](#uk)
+* [United Kingdom 🇬🇧 (102)](#uk)
 * [United States 🇺🇸 (546)](#us)
-* [Crypto Curr  (1)](#crypto_curr)
+* [Stk Cash  (5)](#stk_cash)
+* [Crypto Dc  (1)](#crypto_dc)
+* [Crypto Curr  (2)](#crypto_curr)
 * [Mutual Funds  (9)](#mutual_funds)
-* [Ungrouped  (1)](#ungrouped)
 <hr>
 <h3 id="bnd_cfd">Bonds 📊</h3>
 
@@ -244,6 +245,7 @@ const { getRealTimeRates } = require('dukascopy-node');
 |[Litecoin vs US Dollar](https://www.dukascopy-node.app/instrument/ltcusd)|`ltcusd`|Sep 3, 2018|
 |[TRON vs US Dollar](https://www.dukascopy-node.app/instrument/trxusd)|`trxusd`|Aug 4, 2019|
 |[Uniswap vs US Dollar](https://www.dukascopy-node.app/instrument/uniusd)|`uniusd`|Jan 1, 2000|
+|[USD Tether vs US Dollar](https://www.dukascopy-node.app/instrument/ustusd)|`ustusd`|Jan 1, 2000|
 |[XLM - Stellar vs Swiss Franc](https://www.dukascopy-node.app/instrument/xlmchf)|`xlmchf`|Mar 14, 2023|
 |[XLM - Stellar vs Euro](https://www.dukascopy-node.app/instrument/xlmeur)|`xlmeur`|Mar 14, 2023|
 |[XLM - Stellar vs Pound Sterling](https://www.dukascopy-node.app/instrument/xlmgbp)|`xlmgbp`|Mar 14, 2023|
@@ -722,7 +724,7 @@ const { getRealTimeRates } = require('dukascopy-node');
 
 |Instrument|id|Earliest data (UTC)|
 |-|-|-|
-|[South Africa 40 Index](https://www.dukascopy-node.app/instrument/soaidxzar)|`soaidxzar`|Jan 1, 2000|
+|[SOA.IDX/ZAR](https://www.dukascopy-node.app/instrument/soaidxzar)|`soaidxzar`|Jan 1, 2000|
 <h3 id="idx_america">America 🌎</h3>
 
 |Instrument|id|Earliest data (UTC)|
@@ -1170,7 +1172,6 @@ const { getRealTimeRates } = require('dukascopy-node');
 |[Associated British Foods PLC](https://www.dukascopy-node.app/instrument/abfgbgbx)|`abfgbgbx`|Jan 1, 2000|
 |[Admiral Group PLC](https://www.dukascopy-node.app/instrument/admgbgbx)|`admgbgbx`|Jan 1, 2000|
 |[iShares Ageing Population](https://www.dukascopy-node.app/instrument/agesgbgbx)|`agesgbgbx`|Feb 26, 2025|
-|[Ashtead Group PLC](https://www.dukascopy-node.app/instrument/ahtgbgbx)|`ahtgbgbx`|Jan 1, 2000|
 |[L&G Artificial Intelligence](https://www.dukascopy-node.app/instrument/aiaigbusd)|`aiaigbusd`|Mar 31, 2025|
 |[Antofagasta PLC](https://www.dukascopy-node.app/instrument/antogbgbx)|`antogbgbx`|Jan 1, 2000|
 |[Aviva PLC](https://www.dukascopy-node.app/instrument/avgbgbx)|`avgbgbx`|Jan 1, 2000|
@@ -1185,7 +1186,6 @@ const { getRealTimeRates } = require('dukascopy-node');
 |[Bunzl PLC](https://www.dukascopy-node.app/instrument/bnzlgbgbx)|`bnzlgbgbx`|Jan 1, 2000|
 |[Burberry Group PLC](https://www.dukascopy-node.app/instrument/brbygbgbx)|`brbygbgbx`|Jan 1, 2000|
 |[BT Group PLC](https://www.dukascopy-node.app/instrument/btgbgbx)|`btgbgbx`|Jan 1, 2000|
-|[Carnival PLC](https://www.dukascopy-node.app/instrument/cclgbgbx)|`cclgbgbx`|Jan 1, 2000|
 |[Centrica PLC](https://www.dukascopy-node.app/instrument/cnagbgbx)|`cnagbgbx`|Jan 1, 2000|
 |[Compass Group PLC](https://www.dukascopy-node.app/instrument/cpggbgbx)|`cpggbgbx`|Jan 1, 2000|
 |[Capita PLC](https://www.dukascopy-node.app/instrument/cpigbgbx)|`cpigbgbx`|Jan 1, 2000|
@@ -1820,11 +1820,26 @@ const { getRealTimeRates } = require('dukascopy-node');
 |[ZSCALER INC](https://www.dukascopy-node.app/instrument/zsususd)|`zsususd`|Jan 1, 2000|
 |[ZOETIS INC](https://www.dukascopy-node.app/instrument/ztsususd)|`ztsususd`|Jan 1, 2000|
 |[ZILLOW GROUP INC - C](https://www.dukascopy-node.app/instrument/zususd)|`zususd`|Jan 1, 2000|
+<h3 id="stk_cash">Stk Cash </h3>
+
+|Instrument|id|Earliest data (UTC)|
+|-|-|-|
+|[Global X Cybersecurity Ucits ETF](https://www.dukascopy-node.app/instrument/bugggbusd)|`bugggbusd`|Jan 29, 2025|
+|[WisdomTree Cybersecurity UCITS ETF USD](https://www.dukascopy-node.app/instrument/cysegbusd)|`cysegbusd`|Jan 29, 2025|
+|[iShares MSCI Europe Health Care Sector UCITS ETF](https://www.dukascopy-node.app/instrument/esihgbusd)|`esihgbusd`|Jan 29, 2025|
+|[iShares MSCI Global Semiconductors UCITS ETF (London)](https://www.dukascopy-node.app/instrument/semigbusd)|`semigbusd`|Jan 29, 2025|
+|[Xtrackers FTSE Developed Europe Real Estate UCITS](https://www.dukascopy-node.app/instrument/xdergbusd)|`xdergbusd`|Jan 29, 2025|
+<h3 id="crypto_dc">Crypto Dc </h3>
+
+|Instrument|id|Earliest data (UTC)|
+|-|-|-|
+|[Dukascoin vs Euro](https://www.dukascopy-node.app/instrument/dukpluseur)|`dukpluseur`|Jan 1, 2000|
 <h3 id="crypto_curr">Crypto Curr </h3>
 
 |Instrument|id|Earliest data (UTC)|
 |-|-|-|
 |[EUR Coin vs Euro](https://www.dukascopy-node.app/instrument/euceur)|`euceur`|Jul 6, 2026|
+|[USD Coin vs US Dollar](https://www.dukascopy-node.app/instrument/uscusd)|`uscusd`|Jan 1, 2000|
 <h3 id="mutual_funds">Mutual Funds </h3>
 
 |Instrument|id|Earliest data (UTC)|
@@ -1838,11 +1853,6 @@ const { getRealTimeRates } = require('dukascopy-node');
 |[Goldman Sachs Sterling Government Liquid Reserves Fund Institutional Accumulation (T) Class vs Pound Sterling](https://www.dukascopy-node.app/instrument/ie00bkv42047fngbp)|`ie00bkv42047fngbp`|Apr 21, 2026|
 |[Goldman Sachs Sterling Liquid Reserves Fund Institutional Accumulation (T) Class vs Pound Sterling](https://www.dukascopy-node.app/instrument/ie00bl0bl405fngbp)|`ie00bl0bl405fngbp`|Apr 21, 2026|
 |[Goldman Sachs US$ Treasury Liquid Reserves Fund Institutional Accumulation (T) Class vs US Dollar](https://www.dukascopy-node.app/instrument/ie00bl0bl736fnusd)|`ie00bl0bl736fnusd`|Apr 21, 2026|
-<h3 id="ungrouped">Ungrouped </h3>
-
-|Instrument|id|Earliest data (UTC)|
-|-|-|-|
-|[USC/USD](https://www.dukascopy-node.app/instrument/uscusd)|`uscusd`|Jan 1, 2000|
 
 #### ⚖️ Legal Disclaimer
 
