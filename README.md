@@ -41,36 +41,6 @@
 > [!IMPORTANT]  
 > Node.js 20 or higher is required.
 
-### Browser setup
-
-Downloads may require Chromium or Google Chrome. If Chrome is not installed,
-install Chromium once on Windows, macOS, or Linux:
-
-```sh
-npx dukascopy-node --install-browser
-```
-
-For a project with the package already installed, use
-`npx dukascopy-node --install-browser`. On Linux, add `--with-deps` to install
-required system libraries. Run setup again if an upgrade asks for a newer browser.
-The browser runs in the background.
-
-### HTTP 403 and browser challenges
-
-An explicit AWS WAF challenge can start browser recovery. A **403 without a
-challenge** stops the download: no further requests, ordinary retries, or browser
-recovery start for it. With the default `failAfterRetryCount: true`, it raises
-`DukascopyAccessDeniedError` (`code: 'DUKASCOPY_ACCESS_DENIED'`, `status: 403`,
-`url`, and `source`, which is `'browser'` when the headless browser was refused).
-Cached tokens are kept, because a plain 403 does not show that a token is invalid.
-The next `getHistoricalRates` call or CLI run starts fresh.
-
-If this happens, check that Dukascopy's
-[historical data export page](https://www.dukascopy.com/swiss/english/marketwatch/historical/)
-works in a regular browser, and update dukascopy-node. Reinstalling Chromium or
-deleting the token cache does not help with a plain 403. See
-[issue #264](https://github.com/Leo4815162342/dukascopy-node/issues/264).
-
 ## ✨ Download Historical Price Data via CLI
 
 ```bash
