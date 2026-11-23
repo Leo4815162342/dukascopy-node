@@ -3,9 +3,10 @@ import path from 'path';
 import fs from 'fs';
 import { promisify } from 'util';
 import { wait } from '../general';
-import { DATA_API_ROOT } from '../../config/data-api';
-import { generateInstrumentGroupData } from './generate-group-data';
-import { generateMeta } from './generate-meta';
+import { DATA_API_REFERER, DATA_API_ROOT, DATA_API_USER_AGENT } from '../../config/data-api';
+import { GroupData, generateInstrumentGroupData } from './generate-group-data';
+import { generateIdName } from './generate-id-name';
+import { InstrumentMetaDataMap, generateMeta } from './generate-meta';
 import { generateInstrumentEnum } from './generate-instrument-enum';
 import { generateInstrumentMarkdown } from './generate-instrument-md';
 import { ApiInstrumentDetail, InstrumentsResponse } from './generate-data.types';
@@ -14,6 +15,12 @@ const saveFile = promisify(fs.writeFile);
 const OUTPUT_FOLDER = path.resolve(__dirname, 'generated');
 const DETAIL_REQUEST_PAUSE_MS = 100;
 const RETRY_DELAYS_MS = [1000, 2000, 4000];
+// Without the export widget's headers the API answers with an HTTP 202 challenge page.
+const REQUEST_HEADERS = {
+  accept: 'application/json',
+  referer: DATA_API_REFERER,
+  'user-agent': DATA_API_USER_AGENT
+};
 
 class ApiRequestError extends Error {
   retryable: boolean;
@@ -29,7 +36,7 @@ async function fetchJsonWithRetry<T>(url: string): Promise<T> {
 
   for (let attempt = 0; attempt <= RETRY_DELAYS_MS.length; attempt++) {
     try {
-      const response = await fetch(url);
+      const response = await fetch(url, { headers: REQUEST_HEADERS });
 
       if (!response.ok) {
         const isTransient =
@@ -77,9 +84,37 @@ async function getInstrumentDetails(metadata: InstrumentsResponse): Promise<ApiI
   return details;
 }
 
+async function readPreviousOutput<T>(name: string, fallback: T): Promise<T> {
+  try {
+    return JSON.parse(await fs.promises.readFile(path.resolve(OUTPUT_FOLDER, name), 'utf8')) as T;
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
+      return fallback;
+    }
+
+    throw error;
+  }
+}
+
 async function run(): Promise<void> {
   const metadata = await fetchJsonWithRetry<InstrumentsResponse>(`${DATA_API_ROOT}/instruments`);
   const instrumentDetails = await getInstrumentDetails(metadata);
+  // The API's list changes between scans (instruments have dropped out and come back), so
+  // instruments it no longer lists keep their previous metadata and group instead of being removed.
+  const previousMeta = await readPreviousOutput<InstrumentMetaDataMap>(
+    'instrument-meta-data.json',
+    {}
+  );
+  const previousGroups = await readPreviousOutput<GroupData[]>('instrument-groups.json', []);
+  const listed = new Set(metadata.instruments.map(item => generateIdName(item.code, item.code)));
+  const unlisted = Object.keys(previousMeta).filter(id => !listed.has(id));
+
+  if (unlisted.length > 0) {
+    console.log(
+      `Keeping ${unlisted.length} instruments the API no longer lists: ${unlisted.join(', ')}`
+    );
+  }
+
   const artifactNames = [
     `raw-meta-data-${new Date().toISOString().slice(0, 10)}.json`,
     'instrument-meta-data.json',
@@ -102,9 +137,9 @@ async function run(): Promise<void> {
 
   try {
     await saveFile(rawMetadataPath, JSON.stringify(metadata, null, 2));
-    await generateMeta(instrumentDetails, metadataPath);
+    await generateMeta(instrumentDetails, metadataPath, previousMeta);
     await generateInstrumentEnum(metadataPath, enumPath);
-    await generateInstrumentGroupData(metadata, groupsPath);
+    await generateInstrumentGroupData(metadata, groupsPath, previousGroups);
     await generateInstrumentMarkdown({
       groupsPath,
       metadataPath,

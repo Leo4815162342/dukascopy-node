@@ -6,7 +6,7 @@ import { generateIdName } from './generate-id-name';
 
 const saveFile = promisify(fs.writeFile);
 
-interface GroupData {
+export interface GroupData {
   id: string;
   instruments: string[];
 }
@@ -35,11 +35,28 @@ export function buildInstrumentGroupData(metadata: InstrumentsResponse): GroupDa
   })).filter(group => group.instruments.length > 0);
 }
 
+/** Puts instruments that are only in `previous` (no longer listed by the API) back into their group. */
+export function mergeInstrumentGroupData(previous: GroupData[], current: GroupData[]): GroupData[] {
+  const listed = new Set(current.flatMap(group => group.instruments));
+  const groups = new Map(current.map(group => [group.id, group.instruments]));
+
+  for (const group of previous) {
+    const unlisted = group.instruments.filter(id => !listed.has(id));
+
+    if (unlisted.length > 0) {
+      groups.set(group.id, [...(groups.get(group.id) || []), ...unlisted].sort());
+    }
+  }
+
+  return Array.from(groups, ([id, instruments]) => ({ id, instruments }));
+}
+
 export async function generateInstrumentGroupData(
   metadata: InstrumentsResponse,
-  path: string
+  path: string,
+  previous: GroupData[] = []
 ): Promise<void> {
-  const data = buildInstrumentGroupData(metadata);
+  const data = mergeInstrumentGroupData(previous, buildInstrumentGroupData(metadata));
   await saveFile(path, JSON.stringify(data, null, 2));
   console.log('Instrument groups generated!', path);
 }

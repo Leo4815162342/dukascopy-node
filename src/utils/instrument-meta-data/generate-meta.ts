@@ -52,11 +52,21 @@ export function buildMeta(instruments: ApiInstrumentDetail[]): InstrumentMetaDat
   return data;
 }
 
+/** Keeps instruments that are only in `previous` (no longer listed by the API) after the listed ones. */
+export function mergeMeta(
+  previous: InstrumentMetaDataMap,
+  current: InstrumentMetaDataMap
+): InstrumentMetaDataMap {
+  const unlisted = Object.entries(previous).filter(([key]) => !(key in current));
+  return { ...current, ...Object.fromEntries(unlisted) };
+}
+
 export async function generateMeta(
   instruments: ApiInstrumentDetail[],
-  path: string
+  path: string,
+  previous: InstrumentMetaDataMap = {}
 ): Promise<void> {
-  const data = buildMeta(instruments);
+  const data = mergeMeta(previous, buildMeta(instruments));
   await saveFile(path, JSON.stringify(data, null, 2));
   console.log('Meta data generated!', path);
 }
