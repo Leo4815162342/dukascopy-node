@@ -18,6 +18,8 @@ interface GenerateInstrumentMarkdownInput {
 const titleMap: Record<string, { emoji: string; title: string }> = {
   bnd_cfd: { emoji: '📊', title: 'Bonds' },
   vccy: { emoji: '₿', title: 'Crypto assets' },
+  crypto_curr: { emoji: '💵', title: 'Stablecoins' },
+  crypto_dc: { emoji: '₿', title: 'Other crypto' },
   cmd_agricultural: { emoji: '☕', title: 'Agricultural commodities' },
   cmd_energy: { emoji: '⚡', title: 'Energy commodities' },
   cmd_metals: { emoji: '⚙️', title: 'Metals commodities' },
@@ -26,6 +28,7 @@ const titleMap: Record<string, { emoji: string; title: string }> = {
   etf_cfd_de: { emoji: '🇩🇪📈', title: 'Germany ETFs' },
   etf_cfd_fr: { emoji: '🇫🇷📈', title: 'France ETFs' },
   etf_cfd_hk: { emoji: '🇭🇰📈', title: 'Hong Kong ETFs' },
+  stk_cash: { emoji: '🇬🇧📈', title: 'United Kingdom ETFs (USD)' },
   fx_crosses: { emoji: '💱', title: 'Forex currencies' },
   fx_majors: { emoji: '💶', title: 'Forex major currencies' },
   fx_metals: { emoji: '🥇', title: 'Forex metals' },

@@ -2,21 +2,21 @@ import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { fetchJsonWithRetry, getInstrumentDetails } from './generate-data';
-import { DATA_API_ROOT } from '../../config/data-api';
+import { DATA_API_REFERER, DATA_API_ROOT, DATA_API_USER_AGENT } from '../../config/data-api';
 import {
   ApiInstrumentDetail,
   ApiInstrumentSummary,
   InstrumentsResponse
 } from './generate-data.types';
-import { buildInstrumentGroupData } from './generate-group-data';
-import { buildMeta } from './generate-meta';
+import { buildInstrumentGroupData, mergeInstrumentGroupData } from './generate-group-data';
+import { buildMeta, mergeMeta } from './generate-meta';
 
 function loadJson<T>(path: string): T {
   return JSON.parse(readFileSync(path, 'utf8')) as T;
 }
 
 const fixtureFolderPath = resolve(__dirname, '../../__mocks__/fixtures');
-const bulkFixturePath = resolve(__dirname, 'generated/raw-meta-data-2026-07-13.json');
+const bulkFixturePath = resolve(__dirname, 'generated/raw-meta-data-2026-11-15.json');
 const bulkFixtureBody = readFileSync(bulkFixturePath, 'utf8');
 const authoritativeBulk = JSON.parse(bulkFixtureBody) as InstrumentsResponse;
 const detailFixtureBodies = {
@@ -85,12 +85,57 @@ describe('Instrument metadata generation with downloaded responses', () => {
     ]);
   });
 
-  it('uses real platform and ungrouped fallbacks when groupId is absent', () => {
+  it('uses real platform group fallbacks when groupId is absent', () => {
     expect(
-      buildInstrumentGroupData(withInstruments([getSummary('EUC-EUR'), getSummary('USC-USD')]))
+      buildInstrumentGroupData(
+        withInstruments([getSummary('EUC-EUR'), getSummary('USC-USD'), getSummary('DUKplus-EUR')])
+      )
     ).toEqual([
-      { id: 'crypto_curr', instruments: ['euceur'] },
+      { id: 'crypto_curr', instruments: ['euceur', 'uscusd'] },
+      { id: 'crypto_dc', instruments: ['dukpluseur'] }
+    ]);
+  });
+
+  it('falls back to ungrouped when both groupId and platformGroupId are absent', () => {
+    expect(
+      buildInstrumentGroupData(
+        withInstruments([{ ...getSummary('USC-USD'), platformGroupId: null }])
+      )
+    ).toEqual([{ id: 'ungrouped', instruments: ['uscusd'] }]);
+  });
+
+  it('keeps metadata of instruments the API no longer lists, after the listed ones', () => {
+    const current = buildMeta([eurUsdDetail]);
+    const unlisted = {
+      ...current.eurusd,
+      name: 'AHT.GB/GBX',
+      code: 'AHT.GB-GBX',
+      description: 'Ashtead Group PLC'
+    };
+    const merged = mergeMeta(
+      { ahtgbgbx: unlisted, eurusd: { ...current.eurusd, description: 'Outdated' } },
+      current
+    );
+
+    expect(Object.keys(merged)).toEqual(['eurusd', 'ahtgbgbx']);
+    expect(merged.eurusd).toEqual(current.eurusd);
+    expect(merged.ahtgbgbx).toEqual(unlisted);
+  });
+
+  it('puts instruments the API no longer lists back into their previous group', () => {
+    const current = buildInstrumentGroupData(
+      withInstruments([getSummary('AAL.GB-GBX'), getSummary('USC-USD')])
+    );
+    const previous = [
+      { id: 'uk', instruments: ['aalgbgbx', 'ahtgbgbx'] },
+      { id: 'us', instruments: ['twtrususd'] },
       { id: 'ungrouped', instruments: ['uscusd'] }
+    ];
+
+    expect(mergeInstrumentGroupData(previous, current)).toEqual([
+      { id: 'uk', instruments: ['aalgbgbx', 'ahtgbgbx'] },
+      { id: 'crypto_curr', instruments: ['uscusd'] },
+      { id: 'us', instruments: ['twtrususd'] }
     ]);
   });
 
@@ -142,8 +187,26 @@ describe('Instrument metadata generation with downloaded responses', () => {
     await vi.runAllTimersAsync();
     const result = await resultPromise;
 
-    expect(result.instruments).toHaveLength(1499);
+    expect(result.instruments).toHaveLength(1504);
     expect(fetchMock).toHaveBeenCalledTimes(3);
+  });
+
+  it('sends the export widget headers', async () => {
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValue(
+        new Response(bulkFixtureBody, { headers: { 'Content-Type': 'application/json' } })
+      );
+    vi.stubGlobal('fetch', fetchMock);
+
+    await fetchJsonWithRetry(`${DATA_API_ROOT}/instruments`);
+
+    expect(fetchMock).toHaveBeenCalledWith(`${DATA_API_ROOT}/instruments`, {
+      headers: expect.objectContaining({
+        referer: DATA_API_REFERER,
+        'user-agent': DATA_API_USER_AGENT
+      })
+    });
   });
 
   it('does not retry permanent metadata failures', async () => {
